@@ -1,0 +1,70 @@
+{
+  "common": {
+    "title": "Minimal Tool Site",
+    "description": "A collection of useful online tools",
+    "home": "Home",
+    "tools": "Tools",
+    "about": "About",
+    "language": "Language",
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "home": {
+    "hero": {
+      "title": "Powerful Online Tools",
+      "subtitle": "A collection of useful tools to boost your productivity",
+      "cta": "Explore Tools"
+    },
+    "features": {
+      "title": "Why Choose Our Tools?",
+      "items": [
+        {
+          "title": "Fast & Reliable",
+          "description": "All tools run locally in your browser for maximum speed and privacy"
+        },
+        {
+          "title": "No Registration",
+          "description": "Use all tools instantly without creating an account"
+        },
+        {
+          "title": "Mobile Friendly",
+          "description": "Works perfectly on all devices and screen sizes"
+        }
+      ]
+    }
+  },
+  "tools": {
+    "title": "Available Tools",
+    "jsonFormatter": {
+      "title": "JSON Formatter",
+      "description": "Format and validate JSON data",
+      "placeholder": "Paste your JSON here...",
+      "format": "Format",
+      "minify": "Minify",
+      "validate": "Validate",
+      "copy": "Copy",
+      "clear": "Clear"
+    },
+    "base64": {
+      "title": "Base64 Encoder/Decoder",
+      "description": "Encode and decode Base64 strings",
+      "encode": "Encode",
+      "decode": "Decode",
+      "input": "Input",
+      "output": "Output"
+    },
+    "colorPicker": {
+      "title": "Color Picker",
+      "description": "Pick colors and convert between formats",
+      "hex": "HEX",
+      "rgb": "RGB",
+      "hsl": "HSL"
+    }
+  },
+  "about": {
+    "title": "About",
+    "description": "This is a minimal tool site built with Next.js and Tailwind CSS."
+  }
+}

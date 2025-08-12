@@ -1,0 +1,70 @@
+{
+  "common": {
+    "title": "极简工具站",
+    "description": "实用在线工具集合",
+    "home": "首页",
+    "tools": "工具",
+    "about": "关于",
+    "language": "语言",
+    "theme": "主题",
+    "light": "浅色",
+    "dark": "深色",
+    "system": "系统"
+  },
+  "home": {
+    "hero": {
+      "title": "强大的在线工具",
+      "subtitle": "实用工具集合，提升你的工作效率",
+      "cta": "探索工具"
+    },
+    "features": {
+      "title": "为什么选择我们的工具？",
+      "items": [
+        {
+          "title": "快速可靠",
+          "description": "所有工具在浏览器本地运行，确保最高速度和隐私保护"
+        },
+        {
+          "title": "无需注册",
+          "description": "无需创建账户即可立即使用所有工具"
+        },
+        {
+          "title": "移动友好",
+          "description": "在所有设备和屏幕尺寸上完美运行"
+        }
+      ]
+    }
+  },
+  "tools": {
+    "title": "可用工具",
+    "jsonFormatter": {
+      "title": "JSON 格式化",
+      "description": "格式化和验证 JSON 数据",
+      "placeholder": "在此粘贴你的 JSON...",
+      "format": "格式化",
+      "minify": "压缩",
+      "validate": "验证",
+      "copy": "复制",
+      "clear": "清空"
+    },
+    "base64": {
+      "title": "Base64 编解码",
+      "description": "编码和解码 Base64 字符串",
+      "encode": "编码",
+      "decode": "解码",
+      "input": "输入",
+      "output": "输出"
+    },
+    "colorPicker": {
+      "title": "颜色选择器",
+      "description": "选择颜色并在不同格式间转换",
+      "hex": "十六进制",
+      "rgb": "RGB",
+      "hsl": "HSL"
+    }
+  },
+  "about": {
+    "title": "关于",
+    "description": "这是一个使用 Next.js 和 Tailwind CSS 构建的极简工具站。"
+  }
+}
