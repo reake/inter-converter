@@ -37,6 +37,10 @@
   },
   "tools": {
     "title": "可用工具",
+    "search": "搜索工具...",
+    "popular": "热门工具",
+    "recent": "最近使用",
+    "categories": "分类",
     "jsonFormatter": {
       "title": "JSON 格式化",
       "description": "格式化和验证 JSON 数据",
@@ -61,6 +65,107 @@
       "hex": "十六进制",
       "rgb": "RGB",
       "hsl": "HSL"
+    },
+    "timestampConverter": {
+      "title": "时间戳转换器",
+      "description": "Unix时间戳与人类可读日期相互转换",
+      "timestamp": "Unix 时间戳",
+      "date": "日期时间",
+      "timezone": "时区",
+      "convert": "转换",
+      "copy": "复制",
+      "clear": "清空",
+      "now": "当前时间"
+    },
+    "currencyConverter": {
+      "title": "货币转换器",
+      "description": "实时汇率货币转换",
+      "amount": "金额",
+      "from": "从",
+      "to": "到",
+      "result": "结果",
+      "rate": "汇率",
+      "lastUpdated": "最后更新"
+    },
+    "loanCalculator": {
+      "title": "贷款计算器",
+      "description": "计算月供、利息和还款计划",
+      "loanAmount": "贷款金额",
+      "interestRate": "年利率 (%)",
+      "loanTerm": "贷款期限 (年)",
+      "monthlyPayment": "月供",
+      "totalInterest": "总利息",
+      "totalPayment": "总还款"
+    },
+    "pdfToWord": {
+      "title": "PDF转Word",
+      "description": "将PDF文件转换为可编辑的Word文档",
+      "upload": "上传PDF",
+      "convert": "转换为Word",
+      "download": "下载Word文档",
+      "processing": "处理中..."
+    },
+    "jpgToPng": {
+      "title": "JPG转PNG",
+      "description": "将JPG图片转换为支持透明度的PNG格式",
+      "upload": "上传JPG",
+      "convert": "转换为PNG",
+      "download": "下载PNG",
+      "preview": "预览"
+    },
+    "hexToRgb": {
+      "title": "HEX转RGB",
+      "description": "十六进制颜色代码与RGB值相互转换",
+      "hexColor": "HEX颜色",
+      "rgbColor": "RGB颜色",
+      "preview": "颜色预览",
+      "copy": "复制"
+    },
+    "bmiCalculator": {
+      "title": "BMI计算器",
+      "description": "计算身体质量指数并获得健康建议",
+      "height": "身高",
+      "weight": "体重",
+      "unit": "单位制",
+      "metric": "公制 (厘米, 公斤)",
+      "imperial": "英制 (英尺/英寸, 磅)",
+      "bmi": "BMI",
+      "category": "分类",
+      "recommendation": "建议"
+    },
+    "unitConverter": {
+      "title": "单位转换器",
+      "description": "长度、重量、温度等单位转换",
+      "category": "类别",
+      "length": "长度",
+      "weight": "重量",
+      "temperature": "温度",
+      "from": "从",
+      "to": "到",
+      "value": "数值",
+      "result": "结果"
+    },
+    "countdownTimer": {
+      "title": "倒计时器",
+      "description": "为事件和截止日期创建倒计时",
+      "eventName": "事件名称",
+      "targetDate": "目标日期",
+      "targetTime": "目标时间",
+      "days": "天",
+      "hours": "小时",
+      "minutes": "分钟",
+      "seconds": "秒",
+      "expired": "时间到！"
+    },
+    "taxCalculator": {
+      "title": "税费计算器",
+      "description": "计算所得税和估算税务负担",
+      "income": "年收入",
+      "filingStatus": "申报状态",
+      "deductions": "扣除额",
+      "taxOwed": "应缴税额",
+      "effectiveRate": "有效税率",
+      "marginalRate": "边际税率"
     }
   },
   "about": {

@@ -28,7 +28,7 @@ export function Header() {
             {navigation.map((item) => (
               <Link
                 key={item.href}
-                href={item.href}
+                href={item.href as any}
                 className={`text-sm font-medium transition-colors hover:text-primary ${
                   pathname === item.href
                     ? 'text-primary'

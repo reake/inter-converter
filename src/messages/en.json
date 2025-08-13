@@ -37,6 +37,10 @@
   },
   "tools": {
     "title": "Available Tools",
+    "search": "Search tools...",
+    "popular": "Popular Tools",
+    "recent": "Recently Used",
+    "categories": "Categories",
     "jsonFormatter": {
       "title": "JSON Formatter",
       "description": "Format and validate JSON data",
@@ -61,6 +65,107 @@
       "hex": "HEX",
       "rgb": "RGB",
       "hsl": "HSL"
+    },
+    "timestampConverter": {
+      "title": "Timestamp Converter",
+      "description": "Convert Unix timestamps to human-readable dates and vice versa",
+      "timestamp": "Unix Timestamp",
+      "date": "Date & Time",
+      "timezone": "Timezone",
+      "convert": "Convert",
+      "copy": "Copy",
+      "clear": "Clear",
+      "now": "Current Time"
+    },
+    "currencyConverter": {
+      "title": "Currency Converter",
+      "description": "Convert between different currencies with real-time exchange rates",
+      "amount": "Amount",
+      "from": "From",
+      "to": "To",
+      "result": "Result",
+      "rate": "Exchange Rate",
+      "lastUpdated": "Last Updated"
+    },
+    "loanCalculator": {
+      "title": "Loan Calculator",
+      "description": "Calculate monthly payments, interest, and amortization schedules",
+      "loanAmount": "Loan Amount",
+      "interestRate": "Annual Interest Rate (%)",
+      "loanTerm": "Loan Term (years)",
+      "monthlyPayment": "Monthly Payment",
+      "totalInterest": "Total Interest",
+      "totalPayment": "Total Payment"
+    },
+    "pdfToWord": {
+      "title": "PDF to Word Converter",
+      "description": "Convert PDF files to editable Word documents",
+      "upload": "Upload PDF",
+      "convert": "Convert to Word",
+      "download": "Download Word Document",
+      "processing": "Processing..."
+    },
+    "jpgToPng": {
+      "title": "JPG to PNG Converter",
+      "description": "Convert JPG images to PNG format with transparency support",
+      "upload": "Upload JPG",
+      "convert": "Convert to PNG",
+      "download": "Download PNG",
+      "preview": "Preview"
+    },
+    "hexToRgb": {
+      "title": "HEX to RGB Converter",
+      "description": "Convert HEX color codes to RGB values and vice versa",
+      "hexColor": "HEX Color",
+      "rgbColor": "RGB Color",
+      "preview": "Color Preview",
+      "copy": "Copy"
+    },
+    "bmiCalculator": {
+      "title": "BMI Calculator",
+      "description": "Calculate Body Mass Index and get health recommendations",
+      "height": "Height",
+      "weight": "Weight",
+      "unit": "Unit System",
+      "metric": "Metric (cm, kg)",
+      "imperial": "Imperial (ft/in, lbs)",
+      "bmi": "BMI",
+      "category": "Category",
+      "recommendation": "Recommendation"
+    },
+    "unitConverter": {
+      "title": "Unit Converter",
+      "description": "Convert between different units of length, weight, and temperature",
+      "category": "Category",
+      "length": "Length",
+      "weight": "Weight",
+      "temperature": "Temperature",
+      "from": "From",
+      "to": "To",
+      "value": "Value",
+      "result": "Result"
+    },
+    "countdownTimer": {
+      "title": "Countdown Timer",
+      "description": "Create countdown timers for events and deadlines",
+      "eventName": "Event Name",
+      "targetDate": "Target Date",
+      "targetTime": "Target Time",
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds",
+      "expired": "Time's Up!"
+    },
+    "taxCalculator": {
+      "title": "Tax Calculator",
+      "description": "Calculate income tax and estimate tax liability",
+      "income": "Annual Income",
+      "filingStatus": "Filing Status",
+      "deductions": "Deductions",
+      "taxOwed": "Tax Owed",
+      "effectiveRate": "Effective Tax Rate",
+      "marginalRate": "Marginal Tax Rate"
     }
   },
   "about": {
