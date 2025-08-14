@@ -1,39 +1,23 @@
 import { MetadataRoute } from 'next';
 
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
+
 export default function robots(): MetadataRoute.Robots {
   const baseUrl = 'https://interconverter.com';
-  
+
   return {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
+        allow: [
+          '/',
+        ],
         disallow: [
           '/api/',
           '/_next/',
-          '/admin/',
           '*.json',
         ],
-      },
-      {
-        userAgent: 'GPTBot',
-        disallow: '/',
-      },
-      {
-        userAgent: 'ChatGPT-User',
-        disallow: '/',
-      },
-      {
-        userAgent: 'CCBot',
-        disallow: '/',
-      },
-      {
-        userAgent: 'anthropic-ai',
-        disallow: '/',
-      },
-      {
-        userAgent: 'Claude-Web',
-        disallow: '/',
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,

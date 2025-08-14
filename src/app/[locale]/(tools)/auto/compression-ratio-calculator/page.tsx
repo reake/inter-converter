@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { CompressionRatioCalculator } from '@/components/converters/automotive/CompressionRatioCalculator';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'Compression Ratio Calculator',
   'Calculate horsepower changes from compression ratio modifications. Understand the effects of compression ratio on engine performance and fuel requirements.',

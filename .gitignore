@@ -13,6 +13,7 @@ out/
 # IDE
 .vscode/
 .idea/
+.vercel
 
 # OS
 .DS_Store

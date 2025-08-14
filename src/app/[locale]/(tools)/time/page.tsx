@@ -4,6 +4,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { getToolsByCategory } from '@/config/tools';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'Time & Date Calculators - Timestamp, Countdown, Date Difference Tools',

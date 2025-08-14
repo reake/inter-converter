@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { RPMCalculator } from '@/components/automotive/RPMCalculator';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'RPM Calculator',
   'Calculate engine RPM based on vehicle speed, gear ratio, and tire diameter. Free automotive RPM calculator.',

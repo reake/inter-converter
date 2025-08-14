@@ -4,6 +4,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { AUTOMOTIVE_TOOLS_CONFIG } from '@/config/automotive-tools';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'Free Automotive Converters & Engine Tools | InterConverter',

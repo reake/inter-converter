@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { SuperchargerCalculator } from '@/components/converters/automotive/SuperchargerCalculator';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'Supercharger HP Calculator',
   'Calculate supercharger horsepower gains from boost PSI. Free online tool for turbo, blower & forced induction power calculations. Get instant results.',

@@ -6,6 +6,10 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { WebVitals, PerformanceMonitor, ResourceMonitor } from '@/components/performance/WebVitals';
 import "./globals.css";
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export default async function RootLayout({
   children,
   params,

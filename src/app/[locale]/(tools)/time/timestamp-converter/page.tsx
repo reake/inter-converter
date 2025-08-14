@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { TimestampConverter } from '@/components/converters/TimestampConverter';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'Timestamp Converter',
   'Convert Unix timestamps to human readable dates. Free timestamp converter for epoch time, milliseconds, and date formats. Instant conversion.',

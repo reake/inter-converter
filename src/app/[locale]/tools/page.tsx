@@ -19,6 +19,9 @@ interface ToolsPageProps {
 }
 
 // Generate metadata for SEO
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export async function generateMetadata({ params, searchParams }: ToolsPageProps): Promise<Metadata> {
   const resolvedParams = await params;
   const resolvedSearchParams = await searchParams;

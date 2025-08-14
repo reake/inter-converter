@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { VolumetricEfficiencyCalculator } from '@/components/converters/automotive/VolumetricEfficiencyCalculator';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'Volumetric Efficiency Calculator',
   'Calculate engine volumetric efficiency (VE) from horsepower, displacement, and RPM. Essential for engine tuning and performance analysis.',

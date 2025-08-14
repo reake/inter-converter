@@ -2,6 +2,9 @@ import { MetadataRoute } from 'next';
 import { TOOLS_CONFIG, TOOL_CATEGORIES } from '@/config/tools';
 import { routing } from '@/i18n/routing';
 
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://interconverter.com';
   const currentDate = new Date();

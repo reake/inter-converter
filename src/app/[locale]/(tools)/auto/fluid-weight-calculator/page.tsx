@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { FluidWeightCalculator } from '@/components/converters/automotive/FluidWeightCalculator';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'Automotive Fluid Weight Calculator',
   'Calculate weight and volume conversions for automotive fluids including gasoline, motor oil, transmission fluid, and water.',

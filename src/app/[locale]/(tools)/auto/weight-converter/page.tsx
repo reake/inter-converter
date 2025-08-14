@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { WeightConverter } from '@/components/converters/automotive/WeightConverter';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'Automotive Weight Converter',
   'Convert between pounds, kilograms, ounces, and grams for automotive applications. Essential for weight reduction and performance calculations.',

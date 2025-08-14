@@ -3,23 +3,19 @@
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
 import { ThemeToggle } from '@/components/theme-toggle';
-import { useEffect, useState } from 'react';
+import { cn } from '@/lib/utils';
 
 export function Header() {
   const t = useTranslations('common');
   const pathname = usePathname();
-  const [mounted, setMounted] = useState(false);
 
+  // 使用静态导航配置避免翻译不匹配
   const navigation = [
-    { name: t('home'), href: '/' },
-    { name: t('tools'), href: '/tools' },
-    { name: t('auto'), href: '/auto' },
-    { name: t('about'), href: '/about' },
+    { name: 'Home', href: '/', key: 'home' },
+    { name: 'Tools', href: '/tools', key: 'tools' },
+    { name: 'Auto', href: '/auto', key: 'auto' },
+    { name: 'About', href: '/about', key: 'about' },
   ];
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   return (
     <header className="border-b">
@@ -30,19 +26,22 @@ export function Header() {
           </Link>
           
           <nav className="hidden md:flex items-center space-x-6">
-            {navigation.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href as any}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  mounted && pathname === item.href
-                    ? 'text-primary'
-                    : 'text-muted-foreground'
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+            {navigation.map((item) => {
+              const isActive = pathname === item.href;
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href as any}
+                  className={cn(
+                    "text-sm font-medium transition-colors hover:text-primary",
+                    isActive ? "text-primary" : "text-muted-foreground"
+                  )}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="flex items-center space-x-2">

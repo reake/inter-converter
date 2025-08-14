@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { SpeedConverter } from '@/components/automotive/SpeedConverter';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'Speed Converter',
   'Convert between MPH and KPH for automotive applications. Free speed converter with common speed references.',

@@ -1,6 +1,10 @@
 import { Metadata } from 'next';
 import { generateToolMetadata, generateToolStructuredData } from '@/components/tools/ToolLayout';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'JPG to PNG Converter',
   'Convert JPG images to PNG format with transparency support. Free online image converter with batch processing.',

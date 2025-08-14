@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { GearRatioCalculator } from '@/components/automotive/GearRatioCalculator';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'Gear Ratio Calculator',
   'Calculate gear ratios from ring and pinion teeth, find optimal ratios for performance. Free automotive gear ratio calculator.',

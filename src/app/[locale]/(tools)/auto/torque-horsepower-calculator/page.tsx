@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { TorqueHorsepowerCalculator } from '@/components/automotive/TorqueHorsepowerCalculator';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'Torque & Horsepower Calculator',
   'Convert between torque and horsepower at different RPMs. Calculate engine power and torque relationships.',

@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { UnitConverter } from '@/components/converters/UnitConverter';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'Unit Converter',
   'Convert units of measurement instantly. Free online unit converter for length, weight, temperature, volume, area, and more. Accurate conversions.',

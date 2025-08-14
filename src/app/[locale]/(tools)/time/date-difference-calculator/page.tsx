@@ -3,6 +3,10 @@ import { generateToolMetadata, generateToolStructuredData } from '@/components/t
 import { DateDifferenceCalculator } from '@/components/converters/DateDifferenceCalculator';
 import { ToolSEOContent } from '@/components/seo/ToolSEOContent';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'Date Difference Calculator',
   'Calculate the difference between two dates in days, months, years, hours, and minutes. Free online date calculator.',

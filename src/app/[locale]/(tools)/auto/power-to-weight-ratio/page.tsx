@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { PowerToWeightCalculator } from '@/components/automotive/PowerToWeightCalculator';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'Power to Weight Ratio Calculator',
   'Calculate power to weight ratio for automotive performance analysis. Compare horsepower per pound and pounds per horsepower.',

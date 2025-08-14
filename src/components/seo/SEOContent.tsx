@@ -23,7 +23,7 @@ export function SEOContent({ tools, category, locale = 'en' }: SEOContentProps) 
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
               {category
                 ? `${categoryInfo?.name} Tools - Professional Online Calculators & Converters`
-                : 'Free Online Converters Tools & Calculators - No Download Required'
+                : 'Free Online Converters & Calculators Tools - No Download Required'
               }
             </h2>
 
@@ -203,13 +203,17 @@ export function generateToolsMetadata(tools: ToolConfig[], category?: string, lo
   const categoryInfo = category ? TOOL_CATEGORIES[category as keyof typeof TOOL_CATEGORIES] : null;
   const toolCount = tools.length;
 
+  // Optimized titles for tools page
   const title = category
-    ? `${categoryInfo?.name} Tools - ${toolCount} Free Online Calculators & Converters | InterConverter`
-    : `Free Online Converters Tools & Calculators - ${toolCount}+ Professional Tools | InterConverter`;
+    ? `${toolCount}+ Free Online ${categoryInfo?.name} Tools & Calculators | InterConverter`
+    : `Free Online Conversion & Calculation Tools | InterConverter`;
+
+
 
   const description = category
     ? `Professional ${categoryInfo?.name.toLowerCase()} tools including ${tools.slice(0, 3).map(t => t.name.toLowerCase()).join(', ')} and ${toolCount - 3}+ more calculators. ${categoryInfo?.description} All tools are free, secure, and work directly in your browser without registration.`
-    : `Access ${toolCount}+ professional online Converters tools and calculators. Convert units, currencies, measurements, and more with instant results. All tools are completely free, secure, and require no downloads or registration.`;
+    : `Explore free online converters and calculators at InterConverter. From currency and units to health and color tools – accurate, fast, and simple.
+`;
 
   const keywords = category
     ? [

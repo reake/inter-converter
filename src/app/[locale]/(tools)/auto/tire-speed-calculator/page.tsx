@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { TireSpeedCalculator } from '@/components/converters/automotive/TireSpeedCalculator';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'Tire Speed Calculator',
   'Calculate vehicle speed based on tire diameter, gear ratio, and RPM. Essential tool for performance tuning and gear selection.',

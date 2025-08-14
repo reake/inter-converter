@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { EngineDisplacementCalculator } from '@/components/converters/automotive/EngineDisplacementCalculator';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'Engine Displacement Calculator',
   'Calculate engine displacement from bore, stroke, and cylinder count. Convert between cubic inches and liters, and understand engine design characteristics.',

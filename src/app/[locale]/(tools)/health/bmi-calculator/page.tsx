@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { BMICalculator } from '@/components/converters/BMICalculator';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'BMI Calculator',
   'Calculate your BMI (Body Mass Index) instantly. Free BMI calculator with health categories, ideal weight ranges & personalized recommendations.',

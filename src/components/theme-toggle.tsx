@@ -10,6 +10,26 @@ import { Button } from "@/components/ui/button"
 export function ThemeToggle() {
   const { setTheme, theme } = useTheme()
   const t = useTranslations('common')
+  const [mounted, setMounted] = React.useState(false)
+
+  // 避免水合不匹配
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return (
+      <Button
+        variant="ghost"
+        size="icon"
+        title={t('theme')}
+        disabled
+      >
+        <Sun className="h-[1.2rem] w-[1.2rem]" />
+        <span className="sr-only">{t('theme')}</span>
+      </Button>
+    )
+  }
 
   return (
     <Button

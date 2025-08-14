@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { CurrencyConverter } from '@/components/converters/CurrencyConverter';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'Currency Converter',
   'Convert 150+ currencies with live exchange rates. Free, accurate, instant results. USD, EUR, GBP, JPY & more. No registration required.',

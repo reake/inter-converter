@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { TireCalculator } from '@/components/automotive/TireCalculator';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'Tire Calculator',
   'Calculate how tire diameter changes affect vehicle speed, RPM, and performance. Tire size comparison calculator.',

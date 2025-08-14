@@ -15,6 +15,10 @@ import {
   Shield
 } from 'lucide-react';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export default function ContactPage() {
   const contactMethods = [
     {

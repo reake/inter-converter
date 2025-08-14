@@ -4,6 +4,10 @@ import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Shield, Eye, Database, Lock, Globe, CheckCircle } from 'lucide-react';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export default function PrivacyPage() {
   const lastUpdated = 'January 1, 2024';
 

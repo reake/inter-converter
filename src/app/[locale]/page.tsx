@@ -15,6 +15,9 @@ import { EnhancedToolCard } from "@/components/tools/EnhancedToolCard";
 import { generateHomeMetadata } from "@/config/seo";
 import { StructuredData } from "@/components/seo/StructuredData";
 
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export async function generateMetadata({
   params
 }: {
@@ -45,7 +48,7 @@ export default async function HomePage({
             InterConverter
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-blue-100">
-            Free Online Converters Tools & Calculators
+            Free Online Converters & Calculators Tools
           </h2>
           <p className="text-lg md:text-xl text-blue-100 mb-12 max-w-5xl mx-auto leading-relaxed">
             Professional-grade Converters tools and calculators for developers, engineers,

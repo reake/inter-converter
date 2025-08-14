@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { ColorConverter } from '@/components/converters/ColorConverter';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'HEX to RGB Converter',
   'Convert HEX color codes to RGB values and vice versa. Free color converter with color picker and preview.',

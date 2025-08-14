@@ -1,6 +1,10 @@
 import { Metadata } from 'next';
 import { generateToolMetadata, generateToolStructuredData } from '@/components/tools/ToolLayout';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'PDF to Word Converter',
   'Convert PDF files to editable Word documents. Free online PDF to Word converter with high-quality Converters.',

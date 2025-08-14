@@ -4,6 +4,10 @@ import { SearchProvider } from '@/lib/search-context';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export default async function LocaleLayout({
   children,
   params

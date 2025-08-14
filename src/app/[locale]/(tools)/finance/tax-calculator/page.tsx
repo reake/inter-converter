@@ -6,6 +6,10 @@ import {
 import { TaxCalculator } from "@/components/converters/TaxCalculator";
 import { ModernSEOContent } from "@/components/tools/ModernSEOContent";
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   "Tax Calculator",
   "Calculate income tax, estimate tax liability, and plan your tax strategy. Free tax calculator with multiple filing statuses.",

@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { EngineVolumeCalculator } from '@/components/converters/automotive/EngineVolumeCalculator';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'Engine Volume Calculator',
   'Calculate cylinder volume from bore and stroke, engine displacement from cylinder volume, and convert between CI and CC.',

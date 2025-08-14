@@ -4,6 +4,10 @@ import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle } from 'lucide-react';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export default function TermsPage() {
   const lastUpdated = 'January 1, 2024';
 

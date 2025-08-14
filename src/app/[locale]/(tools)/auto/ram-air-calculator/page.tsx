@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { RamAirCalculator } from '@/components/converters/automotive/RamAirCalculator';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'Ram Air Calculator',
   'Calculate horsepower gains from ram air induction systems. Determine PSI increase and total horsepower output based on vehicle speed and engine power.',

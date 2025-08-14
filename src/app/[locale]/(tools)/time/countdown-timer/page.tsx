@@ -3,6 +3,10 @@ import { generateToolMetadata, generateToolStructuredData } from '@/components/t
 import { CountdownTimer } from '@/components/converters/CountdownTimer';
 import { ModernSEOContent } from '@/components/tools/ModernSEOContent';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'Countdown Timer',
   'Create countdown timers for events, deadlines, and special occasions. Free online countdown timer with notifications.',

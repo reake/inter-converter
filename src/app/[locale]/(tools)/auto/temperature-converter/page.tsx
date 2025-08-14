@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { AutomotiveTemperatureConverter } from '@/components/automotive/AutomotiveTemperatureConverter';
 
+
+
+// Cloudflare Pages Edge Runtime 配置
+export const runtime = 'edge';
 export const metadata: Metadata = generateToolMetadata(
   'Automotive Temperature Converter',
   'Convert between Fahrenheit and Celsius for automotive applications. Engine temperature, coolant, oil temperature converter.',
