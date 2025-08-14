@@ -58,15 +58,15 @@ export interface ToolCardProps {
   searchVolume?: number;
 }
 
-export type ToolCategory = 
-  | 'time-date'
-  | 'currency-finance'
-  | 'unit-measurement'
-  | 'file-media'
-  | 'color-design'
-  | 'health-fitness'
-  | 'science-engineering'
-  | 'automotive';
+export type ToolCategory =
+  | 'time'
+  | 'finance'
+  | 'unit'
+  | 'media'
+  | 'color'
+  | 'health'
+  | 'science'
+  | 'auto';
 
 export interface ValidationError {
   field: string;

@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
@@ -32,30 +33,40 @@ interface SuperchargerCFMState {
 }
 
 export function SuperchargerCalculator() {
+  const searchParams = useSearchParams();
+  const tabParam = searchParams.get('tab');
+
   const [superchargerState, setSuperchargerState] = useState<SuperchargerState>({
     baseHP: '',
     psi: ''
   });
-  
+
   const [ramAirState, setRamAirState] = useState<RamAirState>({
     baseHP: '',
     mph: ''
   });
-  
+
   const [cfmState, setCfmState] = useState<SuperchargerCFMState>({
     displacement: '',
     rpm: '',
     psi: ''
   });
-  
+
   const [results, setResults] = useState<{
     supercharger?: SuperchargerResult;
     ramAir?: SuperchargerResult;
     cfm?: number;
   }>({});
-  
+
   const [errors, setErrors] = useState<string[]>([]);
   const [activeTab, setActiveTab] = useState('supercharger');
+
+  // Set initial tab based on URL parameter
+  useEffect(() => {
+    if (tabParam === 'ramair' || tabParam === 'cfm') {
+      setActiveTab(tabParam);
+    }
+  }, [tabParam]);
 
   const handleSuperchargerChange = useCallback((field: keyof SuperchargerState, value: string) => {
     setSuperchargerState(prev => ({ ...prev, [field]: value }));

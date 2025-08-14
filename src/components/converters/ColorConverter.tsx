@@ -5,7 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Copy, Palette, Eye } from 'lucide-react';
+import { Palette, Eye } from 'lucide-react';
+import { CopyButton } from '@/components/ui/CopyButton';
 import { ConversionEngine } from '@/lib/converters/conversion-engine';
 
 interface ColorValues {
@@ -170,13 +171,7 @@ export function ColorConverter() {
     };
   };
 
-  const copyToClipboard = async (text: string) => {
-    try {
-      await navigator.clipboard.writeText(text);
-    } catch (err) {
-      console.error('Failed to copy:', err);
-    }
-  };
+
 
   const setPresetColor = (hex: string) => {
     setHexInput(hex);
@@ -273,39 +268,21 @@ export function ColorConverter() {
                 <div className="text-sm font-medium mb-1">HEX</div>
                 <div className="flex items-center justify-between">
                   <code className="text-lg font-mono">{colorValues.hex}</code>
-                  <Button
-                    onClick={() => copyToClipboard(colorValues.hex)}
-                    variant="outline"
-                    size="sm"
-                  >
-                    <Copy className="h-4 w-4" />
-                  </Button>
+                  <CopyButton text={colorValues.hex} />
                 </div>
               </div>
               <div className="p-3 bg-muted rounded-lg">
                 <div className="text-sm font-medium mb-1">RGB</div>
                 <div className="flex items-center justify-between">
                   <code className="text-sm font-mono">{colorValues.rgb}</code>
-                  <Button
-                    onClick={() => copyToClipboard(colorValues.rgb)}
-                    variant="outline"
-                    size="sm"
-                  >
-                    <Copy className="h-4 w-4" />
-                  </Button>
+                  <CopyButton text={colorValues.rgb} />
                 </div>
               </div>
               <div className="p-3 bg-muted rounded-lg">
                 <div className="text-sm font-medium mb-1">HSL</div>
                 <div className="flex items-center justify-between">
                   <code className="text-sm font-mono">{colorValues.hsl}</code>
-                  <Button
-                    onClick={() => copyToClipboard(colorValues.hsl)}
-                    variant="outline"
-                    size="sm"
-                  >
-                    <Copy className="h-4 w-4" />
-                  </Button>
+                  <CopyButton text={colorValues.hsl} />
                 </div>
               </div>
             </div>

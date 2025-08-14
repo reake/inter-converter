@@ -2,7 +2,7 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { CarburetorCFMCalculator } from '../CarburetorCFMCalculator';
 
 // Mock the AutoTermTooltip component
-jest.mock('@/components/automotive/EducationalTooltip', () => ({
+jest.mock('@/components/auto/EducationalTooltip', () => ({
   AutoTermTooltip: ({ triggerText }: { triggerText: string }) => <span>{triggerText}</span>
 }));
 

@@ -6,7 +6,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Copy, Clock, Calendar } from 'lucide-react';
+import { Clock, Calendar } from 'lucide-react';
+import { CopyButton, CopyResult } from '@/components/ui/CopyButton';
 import { ConversionEngine } from '@/lib/converters/conversion-engine';
 
 const COMMON_TIMEZONES = [
@@ -69,14 +70,7 @@ export function TimestampConverter() {
     }
   }, [dateTime]);
 
-  const copyToClipboard = async (text: string) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      // You could add a toast notification here
-    } catch (err) {
-      console.error('Failed to copy:', err);
-    }
-  };
+
 
   const setCurrentTimestamp = () => {
     const now = Math.floor(Date.now() / 1000);
@@ -166,20 +160,11 @@ export function TimestampConverter() {
           {convertedDate && (
             <div>
               <label className="block text-sm font-medium mb-2">Converted Date</label>
-              <div className="flex items-center gap-2">
-                <Input
-                  value={convertedDate}
-                  readOnly
-                  className="font-mono"
-                />
-                <Button
-                  onClick={() => copyToClipboard(convertedDate)}
-                  variant="outline"
-                  size="sm"
-                >
-                  <Copy className="h-4 w-4" />
-                </Button>
-              </div>
+              <CopyResult
+                value={convertedDate}
+                placeholder="Converted date will appear here"
+                inputClassName="font-mono"
+              />
             </div>
           )}
         </CardContent>
@@ -209,20 +194,11 @@ export function TimestampConverter() {
           {convertedTimestamp && (
             <div>
               <label className="block text-sm font-medium mb-2">Unix Timestamp</label>
-              <div className="flex items-center gap-2">
-                <Input
-                  value={convertedTimestamp}
-                  readOnly
-                  className="font-mono"
-                />
-                <Button
-                  onClick={() => copyToClipboard(convertedTimestamp)}
-                  variant="outline"
-                  size="sm"
-                >
-                  <Copy className="h-4 w-4" />
-                </Button>
-              </div>
+              <CopyResult
+                value={convertedTimestamp}
+                placeholder="Converted timestamp will appear here"
+                inputClassName="font-mono"
+              />
             </div>
           )}
         </CardContent>

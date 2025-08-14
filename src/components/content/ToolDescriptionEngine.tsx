@@ -68,7 +68,7 @@ export function ToolDescriptionEngine({
 
     // Category-specific features
     switch (category) {
-      case 'time-date':
+      case 'time':
         features.push(
           {
             title: 'Timezone Support',
@@ -83,7 +83,7 @@ export function ToolDescriptionEngine({
         );
         break;
 
-      case 'currency-finance':
+      case 'finance':
         features.push(
           {
             title: 'Real-time Rates',
@@ -98,7 +98,7 @@ export function ToolDescriptionEngine({
         );
         break;
 
-      case 'unit-measurement':
+      case 'unit':
         features.push(
           {
             title: 'High Precision',
@@ -113,7 +113,7 @@ export function ToolDescriptionEngine({
         );
         break;
 
-      case 'file-media':
+      case 'media':
         features.push(
           {
             title: 'Client-side Processing',
@@ -128,7 +128,7 @@ export function ToolDescriptionEngine({
         );
         break;
 
-      case 'health-fitness':
+      case 'health':
         features.push(
           {
             title: 'Evidence-based',
@@ -170,7 +170,7 @@ export function ToolDescriptionEngine({
     const category = tool.category;
 
     switch (category) {
-      case 'time-date':
+      case 'time':
         useCases.push(
           {
             title: 'Software Development',
@@ -193,7 +193,7 @@ export function ToolDescriptionEngine({
         );
         break;
 
-      case 'currency-finance':
+      case 'finance':
         useCases.push(
           {
             title: 'International Trade',
@@ -216,7 +216,7 @@ export function ToolDescriptionEngine({
         );
         break;
 
-      case 'unit-measurement':
+      case 'unit':
         useCases.push(
           {
             title: 'Engineering Projects',
@@ -239,7 +239,7 @@ export function ToolDescriptionEngine({
         );
         break;
 
-      case 'health-fitness':
+      case 'health':
         useCases.push(
           {
             title: 'Health Monitoring',
@@ -293,14 +293,14 @@ export function ToolDescriptionEngine({
 
     // Add category-specific technical details
     switch (tool.category) {
-      case 'currency-finance':
+      case 'finance':
         details.push({
           aspect: 'Data Source',
           description: 'Real-time exchange rates from reliable financial providers',
           value: 'Live Data'
         });
         break;
-      case 'unit-measurement':
+      case 'unit':
         details.push({
           aspect: 'Precision',
           description: 'Calculations accurate to 15 decimal places',

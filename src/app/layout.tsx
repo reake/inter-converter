@@ -3,6 +3,7 @@ import { getMessages } from "next-intl/server";
 import { redirect } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { ThemeProvider } from '@/components/theme-provider';
+import { WebVitals, PerformanceMonitor, ResourceMonitor } from '@/components/performance/WebVitals';
 import "./globals.css";
 
 export default async function RootLayout({
@@ -22,6 +23,15 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#2563eb" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="InterConverter" />
+        <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+      </head>
       <body>
         <ThemeProvider
           attribute="class"
@@ -31,6 +41,9 @@ export default async function RootLayout({
         >
           <NextIntlClientProvider messages={messages}>
             {children}
+            <WebVitals />
+            <PerformanceMonitor />
+            <ResourceMonitor />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

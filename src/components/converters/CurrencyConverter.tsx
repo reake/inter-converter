@@ -5,7 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Copy, TrendingUp, TrendingDown, RefreshCw } from 'lucide-react';
+import { TrendingUp, TrendingDown, RefreshCw } from 'lucide-react';
+import { CopyButton } from '@/components/ui/CopyButton';
 
 const POPULAR_CURRENCIES = [
   { code: 'USD', name: 'US Dollar', symbol: '$' },
@@ -136,15 +137,11 @@ export function CurrencyConverter() {
     setToCurrency(temp);
   };
 
-  const copyResult = async () => {
+  const getResultText = () => {
     if (result !== null) {
-      const resultText = `${amount} ${fromCurrency} = ${result.toFixed(2)} ${toCurrency}`;
-      try {
-        await navigator.clipboard.writeText(resultText);
-      } catch (err) {
-        console.error('Failed to copy:', err);
-      }
+      return `${amount} ${fromCurrency} = ${result.toFixed(2)} ${toCurrency}`;
     }
+    return '';
   };
 
   const formatCurrency = (value: number, currency: string) => {
@@ -252,13 +249,12 @@ export function CurrencyConverter() {
                 <div className="text-xl text-green-700 mb-6 font-medium">
                   {amount} {fromCurrency} equals
                 </div>
-                <Button 
-                  onClick={copyResult} 
+                <CopyButton
+                  text={getResultText()}
                   className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
-                >
-                  <Copy className="h-5 w-5 mr-3" />
-                  Copy Result
-                </Button>
+                  showText={true}
+                  successText="Result Copied!"
+                />
               </div>
             </div>
           )}

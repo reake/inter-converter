@@ -99,7 +99,7 @@ src/components/tools/
 ├── ToolSearch.tsx              # 工具搜索组件
 └── ModernSEOContent.tsx        # 更新的SEO内容组件
 
-src/components/automotive/
+src/components/auto/
 └── AutomotiveLayout.tsx        # 更新的汽车布局组件
 
 src/app/[locale]/(tools)/

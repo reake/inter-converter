@@ -12,6 +12,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ToolConfig } from '@/types/tools';
+import Link from 'next/link';
 
 interface ToolsPageClientProps {
   locale: string;
@@ -353,47 +354,7 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
           )}
         </div>
       </section>
-
-      {/* Category Statistics */}
-      <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Professional Tool Categories</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Explore our comprehensive collection of specialized calculators and converters, organized by category for easy discovery and maximum productivity
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {categoryStats.map(({ key, name, count, totalSearchVolume }) => {
-              const categoryInfo = TOOL_CATEGORIES[key as keyof typeof TOOL_CATEGORIES];
-              return (
-                <Card 
-                  key={key} 
-                  className="hover:shadow-lg transition-shadow duration-300 cursor-pointer group"
-                  onClick={() => setSelectedCategory(key)}
-                >
-                  <CardContent className="p-6 text-center">
-                    <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                      {toolsByCategory[key][0]?.icon || '🔧'}
-                    </div>
-                    <h3 className="font-semibold text-lg mb-2 group-hover:text-blue-600 transition-colors">
-                      {name}
-                    </h3>
-                    <p className="text-sm text-gray-600 mb-3 line-clamp-2">
-                      {categoryInfo?.description}
-                    </p>
-                    <div className="flex justify-between text-xs text-gray-500">
-                      <span>{count} tools</span>
-                      <span>{Math.round(totalSearchVolume / 1000)}K searches</span>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Call to Action */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
@@ -406,8 +367,9 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
             <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-blue-50">
               Request New Tool
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-              Explore All Tools
+          
+            <Button asChild size="lg" className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold shadow-lg border-0">
+              <Link href="/tools"> Explore All Tools</Link>
             </Button>
           </div>
         </div>
@@ -423,20 +385,6 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
           />
         </div>
       </section>
-
-      {/* Related Tools Section */}
-      {selectedCategory !== 'all' && (
-        <section className="py-16 bg-gradient-to-r from-gray-50 to-blue-50">
-          <div className="container mx-auto px-4">
-            <RelatedToolsEngine
-              category={selectedCategory}
-              maxItems={6}
-              variant="grid"
-              locale={locale}
-            />
-          </div>
-        </section>
-      )}
     </div>
   );
 }

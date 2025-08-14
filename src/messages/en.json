@@ -1,6 +1,6 @@
 {
   "common": {
-    "title": "Minimal Tool Site",
+    "title": "InterConverter",
     "description": "A collection of useful online tools",
     "home": "Home",
     "tools": "Tools",
@@ -166,10 +166,60 @@
       "taxOwed": "Tax Owed",
       "effectiveRate": "Effective Tax Rate",
       "marginalRate": "Marginal Tax Rate"
+    },
+    "dateDifferenceCalculator": {
+      "title": "Date Difference Calculator",
+      "description": "Calculate the exact time duration between two dates",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "includeEndDate": "Include End Date",
+      "businessDaysOnly": "Business Days Only",
+      "calculate": "Calculate",
+      "years": "Years",
+      "months": "Months",
+      "days": "Days",
+      "totalDays": "Total Days",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "copy": "Copy Result"
+    },
+    "automotive": {
+      "engineSizeConverter": {
+        "title": "Engine Size Converter",
+        "description": "Convert between cubic inches and liters for engine displacement"
+      },
+      "gearRatioCalculator": {
+        "title": "Gear Ratio Calculator",
+        "description": "Calculate gear ratios, RPM, and speed relationships"
+      },
+      "powerToWeightRatio": {
+        "title": "Power to Weight Ratio Calculator",
+        "description": "Calculate horsepower to weight ratio for performance analysis"
+      },
+      "rpmCalculator": {
+        "title": "RPM Calculator",
+        "description": "Calculate RPM based on speed, gear ratio, and tire diameter"
+      },
+      "speedConverter": {
+        "title": "Speed Converter",
+        "description": "Convert between MPH and KPH with automotive references"
+      },
+      "torqueHorsepowerCalculator": {
+        "title": "Torque & Horsepower Calculator",
+        "description": "Convert between torque, horsepower, and RPM"
+      },
+      "temperatureConverter": {
+        "title": "Automotive Temperature Converter",
+        "description": "Convert temperatures for automotive applications"
+      },
+      "tireCalculator": {
+        "title": "Tire Calculator",
+        "description": "Calculate tire diameter effects on speed and performance"
+      }
     }
   },
   "about": {
     "title": "About",
-    "description": "This is a minimal tool site built with Next.js and Tailwind CSS."
+    "description": "This is a InterConverter built with Next.js and Tailwind CSS."
   }
 }

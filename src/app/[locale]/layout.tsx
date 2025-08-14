@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { SearchProvider } from '@/lib/search-context';
 import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
 
 export default async function LocaleLayout({
   children,
@@ -19,9 +20,10 @@ export default async function LocaleLayout({
 
   return (
     <SearchProvider>
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background flex flex-col">
         <Header />
-        <main>{children}</main>
+        <main className="flex-1">{children}</main>
+        <Footer />
       </div>
     </SearchProvider>
   );

@@ -29,14 +29,14 @@ export function ModernToolCard({
   
   const getCategoryGradient = (category: string) => {
     const gradients = {
-      'time-date': 'from-blue-500 to-cyan-500',
-      'currency-finance': 'from-green-500 to-emerald-500',
-      'unit-measurement': 'from-purple-500 to-violet-500',
-      'file-media': 'from-orange-500 to-red-500',
-      'color-design': 'from-pink-500 to-rose-500',
-      'health-fitness': 'from-teal-500 to-green-500',
-      'science-engineering': 'from-indigo-500 to-blue-500',
-      'automotive': 'from-gray-700 to-gray-900'
+      'time': 'from-blue-500 to-cyan-500',
+      'finance': 'from-green-500 to-emerald-500',
+      'unit': 'from-purple-500 to-violet-500',
+      'media': 'from-orange-500 to-red-500',
+      'color': 'from-pink-500 to-rose-500',
+      'health': 'from-teal-500 to-green-500',
+      'science': 'from-indigo-500 to-blue-500',
+      'auto': 'from-gray-700 to-gray-900'
     };
     return gradients[category as keyof typeof gradients] || 'from-gray-500 to-gray-700';
   };

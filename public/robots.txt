@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://interconverter.com/sitemap.xml
+
+# Block admin and API routes
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Allow all conversion tools
+Allow: /timestamp-converter
+Allow: /currency-converter
+Allow: /loan-calculator
+Allow: /hex-to-rgb-converter
+Allow: /bmi-calculator
+Allow: /unit-converter
+Allow: /countdown-timer
+Allow: /tax-calculator
+Allow: /date-difference-calculator
+Allow: /auto/
+Allow: /tools/
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1

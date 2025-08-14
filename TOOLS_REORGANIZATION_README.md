@@ -9,73 +9,106 @@ We have successfully reorganized all conversion tools into a categorized directo
 ```
 src/app/[locale]/(tools)/
 ├── page.tsx                           # Main tools index page
-├── automotive/                        # 🏎️ Automotive Tools
+├── auto/                              # 🏎️ Automotive Tools
 │   ├── page.tsx                      # Automotive category index
 │   ├── carburetor-cfm-calculator/
 │   ├── compression-ratio-calculator/
 │   ├── engine-displacement-calculator/
+│   ├── engine-size-converter/
+│   ├── engine-volume-calculator/
+│   ├── fluid-weight-calculator/
 │   ├── gear-ratio-calculator/
+│   ├── power-to-weight-ratio/
+│   ├── ram-air-calculator/
+│   ├── rpm-calculator/
+│   ├── speed-converter/
 │   ├── supercharger-calculator/
-│   └── torque-horsepower-calculator/
-├── time-date/                         # 🕐 Time & Date Tools
+│   ├── temperature-converter/
+│   ├── tire-calculator/
+│   ├── torque-horsepower-calculator/
+│   ├── volumetric-efficiency-calculator/
+│   └── weight-converter/
+├── time/                              # 🕐 Time & Date Tools
 │   ├── page.tsx                      # Time & Date category index
 │   ├── timestamp-converter/
 │   ├── countdown-timer/
 │   └── date-difference-calculator/
-├── currency-finance/                  # 💱 Currency & Finance Tools
+├── finance/                           # 💱 Currency & Finance Tools
 │   ├── page.tsx                      # Currency & Finance category index
 │   ├── currency-converter/
 │   ├── loan-calculator/
 │   └── tax-calculator/
-├── unit-measurement/                  # 📏 Unit & Measurement Tools
+├── unit/                              # 📏 Unit & Measurement Tools
 │   ├── page.tsx                      # Unit & Measurement category index
 │   └── unit-converter/
-├── file-media/                        # 📄 File & Media Tools
+├── media/                             # 📄 File & Media Tools
 │   ├── page.tsx                      # File & Media category index
 │   ├── pdf-to-word-converter/
 │   └── jpg-to-png-converter/
-├── color-design/                      # 🎨 Color & Design Tools
+├── color/                             # 🎨 Color & Design Tools
 │   ├── page.tsx                      # Color & Design category index
 │   └── hex-to-rgb-converter/
-└── health-fitness/                    # ⚖️ Health & Fitness Tools
+└── health/                            # ⚖️ Health & Fitness Tools
     ├── page.tsx                      # Health & Fitness category index
     └── bmi-calculator/
 ```
 
-## 🔄 URL Structure Changes
+## 🔄 URL Structure Optimization
+
+### Category Name Simplification
+We've optimized the directory structure by changing from compound words to single words for better SEO and user experience:
+
+- `automotive/` → `auto/` (cleaner, shorter URLs)
+- `time-date/` → `time/` (simplified category name)
+- `currency-finance/` → `finance/` (more focused category)
+- `unit-measurement/` → `unit/` (concise and clear)
+- `file-media/` → `media/` (shorter, more memorable)
+- `color-design/` → `color/` (simplified for designers)
+- `health-fitness/` → `health/` (broader health category)
 
 ### Old URLs → New URLs
 
 **Time & Date Tools:**
-- `/timestamp-converter` → `/time-date/timestamp-converter`
-- `/countdown-timer` → `/time-date/countdown-timer`
-- `/date-difference-calculator` → `/time-date/date-difference-calculator`
+- `/timestamp-converter` → `/time/timestamp-converter`
+- `/countdown-timer` → `/time/countdown-timer`
+- `/date-difference-calculator` → `/time/date-difference-calculator`
 
 **Currency & Finance Tools:**
-- `/currency-converter` → `/currency-finance/currency-converter`
-- `/loan-calculator` → `/currency-finance/loan-calculator`
-- `/tax-calculator` → `/currency-finance/tax-calculator`
+- `/currency-converter` → `/finance/currency-converter`
+- `/loan-calculator` → `/finance/loan-calculator`
+- `/tax-calculator` → `/finance/tax-calculator`
 
 **Unit & Measurement Tools:**
-- `/unit-converter` → `/unit-measurement/unit-converter`
+- `/unit-converter` → `/unit/unit-converter`
 
 **File & Media Tools:**
-- `/pdf-to-word-converter` → `/file-media/pdf-to-word-converter`
-- `/jpg-to-png-converter` → `/file-media/jpg-to-png-converter`
+- `/pdf-to-word-converter` → `/media/pdf-to-word-converter`
+- `/jpg-to-png-converter` → `/media/jpg-to-png-converter`
 
 **Color & Design Tools:**
-- `/hex-to-rgb-converter` → `/color-design/hex-to-rgb-converter`
+- `/hex-to-rgb-converter` → `/color/hex-to-rgb-converter`
 
 **Health & Fitness Tools:**
-- `/bmi-calculator` → `/health-fitness/bmi-calculator`
+- `/bmi-calculator` → `/health/bmi-calculator`
 
-**Automotive Tools (unchanged):**
-- `/automotive/carburetor-cfm-calculator`
-- `/automotive/compression-ratio-calculator`
-- `/automotive/gear-ratio-calculator`
-- `/automotive/supercharger-calculator`
-- `/automotive/engine-displacement-calculator`
-- `/automotive/torque-horsepower-calculator`
+**Automotive Tools:**
+- `/auto/carburetor-cfm-calculator`
+- `/auto/compression-ratio-calculator`
+- `/auto/engine-displacement-calculator`
+- `/auto/engine-size-converter`
+- `/auto/engine-volume-calculator`
+- `/auto/fluid-weight-calculator`
+- `/auto/gear-ratio-calculator`
+- `/auto/power-to-weight-ratio`
+- `/auto/ram-air-calculator`
+- `/auto/rpm-calculator`
+- `/auto/speed-converter`
+- `/auto/supercharger-calculator`
+- `/auto/temperature-converter`
+- `/auto/tire-calculator`
+- `/auto/torque-horsepower-calculator`
+- `/auto/volumetric-efficiency-calculator`
+- `/auto/weight-converter`
 
 ## 🏠 Landing Pages
 
@@ -88,19 +121,19 @@ src/app/[locale]/(tools)/
 ### Category Index Pages
 Each category has its own dedicated landing page:
 
-1. **Time & Date** (`/time-date`) - For developers and project managers
-2. **Currency & Finance** (`/currency-finance`) - For financial calculations
-3. **Unit & Measurement** (`/unit-measurement`) - For engineers and scientists
-4. **File & Media** (`/file-media`) - For document and image conversion
-5. **Color & Design** (`/color-design`) - For designers and developers
-6. **Health & Fitness** (`/health-fitness`) - For wellness tracking
-7. **Automotive** (`/automotive`) - For car enthusiasts and mechanics
+1. **Time & Date** (`/time`) - For developers and project managers
+2. **Currency & Finance** (`/finance`) - For financial calculations
+3. **Unit & Measurement** (`/unit`) - For engineers and scientists
+4. **File & Media** (`/media`) - For document and image conversion
+5. **Color & Design** (`/color`) - For designers and developers
+6. **Health & Fitness** (`/health`) - For wellness tracking
+7. **Automotive** (`/auto`) - For car enthusiasts and mechanics
 
 ## 📊 Tool Categories
 
 | Category | Tools Count | Total Monthly Searches | Description |
 |----------|-------------|------------------------|-------------|
-| **Automotive** | 6 tools | 62,000+ | Engine performance and tuning |
+| **Automotive** | 17 tools | 320,000+ | Engine performance and tuning |
 | **Currency & Finance** | 3 tools | 395,000+ | Financial calculations |
 | **Time & Date** | 3 tools | 179,000+ | Time and date conversions |
 | **Health & Fitness** | 1 tool | 135,000+ | Health and wellness |
@@ -108,7 +141,7 @@ Each category has its own dedicated landing page:
 | **File & Media** | 2 tools | 290,000+ | File format conversions |
 | **Color & Design** | 1 tool | 67,000+ | Color format conversions |
 
-**Total: 17 tools with 1,226,000+ monthly searches**
+**Total: 28 tools with 1,484,000+ monthly searches**
 
 ## 🎨 Features
 
@@ -195,11 +228,12 @@ Each category has its own dedicated landing page:
 
 The reorganization achieves the goal of creating a "大而全的工具落地页站" by:
 
-1. **Comprehensive Coverage** - 17 professional tools across 7 categories
+1. **Comprehensive Coverage** - 28 professional tools across 7 categories
 2. **Professional Presentation** - Consistent, high-quality design
-3. **Easy Navigation** - Logical organization and clear pathways
-4. **SEO Optimized** - Better search engine visibility
+3. **Easy Navigation** - Logical organization with single-word categories
+4. **SEO Optimized** - Better search engine visibility with clean URLs
 5. **Scalable Structure** - Easy to add new tools and categories
 6. **Mobile Friendly** - Works perfectly on all devices
+7. **Simplified URLs** - Clean, memorable paths like `/auto/`, `/time/`, `/finance/`
 
 This makes InterConverter.com a comprehensive, professional tool platform that can compete with major converter websites while maintaining excellent user experience and SEO performance.

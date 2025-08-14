@@ -8,7 +8,7 @@ interface StructuredDataProps {
   locale?: string;
 }
 
-export function StructuredData({ tools, category, locale = 'en' }: StructuredDataProps) {
+export function StructuredData({ tools = [], category, locale = 'en' }: StructuredDataProps) {
   const categoryInfo = category ? TOOL_CATEGORIES[category as keyof typeof TOOL_CATEGORIES] : null;
   const baseUrl = 'https://interconverter.com';
   

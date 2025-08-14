@@ -1,13 +1,18 @@
 import createMiddleware from 'next-intl/middleware';
 import { routing } from './i18n/routing';
+import { NextRequest, NextResponse } from 'next/server';
 
-export default createMiddleware({
+const intlMiddleware = createMiddleware({
   ...routing,
   // Ensure default locale is always English
   defaultLocale: 'en',
   // Disable automatic locale detection
   localeDetection: false
 });
+
+export default function middleware(request: NextRequest) {
+  return intlMiddleware(request);
+}
 
 export const config = {
   // Match only internationalized pathnames

@@ -1,4 +1,5 @@
 import React from "react";
+import { Metadata } from 'next';
 import { Button } from "@/components/ui/button";
 import { SearchInput } from "@/components/ui/SearchInput";
 import {
@@ -11,6 +12,17 @@ import {
 import { Link } from "@/i18n/routing";
 import { getPopularTools } from "@/config/tools";
 import { EnhancedToolCard } from "@/components/tools/EnhancedToolCard";
+import { generateHomeMetadata } from "@/config/seo";
+import { StructuredData } from "@/components/seo/StructuredData";
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return generateHomeMetadata(locale);
+}
 
 
 export default async function HomePage({
@@ -22,65 +34,47 @@ export default async function HomePage({
   const popularTools = getPopularTools(6);
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <>
+      <StructuredData tools={popularTools} locale={locale} />
+     
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 opacity-70"></div>
-        <div className="relative text-center py-24">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl mb-8 shadow-lg">
-            <span className="text-4xl">🔧</span>
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-gray-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent">
+      <section className="relative overflow-visible bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 via-purple-600/90 to-indigo-700/90"></div>
+        <div className="relative container mx-auto px-4 py-20 text-center text-white max-w-7xl">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 text-white">
             InterConverter
           </h1>
-          <p className="text-xl md:text-2xl text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed">
-            The ultimate collection of professional conversion tools and calculators
+          <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-blue-100">
+            Free Online Conversion Tools & Calculators
+          </h2>
+          <p className="text-lg md:text-xl text-blue-100 mb-12 max-w-5xl mx-auto leading-relaxed">
+            Professional-grade conversion tools and calculators for developers, engineers,
+            students, and professionals. Completely free, secure, and works instantly in your
+            browser without downloads.
           </p>
-          <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
-            Free online conversion tools for developers, designers, and professionals. 
-            Convert currencies, units, colors, files, automotive calculations, and more - all in your browser.
-          </p>
-          
+
           {/* Search */}
-          <div className="max-w-md mx-auto mb-12">
-            <SearchInput 
-              placeholder="Search conversion tools..." 
+          <div className="max-w-2xl mx-auto mb-8 relative z-50">
+            <SearchInput
+              placeholder="Search conversion tools..."
               redirectTo="/tools"
               locale={locale}
               showSuggestions={true}
             />
           </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <Button asChild size="lg" className="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600">
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold shadow-lg">
               <Link href="/tools">Explore All Tools</Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/tools">Automotive Tools</Link>
+            <Button asChild size="lg" className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold shadow-lg border-0">
+              <Link href="/tools">Browse Categories</Link>
             </Button>
-          </div>
-
-          {/* Trust Indicators */}
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-              <span>100% Free</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-              <span>No Registration</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-              <span>Privacy Focused</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-              <span>Mobile Optimized</span>
-            </div>
           </div>
         </div>
       </section>
+
+       <div className="container mx-auto px-4 py-8">
 
       {/* Popular Tools Section */}
       <section className="py-12">
@@ -101,6 +95,86 @@ export default async function HomePage({
           <Button asChild variant="outline">
             <Link href="/tools">View All Tools</Link>
           </Button>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-gray-50 rounded-3xl mx-4">
+        <div className="max-w-4xl mx-auto px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-gray-600">
+              Everything you need to know about our conversion tools
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <h3 className="font-semibold text-lg mb-3 text-gray-900">
+                  Are these tools really free?
+                </h3>
+                <p className="text-gray-700">
+                  Yes! All our conversion tools are completely free to use with no hidden costs,
+                  registration requirements, or usage limits. We believe in providing accessible tools for everyone.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <h3 className="font-semibold text-lg mb-3 text-gray-900">
+                  Do you store my data?
+                </h3>
+                <p className="text-gray-700">
+                  No, all calculations are performed locally in your browser. We don't store, track,
+                  or have access to your input data or results. Your privacy is our priority.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <h3 className="font-semibold text-lg mb-3 text-gray-900">
+                  How accurate are the results?
+                </h3>
+                <p className="text-gray-700">
+                  Our tools use industry-standard formulas and regularly updated data sources to ensure
+                  maximum accuracy. For financial tools, we use real-time exchange rates and official data.
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <h3 className="font-semibold text-lg mb-3 text-gray-900">
+                  Do I need to create an account?
+                </h3>
+                <p className="text-gray-700">
+                  No registration required! Simply visit any tool page and start converting immediately.
+                  All tools work instantly without any sign-up process.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <h3 className="font-semibold text-lg mb-3 text-gray-900">
+                  Can I use these tools on mobile?
+                </h3>
+                <p className="text-gray-700">
+                  Absolutely! All our tools are fully responsive and optimized for mobile devices.
+                  They work perfectly on smartphones, tablets, and desktop computers.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <h3 className="font-semibold text-lg mb-3 text-gray-900">
+                  How often are exchange rates updated?
+                </h3>
+                <p className="text-gray-700">
+                  Currency exchange rates are updated every 15 minutes during market hours from reliable
+                  financial data providers to ensure you get the most current rates.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -280,5 +354,6 @@ export default async function HomePage({
         </div>
       </section>
     </div>
+    </>
   );
 }

@@ -1,10 +1,10 @@
 export const siteConfig = {
   name: "InterConverter",
-  description: "Free online conversion tools for developers, designers, and everyone. Convert timestamps, currencies, colors, files, and more.",
+  description: "Free online conversion tools and calculators. Convert currencies, units, timestamps, colors, and more - fast, accurate, and completely free.",
   url: "https://interconverter.com",
   author: "InterConverter Team",
   email: "contact@interconverter.com",
-  template: "converter-tools",
+  template: "InterConverter",
   features: [
     "Timestamp Converter",
     "Currency Converter", 

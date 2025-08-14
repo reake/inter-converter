@@ -81,7 +81,7 @@
 
 - [x] 11. Create automotive tool pages and routing
   - Set up Next.js pages for all automotive calculator tools
-  - Implement dynamic routing under /automotive/ path structure
+  - Implement dynamic routing under /auto/ path structure
   - Create individual page components with proper SEO meta tags
   - Add automotive tool integration to existing tools configuration
   - Write unit tests for routing and page component rendering

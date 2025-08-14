@@ -5,7 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Copy, Calculator, TrendingUp } from 'lucide-react';
+import { Calculator, TrendingUp } from 'lucide-react';
+import { CopyButton } from '@/components/ui/CopyButton';
 
 interface LoanCalculation {
   monthlyPayment: number;
@@ -94,15 +95,11 @@ export function LoanCalculator() {
     });
   };
 
-  const copyResult = async () => {
+  const getResultText = () => {
     if (result) {
-      const resultText = `Loan: $${parseFloat(loanAmount).toLocaleString()}\nMonthly Payment: $${result.monthlyPayment.toFixed(2)}\nTotal Interest: $${result.totalInterest.toFixed(2)}`;
-      try {
-        await navigator.clipboard.writeText(resultText);
-      } catch (err) {
-        console.error('Failed to copy:', err);
-      }
+      return `Loan: $${parseFloat(loanAmount).toLocaleString()}\nMonthly Payment: $${result.monthlyPayment.toFixed(2)}\nTotal Interest: $${result.totalInterest.toFixed(2)}`;
     }
+    return '';
   };
 
   const formatCurrency = (amount: number) => {
@@ -290,10 +287,12 @@ export function LoanCalculator() {
 
             {/* Actions */}
             <div className="flex gap-2">
-              <Button onClick={copyResult} variant="outline">
-                <Copy className="h-4 w-4 mr-2" />
-                Copy Results
-              </Button>
+              <CopyButton
+                text={getResultText()}
+                variant="outline"
+                showText={true}
+                successText="Results Copied!"
+              />
               <Button 
                 onClick={() => setShowSchedule(!showSchedule)} 
                 variant="outline"

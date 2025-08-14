@@ -8,8 +8,8 @@ import {
 
 describe('Tools Configuration', () => {
   describe('TOOLS_CONFIG', () => {
-    it('should contain 11 tools', () => {
-      expect(TOOLS_CONFIG).toHaveLength(11);
+    it('should contain 28 tools', () => {
+      expect(TOOLS_CONFIG).toHaveLength(28);
     });
 
     it('should have all required properties for each tool', () => {
@@ -54,15 +54,15 @@ describe('Tools Configuration', () => {
 
   describe('getToolsByCategory', () => {
     it('should return tools for valid category', () => {
-      const tools = getToolsByCategory('time-date');
+      const tools = getToolsByCategory('time');
       expect(tools.length).toBeGreaterThan(0);
       tools.forEach(tool => {
-        expect(tool.category).toBe('time-date');
+        expect(tool.category).toBe('time');
       });
     });
 
     it('should return empty array for category with no tools', () => {
-      const tools = getToolsByCategory('science-engineering' as any);
+      const tools = getToolsByCategory('science' as any);
       expect(tools).toHaveLength(0);
     });
   });

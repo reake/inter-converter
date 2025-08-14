@@ -1,0 +1,131 @@
+{
+  "name": "InterConverter - Free Online Conversion Tools",
+  "short_name": "InterConverter",
+  "description": "Professional-grade conversion tools and calculators. Convert currencies, units, colors, files, automotive calculations, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["productivity", "utilities", "education"],
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Timestamp Converter",
+      "short_name": "Timestamp",
+      "description": "Convert Unix timestamps to dates",
+      "url": "/time/timestamp-converter",
+      "icons": [
+        {
+          "src": "/icons/timestamp-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Currency Converter",
+      "short_name": "Currency",
+      "description": "Convert between currencies",
+      "url": "/finance/currency-converter",
+      "icons": [
+        {
+          "src": "/icons/currency-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "BMI Calculator",
+      "short_name": "BMI",
+      "description": "Calculate Body Mass Index",
+      "url": "/health/bmi-calculator",
+      "icons": [
+        {
+          "src": "/icons/bmi-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Unit Converter",
+      "short_name": "Units",
+      "description": "Convert between units",
+      "url": "/unit/unit-converter",
+      "icons": [
+        {
+          "src": "/icons/unit-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop-home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "InterConverter homepage on desktop"
+    },
+    {
+      "src": "/screenshots/mobile-tools.png",
+      "sizes": "375x812",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Tools page on mobile"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

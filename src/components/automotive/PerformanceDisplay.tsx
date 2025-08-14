@@ -5,7 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Copy, AlertTriangleIcon, CheckCircleIcon, InfoIcon } from 'lucide-react';
+import { AlertTriangleIcon, CheckCircleIcon, InfoIcon } from 'lucide-react';
+import { CopyButton } from '@/components/ui/CopyButton';
 import { AutomotiveResult, Recommendation, Warning } from '@/types/automotive';
 
 interface PerformanceDisplayProps {
@@ -43,9 +44,7 @@ export function PerformanceDisplay({
   title = 'Calculation Results',
   description = 'Your automotive calculation results are shown below'
 }: PerformanceDisplayProps) {
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
-  };
+
 
   const formatValue = (value: number | string, precision: number): string => {
     if (typeof value === 'string') return value;
@@ -79,13 +78,11 @@ export function PerformanceDisplay({
                           {formatValue(result.value, result.precision)} {result.unit}
                         </p>
                       </div>
-                      <Button
+                      <CopyButton
+                        text={`${result.label}: ${formatValue(result.value, result.precision)} ${result.unit}`}
                         variant="ghost"
                         size="sm"
-                        onClick={() => copyToClipboard(`${result.label}: ${formatValue(result.value, result.precision)} ${result.unit}`)}
-                      >
-                        <Copy className="h-4 w-4" />
-                      </Button>
+                      />
                     </div>
                   </div>
                 ))}
@@ -107,13 +104,11 @@ export function PerformanceDisplay({
                           {formatValue(result.value, result.precision)} {result.unit}
                         </p>
                       </div>
-                      <Button
+                      <CopyButton
+                        text={`${result.label}: ${formatValue(result.value, result.precision)} ${result.unit}`}
                         variant="ghost"
                         size="sm"
-                        onClick={() => copyToClipboard(`${result.label}: ${formatValue(result.value, result.precision)} ${result.unit}`)}
-                      >
-                        <Copy className="h-4 w-4" />
-                      </Button>
+                      />
                     </div>
                   </div>
                 ))}

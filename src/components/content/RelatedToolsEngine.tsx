@@ -113,14 +113,14 @@ export function RelatedToolsEngine({
   // Get related categories
   const getRelatedCategories = (toolCategory?: string): string[] => {
     const categoryRelations: Record<string, string[]> = {
-      'time-date': ['unit-measurement', 'science-engineering'],
-      'currency-finance': ['unit-measurement', 'science-engineering'],
-      'unit-measurement': ['time-date', 'science-engineering', 'automotive'],
-      'file-media': ['color-design'],
-      'color-design': ['file-media'],
-      'health-fitness': ['unit-measurement', 'science-engineering'],
-      'science-engineering': ['unit-measurement', 'time-date', 'automotive'],
-      'automotive': ['unit-measurement', 'science-engineering']
+      'time': ['unit', 'science'],
+      'finance': ['unit', 'science'],
+      'unit': ['time', 'science', 'auto'],
+      'media': ['color'],
+      'color': ['media'],
+      'health': ['unit', 'science'],
+      'science': ['unit', 'time', 'auto'],
+      'auto': ['unit', 'science']
     };
 
     return categoryRelations[toolCategory || ''] || [];
@@ -309,9 +309,7 @@ export function RelatedToolsEngine({
 
 // Utility function to get related tools for a specific tool
 export function getRelatedTools(tool: ToolConfig, maxItems: number = 6): ToolConfig[] {
-  const engine = new RelatedToolsEngine({ currentTool: tool, maxItems });
-  // This would need to be refactored to work outside of React component
-  // For now, return a simple category-based filter
+  // Simple category-based filter for related tools
   return TOOLS_CONFIG
     .filter(t => t.isActive && t.id !== tool.id && t.category === tool.category)
     .slice(0, maxItems);

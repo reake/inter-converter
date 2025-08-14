@@ -2,7 +2,7 @@ export interface AutomotiveToolConfig {
   id: string;
   name: string;
   description: string;
-  category: 'automotive';
+  category: 'auto';
   subcategory: 'engine' | 'drivetrain' | 'performance' | 'fluids';
   keywords: string[];
   path: string;

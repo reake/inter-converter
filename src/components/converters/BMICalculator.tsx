@@ -5,7 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Copy, Activity, Heart } from 'lucide-react';
+import { Activity, Heart } from 'lucide-react';
+import { CopyButton } from '@/components/ui/CopyButton';
 import { ConversionEngine } from '@/lib/converters/conversion-engine';
 
 interface BMIResult {
@@ -128,15 +129,11 @@ export function BMICalculator() {
     return 'bg-red-50 dark:bg-red-950';
   };
 
-  const copyResult = async () => {
+  const getResultText = () => {
     if (result) {
-      const resultText = `BMI: ${result.bmi}\nCategory: ${result.category}\nIdeal Weight: ${result.idealWeightRange.min}-${result.idealWeightRange.max} ${unit === 'metric' ? 'kg' : 'lbs'}`;
-      try {
-        await navigator.clipboard.writeText(resultText);
-      } catch (err) {
-        console.error('Failed to copy:', err);
-      }
+      return `BMI: ${result.bmi}\nCategory: ${result.category}\nIdeal Weight: ${result.idealWeightRange.min}-${result.idealWeightRange.max} ${unit === 'metric' ? 'kg' : 'lbs'}`;
     }
+    return '';
   };
 
   const setPresetValues = (heightVal: string, weightVal: string, unitType: 'metric' | 'imperial') => {
@@ -314,10 +311,13 @@ export function BMICalculator() {
                   BMI Category
                 </Badge>
                 <div className="flex justify-center">
-                  <Button onClick={copyResult} variant="outline" size="sm">
-                    <Copy className="h-4 w-4 mr-2" />
-                    Copy Results
-                  </Button>
+                  <CopyButton
+                    text={getResultText()}
+                    variant="outline"
+                    size="sm"
+                    showText={true}
+                    successText="Results Copied!"
+                  />
                 </div>
               </div>
             </div>

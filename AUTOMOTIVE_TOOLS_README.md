@@ -8,37 +8,37 @@ This implementation adds comprehensive automotive conversion tools to the InterC
 
 ### 🏎️ Core Automotive Calculators
 
-1. **Carburetor CFM Calculator** (`/automotive/carburetor-cfm-calculator`)
+1. **Carburetor CFM Calculator** (`/auto/carburetor-cfm-calculator`)
    - Calculate required CFM for stock and modified engines
    - Support for cubic inches and liters
    - Engine presets for common configurations
    - Educational content about carburetor selection
 
-2. **Compression Ratio Calculator** (`/automotive/compression-ratio-calculator`)
+2. **Compression Ratio Calculator** (`/auto/compression-ratio-calculator`)
    - Calculate horsepower changes from compression modifications
    - Fuel octane requirements based on compression ratio
    - Safety warnings for high compression applications
    - Visual fuel requirement guide
 
-3. **Gear Ratio Calculator** (`/automotive/gear-ratio-calculator`)
+3. **Gear Ratio Calculator** (`/auto/gear-ratio-calculator`)
    - Calculate ratios from ring/pinion teeth count
    - Determine current ratio from speed/RPM measurements
    - Find ideal ratios for specific performance goals
    - Common gear ratio recommendations
 
-4. **Supercharger Calculator** (`/automotive/supercharger-calculator`)
+4. **Supercharger Calculator** (`/auto/supercharger-calculator`)
    - Calculate horsepower gains from forced induction
    - Ram Air pressure and power calculations
    - CFM requirements for boosted engines
    - Safety warnings for high boost applications
 
-5. **Engine Displacement Calculator** (`/automotive/engine-displacement-calculator`)
+5. **Engine Displacement Calculator** (`/auto/engine-displacement-calculator`)
    - Calculate displacement from bore, stroke, and cylinders
    - Determine cylinder volume from total displacement
    - Convert between cubic inches and liters
    - Engine design characteristic analysis
 
-6. **Torque & Horsepower Calculator** (`/automotive/torque-horsepower-calculator`)
+6. **Torque & Horsepower Calculator** (`/auto/torque-horsepower-calculator`)
    - Convert between torque, horsepower, and RPM
    - Understand the 5252 RPM crossover point
    - Common engine examples and presets
@@ -121,20 +121,20 @@ src/
 │   │   ├── EngineInputs.tsx
 │   │   ├── PerformanceDisplay.tsx
 │   │   └── EducationalTooltip.tsx
-│   └── converters/automotive/
+│   └── converters/auto/
 │       ├── CarburetorCFMCalculator.tsx
 │       ├── CompressionRatioCalculator.tsx
 │       ├── GearRatioCalculator.tsx
 │       ├── SuperchargerCalculator.tsx
 │       ├── EngineDisplacementCalculator.tsx
 │       └── TorqueHorsepowerCalculator.tsx
-├── lib/automotive/
+├── lib/auto/
 │   ├── engine-formulas.ts
 │   ├── drivetrain-calculations.ts
 │   ├── fluid-calculations.ts
 │   ├── automotive-validators.ts
 │   └── __tests__/
-├── app/[locale]/(tools)/automotive/
+├── app/[locale]/(tools)/auto/
 │   ├── page.tsx
 │   ├── carburetor-cfm-calculator/page.tsx
 │   ├── compression-ratio-calculator/page.tsx
@@ -150,7 +150,7 @@ src/
 
 ### Carburetor CFM Calculation
 ```typescript
-import { EngineFormulas } from '@/lib/automotive/engine-formulas';
+import { EngineFormulas } from '@/lib/auto/engine-formulas';
 
 // Calculate CFM for a 350 CI stock engine
 const cfm = EngineFormulas.calculateCFM(350, 'stock'); // Returns 566.3 CFM
@@ -165,7 +165,7 @@ const result = EngineFormulas.calculateCompressionHPChange(300, 9.0, 10.0);
 
 ### Gear Ratio Calculations
 ```typescript
-import { DrivetrainFormulas } from '@/lib/automotive/drivetrain-calculations';
+import { DrivetrainFormulas } from '@/lib/auto/drivetrain-calculations';
 
 // Calculate gear ratio from teeth count
 const ratio = DrivetrainFormulas.calculateGearRatio(41, 11); // Returns 3.73:1

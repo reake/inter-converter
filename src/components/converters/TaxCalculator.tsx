@@ -5,7 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Copy, Calculator, DollarSign } from 'lucide-react';
+import { Calculator, DollarSign } from 'lucide-react';
+import { CopyButton } from '@/components/ui/CopyButton';
 
 type FilingStatus = 'single' | 'marriedJoint' | 'marriedSeparate' | 'headOfHousehold';
 
@@ -140,15 +141,11 @@ export function TaxCalculator() {
     return `${rate.toFixed(1)}%`;
   };
 
-  const copyResult = async () => {
+  const getResultText = () => {
     if (result) {
-      const resultText = `Income: ${formatCurrency(result.grossIncome)}\nFederal Tax: ${formatCurrency(result.federalTax)}\nEffective Rate: ${formatPercentage(result.effectiveRate)}\nAfter-Tax Income: ${formatCurrency(result.afterTaxIncome)}`;
-      try {
-        await navigator.clipboard.writeText(resultText);
-      } catch (err) {
-        console.error('Failed to copy:', err);
-      }
+      return `Income: ${formatCurrency(result.grossIncome)}\nFederal Tax: ${formatCurrency(result.federalTax)}\nEffective Rate: ${formatPercentage(result.effectiveRate)}\nAfter-Tax Income: ${formatCurrency(result.afterTaxIncome)}`;
     }
+    return '';
   };
 
   const setPresetIncome = (amount: string, status: FilingStatus) => {
@@ -391,10 +388,12 @@ export function TaxCalculator() {
 
             {/* Actions */}
             <div className="flex justify-center">
-              <Button onClick={copyResult} variant="outline">
-                <Copy className="h-4 w-4 mr-2" />
-                Copy Results
-              </Button>
+              <CopyButton
+                text={getResultText()}
+                variant="outline"
+                showText={true}
+                successText="Results Copied!"
+              />
             </div>
           </CardContent>
         </Card>

@@ -166,6 +166,56 @@
       "taxOwed": "应缴税额",
       "effectiveRate": "有效税率",
       "marginalRate": "边际税率"
+    },
+    "dateDifferenceCalculator": {
+      "title": "日期差计算器",
+      "description": "计算两个日期之间的精确时间差",
+      "startDate": "开始日期",
+      "endDate": "结束日期",
+      "includeEndDate": "包含结束日期",
+      "businessDaysOnly": "仅工作日",
+      "calculate": "计算",
+      "years": "年",
+      "months": "月",
+      "days": "天",
+      "totalDays": "总天数",
+      "hours": "小时",
+      "minutes": "分钟",
+      "copy": "复制结果"
+    },
+    "automotive": {
+      "engineSizeConverter": {
+        "title": "发动机排量转换器",
+        "description": "立方英寸与升之间的发动机排量转换"
+      },
+      "gearRatioCalculator": {
+        "title": "齿轮比计算器",
+        "description": "计算齿轮比、转速和速度关系"
+      },
+      "powerToWeightRatio": {
+        "title": "功率重量比计算器",
+        "description": "计算马力重量比进行性能分析"
+      },
+      "rpmCalculator": {
+        "title": "转速计算器",
+        "description": "基于速度、齿轮比和轮胎直径计算转速"
+      },
+      "speedConverter": {
+        "title": "速度转换器",
+        "description": "英里每小时与公里每小时转换，含汽车参考"
+      },
+      "torqueHorsepowerCalculator": {
+        "title": "扭矩马力计算器",
+        "description": "扭矩、马力和转速之间的转换"
+      },
+      "temperatureConverter": {
+        "title": "汽车温度转换器",
+        "description": "汽车应用的温度转换"
+      },
+      "tireCalculator": {
+        "title": "轮胎计算器",
+        "description": "计算轮胎直径对速度和性能的影响"
+      }
     }
   },
   "about": {

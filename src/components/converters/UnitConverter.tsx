@@ -5,7 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Copy, Ruler, ArrowRightLeft } from 'lucide-react';
+import { Ruler, ArrowRightLeft } from 'lucide-react';
+import { CopyButton } from '@/components/ui/CopyButton';
 import { ConversionEngine } from '@/lib/converters/conversion-engine';
 
 type UnitCategory = 'length' | 'weight' | 'temperature' | 'area' | 'volume' | 'speed';
@@ -200,15 +201,11 @@ export function UnitConverter() {
     setToUnit(temp);
   };
 
-  const copyResult = async () => {
+  const getResultText = () => {
     if (result !== null) {
-      const resultText = `${value} ${UNIT_CATEGORIES[category].units[fromUnit as keyof typeof UNIT_CATEGORIES[typeof category]['units']]} = ${formatResult(result)} ${UNIT_CATEGORIES[category].units[toUnit as keyof typeof UNIT_CATEGORIES[typeof category]['units']]}`;
-      try {
-        await navigator.clipboard.writeText(resultText);
-      } catch (err) {
-        console.error('Failed to copy:', err);
-      }
+      return `${value} ${UNIT_CATEGORIES[category].units[fromUnit as keyof typeof UNIT_CATEGORIES[typeof category]['units']]} = ${formatResult(result)} ${UNIT_CATEGORIES[category].units[toUnit as keyof typeof UNIT_CATEGORIES[typeof category]['units']]}`;
     }
+    return '';
   };
 
   const formatResult = (value: number) => {
@@ -334,10 +331,13 @@ export function UnitConverter() {
                 <div className="text-muted-foreground mb-4">
                   {UNIT_CATEGORIES[category].units[toUnit as keyof typeof UNIT_CATEGORIES[typeof category]['units']]}
                 </div>
-                <Button onClick={copyResult} variant="outline" size="sm">
-                  <Copy className="h-4 w-4 mr-2" />
-                  Copy Result
-                </Button>
+                <CopyButton
+                  text={getResultText()}
+                  variant="outline"
+                  size="sm"
+                  showText={true}
+                  successText="Result Copied!"
+                />
               </div>
             </div>
           )}

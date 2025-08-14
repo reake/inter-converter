@@ -235,7 +235,7 @@ interface GearRatioResult {
 
 ```typescript
 interface AutomotiveToolConfig extends ToolConfig {
-  category: 'automotive';
+  category: 'auto';
   subcategory: 'engine' | 'drivetrain' | 'performance' | 'fluids';
   difficulty: 'beginner' | 'intermediate' | 'advanced';
   safetyLevel: 'low' | 'medium' | 'high';

@@ -29,7 +29,7 @@ class SearchEngine {
     minScore?: number;
     categories?: string[];
   } = {}): SearchResult[] {
-    const { limit = 10, minScore = 0, categories } = options;
+    const { limit = 10, minScore = 1, categories } = options;
     
     if (!query.trim()) return [];
 
@@ -79,23 +79,26 @@ class SearchEngine {
    */
   private calculateScore(tool: ToolConfig, query: string): number {
     let score = 0;
+    let hasMatch = false;
     const toolName = tool.name.toLowerCase();
     const toolDescription = tool.description.toLowerCase();
 
     // Exact name match - highest priority
     if (toolName === query) {
       score += 1000;
-      return score;
+      hasMatch = true;
     }
 
     // Name prefix match
     if (toolName.startsWith(query)) {
       score += 500;
+      hasMatch = true;
     }
 
     // Name contains query
     if (toolName.includes(query)) {
       score += 200;
+      hasMatch = true;
       // Bonus for shorter names (more specific)
       score += Math.max(0, 50 - toolName.length);
     }
@@ -103,11 +106,13 @@ class SearchEngine {
     // Description prefix match
     if (toolDescription.startsWith(query)) {
       score += 100;
+      hasMatch = true;
     }
 
     // Description contains query
     if (toolDescription.includes(query)) {
       score += 50;
+      hasMatch = true;
     }
 
     // Keywords matching
@@ -115,36 +120,43 @@ class SearchEngine {
       const keywordLower = keyword.toLowerCase();
       if (keywordLower === query) {
         score += 300;
+        hasMatch = true;
       } else if (keywordLower.startsWith(query)) {
         score += 150;
+        hasMatch = true;
       } else if (keywordLower.includes(query)) {
         score += 75;
+        hasMatch = true;
       }
     }
 
     // Category matching
     if (tool.category.toLowerCase().includes(query)) {
       score += 25;
+      hasMatch = true;
     }
 
-    // Popularity boost
-    if (tool.searchVolume) {
-      if (tool.searchVolume > 100000) score += 20;
-      else if (tool.searchVolume > 50000) score += 10;
-      else if (tool.searchVolume > 20000) score += 5;
+    // Only apply bonuses if there's an actual match
+    if (hasMatch) {
+      // Popularity boost
+      if (tool.searchVolume) {
+        if (tool.searchVolume > 100000) score += 20;
+        else if (tool.searchVolume > 50000) score += 10;
+        else if (tool.searchVolume > 20000) score += 5;
+      }
+
+      // Length penalty for very short queries
+      if (query.length < 3 && toolName.length > 25) {
+        score *= 0.8;
+      }
+
+      // Difficulty bonus (easier tools get slight boost)
+      if (tool.difficulty && tool.difficulty <= 2) {
+        score += 5;
+      }
     }
 
-    // Length penalty for very short queries
-    if (query.length < 3 && toolName.length > 25) {
-      score *= 0.8;
-    }
-
-    // Difficulty bonus (easier tools get slight boost)
-    if (tool.difficulty && tool.difficulty <= 2) {
-      score += 5;
-    }
-
-    return Math.round(score);
+    return hasMatch ? Math.round(score) : 0;
   }
 
   /**
@@ -177,7 +189,9 @@ class SearchEngine {
     // Clear old cache entries if we're at capacity
     if (this.searchCache.size >= this.CACHE_SIZE) {
       const firstKey = this.searchCache.keys().next().value;
-      this.searchCache.delete(firstKey);
+      if (firstKey) {
+        this.searchCache.delete(firstKey);
+      }
     }
 
     this.searchCache.set(key, results);
