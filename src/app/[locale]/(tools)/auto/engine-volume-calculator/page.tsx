@@ -1,32 +1,44 @@
 import { Metadata } from 'next';
+import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { EngineVolumeCalculator } from '@/components/converters/automotive/EngineVolumeCalculator';
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'Engine Volume Calculator - Calculate Cylinder and Engine Volume',
-    description: 'Calculate cylinder volume from bore and stroke, engine displacement from cylinder volume, and convert between CI and CC.',
-    keywords: [
-      'engine volume calculator',
-      'cylinder volume',
-      'engine displacement',
-      'bore stroke calculator',
-      'cubic inches to cc',
-      'automotive calculator'
-    ],
-    openGraph: {
-      title: 'Engine Volume Calculator',
-      description: 'Calculate engine and cylinder volumes for automotive applications.',
-      type: 'website',
-    },
-  };
-}
+export const metadata: Metadata = generateToolMetadata(
+  'Engine Volume Calculator',
+  'Calculate cylinder volume from bore and stroke, engine displacement from cylinder volume, and convert between CI and CC.',
+  'engine-volume-calculator',
+  [
+    'engine volume calculator',
+    'cylinder volume',
+    'engine displacement',
+    'bore stroke calculator',
+    'cubic inches to cc',
+    'automotive calculator'
+  ],
+  'auto'
+);
 
 export default function EngineVolumeCalculatorPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900">
-      <div className="container mx-auto px-4 py-8 max-w-6xl">
-        <EngineVolumeCalculator />
-      </div>
-    </div>
+    <ToolLayout
+      title="Engine Volume Calculator"
+      description="Calculate cylinder volume from bore and stroke, engine displacement from cylinder volume, and convert between CI and CC"
+      toolId="engine-volume-calculator"
+      category="auto"
+      emoji="🔧"
+      customHowToUse={[
+        "Enter cylinder bore diameter",
+        "Input stroke length",
+        "Specify number of cylinders",
+        "View calculated volumes and displacement"
+      ]}
+      customFeatures={[
+        "Cylinder volume calculations",
+        "Engine displacement calculation",
+        "Cubic inch to CC conversion",
+        "Bore and stroke analysis"
+      ]}
+    >
+      <EngineVolumeCalculator />
+    </ToolLayout>
   );
 }

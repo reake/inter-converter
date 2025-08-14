@@ -2,10 +2,11 @@ import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { CurrencyConverter } from '@/components/converters/CurrencyConverter';
 
-export const metadata: Metadata = {
-  title: 'Currency Converter | Live Exchange Rates Free Tool',
-  description: 'Convert currencies with live exchange rates. Free online currency converter for 150+ currencies including USD, EUR, GBP, JPY. Real-time rates.',
-  keywords: [
+export const metadata: Metadata = generateToolMetadata(
+  'Currency Converter',
+  'Convert currencies with live exchange rates. Free online currency converter for 150+ currencies including USD, EUR, GBP, JPY. Real-time rates.',
+  'currency-converter',
+  [
     'currency converter',
     'exchange rate converter',
     'live currency converter',
@@ -22,75 +23,31 @@ export const metadata: Metadata = {
     'international currency converter',
     'multi currency converter'
   ],
-  openGraph: {
-    title: 'Currency Converter | Live Exchange Rates Free Tool',
-    description: 'Convert currencies with live exchange rates. Free online currency converter for 150+ currencies including USD, EUR, GBP, JPY.',
-    type: 'website',
-    url: 'https://interconverter.com/finance/currency-converter',
-    siteName: 'InterConverter',
-    images: [
-      {
-        url: '/images/currency-converter-og.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Currency Converter Tool with Live Exchange Rates'
-      }
-    ]
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Currency Converter | Live Exchange Rates Free Tool',
-    description: 'Convert currencies with live exchange rates. Free online currency converter for 150+ currencies.',
-    images: ['/images/currency-converter-twitter.jpg']
-  },
-  alternates: {
-    canonical: 'https://interconverter.com/finance/currency-converter'
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+  'finance'
+);
 
 export default function CurrencyConverterPage() {
-  const structuredData = generateToolStructuredData(
-    'Currency Converter',
-    'Convert between different currencies with real-time exchange rates and historical data',
-    'currency-converter',
-    'finance'
-  );
-
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto">
-          {/* SEO Header */}
-          <div className="mb-8 text-center">
-            <h1 className="text-4xl font-bold mb-4">
-              💱 Currency Converter
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Convert between 150+ currencies with real-time exchange rates. 
-              Get accurate currency conversion for travel, business, and trading.
-            </p>
-          </div>
-
-          {/* Tool Component */}
-          <CurrencyConverter />
-
-          {/* SEO Content */}
-          <ModernSEOContent
+    <ToolLayout
+      title="Currency Converter"
+      description="Convert between 150+ currencies with real-time exchange rates. Get accurate currency conversion for travel, business, and trading."
+      toolId="currency-converter"
+      category="finance"
+      emoji="💱"
+      customHowToUse={[
+        "Enter the amount you want to convert",
+        "Select the source currency (what you have)",
+        "Select the target currency (what you want)",
+        "View the converted amount instantly with current exchange rates"
+      ]}
+      customFeatures={[
+        "Real-time exchange rates for 150+ currencies",
+        "Support for major cryptocurrencies",
+        "Historical exchange rate data",
+        "Popular currency pairs and trends"
+      ]}
+    >
+      <CurrencyConverter />
             title="Currency Converter"
             description="Our currency converter provides real-time exchange rates for over 150 currencies worldwide. Whether you're traveling, doing business internationally, or trading forex, get accurate and up-to-date currency conversion rates."
             features={[

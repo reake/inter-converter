@@ -1,32 +1,44 @@
 import { Metadata } from 'next';
+import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { VolumetricEfficiencyCalculator } from '@/components/converters/automotive/VolumetricEfficiencyCalculator';
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'Volumetric Efficiency Calculator - Calculate Engine Breathing Efficiency',
-    description: 'Calculate engine volumetric efficiency (VE) from horsepower, displacement, and RPM. Essential for engine tuning and performance analysis.',
-    keywords: [
-      'volumetric efficiency calculator',
-      'VE calculator',
-      'engine breathing',
-      'engine efficiency',
-      'performance tuning',
-      'automotive calculator'
-    ],
-    openGraph: {
-      title: 'Volumetric Efficiency Calculator',
-      description: 'Calculate engine volumetric efficiency for performance tuning and analysis.',
-      type: 'website',
-    },
-  };
-}
+export const metadata: Metadata = generateToolMetadata(
+  'Volumetric Efficiency Calculator',
+  'Calculate engine volumetric efficiency (VE) from horsepower, displacement, and RPM. Essential for engine tuning and performance analysis.',
+  'volumetric-efficiency-calculator',
+  [
+    'volumetric efficiency calculator',
+    'VE calculator',
+    'engine breathing',
+    'engine efficiency',
+    'performance tuning',
+    'automotive calculator'
+  ],
+  'auto'
+);
 
 export default function VolumetricEfficiencyCalculatorPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900">
-      <div className="container mx-auto px-4 py-8 max-w-6xl">
-        <VolumetricEfficiencyCalculator />
-      </div>
-    </div>
+    <ToolLayout
+      title="Volumetric Efficiency Calculator"
+      description="Calculate engine volumetric efficiency (VE) from horsepower, displacement, and RPM. Essential for engine tuning and performance analysis"
+      toolId="volumetric-efficiency-calculator"
+      category="auto"
+      emoji="📊"
+      customHowToUse={[
+        "Enter engine horsepower",
+        "Input engine displacement in cubic inches",
+        "Set engine RPM",
+        "View calculated volumetric efficiency percentage"
+      ]}
+      customFeatures={[
+        "Volumetric efficiency calculations",
+        "Engine breathing analysis",
+        "Performance tuning metrics",
+        "VE percentage calculations"
+      ]}
+    >
+      <VolumetricEfficiencyCalculator />
+    </ToolLayout>
   );
 }
