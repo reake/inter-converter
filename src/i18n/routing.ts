@@ -22,6 +22,7 @@ export const routing = defineRouting({
     // string or only the key can be provided.
     '/': '/',
     '/tools': '/tools',
+    '/auto': '/auto',
     '/about': '/about',
     '/timestamp-converter': '/timestamp-converter',
     '/currency-converter': '/currency-converter',

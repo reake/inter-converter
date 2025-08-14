@@ -2,20 +2,24 @@
 
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
-import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/theme-toggle';
-import { LanguageToggle } from '@/components/language-toggle';
+import { useEffect, useState } from 'react';
 
 export function Header() {
   const t = useTranslations('common');
   const pathname = usePathname();
+  const [mounted, setMounted] = useState(false);
 
   const navigation = [
     { name: t('home'), href: '/' },
     { name: t('tools'), href: '/tools' },
-    { name: t('automotive'), href: '/auto' },
+    { name: t('auto'), href: '/auto' },
     { name: t('about'), href: '/about' },
   ];
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <header className="border-b">
@@ -31,7 +35,7 @@ export function Header() {
                 key={item.href}
                 href={item.href as any}
                 className={`text-sm font-medium transition-colors hover:text-primary ${
-                  pathname === item.href
+                  mounted && pathname === item.href
                     ? 'text-primary'
                     : 'text-muted-foreground'
                 }`}
@@ -42,7 +46,7 @@ export function Header() {
           </nav>
 
           <div className="flex items-center space-x-2">
-            <LanguageToggle />
+            {/* <LanguageToggle /> */}
             <ThemeToggle />
           </div>
         </div>

@@ -5,7 +5,7 @@ import { TOOL_CATEGORIES } from './tools';
 export const SEO_CONFIG = {
   siteName: 'InterConverter',
   siteUrl: 'https://interconverter.com',
-  defaultTitle: 'Free Online Converters & Calculators | InterConverter',
+  defaultTitle: 'InterConverter - Free Online Converters Tools & Calculators',
   defaultDescription: 'Professional converters & calculators for currency, units, colors, time, automotive calculations & more. 100% free, instant results, no registration. Trusted by 1M+ users.',
   defaultKeywords: [
     'online converter',

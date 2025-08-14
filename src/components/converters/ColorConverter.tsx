@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Palette, Eye } from 'lucide-react';
 import { CopyButton } from '@/components/ui/CopyButton';
-import { ConvertersEngine } from '@/lib/converters/Converters-engine';
+import { ConvertersEngine } from '@/lib/converters/conversion-engine';
 
 interface ColorValues {
   hex: string;

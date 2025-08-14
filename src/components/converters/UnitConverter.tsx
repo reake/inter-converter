@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Ruler, ArrowRightLeft } from 'lucide-react';
 import { CopyButton } from '@/components/ui/CopyButton';
-import { ConvertersEngine } from '@/lib/converters/Converters-engine';
+import { ConvertersEngine } from '@/lib/converters/conversion-engine';
 
 type UnitCategory = 'length' | 'weight' | 'temperature' | 'area' | 'volume' | 'speed';
 

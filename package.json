@@ -5,11 +5,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:cloudflare": "next build && npx @cloudflare/next-on-pages",
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "preview": "npm run build:cloudflare && wrangler pages dev .vercel/output/static",
+    "analyze": "ANALYZE=true npm run build"
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.15",
@@ -31,6 +34,8 @@
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.5",
+    "@next/bundle-analyzer": "^15.4.6",
     "@tailwindcss/typography": "^0.5.16",
     "@testing-library/jest-dom": "^6.4.0",
     "@testing-library/react": "^14.0.0",
@@ -45,6 +50,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "postcss": "^8.4.0",
     "tailwindcss": "^3.4.0",
-    "typescript": "^5.6.0"
+    "typescript": "^5.6.0",
+    "wrangler": "^3.78.12"
   }
 }

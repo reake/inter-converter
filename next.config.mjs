@@ -1,10 +1,13 @@
 import createNextIntlPlugin from "next-intl/plugin";
+import bundleAnalyzer from "@next/bundle-analyzer";
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "standalone",
   reactStrictMode: false,
 
   // Performance optimizations
@@ -23,6 +26,8 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
   },
+
+
 
   // Compression
   compress: true,
@@ -77,4 +82,4 @@ const nextConfig = {
   },
 };
 
-export default withNextIntl(nextConfig);
+export default withBundleAnalyzer(withNextIntl(nextConfig));

@@ -4,7 +4,7 @@
     "description": "A collection of useful online tools",
     "home": "Home",
     "tools": "Tools",
-    "automotive": "automotive",
+    "auto": "Auto",
     "about": "About",
     "language": "Language",
     "theme": "Theme",
@@ -216,6 +216,10 @@
       "tireCalculator": {
         "title": "Tire Calculator",
         "description": "Calculate tire diameter effects on speed and performance"
+      },
+      "tireSpeedCalculator": {
+        "title": "Tire Speed Calculator",
+        "description": "Calculate vehicle speed based on tire diameter, gear ratio, and RPM"
       }
     }
   },

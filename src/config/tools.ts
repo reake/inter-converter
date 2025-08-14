@@ -430,6 +430,17 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     difficulty: 2,
     icon: '🔧'
   },
+  {
+    id: 'tire-speed-calculator',
+    name: 'Tire Speed Calculator',
+    description: 'Calculate vehicle speed based on tire diameter, gear ratio, and RPM',
+    category: 'auto',
+    keywords: ['tire speed calculator', 'tire diameter speed', 'gear ratio speed', 'rpm speed calculator', 'vehicle speed calculator'],
+    path: '/auto/tire-speed-calculator',
+    isActive: true,
+    searchVolume: 12000,
+    difficulty: 2
+  },
 
 ];
 
