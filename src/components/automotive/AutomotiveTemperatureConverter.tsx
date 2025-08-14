@@ -250,7 +250,7 @@ export function AutomotiveTemperatureConverter() {
       {/* Formula Information */}
       <Card>
         <CardHeader>
-          <CardTitle>Conversion Formulas</CardTitle>
+          <CardTitle>Converters Formulas</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">

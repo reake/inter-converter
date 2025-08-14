@@ -613,7 +613,7 @@ export function TorqueHorsepowerCalculator() {
               <p className="text-sm text-gray-700">
                 Horsepower and torque curves always cross at exactly 5252 RPM. This is because 
                 of the mathematical relationship between the two measurements and the constant 5252 
-                in the conversion formula.
+                in the Converters formula.
               </p>
             </div>
             <div className="space-y-2">

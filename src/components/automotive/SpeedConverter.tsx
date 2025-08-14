@@ -185,7 +185,7 @@ export function SpeedConverter() {
         <CardContent>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <h4 className="font-semibold text-gray-700">Common Conversions</h4>
+              <h4 className="font-semibold text-gray-700">Common Converterss</h4>
               <div className="text-sm space-y-1">
                 <div className="flex justify-between font-mono">
                   <span>10 MPH</span>
@@ -223,7 +223,7 @@ export function SpeedConverter() {
             </div>
             
             <div className="space-y-2">
-              <h4 className="font-semibold text-gray-700">Metric Conversions</h4>
+              <h4 className="font-semibold text-gray-700">Metric Converterss</h4>
               <div className="text-sm space-y-1">
                 <div className="flex justify-between font-mono">
                   <span>50 KPH</span>
@@ -266,7 +266,7 @@ export function SpeedConverter() {
       {/* Formula Information */}
       <Card>
         <CardHeader>
-          <CardTitle>Conversion Formulas</CardTitle>
+          <CardTitle>Converters Formulas</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
@@ -284,8 +284,8 @@ export function SpeedConverter() {
             </div>
             <div className="text-sm text-gray-600">
               <p>
-                <strong>Note:</strong> The conversion factor 1.60934 comes from the fact that 
-                1 mile = 1.60934 kilometers. This is an exact conversion based on the international 
+                <strong>Note:</strong> The Converters factor 1.60934 comes from the fact that 
+                1 mile = 1.60934 kilometers. This is an exact Converters based on the international 
                 definition of the mile and kilometer.
               </p>
             </div>

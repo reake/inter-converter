@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Activity, Heart } from 'lucide-react';
 import { CopyButton } from '@/components/ui/CopyButton';
-import { ConversionEngine } from '@/lib/converters/conversion-engine';
+import { ConvertersEngine } from '@/lib/converters/conversion-engine';
 
 interface BMIResult {
   bmi: number;
@@ -66,7 +66,7 @@ export function BMICalculator() {
         heightValue = (feet * 12) + inches;
       }
 
-      const bmiResult = ConversionEngine.calculateBMI(weightValue, heightValue, unit);
+      const bmiResult = ConvertersEngine.calculateBMI(weightValue, heightValue, unit);
       
       if (bmiResult.success && bmiResult.result) {
         // Calculate ideal weight range

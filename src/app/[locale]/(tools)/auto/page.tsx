@@ -6,24 +6,47 @@ import { AUTOMOTIVE_TOOLS_CONFIG } from '@/config/automotive-tools';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Automotive Calculators - Engine Performance & Tuning Tools',
-    description: 'Comprehensive collection of automotive calculators for engine performance, tuning, and modifications. Calculate CFM, compression ratios, gear ratios, and more.',
+    title: 'Free Automotive Converters & Engine Tools | InterConverter',
+    description: 'Professional automotive calculators: carburetor CFM, compression ratio, gear ratio, horsepower, RPM & more. Free engine tuning tools for mechanics.',
     keywords: [
       'automotive calculators',
       'engine calculators',
-      'performance calculators',
-      'tuning tools',
-      'carburetor calculator',
-      'compression ratio',
-      'gear ratio calculator'
+      'carburetor cfm calculator',
+      'compression ratio calculator',
+      'gear ratio calculator',
+      'horsepower calculator',
+      'rpm calculator',
+      'engine tuning tools',
+      'automotive performance tools',
+      'free automotive calculators'
     ],
     openGraph: {
-      title: 'Automotive Calculators',
-      description: 'Professional automotive calculators for engine performance and tuning.',
+      title: 'Free Automotive Calculators & Engine Tools | InterConverter',
+      description: 'Professional automotive calculators: carburetor CFM, compression ratio, gear ratio, horsepower, RPM & more. Free engine tuning tools.',
       type: 'website',
+      url: 'https://interconverter.com/auto',
+      siteName: 'InterConverter',
+      images: [
+        {
+          url: 'https://interconverter.com/images/og-auto.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Automotive Calculators & Engine Tools - InterConverter',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Free Automotive Calculators & Engine Tools | InterConverter',
+      description: 'Professional automotive calculators: carburetor CFM, compression ratio, gear ratio, horsepower, RPM & more.',
+      creator: '@interconverter',
     },
     alternates: {
-      canonical: '/automotive'
+      canonical: 'https://interconverter.com/auto'
+    },
+    robots: {
+      index: true,
+      follow: true,
     }
   };
 }

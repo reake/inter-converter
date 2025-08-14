@@ -45,10 +45,10 @@ export default async function HomePage({
             InterConverter
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-blue-100">
-            Free Online Conversion Tools & Calculators
+            Free Online Converters Tools & Calculators
           </h2>
           <p className="text-lg md:text-xl text-blue-100 mb-12 max-w-5xl mx-auto leading-relaxed">
-            Professional-grade conversion tools and calculators for developers, engineers,
+            Professional-grade Converters tools and calculators for developers, engineers,
             students, and professionals. Completely free, secure, and works instantly in your
             browser without downloads.
           </p>
@@ -56,7 +56,7 @@ export default async function HomePage({
           {/* Search */}
           <div className="max-w-2xl mx-auto mb-8 relative z-50">
             <SearchInput
-              placeholder="Search conversion tools..."
+              placeholder="Search Converters tools..."
               redirectTo="/tools"
               locale={locale}
               showSuggestions={true}
@@ -106,7 +106,7 @@ export default async function HomePage({
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-gray-600">
-              Everything you need to know about our conversion tools
+              Everything you need to know about our Converters tools
             </p>
           </div>
 
@@ -117,7 +117,7 @@ export default async function HomePage({
                   Are these tools really free?
                 </h3>
                 <p className="text-gray-700">
-                  Yes! All our conversion tools are completely free to use with no hidden costs,
+                  Yes! All our Converters tools are completely free to use with no hidden costs,
                   registration requirements, or usage limits. We believe in providing accessible tools for everyone.
                 </p>
               </div>
@@ -186,7 +186,7 @@ export default async function HomePage({
               About InterConverter.com
             </h2>
             <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              InterConverter.com is the premier destination for professional-grade conversion tools and calculators. 
+              InterConverter.com is the premier destination for professional-grade Converters tools and calculators. 
               Built by developers for developers, designers, engineers, and professionals who demand accuracy and efficiency.
             </p>
           </div>
@@ -232,7 +232,7 @@ export default async function HomePage({
               <CardContent>
                 <CardDescription className="text-base leading-relaxed">
                   Your data never leaves your device. No tracking, no data collection, no user accounts required. 
-                  Complete privacy and security for all your conversions.
+                  Complete privacy and security for all your Converterss.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -277,7 +277,7 @@ export default async function HomePage({
               <CardContent>
                 <CardDescription className="text-base leading-relaxed">
                   Regular updates with new tools, features, and improvements. We continuously add 
-                  new conversion tools based on user feedback and industry needs.
+                  new Converters tools based on user feedback and industry needs.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -290,7 +290,7 @@ export default async function HomePage({
             <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
               From automotive engineers calculating compression ratios to web developers converting colors, 
               InterConverter.com serves thousands of professionals daily. Join the community of users who 
-              rely on our tools for accurate, fast, and reliable conversions.
+              rely on our tools for accurate, fast, and reliable Converterss.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
               <span className="bg-white px-4 py-2 rounded-full shadow-sm">🔧 Engineers</span>
@@ -319,7 +319,7 @@ export default async function HomePage({
             </CardHeader>
             <CardContent>
               <CardDescription>
-                Get immediate, accurate conversions without delays. All processing happens in your browser for maximum speed.
+                Get immediate, accurate Converterss without delays. All processing happens in your browser for maximum speed.
               </CardDescription>
             </CardContent>
           </Card>
@@ -347,7 +347,7 @@ export default async function HomePage({
             </CardHeader>
             <CardContent>
               <CardDescription>
-                Your data stays on your device. No tracking, no data collection, complete privacy for all your conversions.
+                Your data stays on your device. No tracking, no data collection, complete privacy for all your Converterss.
               </CardDescription>
             </CardContent>
           </Card>

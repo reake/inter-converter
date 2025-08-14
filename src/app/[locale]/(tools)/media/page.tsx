@@ -6,8 +6,8 @@ import { getToolsByCategory } from '@/config/tools';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'File & Media Converters - PDF, Image, Document Conversion Tools',
-    description: 'Professional file conversion tools for documents and media. Convert PDF to Word, JPG to PNG, and more file formats.',
+    title: 'File & Media Converters - PDF, Image, Document Converters Tools',
+    description: 'Professional file Converters tools for documents and media. Convert PDF to Word, JPG to PNG, and more file formats.',
     keywords: [
       'file converter',
       'pdf to word',
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
     ],
     openGraph: {
       title: 'File & Media Converters',
-      description: 'Professional file and media conversion tools for all your document needs.',
+      description: 'Professional file and media Converters tools for all your document needs.',
       type: 'website',
     },
     alternates: {
@@ -49,7 +49,7 @@ export default function FileMediaPage() {
               File & Media Converters
             </h1>
             <p className="text-xl text-indigo-100 max-w-3xl mx-auto mb-8">
-              Professional file conversion tools for documents, images, and media files. 
+              Professional file Converters tools for documents, images, and media files. 
               Convert between different formats quickly, securely, and with high quality.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
@@ -59,7 +59,7 @@ export default function FileMediaPage() {
               </div>
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
                 <span>⚡</span>
-                <span>Fast conversion</span>
+                <span>Fast Converters</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
                 <span>🎯</span>
@@ -75,7 +75,7 @@ export default function FileMediaPage() {
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              File Conversion Tools
+              File Converters Tools
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Convert documents, images, and media files between different formats with ease
@@ -222,7 +222,7 @@ export default function FileMediaPage() {
               Why Choose Our Converters?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Professional-grade conversion tools with security and quality in mind
+              Professional-grade Converters tools with security and quality in mind
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -233,7 +233,7 @@ export default function FileMediaPage() {
                 </div>
                 <h3 className="font-bold text-lg mb-2 text-green-900">Secure Processing</h3>
                 <p className="text-green-800 text-sm">
-                  Files are processed securely and automatically deleted after conversion
+                  Files are processed securely and automatically deleted after Converters
                 </p>
               </CardContent>
             </Card>
@@ -245,7 +245,7 @@ export default function FileMediaPage() {
                 </div>
                 <h3 className="font-bold text-lg mb-2 text-blue-900">Lightning Fast</h3>
                 <p className="text-blue-800 text-sm">
-                  Optimized algorithms ensure quick conversion without quality loss
+                  Optimized algorithms ensure quick Converters without quality loss
                 </p>
               </CardContent>
             </Card>
@@ -257,7 +257,7 @@ export default function FileMediaPage() {
                 </div>
                 <h3 className="font-bold text-lg mb-2 text-purple-900">High Quality</h3>
                 <p className="text-purple-800 text-sm">
-                  Maintain original quality and formatting during conversion process
+                  Maintain original quality and formatting during Converters process
                 </p>
               </CardContent>
             </Card>
@@ -275,7 +275,7 @@ export default function FileMediaPage() {
                 <h3 className="font-bold text-amber-900 text-lg mb-2">Privacy & Security Notice</h3>
                 <p className="text-amber-800 leading-relaxed">
                   Your privacy is our priority. All files are processed securely using encrypted connections. 
-                  Files are automatically deleted from our servers immediately after conversion. 
+                  Files are automatically deleted from our servers immediately after Converters. 
                   We never store, access, or share your files with third parties.
                 </p>
               </div>

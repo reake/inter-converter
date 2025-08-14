@@ -1,9 +1,10 @@
 {
   "common": {
-    "title": "极简工具站",
+    "title": "InterConverter",
     "description": "实用在线工具集合",
     "home": "首页",
     "tools": "工具",
+    "automotive": "automotive",
     "about": "关于",
     "language": "语言",
     "theme": "主题",

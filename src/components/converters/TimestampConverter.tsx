@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Clock, Calendar } from 'lucide-react';
 import { CopyButton, CopyResult } from '@/components/ui/CopyButton';
-import { ConversionEngine } from '@/lib/converters/conversion-engine';
+import { ConvertersEngine } from '@/lib/converters/Converters-engine';
 
 const COMMON_TIMEZONES = [
   { value: 'UTC', label: 'UTC' },
@@ -35,7 +35,7 @@ export function TimestampConverter() {
     if (timestamp.trim()) {
       const numTimestamp = parseInt(timestamp);
       if (!isNaN(numTimestamp)) {
-        const result = ConversionEngine.convertTimestamp(numTimestamp, timezone);
+        const result = ConvertersEngine.convertTimestamp(numTimestamp, timezone);
         if (result.success && result.result) {
           setConvertedDate(result.result);
           setError('');
@@ -56,7 +56,7 @@ export function TimestampConverter() {
   // Convert date to timestamp
   useEffect(() => {
     if (dateTime.trim()) {
-      const result = ConversionEngine.convertDateToTimestamp(dateTime);
+      const result = ConvertersEngine.convertDateToTimestamp(dateTime);
       if (result.success && result.result !== undefined) {
         setConvertedTimestamp(result.result.toString());
         setError('');

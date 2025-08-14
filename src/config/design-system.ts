@@ -270,7 +270,7 @@ export const USAGE_EXAMPLES = {
     <section className="${LAYOUT_PATTERNS.container.lg} py-20">
       <div className="text-center ${ANIMATION_PATTERNS.fadeIn}">
         <h1 className="text-5xl font-bold mb-6">InterConverter</h1>
-        <p className="text-xl text-gray-600 mb-8">Professional conversion tools</p>
+        <p className="text-xl text-gray-600 mb-8">Professional Converters tools</p>
         <button className="${COMPONENT_PATTERNS.button.primary} ${ANIMATION_PATTERNS.hover.lift}">
           Get Started
         </button>

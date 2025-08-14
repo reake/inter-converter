@@ -7,7 +7,7 @@ import { getToolsByCategory } from '@/config/tools';
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'Color & Design Tools - HEX to RGB, Color Converters for Designers',
-    description: 'Professional color conversion tools for designers and developers. Convert between HEX, RGB, HSL, and other color formats.',
+    description: 'Professional color Converters tools for designers and developers. Convert between HEX, RGB, HSL, and other color formats.',
     keywords: [
       'color converter',
       'hex to rgb',
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
     ],
     openGraph: {
       title: 'Color & Design Tools',
-      description: 'Professional color conversion tools for designers and developers.',
+      description: 'Professional color Converters tools for designers and developers.',
       type: 'website',
     },
     alternates: {
@@ -49,7 +49,7 @@ export default function ColorDesignPage() {
               Color & Design Tools
             </h1>
             <p className="text-xl text-purple-100 max-w-3xl mx-auto mb-8">
-              Professional color conversion tools for designers, developers, and creatives. 
+              Professional color Converters tools for designers, developers, and creatives. 
               Work seamlessly with colors across different formats and design systems.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
@@ -59,7 +59,7 @@ export default function ColorDesignPage() {
               </div>
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
                 <span>⚡</span>
-                <span>Instant conversion</span>
+                <span>Instant Converters</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
                 <span>🎯</span>
@@ -75,7 +75,7 @@ export default function ColorDesignPage() {
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Color Conversion Tools
+              Color Converters Tools
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Convert between HEX, RGB, HSL, CMYK and other color formats with precision

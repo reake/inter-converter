@@ -132,7 +132,7 @@ describe('EngineFormulas', () => {
     });
   });
 
-  describe('Displacement Conversions', () => {
+  describe('Displacement Converterss', () => {
     test('converts CI to liters correctly', () => {
       expect(EngineFormulas.ciToLiters(350)).toBeCloseTo(5.735, 2);
       expect(EngineFormulas.ciToLiters(454)).toBeCloseTo(7.440, 2);

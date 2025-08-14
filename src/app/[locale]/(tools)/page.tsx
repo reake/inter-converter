@@ -18,11 +18,11 @@ import { ToolSearch } from "@/components/tools/ToolSearch";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "All Conversion Tools - InterConverter",
+    title: "All Converters Tools - InterConverter",
     description:
-      "Browse all conversion tools and calculators. Convert currencies, units, timestamps, colors, and more. Free online tools with instant results.",
+      "Browse all Converters tools and calculators. Convert currencies, units, timestamps, colors, and more. Free online tools with instant results.",
     keywords: [
-      "conversion tools",
+      "Converters tools",
       "online converter",
       "calculator",
       "currency converter",
@@ -32,9 +32,9 @@ export async function generateMetadata(): Promise<Metadata> {
       "free tools",
     ],
     openGraph: {
-      title: "All Conversion Tools - InterConverter",
+      title: "All Converters Tools - InterConverter",
       description:
-        "Browse all conversion tools and calculators. Free, fast, and accurate.",
+        "Browse all Converters tools and calculators. Free, fast, and accurate.",
       type: "website",
     },
     alternates: {
@@ -81,10 +81,10 @@ export default function ToolsPage() {
       <div className="container mx-auto px-4 py-12 max-w-6xl">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-gray-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent">
-            All Conversion Tools
+            All Converters Tools
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Browse our complete collection of free conversion tools and calculators
+            Browse our complete collection of free Converters tools and calculators
           </p>
         </div>
 

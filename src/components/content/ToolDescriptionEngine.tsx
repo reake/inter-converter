@@ -72,7 +72,7 @@ export function ToolDescriptionEngine({
         features.push(
           {
             title: 'Timezone Support',
-            description: 'Automatic timezone detection and conversion between any timezones',
+            description: 'Automatic timezone detection and Converters between any timezones',
             icon: '🌍'
           },
           {
@@ -102,7 +102,7 @@ export function ToolDescriptionEngine({
         features.push(
           {
             title: 'High Precision',
-            description: 'Accurate conversions with up to 15 decimal places of precision',
+            description: 'Accurate Converterss with up to 15 decimal places of precision',
             icon: '🎯'
           },
           {
@@ -155,7 +155,7 @@ export function ToolDescriptionEngine({
 
     if (keywords.includes('converter')) {
       features.push({
-        title: 'Bidirectional Conversion',
+        title: 'Bidirectional Converters',
         description: 'Convert in both directions with automatic unit detection',
         icon: '🔄'
       });

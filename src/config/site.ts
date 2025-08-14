@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "InterConverter",
-  description: "Free online conversion tools and calculators. Convert currencies, units, timestamps, colors, and more - fast, accurate, and completely free.",
+  description: "Free online Converters tools and calculators. Convert currencies, units, timestamps, colors, and more - fast, accurate, and completely free.",
   url: "https://interconverter.com",
   author: "InterConverter Team",
   email: "contact@interconverter.com",

@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Ruler, ArrowRightLeft } from 'lucide-react';
 import { CopyButton } from '@/components/ui/CopyButton';
-import { ConversionEngine } from '@/lib/converters/conversion-engine';
+import { ConvertersEngine } from '@/lib/converters/Converters-engine';
 
 type UnitCategory = 'length' | 'weight' | 'temperature' | 'area' | 'volume' | 'speed';
 
@@ -92,8 +92,8 @@ const UNIT_CATEGORIES = {
   }
 };
 
-// Extended conversion factors for additional categories
-const EXTENDED_CONVERSION_FACTORS: Record<string, Record<string, number>> = {
+// Extended Converters factors for additional categories
+const EXTENDED_Converters_FACTORS: Record<string, Record<string, number>> = {
   area: {
     // Base unit: square meter
     'mm2': 0.000001,
@@ -160,17 +160,17 @@ export function UnitConverter() {
     
     try {
       if (category === 'temperature') {
-        const tempResult = ConversionEngine.convertTemperature(numValue, fromUnit, toUnit);
+        const tempResult = ConvertersEngine.convertTemperature(numValue, fromUnit, toUnit);
         if (tempResult.success && tempResult.result !== undefined) {
           setResult(tempResult.result);
           setError('');
         } else {
-          setError(tempResult.error || 'Conversion failed');
+          setError(tempResult.error || 'Converters failed');
           setResult(null);
         }
       } else {
-        // Use extended conversion factors for other categories
-        const factors = EXTENDED_CONVERSION_FACTORS[category] || {};
+        // Use extended Converters factors for other categories
+        const factors = EXTENDED_Converters_FACTORS[category] || {};
         
         if (factors[fromUnit] && factors[toUnit]) {
           const baseValue = numValue * factors[fromUnit];
@@ -178,19 +178,19 @@ export function UnitConverter() {
           setResult(convertedValue);
           setError('');
         } else {
-          // Fall back to basic conversion engine
-          const conversionResult = ConversionEngine.convertUnits(numValue, fromUnit, toUnit, category);
-          if (conversionResult.success && conversionResult.result !== undefined) {
-            setResult(conversionResult.result);
+          // Fall back to basic Converters engine
+          const ConvertersResult = ConvertersEngine.convertUnits(numValue, fromUnit, toUnit, category);
+          if (ConvertersResult.success && ConvertersResult.result !== undefined) {
+            setResult(ConvertersResult.result);
             setError('');
           } else {
-            setError(conversionResult.error || 'Conversion not supported');
+            setError(ConvertersResult.error || 'Converters not supported');
             setResult(null);
           }
         }
       }
     } catch (err) {
-      setError('Conversion error');
+      setError('Converters error');
       setResult(null);
     }
   };
@@ -218,7 +218,7 @@ export function UnitConverter() {
     }
   };
 
-  const setPresetConversion = (cat: UnitCategory, from: string, to: string, val: string) => {
+  const setPresetConverters = (cat: UnitCategory, from: string, to: string, val: string) => {
     setCategory(cat);
     setFromUnit(from);
     setToUnit(to);
@@ -252,7 +252,7 @@ export function UnitConverter() {
         </CardContent>
       </Card>
 
-      {/* Conversion Interface */}
+      {/* Converters Interface */}
       <Card>
         <CardHeader className="pb-3">
           <CardTitle className="text-lg flex items-center gap-2">
@@ -342,7 +342,7 @@ export function UnitConverter() {
             </div>
           )}
 
-          {/* Conversion Formula */}
+          {/* Converters Formula */}
           {result !== null && (
             <div className="text-center text-sm text-muted-foreground">
               {value} {UNIT_CATEGORIES[category].units[fromUnit as keyof typeof UNIT_CATEGORIES[typeof category]['units']]} = {formatResult(result)} {UNIT_CATEGORIES[category].units[toUnit as keyof typeof UNIT_CATEGORIES[typeof category]['units']]}
@@ -358,16 +358,16 @@ export function UnitConverter() {
         </CardContent>
       </Card>
 
-      {/* Quick Conversions */}
+      {/* Quick Converterss */}
       <Card>
         <CardHeader className="pb-3">
-          <CardTitle className="text-lg">Quick Conversions</CardTitle>
+          <CardTitle className="text-lg">Quick Converterss</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             <Button
               variant="outline"
-              onClick={() => setPresetConversion('length', 'm', 'ft', '1')}
+              onClick={() => setPresetConverters('length', 'm', 'ft', '1')}
               className="text-left justify-start h-auto p-3"
             >
               <div>
@@ -377,7 +377,7 @@ export function UnitConverter() {
             </Button>
             <Button
               variant="outline"
-              onClick={() => setPresetConversion('weight', 'kg', 'lb', '1')}
+              onClick={() => setPresetConverters('weight', 'kg', 'lb', '1')}
               className="text-left justify-start h-auto p-3"
             >
               <div>
@@ -387,7 +387,7 @@ export function UnitConverter() {
             </Button>
             <Button
               variant="outline"
-              onClick={() => setPresetConversion('temperature', 'c', 'f', '0')}
+              onClick={() => setPresetConverters('temperature', 'c', 'f', '0')}
               className="text-left justify-start h-auto p-3"
             >
               <div>
@@ -399,10 +399,10 @@ export function UnitConverter() {
         </CardContent>
       </Card>
 
-      {/* Conversion Reference */}
+      {/* Converters Reference */}
       <Card>
         <CardHeader className="pb-3">
-          <CardTitle className="text-lg">Common {UNIT_CATEGORIES[category].name} Conversions</CardTitle>
+          <CardTitle className="text-lg">Common {UNIT_CATEGORIES[category].name} Converterss</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

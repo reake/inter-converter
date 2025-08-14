@@ -81,7 +81,7 @@ describe('DrivetrainFormulas', () => {
     });
   });
 
-  describe('Speed Unit Conversions', () => {
+  describe('Speed Unit Converterss', () => {
     test('converts MPH to KPH correctly', () => {
       expect(DrivetrainFormulas.mphToKph(60)).toBeCloseTo(96.56, 2);
       expect(DrivetrainFormulas.mphToKph(100)).toBeCloseTo(160.93, 2);

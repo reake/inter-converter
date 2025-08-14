@@ -1,8 +1,8 @@
-import { ConversionResult } from '@/types/tools';
+import { ConvertersResult } from '@/types/tools';
 
-export class ConversionEngine {
-  // Timestamp conversions
-  static convertTimestamp(timestamp: number, timezone?: string): ConversionResult<string> {
+export class ConvertersEngine {
+  // Timestamp Converterss
+  static convertTimestamp(timestamp: number, timezone?: string): ConvertersResult<string> {
     try {
       const date = new Date(timestamp * 1000);
       
@@ -30,7 +30,7 @@ export class ConversionEngine {
         result,
         metadata: {
           timestamp: new Date(),
-          source: 'conversion-engine'
+          source: 'Converters-engine'
         }
       };
     } catch (error) {
@@ -41,7 +41,7 @@ export class ConversionEngine {
     }
   }
 
-  static convertDateToTimestamp(dateString: string): ConversionResult<number> {
+  static convertDateToTimestamp(dateString: string): ConvertersResult<number> {
     try {
       const date = new Date(dateString);
       
@@ -59,7 +59,7 @@ export class ConversionEngine {
         result: timestamp,
         metadata: {
           timestamp: new Date(),
-          source: 'conversion-engine'
+          source: 'Converters-engine'
         }
       };
     } catch (error) {
@@ -70,33 +70,33 @@ export class ConversionEngine {
     }
   }
 
-  // Unit conversions
+  // Unit Converterss
   static convertUnits(
     value: number, 
     fromUnit: string, 
     toUnit: string, 
     category: string
-  ): ConversionResult<number> {
+  ): ConvertersResult<number> {
     try {
-      const conversionFactors = this.getConversionFactors(category);
+      const ConvertersFactors = this.getConvertersFactors(category);
       
-      if (!conversionFactors[fromUnit] || !conversionFactors[toUnit]) {
+      if (!ConvertersFactors[fromUnit] || !ConvertersFactors[toUnit]) {
         return {
           success: false,
-          error: 'Unsupported unit conversion'
+          error: 'Unsupported unit Converters'
         };
       }
 
       // Convert to base unit first, then to target unit
-      const baseValue = value * conversionFactors[fromUnit];
-      const result = baseValue / conversionFactors[toUnit];
+      const baseValue = value * ConvertersFactors[fromUnit];
+      const result = baseValue / ConvertersFactors[toUnit];
       
       return {
         success: true,
         result: parseFloat(result.toFixed(10)),
         metadata: {
           timestamp: new Date(),
-          source: 'conversion-engine'
+          source: 'Converters-engine'
         }
       };
     } catch (error) {
@@ -107,8 +107,8 @@ export class ConversionEngine {
     }
   }
 
-  // Color conversions
-  static convertColor(value: string, fromFormat: string, toFormat: string): ConversionResult<string> {
+  // Color Converterss
+  static convertColor(value: string, fromFormat: string, toFormat: string): ConvertersResult<string> {
     try {
       if (fromFormat === 'hex' && toFormat === 'rgb') {
         return this.hexToRgb(value);
@@ -118,7 +118,7 @@ export class ConversionEngine {
       
       return {
         success: false,
-        error: 'Unsupported color conversion'
+        error: 'Unsupported color Converters'
       };
     } catch (error) {
       return {
@@ -128,7 +128,7 @@ export class ConversionEngine {
     }
   }
 
-  private static hexToRgb(hex: string): ConversionResult<string> {
+  private static hexToRgb(hex: string): ConvertersResult<string> {
     // Remove # if present
     hex = hex.replace('#', '');
     
@@ -149,12 +149,12 @@ export class ConversionEngine {
       result: `rgb(${r}, ${g}, ${b})`,
       metadata: {
         timestamp: new Date(),
-        source: 'conversion-engine'
+        source: 'Converters-engine'
       }
     };
   }
 
-  private static rgbToHex(rgb: string): ConversionResult<string> {
+  private static rgbToHex(rgb: string): ConvertersResult<string> {
     // Extract RGB values
     const match = rgb.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
     
@@ -187,13 +187,13 @@ export class ConversionEngine {
       result: hex.toUpperCase(),
       metadata: {
         timestamp: new Date(),
-        source: 'conversion-engine'
+        source: 'Converters-engine'
       }
     };
   }
 
   // BMI calculation
-  static calculateBMI(weight: number, height: number, unit: 'metric' | 'imperial'): ConversionResult<{
+  static calculateBMI(weight: number, height: number, unit: 'metric' | 'imperial'): ConvertersResult<{
     bmi: number;
     category: string;
     recommendation: string;
@@ -224,7 +224,7 @@ export class ConversionEngine {
         },
         metadata: {
           timestamp: new Date(),
-          source: 'conversion-engine'
+          source: 'Converters-engine'
         }
       };
     } catch (error) {
@@ -252,7 +252,7 @@ export class ConversionEngine {
     return recommendations[category as keyof typeof recommendations] || '';
   }
 
-  private static getConversionFactors(category: string): Record<string, number> {
+  private static getConvertersFactors(category: string): Record<string, number> {
     const factors: Record<string, Record<string, number>> = {
       length: {
         // Base unit: meter
@@ -285,8 +285,8 @@ export class ConversionEngine {
     return factors[category] || {};
   }
 
-  // Temperature conversion (special case)
-  static convertTemperature(value: number, fromUnit: string, toUnit: string): ConversionResult<number> {
+  // Temperature Converters (special case)
+  static convertTemperature(value: number, fromUnit: string, toUnit: string): ConvertersResult<number> {
     try {
       let result: number;
 
@@ -332,7 +332,7 @@ export class ConversionEngine {
         result: parseFloat(result.toFixed(2)),
         metadata: {
           timestamp: new Date(),
-          source: 'conversion-engine'
+          source: 'Converters-engine'
         }
       };
     } catch (error) {

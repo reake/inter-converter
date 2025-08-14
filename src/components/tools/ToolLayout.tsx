@@ -111,13 +111,37 @@ export function generateToolMetadata(
   category?: string
 ): Metadata {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://interconverter.com';
-  const url = `${baseUrl}/tools/${toolId}`;
-  
+  const categoryPath = category ? `/${category}` : '';
+  const url = `${baseUrl}${categoryPath}/${toolId}`;
+
+  // Ensure title is under 60 characters with brand
+  const seoTitle = title.length > 35
+    ? `${title} | InterConverter`
+    : `${title} - Free Online Tool | InterConverter`;
+
+  // Ensure description is under 160 characters
+  const seoDescription = description.length > 160
+    ? description.substring(0, 157) + '...'
+    : description;
+
+  // Enhanced keywords with long-tail variations
+  const enhancedKeywords = [
+    ...keywords.slice(0, 10), // Limit primary keywords
+    'free online tool',
+    'no registration required',
+    'instant results',
+    'professional grade',
+    `${title.toLowerCase()} online`,
+    `free ${title.toLowerCase()}`,
+    'converter tool',
+    'calculator online'
+  ];
+
   return {
-    title: `${title} - Free Online Tool | InterConverter`,
-    description,
-    keywords: [...keywords, 'converter', 'tool', 'online', 'free'].join(', '),
-    authors: [{ name: 'InterConverter' }],
+    title: seoTitle,
+    description: seoDescription,
+    keywords: enhancedKeywords.join(', '),
+    authors: [{ name: 'InterConverter Team' }],
     creator: 'InterConverter',
     publisher: 'InterConverter',
     formatDetection: {
@@ -130,18 +154,27 @@ export function generateToolMetadata(
       canonical: url,
     },
     openGraph: {
-      title: `${title} - Free Online Tool`,
-      description,
+      title: seoTitle,
+      description: seoDescription,
       url,
       siteName: 'InterConverter',
       type: 'website',
       locale: 'en_US',
+      images: [
+        {
+          url: `${baseUrl}/images/og-${toolId}.jpg`,
+          width: 1200,
+          height: 630,
+          alt: `${title} - Free Online Tool`,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${title} - Free Online Tool`,
-      description,
+      title: seoTitle,
+      description: seoDescription,
       creator: '@interconverter',
+      images: [`${baseUrl}/images/twitter-${toolId}.jpg`],
     },
     robots: {
       index: true,

@@ -11,7 +11,7 @@ export interface ToolConfig {
   icon?: string;
 }
 
-export interface ConversionResult<T = any> {
+export interface ConvertersResult<T = any> {
   success: boolean;
   result?: T;
   error?: string;
@@ -26,7 +26,7 @@ export interface ToolUsage {
   toolId: string;
   sessionId: string;
   timestamp: Date;
-  conversionCount: number;
+  ConvertersCount: number;
   userAgent: string;
   locale: string;
 }

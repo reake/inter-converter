@@ -55,7 +55,7 @@ export function RelatedTools({ currentToolId, category, maxTools = 6 }: RelatedT
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold mb-4">Related Tools</h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Discover more professional conversion tools and calculators to boost your productivity
+          Discover more professional Converters tools and calculators to boost your productivity
         </p>
       </div>
 

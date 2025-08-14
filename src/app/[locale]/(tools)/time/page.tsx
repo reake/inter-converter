@@ -7,7 +7,7 @@ import { getToolsByCategory } from '@/config/tools';
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'Time & Date Calculators - Timestamp, Countdown, Date Difference Tools',
-    description: 'Comprehensive collection of time and date conversion tools. Convert timestamps, create countdown timers, and calculate date differences.',
+    description: 'Comprehensive collection of time and date Converters tools. Convert timestamps, create countdown timers, and calculate date differences.',
     keywords: [
       'time calculators',
       'date calculators',
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
     ],
     openGraph: {
       title: 'Time & Date Calculators',
-      description: 'Professional time and date conversion tools for developers and users.',
+      description: 'Professional time and date Converters tools for developers and users.',
       type: 'website',
     },
     alternates: {
@@ -49,7 +49,7 @@ export default function TimeDatePage() {
               Time & Date Tools
             </h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-              Professional time and date conversion tools for developers, project managers, and anyone working with timestamps, dates, and time calculations.
+              Professional time and date Converters tools for developers, project managers, and anyone working with timestamps, dates, and time calculations.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
@@ -192,7 +192,7 @@ export default function TimeDatePage() {
                 </div>
                 <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
                   <span className="text-blue-600">•</span>
-                  <span className="text-gray-700">Handle timezone conversions in applications</span>
+                  <span className="text-gray-700">Handle timezone Converterss in applications</span>
                 </div>
                 <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
                   <span className="text-blue-600">•</span>

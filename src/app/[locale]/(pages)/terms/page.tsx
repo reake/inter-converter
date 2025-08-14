@@ -16,7 +16,7 @@ export default function TermsPage() {
         </div>
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Terms of Service</h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Simple, fair terms for using InterConverter's free conversion tools and calculators.
+          Simple, fair terms for using InterConverter's free Converters tools and calculators.
         </p>
         <Badge variant="secondary" className="mt-4">
           Last updated: {lastUpdated}
@@ -63,7 +63,7 @@ export default function TermsPage() {
             <ul className="space-y-2 text-gray-600 mb-4">
               <li className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                Use all conversion tools and calculators freely
+                Use all Converters tools and calculators freely
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />

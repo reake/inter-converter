@@ -79,7 +79,7 @@ export default function AboutPage() {
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
           We're building the most comprehensive collection of free, fast, and privacy-focused
-          conversion tools and calculators for developers, engineers, students, and professionals.
+          Converters tools and calculators for developers, engineers, students, and professionals.
         </p>
       </div>
 
@@ -93,12 +93,12 @@ export default function AboutPage() {
         </CardHeader>
         <CardContent>
           <p className="text-gray-600 leading-relaxed mb-4">
-            InterConverter was created with a simple mission: to provide professional-grade conversion
+            InterConverter was created with a simple mission: to provide professional-grade Converters
             tools and calculators that are completely free, respect your privacy, and work instantly
             without any registration or downloads.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            We believe that essential tools for calculation and conversion should be accessible to
+            We believe that essential tools for calculation and Converters should be accessible to
             everyone, everywhere, without barriers. Whether you're a developer converting timestamps,
             an engineer calculating ratios, or a student working on assignments, our tools are designed
             to save you time and provide accurate results.
@@ -180,7 +180,7 @@ export default function AboutPage() {
         <CardContent>
           <p className="text-gray-600 leading-relaxed mb-4">
             InterConverter is developed by a team of passionate developers and engineers who understand
-            the daily need for reliable conversion tools. We use these tools ourselves and are committed
+            the daily need for reliable Converters tools. We use these tools ourselves and are committed
             to maintaining the highest standards of accuracy and performance.
           </p>
           <p className="text-gray-600 leading-relaxed">
@@ -195,7 +195,7 @@ export default function AboutPage() {
       <div className="text-center">
         <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
         <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-          Explore our comprehensive collection of conversion tools and calculators.
+          Explore our comprehensive collection of Converters tools and calculators.
           No registration required, no downloads needed.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

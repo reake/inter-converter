@@ -98,7 +98,7 @@ export default function CountdownTimerPage() {
               },
               {
                 term: "Timezone Support",
-                definition: "Automatically handles timezone conversions and daylight saving time"
+                definition: "Automatically handles timezone Converterss and daylight saving time"
               }
             ]}
             faqs={[

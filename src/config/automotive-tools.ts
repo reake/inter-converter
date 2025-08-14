@@ -303,7 +303,7 @@ export const AUTOMOTIVE_TOOLS_CONFIG: AutomotiveToolConfig[] = [
   {
     id: 'fluid-weight-calculator',
     name: 'Automotive Fluid Weight Calculator',
-    description: 'Calculate weight and volume conversions for automotive fluids',
+    description: 'Calculate weight and volume Converterss for automotive fluids',
     category: 'auto',
     subcategory: 'fluids',
     keywords: ['fluid', 'weight', 'gasoline', 'oil', 'transmission', 'coolant', 'density'],

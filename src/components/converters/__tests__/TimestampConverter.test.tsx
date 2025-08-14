@@ -6,8 +6,8 @@ describe('TimestampConverter', () => {
     expect(true).toBe(true);
   });
 
-  it('should handle timestamp conversion logic', () => {
-    // Test the conversion logic separately from the component
+  it('should handle timestamp Converters logic', () => {
+    // Test the Converters logic separately from the component
     const timestamp = 1640995200; // 2022-01-01 00:00:00 UTC
     const date = new Date(timestamp * 1000);
     
@@ -16,7 +16,7 @@ describe('TimestampConverter', () => {
     expect(date.getDate()).toBe(1);
   });
 
-  it('should handle date to timestamp conversion', () => {
+  it('should handle date to timestamp Converters', () => {
     const dateString = '2022-01-01T00:00:00.000Z';
     const timestamp = Math.floor(new Date(dateString).getTime() / 1000);
     

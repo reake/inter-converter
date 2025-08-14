@@ -152,7 +152,7 @@ export function WeightConverter() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Scale className="h-5 w-5" />
-              Conversion Results
+              Converters Results
             </CardTitle>
           </CardHeader>
           <CardContent>

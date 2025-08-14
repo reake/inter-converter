@@ -38,7 +38,7 @@ export const PRIMARY_KEYWORDS: Record<string, KeywordData[]> = {
   ]
 };
 
-// Long-tail keywords (lower volume, lower competition, higher conversion)
+// Long-tail keywords (lower volume, lower competition, higher Converters)
 export const LONGTAIL_KEYWORDS: Record<string, KeywordData[]> = {
   'timestamp-converter': [
     { keyword: 'unix timestamp converter online free', searchVolume: 8500, difficulty: 1, intent: 'transactional', trend: 'stable' },
@@ -68,7 +68,7 @@ export const SEMANTIC_KEYWORDS: Record<string, string[]> = {
   ],
   'currency-converter': [
     'exchange rate', 'foreign exchange', 'forex', 'currency pair', 'base currency',
-    'quote currency', 'conversion rate', 'real-time rates', 'live rates', 'currency market'
+    'quote currency', 'Converters rate', 'real-time rates', 'live rates', 'currency market'
   ],
   'bmi-calculator': [
     'body mass index', 'weight status', 'healthy weight', 'obesity', 'underweight',
@@ -117,7 +117,7 @@ export const LOCAL_KEYWORDS = [
   'online calculator usa',
   'free converter tools america',
   'professional calculators united states',
-  'conversion tools north america',
+  'Converters tools north america',
   'engineering calculators usa'
 ];
 
@@ -127,7 +127,7 @@ export const COMPETITOR_KEYWORDS = [
   'rapidtables alternative',
   'convertunits alternative',
   'better than google calculator',
-  'professional conversion tools'
+  'professional Converters tools'
 ];
 
 // Seasonal keywords
@@ -144,20 +144,20 @@ export const SEASONAL_KEYWORDS: Record<string, { keywords: string[], months: num
 
 // Content gap keywords (opportunities)
 export const CONTENT_GAP_KEYWORDS = [
-  'conversion tool comparison',
+  'Converters tool comparison',
   'calculator accuracy guide',
   'professional vs basic calculators',
-  'conversion formulas explained',
+  'Converters formulas explained',
   'measurement standards guide',
-  'unit conversion history',
+  'unit Converters history',
   'calculator troubleshooting',
-  'conversion best practices'
+  'Converters best practices'
 ];
 
 // Export keyword strategy recommendations
 export const KEYWORD_STRATEGY = {
   primary: 'Target 1-2 primary keywords per page with high search volume',
-  longtail: 'Include 3-5 long-tail keywords for better conversion rates',
+  longtail: 'Include 3-5 long-tail keywords for better Converters rates',
   semantic: 'Use semantic keywords naturally throughout content',
   questions: 'Create FAQ sections targeting question-based keywords',
   local: 'Include local keywords for geographic relevance',

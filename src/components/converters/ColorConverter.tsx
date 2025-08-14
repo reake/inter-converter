@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Palette, Eye } from 'lucide-react';
 import { CopyButton } from '@/components/ui/CopyButton';
-import { ConversionEngine } from '@/lib/converters/conversion-engine';
+import { ConvertersEngine } from '@/lib/converters/Converters-engine';
 
 interface ColorValues {
   hex: string;
@@ -52,7 +52,7 @@ export function ColorConverter() {
   }, [hexInput, rgbInput, activeInput]);
 
   const convertFromHex = (hex: string) => {
-    const result = ConversionEngine.convertColor(hex, 'hex', 'rgb');
+    const result = ConvertersEngine.convertColor(hex, 'hex', 'rgb');
     if (result.success && result.result) {
       const rgbMatch = result.result.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
       if (rgbMatch) {
@@ -113,7 +113,7 @@ export function ColorConverter() {
       return;
     }
 
-    const result = ConversionEngine.convertColor(`rgb(${r}, ${g}, ${b})`, 'rgb', 'hex');
+    const result = ConvertersEngine.convertColor(`rgb(${r}, ${g}, ${b})`, 'rgb', 'hex');
     if (result.success && result.result) {
       const hsl = rgbToHsl(r, g, b);
       

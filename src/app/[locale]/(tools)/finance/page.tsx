@@ -6,23 +6,47 @@ import { getToolsByCategory } from '@/config/tools';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Currency & Finance Calculators - Exchange Rates, Loans, Tax Tools',
-    description: 'Professional financial calculators including currency conversion, loan calculations, and tax estimators for personal and business use.',
+    title: 'Free Finance & Currency Converters | InterConverter',
+    description: 'Professional financial tools: currency converter with live rates, loan calculator, mortgage calculator, tax estimator. Free, accurate, instant results.',
     keywords: [
       'currency converter',
-      'exchange rates',
+      'live exchange rates',
       'loan calculator',
       'mortgage calculator',
       'tax calculator',
-      'financial tools'
+      'financial tools',
+      'currency exchange calculator',
+      'loan payment calculator',
+      'finance calculator online',
+      'free financial tools'
     ],
     openGraph: {
-      title: 'Currency & Finance Calculators',
-      description: 'Professional financial tools for currency conversion, loans, and tax calculations.',
+      title: 'Free Finance & Currency Converters | InterConverter',
+      description: 'Professional financial converters: currency converter with live rates, loan calculator, mortgage calculator, tax estimator. Free, accurate, instant results.',
       type: 'website',
+      url: 'https://interconverter.com/finance',
+      siteName: 'InterConverter',
+      images: [
+        {
+          url: 'https://interconverter.com/images/og-finance.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Finance & Currency Calculators - InterConverter',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Free Finance & Currency Calculators | InterConverter',
+      description: 'Professional financial tools: currency converter with live rates, loan calculator, mortgage calculator, tax estimator.',
+      creator: '@interconverter',
     },
     alternates: {
-      canonical: 'finance'
+      canonical: 'https://interconverter.com/finance'
+    },
+    robots: {
+      index: true,
+      follow: true,
     }
   };
 }
@@ -49,7 +73,7 @@ export default function CurrencyFinancePage() {
               Currency & Finance Tools
             </h1>
             <p className="text-xl text-green-100 max-w-3xl mx-auto mb-8">
-              Professional financial calculators for currency conversion, loan analysis, and tax planning. 
+              Professional financial calculators for currency conversion, loan analysis, and tax planning.
               Make informed financial decisions with accurate, real-time calculations.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">

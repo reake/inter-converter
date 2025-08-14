@@ -3,9 +3,9 @@ import { generateToolMetadata, generateToolStructuredData } from '@/components/t
 
 export const metadata: Metadata = generateToolMetadata(
   'PDF to Word Converter',
-  'Convert PDF files to editable Word documents. Free online PDF to Word converter with high-quality conversion.',
+  'Convert PDF files to editable Word documents. Free online PDF to Word converter with high-quality Converters.',
   'pdf-to-word-converter',
-  ['pdf', 'word', 'doc', 'docx', 'converter', 'document', 'file', 'conversion'],
+  ['pdf', 'word', 'doc', 'docx', 'converter', 'document', 'file', 'Converters'],
   'media'
 );
 
@@ -39,7 +39,7 @@ export default function PdfToWordConverterPage() {
             <div className="text-6xl mb-4">🚧</div>
             <h2 className="text-2xl font-semibold mb-4">Coming Soon</h2>
             <p className="text-muted-foreground mb-6">
-              We're working on bringing you the best PDF to Word conversion experience. 
+              We're working on bringing you the best PDF to Word Converters experience. 
               This tool will feature advanced OCR, layout preservation, and batch processing.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto">
@@ -56,7 +56,7 @@ export default function PdfToWordConverterPage() {
               <div className="p-4 bg-background rounded-lg">
                 <div className="text-2xl mb-2">⚡</div>
                 <div className="font-medium">Fast</div>
-                <div className="text-sm text-muted-foreground">Quick conversion process</div>
+                <div className="text-sm text-muted-foreground">Quick Converters process</div>
               </div>
             </div>
           </div>

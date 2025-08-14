@@ -74,7 +74,7 @@ export default function ContactPage() {
       answer: 'Email us at bugs@interconverter.com with the specific tool, input values, expected result, and actual result.'
     },
     {
-      question: 'Can I request a new conversion tool?',
+      question: 'Can I request a new Converters tool?',
       answer: 'Yes! Send your suggestions to features@interconverter.com. Include details about what you need and how it would be useful.'
     },
     {

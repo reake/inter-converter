@@ -18,8 +18,8 @@ export const metadata: Metadata = generateToolMetadata(
     'area converter',
     'distance converter',
     'mass converter',
-    'conversion calculator',
-    'unit conversion tool',
+    'unit converter online',
+    'measurement converter',
     'measurement calculator',
     'metric imperial converter'
   ],

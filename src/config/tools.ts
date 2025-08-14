@@ -7,7 +7,7 @@ export const TOOL_CATEGORIES: Record<ToolCategory, { name: string; description: 
   },
   'finance': {
     name: 'Finance',
-    description: 'Currency conversion, loan calculations, and tax tools'
+    description: 'Currency Converters, loan calculations, and tax tools'
   },
   'unit': {
     name: 'Unit & Measurement',
@@ -19,7 +19,7 @@ export const TOOL_CATEGORIES: Record<ToolCategory, { name: string; description: 
   },
   'color': {
     name: 'Color & Design',
-    description: 'Color conversion and design utilities'
+    description: 'Color Converters and design utilities'
   },
   'health': {
     name: 'Health & Fitness',
@@ -40,7 +40,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
   {
     id: 'timestamp-converter',
     name: 'Timestamp Converter',
-    description: 'Convert Unix timestamps to human-readable dates and vice versa. Free, accurate, and instant conversion with timezone support.',
+    description: 'Convert Unix timestamps to human-readable dates and vice versa. Free, accurate, and instant Converters with timezone support.',
     category: 'time',
     keywords: [
       'timestamp converter',
@@ -89,7 +89,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
   {
     id: 'currency-converter',
     name: 'Currency Converter',
-    description: 'Convert between different currencies with real-time exchange rates. Free, accurate, and up-to-date conversion for 150+ currencies.',
+    description: 'Convert between different currencies with real-time exchange rates. Free, accurate, and up-to-date Converters for 150+ currencies.',
     category: 'finance',
     keywords: [
       'currency converter',
@@ -253,7 +253,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     name: 'Engine Size Converter',
     description: 'Convert engine displacement between cubic inches and liters',
     category: 'auto',
-    keywords: ['engine', 'displacement', 'cubic inches', 'liters', 'conversion'],
+    keywords: ['engine', 'displacement', 'cubic inches', 'liters', 'Converters'],
     path: '/auto/engine-size-converter',
     isActive: true,
     searchVolume: 15000,
@@ -313,7 +313,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     name: 'Speed Converter',
     description: 'Convert between MPH and KPH for auto applications',
     category: 'auto',
-    keywords: ['speed', 'mph', 'kph', 'conversion', 'auto'],
+    keywords: ['speed', 'mph', 'kph', 'Converters', 'auto'],
     path: '/auto/speed-converter',
     isActive: true,
     searchVolume: 35000,
@@ -337,7 +337,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     name: 'Temperature Converter',
     description: 'Convert between Fahrenheit and Celsius for auto use',
     category: 'auto',
-    keywords: ['temperature', 'fahrenheit', 'celsius', 'conversion', 'auto'],
+    keywords: ['temperature', 'fahrenheit', 'celsius', 'Converters', 'auto'],
     path: '/auto/temperature-converter',
     isActive: true,
     searchVolume: 28000,
@@ -361,7 +361,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     name: 'Torque & Horsepower Calculator',
     description: 'Convert between torque and horsepower at different RPMs',
     category: 'auto',
-    keywords: ['torque', 'horsepower', 'rpm', 'conversion', 'engine'],
+    keywords: ['torque', 'horsepower', 'rpm', 'Converters', 'engine'],
     path: '/auto/torque-horsepower-calculator',
     isActive: true,
     searchVolume: 19000,
@@ -395,7 +395,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
   {
     id: 'auto-fluid-calculator',
     name: 'Automotive Fluid Calculator',
-    description: 'Calculate volume and weight conversions for auto fluids',
+    description: 'Calculate volume and weight Converterss for auto fluids',
     category: 'auto',
     keywords: ['fluid', 'volume', 'weight', 'gasoline', 'oil', 'transmission'],
     path: '/auto/fluid-weight-calculator',
@@ -409,7 +409,7 @@ export const TOOLS_CONFIG: ToolConfig[] = [
     name: 'Automotive Weight Converter',
     description: 'Convert between different weight units for auto applications',
     category: 'auto',
-    keywords: ['weight', 'conversion', 'pounds', 'kilograms', 'ounces', 'grams'],
+    keywords: ['weight', 'Converters', 'pounds', 'kilograms', 'ounces', 'grams'],
     path: '/auto/weight-converter',
     isActive: true,
     searchVolume: 8000,

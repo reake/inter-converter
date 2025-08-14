@@ -127,14 +127,14 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       'engine cc calculator',
       'motor displacement calculator',
       'engine building calculator',
-      'displacement conversion calculator'
+      'displacement Converters calculator'
     ],
     ogImage: '/images/engine-displacement-calculator-og.jpg',
     twitterImage: '/images/engine-displacement-calculator-twitter.jpg'
   },
 
   'torque-horsepower-calculator': {
-    title: 'Torque HP Calculator | Power Conversion Tool Free',
+    title: 'Torque HP Calculator | Power Converters Tool Free',
     description: 'Convert between torque and horsepower at any RPM. Free torque to HP calculator with instant results. Includes power curve calculations.',
     keywords: [
       'torque horsepower calculator',
@@ -143,7 +143,7 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       'torque calculator',
       'power calculator',
       'hp to torque calculator',
-      'torque hp conversion',
+      'torque hp Converters',
       'engine power calculator',
       'torque horsepower formula',
       'power torque calculator',
@@ -185,7 +185,7 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
   // Time Tools
   'timestamp-converter': {
     title: 'Timestamp Converter | Unix Time Converter Free Tool',
-    description: 'Convert Unix timestamps to human readable dates. Free timestamp converter for epoch time, milliseconds, and date formats. Instant conversion.',
+    description: 'Convert Unix timestamps to human readable dates. Free timestamp converter for epoch time, milliseconds, and date formats. Instant Converters.',
     keywords: [
       'timestamp converter',
       'unix timestamp converter',
@@ -209,8 +209,8 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
 
   // Unit Tools
   'unit-converter': {
-    title: 'Unit Converter | Free Measurement Conversion Tool',
-    description: 'Convert units of measurement instantly. Free online unit converter for length, weight, temperature, volume, area, and more. Accurate conversions.',
+    title: 'Unit Converter | Free Measurement Converters Tool',
+    description: 'Convert units of measurement instantly. Free online unit converter for length, weight, temperature, volume, area, and more. Accurate Converterss.',
     keywords: [
       'unit converter',
       'measurement converter',
@@ -223,8 +223,8 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       'area converter',
       'distance converter',
       'mass converter',
-      'conversion calculator',
-      'unit conversion tool',
+      'Converters calculator',
+      'unit Converters tool',
       'measurement calculator',
       'metric imperial converter'
     ],

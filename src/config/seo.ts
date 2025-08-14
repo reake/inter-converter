@@ -5,19 +5,23 @@ import { TOOL_CATEGORIES } from './tools';
 export const SEO_CONFIG = {
   siteName: 'InterConverter',
   siteUrl: 'https://interconverter.com',
-  defaultTitle: 'InterConverter - Free Online Conversion Tools & Calculators', 
-  defaultDescription: 'Professional-grade conversion tools and calculators. Convert currencies, units, colors, files, automotive calculations, and more. Free, fast, and privacy-focused.',
+  defaultTitle: 'Free Online Converters & Calculators | InterConverter',
+  defaultDescription: 'Professional converters & calculators for currency, units, colors, time, automotive calculations & more. 100% free, instant results, no registration. Trusted by 1M+ users.',
   defaultKeywords: [
     'online converter',
     'free calculator',
-    'unit conversion',
+    'unit converter',
     'currency converter',
     'measurement tools',
     'professional calculators',
     'conversion tools',
     'online tools',
     'free tools',
-    'web calculator'
+    'web calculator',
+    'instant converter',
+    'no registration converter',
+    'professional converters',
+    'accurate calculator online'
   ],
   author: 'InterConverter Team',
   twitterHandle: '@interconverter',
@@ -29,52 +33,73 @@ export const SEO_CONFIG = {
 export const CATEGORY_LONGTAIL_KEYWORDS = {
   'time': [
     'unix timestamp converter online free',
-    'epoch time to date converter',
+    'epoch time to date converter tool',
     'countdown timer with notifications',
-    'date difference calculator days',
-    'time zone converter world clock'
+    'date difference calculator days hours',
+    'time zone converter world clock',
+    'timestamp to date converter instant',
+    'epoch converter milliseconds seconds',
+    'date calculator business days'
   ],
   'finance': [
-    'real time currency converter',
-    'loan payment calculator monthly',
-    'income tax calculator 2024',
-    'mortgage payment calculator',
-    'exchange rate converter live'
+    'real time currency converter live rates',
+    'loan payment calculator monthly interest',
+    'income tax calculator 2024 free',
+    'mortgage payment calculator with taxes',
+    'exchange rate converter historical data',
+    'currency converter 150 currencies',
+    'loan calculator with extra payments',
+    'tax calculator federal state'
   ],
   'unit': [
-    'metric to imperial converter',
-    'feet to meters calculator',
-    'celsius to fahrenheit converter',
+    'metric to imperial converter accurate',
+    'feet to meters calculator precise',
+    'celsius to fahrenheit converter instant',
     'weight converter pounds kilograms',
-    'length converter online free'
+    'length converter online free tool',
+    'temperature converter celsius fahrenheit',
+    'volume converter liters gallons',
+    'area converter square feet meters'
   ],
   'media': [
     'pdf to word converter online free',
     'jpg to png converter transparent',
-    'image format converter online',
-    'document converter free',
-    'file format converter'
+    'image format converter online tool',
+    'document converter free no limit',
+    'file format converter batch',
+    'image converter jpg png gif',
+    'pdf converter online free',
+    'file type converter online'
   ],
   'color': [
-    'hex to rgb color converter',
-    'color code converter css',
-    'hex color picker converter',
-    'rgb to hex converter online',
-    'color palette converter'
+    'hex to rgb color converter css',
+    'color code converter hex rgb hsl',
+    'hex color picker converter tool',
+    'rgb to hex converter online free',
+    'color palette converter generator',
+    'css color converter hex rgb',
+    'color picker hex rgb converter',
+    'web color converter tool'
   ],
   'health': [
-    'bmi calculator body mass index',
-    'ideal weight calculator height',
-    'calorie calculator daily needs',
-    'body fat percentage calculator',
-    'fitness calculator online'
+    'bmi calculator body mass index accurate',
+    'ideal weight calculator height age',
+    'calorie calculator daily needs bmr',
+    'body fat percentage calculator online',
+    'fitness calculator online free',
+    'bmi calculator metric imperial',
+    'weight calculator ideal healthy',
+    'health calculator bmi body fat'
   ],
   'auto': [
-    'carburetor cfm calculator engine',
+    'carburetor cfm calculator engine size',
     'compression ratio calculator horsepower',
-    'gear ratio calculator performance',
-    'engine displacement calculator',
-    'automotive calculator tools'
+    'gear ratio calculator performance tuning',
+    'engine displacement calculator bore stroke',
+    'automotive calculator tools free',
+    'horsepower calculator engine specs',
+    'rpm calculator gear ratio speed',
+    'automotive conversion tools'
   ]
 };
 
