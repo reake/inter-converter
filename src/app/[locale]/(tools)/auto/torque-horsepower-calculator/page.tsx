@@ -4,8 +4,9 @@ import { TorqueHorsepowerCalculator } from '@/components/automotive/TorqueHorsep
 
 
 
-// Cloudflare Pages Edge Runtime 配置
-export const runtime = 'edge';
+
+// Force static generation
+export const dynamic = 'force-static';
 export const metadata: Metadata = generateToolMetadata(
   'Torque & Horsepower Calculator',
   'Convert between torque and horsepower at different RPMs. Calculate engine power and torque relationships.',

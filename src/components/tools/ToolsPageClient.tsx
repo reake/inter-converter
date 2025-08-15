@@ -1,16 +1,11 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
-import { useTranslations } from 'next-intl';
 import { TOOLS_CONFIG, TOOL_CATEGORIES, getPopularTools } from '@/config/tools';
 import { ModernToolCard } from '@/components/tools/ModernToolCard';
-import { ToolSearch } from '@/components/tools/ToolSearch';
 import { AdvancedFilters } from '@/components/tools/AdvancedFilters';
-import { FAQManager } from '@/components/content/FAQManager';
-import { RelatedToolsEngine } from '@/components/content/RelatedToolsEngine';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { ToolConfig } from '@/types/tools';
 import Link from 'next/link';
 
@@ -19,7 +14,6 @@ interface ToolsPageClientProps {
 }
 
 export function ToolsPageClient({ locale }: ToolsPageClientProps) {
-  const t = useTranslations();
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [sortBy, setSortBy] = useState<'popularity' | 'name' | 'category'>('popularity');
   const [filteredTools, setFilteredTools] = useState<ToolConfig[]>([]);
@@ -42,6 +36,13 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
     }, {} as Record<string, typeof allTools>);
   }, [allTools]);
 
+  // Handle category selection
+  const handleCategorySelect = (category: string) => {
+    setSelectedCategory(category);
+    setCurrentFilters(null); // Clear advanced filters
+    setShowAdvancedFilters(false);
+  };
+
   // Handle advanced filters
   const handleAdvancedFiltersChange = (filtered: ToolConfig[], filters: any) => {
     setFilteredTools(filtered);
@@ -56,7 +57,7 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
       return filteredTools;
     }
 
-    // Otherwise, filter by category and sort
+    // Start with all tools or category filtered tools
     let filtered = selectedCategory === 'all'
       ? allTools
       : allTools.filter(tool => tool.category === selectedCategory);
@@ -110,60 +111,13 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
         <div className="relative container mx-auto px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-              Free Online Converters & Calculators Tools
+              All Free Online Converters & Calculators
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
-              Professional-grade Converters tools and calculators for developers, engineers, students, and professionals.
-              Completely free, secure, and works instantly in your browser without downloads.
+              Professional-grade conversion tools and calculators for developers, engineers, students, and professionals.
+              Browse by category, search by name, or filter by features.
             </p>
-            
-            {/* Hero Stats */}
-            <div className="flex flex-wrap justify-center gap-8 mb-10">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white">{allTools.length}+</div>
-                <div className="text-blue-200 text-sm">Tools Available</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white">{Object.keys(TOOL_CATEGORIES).length}</div>
-                <div className="text-blue-200 text-sm">Categories</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white">100%</div>
-                <div className="text-blue-200 text-sm">Free to Use</div>
-              </div>
-            </div>
-            
-            {/* Enhanced Search */}
-            <div className="max-w-2xl mx-auto">
-              <ToolSearch />
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Featured Tools Carousel */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
-              Most Popular Converters Tools
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Our top-rated calculators and converters, trusted by millions of professionals, students, and developers worldwide for accurate, instant results
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {featuredTools.map((tool, index) => (
-              <div key={`featured-${tool.id}-${index}`} className="transform hover:scale-105 transition-transform duration-300">
-                <ModernToolCard
-                  tool={tool}
-                  variant="featured"
-                  animationDelay={index * 200}
-                  locale={locale}
-                />
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -180,7 +134,7 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             <Button
               variant={selectedCategory === 'all' ? 'default' : 'outline'}
-              onClick={() => setSelectedCategory('all')}
+              onClick={() => handleCategorySelect('all')}
               className="transition-all duration-200"
             >
               All Tools ({allTools.length})
@@ -189,7 +143,7 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
               <Button
                 key={key}
                 variant={selectedCategory === key ? 'default' : 'outline'}
-                onClick={() => setSelectedCategory(key)}
+                onClick={() => handleCategorySelect(key)}
                 className="transition-all duration-200"
               >
                 {name} ({count})
@@ -357,7 +311,7 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
       
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      {/* <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Need a Specific Calculator or Converter?</h2>
           <p className="text-xl mb-8 text-blue-100">
@@ -373,18 +327,9 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* FAQ Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <FAQManager
-            category={selectedCategory !== 'all' ? selectedCategory : undefined}
-            maxItems={8}
-            showSearch={true}
-          />
-        </div>
-      </section>
+
     </div>
   );
 }

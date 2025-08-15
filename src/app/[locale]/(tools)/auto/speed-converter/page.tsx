@@ -4,8 +4,9 @@ import { SpeedConverter } from '@/components/automotive/SpeedConverter';
 
 
 
-// Cloudflare Pages Edge Runtime 配置
-export const runtime = 'edge';
+
+// Force static generation
+export const dynamic = 'force-static';
 export const metadata: Metadata = generateToolMetadata(
   'Speed Converter',
   'Convert between MPH and KPH for automotive applications. Free speed converter with common speed references.',

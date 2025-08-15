@@ -4,8 +4,9 @@ import { TireSpeedCalculator } from '@/components/converters/automotive/TireSpee
 
 
 
-// Cloudflare Pages Edge Runtime 配置
-export const runtime = 'edge';
+
+// Force static generation
+export const dynamic = 'force-static';
 export const metadata: Metadata = generateToolMetadata(
   'Tire Speed Calculator',
   'Calculate vehicle speed based on tire diameter, gear ratio, and RPM. Essential tool for performance tuning and gear selection.',

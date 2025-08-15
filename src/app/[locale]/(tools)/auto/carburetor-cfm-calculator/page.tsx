@@ -4,8 +4,9 @@ import { CarburetorCFMCalculator } from '@/components/converters/automotive/Carb
 
 
 
-// Cloudflare Pages Edge Runtime 配置
-export const runtime = 'edge';
+
+// Force static generation
+export const dynamic = 'force-static';
 export const metadata: Metadata = generateToolMetadata(
   'Carburetor CFM Calculator',
   'Calculate carburetor CFM for your engine displacement. Free carb sizing calculator for stock & modified engines. Get accurate airflow requirements.',

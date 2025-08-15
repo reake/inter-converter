@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
-// Cloudflare Pages Edge Runtime 配置
-export const runtime = 'edge';
+// Static export configuration
+export const dynamic = 'force-static';
 
 export default function robots(): MetadataRoute.Robots {
   const baseUrl = 'https://interconverter.com';

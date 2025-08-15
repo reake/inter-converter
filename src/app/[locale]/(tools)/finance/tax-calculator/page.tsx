@@ -8,8 +8,9 @@ import { ModernSEOContent } from "@/components/tools/ModernSEOContent";
 
 
 
-// Cloudflare Pages Edge Runtime 配置
-export const runtime = 'edge';
+
+// Force static generation
+export const dynamic = 'force-static';
 export const metadata: Metadata = generateToolMetadata(
   "Tax Calculator",
   "Calculate income tax, estimate tax liability, and plan your tax strategy. Free tax calculator with multiple filing statuses.",

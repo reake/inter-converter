@@ -8,8 +8,6 @@ import "./globals.css";
 
 
 
-// Cloudflare Pages Edge Runtime 配置
-export const runtime = 'edge';
 export default async function RootLayout({
   children,
   params,

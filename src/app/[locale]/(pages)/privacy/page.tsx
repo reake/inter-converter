@@ -6,8 +6,9 @@ import { Shield, Eye, Database, Lock, Globe, CheckCircle } from 'lucide-react';
 
 
 
-// Cloudflare Pages Edge Runtime 配置
-export const runtime = 'edge';
+
+// Force static generation
+export const dynamic = 'force-static';
 export default function PrivacyPage() {
   const lastUpdated = 'January 1, 2024';
 

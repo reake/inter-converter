@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
 import NotFound from '@/components/blocks/not-found';
+import { SearchProvider } from '@/lib/search-context';
 
-// Cloudflare Pages Edge Runtime 配置
-export const runtime = 'edge';
+// Force static generation
+export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: '404 - Page Not Found | InterConverter',
@@ -11,5 +12,9 @@ export const metadata: Metadata = {
 };
 
 export default function GlobalNotFoundPage() {
-  return <NotFound />;
+  return (
+    <SearchProvider>
+      <NotFound />
+    </SearchProvider>
+  );
 }

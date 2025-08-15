@@ -4,8 +4,9 @@ import { LoanCalculator } from "@/components/converters/LoanCalculator";
 
 
 
-// Cloudflare Pages Edge Runtime 配置
-export const runtime = 'edge';
+
+// Force static generation
+export const dynamic = 'force-static';
 export const metadata: Metadata = generateToolMetadata(
   "Loan Calculator",
   "Calculate monthly payments, total interest, and amortization schedules for loans and mortgages. Free loan payment calculator.",

@@ -5,8 +5,9 @@ import { ToolSEOContent } from '@/components/seo/ToolSEOContent';
 
 
 
-// Cloudflare Pages Edge Runtime 配置
-export const runtime = 'edge';
+
+// Force static generation
+export const dynamic = 'force-static';
 export const metadata: Metadata = generateToolMetadata(
   'Date Difference Calculator',
   'Calculate the difference between two dates in days, months, years, hours, and minutes. Free online date calculator.',

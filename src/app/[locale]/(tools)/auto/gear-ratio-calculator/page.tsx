@@ -4,8 +4,9 @@ import { GearRatioCalculator } from '@/components/automotive/GearRatioCalculator
 
 
 
-// Cloudflare Pages Edge Runtime 配置
-export const runtime = 'edge';
+
+// Force static generation
+export const dynamic = 'force-static';
 export const metadata: Metadata = generateToolMetadata(
   'Gear Ratio Calculator',
   'Calculate gear ratios from ring and pinion teeth, find optimal ratios for performance. Free automotive gear ratio calculator.',

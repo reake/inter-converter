@@ -83,7 +83,7 @@ npm run build:cloudflare
 
 #### 4. 部署到 Pages
 ```bash
-wrangler pages deploy .vercel/output/static --project-name=interConverter
+wrangler pages deploy .vercel/output/static --project-name=inter-converter
 ```
 
 ## 构建脚本说明

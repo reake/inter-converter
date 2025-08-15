@@ -4,8 +4,9 @@ import { WeightConverter } from '@/components/converters/automotive/WeightConver
 
 
 
-// Cloudflare Pages Edge Runtime 配置
-export const runtime = 'edge';
+
+// Force static generation
+export const dynamic = 'force-static';
 export const metadata: Metadata = generateToolMetadata(
   'Automotive Weight Converter',
   'Convert between pounds, kilograms, ounces, and grams for automotive applications. Essential for weight reduction and performance calculations.',

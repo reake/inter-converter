@@ -6,8 +6,9 @@ import { AUTOMOTIVE_TOOLS_CONFIG } from '@/config/automotive-tools';
 
 
 
-// Cloudflare Pages Edge Runtime 配置
-export const runtime = 'edge';
+
+// Force static generation
+export const dynamic = 'force-static';
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'Free Automotive Converters & Engine Tools | InterConverter',

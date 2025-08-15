@@ -4,8 +4,9 @@ import { TireCalculator } from '@/components/automotive/TireCalculator';
 
 
 
-// Cloudflare Pages Edge Runtime 配置
-export const runtime = 'edge';
+
+// Force static generation
+export const dynamic = 'force-static';
 export const metadata: Metadata = generateToolMetadata(
   'Tire Calculator',
   'Calculate how tire diameter changes affect vehicle speed, RPM, and performance. Tire size comparison calculator.',

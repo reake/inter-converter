@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:static": "BUILD_TARGET=static next build && node scripts/reorganize-static-files.js",
     "build:cloudflare": "next build && npx @cloudflare/next-on-pages",
+    "deploy:workers": "npm run build:static && wrangler deploy",
+    "preview:workers": "npm run build:static && wrangler dev",
     "start": "next start",
     "lint": "next lint",
     "test": "jest",

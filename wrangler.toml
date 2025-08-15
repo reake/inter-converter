@@ -1,12 +1,28 @@
-name = "InterConverter"
-compatibility_date = "2025-08-14"
+name = "inter-converter"
+main = "src/worker.js"
+compatibility_date = "2024-08-14"
 compatibility_flags = ["nodejs_compat"]
 
+# Static Assets 配置
+[assets]
+directory = "out"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+run_worker_first = true
+
+# 环境变量
+[vars]
+NODE_ENV = "production"
+NEXT_PUBLIC_SITE_URL = "https://inter-converter.your-domain.workers.dev"
+NEXT_PUBLIC_APP_NAME = "InterConverter"
+NEXT_PUBLIC_DEFAULT_LOCALE = "en"
+
 [env.production]
-name = "InterConverter"
+name = "inter-converter"
+[env.production.vars]
+NEXT_PUBLIC_SITE_URL = "https://interconverter.com"
 
 [env.preview]
-name = "InterConverterPreview"
-
-# Pages configuration
-pages_build_output_dir = ".vercel/output/static"
+name = "inter-converter-preview"
+[env.preview.vars]
+NEXT_PUBLIC_SITE_URL = "https://preview.inter-converter.workers.dev"

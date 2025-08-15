@@ -4,8 +4,9 @@ import { AutomotiveTemperatureConverter } from '@/components/automotive/Automoti
 
 
 
-// Cloudflare Pages Edge Runtime 配置
-export const runtime = 'edge';
+
+// Force static generation
+export const dynamic = 'force-static';
 export const metadata: Metadata = generateToolMetadata(
   'Automotive Temperature Converter',
   'Convert between Fahrenheit and Celsius for automotive applications. Engine temperature, coolant, oil temperature converter.',

@@ -4,10 +4,11 @@ import { SearchProvider } from '@/lib/search-context';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 
+// Generate static params for all supported locales
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
-
-// Cloudflare Pages Edge Runtime 配置
-export const runtime = 'edge';
 export default async function LocaleLayout({
   children,
   params

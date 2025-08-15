@@ -2,6 +2,7 @@ import createMiddleware from 'next-intl/middleware';
 import { routing } from './i18n/routing';
 import { NextRequest, NextResponse } from 'next/server';
 
+// Create middleware based on build target
 const intlMiddleware = createMiddleware({
   ...routing,
   // Ensure default locale is always English
@@ -11,6 +12,11 @@ const intlMiddleware = createMiddleware({
 });
 
 export default function middleware(request: NextRequest) {
+  // Skip middleware for static export builds
+  if (process.env.BUILD_TARGET === 'static') {
+    return NextResponse.next();
+  }
+
   return intlMiddleware(request);
 }
 

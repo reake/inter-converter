@@ -4,8 +4,9 @@ import { ColorConverter } from '@/components/converters/ColorConverter';
 
 
 
-// Cloudflare Pages Edge Runtime 配置
-export const runtime = 'edge';
+
+// Force static generation
+export const dynamic = 'force-static';
 export const metadata: Metadata = generateToolMetadata(
   'HEX to RGB Converter',
   'Convert HEX color codes to RGB values and vice versa. Free color converter with color picker and preview.',

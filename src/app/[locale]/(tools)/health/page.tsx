@@ -6,8 +6,9 @@ import { getToolsByCategory } from '@/config/tools';
 
 
 
-// Cloudflare Pages Edge Runtime 配置
-export const runtime = 'edge';
+
+// Force static generation
+export const dynamic = 'force-static';
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'Health & Fitness Calculators - BMI, Body Fat, Calorie Tools',

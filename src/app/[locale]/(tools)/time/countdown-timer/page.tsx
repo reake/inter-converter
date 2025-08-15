@@ -5,8 +5,9 @@ import { ModernSEOContent } from '@/components/tools/ModernSEOContent';
 
 
 
-// Cloudflare Pages Edge Runtime 配置
-export const runtime = 'edge';
+
+// Force static generation
+export const dynamic = 'force-static';
 export const metadata: Metadata = generateToolMetadata(
   'Countdown Timer',
   'Create countdown timers for events, deadlines, and special occasions. Free online countdown timer with notifications.',

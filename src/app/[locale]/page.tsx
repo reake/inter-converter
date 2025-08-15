@@ -16,8 +16,9 @@ import { generateHomeMetadata } from "@/config/seo";
 import { StructuredData } from "@/components/seo/StructuredData";
 
 
-// Cloudflare Pages Edge Runtime 配置
-export const runtime = 'edge';
+
+// Force static generation
+export const dynamic = 'force-static';
 export async function generateMetadata({
   params
 }: {
