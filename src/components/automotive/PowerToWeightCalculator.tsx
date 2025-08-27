@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -8,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
 export function PowerToWeightCalculator() {
+  const t = useTranslations('tools.automotive.powerToWeightRatio');
   const [horsepower, setHorsepower] = useState<string>('');
   const [weight, setWeight] = useState<string>('');
   const [hpPerLb, setHpPerLb] = useState<string>('');
@@ -27,12 +29,12 @@ export function PowerToWeightCalculator() {
   };
 
   const getPerformanceCategory = (ratio: number) => {
-    if (ratio >= 0.20) return { label: 'Supercar', color: 'bg-purple-100 text-purple-700' };
-    if (ratio >= 0.15) return { label: 'High Performance', color: 'bg-red-100 text-red-700' };
-    if (ratio >= 0.12) return { label: 'Sports Car', color: 'bg-orange-100 text-orange-700' };
-    if (ratio >= 0.08) return { label: 'Performance', color: 'bg-yellow-100 text-yellow-700' };
-    if (ratio >= 0.05) return { label: 'Average', color: 'bg-blue-100 text-blue-700' };
-    return { label: 'Economy', color: 'bg-gray-100 text-gray-700' };
+    if (ratio >= 0.20) return { label: t('categories.supercar'), color: 'bg-purple-100 text-purple-700' };
+    if (ratio >= 0.15) return { label: t('categories.highPerformance'), color: 'bg-red-100 text-red-700' };
+    if (ratio >= 0.12) return { label: t('categories.sports'), color: 'bg-orange-100 text-orange-700' };
+    if (ratio >= 0.08) return { label: t('categories.performance'), color: 'bg-yellow-100 text-yellow-700' };
+    if (ratio >= 0.05) return { label: t('categories.average'), color: 'bg-blue-100 text-blue-700' };
+    return { label: t('categories.economy'), color: 'bg-gray-100 text-gray-700' };
   };
 
   const currentRatio = hpPerLb ? Number(hpPerLb) : 0;
@@ -44,13 +46,13 @@ export function PowerToWeightCalculator() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            💪 Power to Weight Ratio Calculator
+            💪 {t('title')}
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="grid md:grid-cols-2 gap-4">
             <div>
-              <Label htmlFor="horsepower">Horsepower (HP)</Label>
+              <Label htmlFor="horsepower">{t('horsepower')}</Label>
               <Input
                 id="horsepower"
                 type="number"
@@ -61,7 +63,7 @@ export function PowerToWeightCalculator() {
               />
             </div>
             <div>
-              <Label htmlFor="weight">Vehicle Weight (lbs)</Label>
+              <Label htmlFor="weight">{t('weight')}</Label>
               <Input
                 id="weight"
                 type="number"
@@ -74,12 +76,12 @@ export function PowerToWeightCalculator() {
           </div>
           
           <Button onClick={calculateRatio} className="w-full">
-            Calculate Power to Weight Ratio
+            {t('calculate')}
           </Button>
           
           <div className="grid md:grid-cols-2 gap-4">
             <div>
-              <Label htmlFor="hp-per-lb">HP per Pound</Label>
+              <Label htmlFor="hp-per-lb">{t('hpPerLb')}</Label>
               <div className="flex items-center gap-2">
                 <Input
                   id="hp-per-lb"
@@ -97,7 +99,7 @@ export function PowerToWeightCalculator() {
               </div>
             </div>
             <div>
-              <Label htmlFor="lb-per-hp">Pounds per HP</Label>
+              <Label htmlFor="lb-per-hp">{t('lbPerHp')}</Label>
               <Input
                 id="lb-per-hp"
                 type="text"
@@ -114,84 +116,84 @@ export function PowerToWeightCalculator() {
       {/* Performance Categories */}
       <Card>
         <CardHeader>
-          <CardTitle>Performance Categories</CardTitle>
+          <CardTitle>{t('performanceCategories')}</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div className="space-y-2">
-              <h4 className="font-semibold text-sm text-gray-700">Economy Cars</h4>
+              <h4 className="font-semibold text-sm text-gray-700">{t('categoryDescriptions.economyCars')}</h4>
               <div className="text-sm space-y-1">
                 <div className="flex justify-between">
                   <span>0.03-0.05 HP/lb</span>
                   <span>20-33 lb/HP</span>
                 </div>
                 <p className="text-xs text-gray-600">
-                  Typical economy cars, hybrids
+                  {t('categoryDescriptions.economyDesc')}
                 </p>
               </div>
             </div>
             
             <div className="space-y-2">
-              <h4 className="font-semibold text-sm text-gray-700">Average Performance</h4>
+              <h4 className="font-semibold text-sm text-gray-700">{t('categoryDescriptions.averagePerformance')}</h4>
               <div className="text-sm space-y-1">
                 <div className="flex justify-between">
                   <span>0.05-0.08 HP/lb</span>
                   <span>12-20 lb/HP</span>
                 </div>
                 <p className="text-xs text-gray-600">
-                  Mid-size sedans, crossovers
+                  {t('categoryDescriptions.averageDesc')}
                 </p>
               </div>
             </div>
 
             <div className="space-y-2">
-              <h4 className="font-semibold text-sm text-gray-700">Performance Cars</h4>
+              <h4 className="font-semibold text-sm text-gray-700">{t('categoryDescriptions.performanceCars')}</h4>
               <div className="text-sm space-y-1">
                 <div className="flex justify-between">
                   <span>0.08-0.12 HP/lb</span>
                   <span>8-12 lb/HP</span>
                 </div>
                 <p className="text-xs text-gray-600">
-                  Hot hatches, muscle cars
+                  {t('categoryDescriptions.performanceDesc')}
                 </p>
               </div>
             </div>
 
             <div className="space-y-2">
-              <h4 className="font-semibold text-sm text-gray-700">Sports Cars</h4>
+              <h4 className="font-semibold text-sm text-gray-700">{t('categoryDescriptions.sportsCars')}</h4>
               <div className="text-sm space-y-1">
                 <div className="flex justify-between">
                   <span>0.12-0.15 HP/lb</span>
                   <span>6-8 lb/HP</span>
                 </div>
                 <p className="text-xs text-gray-600">
-                  Corvette, Mustang GT, Camaro SS
+                  {t('categoryDescriptions.sportsDesc')}
                 </p>
               </div>
             </div>
 
             <div className="space-y-2">
-              <h4 className="font-semibold text-sm text-gray-700">High Performance</h4>
+              <h4 className="font-semibold text-sm text-gray-700">{t('categoryDescriptions.highPerformance')}</h4>
               <div className="text-sm space-y-1">
                 <div className="flex justify-between">
                   <span>0.15-0.20 HP/lb</span>
                   <span>5-6 lb/HP</span>
                 </div>
                 <p className="text-xs text-gray-600">
-                  Porsche 911, BMW M3, Hellcat
+                  {t('categoryDescriptions.highDesc')}
                 </p>
               </div>
             </div>
 
             <div className="space-y-2">
-              <h4 className="font-semibold text-sm text-gray-700">Supercars</h4>
+              <h4 className="font-semibold text-sm text-gray-700">{t('categoryDescriptions.supercars')}</h4>
               <div className="text-sm space-y-1">
                 <div className="flex justify-between">
                   <span>0.20+ HP/lb</span>
                   <span>&lt;5 lb/HP</span>
                 </div>
                 <p className="text-xs text-gray-600">
-                  Ferrari, Lamborghini, McLaren
+                  {t('categoryDescriptions.superDesc')}
                 </p>
               </div>
             </div>
@@ -202,12 +204,12 @@ export function PowerToWeightCalculator() {
       {/* Example Vehicles */}
       <Card>
         <CardHeader>
-          <CardTitle>Example Vehicles</CardTitle>
+          <CardTitle>{t('exampleVehicles')}</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-3">
-              <h4 className="font-semibold text-gray-700">Classic Muscle Cars</h4>
+              <h4 className="font-semibold text-gray-700">{t('examples.classicMuscle')}</h4>
               <div className="text-sm space-y-2">
                 <div className="flex justify-between items-center">
                   <span>1970 Plymouth 'Cuda 440</span>
@@ -225,7 +227,7 @@ export function PowerToWeightCalculator() {
             </div>
             
             <div className="space-y-3">
-              <h4 className="font-semibold text-gray-700">Modern Performance</h4>
+              <h4 className="font-semibold text-gray-700">{t('examples.modernPerformance')}</h4>
               <div className="text-sm space-y-2">
                 <div className="flex justify-between items-center">
                   <span>Dodge Hellcat</span>
@@ -248,27 +250,25 @@ export function PowerToWeightCalculator() {
       {/* Formula Information */}
       <Card>
         <CardHeader>
-          <CardTitle>Calculation Formula</CardTitle>
+          <CardTitle>{t('calculationFormula')}</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
             <div>
-              <h4 className="font-semibold mb-2">Power to Weight Ratio:</h4>
+              <h4 className="font-semibold mb-2">{t('formulas.powerToWeight')}</h4>
               <p className="text-sm text-gray-600 bg-gray-50 p-3 rounded">
-                HP per Pound = Horsepower ÷ Vehicle Weight (lbs)
+                {t('formulas.powerFormula')}
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-2">Weight to Power Ratio:</h4>
+              <h4 className="font-semibold mb-2">{t('formulas.weightToPower')}</h4>
               <p className="text-sm text-gray-600 bg-gray-50 p-3 rounded">
-                Pounds per HP = Vehicle Weight (lbs) ÷ Horsepower
+                {t('formulas.weightFormula')}
               </p>
             </div>
             <div className="text-sm text-gray-600">
               <p>
-                <strong>Note:</strong> Power to weight ratio is a key indicator of vehicle performance. 
-                Higher ratios generally mean better acceleration and performance, but other factors like 
-                aerodynamics, traction, and gearing also play important roles.
+                <strong>注意：</strong> {t('formulas.note')}
               </p>
             </div>
           </div>

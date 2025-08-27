@@ -7,7 +7,8 @@ import { WebVitals, PerformanceMonitor, ResourceMonitor } from '@/components/per
 import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics';
 import "./globals.css";
 
-
+// Ensure static rendering for static export builds
+export const dynamic = 'force-static';
 
 export default async function RootLayout({
   children,
@@ -20,9 +21,14 @@ export default async function RootLayout({
   const resolvedParams = await params;
   const locale = resolvedParams?.locale || "en";
 
-  // Providing all messages to the client
-  // side is the easiest way to get started
-  const messages = await getMessages();
+  // Load messages differently in static export to avoid using headers()
+  let messages: any;
+  if (process.env.BUILD_TARGET === 'static') {
+    messages = (await import(`../messages/${locale}.json`)).default;
+  } else {
+    // Providing all messages to the client side is the easiest way to get started
+    messages = await getMessages();
+  }
 
   return (
     <html lang={locale} suppressHydrationWarning>

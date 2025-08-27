@@ -195,7 +195,48 @@
       },
       "powerToWeightRatio": {
         "title": "功率重量比计算器",
-        "description": "计算马力重量比进行性能分析"
+        "description": "计算马力重量比进行性能分析",
+        "horsepower": "马力 (HP)",
+        "weight": "车辆重量 (磅)",
+        "hpPerLb": "马力/磅",
+        "lbPerHp": "磅/马力",
+        "calculate": "计算功率重量比",
+        "performanceCategories": "性能分类",
+        "exampleVehicles": "示例车辆",
+        "calculationFormula": "计算公式",
+        "categories": {
+          "economy": "经济型",
+          "average": "一般",
+          "performance": "性能型",
+          "sports": "跑车",
+          "highPerformance": "高性能",
+          "supercar": "超跑"
+        },
+        "categoryDescriptions": {
+          "economyCars": "经济型汽车",
+          "economyDesc": "典型经济型汽车、混合动力车",
+          "averagePerformance": "一般性能", 
+          "averageDesc": "中型轿车、跨界车",
+          "performanceCars": "性能汽车",
+          "performanceDesc": "钢炮、肌肉车",
+          "sportsCars": "跑车",
+          "sportsDesc": "科尔维特、野马GT、科迈罗SS",
+          "highPerformance": "高性能",
+          "highDesc": "保时捷911、宝马M3、地狱猫",
+          "supercars": "超级跑车",
+          "superDesc": "法拉利、兰博基尼、迈凯伦"
+        },
+        "examples": {
+          "classicMuscle": "经典肌肉车",
+          "modernPerformance": "现代性能车"
+        },
+        "formulas": {
+          "powerToWeight": "功率重量比：",
+          "powerFormula": "马力/磅 = 马力 ÷ 车辆重量(磅)",
+          "weightToPower": "重量功率比：",
+          "weightFormula": "磅/马力 = 车辆重量(磅) ÷ 马力",
+          "note": "功率重量比是车辆性能的关键指标。更高的比值通常意味着更好的加速和性能表现，但空气动力学、抓地力和传动比等其他因素也起着重要作用。"
+        }
       },
       "rpmCalculator": {
         "title": "转速计算器",

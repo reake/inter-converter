@@ -195,7 +195,48 @@
       },
       "powerToWeightRatio": {
         "title": "Power to Weight Ratio Calculator",
-        "description": "Calculate horsepower to weight ratio for performance analysis"
+        "description": "Calculate horsepower to weight ratio for performance analysis",
+        "horsepower": "Horsepower (HP)",
+        "weight": "Vehicle Weight (lbs)",
+        "hpPerLb": "HP per Pound",
+        "lbPerHp": "Pounds per HP",
+        "calculate": "Calculate Power to Weight Ratio",
+        "performanceCategories": "Performance Categories",
+        "exampleVehicles": "Example Vehicles",
+        "calculationFormula": "Calculation Formula",
+        "categories": {
+          "economy": "Economy",
+          "average": "Average",
+          "performance": "Performance",
+          "sports": "Sports Car",
+          "highPerformance": "High Performance",
+          "supercar": "Supercar"
+        },
+        "categoryDescriptions": {
+          "economyCars": "Economy Cars",
+          "economyDesc": "Typical economy cars, hybrids",
+          "averagePerformance": "Average Performance", 
+          "averageDesc": "Mid-size sedans, crossovers",
+          "performanceCars": "Performance Cars",
+          "performanceDesc": "Hot hatches, muscle cars",
+          "sportsCars": "Sports Cars",
+          "sportsDesc": "Corvette, Mustang GT, Camaro SS",
+          "highPerformance": "High Performance",
+          "highDesc": "Porsche 911, BMW M3, Hellcat",
+          "supercars": "Supercars",
+          "superDesc": "Ferrari, Lamborghini, McLaren"
+        },
+        "examples": {
+          "classicMuscle": "Classic Muscle Cars",
+          "modernPerformance": "Modern Performance"
+        },
+        "formulas": {
+          "powerToWeight": "Power to Weight Ratio:",
+          "powerFormula": "HP per Pound = Horsepower ÷ Vehicle Weight (lbs)",
+          "weightToPower": "Weight to Power Ratio:",
+          "weightFormula": "Pounds per HP = Vehicle Weight (lbs) ÷ Horsepower",
+          "note": "Power to weight ratio is a key indicator of vehicle performance. Higher ratios generally mean better acceleration and performance, but other factors like aerodynamics, traction, and gearing also play important roles."
+        }
       },
       "rpmCalculator": {
         "title": "RPM Calculator",
