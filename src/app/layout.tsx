@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { ThemeProvider } from '@/components/theme-provider';
 import { WebVitals, PerformanceMonitor, ResourceMonitor } from '@/components/performance/WebVitals';
+import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics';
 import "./globals.css";
 
 
@@ -35,6 +36,7 @@ export default async function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       </head>
       <body>
+        <GoogleAnalytics />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

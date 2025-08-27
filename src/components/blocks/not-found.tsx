@@ -1,6 +1,7 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -9,6 +10,34 @@ import { getPopularTools } from '@/config/tools';
 
 export default function NotFound() {
   const popularTools = getPopularTools(6);
+  const [seconds, setSeconds] = useState(5);
+  const t = useTranslations();
+
+  useEffect(() => {
+    // Debug: verify countdown ticks on client
+    // eslint-disable-next-line no-console
+    console.log('[404] countdown start at', seconds);
+    let mounted = true;
+    const timer = setInterval(() => {
+      setSeconds((s) => {
+        // eslint-disable-next-line no-console
+        console.log('[404] countdown tick', s - 1);
+        if (s <= 1) {
+          // 在归零时跳转首页
+          if (mounted && typeof window !== 'undefined') {
+            window.location.assign('/');
+          }
+          clearInterval(timer);
+          return 0;
+        }
+        return s - 1;
+      });
+    }, 1000);
+    return () => {
+      mounted = false;
+      clearInterval(timer);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
@@ -37,9 +66,18 @@ export default function NotFound() {
           <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-blue-100">
             Converter Not Found
           </h2>
-          <p className="text-lg md:text-xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-blue-100 mb-4 max-w-3xl mx-auto leading-relaxed">
             Oops! The conversion tool you're looking for seems to have converted itself into thin air. 
             But don't worry – we have plenty of other amazing tools to help you convert anything!
+          </p>
+          {/* Countdown hint */}
+          <p className="text-base md:text-lg text-white/95 font-medium drop-shadow mb-8">
+            {t.rich('notFound.countdown', {
+              b: (chunks) => (
+                <span className="inline-block px-2 py-0.5 mx-1 rounded bg-white/20 text-white font-semibold">{chunks}</span>
+              ),
+              seconds
+            })}
           </p>
 
           {/* Search */}
@@ -55,7 +93,7 @@ export default function NotFound() {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold shadow-lg">
-              <Link href="/">Go Home</Link>
+              <Link href="/">Return to InterConverter</Link>
             </Button>
             <Button asChild size="lg" className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold shadow-lg border-0">
               <Link href="/tools">Browse All Tools</Link>

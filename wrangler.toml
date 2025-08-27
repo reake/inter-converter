@@ -16,13 +16,16 @@ NODE_ENV = "production"
 NEXT_PUBLIC_SITE_URL = "https://inter-converter.your-domain.workers.dev"
 NEXT_PUBLIC_APP_NAME = "InterConverter"
 NEXT_PUBLIC_DEFAULT_LOCALE = "en"
+NEXT_PUBLIC_GA_TRACKING_ID = "G-H9PPB8FFX3"
 
 [env.production]
 name = "inter-converter"
 [env.production.vars]
 NEXT_PUBLIC_SITE_URL = "https://interconverter.com"
+NEXT_PUBLIC_GA_TRACKING_ID = "G-H9PPB8FFX3"
 
 [env.preview]
 name = "inter-converter-preview"
 [env.preview.vars]
 NEXT_PUBLIC_SITE_URL = "https://preview.inter-converter.workers.dev"
+NEXT_PUBLIC_GA_TRACKING_ID = "G-H9PPB8FFX3"

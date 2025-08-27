@@ -151,6 +151,9 @@ MIT License - feel free to use for your own projects!
 4. Push to branch (`git push origin feature/new-tool`)
 5. Create Pull Request
 
+
+部署到CF全集：npm run deploy:workers
+
 ---
 
 **InterConverter.com** - Your one-stop destination for all conversion needs! 🎯

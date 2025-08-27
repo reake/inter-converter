@@ -223,6 +223,9 @@
       }
     }
   },
+  "notFound": {
+    "countdown": "This page will return to the homepage in <b>{seconds}</b> seconds, or use the buttons below to navigate."
+  },
   "about": {
     "title": "About",
     "description": "This is a InterConverter built with Next.js and Tailwind CSS."

@@ -223,6 +223,9 @@
       }
     }
   },
+  "notFound": {
+    "countdown": "本页将在 <b>{seconds}</b> 秒后自动返回首页，或使用下方按钮立即跳转。"
+  },
   "about": {
     "title": "关于",
     "description": "这是一个使用 Next.js 和 Tailwind CSS 构建的极简工具站。"

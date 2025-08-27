@@ -1,5 +1,5 @@
-import NotFound from "@/components/blocks/not-found";
 import { routing } from '@/i18n/routing';
+import { notFound } from 'next/navigation';
 
 // Generate static params for catch-all routes
 
@@ -17,5 +17,7 @@ export function generateStaticParams() {
 }
 
 export default function NotFoundCatchAll() {
-  return <NotFound />;
+  // Trigger Next.js 404 page (uses src/app/[locale]/not-found.tsx or src/app/not-found.tsx)
+  notFound();
+  return null;
 }
