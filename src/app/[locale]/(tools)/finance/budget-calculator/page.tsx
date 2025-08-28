@@ -1,26 +1,33 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import BudgetCalculator from '@/components/converters/finance/BudgetCalculator';
 
 // Force static generation
 export const dynamic = 'force-static';
+const title = 'Budget Calculator';
+const description = 'Create and manage personal budgets with income and expense tracking. Plan your finances effectively with our comprehensive budget planning tool.';
+const keywordsArr = [
+  'budget calculator',
+  'personal budget',
+  'expense tracker',
+  'income planning',
+  'financial planning',
+  'budget planner',
+  'money management',
+  'financial calculator'
+];
 
-export const metadata: Metadata = generateToolMetadata(
-  'Budget Calculator',
-  'Create and manage personal budgets with income and expense tracking. Plan your finances effectively with our comprehensive budget planning tool.',
-  'budget-calculator',
-  [
-    'budget calculator',
-    'personal budget',
-    'expense tracker',
-    'income planning',
-    'financial planning',
-    'budget planner',
-    'money management',
-    'financial calculator'
-  ],
-  'finance'
-);
+export const metadata: Metadata = {
+  title: `${title} | InterConverter`,
+  description,
+  keywords: keywordsArr.join(', '),
+  openGraph: {
+    title: `${title} | InterConverter`,
+    description,
+    type: 'website',
+  },
+  alternates: { canonical: '/finance/budget-calculator' }
+};
 
 export default function BudgetCalculatorPage() {
   return (

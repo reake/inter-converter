@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import { AutoWeightConverter } from '@/components/converters/automotive/AutoWeightConverter';
 
 
@@ -7,20 +7,28 @@ import { AutoWeightConverter } from '@/components/converters/automotive/AutoWeig
 
 // Force static generation
 export const dynamic = 'force-static';
-export const metadata: Metadata = generateToolMetadata(
-  'Automotive Weight Converter',
-  'Convert between pounds, kilograms, ounces, and grams for automotive applications. Essential for weight reduction and performance calculations.',
-  'weight-converter',
-  [
-    'weight converter',
-    'pounds to kilograms',
-    'ounces to grams',
-    'automotive weight',
-    'weight conversion',
-    'performance calculator'
-  ],
-  'auto'
-);
+const title = 'Automotive Weight Converter';
+const description = 'Convert between pounds, kilograms, ounces, and grams for automotive applications. Essential for weight reduction and performance calculations.';
+const keywordsArr = [
+  'weight converter',
+  'pounds to kilograms',
+  'ounces to grams',
+  'automotive weight',
+  'weight conversion',
+  'performance calculator'
+];
+
+export const metadata: Metadata = {
+  title: `${title} | InterConverter`,
+  description,
+  keywords: keywordsArr.join(', '),
+  openGraph: {
+    title: `${title} | InterConverter`,
+    description,
+    type: 'website',
+  },
+  alternates: { canonical: '/auto/weight-converter' }
+};
 
 export default function AutoWeightConverterPage() {
   return (

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import { TireCalculator } from '@/components/converters/automotive/TireCalculator';
 
 
@@ -7,13 +7,21 @@ import { TireCalculator } from '@/components/converters/automotive/TireCalculato
 
 // Force static generation
 export const dynamic = 'force-static';
-export const metadata: Metadata = generateToolMetadata(
-  'Tire Calculator',
-  'Calculate how tire diameter changes affect vehicle speed, RPM, and performance. Tire size comparison calculator.',
-  'tire-calculator',
-  ['tire calculator', 'tire diameter', 'speed difference', 'rpm change', 'tire size comparison', 'wheel calculator'],
-  'auto'
-);
+const title = 'Tire Calculator';
+const description = 'Calculate how tire diameter changes affect vehicle speed, RPM, and performance. Tire size comparison calculator.';
+const keywordsArr = ['tire calculator', 'tire diameter', 'speed difference', 'rpm change', 'tire size comparison', 'wheel calculator'];
+
+export const metadata: Metadata = {
+  title: `${title} | InterConverter`,
+  description,
+  keywords: keywordsArr.join(', '),
+  openGraph: {
+    title: `${title} | InterConverter`,
+    description,
+    type: 'website',
+  },
+  alternates: { canonical: '/auto/tire-calculator' }
+};
 
 export default function TireCalculatorPage() {
   return (

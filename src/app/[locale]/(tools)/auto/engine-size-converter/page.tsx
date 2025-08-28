@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import { EngineSizeConverter } from '@/components/converters/automotive/EngineSizeConverter';
 
 
@@ -7,19 +7,37 @@ import { EngineSizeConverter } from '@/components/converters/automotive/EngineSi
 
 // Force static generation
 export const dynamic = 'force-static';
-export const metadata: Metadata = generateToolMetadata(
-  'Engine Size Converter',
-  'Convert engine displacement between cubic inches and liters. Free online engine size converter for automotive applications.',
-  'engine-size-converter',
-  ['engine size converter', 'cubic inches to liters', 'engine displacement', 'automotive conversion', 'ci to l', 'liter to cubic inch'],
-  'auto'
-);
+const keywords = [
+  'engine size converter',
+  'cubic inches to liters',
+  'engine displacement',
+  'automotive conversion',
+  'ci to l',
+  'liter to cubic inch',
+];
+
+export const metadata: Metadata = {
+  title: 'Engine Size Converter',
+  description:
+    'Convert engine displacement between cubic inches and liters. Free online engine size converter for automotive applications.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Engine Size Converter',
+    description:
+      'Convert engine displacement between cubic inches and liters. Free online engine size converter for automotive applications.',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/auto/engine-size-converter',
+  },
+};
 
 export default function EngineSizeConverterPage() {
   return (
     <ToolLayout
       title="Engine Size Converter"
       description="Convert engine displacement between cubic inches and liters"
+      keywords={keywords}
       toolId="engine-size-converter"
       category="auto"
       emoji="🔧"

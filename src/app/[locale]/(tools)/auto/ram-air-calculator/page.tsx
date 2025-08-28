@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import { RamAirCalculator } from '@/components/converters/automotive/RamAirCalculator';
 
 
@@ -7,27 +7,38 @@ import { RamAirCalculator } from '@/components/converters/automotive/RamAirCalcu
 
 // Force static generation
 export const dynamic = 'force-static';
-export const metadata: Metadata = generateToolMetadata(
-  'Ram Air Calculator',
-  'Calculate horsepower gains from ram air induction systems. Determine PSI increase and total horsepower output based on vehicle speed and engine power.',
-  'ram-air-calculator',
-  [
-    'ram air calculator',
-    'ram air induction',
-    'horsepower gain',
-    'pontiac ram air',
-    'cold air intake',
-    'performance calculator',
-    'automotive calculator'
-  ],
-  'auto'
-);
+const keywords = [
+  'ram air calculator',
+  'ram air induction',
+  'horsepower gain',
+  'pontiac ram air',
+  'cold air intake',
+  'performance calculator',
+  'automotive calculator',
+];
+
+export const metadata: Metadata = {
+  title: 'Ram Air Calculator',
+  description:
+    'Calculate horsepower gains from ram air induction systems. Determine PSI increase and total horsepower output based on vehicle speed and engine power.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Ram Air Calculator',
+    description:
+      'Calculate horsepower gains from ram air induction systems. Determine PSI increase and total horsepower output based on vehicle speed and engine power.',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/auto/ram-air-calculator',
+  },
+};
 
 export default function RamAirCalculatorPage() {
   return (
     <ToolLayout
       title="Ram Air Calculator"
       description="Calculate horsepower gains from ram air induction systems. Determine PSI increase and total horsepower output based on vehicle speed and engine power"
+      keywords={keywords}
       toolId="ram-air-calculator"
       category="auto"
       emoji="💨"

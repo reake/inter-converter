@@ -1,24 +1,31 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import InvestmentCalculator from '@/components/converters/finance/InvestmentCalculator';
 
 // Force static generation
 export const dynamic = 'force-static';
+const title = '401k Calculator';
+const description = 'Calculate 401k retirement savings growth with employer matching. Plan your retirement contributions and track long-term growth.';
+const keywordsArr = [
+  '401k calculator',
+  '401k retirement calculator',
+  '401k contribution calculator',
+  'retirement savings calculator',
+  'employer match calculator',
+  '401k planning calculator'
+];
 
-export const metadata: Metadata = generateToolMetadata(
-  '401k Calculator',
-  'Calculate 401k retirement savings growth with employer matching. Plan your retirement contributions and track long-term growth.',
-  '401k-calculator',
-  [
-    '401k calculator',
-    '401k retirement calculator',
-    '401k contribution calculator',
-    'retirement savings calculator',
-    'employer match calculator',
-    '401k planning calculator'
-  ],
-  'investing'
-);
+export const metadata: Metadata = {
+  title: `${title} | InterConverter`,
+  description,
+  keywords: keywordsArr.join(', '),
+  openGraph: {
+    title: `${title} | InterConverter`,
+    description,
+    type: 'website',
+  },
+  alternates: { canonical: '/finance/401k-calculator' }
+};
 
 export default function FourOhOneKCalculatorPage() {
   return (

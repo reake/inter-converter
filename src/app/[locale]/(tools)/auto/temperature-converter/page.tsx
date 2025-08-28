@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import { AutomotiveTemperatureConverter } from '@/components/converters/automotive/AutomotiveTemperatureConverter';
 
 
@@ -7,19 +7,36 @@ import { AutomotiveTemperatureConverter } from '@/components/converters/automoti
 
 // Force static generation
 export const dynamic = 'force-static';
-export const metadata: Metadata = generateToolMetadata(
-  'Automotive Temperature Converter',
-  'Convert between Fahrenheit and Celsius for automotive applications. Engine temperature, coolant, oil temperature converter.',
-  'temperature-converter',
-  ['temperature converter', 'fahrenheit to celsius', 'automotive temperature', 'engine temperature', 'coolant temperature'],
-  'auto'
-);
+const keywords = [
+  'temperature converter',
+  'fahrenheit to celsius',
+  'automotive temperature',
+  'engine temperature',
+  'coolant temperature',
+];
+
+export const metadata: Metadata = {
+  title: 'Automotive Temperature Converter',
+  description:
+    'Convert between Fahrenheit and Celsius for automotive applications. Engine temperature, coolant, oil temperature converter.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Automotive Temperature Converter',
+    description:
+      'Convert between Fahrenheit and Celsius for automotive applications. Engine temperature, coolant, oil temperature converter.',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/auto/temperature-converter',
+  },
+};
 
 export default function AutomotiveTemperatureConverterPage() {
   return (
     <ToolLayout
       title="Automotive Temperature Converter"
       description="Convert between Fahrenheit and Celsius for automotive use"
+      keywords={keywords}
       toolId="temperature-converter"
       category="auto"
       emoji="🌡️"

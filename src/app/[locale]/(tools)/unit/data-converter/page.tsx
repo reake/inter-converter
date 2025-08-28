@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import DataConverter from '@/components/converters/unit/DataConverter';
 import { getSEOConfigByToolId } from '@/config/seo-tools';
 
@@ -25,7 +25,8 @@ export default function DataConverterPage() {
       title={metadata.title as string}
       description={metadata.description as string}
       keywords={['data converter', 'storage converter', 'kb to mb', 'mb to gb', 'file size converter']}
-      canonicalUrl="https://interconverter.com/unit/data-converter"
+      toolId="data-converter"
+      category="unit"
     >
       <DataConverter />
     </ToolLayout>

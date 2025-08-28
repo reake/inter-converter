@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import { CompressionRatioCalculator } from '@/components/converters/automotive/CompressionRatioCalculator';
 
 
@@ -7,21 +7,29 @@ import { CompressionRatioCalculator } from '@/components/converters/automotive/C
 
 // Force static generation
 export const dynamic = 'force-static';
-export const metadata: Metadata = generateToolMetadata(
-  'Compression Ratio Calculator',
-  'Calculate horsepower changes from compression ratio modifications. Understand the effects of compression ratio on engine performance and fuel requirements.',
-  'compression-ratio-calculator',
-  [
-    'compression ratio calculator',
-    'horsepower calculator',
-    'engine compression',
-    'compression ratio horsepower',
-    'engine performance calculator',
-    'octane requirements',
-    'automotive calculator'
-  ],
-  'auto'
-);
+const title = 'Compression Ratio Calculator';
+const description = 'Calculate horsepower changes from compression ratio modifications. Understand the effects of compression ratio on engine performance and fuel requirements.';
+const keywordsArr = [
+  'compression ratio calculator',
+  'horsepower calculator',
+  'engine compression',
+  'compression ratio horsepower',
+  'engine performance calculator',
+  'octane requirements',
+  'automotive calculator'
+];
+
+export const metadata: Metadata = {
+  title: `${title} | InterConverter`,
+  description,
+  keywords: keywordsArr.join(', '),
+  openGraph: {
+    title: `${title} | InterConverter`,
+    description,
+    type: 'website',
+  },
+  alternates: { canonical: '/auto/compression-ratio-calculator' }
+};
 
 export default function CompressionRatioCalculatorPage() {
   return (

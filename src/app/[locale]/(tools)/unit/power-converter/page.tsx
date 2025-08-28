@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import { PowerConverter } from '@/components/converters/unit/PowerConverter';
 import { getSEOConfigByToolId } from '@/config/seo-tools';
 
@@ -25,7 +25,8 @@ export default function PowerConverterPage() {
       title={metadata.title as string}
       description={metadata.description as string}
       keywords={['power converter', 'watt converter', 'horsepower converter', 'hp to kw']}
-      canonicalUrl="https://interconverter.com/unit/power-converter"
+      toolId="power-converter"
+      category="unit"
     >
       <PowerConverter />
     </ToolLayout>

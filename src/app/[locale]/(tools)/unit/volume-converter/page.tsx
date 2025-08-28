@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import { VolumeConverter } from '@/components/converters/unit/VolumeConverter';
 import { getSEOConfigByToolId } from '@/config/seo-tools';
 
@@ -25,8 +25,8 @@ export default function VolumeConverterPage() {
       title={metadata.title as string}
       description={metadata.description as string}
       keywords={seoConfig?.keywords || []}
-      canonicalUrl={`https://interconverter.com${seoConfig?.canonicalPath}`}
-      structuredData={seoConfig?.structuredData}
+      toolId="volume-converter"
+      category="unit"
     >
       <VolumeConverter />
     </ToolLayout>

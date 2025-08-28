@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import { TireSpeedCalculator } from '@/components/converters/automotive/TireSpeedCalculator';
 
 
@@ -7,27 +7,38 @@ import { TireSpeedCalculator } from '@/components/converters/automotive/TireSpee
 
 // Force static generation
 export const dynamic = 'force-static';
-export const metadata: Metadata = generateToolMetadata(
-  'Tire Speed Calculator',
-  'Calculate vehicle speed based on tire diameter, gear ratio, and RPM. Essential tool for performance tuning and gear selection.',
-  'tire-speed-calculator',
-  [
-    'tire speed calculator',
-    'tire diameter speed',
-    'gear ratio speed',
-    'rpm speed calculator',
-    'vehicle speed calculator',
-    'tire size speed',
-    'automotive calculator'
-  ],
-  'auto'
-);
+const keywords = [
+  'tire speed calculator',
+  'tire diameter speed',
+  'gear ratio speed',
+  'rpm speed calculator',
+  'vehicle speed calculator',
+  'tire size speed',
+  'automotive calculator',
+];
+
+export const metadata: Metadata = {
+  title: 'Tire Speed Calculator',
+  description:
+    'Calculate vehicle speed based on tire diameter, gear ratio, and RPM. Essential tool for performance tuning and gear selection.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Tire Speed Calculator',
+    description:
+      'Calculate vehicle speed based on tire diameter, gear ratio, and RPM. Essential tool for performance tuning and gear selection.',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/auto/tire-speed-calculator',
+  },
+};
 
 export default function TireSpeedCalculatorPage() {
   return (
     <ToolLayout
       title="Tire Speed Calculator"
       description="Calculate vehicle speed based on tire diameter, gear ratio, and RPM"
+      keywords={keywords}
       toolId="tire-speed-calculator"
       category="auto"
       emoji="🏎️"

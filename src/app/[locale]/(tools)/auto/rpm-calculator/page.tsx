@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import { RPMCalculator } from '@/components/converters/automotive/RPMCalculator';
 
 
@@ -7,13 +7,21 @@ import { RPMCalculator } from '@/components/converters/automotive/RPMCalculator'
 
 // Force static generation
 export const dynamic = 'force-static';
-export const metadata: Metadata = generateToolMetadata(
-  'RPM Calculator',
-  'Calculate engine RPM based on vehicle speed, gear ratio, and tire diameter. Free automotive RPM calculator.',
-  'rpm-calculator',
-  ['rpm calculator', 'engine speed', 'gear ratio', 'tire diameter', 'automotive calculator', 'vehicle speed', 'transmission'],
-  'auto'
-);
+const title = 'RPM Calculator';
+const description = 'Calculate engine RPM based on vehicle speed, gear ratio, and tire diameter. Free automotive RPM calculator.';
+const keywordsArr = ['rpm calculator', 'engine speed', 'gear ratio', 'tire diameter', 'automotive calculator', 'vehicle speed', 'transmission'];
+
+export const metadata: Metadata = {
+  title: `${title} | InterConverter`,
+  description,
+  keywords: keywordsArr.join(', '),
+  openGraph: {
+    title: `${title} | InterConverter`,
+    description,
+    type: 'website',
+  },
+  alternates: { canonical: '/auto/rpm-calculator' }
+};
 
 export default function RPMCalculatorPage() {
   return (

@@ -1,23 +1,30 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import SavingsCalculator from '@/components/converters/finance/SavingsCalculator';
 
 // Force static generation
 export const dynamic = 'force-static';
+const title = 'Compound Interest Calculator';
+const description = 'Calculate compound interest growth over time. Understand the power of compounding for savings and investment planning.';
+const keywordsArr = [
+  'compound interest calculator',
+  'compounding calculator',
+  'interest growth calculator',
+  'compound savings calculator',
+  'investment growth calculator'
+];
 
-export const metadata: Metadata = generateToolMetadata(
-  'Compound Interest Calculator',
-  'Calculate compound interest growth over time. Understand the power of compounding for savings and investment planning.',
-  'compound-interest-calculator',
-  [
-    'compound interest calculator',
-    'compounding calculator',
-    'interest growth calculator',
-    'compound savings calculator',
-    'investment growth calculator'
-  ],
-  'banking'
-);
+export const metadata: Metadata = {
+  title: `${title} | InterConverter`,
+  description,
+  keywords: keywordsArr.join(', '),
+  openGraph: {
+    title: `${title} | InterConverter`,
+    description,
+    type: 'website',
+  },
+  alternates: { canonical: '/finance/compound-interest-calculator' }
+};
 
 export default function CompoundInterestCalculatorPage() {
   return (

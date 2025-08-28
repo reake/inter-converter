@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import { EngineDisplacementCalculator } from '@/components/converters/automotive/EngineDisplacementCalculator';
 
 
@@ -7,21 +7,29 @@ import { EngineDisplacementCalculator } from '@/components/converters/automotive
 
 // Force static generation
 export const dynamic = 'force-static';
-export const metadata: Metadata = generateToolMetadata(
-  'Engine Displacement Calculator',
-  'Calculate engine displacement from bore, stroke, and cylinder count. Convert between cubic inches and liters, and understand engine design characteristics.',
-  'engine-displacement-calculator',
-  [
-    'engine displacement calculator',
-    'bore stroke calculator',
-    'engine size calculator',
-    'cubic inches to liters',
-    'cylinder volume calculator',
-    'engine building calculator',
-    'automotive calculator'
-  ],
-  'auto'
-);
+const title = 'Engine Displacement Calculator';
+const description = 'Calculate engine displacement from bore, stroke, and cylinder count. Convert between cubic inches and liters, and understand engine design characteristics.';
+const keywordsArr = [
+  'engine displacement calculator',
+  'bore stroke calculator',
+  'engine size calculator',
+  'cubic inches to liters',
+  'cylinder volume calculator',
+  'engine building calculator',
+  'automotive calculator'
+];
+
+export const metadata: Metadata = {
+  title: `${title} | InterConverter`,
+  description,
+  keywords: keywordsArr.join(', '),
+  openGraph: {
+    title: `${title} | InterConverter`,
+    description,
+    type: 'website',
+  },
+  alternates: { canonical: '/auto/engine-displacement-calculator' }
+};
 
 export default function EngineDisplacementCalculatorPage() {
   return (

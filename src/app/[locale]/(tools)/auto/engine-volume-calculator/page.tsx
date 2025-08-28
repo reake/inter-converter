@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import { EngineVolumeCalculator } from '@/components/converters/automotive/EngineVolumeCalculator';
 
 
@@ -7,26 +7,37 @@ import { EngineVolumeCalculator } from '@/components/converters/automotive/Engin
 
 // Force static generation
 export const dynamic = 'force-static';
-export const metadata: Metadata = generateToolMetadata(
-  'Engine Volume Calculator',
-  'Calculate cylinder volume from bore and stroke, engine displacement from cylinder volume, and convert between CI and CC.',
-  'engine-volume-calculator',
-  [
-    'engine volume calculator',
-    'cylinder volume',
-    'engine displacement',
-    'bore stroke calculator',
-    'cubic inches to cc',
-    'automotive calculator'
-  ],
-  'auto'
-);
+const keywords = [
+  'engine volume calculator',
+  'cylinder volume',
+  'engine displacement',
+  'bore stroke calculator',
+  'cubic inches to cc',
+  'automotive calculator',
+];
+
+export const metadata: Metadata = {
+  title: 'Engine Volume Calculator',
+  description:
+    'Calculate cylinder volume from bore and stroke, engine displacement from cylinder volume, and convert between CI and CC.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Engine Volume Calculator',
+    description:
+      'Calculate cylinder volume from bore and stroke, engine displacement from cylinder volume, and convert between CI and CC.',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/auto/engine-volume-calculator',
+  },
+};
 
 export default function EngineVolumeCalculatorPage() {
   return (
     <ToolLayout
       title="Engine Volume Calculator"
       description="Calculate cylinder volume from bore and stroke, engine displacement from cylinder volume, and convert between CI and CC"
+      keywords={keywords}
       toolId="engine-volume-calculator"
       category="auto"
       emoji="🔧"

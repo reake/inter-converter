@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import { SpeedConverter } from '@/components/converters/unit/SpeedConverter';
 import { getSEOConfigByToolId } from '@/config/seo-tools';
 
@@ -25,8 +25,8 @@ export default function SpeedConverterPage() {
       title={metadata.title as string}
       description={metadata.description as string}
       keywords={seoConfig?.keywords || []}
-      canonicalUrl={`https://interconverter.com${seoConfig?.canonicalPath}`}
-      structuredData={seoConfig?.structuredData}
+      toolId="speed-converter"
+      category="unit"
     >
       <SpeedConverter />
     </ToolLayout>

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import { PressureConverter } from '@/components/converters/unit/PressureConverter';
 import { getSEOConfigByToolId } from '@/config/seo-tools';
 
@@ -25,7 +25,8 @@ export default function PressureConverterPage() {
       title={metadata.title as string}
       description={metadata.description as string}
       keywords={['pressure converter', 'psi converter', 'bar to psi', 'pascal converter']}
-      canonicalUrl="https://interconverter.com/unit/pressure-converter"
+      toolId="pressure-converter"
+      category="unit"
     >
       <PressureConverter />
     </ToolLayout>

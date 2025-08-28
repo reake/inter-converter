@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import { AgeCalculator } from '@/components/converters/time/AgeCalculator';
 import { getSEOConfigByToolId } from '@/config/seo-tools';
 
@@ -25,8 +25,8 @@ export default function AgeCalculatorPage() {
       title={metadata.title as string}
       description={metadata.description as string}
       keywords={seoConfig?.keywords || []}
-      canonicalUrl={`https://interconverter.com${seoConfig?.canonicalPath}`}
-      structuredData={seoConfig?.structuredData}
+      toolId="age-calculator"
+      category="time"
     >
       <AgeCalculator />
     </ToolLayout>

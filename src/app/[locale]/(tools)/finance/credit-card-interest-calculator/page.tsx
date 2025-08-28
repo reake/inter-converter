@@ -1,25 +1,32 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import CreditCardPayoffCalculator from '@/components/converters/finance/CreditCardPayoffCalculator';
 
 // Force static generation
 export const dynamic = 'force-static';
+const title = 'Credit Card Interest Calculator';
+const description = 'Calculate daily and monthly credit card interest charges. Understand how APR affects your balance and minimum payments.';
+const keywordsArr = [
+  'credit card interest calculator',
+  'APR calculator',
+  'daily interest calculator',
+  'credit card APR calculator',
+  'monthly interest calculator',
+  'credit card finance charge calculator',
+  'interest charge calculator'
+];
 
-export const metadata: Metadata = generateToolMetadata(
-  'Credit Card Interest Calculator',
-  'Calculate daily and monthly credit card interest charges. Understand how APR affects your balance and minimum payments.',
-  'credit-card-interest-calculator',
-  [
-    'credit card interest calculator',
-    'APR calculator',
-    'daily interest calculator',
-    'credit card APR calculator',
-    'monthly interest calculator',
-    'credit card finance charge calculator',
-    'interest charge calculator'
-  ],
-  'credit-cards'
-);
+export const metadata: Metadata = {
+  title: `${title} | InterConverter`,
+  description,
+  keywords: keywordsArr.join(', '),
+  openGraph: {
+    title: `${title} | InterConverter`,
+    description,
+    type: 'website',
+  },
+  alternates: { canonical: '/finance/credit-card-interest-calculator' }
+};
 
 export default function CreditCardInterestCalculatorPage() {
   return (

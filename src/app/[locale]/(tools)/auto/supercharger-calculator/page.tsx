@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import { SuperchargerCalculator } from '@/components/converters/automotive/SuperchargerCalculator';
 
 
@@ -7,35 +7,46 @@ import { SuperchargerCalculator } from '@/components/converters/automotive/Super
 
 // Force static generation
 export const dynamic = 'force-static';
-export const metadata: Metadata = generateToolMetadata(
-  'Supercharger HP Calculator',
-  'Calculate supercharger horsepower gains from boost PSI. Free online tool for turbo, blower & forced induction power calculations. Get instant results.',
-  'supercharger-calculator',
-  [
-    'supercharger calculator',
-    'supercharger horsepower calculator',
-    'boost psi calculator',
-    'turbo hp calculator',
-    'forced induction calculator',
-    'blower calculator',
-    'supercharger cfm calculator',
-    'boost horsepower gain',
-    'turbocharger calculator',
-    'centrifugal supercharger calculator',
-    'roots blower calculator',
-    'twin screw supercharger calculator',
-    'boost pressure calculator',
-    'forced induction hp gain',
-    'supercharger sizing calculator'
-  ],
-  'auto'
-);
+const keywords = [
+  'supercharger calculator',
+  'supercharger horsepower calculator',
+  'boost psi calculator',
+  'turbo hp calculator',
+  'forced induction calculator',
+  'blower calculator',
+  'supercharger cfm calculator',
+  'boost horsepower gain',
+  'turbocharger calculator',
+  'centrifugal supercharger calculator',
+  'roots blower calculator',
+  'twin screw supercharger calculator',
+  'boost pressure calculator',
+  'forced induction hp gain',
+  'supercharger sizing calculator',
+];
+
+export const metadata: Metadata = {
+  title: 'Supercharger HP Calculator',
+  description:
+    'Calculate supercharger horsepower gains from boost PSI. Free online tool for turbo, blower & forced induction power calculations. Get instant results.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Supercharger HP Calculator',
+    description:
+      'Calculate supercharger horsepower gains from boost PSI. Free online tool for turbo, blower & forced induction power calculations. Get instant results.',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/auto/supercharger-calculator',
+  },
+};
 
 export default function SuperchargerCalculatorPage() {
   return (
     <ToolLayout
       title="Supercharger Calculator"
       description="Calculate horsepower gains from supercharger and forced induction systems"
+      keywords={keywords}
       toolId="supercharger-calculator"
       category="auto"
       emoji="💨"

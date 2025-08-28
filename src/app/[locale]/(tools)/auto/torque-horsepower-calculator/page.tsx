@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import TorqueHorsepowerCalculator from '@/components/converters/automotive/TorqueHorsepowerCalculator';
 
 
@@ -7,13 +7,21 @@ import TorqueHorsepowerCalculator from '@/components/converters/automotive/Torqu
 
 // Force static generation
 export const dynamic = 'force-static';
-export const metadata: Metadata = generateToolMetadata(
-  'Torque & Horsepower Calculator',
-  'Convert between torque and horsepower at different RPMs. Calculate engine power and torque relationships.',
-  'torque-horsepower-calculator',
-  ['torque calculator', 'horsepower calculator', 'hp to torque', 'torque to hp', 'engine power', 'rpm calculator', 'automotive power'],
-  'auto'
-);
+const title = 'Torque & Horsepower Calculator';
+const description = 'Convert between torque and horsepower at different RPMs. Calculate engine power and torque relationships.';
+const keywordsArr = ['torque calculator', 'horsepower calculator', 'hp to torque', 'torque to hp', 'engine power', 'rpm calculator', 'automotive power'];
+
+export const metadata: Metadata = {
+  title: `${title} | InterConverter`,
+  description,
+  keywords: keywordsArr.join(', '),
+  openGraph: {
+    title: `${title} | InterConverter`,
+    description,
+    type: 'website',
+  },
+  alternates: { canonical: '/auto/torque-horsepower-calculator' }
+};
 
 export default function TorqueHorsepowerCalculatorPage() {
   return (

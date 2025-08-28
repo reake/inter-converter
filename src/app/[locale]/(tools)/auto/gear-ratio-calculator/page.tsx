@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import { GearRatioCalculator } from '@/components/converters/automotive/GearRatioCalculator';
 
 
@@ -7,13 +7,21 @@ import { GearRatioCalculator } from '@/components/converters/automotive/GearRati
 
 // Force static generation
 export const dynamic = 'force-static';
-export const metadata: Metadata = generateToolMetadata(
-  'Gear Ratio Calculator',
-  'Calculate gear ratios from ring and pinion teeth, find optimal ratios for performance. Free automotive gear ratio calculator.',
-  'gear-ratio-calculator',
-  ['gear ratio calculator', 'ring pinion', 'differential ratio', 'automotive performance', 'gear calculator', 'drivetrain', 'transmission'],
-  'auto'
-);
+const title = 'Gear Ratio Calculator';
+const description = 'Calculate gear ratios from ring and pinion teeth, find optimal ratios for performance. Free automotive gear ratio calculator.';
+const keywordsArr = ['gear ratio calculator', 'ring pinion', 'differential ratio', 'automotive performance', 'gear calculator', 'drivetrain', 'transmission'];
+
+export const metadata: Metadata = {
+  title: `${title} | InterConverter`,
+  description,
+  keywords: keywordsArr.join(', '),
+  openGraph: {
+    title: `${title} | InterConverter`,
+    description,
+    type: 'website',
+  },
+  alternates: { canonical: '/auto/gear-ratio-calculator' }
+};
 
 export default function GearRatioCalculatorPage() {
   return (

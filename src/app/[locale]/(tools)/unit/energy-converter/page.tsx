@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { ToolLayout } from '@/components/tools/ToolLayout';
 import EnergyConverter from '@/components/converters/unit/EnergyConverter';
 import { getSEOConfigByToolId } from '@/config/seo-tools';
 
@@ -25,7 +25,8 @@ export default function EnergyConverterPage() {
       title={metadata.title as string}
       description={metadata.description as string}
       keywords={['energy converter', 'calorie converter', 'kilojoule converter', 'kwh converter']}
-      canonicalUrl="https://interconverter.com/unit/energy-converter"
+      toolId="energy-converter"
+      category="unit"
     >
       <EnergyConverter />
     </ToolLayout>
