@@ -1,148 +1,432 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Badge } from '@/components/ui/badge';
+import { Calculator, DollarSign } from 'lucide-react';
+import { CopyButton } from '@/components/ui/CopyButton';
 
-const taxBrackets = [
-  { min: 0, max: 10275, rate: 0.10 },
-  { min: 10275, max: 41775, rate: 0.12 },
-  { min: 41775, max: 89450, rate: 0.22 },
-  { min: 89450, max: 190750, rate: 0.24 },
-  { min: 190750, max: 364200, rate: 0.32 },
-  { min: 364200, max: 462500, rate: 0.35 },
-  { min: 462500, max: Infinity, rate: 0.37 }
-];
+type FilingStatus = 'single' | 'marriedJoint' | 'marriedSeparate' | 'headOfHousehold';
 
-interface TaxResult {
-  totalTax: number;
-  effectiveRate: number;
-  afterTaxIncome: number;
-  marginalRate: number;
+interface TaxBracket {
+  rate: number;
+  min: number;
+  max: number;
 }
 
-export default function TaxCalculator() {
-  const [income, setIncome] = useState<string>('');
-  const [filingStatus, setFilingStatus] = useState<string>('single');
+interface TaxResult {
+  grossIncome: number;
+  adjustedGrossIncome: number;
+  taxableIncome: number;
+  federalTax: number;
+  effectiveRate: number;
+  marginalRate: number;
+  afterTaxIncome: number;
+  standardDeduction: number;
+}
+
+// 2024 Tax Brackets (simplified)
+const TAX_BRACKETS: Record<FilingStatus, TaxBracket[]> = {
+  single: [
+    { rate: 0.10, min: 0, max: 11000 },
+    { rate: 0.12, min: 11000, max: 44725 },
+    { rate: 0.22, min: 44725, max: 95375 },
+    { rate: 0.24, min: 95375, max: 182050 },
+    { rate: 0.32, min: 182050, max: 231250 },
+    { rate: 0.35, min: 231250, max: 578125 },
+    { rate: 0.37, min: 578125, max: Infinity }
+  ],
+  marriedJoint: [
+    { rate: 0.10, min: 0, max: 22000 },
+    { rate: 0.12, min: 22000, max: 89450 },
+    { rate: 0.22, min: 89450, max: 190750 },
+    { rate: 0.24, min: 190750, max: 364200 },
+    { rate: 0.32, min: 364200, max: 462500 },
+    { rate: 0.35, min: 462500, max: 693750 },
+    { rate: 0.37, min: 693750, max: Infinity }
+  ],
+  marriedSeparate: [
+    { rate: 0.10, min: 0, max: 11000 },
+    { rate: 0.12, min: 11000, max: 44725 },
+    { rate: 0.22, min: 44725, max: 95375 },
+    { rate: 0.24, min: 95375, max: 182100 },
+    { rate: 0.32, min: 182100, max: 231250 },
+    { rate: 0.35, min: 231250, max: 346875 },
+    { rate: 0.37, min: 346875, max: Infinity }
+  ],
+  headOfHousehold: [
+    { rate: 0.10, min: 0, max: 15700 },
+    { rate: 0.12, min: 15700, max: 59850 },
+    { rate: 0.22, min: 59850, max: 95350 },
+    { rate: 0.24, min: 95350, max: 182050 },
+    { rate: 0.32, min: 182050, max: 231250 },
+    { rate: 0.35, min: 231250, max: 578100 },
+    { rate: 0.37, min: 578100, max: Infinity }
+  ]
+};
+
+// 2024 Standard Deductions
+const STANDARD_DEDUCTIONS: Record<FilingStatus, number> = {
+  single: 14600,
+  marriedJoint: 29200,
+  marriedSeparate: 14600,
+  headOfHousehold: 21900
+};
+
+export function TaxCalculator() {
+  const [income, setIncome] = useState('75000');
+  const [filingStatus, setFilingStatus] = useState<FilingStatus>('single');
+  const [deductionType, setDeductionType] = useState<'standard' | 'itemized'>('standard');
+  const [itemizedDeductions, setItemizedDeductions] = useState('0');
   const [result, setResult] = useState<TaxResult | null>(null);
 
+  useEffect(() => {
+    calculateTax();
+  }, [income, filingStatus, deductionType, itemizedDeductions]);
+
   const calculateTax = () => {
-    const grossIncome = parseFloat(income);
-    if (grossIncome > 0) {
-      let totalTax = 0;
-      let remainingIncome = grossIncome;
-      
-      for (const bracket of taxBrackets) {
-        if (remainingIncome <= 0) break;
-        
-        const taxableInThisBracket = Math.min(remainingIncome, bracket.max - bracket.min);
-        totalTax += taxableInThisBracket * bracket.rate;
-        remainingIncome -= taxableInThisBracket;
-      }
-
-      const effectiveRate = (totalTax / grossIncome) * 100;
-      const afterTaxIncome = grossIncome - totalTax;
-      const marginalRate = taxBrackets.find(bracket => 
-        grossIncome > bracket.min && grossIncome <= bracket.max
-      )?.rate || 0.37;
-
-      setResult({
-        totalTax,
-        effectiveRate,
-        afterTaxIncome,
-        marginalRate: marginalRate * 100
-      });
+    const grossIncome = parseFloat(income) || 0;
+    if (grossIncome <= 0) {
+      setResult(null);
+      return;
     }
+
+    const standardDeduction = STANDARD_DEDUCTIONS[filingStatus];
+    const deduction = deductionType === 'standard' 
+      ? standardDeduction 
+      : Math.max(parseFloat(itemizedDeductions) || 0, standardDeduction);
+
+    const adjustedGrossIncome = grossIncome; // Simplified - no adjustments
+    const taxableIncome = Math.max(0, adjustedGrossIncome - deduction);
+
+    const brackets = TAX_BRACKETS[filingStatus];
+    let federalTax = 0;
+    let marginalRate = 0;
+
+    for (const bracket of brackets) {
+      if (taxableIncome > bracket.min) {
+        const taxableAtThisBracket = Math.min(taxableIncome, bracket.max) - bracket.min;
+        federalTax += taxableAtThisBracket * bracket.rate;
+        marginalRate = bracket.rate;
+      }
+    }
+
+    const effectiveRate = grossIncome > 0 ? (federalTax / grossIncome) * 100 : 0;
+    const afterTaxIncome = grossIncome - federalTax;
+
+    setResult({
+      grossIncome,
+      adjustedGrossIncome,
+      taxableIncome,
+      federalTax,
+      effectiveRate,
+      marginalRate: marginalRate * 100,
+      afterTaxIncome,
+      standardDeduction
+    });
   };
 
-  const reset = () => {
-    setIncome('');
-    setResult(null);
+  const formatCurrency = (amount: number) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    }).format(amount);
+  };
+
+  const formatPercentage = (rate: number) => {
+    return `${rate.toFixed(1)}%`;
+  };
+
+  const getResultText = () => {
+    if (result) {
+      return `Income: ${formatCurrency(result.grossIncome)}\nFederal Tax: ${formatCurrency(result.federalTax)}\nEffective Rate: ${formatPercentage(result.effectiveRate)}\nAfter-Tax Income: ${formatCurrency(result.afterTaxIncome)}`;
+    }
+    return '';
+  };
+
+  const setPresetIncome = (amount: string, status: FilingStatus) => {
+    setIncome(amount);
+    setFilingStatus(status);
+  };
+
+  const getTaxBracketInfo = () => {
+    if (!result) return [];
+    
+    const brackets = TAX_BRACKETS[filingStatus];
+    return brackets.map(bracket => {
+      const taxableAtBracket = Math.max(0, Math.min(result.taxableIncome, bracket.max) - bracket.min);
+      const taxAtBracket = taxableAtBracket * bracket.rate;
+      
+      return {
+        rate: bracket.rate * 100,
+        range: `${formatCurrency(bracket.min)} - ${bracket.max === Infinity ? '∞' : formatCurrency(bracket.max)}`,
+        taxableIncome: taxableAtBracket,
+        tax: taxAtBracket,
+        isActive: taxableAtBracket > 0
+      };
+    }).filter(bracket => bracket.isActive);
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto space-y-6">
+    <div className="space-y-6">
+      {/* Income and Filing Status */}
       <Card>
-        <CardHeader>
-          <CardTitle>税收计算器</CardTitle>
-          <CardDescription>计算联邦所得税和税后收入</CardDescription>
+        <CardHeader className="pb-3">
+          <CardTitle className="text-lg flex items-center gap-2">
+            <DollarSign className="h-5 w-5" />
+            Income Information
+          </CardTitle>
+          <CardDescription>
+            Enter your income and select your filing status
+          </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <Label htmlFor="income">年收入 ($)</Label>
-              <Input
-                id="income"
-                type="number"
-                value={income}
-                onChange={(e) => setIncome(e.target.value)}
-                placeholder="75000"
-              />
-            </div>
-            <div>
-              <Label htmlFor="status">申报状态</Label>
-              <Select value={filingStatus} onValueChange={setFilingStatus}>
-                <SelectTrigger>
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="single">单身</SelectItem>
-                  <SelectItem value="married">已婚合并申报</SelectItem>
-                  <SelectItem value="married-separate">已婚分别申报</SelectItem>
-                  <SelectItem value="head">户主</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
+          <div>
+            <label className="block text-sm font-medium mb-2">Annual Gross Income ($)</label>
+            <Input
+              type="number"
+              value={income}
+              onChange={(e) => setIncome(e.target.value)}
+              placeholder="75000"
+              min="0"
+              step="1000"
+            />
           </div>
-          <div className="flex gap-2">
-            <Button onClick={calculateTax} className="flex-1">
-              计算税收
+
+          <div>
+            <label className="block text-sm font-medium mb-2">Filing Status</label>
+            <select
+              value={filingStatus}
+              onChange={(e) => setFilingStatus(e.target.value as FilingStatus)}
+              className="w-full p-3 border border-input rounded-md bg-background"
+            >
+              <option value="single">Single</option>
+              <option value="marriedJoint">Married Filing Jointly</option>
+              <option value="marriedSeparate">Married Filing Separately</option>
+              <option value="headOfHousehold">Head of Household</option>
+            </select>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Deductions */}
+      <Card>
+        <CardHeader className="pb-3">
+          <CardTitle className="text-lg">Deductions</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="flex gap-4">
+            <Button
+              variant={deductionType === 'standard' ? 'default' : 'outline'}
+              onClick={() => setDeductionType('standard')}
+            >
+              Standard Deduction
             </Button>
-            <Button onClick={reset} variant="outline">
-              重置
+            <Button
+              variant={deductionType === 'itemized' ? 'default' : 'outline'}
+              onClick={() => setDeductionType('itemized')}
+            >
+              Itemized Deductions
+            </Button>
+          </div>
+
+          {deductionType === 'standard' && (
+            <div className="p-3 bg-muted rounded-lg">
+              <div className="text-sm text-muted-foreground">
+                Standard deduction for {filingStatus.replace(/([A-Z])/g, ' $1').toLowerCase()}: {formatCurrency(STANDARD_DEDUCTIONS[filingStatus])}
+              </div>
+            </div>
+          )}
+
+          {deductionType === 'itemized' && (
+            <div>
+              <label className="block text-sm font-medium mb-2">Total Itemized Deductions ($)</label>
+              <Input
+                type="number"
+                value={itemizedDeductions}
+                onChange={(e) => setItemizedDeductions(e.target.value)}
+                placeholder="0"
+                min="0"
+                step="100"
+              />
+              <div className="text-xs text-muted-foreground mt-1">
+                Minimum will be standard deduction: {formatCurrency(STANDARD_DEDUCTIONS[filingStatus])}
+              </div>
+            </div>
+          )}
+        </CardContent>
+      </Card>
+
+      {/* Quick Presets */}
+      <Card>
+        <CardHeader className="pb-3">
+          <CardTitle className="text-lg">Income Examples</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <Button
+              variant="outline"
+              onClick={() => setPresetIncome('50000', 'single')}
+              className="text-left justify-start h-auto p-3"
+            >
+              <div>
+                <div className="font-medium">Entry Level</div>
+                <div className="text-sm text-muted-foreground">$50K Single</div>
+              </div>
+            </Button>
+            <Button
+              variant="outline"
+              onClick={() => setPresetIncome('100000', 'marriedJoint')}
+              className="text-left justify-start h-auto p-3"
+            >
+              <div>
+                <div className="font-medium">Middle Class</div>
+                <div className="text-sm text-muted-foreground">$100K Married</div>
+              </div>
+            </Button>
+            <Button
+              variant="outline"
+              onClick={() => setPresetIncome('200000', 'single')}
+              className="text-left justify-start h-auto p-3"
+            >
+              <div>
+                <div className="font-medium">High Earner</div>
+                <div className="text-sm text-muted-foreground">$200K Single</div>
+              </div>
             </Button>
           </div>
         </CardContent>
       </Card>
 
+      {/* Results */}
       {result && (
         <Card>
-          <CardHeader>
-            <CardTitle>税收计算结果</CardTitle>
+          <CardHeader className="pb-3">
+            <CardTitle className="text-lg flex items-center gap-2">
+              <Calculator className="h-5 w-5" />
+              Tax Calculation Results
+            </CardTitle>
           </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="text-center p-4 bg-red-50 rounded-lg">
-                <div className="text-2xl font-bold text-red-600">
-                  ${result.totalTax.toFixed(2)}
+          <CardContent className="space-y-6">
+            {/* Main Results */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <div className="text-center p-4 bg-blue-50 dark:bg-blue-950 rounded-lg">
+                <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                  {formatCurrency(result.federalTax)}
                 </div>
-                <div className="text-sm text-red-600">联邦税</div>
+                <div className="text-sm text-muted-foreground">Federal Tax</div>
               </div>
-              <div className="text-center p-4 bg-green-50 rounded-lg">
-                <div className="text-2xl font-bold text-green-600">
-                  ${result.afterTaxIncome.toFixed(2)}
+              <div className="text-center p-4 bg-green-50 dark:bg-green-950 rounded-lg">
+                <div className="text-2xl font-bold text-green-600 dark:text-green-400">
+                  {formatPercentage(result.effectiveRate)}
                 </div>
-                <div className="text-sm text-green-600">税后收入</div>
+                <div className="text-sm text-muted-foreground">Effective Rate</div>
               </div>
-              <div className="text-center p-4 bg-blue-50 rounded-lg">
-                <div className="text-2xl font-bold text-blue-600">
-                  {result.effectiveRate.toFixed(2)}%
+              <div className="text-center p-4 bg-orange-50 dark:bg-orange-950 rounded-lg">
+                <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">
+                  {formatPercentage(result.marginalRate)}
                 </div>
-                <div className="text-sm text-blue-600">有效税率</div>
+                <div className="text-sm text-muted-foreground">Marginal Rate</div>
               </div>
-              <div className="text-center p-4 bg-orange-50 rounded-lg">
-                <div className="text-2xl font-bold text-orange-600">
-                  {result.marginalRate.toFixed(2)}%
+              <div className="text-center p-4 bg-purple-50 dark:bg-purple-950 rounded-lg">
+                <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+                  {formatCurrency(result.afterTaxIncome)}
                 </div>
-                <div className="text-sm text-orange-600">边际税率</div>
+                <div className="text-sm text-muted-foreground">After-Tax Income</div>
               </div>
+            </div>
+
+            {/* Detailed Breakdown */}
+            <div className="p-4 bg-muted rounded-lg">
+              <h4 className="font-medium mb-3">Income Breakdown</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div className="flex justify-between">
+                  <span>Gross Income:</span>
+                  <span className="font-medium">{formatCurrency(result.grossIncome)}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Deductions:</span>
+                  <span className="font-medium">
+                    -{formatCurrency(result.adjustedGrossIncome - result.taxableIncome)}
+                  </span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Taxable Income:</span>
+                  <span className="font-medium">{formatCurrency(result.taxableIncome)}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Federal Tax:</span>
+                  <span className="font-medium">{formatCurrency(result.federalTax)}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Tax Brackets */}
+            <div>
+              <h4 className="font-medium mb-3">Tax Brackets Applied</h4>
+              <div className="space-y-2">
+                {getTaxBracketInfo().map((bracket, index) => (
+                  <div key={index} className="flex items-center justify-between p-3 border rounded-lg">
+                    <div className="flex items-center gap-3">
+                      <Badge variant="outline">{formatPercentage(bracket.rate)}</Badge>
+                      <span className="text-sm">{bracket.range}</span>
+                    </div>
+                    <div className="text-right">
+                      <div className="font-medium">{formatCurrency(bracket.tax)}</div>
+                      <div className="text-xs text-muted-foreground">
+                        on {formatCurrency(bracket.taxableIncome)}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Actions */}
+            <div className="flex justify-center">
+              <CopyButton
+                text={getResultText()}
+                variant="outline"
+                showText={true}
+                successText="Results Copied!"
+              />
             </div>
           </CardContent>
         </Card>
       )}
+
+      {/* Tax Information */}
+      <Card>
+        <CardHeader className="pb-3">
+          <CardTitle className="text-lg">Tax Information</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h4 className="font-medium mb-3">Key Terms</h4>
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <div><strong>Effective Rate:</strong> Total tax ÷ Total income</div>
+                <div><strong>Marginal Rate:</strong> Tax rate on your last dollar earned</div>
+                <div><strong>Standard Deduction:</strong> Fixed deduction amount</div>
+                <div><strong>Itemized Deductions:</strong> Sum of specific deductible expenses</div>
+              </div>
+            </div>
+            <div>
+              <h4 className="font-medium mb-3">Important Notes</h4>
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <div>• This calculator estimates federal taxes only</div>
+                <div>• State taxes are not included</div>
+                <div>• Results are for planning purposes</div>
+                <div>• Consult tax professionals for advice</div>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 }

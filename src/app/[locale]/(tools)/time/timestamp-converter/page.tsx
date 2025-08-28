@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import { TimestampConverter } from '@/components/converters/TimestampConverter';
+import { TimestampConverter } from '@/components/converters/time/TimestampConverter';
 
 
 

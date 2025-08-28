@@ -15,105 +15,6 @@
 
 
 
-InterConverter 工具分类结构（建议）
-1. Finance（金 融）
-
-Currency → 汇率换算器、历史汇率
-
-Credit Cards → 信用卡利息计算、分期付款计算
-
-Mortgages → 房贷月供计算、提前还款模拟
-
-Investing → 投资回报率、复利计算、ETF/基金比较
-
-Insurance → 保费计算、保障范围对比
-
-2. Unit（单位换算）
-
-长度转换（米 ↔ 英尺 ↔ 英里）
-
-重量转换（公斤 ↔ 磅 ↔ 盎司）
-
-温度转换（摄氏度 ↔ 华氏度 ↔ 开尔文）
-
-面积、体积、速度、压力等
-
-3. Time（时间工具）
-
-时间戳 ↔ 日期转换（Unix timestamp）
-
-时区转换（UTC ↔ 本地时间）
-
-倒计时/计时器
-
-工作日计算（两个日期之间的工作日数）
-
-4. Color（颜色工具）
-
-HEX ↔ RGB ↔ HSL 转换
-
-渐变生成器
-
-调色板提取（上传图片 → 提取颜色）
-
-5. Media（多媒体工具）
-
-图片压缩、图片格式转换（JPG ↔ PNG ↔ WebP）
-
-音频转换（MP3 ↔ WAV ↔ OGG）
-
-视频压缩、格式转换
-
-6. Health（健康工具）
-
-BMI 计算器
-
-卡路里消耗计算
-
-心率区间计算
-
-7. Auto（汽车工具）
-
-油耗计算（百公里耗油 vs MPG）
-
-二手车贷款计算器
-
-汽车保险保费估算
-
-8. Moving（生活/搬家工具）
-
-搬家费用计算器
-
-城市对比（生活成本对比）
-
-房租预算计算器
-
-🔧 实现思路（前端结构）
-
-/tools/[category]/index.tsx
-→ 展示该分类下的所有工具列表（卡片式 UI）。
-
-/tools/[category]/[tool].tsx
-→ 具体工具页面。
-
-数据存储方式（推荐）
-
-建一个 tools.json（或数据库表），字段包括：
-
-{
-  "slug": "mortgage-calculator",
-  "title": "Mortgage Calculator",
-  "category": "mortgages",
-  "description": "Calculate your monthly mortgage payments and interest.",
-  "cover_url": "/images/mortgage.png"
-}
-
-
-每个分类页面自动读取属于该分类的工具列表，渲染卡片。
-
-这样你不用手写每个分类页，系统会自动根据 category 生成导航。
-
-
 
 Finance目录最终统计
 总计：77个金融工具 🚀
@@ -137,3 +38,48 @@ Finance目录最终统计
 汽车、房屋、人寿保险
 📦 Moving（搬家）：1个工具
 🧮 General（通用）：3个工具
+
+
+要求：
+1，统一规范，统一布局，多语言（默认为en)，SEO优化；
+2，重构所有的工具页，根据主分类配置到统一json文件里，比如auto.json，unit.json，finance.json等，统一管理，方便后续切换和管理。
+3，优化seo，每个工具页的seo及落地页文案都是独立，争对这个工具页来优化符合google seo规范及长尾词规范，seo title带上品牌名｜ InterConverter 60个字内，seo desc160个字内。
+4，/tools列出部分工具页，根据分类进行分组展示，每个分类下展示5个工具，点击进入工具页，每个分类可以点击查看更多工具。
+
+
+Unit（单位换算类）
+常见的在线工具用户需求很大，覆盖“长度、重量、温度、面积、速度”等常见换算。
+工具名称	建议 slug	功能描述
+Length Converter	/unit/length-converter	米 ↔ 英尺 ↔ 英寸 ↔ 英里
+Weight Converter	/unit/weight-converter	公斤 ↔ 磅 ↔ 克 ↔ 盎司
+Temperature Converter	/unit/temperature-converter	摄氏度 ↔ 华氏度 ↔ 开尔文
+Area Converter	/unit/area-converter	平方米 ↔ 平方英尺 ↔ 公顷
+Volume Converter	/unit/volume-converter	升 ↔ 毫升 ↔ 立方米 ↔ 加仑
+Speed Converter	/unit/speed-converter	公里/小时 ↔ 英里/小时 ↔ 节
+Pressure Converter	/unit/pressure-converter	帕斯卡 ↔ 巴 ↔ PSI
+Energy Converter	/unit/energy-converter	卡路里 ↔ 千焦 ↔ 千瓦时
+Power Converter	/unit/power-converter	瓦特 ↔ 千瓦 ↔ 马力
+Data Converter	/unit/data-converter	KB ↔ MB ↔ GB ↔ TB
+
+🎨 Color（颜色工具）
+这一类流量不小，很多设计师/开发者会用。
+工具名称	建议 slug	功能描述
+HEX to RGB Converter	/color/hex-to-rgb	十六进制色值转 RGB
+RGB to HEX Converter	/color/rgb-to-hex	RGB 转十六进制色值
+HEX to HSL Converter	/color/hex-to-hsl	HEX ↔ HSL 转换
+Color Picker Tool	/color/color-picker	在线取色器（调色盘）
+Gradient Generator	/color/gradient-generator	渐变背景生成
+Color Palette Generator	/color/palette-generator	图片提取配色 / 自动调色板
+Contrast Checker	/color/contrast-checker	检查文本与背景对比度（WCAG）
+
+⏰ Time（时间工具）
+时间相关搜索量很大，特别是 时区转换 & 时间戳转换。
+工具名称	建议 slug	功能描述
+Unix Timestamp Converter	/time/timestamp-converter	时间戳 ↔ 日期时间
+Time Zone Converter	/time/timezone-converter	世界时区转换
+Date Calculator	/time/date-calculator	计算两个日期之间的差值
+Working Days Calculator	/time/working-days	计算两个日期之间的工作日数
+Countdown Timer	/time/countdown-timer	在线倒计时
+Stopwatch	/time/stopwatch	在线秒表
+Age Calculator	/time/age-calculator	根据出生日期计算年龄
+World Clock	/time/world-clock	显示不同城市的当前时间

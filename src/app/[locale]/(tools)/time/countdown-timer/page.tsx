@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { generateToolMetadata, generateToolStructuredData } from '@/components/tools/ToolLayout';
-import { CountdownTimer } from '@/components/converters/CountdownTimer';
+import { CountdownTimer } from '@/components/converters/time/CountdownTimer';
 import { ModernSEOContent } from '@/components/tools/ModernSEOContent';
 
 

@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { generateToolMetadata, generateToolStructuredData } from '@/components/tools/ToolLayout';
-import { DateDifferenceCalculator } from '@/components/converters/DateDifferenceCalculator';
+import { DateDifferenceCalculator } from '@/components/converters/time/DateDifferenceCalculator';
 import { ToolSEOContent } from '@/components/seo/ToolSEOContent';
 
 

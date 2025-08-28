@@ -7,6 +7,7 @@ import { AdvancedFilters } from '@/components/tools/AdvancedFilters';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ToolConfig } from '@/types/tools';
+import { useTranslation } from '@/hooks/useTranslation';
 import Link from 'next/link';
 
 interface ToolsPageClientProps {
@@ -14,6 +15,7 @@ interface ToolsPageClientProps {
 }
 
 export function ToolsPageClient({ locale }: ToolsPageClientProps) {
+  const { t } = useTranslation(locale);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [sortBy, setSortBy] = useState<'popularity' | 'name' | 'category'>('popularity');
   const [filteredTools, setFilteredTools] = useState<ToolConfig[]>([]);
@@ -111,11 +113,10 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
         <div className="relative container mx-auto px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-              All Free Online Converters & Calculators
+              {t.allToolsTitle}
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
-              Professional-grade conversion tools and calculators for developers, engineers, students, and professionals.
-              Browse by category, search by name, or filter by features.
+              {t.allToolsDescription}
             </p>
 
           </div>
@@ -126,8 +127,8 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
       <section className="py-12 bg-gradient-to-r from-gray-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold mb-4">Browse Tools by Category</h2>
-            <p className="text-gray-600">Discover specialized calculators and converters organized by category to find exactly what you need</p>
+            <h2 className="text-2xl font-bold mb-4">{t.browseByCategory}</h2>
+            <p className="text-gray-600">{t.browseCategoryDescription}</p>
           </div>
           
           {/* Category Filter Buttons */}
@@ -137,7 +138,7 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
               onClick={() => handleCategorySelect('all')}
               className="transition-all duration-200"
             >
-              All Tools ({allTools.length})
+{t.allTools} ({allTools.length})
             </Button>
             {categoryStats.map(({ key, name, count }) => (
               <Button

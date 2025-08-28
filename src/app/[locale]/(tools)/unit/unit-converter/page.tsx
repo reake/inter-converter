@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import { UnitConverter } from '@/components/converters/UnitConverter';
+import { UnitConverter } from '@/components/converters/unit/UnitConverter';
 
 
 

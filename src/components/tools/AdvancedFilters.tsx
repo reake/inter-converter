@@ -6,6 +6,8 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Input } from '@/components/ui/input';
+import { Search, X } from 'lucide-react';
 import { TOOL_CATEGORIES } from '@/config/tools';
 import { ToolConfig } from '@/types/tools';
 
@@ -15,6 +17,7 @@ interface FilterState {
   searchVolume: 'all' | 'high' | 'medium' | 'low';
   sortBy: 'popularity' | 'name' | 'category' | 'difficulty';
   sortOrder: 'asc' | 'desc';
+  searchQuery: string;
 }
 
 interface AdvancedFiltersProps {
@@ -32,7 +35,8 @@ export function AdvancedFilters({ tools, onFiltersChange, className = '' }: Adva
     difficulties: [],
     searchVolume: 'all',
     sortBy: 'popularity',
-    sortOrder: 'desc'
+    sortOrder: 'desc',
+    searchQuery: ''
   });
 
   const [isExpanded, setIsExpanded] = useState(false);
@@ -44,7 +48,8 @@ export function AdvancedFilters({ tools, onFiltersChange, className = '' }: Adva
       difficulties: searchParams.get('difficulties')?.split(',').map(Number).filter(Boolean) || [],
       searchVolume: (searchParams.get('searchVolume') as FilterState['searchVolume']) || 'all',
       sortBy: (searchParams.get('sortBy') as FilterState['sortBy']) || 'popularity',
-      sortOrder: (searchParams.get('sortOrder') as FilterState['sortOrder']) || 'desc'
+      sortOrder: (searchParams.get('sortOrder') as FilterState['sortOrder']) || 'desc',
+      searchQuery: searchParams.get('search') || ''
     };
     
     setFilters(urlFilters);
@@ -69,6 +74,9 @@ export function AdvancedFilters({ tools, onFiltersChange, className = '' }: Adva
     if (newFilters.sortOrder !== 'desc') {
       params.set('sortOrder', newFilters.sortOrder);
     }
+    if (newFilters.searchQuery.trim()) {
+      params.set('search', newFilters.searchQuery.trim());
+    }
 
     const newURL = params.toString() ? `?${params.toString()}` : '';
     router.replace(newURL, { scroll: false });
@@ -77,6 +85,17 @@ export function AdvancedFilters({ tools, onFiltersChange, className = '' }: Adva
   // Apply filters and sorting
   const applyFilters = (newFilters: FilterState) => {
     let filtered = [...tools];
+
+    // Search query filter
+    if (newFilters.searchQuery.trim()) {
+      const query = newFilters.searchQuery.toLowerCase().trim();
+      filtered = filtered.filter(tool => 
+        tool.name.toLowerCase().includes(query) ||
+        tool.description.toLowerCase().includes(query) ||
+        tool.keywords.some(keyword => keyword.toLowerCase().includes(query)) ||
+        tool.category.toLowerCase().includes(query)
+      );
+    }
 
     // Category filter
     if (newFilters.categories.length > 0) {
@@ -161,7 +180,8 @@ export function AdvancedFilters({ tools, onFiltersChange, className = '' }: Adva
       difficulties: [],
       searchVolume: 'all',
       sortBy: 'popularity',
-      sortOrder: 'desc'
+      sortOrder: 'desc',
+      searchQuery: ''
     };
     
     setFilters(clearedFilters);
@@ -185,7 +205,7 @@ export function AdvancedFilters({ tools, onFiltersChange, className = '' }: Adva
   };
 
   const activeFiltersCount = filters.categories.length + filters.difficulties.length + 
-    (filters.searchVolume !== 'all' ? 1 : 0);
+    (filters.searchVolume !== 'all' ? 1 : 0) + (filters.searchQuery.trim() ? 1 : 0);
 
   return (
     <Card className={`${className} transition-all duration-300`}>
@@ -218,6 +238,31 @@ export function AdvancedFilters({ tools, onFiltersChange, className = '' }: Adva
       
       {isExpanded && (
         <CardContent className="space-y-6">
+          {/* Search Input */}
+          <div className="space-y-3">
+            <h4 className="font-medium text-sm text-gray-700">Search Tools</h4>
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
+              <Input
+                type="text"
+                placeholder="Search by name, description, or keywords..."
+                value={filters.searchQuery}
+                onChange={(e) => handleFilterChange({ searchQuery: e.target.value })}
+                className="pl-10 pr-10"
+              />
+              {filters.searchQuery && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => handleFilterChange({ searchQuery: '' })}
+                  className="absolute right-1 top-1/2 transform -translate-y-1/2 h-8 w-8 p-0"
+                >
+                  <X className="h-4 w-4" />
+                </Button>
+              )}
+            </div>
+          </div>
+
           {/* Sort Options */}
           <div className="space-y-3">
             <h4 className="font-medium text-sm text-gray-700">Sort By</h4>

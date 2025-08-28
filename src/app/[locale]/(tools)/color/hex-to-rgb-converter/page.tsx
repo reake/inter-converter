@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import { ColorConverter } from '@/components/converters/ColorConverter';
+import HexToRgbConverter from '@/components/converters/color/HexToRgbConverter';
 
 
 
@@ -36,7 +36,7 @@ export default function HexToRgbConverterPage() {
         "CSS-ready color values"
       ]}
     >
-      <ColorConverter />
+      <HexToRgbConverter />
     </ToolLayout>
   );
 }
