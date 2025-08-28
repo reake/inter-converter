@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import { TaxCalculator } from '@/components/converters/finance/TaxCalculator';
+import TaxCalculator from '@/components/converters/finance/TaxCalculator';
 
 // Force static generation
 export const dynamic = 'force-static';

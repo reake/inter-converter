@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import { CurrencyConverter } from '@/components/converters/finance/CurrencyConverter';
+import CurrencyConverter from '@/components/converters/finance/CurrencyConverter';
 
 // Force static generation
 export const dynamic = 'force-static';

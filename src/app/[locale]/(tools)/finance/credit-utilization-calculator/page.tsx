@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import { LoanCalculator } from '@/components/converters/finance/LoanCalculator';
+import CreditCardPayoffCalculator from '@/components/converters/finance/CreditCardPayoffCalculator';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -46,7 +46,7 @@ export default function CreditUtilizationCalculatorPage() {
         "Credit health monitoring tools"
       ]}
     >
-      <LoanCalculator />
+      <CreditCardPayoffCalculator />
     </ToolLayout>
   );
 }

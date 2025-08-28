@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import { LoanCalculator } from '@/components/converters/finance/LoanCalculator';
+import SavingsCalculator from '@/components/converters/finance/SavingsCalculator';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -16,7 +16,7 @@ export const metadata: Metadata = generateToolMetadata(
     'deferred annuity calculator',
     'annuity payment calculator'
   ],
-  'investing'
+  'investments'
 );
 
 export default function AnnuityCalculatorPage() {
@@ -25,7 +25,7 @@ export default function AnnuityCalculatorPage() {
       title="Annuity Calculator"
       description="Calculate annuity payments and analyze guaranteed retirement income options with immediate and deferred annuities"
       toolId="annuity-calculator"
-      category="investing"
+      category="investments"
       emoji="🏛️"
       customHowToUse={[
         "Choose immediate or deferred annuity type",
@@ -44,7 +44,7 @@ export default function AnnuityCalculatorPage() {
         "Retirement income planning"
       ]}
     >
-      <LoanCalculator />
+      <SavingsCalculator />
     </ToolLayout>
   );
 }

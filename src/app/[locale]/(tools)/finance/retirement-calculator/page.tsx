@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import { LoanCalculator } from '@/components/converters/finance/LoanCalculator';
+import InvestmentCalculator from '@/components/converters/finance/InvestmentCalculator';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -44,7 +44,7 @@ export default function RetirementCalculatorPage() {
         "Retirement readiness assessment"
       ]}
     >
-      <LoanCalculator />
+      <InvestmentCalculator />
     </ToolLayout>
   );
 }

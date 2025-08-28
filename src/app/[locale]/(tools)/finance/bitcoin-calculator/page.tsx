@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import { CurrencyConverter } from '@/components/converters/finance/CurrencyConverter';
+import CurrencyConverter from '@/components/converters/finance/CurrencyConverter';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -16,7 +16,7 @@ export const metadata: Metadata = generateToolMetadata(
     'cryptocurrency calculator',
     'bitcoin converter'
   ],
-  'currency'
+  'investments'
 );
 
 export default function BitcoinCalculatorPage() {
@@ -25,7 +25,7 @@ export default function BitcoinCalculatorPage() {
       title="Bitcoin Calculator"
       description="Convert Bitcoin to major currencies with live exchange rates and track cryptocurrency value fluctuations"
       toolId="bitcoin-calculator"
-      category="currency"
+      category="investments"
       emoji="₿"
       customHowToUse={[
         "Enter Bitcoin amount to convert",

@@ -7,7 +7,7 @@ export const TOOL_CATEGORIES: Record<ToolCategory, { name: string; description: 
   },
   'finance': {
     name: 'Finance',
-    description: 'Currency Converters, loan calculations, and tax tools'
+    description: '77+ financial calculators for loans, mortgages, investments, taxes, and more'
   },
   'unit': {
     name: 'Unit & Measurement',

@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import { LoanCalculator } from '@/components/converters/finance/LoanCalculator';
+import SavingsCalculator from '@/components/converters/finance/SavingsCalculator';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -45,7 +45,7 @@ export default function SavingsCalculatorPage() {
         "Milestone achievement tracking"
       ]}
     >
-      <LoanCalculator />
+      <SavingsCalculator />
     </ToolLayout>
   );
 }

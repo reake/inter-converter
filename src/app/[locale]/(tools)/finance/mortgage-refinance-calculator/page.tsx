@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import { LoanCalculator } from '@/components/converters/finance/LoanCalculator';
+import MortgageCalculator from '@/components/converters/finance/MortgageCalculator';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -53,7 +53,7 @@ export default function MortgageRefinanceCalculatorPage() {
         "Refinance recommendation analysis"
       ]}
     >
-      <LoanCalculator />
+      <MortgageCalculator />
     </ToolLayout>
   );
 }

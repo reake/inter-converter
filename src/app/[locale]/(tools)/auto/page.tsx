@@ -127,10 +127,14 @@ export default function AutomotivePage() {
               Automotive Calculators
             </h1>
             <p className="text-xl text-red-100 max-w-3xl mx-auto mb-8">
-              Professional automotive calculators for engine performance, tuning, and modifications. 
+              19+ professional automotive calculators for engine performance, tuning, and modifications. 
               Based on the original Mark's Street And Strip InterConverter™.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
+              <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
+                <span>🏎️</span>
+                <span>19+ Auto Tools</span>
+              </div>
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
                 <span>⚡</span>
                 <span>Real-time calculations</span>

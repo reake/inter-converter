@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import { LoanCalculator } from '@/components/converters/finance/LoanCalculator';
+import CostOfLivingCalculator from '@/components/converters/finance/CostOfLivingCalculator';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -46,7 +46,7 @@ export default function CostOfLivingCalculatorPage() {
         "Relocation decision support"
       ]}
     >
-      <LoanCalculator />
+      <CostOfLivingCalculator />
     </ToolLayout>
   );
 }

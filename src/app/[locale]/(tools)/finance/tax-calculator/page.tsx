@@ -3,7 +3,7 @@ import {
   generateToolMetadata,
   generateToolStructuredData,
 } from "@/components/tools/ToolLayout";
-import { TaxCalculator } from "@/components/converters/TaxCalculator";
+import TaxCalculator from "@/components/converters/finance/TaxCalculator";
 import { ModernSEOContent } from "@/components/tools/ModernSEOContent";
 
 

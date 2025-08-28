@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import { BMICalculator } from '@/components/converters/health/BMICalculator';
+import BMICalculator from '@/components/converters/health/BMICalculator';
 
 // Force static generation
 export const dynamic = 'force-static';

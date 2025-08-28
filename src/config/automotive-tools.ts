@@ -303,7 +303,7 @@ export const AUTOMOTIVE_TOOLS_CONFIG: AutomotiveToolConfig[] = [
   {
     id: 'fluid-weight-calculator',
     name: 'Automotive Fluid Weight Calculator',
-    description: 'Calculate weight and volume Converterss for automotive fluids',
+    description: 'Calculate weight and volume conversions for automotive fluids',
     category: 'auto',
     subcategory: 'fluids',
     keywords: ['fluid', 'weight', 'gasoline', 'oil', 'transmission', 'coolant', 'density'],
@@ -331,6 +331,294 @@ export const AUTOMOTIVE_TOOLS_CONFIG: AutomotiveToolConfig[] = [
     relatedTools: ['power-to-weight-calculator'],
     popularityScore: 40,
     icon: '🛢️'
+  },
+  {
+    id: 'engine-size-converter',
+    name: 'Engine Size Converter',
+    description: 'Convert between cubic inches, liters, and cubic centimeters',
+    category: 'auto',
+    subcategory: 'engine',
+    keywords: ['engine', 'size', 'converter', 'cubic', 'inches', 'liters', 'cc'],
+    path: '/auto/engine-size-converter',
+    isActive: true,
+    searchVolume: 5500,
+    difficulty: 'beginner',
+    safetyLevel: 'low',
+    educationalContent: {
+      theory: 'Engine displacement can be measured in different units worldwide. Cubic inches (CI) are common in American engines, while liters and cubic centimeters (CC) are used internationally.',
+      applications: [
+        'Converting between measurement systems',
+        'Understanding international engine specifications',
+        'Comparing engines from different manufacturers',
+        'Technical documentation and parts ordering'
+      ],
+      tips: [
+        '1 liter = 61.024 cubic inches',
+        '1 cubic inch = 16.387 cubic centimeters',
+        'European engines typically measured in liters',
+        'Motorcycle engines often measured in CC'
+      ],
+      relatedTools: ['engine-displacement-calculator']
+    },
+    relatedTools: ['engine-displacement-calculator'],
+    popularityScore: 55,
+    icon: '🔄'
+  },
+  {
+    id: 'engine-volume-calculator',
+    name: 'Engine Volume Calculator',
+    description: 'Calculate total engine volume from cylinder volume and count',
+    category: 'auto',
+    subcategory: 'engine',
+    keywords: ['engine', 'volume', 'cylinder', 'displacement', 'total'],
+    path: '/auto/engine-volume-calculator',
+    isActive: true,
+    searchVolume: 4200,
+    difficulty: 'beginner',
+    safetyLevel: 'low',
+    educationalContent: {
+      theory: 'Total engine displacement is calculated by multiplying the volume of one cylinder by the number of cylinders. This is useful when you know individual cylinder displacement.',
+      applications: [
+        'Calculating total displacement from cylinder specs',
+        'Engine building and modification planning',
+        'Verifying manufacturer specifications',
+        'Custom engine design calculations'
+      ],
+      tips: [
+        'All cylinders are assumed to be identical',
+        'Displacement affects power potential and tax classification',
+        'Consider compression ratio in performance calculations',
+        'Bore and stroke affect engine characteristics differently'
+      ],
+      relatedTools: ['engine-displacement-calculator', 'carburetor-cfm-calculator']
+    },
+    relatedTools: ['engine-displacement-calculator', 'carburetor-cfm-calculator'],
+    popularityScore: 50,
+    icon: '📐'
+  },
+  {
+    id: 'power-to-weight-ratio',
+    name: 'Power-to-Weight Ratio',
+    description: 'Alternative power-to-weight ratio calculator with additional metrics',
+    category: 'auto',
+    subcategory: 'performance',
+    keywords: ['power', 'weight', 'ratio', 'performance', 'acceleration'],
+    path: '/auto/power-to-weight-ratio',
+    isActive: true,
+    searchVolume: 6000,
+    difficulty: 'beginner',
+    safetyLevel: 'low',
+    educationalContent: {
+      theory: 'Power-to-weight ratio is fundamental to vehicle performance, affecting acceleration, climbing ability, and overall dynamics.',
+      applications: [
+        'Performance vehicle comparison',
+        'Weight reduction planning',
+        'Power upgrade evaluation',
+        'Racing class classification'
+      ],
+      tips: [
+        'Lower weight per HP means better performance',
+        'Consider both engine power and vehicle weight',
+        'Weight distribution also affects handling',
+        'Power-to-weight varies with fuel load'
+      ],
+      relatedTools: ['power-to-weight-calculator', 'torque-horsepower-calculator']
+    },
+    relatedTools: ['power-to-weight-calculator', 'torque-horsepower-calculator'],
+    popularityScore: 65,
+    icon: '⚖️'
+  },
+  {
+    id: 'ram-air-calculator',
+    name: 'Ram Air Calculator',
+    description: 'Calculate horsepower gains from ram air induction systems',
+    category: 'auto',
+    subcategory: 'performance',
+    keywords: ['ram', 'air', 'induction', 'horsepower', 'speed', 'pontiac'],
+    path: '/auto/ram-air-calculator',
+    isActive: true,
+    searchVolume: 3200,
+    difficulty: 'intermediate',
+    safetyLevel: 'low',
+    educationalContent: {
+      theory: 'Ram air systems use vehicle speed to force additional air into the engine, creating a mild supercharging effect. The pressure increase is proportional to the square of vehicle speed.',
+      applications: [
+        'Calculating ram air pressure at speed',
+        'Estimating horsepower gains from ram air',
+        'Planning ram air intake systems',
+        'Understanding speed-related power increases'
+      ],
+      tips: [
+        'Ram air effect increases with speed squared',
+        'Gains are modest compared to forced induction',
+        'Intake design affects ram air efficiency',
+        'Benefits are most noticeable at high speeds'
+      ],
+      relatedTools: ['supercharger-calculator', 'carburetor-cfm-calculator']
+    },
+    relatedTools: ['supercharger-calculator', 'carburetor-cfm-calculator'],
+    popularityScore: 35,
+    icon: '💨'
+  },
+  {
+    id: 'rpm-calculator',
+    name: 'RPM Calculator',
+    description: 'Calculate engine RPM from speed, gear ratio, and tire diameter',
+    category: 'auto',
+    subcategory: 'drivetrain',
+    keywords: ['rpm', 'speed', 'gear', 'ratio', 'tire', 'diameter'],
+    path: '/auto/rpm-calculator',
+    isActive: true,
+    searchVolume: 8500,
+    difficulty: 'beginner',
+    safetyLevel: 'low',
+    educationalContent: {
+      theory: 'Engine RPM is determined by vehicle speed, final drive ratio, transmission gear ratio, and tire diameter. This relationship helps in gear selection and engine operation analysis.',
+      applications: [
+        'Determining engine RPM at cruising speed',
+        'Gear ratio selection for optimal RPM range',
+        'Analyzing engine load and efficiency',
+        'Planning transmission and differential ratios'
+      ],
+      tips: [
+        'Lower RPM generally means better fuel economy',
+        'Keep RPM in engine\'s efficient range',
+        'Consider tire diameter changes in calculations',
+        'Overdrive gears reduce highway RPM'
+      ],
+      relatedTools: ['gear-ratio-calculator', 'tire-speed-calculator']
+    },
+    relatedTools: ['gear-ratio-calculator', 'tire-speed-calculator'],
+    popularityScore: 75,
+    icon: '🌀'
+  },
+  {
+    id: 'speed-converter',
+    name: 'Speed Converter',
+    description: 'Convert between MPH, KPH, and other speed units',
+    category: 'auto',
+    subcategory: 'drivetrain',
+    keywords: ['speed', 'converter', 'mph', 'kph', 'kmh', 'conversion'],
+    path: '/auto/speed-converter',
+    isActive: true,
+    searchVolume: 12000,
+    difficulty: 'beginner',
+    safetyLevel: 'low',
+    educationalContent: {
+      theory: 'Speed conversion between different measurement systems is essential for international vehicle specifications and performance comparisons.',
+      applications: [
+        'Converting between imperial and metric speeds',
+        'International vehicle specification comparison',
+        'Performance data analysis',
+        'Speedometer calibration verification'
+      ],
+      tips: [
+        '1 MPH = 1.609344 KPH',
+        'Most countries use KPH except US and UK',
+        'Racing often uses MPH in America',
+        'Consider measurement accuracy in conversions'
+      ],
+      relatedTools: ['tire-speed-calculator', 'rpm-calculator']
+    },
+    relatedTools: ['tire-speed-calculator', 'rpm-calculator'],
+    popularityScore: 85,
+    icon: '🏃'
+  },
+  {
+    id: 'temperature-converter',
+    name: 'Temperature Converter',
+    description: 'Convert between Fahrenheit, Celsius, and other temperature units',
+    category: 'auto',
+    subcategory: 'fluids',
+    keywords: ['temperature', 'converter', 'fahrenheit', 'celsius', 'kelvin'],
+    path: '/auto/temperature-converter',
+    isActive: true,
+    searchVolume: 9500,
+    difficulty: 'beginner',
+    safetyLevel: 'low',
+    educationalContent: {
+      theory: 'Temperature conversion is crucial for automotive applications, especially when dealing with international specifications, engine tuning, and fluid management.',
+      applications: [
+        'Converting thermostat ratings',
+        'Engine operating temperature analysis',
+        'Coolant and oil temperature monitoring',
+        'International specification comparison'
+      ],
+      tips: [
+        'Engine operating temp typically 180-220°F (82-104°C)',
+        'Oil temperature should stay below 250°F (121°C)',
+        'Coolant boiling point varies with pressure',
+        'Consider altitude effects on boiling points'
+      ],
+      relatedTools: ['fluid-weight-calculator']
+    },
+    relatedTools: ['fluid-weight-calculator'],
+    popularityScore: 70,
+    icon: '🌡️'
+  },
+  {
+    id: 'tire-calculator',
+    name: 'Tire Calculator',
+    description: 'Calculate tire dimensions, revolutions per mile, and size comparisons',
+    category: 'auto',
+    subcategory: 'drivetrain',
+    keywords: ['tire', 'calculator', 'diameter', 'revolutions', 'size', 'comparison'],
+    path: '/auto/tire-calculator',
+    isActive: true,
+    searchVolume: 7800,
+    difficulty: 'beginner',
+    safetyLevel: 'low',
+    educationalContent: {
+      theory: 'Tire calculations involve diameter, circumference, and revolutions per mile. These affect speedometer accuracy, gear ratios, and vehicle performance.',
+      applications: [
+        'Calculating tire revolutions per mile',
+        'Comparing different tire sizes',
+        'Speedometer correction calculations',
+        'Performance impact analysis'
+      ],
+      tips: [
+        'Larger tires reduce engine RPM at speed',
+        'Smaller tires increase acceleration',
+        'Plus-sizing affects ride and handling',
+        'Consider load and speed ratings'
+      ],
+      relatedTools: ['tire-speed-calculator', 'gear-ratio-calculator']
+    },
+    relatedTools: ['tire-speed-calculator', 'gear-ratio-calculator'],
+    popularityScore: 60,
+    icon: '🛞'
+  },
+  {
+    id: 'weight-converter',
+    name: 'Weight Converter',
+    description: 'Convert between pounds, kilograms, ounces, and grams',
+    category: 'auto',
+    subcategory: 'fluids',
+    keywords: ['weight', 'converter', 'pounds', 'kilograms', 'ounces', 'grams'],
+    path: '/auto/weight-converter',
+    isActive: true,
+    searchVolume: 11000,
+    difficulty: 'beginner',
+    safetyLevel: 'low',
+    educationalContent: {
+      theory: 'Weight conversion between different measurement systems is essential for automotive applications, especially in performance calculations and international specifications.',
+      applications: [
+        'Converting vehicle weights between systems',
+        'Parts weight comparison',
+        'Performance calculations',
+        'International specification analysis'
+      ],
+      tips: [
+        '1 pound = 0.453592 kilograms',
+        '1 kilogram = 2.20462 pounds',
+        'Racing often focuses on weight reduction',
+        'Consider weight distribution in modifications'
+      ],
+      relatedTools: ['power-to-weight-calculator', 'fluid-weight-calculator']
+    },
+    relatedTools: ['power-to-weight-calculator', 'fluid-weight-calculator'],
+    popularityScore: 80,
+    icon: '⚖️'
   }
 ];
 
