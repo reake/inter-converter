@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { AUTOMOTIVE_TOOLS_CONFIG } from '@/config/automotive-tools';
+import { getAutoTools, getPopularTools } from '@/config/tools';
 
 
 
@@ -56,11 +56,53 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function AutomotivePage() {
-  const engineTools = AUTOMOTIVE_TOOLS_CONFIG.filter(tool => tool.subcategory === 'engine');
-  const drivetrainTools = AUTOMOTIVE_TOOLS_CONFIG.filter(tool => tool.subcategory === 'drivetrain');
-  const performanceTools = AUTOMOTIVE_TOOLS_CONFIG.filter(tool => tool.subcategory === 'performance');
-  const fluidTools = AUTOMOTIVE_TOOLS_CONFIG.filter(tool => tool.subcategory === 'fluids');
+export default function AutoPage() {
+  const allAutoTools = getAutoTools();
+  
+  // Get popular tools (top 6 by search volume)
+  const popularTools = getPopularTools().filter(tool => tool.category === 'auto').slice(0, 6);
+
+  // Get tools by category
+  const engineTools = allAutoTools.filter(tool => 
+    tool.keywords.some(keyword => 
+      keyword.includes('engine') || 
+      keyword.includes('horsepower') || 
+      keyword.includes('compression') ||
+      keyword.includes('carburetor')
+    )
+  );
+  
+  const transmissionTools = allAutoTools.filter(tool => 
+    tool.keywords.some(keyword => 
+      keyword.includes('gear') || 
+      keyword.includes('transmission') ||
+      keyword.includes('rpm')
+    )
+  );
+  
+  const performanceTools = allAutoTools.filter(tool => 
+    tool.keywords.some(keyword => 
+      keyword.includes('performance') || 
+      keyword.includes('tuning') ||
+      keyword.includes('dyno')
+    )
+  );
+  
+  const drivetrainTools = allAutoTools.filter(tool => 
+    tool.keywords.some(keyword => 
+      keyword.includes('drivetrain') || 
+      keyword.includes('differential') ||
+      keyword.includes('axle')
+    )
+  );
+  
+  const fluidTools = allAutoTools.filter(tool => 
+    tool.keywords.some(keyword => 
+      keyword.includes('fluid') || 
+      keyword.includes('oil') ||
+      keyword.includes('coolant')
+    )
+  );
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
@@ -71,7 +113,7 @@ export default function AutomotivePage() {
     }
   };
 
-  const ToolCard = ({ tool }: { tool: typeof AUTOMOTIVE_TOOLS_CONFIG[0] }) => (
+  const ToolCard = ({ tool }: { tool: any }) => (
     <Link href={tool.path} className="block group">
       <Card className="h-full hover:shadow-xl transition-all duration-300 group-hover:scale-[1.02] border-0 shadow-md bg-gradient-to-br from-white to-gray-50">
         <CardHeader className="pb-3">

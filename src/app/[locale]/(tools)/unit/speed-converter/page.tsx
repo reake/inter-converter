@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import ToolLayout from '@/components/layout/ToolLayout';
+import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import { SpeedConverter } from '@/components/converters/unit/SpeedConverter';
 import { getSEOConfigByToolId } from '@/config/seo-tools';
 

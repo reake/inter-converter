@@ -5,56 +5,53 @@ import Head from 'next/head';
 interface SEOHeadProps {
   title: string;
   description: string;
-  keywords: string[];
+  keywords?: string[];
   canonicalUrl?: string;
-  ogImage?: string;
-  structuredData?: object;
   lang?: string;
+  structuredData?: object;
+  ogImage?: string;
+  ogType?: string;
 }
 
 export default function SEOHead({
   title,
   description,
-  keywords,
+  keywords = [],
   canonicalUrl,
-  ogImage = '/og-image.jpg',
+  lang = 'en',
   structuredData,
-  lang = 'en'
+  ogImage = '/icons/icon-512x512.png',
+  ogType = 'website'
 }: SEOHeadProps) {
-  const fullTitle = `${title} | InterConverter - Free Online Conversion Tools`;
+  const fullTitle = title.includes('InterConverter') ? title : `${title} | InterConverter`;
   
   return (
     <Head>
-      {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
+      {keywords.length > 0 && (
+        <meta name="keywords" content={keywords.join(', ')} />
+      )}
       <meta name="robots" content="index, follow" />
-      <meta name="language" content={lang} />
-      <meta name="author" content="InterConverter" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta httpEquiv="Content-Language" content={lang} />
       
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      
-      {/* Open Graph Meta Tags */}
+      {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={ogType} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:locale" content={lang === 'zh' ? 'zh_CN' : 'en_US'} />
       {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-      <meta property="og:site_name" content="InterConverter" />
-      <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'zh_CN'} />
       
-      {/* Twitter Card Meta Tags */}
+      {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
       
-      {/* Additional SEO Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="format-detection" content="telephone=no" />
+      {/* Canonical URL */}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       
       {/* Structured Data */}
       {structuredData && (
@@ -66,9 +63,14 @@ export default function SEOHead({
         />
       )}
       
-      {/* Preconnect for Performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      {/* Additional SEO meta tags */}
+      <meta name="author" content="InterConverter" />
+      <meta name="generator" content="Next.js" />
+      <meta name="theme-color" content="#2563eb" />
+      
+      {/* Favicon */}
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
     </Head>
   );
 }

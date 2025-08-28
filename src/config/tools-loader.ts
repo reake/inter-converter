@@ -158,6 +158,7 @@ export const getFeaturedToolsByCategory = (): Record<ToolCategory, ToolConfig[]>
   return featured as Record<ToolCategory, ToolConfig[]>;
 };
 
+
 // Export individual category configs for backward compatibility
 export {
   UNIT_TOOLS_CONFIG,

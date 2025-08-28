@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import ToolLayout from '@/components/layout/ToolLayout';
-import CountdownTimer from '@/components/converters/time/CountdownTimer';
+import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { CountdownTimer } from '@/components/converters/time/CountdownTimer';
 import { getSEOConfigByToolId } from '@/config/seo-tools';
 
 const seoConfig = getSEOConfigByToolId('countdown-timer');
@@ -25,8 +25,8 @@ export default function CountdownTimerPage() {
       title={metadata.title as string}
       description={metadata.description as string}
       keywords={seoConfig?.keywords || []}
-      canonicalUrl={`https://interconverter.com${seoConfig?.canonicalPath}`}
-      structuredData={seoConfig?.structuredData}
+      toolId="countdown-timer"
+      category="time"
     >
       <div className="space-y-6">
         <div className="text-center mb-8">

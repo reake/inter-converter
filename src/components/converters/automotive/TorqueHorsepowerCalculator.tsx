@@ -8,11 +8,6 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { PerformanceDisplay } from '@/components/converters/automotive/PerformanceDisplay';
-import { AutoTermTooltip } from '@/components/converters/automotive/EducationalTooltip';
-import { EngineFormulas } from '@/lib/automotive/engine-formulas';
-import { AutomotiveValidator } from '@/lib/automotive/automotive-validators';
-import { AutomotiveResult, Recommendation } from '@/types/automotive';
 import { CalculatorIcon, ZapIcon, RotateCcwIcon, GaugeIcon } from 'lucide-react';
 
 interface HPToTorqueState {
@@ -30,7 +25,7 @@ interface HPTorqueToRPMState {
   torque: string;
 }
 
-export function TorqueHorsepowerCalculator() {
+export default function TorqueHorsepowerCalculator() {
   const [hpToTorqueState, setHpToTorqueState] = useState<HPToTorqueState>({
     horsepower: '',
     rpm: ''
@@ -79,22 +74,12 @@ export function TorqueHorsepowerCalculator() {
     const newErrors: string[] = [];
 
     // Validation
-    if (!horsepower || isNaN(horsepower)) {
-      newErrors.push('Please enter a valid horsepower value');
-    } else {
-      const validation = AutomotiveValidator.validateHorsepower(horsepower);
-      if (!validation.isValid) {
-        newErrors.push(validation.error!);
-      }
+    if (!horsepower || isNaN(horsepower) || horsepower < 50 || horsepower > 2000) {
+      newErrors.push('Please enter a valid horsepower value (50-2000 HP)');
     }
 
-    if (!rpm || isNaN(rpm)) {
-      newErrors.push('Please enter a valid RPM value');
-    } else {
-      const validation = AutomotiveValidator.validateRPM(rpm);
-      if (!validation.isValid) {
-        newErrors.push(validation.error!);
-      }
+    if (!rpm || isNaN(rpm) || rpm < 500 || rpm > 10000) {
+      newErrors.push('Please enter a valid RPM value (500-10000 RPM)');
     }
 
     if (newErrors.length > 0) {
@@ -102,7 +87,7 @@ export function TorqueHorsepowerCalculator() {
       return;
     }
 
-    const torque = EngineFormulas.calculateTorque(horsepower, rpm);
+    const torque = (horsepower * 5252) / rpm;
     setResults(prev => ({ ...prev, torque }));
   }, [hpToTorqueState]);
 
@@ -112,22 +97,12 @@ export function TorqueHorsepowerCalculator() {
     const newErrors: string[] = [];
 
     // Validation
-    if (!torque || isNaN(torque)) {
-      newErrors.push('Please enter a valid torque value');
-    } else {
-      const validation = AutomotiveValidator.validateTorque(torque);
-      if (!validation.isValid) {
-        newErrors.push(validation.error!);
-      }
+    if (!torque || isNaN(torque) || torque < 50 || torque > 1500) {
+      newErrors.push('Please enter a valid torque value (50-1500 lb-ft)');
     }
 
-    if (!rpm || isNaN(rpm)) {
-      newErrors.push('Please enter a valid RPM value');
-    } else {
-      const validation = AutomotiveValidator.validateRPM(rpm);
-      if (!validation.isValid) {
-        newErrors.push(validation.error!);
-      }
+    if (!rpm || isNaN(rpm) || rpm < 500 || rpm > 10000) {
+      newErrors.push('Please enter a valid RPM value (500-10000 RPM)');
     }
 
     if (newErrors.length > 0) {
@@ -135,7 +110,7 @@ export function TorqueHorsepowerCalculator() {
       return;
     }
 
-    const horsepower = EngineFormulas.calculateHorsepower(torque, rpm);
+    const horsepower = (torque * rpm) / 5252;
     setResults(prev => ({ ...prev, horsepower }));
   }, [torqueToHPState]);
 
@@ -145,22 +120,12 @@ export function TorqueHorsepowerCalculator() {
     const newErrors: string[] = [];
 
     // Validation
-    if (!horsepower || isNaN(horsepower)) {
-      newErrors.push('Please enter a valid horsepower value');
-    } else {
-      const validation = AutomotiveValidator.validateHorsepower(horsepower);
-      if (!validation.isValid) {
-        newErrors.push(validation.error!);
-      }
+    if (!horsepower || isNaN(horsepower) || horsepower < 50 || horsepower > 2000) {
+      newErrors.push('Please enter a valid horsepower value (50-2000 HP)');
     }
 
-    if (!torque || isNaN(torque)) {
-      newErrors.push('Please enter a valid torque value');
-    } else {
-      const validation = AutomotiveValidator.validateTorque(torque);
-      if (!validation.isValid) {
-        newErrors.push(validation.error!);
-      }
+    if (!torque || isNaN(torque) || torque < 50 || torque > 1500) {
+      newErrors.push('Please enter a valid torque value (50-1500 lb-ft)');
     }
 
     if (newErrors.length > 0) {
@@ -168,186 +133,10 @@ export function TorqueHorsepowerCalculator() {
       return;
     }
 
-    const rpm = EngineFormulas.calculateRPM(horsepower, torque);
+    const rpm = (horsepower * 5252) / torque;
     setResults(prev => ({ ...prev, rpm }));
   }, [hpTorqueToRPMState]);
 
-  const getDisplayResults = (): AutomotiveResult[] => {
-    const displayResults: AutomotiveResult[] = [];
-
-    if (activeTab === 'hp-to-torque' && results.torque !== undefined) {
-      displayResults.push(
-        {
-          label: 'Torque',
-          value: results.torque,
-          unit: 'lb-ft',
-          precision: 1,
-          category: 'primary'
-        },
-        {
-          label: 'Horsepower',
-          value: parseFloat(hpToTorqueState.horsepower),
-          unit: 'HP',
-          precision: 1,
-          category: 'secondary'
-        },
-        {
-          label: 'RPM',
-          value: parseFloat(hpToTorqueState.rpm),
-          unit: 'RPM',
-          precision: 0,
-          category: 'secondary'
-        }
-      );
-
-      // Show if this is the 5252 RPM crossover point
-      const rpm = parseFloat(hpToTorqueState.rpm);
-      if (Math.abs(rpm - 5252) < 50) {
-        displayResults.push({
-          label: 'Special Note',
-          value: 'HP = Torque at 5252 RPM',
-          unit: '',
-          precision: 0,
-          category: 'derived'
-        });
-      }
-    }
-
-    if (activeTab === 'torque-to-hp' && results.horsepower !== undefined) {
-      displayResults.push(
-        {
-          label: 'Horsepower',
-          value: results.horsepower,
-          unit: 'HP',
-          precision: 1,
-          category: 'primary'
-        },
-        {
-          label: 'Torque',
-          value: parseFloat(torqueToHPState.torque),
-          unit: 'lb-ft',
-          precision: 1,
-          category: 'secondary'
-        },
-        {
-          label: 'RPM',
-          value: parseFloat(torqueToHPState.rpm),
-          unit: 'RPM',
-          precision: 0,
-          category: 'secondary'
-        }
-      );
-
-      // Show if this is the 5252 RPM crossover point
-      const rpm = parseFloat(torqueToHPState.rpm);
-      if (Math.abs(rpm - 5252) < 50) {
-        displayResults.push({
-          label: 'Special Note',
-          value: 'HP = Torque at 5252 RPM',
-          unit: '',
-          precision: 0,
-          category: 'derived'
-        });
-      }
-    }
-
-    if (activeTab === 'hp-torque-to-rpm' && results.rpm !== undefined) {
-      displayResults.push(
-        {
-          label: 'RPM',
-          value: results.rpm,
-          unit: 'RPM',
-          precision: 0,
-          category: 'primary'
-        },
-        {
-          label: 'Horsepower',
-          value: parseFloat(hpTorqueToRPMState.horsepower),
-          unit: 'HP',
-          precision: 1,
-          category: 'secondary'
-        },
-        {
-          label: 'Torque',
-          value: parseFloat(hpTorqueToRPMState.torque),
-          unit: 'lb-ft',
-          precision: 1,
-          category: 'secondary'
-        }
-      );
-
-      // Show if this is the 5252 RPM crossover point
-      if (Math.abs(results.rpm - 5252) < 50) {
-        displayResults.push({
-          label: 'Special Note',
-          value: 'HP = Torque at 5252 RPM',
-          unit: '',
-          precision: 0,
-          category: 'derived'
-        });
-      }
-    }
-
-    return displayResults;
-  };
-
-  const getRecommendations = (): Recommendation[] => {
-    const recommendations: Recommendation[] = [];
-
-    // General recommendations based on the calculation type
-    if (activeTab === 'hp-to-torque' && results.torque !== undefined) {
-      const hp = parseFloat(hpToTorqueState.horsepower);
-      const torque = results.torque;
-      const rpm = parseFloat(hpToTorqueState.rpm);
-
-      if (torque > hp) {
-        recommendations.push({
-          type: 'performance',
-          message: 'High torque relative to horsepower - excellent for low-end power and acceleration',
-          priority: 'medium'
-        });
-      }
-
-      if (rpm > 6000) {
-        recommendations.push({
-          type: 'performance',
-          message: 'High RPM operation - ensure engine components can handle sustained high RPM',
-          priority: 'medium'
-        });
-      }
-    }
-
-    if (activeTab === 'torque-to-hp' && results.horsepower !== undefined) {
-      const torque = parseFloat(torqueToHPState.torque);
-      const hp = results.horsepower;
-      const rpm = parseFloat(torqueToHPState.rpm);
-
-      if (hp > torque) {
-        recommendations.push({
-          type: 'performance',
-          message: 'High horsepower relative to torque - good for high RPM performance',
-          priority: 'medium'
-        });
-      }
-
-      if (rpm < 3000 && hp > 300) {
-        recommendations.push({
-          type: 'performance',
-          message: 'High horsepower at low RPM indicates excellent torque production',
-          priority: 'low'
-        });
-      }
-    }
-
-    // Universal recommendations
-    recommendations.push({
-      type: 'performance',
-      message: 'Remember: Torque determines acceleration feel, horsepower determines top speed capability',
-      priority: 'low'
-    });
-
-    return recommendations;
-  };
 
   const commonExamples = [
     { name: 'Small Block Chevy 350', hp: 300, torque: 350, rpm: 4500 },
@@ -391,10 +180,7 @@ export function TorqueHorsepowerCalculator() {
             <TabsContent value="hp-to-torque" className="space-y-4">
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="space-y-2">
-                  <Label htmlFor="hp1" className="flex items-center gap-2">
-                    Horsepower *
-                    <AutoTermTooltip termKey="powerToWeight" triggerText="?" />
-                  </Label>
+                  <Label htmlFor="hp1">Horsepower *</Label>
                   <Input
                     id="hp1"
                     type="number"
@@ -592,13 +378,34 @@ export function TorqueHorsepowerCalculator() {
       </Card>
 
       {/* Results */}
-      {getDisplayResults().length > 0 && (
-        <PerformanceDisplay
-          results={getDisplayResults()}
-          recommendations={getRecommendations()}
-          title="Torque & Horsepower Results"
-          description="Your torque and horsepower calculation results"
-        />
+      {(results.torque !== undefined || results.horsepower !== undefined || results.rpm !== undefined) && (
+        <Card>
+          <CardHeader>
+            <CardTitle>Calculation Results</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid gap-4 md:grid-cols-3">
+              {results.torque !== undefined && (
+                <div className="p-4 bg-blue-50 rounded-lg">
+                  <p className="text-sm text-blue-600">Torque</p>
+                  <p className="text-2xl font-bold text-blue-800">{results.torque.toFixed(1)} lb-ft</p>
+                </div>
+              )}
+              {results.horsepower !== undefined && (
+                <div className="p-4 bg-green-50 rounded-lg">
+                  <p className="text-sm text-green-600">Horsepower</p>
+                  <p className="text-2xl font-bold text-green-800">{results.horsepower.toFixed(1)} HP</p>
+                </div>
+              )}
+              {results.rpm !== undefined && (
+                <div className="p-4 bg-purple-50 rounded-lg">
+                  <p className="text-sm text-purple-600">RPM</p>
+                  <p className="text-2xl font-bold text-purple-800">{results.rpm.toFixed(0)} RPM</p>
+                </div>
+              )}
+            </div>
+          </CardContent>
+        </Card>
       )}
 
       {/* Information Cards */}

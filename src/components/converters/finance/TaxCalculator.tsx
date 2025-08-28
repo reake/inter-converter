@@ -75,7 +75,7 @@ const STANDARD_DEDUCTIONS: Record<FilingStatus, number> = {
   headOfHousehold: 21900
 };
 
-export function TaxCalculator() {
+export default function TaxCalculator() {
   const [income, setIncome] = useState('75000');
   const [filingStatus, setFilingStatus] = useState<FilingStatus>('single');
   const [deductionType, setDeductionType] = useState<'standard' | 'itemized'>('standard');

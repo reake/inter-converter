@@ -47,7 +47,7 @@ interface ExchangeRate {
   lastUpdated: Date;
 }
 
-export function CurrencyConverter() {
+export default function CurrencyConverter() {
   const [amount, setAmount] = useState('1');
   const [fromCurrency, setFromCurrency] = useState('USD');
   const [toCurrency, setToCurrency] = useState('EUR');

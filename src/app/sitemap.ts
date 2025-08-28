@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { TOOLS_CONFIG, TOOL_CATEGORIES } from '@/config/tools';
+import { TOOLS_CONFIG } from '@/config/tools';
 import { routing } from '@/i18n/routing';
 
 // Static export configuration
@@ -32,7 +32,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   // Category pages
-  const categoryPages: MetadataRoute.Sitemap = Object.keys(TOOL_CATEGORIES).map(category => ({
+  const categories = ['unit', 'time', 'finance', 'auto', 'color', 'health', 'media'];
+  const categoryPages: MetadataRoute.Sitemap = categories.map(category => ({
     url: `${baseUrl}/${category}`,
     lastModified: currentDate,
     changeFrequency: 'weekly' as const,

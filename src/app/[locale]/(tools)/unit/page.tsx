@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { UNIT_TOOLS_CONFIG } from '@/config/unit-tools';
+import { getUnitTools, getPopularTools } from '@/config/tools';
 import { ArrowRight, TrendingUp, Users, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -29,71 +29,123 @@ export const metadata: Metadata = {
     title: 'Unit & Measurement Converters | InterConverter',
     description: 'Convert between different units of measurement with our comprehensive collection of free online conversion tools.',
     type: 'website',
+    url: 'https://interconverter.com/unit'
   },
   alternates: {
     canonical: '/unit'
   }
 };
 
-const toolCategories = [
-  {
-    name: 'Length & Distance',
-    description: 'Convert between meters, feet, inches, miles, and more',
-    tools: UNIT_TOOLS_CONFIG.filter(tool => 
-      tool.id.includes('length') || tool.id.includes('feet') || tool.id.includes('meter') || tool.id.includes('inch') || tool.id.includes('cm')
-    ),
-    icon: '📏',
-    color: 'bg-blue-50 border-blue-200'
-  },
-  {
-    name: 'Weight & Mass',
-    description: 'Convert between kilograms, pounds, grams, ounces, and more',
-    tools: UNIT_TOOLS_CONFIG.filter(tool => 
-      tool.id.includes('weight') || tool.id.includes('kg') || tool.id.includes('pound')
-    ),
-    icon: '⚖️',
-    color: 'bg-green-50 border-green-200'
-  },
-  {
-    name: 'Temperature',
-    description: 'Convert between Celsius, Fahrenheit, and Kelvin',
-    tools: UNIT_TOOLS_CONFIG.filter(tool => tool.id.includes('temperature')),
-    icon: '🌡️',
-    color: 'bg-red-50 border-red-200'
-  },
-  {
-    name: 'Area & Volume',
-    description: 'Convert area and volume measurements',
-    tools: UNIT_TOOLS_CONFIG.filter(tool => 
-      tool.id.includes('area') || tool.id.includes('volume')
-    ),
-    icon: '📐',
-    color: 'bg-purple-50 border-purple-200'
-  },
-  {
-    name: 'Speed & Motion',
-    description: 'Convert between different speed and velocity units',
-    tools: UNIT_TOOLS_CONFIG.filter(tool => tool.id.includes('speed')),
-    icon: '🏃',
-    color: 'bg-orange-50 border-orange-200'
-  },
-  {
-    name: 'Engineering Units',
-    description: 'Convert pressure, energy, power, and data storage units',
-    tools: UNIT_TOOLS_CONFIG.filter(tool => 
-      tool.id.includes('pressure') || tool.id.includes('energy') || 
-      tool.id.includes('power') || tool.id.includes('data')
-    ),
-    icon: '🔧',
-    color: 'bg-indigo-50 border-indigo-200'
-  }
-];
+export default function UnitPage() {
+  const allUnitTools = getUnitTools();
+  
+  // Get popular tools (top 6 by search volume)
+  const popularTools = getPopularTools().filter(tool => tool.category === 'unit').slice(0, 6);
 
-const popularTools = UNIT_TOOLS_CONFIG
-  .sort((a, b) => (b.searchVolume || 0) - (a.searchVolume || 0))
-  .slice(0, 6);
+  // Get tools by keywords/type
+  const lengthTools = allUnitTools.filter(tool => 
+    tool.keywords.some(keyword => keyword.includes('length') || keyword.includes('meter') || keyword.includes('feet') || keyword.includes('inch'))
+  );
+  const weightTools = allUnitTools.filter(tool => 
+    tool.keywords.some(keyword => keyword.includes('weight') || keyword.includes('mass') || keyword.includes('pound') || keyword.includes('kilogram'))
+  );
+  const temperatureTools = allUnitTools.filter(tool => 
+    tool.keywords.some(keyword => keyword.includes('temperature') || keyword.includes('celsius') || keyword.includes('fahrenheit'))
+  );
+  const areaTools = allUnitTools.filter(tool => 
+    tool.keywords.some(keyword => keyword.includes('area') || keyword.includes('square'))
+  );
+  const volumeTools = allUnitTools.filter(tool => 
+    tool.keywords.some(keyword => keyword.includes('volume') || keyword.includes('liter') || keyword.includes('gallon'))
+  );
+  const speedTools = allUnitTools.filter(tool => 
+    tool.keywords.some(keyword => keyword.includes('speed') || keyword.includes('velocity'))
+  );
+  const pressureTools = allUnitTools.filter(tool => 
+    tool.keywords.some(keyword => keyword.includes('pressure'))
+  );
+  const energyTools = allUnitTools.filter(tool => 
+    tool.keywords.some(keyword => keyword.includes('energy'))
+  );
+  const powerTools = allUnitTools.filter(tool => 
+    tool.keywords.some(keyword => keyword.includes('power'))
+  );
+  const dataTools = allUnitTools.filter(tool => 
+    tool.keywords.some(keyword => keyword.includes('data') || keyword.includes('byte'))
+  );
 
-export default function UnitConvertersPage() {
+  const toolCategories = [
+    {
+      name: 'Length & Distance',
+      description: 'Convert between meters, feet, inches, miles, and more',
+      tools: lengthTools,
+      icon: '📏',
+      color: 'bg-blue-50 border-blue-200'
+    },
+    {
+      name: 'Weight & Mass',
+      description: 'Convert between kilograms, pounds, grams, ounces, and more',
+      tools: weightTools,
+      icon: '⚖️',
+      color: 'bg-green-50 border-green-200'
+    },
+    {
+      name: 'Temperature',
+      description: 'Convert between Celsius, Fahrenheit, and Kelvin',
+      tools: temperatureTools,
+      icon: '🌡️',
+      color: 'bg-red-50 border-red-200'
+    },
+    {
+      name: 'Area & Volume',
+      description: 'Convert area and volume measurements',
+      tools: [...areaTools, ...volumeTools],
+      icon: '📐',
+      color: 'bg-purple-50 border-purple-200'
+    },
+    {
+      name: 'Speed & Motion',
+      description: 'Convert between different speed and velocity units',
+      tools: speedTools,
+      icon: '🏃',
+      color: 'bg-orange-50 border-orange-200'
+    },
+    {
+      name: 'Engineering Units',
+      description: 'Convert pressure, energy, power, and data storage units',
+      tools: [...pressureTools, ...energyTools, ...powerTools, ...dataTools],
+      icon: '🔧',
+      color: 'bg-indigo-50 border-indigo-200'
+    }
+  ];
+
+  const ToolCard = ({ tool }: { tool: any }) => (
+    <Link key={tool.id} href={tool.path} className="group">
+      <Card className="h-full hover:shadow-lg transition-all duration-200 border-2 hover:border-primary/20">
+        <CardHeader className="pb-3">
+          <div className="flex items-center justify-between">
+            <div className="text-2xl">{tool.icon}</div>
+            <Badge variant="secondary" className="text-xs">
+              {(tool.searchVolume || 0).toLocaleString()} searches/mo
+            </Badge>
+          </div>
+          <CardTitle className="text-lg group-hover:text-primary transition-colors">
+            {tool.name}
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <CardDescription className="text-sm mb-3">
+            {tool.description}
+          </CardDescription>
+          <div className="flex items-center text-primary text-sm font-medium">
+            Convert Now
+            <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
+          </div>
+        </CardContent>
+      </Card>
+    </Link>
+  );
+
   return (
     <div className="container mx-auto px-4 py-8 max-w-7xl">
       {/* Hero Section */}

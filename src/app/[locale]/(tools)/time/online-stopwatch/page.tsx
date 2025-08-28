@@ -1,32 +1,38 @@
 import { Metadata } from 'next';
-import ToolLayout from '@/components/layout/ToolLayout';
+import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
 import OnlineStopwatch from '@/components/converters/time/OnlineStopwatch';
-import { getSEOConfigByToolId } from '@/config/seo-tools';
 
-const seoConfig = getSEOConfigByToolId('online-stopwatch');
+// Force static generation
+export const dynamic = 'force-static';
 
-export const metadata: Metadata = {
-  title: seoConfig?.title || 'Online Stopwatch - Precision Timer | InterConverter',
-  description: seoConfig?.description || 'Accurate online stopwatch with lap timing. Perfect for sports, workouts, and precise time measurement with centisecond accuracy.',
-  keywords: seoConfig?.keywords?.join(', ') || 'stopwatch, online stopwatch, lap timer, precision timer, sports timer',
-  openGraph: {
-    title: seoConfig?.title || 'Online Stopwatch | InterConverter',
-    description: seoConfig?.description || 'Precision online stopwatch with lap timing',
-    type: 'website',
-  },
-  alternates: {
-    canonical: seoConfig?.canonicalPath || '/time/online-stopwatch'
-  }
-};
+export const metadata: Metadata = generateToolMetadata(
+  'Online Stopwatch',
+  'Accurate online stopwatch with lap timing. Perfect for sports, workouts, and precise time measurement with centisecond accuracy.',
+  'online-stopwatch',
+  ['stopwatch', 'online stopwatch', 'lap timer', 'precision timer', 'sports timer'],
+  'time'
+);
 
 export default function StopwatchPage() {
   return (
     <ToolLayout
-      title={metadata.title as string}
-      description={metadata.description as string}
-      keywords={seoConfig?.keywords || []}
-      canonicalUrl={`https://interconverter.com${seoConfig?.canonicalPath}`}
-      structuredData={seoConfig?.structuredData}
+      title="Online Stopwatch"
+      description="Accurate online stopwatch with lap timing. Perfect for sports, workouts, and precise time measurement with centisecond accuracy."
+      toolId="online-stopwatch"
+      category="time"
+      emoji="⏱️"
+      customHowToUse={[
+        "Click 'Start' to begin timing",
+        "Click 'Lap' to record lap times",
+        "Click 'Stop' to pause the timer",
+        "Click 'Reset' to clear all times"
+      ]}
+      customFeatures={[
+        "Centisecond precision timing",
+        "Lap time recording",
+        "Clean, easy-to-read display",
+        "Keyboard shortcuts support"
+      ]}
     >
       <OnlineStopwatch />
     </ToolLayout>

@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { COLOR_TOOLS_CONFIG } from '@/config/color-tools';
+import { getColorTools } from '@/config/tools';
 import { ArrowRight, TrendingUp, Users, Star, Palette } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -38,7 +38,7 @@ const toolCategories = [
   {
     name: 'Color Conversion',
     description: 'Convert between different color formats and codes',
-    tools: COLOR_TOOLS_CONFIG.filter(tool => 
+    tools: getColorTools().filter(tool => 
       tool.id.includes('hex') || tool.id.includes('rgb') || tool.id.includes('hsl')
     ),
     icon: '🎨',
@@ -47,7 +47,7 @@ const toolCategories = [
   {
     name: 'Color Selection',
     description: 'Pick and choose colors with advanced tools',
-    tools: COLOR_TOOLS_CONFIG.filter(tool => 
+    tools: getColorTools().filter(tool => 
       tool.id.includes('picker') || tool.id.includes('palette')
     ),
     icon: '🎯',
@@ -56,7 +56,7 @@ const toolCategories = [
   {
     name: 'Design Generation',
     description: 'Create gradients and color schemes',
-    tools: COLOR_TOOLS_CONFIG.filter(tool => 
+    tools: getColorTools().filter(tool => 
       tool.id.includes('gradient') || tool.id.includes('generator')
     ),
     icon: '🌅',
@@ -65,7 +65,7 @@ const toolCategories = [
   {
     name: 'Accessibility',
     description: 'Ensure your designs meet accessibility standards',
-    tools: COLOR_TOOLS_CONFIG.filter(tool => 
+    tools: getColorTools().filter(tool => 
       tool.id.includes('contrast') || tool.id.includes('accessibility')
     ),
     icon: '♿',
@@ -73,11 +73,26 @@ const toolCategories = [
   }
 ];
 
-const popularTools = COLOR_TOOLS_CONFIG
-  .sort((a, b) => (b.searchVolume || 0) - (a.searchVolume || 0))
-  .slice(0, 4);
-
 export default function ColorToolsPage() {
+  const colorTools = getColorTools();
+  
+  // Popular tools (high search volume)
+  const popularTools = colorTools.filter(tool => (tool.searchVolume || 0) > 50000);
+  
+  // Essential tools (most commonly used)
+  const essentialTools = colorTools.filter(tool => (tool.difficulty || 1) === 1);
+  
+  // Advanced tools (for professionals)
+  const advancedTools = colorTools.filter(tool => (tool.difficulty || 1) >= 2);
+  
+  // New and trending tools
+  const trendingTools = colorTools.filter(tool => tool.isActive);
+
+  // All tools sorted by popularity
+  const allTools = colorTools
+    .sort((a, b) => (b.searchVolume || 0) - (a.searchVolume || 0))
+    .slice(0, 4);
+
   return (
     <div className="container mx-auto px-4 py-8 max-w-7xl">
       {/* Hero Section */}

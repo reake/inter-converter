@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { FINANCE_TOOLS_CONFIG, FINANCE_CATEGORIES, getFinanceToolsByCategory, getPopularFinanceTools } from '@/config/finance-tools';
+import { getFinanceTools, getToolsByCategory, getPopularTools, FINANCE_TOOLS_CONFIG } from '@/config/tools';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -56,14 +56,33 @@ export async function generateMetadata(): Promise<Metadata> {
 
 
 export default function FinancePage() {
-  const popularTools = getPopularFinanceTools(6);
-  const loanTools = getFinanceToolsByCategory('loans');
-  const mortgageTools = getFinanceToolsByCategory('mortgages');
-  const creditCardTools = getFinanceToolsByCategory('credit-cards');
-  const bankingTools = getFinanceToolsByCategory('banking');
-  const taxTools = getFinanceToolsByCategory('taxes');
-  const currencyTools = getFinanceToolsByCategory('currency');
-  const investmentTools = getFinanceToolsByCategory('investments');
+  const allFinanceTools = getFinanceTools();
+  const popularTools = getPopularTools().filter(tool => tool.category === 'finance').slice(0, 6);
+  
+  // Get tools by keywords/type (since we don't have subcategory)
+  const loanTools = allFinanceTools.filter(tool => 
+    tool.keywords.some(keyword => keyword.includes('loan')) || tool.name.toLowerCase().includes('loan')
+  );
+  const mortgageTools = allFinanceTools.filter(tool => 
+    tool.keywords.some(keyword => keyword.includes('mortgage')) || tool.name.toLowerCase().includes('mortgage')
+  );
+  const creditCardTools = allFinanceTools.filter(tool => 
+    tool.keywords.some(keyword => keyword.includes('credit')) || tool.name.toLowerCase().includes('credit')
+  );
+  const bankingTools = allFinanceTools.filter(tool => 
+    tool.keywords.some(keyword => keyword.includes('saving') || keyword.includes('bank')) || 
+    tool.name.toLowerCase().includes('saving') || tool.name.toLowerCase().includes('bank')
+  );
+  const taxTools = allFinanceTools.filter(tool => 
+    tool.keywords.some(keyword => keyword.includes('tax')) || tool.name.toLowerCase().includes('tax')
+  );
+  const currencyTools = allFinanceTools.filter(tool => 
+    tool.keywords.some(keyword => keyword.includes('currency')) || tool.name.toLowerCase().includes('currency')
+  );
+  const investmentTools = allFinanceTools.filter(tool => 
+    tool.keywords.some(keyword => keyword.includes('invest') || keyword.includes('stock') || keyword.includes('portfolio')) || 
+    tool.name.toLowerCase().includes('invest') || tool.name.toLowerCase().includes('stock')
+  );
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
@@ -74,7 +93,7 @@ export default function FinancePage() {
     }
   };
 
-  const ToolCard = ({ tool }: { tool: typeof FINANCE_TOOLS_CONFIG[0] }) => (
+  const ToolCard = ({ tool }: { tool: any }) => (
     <Link href={tool.path} className="block group">
       <Card className="h-full hover:shadow-xl transition-all duration-300 group-hover:scale-[1.02] border-0 shadow-md bg-gradient-to-br from-white to-gray-50">
         <CardHeader className="pb-3">
@@ -228,23 +247,25 @@ export default function FinancePage() {
             description="Browse tools by category"
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {FINANCE_CATEGORIES.map((category) => {
-              const categoryTools = getFinanceToolsByCategory(category.id);
-              return (
-                <Card key={category.id} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] text-center">
-                  <CardContent className="p-6">
-                    <div className={`inline-flex items-center justify-center w-16 h-16 ${category.color} text-white rounded-2xl mb-4`}>
-                      <span className="text-2xl">{category.icon}</span>
-                    </div>
-                    <h3 className="font-bold text-lg mb-2 text-gray-900">{category.name}</h3>
-                    <p className="text-sm text-gray-600 mb-3">{category.description}</p>
-                    <Badge className={`${category.color} text-white border-0`}>
-                      {categoryTools.length} Tools
-                    </Badge>
-                  </CardContent>
-                </Card>
-              );
-            })}
+            {[
+              { id: 'loans', name: 'Loans & Credit', description: 'Loan calculators and credit tools', icon: '💳', color: 'bg-blue-500', tools: loanTools },
+              { id: 'mortgages', name: 'Mortgages', description: 'Home loan and mortgage calculators', icon: '🏠', color: 'bg-green-500', tools: mortgageTools },
+              { id: 'investments', name: 'Investments', description: 'Investment and portfolio tools', icon: '📈', color: 'bg-purple-500', tools: investmentTools },
+              { id: 'banking', name: 'Banking', description: 'Savings and banking calculators', icon: '🏦', color: 'bg-indigo-500', tools: bankingTools }
+            ].map((category) => (
+              <Card key={category.id} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] text-center">
+                <CardContent className="p-6">
+                  <div className={`inline-flex items-center justify-center w-16 h-16 ${category.color} text-white rounded-2xl mb-4`}>
+                    <span className="text-2xl">{category.icon}</span>
+                  </div>
+                  <h3 className="font-bold text-lg mb-2 text-gray-900">{category.name}</h3>
+                  <p className="text-sm text-gray-600 mb-3">{category.description}</p>
+                  <Badge className={`${category.color} text-white border-0`}>
+                    {category.tools.length} Tools
+                  </Badge>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </section>
 

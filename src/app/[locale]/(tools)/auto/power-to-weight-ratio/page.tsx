@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import { PowerToWeightCalculator } from '@/components/converters/automotive/PowerToWeightCalculator';
+import PowerToWeightCalculator from '@/components/converters/automotive/PowerToWeightCalculator';
 
 
 

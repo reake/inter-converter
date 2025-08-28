@@ -23,7 +23,7 @@ interface AmortizationEntry {
   balance: number;
 }
 
-export function LoanCalculator() {
+export default function LoanCalculator() {
   const [loanAmount, setLoanAmount] = useState('300000');
   const [interestRate, setInterestRate] = useState('3.5');
   const [loanTerm, setLoanTerm] = useState('30');

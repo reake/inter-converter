@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { TIME_TOOLS_CONFIG } from '@/config/time-tools';
+import { getTimeTools } from '@/config/tools';
 import { ArrowRight, TrendingUp, Users, Star, Clock } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -34,41 +34,53 @@ export const metadata: Metadata = {
   }
 };
 
-const toolCategories = [
-  {
-    name: 'Time Conversion',
-    description: 'Convert timestamps, timezones, and time formats',
-    tools: TIME_TOOLS_CONFIG.filter(tool => 
-      tool.id.includes('timestamp') || tool.id.includes('timezone')
-    ),
-    icon: '🕐',
-    color: 'bg-blue-50 border-blue-200'
-  },
-  {
-    name: 'Date Calculations',
-    description: 'Calculate date differences, working days, and age',
-    tools: TIME_TOOLS_CONFIG.filter(tool => 
-      tool.id.includes('date') || tool.id.includes('age') || tool.id.includes('working')
-    ),
-    icon: '📅',
-    color: 'bg-green-50 border-green-200'
-  },
-  {
-    name: 'Timers & Clocks',
-    description: 'Countdown timers, stopwatch, and world clock',
-    tools: TIME_TOOLS_CONFIG.filter(tool => 
-      tool.id.includes('countdown') || tool.id.includes('stopwatch') || tool.id.includes('world')
-    ),
-    icon: '⏰',
-    color: 'bg-orange-50 border-orange-200'
-  }
-];
-
-const popularTools = TIME_TOOLS_CONFIG
-  .sort((a, b) => (b.searchVolume || 0) - (a.searchVolume || 0))
-  .slice(0, 6);
-
 export default function TimeToolsPage() {
+  const timeTools = getTimeTools();
+  
+  const toolCategories = [
+    {
+      name: 'Time Conversion',
+      description: 'Convert between different time formats and zones',
+      tools: timeTools.filter(tool => 
+        tool.id.includes('timestamp') || tool.id.includes('timezone')
+      ),
+      icon: '🌍',
+      color: 'bg-blue-50 border-blue-200'
+    },
+    {
+      name: 'Date Calculation',
+      description: 'Calculate dates, ages, and time differences',
+      tools: timeTools.filter(tool => 
+        tool.id.includes('date') || tool.id.includes('age')
+      ),
+      icon: '📅',
+      color: 'bg-green-50 border-green-200'
+    },
+    {
+      name: 'Time Tracking',
+      description: 'Timers, stopwatches, and countdown tools',
+      tools: timeTools.filter(tool => 
+        tool.id.includes('timer') || tool.id.includes('stopwatch') || tool.id.includes('countdown')
+      ),
+      icon: '⏱️',
+      color: 'bg-purple-50 border-purple-200'
+    }
+  ];
+  
+  // Popular tools (high search volume)
+  const popularTools = timeTools.filter(tool => (tool.searchVolume || 0) > 50000);
+  
+  // Essential tools (most commonly used)
+  const essentialTools = timeTools.filter(tool => (tool.difficulty || 1) === 1);
+  
+  // Advanced tools (for professionals)
+  const advancedTools = timeTools.filter(tool => (tool.difficulty || 1) >= 2);
+
+  // All tools sorted by popularity
+  const allTools = timeTools
+    .sort((a, b) => (b.searchVolume || 0) - (a.searchVolume || 0))
+    .slice(0, 4);
+
   return (
     <div className="container mx-auto px-4 py-8 max-w-7xl">
       {/* Hero Section */}
