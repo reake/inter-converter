@@ -17,7 +17,7 @@ const DATA_UNITS = {
   pb: { name: 'Petabyte (PB)', factor: 1024 * 1024 * 1024 * 1024 * 1024 }
 };
 
-export function DataConverter() {
+export default function DataConverter() {
   const [fromUnit, setFromUnit] = useState('gb');
   const [toUnit, setToUnit] = useState('mb');
   const [value, setValue] = useState('1');

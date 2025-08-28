@@ -2,274 +2,263 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { getToolsByCategory } from '@/config/tools';
+import { TIME_TOOLS_CONFIG } from '@/config/time-tools';
+import { ArrowRight, TrendingUp, Users, Star, Clock } from 'lucide-react';
 
+export const metadata: Metadata = {
+  title: 'Time & Date Tools - Free Online Converters & Calculators | InterConverter',
+  description: 'Professional time and date tools including timestamp converter, timezone converter, date calculator, age calculator, countdown timer, and world clock. Free online time conversion tools.',
+  keywords: [
+    'timestamp converter',
+    'timezone converter',
+    'date calculator',
+    'age calculator',
+    'countdown timer',
+    'world clock',
+    'unix timestamp',
+    'epoch converter',
+    'time zone conversion',
+    'date difference calculator',
+    'working days calculator',
+    'stopwatch online',
+    'time conversion tools',
+    'date tools'
+  ].join(', '),
+  openGraph: {
+    title: 'Time & Date Tools | InterConverter',
+    description: 'Professional time and date conversion tools for developers, businesses, and everyday use.',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/time'
+  }
+};
 
+const toolCategories = [
+  {
+    name: 'Time Conversion',
+    description: 'Convert timestamps, timezones, and time formats',
+    tools: TIME_TOOLS_CONFIG.filter(tool => 
+      tool.id.includes('timestamp') || tool.id.includes('timezone')
+    ),
+    icon: '🕐',
+    color: 'bg-blue-50 border-blue-200'
+  },
+  {
+    name: 'Date Calculations',
+    description: 'Calculate date differences, working days, and age',
+    tools: TIME_TOOLS_CONFIG.filter(tool => 
+      tool.id.includes('date') || tool.id.includes('age') || tool.id.includes('working')
+    ),
+    icon: '📅',
+    color: 'bg-green-50 border-green-200'
+  },
+  {
+    name: 'Timers & Clocks',
+    description: 'Countdown timers, stopwatch, and world clock',
+    tools: TIME_TOOLS_CONFIG.filter(tool => 
+      tool.id.includes('countdown') || tool.id.includes('stopwatch') || tool.id.includes('world')
+    ),
+    icon: '⏰',
+    color: 'bg-orange-50 border-orange-200'
+  }
+];
 
+const popularTools = TIME_TOOLS_CONFIG
+  .sort((a, b) => (b.searchVolume || 0) - (a.searchVolume || 0))
+  .slice(0, 6);
 
-// Force static generation
-export const dynamic = 'force-static';
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'Time & Date Calculators - Timestamp, Countdown, Date Difference Tools',
-    description: 'Comprehensive collection of time and date Converters tools. Convert timestamps, create countdown timers, and calculate date differences.',
-    keywords: [
-      'time calculators',
-      'date calculators',
-      'timestamp converter',
-      'countdown timer',
-      'date difference calculator',
-      'time zone converter'
-    ],
-    openGraph: {
-      title: 'Time & Date Calculators',
-      description: 'Professional time and date Converters tools for developers and users.',
-      type: 'website',
-    },
-    alternates: {
-      canonical: '/time'
-    }
-  };
-}
-
-export default function TimeDatePage() {
-  const tools = getToolsByCategory('time');
-
-  const getDifficultyColor = (difficulty: number) => {
-    if (difficulty <= 2) return 'bg-green-100 text-green-800 border-green-200';
-    if (difficulty <= 3) return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-    return 'bg-red-100 text-red-800 border-red-200';
-  };
-
+export default function TimeToolsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+    <div className="container mx-auto px-4 py-8 max-w-7xl">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4 py-16 max-w-6xl">
-          <div className="text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full mb-6">
-              <span className="text-4xl">⏰</span>
-            </div>
-            <h1 className="text-5xl font-bold mb-6">
-              Time & Date Tools
-            </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-              Professional time and date Converters tools for developers, project managers, and anyone working with timestamps, dates, and time calculations.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
-                <span>🌍</span>
-                <span>Timezone support</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
-                <span>⚡</span>
-                <span>Real-time updates</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
-                <span>🎯</span>
-                <span>Developer friendly</span>
-              </div>
-            </div>
+      <div className="text-center mb-12">
+        <div className="flex justify-center mb-4">
+          <div className="w-16 h-16 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 rounded-full flex items-center justify-center">
+            <Clock className="h-8 w-8 text-white" />
+          </div>
+        </div>
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Time & Date Tools
+        </h1>
+        <p className="text-xl text-gray-600 mb-6 max-w-3xl mx-auto">
+          Professional time and date conversion tools for developers, businesses, and everyday use. 
+          Convert timestamps, calculate dates, manage timezones, and track time worldwide.
+        </p>
+        <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
+          <div className="flex items-center gap-1">
+            <Users className="h-4 w-4" />
+            <span>15M+ time conversions</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <Star className="h-4 w-4" />
+            <span>Timezone Accurate</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <TrendingUp className="h-4 w-4" />
+            <span>Real-time Updates</span>
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-12 max-w-6xl">
-        {/* Tools Grid */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Time & Date Calculators
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Convert timestamps, calculate date differences, and manage time across different formats
-            </p>
-          </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {tools.map((tool) => (
-              <Link key={tool.id} href={tool.path} className="block group">
-                <Card className="h-full hover:shadow-2xl transition-all duration-300 group-hover:scale-[1.02] border-0 shadow-lg bg-gradient-to-br from-white to-gray-50">
-                  <CardHeader className="pb-3">
-                    <div className="flex items-start justify-between">
-                      <div className="flex-1">
-                        <CardTitle className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                          {tool.name}
-                        </CardTitle>
-                        <CardDescription className="text-gray-600 mt-2 line-clamp-2">
-                          {tool.description}
-                        </CardDescription>
-                      </div>
-                      <div className="ml-4 p-3 bg-blue-50 rounded-xl group-hover:bg-blue-100 transition-colors">
-                        <span className="text-3xl">{tool.icon}</span>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <div className="flex items-center justify-between">
-                      <Badge variant="outline" className={`font-medium ${getDifficultyColor(tool.difficulty || 1)}`}>
-                        Level {tool.difficulty || 1}/5
-                      </Badge>
-                      {tool.searchVolume && (
-                        <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200">
-                          {tool.searchVolume.toLocaleString()}/mo
-                        </Badge>
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        {/* Time Formats */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Common Time Formats
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Understanding different time representations and when to use them
-            </p>
-          </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <Card className="border-0 shadow-lg bg-gradient-to-br from-blue-50 to-blue-100 text-center">
-              <CardContent className="p-6">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-500 text-white rounded-2xl mb-4">
-                  <span className="text-2xl">🕐</span>
-                </div>
-                <h3 className="font-bold text-lg mb-2 text-blue-900">Unix Timestamp</h3>
-                <p className="text-blue-800 text-sm mb-2 font-mono">1640995200</p>
-                <p className="text-blue-700 text-xs">Seconds since 1970</p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg bg-gradient-to-br from-green-50 to-green-100 text-center">
-              <CardContent className="p-6">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-500 text-white rounded-2xl mb-4">
-                  <span className="text-2xl">📅</span>
-                </div>
-                <h3 className="font-bold text-lg mb-2 text-green-900">ISO 8601</h3>
-                <p className="text-green-800 text-sm mb-2 font-mono">2022-01-01T00:00:00Z</p>
-                <p className="text-green-700 text-xs">International standard</p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg bg-gradient-to-br from-purple-50 to-purple-100 text-center">
-              <CardContent className="p-6">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-500 text-white rounded-2xl mb-4">
-                  <span className="text-2xl">🌍</span>
-                </div>
-                <h3 className="font-bold text-lg mb-2 text-purple-900">UTC Time</h3>
-                <p className="text-purple-800 text-sm mb-2 font-mono">12:00:00 UTC</p>
-                <p className="text-purple-700 text-xs">Coordinated Universal Time</p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg bg-gradient-to-br from-orange-50 to-orange-100 text-center">
-              <CardContent className="p-6">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-500 text-white rounded-2xl mb-4">
-                  <span className="text-2xl">🏠</span>
-                </div>
-                <h3 className="font-bold text-lg mb-2 text-orange-900">Local Time</h3>
-                <p className="text-orange-800 text-sm mb-2 font-mono">8:00 AM EST</p>
-                <p className="text-orange-700 text-xs">Your timezone</p>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        {/* Use Cases */}
-        <div className="grid gap-8 md:grid-cols-2">
-          <Card className="border-0 shadow-xl overflow-hidden">
-            <div className="h-2 bg-gradient-to-r from-blue-400 to-cyan-500"></div>
-            <CardHeader className="bg-gradient-to-br from-blue-50 to-cyan-50">
-              <CardTitle className="flex items-center gap-3 text-blue-800">
-                <span className="text-2xl">👨‍💻</span>
-                For Developers
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-6">
-              <div className="grid gap-3">
-                <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
-                  <span className="text-blue-600">•</span>
-                  <span className="text-gray-700">Convert Unix timestamps to readable dates</span>
-                </div>
-                <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
-                  <span className="text-blue-600">•</span>
-                  <span className="text-gray-700">Handle timezone Converterss in applications</span>
-                </div>
-                <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
-                  <span className="text-blue-600">•</span>
-                  <span className="text-gray-700">Calculate time differences for features</span>
-                </div>
-                <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
-                  <span className="text-blue-600">•</span>
-                  <span className="text-gray-700">Debug time-related issues and logs</span>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="border-0 shadow-xl overflow-hidden">
-            <div className="h-2 bg-gradient-to-r from-green-400 to-emerald-500"></div>
-            <CardHeader className="bg-gradient-to-br from-green-50 to-emerald-50">
-              <CardTitle className="flex items-center gap-3 text-green-800">
-                <span className="text-2xl">👥</span>
-                For Everyone
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-6">
-              <div className="grid gap-3">
-                <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
-                  <span className="text-green-600">•</span>
-                  <span className="text-gray-700">Create countdown timers for events</span>
-                </div>
-                <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
-                  <span className="text-green-600">•</span>
-                  <span className="text-gray-700">Calculate age and date differences</span>
-                </div>
-                <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
-                  <span className="text-green-600">•</span>
-                  <span className="text-gray-700">Plan project timelines and deadlines</span>
-                </div>
-                <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
-                  <span className="text-green-600">•</span>
-                  <span className="text-gray-700">Track important dates and milestones</span>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+      {/* Popular Tools */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Most Used Time Tools</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {popularTools.map((tool) => (
+            <Link key={tool.id} href={tool.path} className="group">
+              <Card className="h-full hover:shadow-lg transition-all duration-200 border-2 hover:border-primary/20">
+                <CardHeader className="pb-3">
+                  <div className="flex items-center justify-between">
+                    <div className="text-2xl">{tool.icon}</div>
+                    <Badge variant="secondary" className="text-xs">
+                      {(tool.searchVolume || 0).toLocaleString()}
+                    </Badge>
+                  </div>
+                  <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                    {tool.name}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-sm mb-3">
+                    {tool.description.split('.')[0]}.
+                  </CardDescription>
+                  <div className="flex items-center text-primary text-sm font-medium">
+                    Use Tool
+                    <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+          ))}
         </div>
+      </section>
 
-        {/* Time Zone Info */}
-        <Card className="mt-12 border-0 shadow-lg bg-gradient-to-r from-indigo-50 to-purple-50">
-          <CardContent className="p-8">
-            <div className="flex items-start gap-4">
-              <div className="p-3 bg-indigo-200 rounded-full">
-                <span className="text-2xl">🌍</span>
-              </div>
-              <div>
-                <h3 className="font-bold text-indigo-900 text-lg mb-2">Time Zone Considerations</h3>
-                <div className="grid gap-3 md:grid-cols-2">
-                  <div className="text-indigo-800">
-                    <strong>UTC:</strong> Use for storing timestamps in databases and APIs
-                  </div>
-                  <div className="text-indigo-800">
-                    <strong>Local Time:</strong> Display times in user's local timezone
-                  </div>
-                  <div className="text-indigo-800">
-                    <strong>Daylight Saving:</strong> Consider DST changes in calculations
-                  </div>
-                  <div className="text-indigo-800">
-                    <strong>ISO 8601:</strong> Standard format for date/time exchange
+      {/* Tool Categories */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Browse by Category</h2>
+        <div className="grid lg:grid-cols-3 gap-8">
+          {toolCategories.map((category) => (
+            <Card key={category.name} className={`${category.color} border-2`}>
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <div className="text-3xl">{category.icon}</div>
+                  <div>
+                    <CardTitle className="text-xl">{category.name}</CardTitle>
+                    <CardDescription className="text-sm">
+                      {category.description}
+                    </CardDescription>
                   </div>
                 </div>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2">
+                  {category.tools.map((tool) => (
+                    <Link
+                      key={tool.id}
+                      href={tool.path}
+                      className="flex items-center justify-between p-3 rounded-lg bg-white/60 hover:bg-white/80 transition-colors group"
+                    >
+                      <div className="flex items-center gap-3">
+                        <span className="text-lg">{tool.icon}</span>
+                        <div>
+                          <div className="font-medium text-gray-900 group-hover:text-primary transition-colors">
+                            {tool.name}
+                          </div>
+                          <div className="text-xs text-gray-500">
+                            {(tool.searchVolume || 0).toLocaleString()} monthly searches
+                          </div>
+                        </div>
+                      </div>
+                      <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                    </Link>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Developer Tools Section */}
+      <section className="mb-12">
+        <div className="bg-gradient-to-r from-indigo-50 via-blue-50 to-cyan-50 rounded-2xl p-8 border border-indigo-200">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+            Essential for Developers & Businesses
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Clock className="h-6 w-6 text-white" />
               </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Unix Timestamps</h3>
+              <p className="text-sm text-gray-600">
+                Convert Unix timestamps to human-readable dates for database queries, API responses, and log analysis.
+              </p>
             </div>
-          </CardContent>
-        </Card>
-      </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-3">
+                <TrendingUp className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Global Timezones</h3>
+              <p className="text-sm text-gray-600">
+                Handle international business with accurate timezone conversions and daylight saving time support.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Star className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Business Planning</h3>
+              <p className="text-sm text-gray-600">
+                Calculate working days, project timelines, and business deadlines with precision and accuracy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SEO Content */}
+      <section className="prose max-w-none">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          Professional Time Management Tools
+        </h2>
+        <div className="grid md:grid-cols-2 gap-8 text-sm text-gray-600">
+          <div>
+            <p className="mb-4">
+              Our comprehensive time and date tool collection serves developers, businesses, and individuals 
+              who need accurate time calculations and conversions. From Unix timestamp conversion to 
+              international timezone management, our tools handle complex time-related tasks with precision.
+            </p>
+            <p className="mb-4">
+              <strong>Developer Tools:</strong> Convert Unix timestamps (epoch time) to readable dates, 
+              handle API timestamps, debug time-related issues, and manage database date fields with 
+              our professional timestamp converter.
+            </p>
+            <p>
+              <strong>Business Applications:</strong> Calculate working days between project milestones, 
+              plan international meetings across timezones, and track deadlines with our business-focused 
+              date calculation tools.
+            </p>
+          </div>
+          <div>
+            <p className="mb-4">
+              <strong>Global Operations:</strong> Our timezone converter supports all world timezones 
+              with automatic daylight saving time adjustments. Perfect for international teams, 
+              global businesses, and remote work coordination.
+            </p>
+            <p className="mb-4">
+              <strong>Personal Productivity:</strong> Use our countdown timers for events, calculate 
+              your exact age, track time with our stopwatch, and stay organized with world clock 
+              displays for multiple cities.
+            </p>
+            <p>
+              All tools provide real-time accuracy, work offline after loading, and support multiple 
+              date formats. Essential for software development, project management, and international business.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -126,7 +126,7 @@ export const COLOR_TOOLS_SEO: SEOToolConfig[] = [
       'color chooser', 'web color picker', 'html color picker',
       'css color picker', 'design color tool'
     ],
-    canonicalPath: '/color/color-picker'
+    canonicalPath: '/color/color-picker-tool'
   },
   {
     id: 'gradient-generator',

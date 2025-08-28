@@ -1,47 +1,32 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import ToolLayout from '@/components/layout/ToolLayout';
 import TimezoneConverter from '@/components/converters/time/TimezoneConverter';
+import { getSEOConfigByToolId } from '@/config/seo-tools';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Timezone Converter',
-  'Convert time between different time zones instantly. Free online timezone converter with support for all world time zones and daylight saving time.',
-  'timezone-converter',
-  [
-    'timezone converter',
-    'time zone conversion',
-    'world time converter',
-    'timezone calculator',
-    'time conversion tool',
-    'world clock',
-    'timezone tool',
-    'time zone calculator'
-  ],
-  'time'
-);
+const seoConfig = getSEOConfigByToolId('timezone-converter');
+
+export const metadata: Metadata = {
+  title: seoConfig?.title || 'Timezone Converter - Convert Time Between Zones | InterConverter',
+  description: seoConfig?.description || 'Convert time between different timezones worldwide. Free timezone converter with support for all major time zones and DST.',
+  keywords: seoConfig?.keywords?.join(', ') || 'timezone converter, time zone converter, world time, time conversion, utc converter',
+  openGraph: {
+    title: seoConfig?.title || 'Timezone Converter | InterConverter',
+    description: seoConfig?.description || 'Convert time between different timezones',
+    type: 'website',
+  },
+  alternates: {
+    canonical: seoConfig?.canonicalPath || '/time/timezone-converter'
+  }
+};
 
 export default function TimezoneConverterPage() {
   return (
     <ToolLayout
-      title="Timezone Converter"
-      description="Convert time between different time zones instantly with support for all world time zones"
-      toolId="timezone-converter"
-      category="time"
-      emoji="🌍"
-      customHowToUse={[
-        'Select the source timezone from the dropdown',
-        'Enter the time you want to convert',
-        'Select the target timezone',
-        'View the converted time instantly',
-        'Add multiple timezones for comparison'
-      ]}
-      customFeatures={[
-        'Support for all world time zones',
-        'Automatic daylight saving time handling',
-        'Multiple timezone comparison',
-        'Current time display',
-        'Popular timezone shortcuts',
-        'Mobile-friendly interface'
-      ]}
+      title={metadata.title as string}
+      description={metadata.description as string}
+      keywords={seoConfig?.keywords || []}
+      canonicalUrl={`https://interconverter.com${seoConfig?.canonicalPath}`}
+      structuredData={seoConfig?.structuredData}
     >
       <TimezoneConverter />
     </ToolLayout>

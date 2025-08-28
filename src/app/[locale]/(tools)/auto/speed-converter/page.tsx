@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import { SpeedConverter } from '@/components/automotive/SpeedConverter';
+import { SpeedConverter } from '@/components/converters/automotive/SpeedConverter';
 
 
 

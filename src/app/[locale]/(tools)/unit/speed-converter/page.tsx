@@ -1,48 +1,32 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import ToolLayout from '@/components/layout/ToolLayout';
 import { SpeedConverter } from '@/components/converters/unit/SpeedConverter';
+import { getSEOConfigByToolId } from '@/config/seo-tools';
 
-// Force static generation
-export const dynamic = 'force-static';
-export const metadata: Metadata = generateToolMetadata(
-  'Speed Converter',
-  'Convert between different speed units including km/h, mph, m/s, knots, and more. Accurate speed conversion tool.',
-  'speed-converter',
-  [
-    'speed converter',
-    'km/h to mph',
-    'mph to km/h',
-    'meters per second',
-    'speed conversion',
-    'velocity converter',
-    'unit conversion',
-    'knots converter'
-  ],
-  'unit'
-);
+const seoConfig = getSEOConfigByToolId('speed-converter');
+
+export const metadata: Metadata = {
+  title: seoConfig?.title || 'Speed Converter - Convert km/h, mph, knots & more | InterConverter',
+  description: seoConfig?.description || 'Convert between km/h, mph, knots, m/s, and other speed units. Professional speed conversion calculator for all velocities.',
+  keywords: seoConfig?.keywords?.join(', ') || 'speed converter, velocity converter, mph to kmh, kmh to mph, knots converter',
+  openGraph: {
+    title: seoConfig?.title || 'Speed Converter | InterConverter',
+    description: seoConfig?.description || 'Convert between different units of speed',
+    type: 'website',
+  },
+  alternates: {
+    canonical: seoConfig?.canonicalPath || '/unit/speed-converter'
+  }
+};
 
 export default function SpeedConverterPage() {
   return (
     <ToolLayout
-      title="Speed Converter"
-      description="Convert between different speed units with precision"
-      toolId="speed-converter"
-      category="unit"
-      emoji="🏃"
-      customHowToUse={[
-        "Enter the speed value to convert",
-        "Select the source unit (km/h, mph, m/s, etc.)",
-        "Choose the target speed unit",
-        "View the converted speed instantly"
-      ]}
-      customFeatures={[
-        "Meters per second (m/s)",
-        "Kilometers per hour (km/h)",
-        "Miles per hour (mph)",
-        "Feet per second (fps) and knots",
-        "Real-time conversion updates",
-        "Copy result to clipboard"
-      ]}
+      title={metadata.title as string}
+      description={metadata.description as string}
+      keywords={seoConfig?.keywords || []}
+      canonicalUrl={`https://interconverter.com${seoConfig?.canonicalPath}`}
+      structuredData={seoConfig?.structuredData}
     >
       <SpeedConverter />
     </ToolLayout>

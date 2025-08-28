@@ -42,9 +42,8 @@ Finance目录最终统计
 
 要求：
 1，统一规范，统一布局ToolLayout，多语言（默认为en)，SEO优化；
-2，优化seo，每个工具页的seo及落地页文案都是独立，争对这个工具页来优化符合google seo规范及长尾词规范，seo title带上品牌名｜ InterConverter 60个字内，seo desc160个字内。
-3，重构所有的工具页，根据主分类配置到统一json文件里，比如auto.json，unit.json，finance.json等，统一管理，可控制每个工具是否显示，方便后续切换和管理。
-4，/tools列出部分工具页，根据分类进行分组展示，每个分类下展示5个工具，点击进入工具页，每个分类可以点击查看更多工具。
+2，重构所有的工具页，根据主分类配置到统一json文件里，比如auto.json，unit.json，finance.json等，类似于数据管理，统一管理，可控制每个工具是否显示，方便后续切换和管理。
+3，/tools列出部分工具页，根据分类进行分组展示，每个分类下展示5个工具，点击进入工具页，每个分类可以点击查看更多工具。
 
 
 Unit（单位换算类）
@@ -80,6 +79,6 @@ Time Zone Converter	/time/timezone-converter	世界时区转换
 Date Calculator	/time/date-calculator	计算两个日期之间的差值
 Working Days Calculator	/time/working-days	计算两个日期之间的工作日数
 Countdown Timer	/time/countdown-timer	在线倒计时
-Stopwatch	/time/stopwatch	在线秒表
+online-stopwatch	/time/online-stopwatch	在线秒表
 Age Calculator	/time/age-calculator	根据出生日期计算年龄
 World Clock	/time/world-clock	显示不同城市的当前时间

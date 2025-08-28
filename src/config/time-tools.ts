@@ -18,7 +18,7 @@ export const TIME_TOOLS_CONFIG: ToolConfig[] = [
       'epoch time to date',
       'timestamp calculator'
     ],
-    path: '/time/timestamp-converter',
+    path: '/time/unix-timestamp-converter',
     isActive: true,
     searchVolume: 185000,
     difficulty: 1,
@@ -87,7 +87,7 @@ export const TIME_TOOLS_CONFIG: ToolConfig[] = [
       'working time calculator',
       'office days calculator'
     ],
-    path: '/time/working-days',
+    path: '/time/working-days-calculator',
     isActive: true,
     searchVolume: 85000,
     difficulty: 2,
@@ -117,13 +117,13 @@ export const TIME_TOOLS_CONFIG: ToolConfig[] = [
     icon: '⏰'
   },
   {
-    id: 'stopwatch',
-    name: 'Stopwatch',
+    id: 'online-stopwatch',
+    name: 'Online Stopwatch',
     description: 'Online stopwatch with lap times and precision timing. Professional digital stopwatch for sports and activities.',
     category: 'time',
     keywords: [
-      'stopwatch',
       'online stopwatch',
+      'stopwatch',
       'digital stopwatch',
       'timer stopwatch',
       'lap timer',
@@ -133,7 +133,7 @@ export const TIME_TOOLS_CONFIG: ToolConfig[] = [
       'time tracker',
       'interval timer'
     ],
-    path: '/time/stopwatch',
+    path: '/time/online-stopwatch',
     isActive: true,
     searchVolume: 125000,
     difficulty: 1,

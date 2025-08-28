@@ -1,0 +1,26 @@
+[
+  {
+    "id": "pdf-to-word-converter",
+    "name": "PDF to Word Converter",
+    "description": "Convert PDF files to editable Word documents",
+    "category": "media",
+    "keywords": ["pdf", "word", "doc", "docx", "converter", "document"],
+    "path": "/media/pdf-to-word-converter",
+    "isActive": true,
+    "searchVolume": 201000,
+    "difficulty": 4,
+    "icon": "📄"
+  },
+  {
+    "id": "jpg-to-png-converter",
+    "name": "JPG to PNG Converter",
+    "description": "Convert JPG images to PNG format with transparency support",
+    "category": "media",
+    "keywords": ["jpg", "jpeg", "png", "image", "converter", "photo"],
+    "path": "/media/jpg-to-png-converter",
+    "isActive": true,
+    "searchVolume": 89000,
+    "difficulty": 2,
+    "icon": "🖼️"
+  }
+]

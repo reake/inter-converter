@@ -64,7 +64,7 @@ export const COLOR_TOOLS_CONFIG: ToolConfig[] = [
       'hex hsl conversion',
       'color format tool'
     ],
-    path: '/color/hex-to-hsl',
+    path: '/color/hex-to-hsl-converter',
     isActive: true,
     searchVolume: 45000,
     difficulty: 2,
@@ -87,7 +87,7 @@ export const COLOR_TOOLS_CONFIG: ToolConfig[] = [
       'color palette generator',
       'color wheel tool'
     ],
-    path: '/color/color-picker',
+    path: '/color/color-picker-tool',
     isActive: true,
     searchVolume: 125000,
     difficulty: 1,

@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import { RPMCalculator } from '@/components/automotive/RPMCalculator';
+import { RPMCalculator } from '@/components/converters/automotive/RPMCalculator';
 
 
 

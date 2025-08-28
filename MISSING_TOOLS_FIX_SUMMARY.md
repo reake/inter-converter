@@ -100,7 +100,7 @@
 ├ ƒ /[locale]/auto/tire-speed-calculator              4.5 kB         113 kB ✅ 新添加
 ├ ƒ /[locale]/auto/torque-horsepower-calculator      2.86 kB         117 kB
 ├ ƒ /[locale]/auto/volumetric-efficiency-calculator   4.5 kB         113 kB
-├ ƒ /[locale]/auto/weight-converter                   4.1 kB         140 kB
+├ ƒ /[locale]/auto/auto-weight-converter                   4.1 kB         140 kB
 ```
 
 ## 🎯 TireSpeedCalculator 功能特性

@@ -589,13 +589,13 @@ export const AUTOMOTIVE_TOOLS_CONFIG: AutomotiveToolConfig[] = [
     icon: '🛞'
   },
   {
-    id: 'weight-converter',
-    name: 'Weight Converter',
+    id: 'auto-weight-converter',
+    name: 'Auto Weight Converter',
     description: 'Convert between pounds, kilograms, ounces, and grams',
     category: 'auto',
     subcategory: 'fluids',
     keywords: ['weight', 'converter', 'pounds', 'kilograms', 'ounces', 'grams'],
-    path: '/auto/weight-converter',
+    path: '/auto/auto-weight-converter',
     isActive: true,
     searchVolume: 11000,
     difficulty: 'beginner',

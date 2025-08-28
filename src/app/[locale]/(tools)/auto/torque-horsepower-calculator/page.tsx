@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import { TorqueHorsepowerCalculator } from '@/components/automotive/TorqueHorsepowerCalculator';
+import { TorqueHorsepowerCalculator } from '@/components/converters/automotive/TorqueHorsepowerCalculator';
 
 
 

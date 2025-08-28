@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import { TireCalculator } from '@/components/automotive/TireCalculator';
+import { TireCalculator } from '@/components/converters/automotive/TireCalculator';
 
 
 

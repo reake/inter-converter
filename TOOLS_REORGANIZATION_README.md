@@ -108,7 +108,7 @@ We've optimized the directory structure by changing from compound words to singl
 - `/auto/tire-calculator`
 - `/auto/torque-horsepower-calculator`
 - `/auto/volumetric-efficiency-calculator`
-- `/auto/weight-converter`
+- `/auto/auto-weight-converter`
 
 ## 🏠 Landing Pages
 

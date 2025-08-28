@@ -18,7 +18,7 @@ const ENERGY_UNITS = {
   btu: { name: 'BTU', factor: 1055.06 }
 };
 
-export function EnergyConverter() {
+export default function EnergyConverter() {
   const [fromUnit, setFromUnit] = useState('kcal');
   const [toUnit, setToUnit] = useState('kj');
   const [value, setValue] = useState('1');

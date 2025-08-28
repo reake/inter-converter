@@ -9,7 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { PerformanceDisplay } from '@/components/automotive/PerformanceDisplay';
+import { PerformanceDisplay } from '@/components/converters/automotive/PerformanceDisplay';
 import { EngineFormulas } from '@/lib/automotive/engine-formulas';
 import { AutomotiveValidator } from '@/lib/automotive/automotive-validators';
 import { AutomotiveResult, Recommendation } from '@/types/automotive';

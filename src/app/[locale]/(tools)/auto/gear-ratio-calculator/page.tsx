@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import { GearRatioCalculator } from '@/components/automotive/GearRatioCalculator';
+import { GearRatioCalculator } from '@/components/converters/automotive/GearRatioCalculator';
 
 
 

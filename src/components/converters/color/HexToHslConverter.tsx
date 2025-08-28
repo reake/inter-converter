@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Palette, Copy } from 'lucide-react';
 import { CopyButton } from '@/components/ui/CopyButton';
 
-export function HexToHslConverter() {
+export default function HexToHslConverter() {
   const [hexValue, setHexValue] = useState('#3b82f6');
   const [hslValue, setHslValue] = useState({ h: 0, s: 0, l: 0 });
   const [error, setError] = useState('');

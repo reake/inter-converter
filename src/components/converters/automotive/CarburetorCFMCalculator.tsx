@@ -8,8 +8,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { PerformanceDisplay } from '@/components/automotive/PerformanceDisplay';
-import { AutoTermTooltip } from '@/components/automotive/EducationalTooltip';
+import { PerformanceDisplay } from '@/components/converters/automotive/PerformanceDisplay';
+import { AutoTermTooltip } from '@/components/converters/automotive/EducationalTooltip';
 import { EngineFormulas } from '@/lib/automotive/engine-formulas';
 import { AutomotiveValidator } from '@/lib/automotive/automotive-validators';
 import { CFMResult, AutomotiveResult, Recommendation } from '@/types/automotive';

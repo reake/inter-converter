@@ -1,0 +1,86 @@
+[
+  {
+    "id": "rgb-to-hex-converter",
+    "name": "RGB to HEX Converter",
+    "description": "Convert RGB color values to HEX codes and vice versa with color preview",
+    "category": "color",
+    "keywords": ["rgb", "hex", "color", "converter", "css", "design", "web", "palette"],
+    "path": "/color/rgb-to-hex-converter",
+    "isActive": true,
+    "searchVolume": 85000,
+    "difficulty": 1,
+    "icon": "🎨"
+  },
+  {
+    "id": "color-picker-tool",
+    "name": "Color Picker Tool",
+    "description": "Professional color picker with HSL controls, palettes and color history",
+    "category": "color",
+    "keywords": ["color", "picker", "hsl", "palette", "design", "web", "css", "tool"],
+    "path": "/color/color-picker-tool",
+    "isActive": true,
+    "searchVolume": 78000,
+    "difficulty": 2,
+    "icon": "🌈"
+  },
+  {
+    "id": "hex-to-rgb-converter",
+    "name": "HEX to RGB Converter",
+    "description": "Convert HEX color codes to RGB values and vice versa with color preview and validation",
+    "category": "color",
+    "keywords": ["hex", "rgb", "color", "converter", "css", "design", "hex to rgb", "color code converter"],
+    "path": "/color/hex-to-rgb-converter",
+    "isActive": true,
+    "searchVolume": 67000,
+    "difficulty": 1,
+    "icon": "🎨"
+  },
+  {
+    "id": "color-palette-generator",
+    "name": "Color Palette Generator",
+    "description": "Generate beautiful color palettes and schemes for design projects",
+    "category": "color",
+    "keywords": ["color", "palette", "generator", "scheme", "design", "colors", "harmony"],
+    "path": "/color/color-palette-generator",
+    "isActive": true,
+    "searchVolume": 45000,
+    "difficulty": 2,
+    "icon": "🎨"
+  },
+  {
+    "id": "contrast-checker",
+    "name": "Color Contrast Checker",
+    "description": "Check color contrast ratios for accessibility compliance (WCAG)",
+    "category": "color",
+    "keywords": ["contrast", "accessibility", "wcag", "color", "checker", "ratio"],
+    "path": "/color/contrast-checker",
+    "isActive": true,
+    "searchVolume": 35000,
+    "difficulty": 2,
+    "icon": "⚖️"
+  },
+  {
+    "id": "gradient-generator",
+    "name": "CSS Gradient Generator",
+    "description": "Create beautiful CSS gradients with live preview and code generation",
+    "category": "color",
+    "keywords": ["gradient", "css", "generator", "linear", "radial", "background"],
+    "path": "/color/gradient-generator",
+    "isActive": true,
+    "searchVolume": 28000,
+    "difficulty": 3,
+    "icon": "🌈"
+  },
+  {
+    "id": "hex-to-hsl-converter",
+    "name": "HEX to HSL Converter",
+    "description": "Convert HEX color codes to HSL values with color preview",
+    "category": "color",
+    "keywords": ["hex", "hsl", "color", "converter", "css", "design"],
+    "path": "/color/hex-to-hsl-converter",
+    "isActive": true,
+    "searchVolume": 22000,
+    "difficulty": 1,
+    "icon": "🎨"
+  }
+]
