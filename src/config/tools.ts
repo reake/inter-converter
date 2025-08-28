@@ -1,4 +1,7 @@
 import { ToolConfig, ToolCategory } from '@/types/tools';
+import { UNIT_TOOLS_CONFIG } from './unit-tools';
+import { COLOR_TOOLS_CONFIG } from './color-tools';
+import { TIME_TOOLS_CONFIG } from './time-tools';
 
 export const TOOL_CATEGORIES: Record<ToolCategory, { name: string; description: string }> = {
   'time': {
@@ -36,76 +39,11 @@ export const TOOL_CATEGORIES: Record<ToolCategory, { name: string; description: 
 };
 
 export const TOOLS_CONFIG: ToolConfig[] = [
-  // Time & Date Tools
-  {
-    id: 'timestamp-converter',
-    name: 'Timestamp Converter',
-    description: 'Convert Unix timestamps to human-readable dates and vice versa. Free, accurate, and instant Converters with timezone support.',
-    category: 'time',
-    keywords: [
-      'timestamp converter',
-      'unix timestamp converter',
-      'epoch converter',
-      'unix time converter',
-      'timestamp to date',
-      'epoch time converter',
-      'posix time converter',
-      'unix timestamp converter online free',
-      'epoch time to date converter',
-      'timestamp to human readable date'
-    ],
-    path: '/time/timestamp-converter',
-    isActive: true,
-    searchVolume: 45000,
-    difficulty: 2,
-    icon: '🕐'
-  },
-  {
-    id: 'countdown-timer',
-    name: 'Countdown Timer',
-    description: 'Create countdown timers for events and deadlines',
-    category: 'time',
-    keywords: ['countdown', 'timer', 'event', 'deadline', 'clock', 'time'],
-    path: '/time/countdown-timer',
-    isActive: true,
-    searchVolume: 82000,
-    difficulty: 2,
-    icon: '⏰'
-  },
-  {
-    id: 'date-difference-calculator',
-    name: 'Date Difference Calculator',
-    description: 'Calculate the difference between two dates in days, months, and years',
-    category: 'time',
-    keywords: ['date', 'difference', 'calculator', 'days', 'between', 'duration'],
-    path: '/time/date-difference-calculator',
-    isActive: true,
-    searchVolume: 52000,
-    difficulty: 2,
-    icon: '📅'
-  },
-  {
-    id: 'timezone-converter',
-    name: 'Timezone Converter',
-    description: 'Convert time between different time zones instantly. Free online timezone converter with support for all world time zones and daylight saving time.',
-    category: 'time',
-    keywords: [
-      'timezone converter',
-      'time zone conversion',
-      'world time converter',
-      'timezone calculator',
-      'time conversion tool',
-      'world clock',
-      'timezone tool',
-      'time zone calculator'
-    ],
-    path: '/time/timezone-converter',
-    isActive: true,
-    searchVolume: 89000,
-    difficulty: 2,
-    icon: '🌍'
-  },
-
+  // Import all tools from separate config files
+  ...TIME_TOOLS_CONFIG,
+  ...UNIT_TOOLS_CONFIG,
+  ...COLOR_TOOLS_CONFIG,
+  
   // Currency & Finance Tools
   {
     id: 'currency-converter',
