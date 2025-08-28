@@ -1,50 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import TaxCalculator from '@/components/converters/finance/TaxCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Property Tax Calculator',
-  'Calculate property taxes based on home value, tax rates, and exemptions. Estimate annual property tax liability for homeowners.',
-  'property-tax-calculator',
-  [
-    'property tax calculator',
-    'real estate tax calculator',
-    'home tax calculator',
-    'property tax estimator',
-    'municipal tax calculator'
-  ],
-  'taxes'
-);
+const keywords = generateOptimizedKeywords('property-tax-calculator', 'finance', 'Property Tax Calculator');
+
+export const metadata: Metadata = {
+  title: 'Property Tax Calculator - Real Estate Tax Estimator | InterConverter',
+  description: 'Calculate property tax amounts and rates. Estimate annual property taxes based on home value and location with instant calculations.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Property Tax Calculator - Real Estate Tax Estimator',
+    description: 'Professional property tax calculator for real estate. Calculate annual taxes based on home value and location.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-property-tax-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Property Tax Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/property-tax-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function PropertyTaxCalculatorPage() {
+  const faqs = getFAQsByToolId('property-tax-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Property Tax Calculator"
-      description="Calculate annual property taxes based on home value, local tax rates, and available exemptions"
+      description="Calculate property tax amounts and rates with instant calculations."
+      keywords={keywords}
       toolId="property-tax-calculator"
-      category="taxes"
+      category="finance"
       emoji="🏠"
       customHowToUse={[
-        "Enter your property's assessed value",
-        "Input local property tax rate (mill rate)",
-        "Add any applicable exemptions",
-        "Calculate annual property tax",
-        "Compare with neighboring areas",
-        "Plan for property tax payments"
+        "Enter property assessed value",
+        "Select state and locality",
+        "Input local tax rate",
+        "Calculate annual tax amount",
+        "View monthly payment breakdown",
+        "Compare different locations"
       ]}
       customFeatures={[
-        "Assessed value calculations",
-        "Mill rate applications",
-        "Homestead exemptions",
-        "Senior citizen discounts",
-        "Tax appeal considerations",
-        "Escrow payment planning"
+        "Accurate property tax calculation",
+        "Location-based tax rates",
+        "Annual and monthly breakdown",
+        "Tax rate comparison tools",
+        "Assessment value calculators",
+        "Exemption and deduction calculations"
       ]}
+      faqs={faqs}
     >
       <TaxCalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

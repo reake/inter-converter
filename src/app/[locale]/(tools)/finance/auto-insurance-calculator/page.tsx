@@ -1,46 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import InsuranceCalculator from '@/components/converters/finance/InsuranceCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Auto Insurance Calculator',
-  'Calculate auto insurance premiums and coverage costs. Compare liability, collision, and comprehensive coverage options.',
-  'auto-insurance-calculator',
-  [
-    'auto insurance calculator',
-    'car insurance calculator',
-    'vehicle insurance calculator',
-    'auto insurance premium calculator',
-    'car insurance cost calculator'
-  ],
-  'insurance'
-);
+const keywords = generateOptimizedKeywords('auto-insurance-calculator', 'finance', 'Auto Insurance Calculator');
+
+export const metadata: Metadata = {
+  title: 'Auto Insurance Calculator - Car Insurance Premium Calculator | InterConverter',
+  description: 'Calculate auto insurance premiums and coverage costs. Compare liability, collision, and comprehensive coverage options with instant calculations.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Auto Insurance Calculator - Car Insurance Premium Calculator',
+    description: 'Professional auto insurance calculator for premium estimation. Compare coverage options and calculate insurance costs.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-auto-insurance-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Auto Insurance Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/auto-insurance-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function AutoInsuranceCalculatorPage() {
+  const faqs = getFAQsByToolId('auto-insurance-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Auto Insurance Calculator"
-      description="Calculate auto insurance premiums and compare coverage options for liability, collision, and comprehensive protection"
+      description="Calculate auto insurance premiums and coverage costs with instant calculations."
+      keywords={keywords}
       toolId="auto-insurance-calculator"
-      category="insurance"
+      category="finance"
       emoji="🚗"
       customHowToUse={[
-        "Enter vehicle information and value",
-        "Input driver age and driving record",
-        "Select coverage types and limits",
-        "Set deductible amounts",
-        "Calculate premium estimates",
-        "Compare coverage options and costs"
+        "Enter vehicle make, model, and year",
+        "Select desired coverage types and limits",
+        "Set deductible amounts for each coverage",
+        "Input driver details and history",
+        "Calculate estimated premium costs",
+        "Compare different coverage options"
       ]}
       customFeatures={[
-        "Multiple coverage type calculations",
-        "Deductible impact analysis"
+        "Auto insurance premium calculation",
+        "Coverage comparison and analysis tools",
+        "Deductible impact on premium costs",
+        "Multi-vehicle and multi-driver discounts",
+        "Driver profile risk assessment",
+        "State-specific insurance requirements"
       ]}
+      faqs={faqs}
     >
       <InsuranceCalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

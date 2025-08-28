@@ -1,58 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import InvestmentCalculator from '@/components/converters/finance/InvestmentCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
-const title = '401k Calculator';
-const description = 'Calculate 401k retirement savings growth with employer matching. Plan your retirement contributions and track long-term growth.';
-const keywordsArr = [
-  '401k calculator',
-  '401k retirement calculator',
-  '401k contribution calculator',
-  'retirement savings calculator',
-  'employer match calculator',
-  '401k planning calculator'
-];
+
+const keywords = generateOptimizedKeywords('401k-calculator', 'finance', '401k Calculator');
 
 export const metadata: Metadata = {
-  title: `${title} | InterConverter`,
-  description,
-  keywords: keywordsArr.join(', '),
+  title: '401k Calculator - Retirement Savings & Employer Match | InterConverter',
+  description: 'Calculate 401k retirement savings growth with employer matching. Plan your retirement contributions and track long-term growth with professional accuracy.',
+  keywords: keywords.join(', '),
   openGraph: {
-    title: `${title} | InterConverter`,
-    description,
+    title: '401k Calculator - Retirement Savings Calculator',
+    description: 'Professional 401k calculator with employer matching and contribution optimization. Calculate retirement savings growth and tax benefits.',
     type: 'website',
+    images: [
+      {
+        url: '/images/og-401k-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: '401k Calculator Tool'
+      }
+    ]
   },
-  alternates: { canonical: '/finance/401k-calculator' }
+  alternates: {
+    canonical: '/finance/401k-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
 };
 
 export default function FourOhOneKCalculatorPage() {
+  const faqs = getFAQsByToolId('401k-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="401k Calculator"
-      description="Calculate 401k retirement savings growth with employer matching contributions and tax advantages"
+      description="Calculate 401k retirement savings growth with employer matching and contribution optimization with instant calculations."
+      keywords={keywords}
       toolId="401k-calculator"
-      category="investing"
-      emoji="🏦"
+      category="finance"
+      emoji="💰"
       customHowToUse={[
-        "Enter your current salary",
-        "Set your contribution percentage",
-        "Input employer match details",
-        "Set expected annual return",
-        "Calculate retirement savings growth",
-        "Optimize contribution strategy"
+        "Enter current age and planned retirement age",
+        "Input current 401k balance if any",
+        "Set annual contribution amount and percentage",
+        "Add employer matching details and vesting schedule",
+        "Review projected retirement savings growth",
+        "Optimize contribution strategy for maximum benefits"
       ]}
       customFeatures={[
-        "Employer matching calculations",
-        "Tax-deferred growth projections",
-        "Contribution limit tracking",
-        "Retirement timeline planning",
-        "Catch-up contribution analysis",
-        "Withdrawal strategy planning"
+        "401k growth projection with compound interest",
+        "Employer matching calculation and optimization",
+        "Annual contribution limit tracking",
+        "Tax benefit analysis and savings",
+        "Retirement readiness assessment",
+        "Contribution optimization recommendations"
       ]}
+      faqs={faqs}
     >
-      <InvestmentCalculator />
-    </ToolLayout>
+      <RetirementCalculator />
+    </EnhancedToolLayout>
   );
 }

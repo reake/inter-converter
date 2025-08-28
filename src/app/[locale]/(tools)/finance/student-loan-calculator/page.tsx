@@ -1,47 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import LoanCalculator from '@/components/converters/finance/LoanCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Student Loan Calculator',
-  'Calculate student loan payments, interest costs, and repayment options. Compare federal and private student loan scenarios.',
-  'student-loan-calculator',
-  [
-    'student loan calculator',
-    'student loan payment calculator',
-    'education loan calculator',
-    'student debt calculator',
-    'college loan calculator',
-    'student loan repayment calculator'
-  ],
-  'loans'
-);
+const keywords = generateOptimizedKeywords('student-loan-calculator', 'finance', 'Student Loan Calculator');
+
+export const metadata: Metadata = {
+  title: 'Student Loan Calculator - Education Loan Calculator | InterConverter',
+  description: 'Calculate student loan payments, interest costs, and repayment strategies for education financing with instant calculations.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Student Loan Calculator - Education Loan Calculator',
+    description: 'Professional student loan calculator for education financing. Calculate payments and repayment strategies.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-student-loan-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Student Loan Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/student-loan-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function StudentLoanCalculatorPage() {
+  const faqs = getFAQsByToolId('student-loan-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Student Loan Calculator"
-      description="Calculate student loan payments and explore repayment options for federal and private education loans"
+      description="Calculate student loan payments and repayment strategies with instant calculations."
+      keywords={keywords}
       toolId="student-loan-calculator"
-      category="loans"
+      category="finance"
       emoji="🎓"
       customHowToUse={[
-        "Enter total student loan amount",
-        "Input interest rate (federal or private)",
-        "Select repayment term (10-30 years)",
-        "Choose repayment plan type",
-        "Calculate monthly payments",
-        "Compare different repayment strategies"
+        "Enter total student loan amount borrowed",
+        "Set interest rate from loan servicer",
+        "Choose repayment term and plan type",
+        "Calculate monthly payment amount",
+        "Explore different repayment options",
+        "Plan optimal debt payoff strategy"
       ]}
       customFeatures={[
-        "Federal vs private loan calculations",
-        "Multiple repayment plan options"
+        "Student loan payment calculation with fees",
+        "Multiple repayment plan options and comparison",
+        "Interest capitalization analysis during deferment",
+        "Loan forgiveness scenarios and eligibility",
+        "Income-driven repayment plans (IDR)",
+        "Refinancing vs federal loan comparison"
       ]}
+      faqs={faqs}
     >
       <LoanCalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

@@ -1,53 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import CreditCardPayoffCalculator from '@/components/converters/finance/CreditCardPayoffCalculator';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
+import RewardsCalculator from '@/components/converters/finance/RewardsCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Credit Card Rewards Calculator',
-  'Calculate credit card rewards earnings from cashback, points, and miles programs. Compare reward cards and optimize spending categories.',
-  'rewards-calculator',
-  [
-    'credit card rewards calculator',
-    'cashback calculator',
-    'credit card points calculator',
-    'miles calculator',
-    'rewards comparison calculator',
-    'credit card benefits calculator',
-    'cashback rewards calculator',
-    'points value calculator'
-  ],
-  'credit-cards'
-);
+const keywords = generateOptimizedKeywords('rewards-calculator', 'finance', 'Rewards Calculator');
+
+export const metadata: Metadata = {
+  title: 'Rewards Calculator - Credit Card Cashback & Points Calculator | InterConverter',
+  description: 'Calculate credit card rewards and cashback earnings. Compare rewards programs and maximize benefits with instant calculations.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Rewards Calculator - Credit Card Cashback & Points Calculator',
+    description: 'Professional rewards calculator for credit cards. Calculate cashback, points, and miles earnings.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-rewards-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Rewards Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/rewards-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function RewardsCalculatorPage() {
+  const faqs = getFAQsByToolId('rewards-calculator', 'finance');
+
   return (
-    <ToolLayout
-      title="Credit Card Rewards Calculator"
-      description="Calculate potential earnings from credit card rewards programs including cashback, points, and miles based on your spending patterns"
+    <EnhancedToolLayout
+      title="Rewards Calculator"
+      description="Calculate credit card rewards and cashback earnings with instant calculations."
+      keywords={keywords}
       toolId="rewards-calculator"
-      category="credit-cards"
+      category="finance"
       emoji="🎁"
       customHowToUse={[
-        "Enter your monthly spending by category",
-        "Input reward rates for different categories",
-        "Calculate annual rewards earnings",
-        "Compare multiple reward cards",
-        "Factor in annual fees and benefits",
-        "Optimize spending category allocation"
+        "Enter monthly spending amount",
+        "Select reward type (cashback/points/miles)",
+        "Input reward rate percentage",
+        "Calculate annual earnings",
+        "Compare different programs",
+        "Maximize reward benefits"
       ]}
       customFeatures={[
-        "Multi-category spending analysis",
-        "Cashback vs points comparison",
-        "Annual fee break-even calculation",
-        "Reward card comparison tools",
-        "Spending optimization recommendations",
-        "ROI analysis for premium cards"
+        "Comprehensive rewards calculation",
+        "Cashback earnings analysis",
+        "Points valuation tools",
+        "Miles earning calculations",
+        "Rewards program comparison",
+        "Optimization tips and strategies"
       ]}
+      faqs={faqs}
     >
-      <CreditCardPayoffCalculator />
-    </ToolLayout>
+      <RewardsCalculator />
+    </EnhancedToolLayout>
   );
 }

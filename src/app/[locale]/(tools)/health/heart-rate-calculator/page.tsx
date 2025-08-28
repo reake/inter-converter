@@ -1,50 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import BMICalculator from '@/components/converters/health/BMICalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Heart Rate Calculator',
-  'Calculate target heart rate zones for exercise and fitness training. Determine maximum heart rate and optimal training zones.',
-  'heart-rate-calculator',
-  [
-    'heart rate calculator',
-    'target heart rate calculator',
-    'maximum heart rate calculator',
-    'heart rate zone calculator',
-    'cardio heart rate calculator'
-  ],
-  'health'
-);
+const keywords = generateOptimizedKeywords('heart-rate-calculator', 'health', 'Heart Rate Calculator');
+
+export const metadata: Metadata = {
+  title: 'Heart Rate Calculator - Target Heart Rate Zone Calculator | InterConverter',
+  description: 'Calculate target heart rate zones for exercise and fitness training. Determine maximum heart rate and optimal training zones for cardiovascular health.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Heart Rate Calculator - Target Heart Rate Zone Calculator',
+    description: 'Professional heart rate calculator for optimal cardiovascular training. Calculate target heart rate zones and maximum heart rate.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-heart-rate-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Heart Rate Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/health/heart-rate-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function HeartRateCalculatorPage() {
+  const faqs = getFAQsByToolId('heart-rate-calculator', 'health');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Heart Rate Calculator"
-      description="Calculate target heart rate zones for optimal cardiovascular training and fitness performance"
+      description="Calculate target heart rate zones for optimal cardiovascular training and fitness performance with instant calculations."
+      keywords={keywords}
       toolId="heart-rate-calculator"
       category="health"
       emoji="❤️"
       customHowToUse={[
-        "输入年龄和静息心率",
-        "选择健身水平和目标",
-        "计算最大心率和储备心率",
-        "查看不同训练强度区间",
-        "制定心率训练计划",
-        "监测运动强度效果"
+        "Enter your age and resting heart rate",
+        "Select your fitness level and training goals",
+        "Calculate maximum heart rate and heart rate reserve",
+        "View different training intensity zones",
+        "Create personalized heart rate training plan",
+        "Monitor exercise intensity effectiveness"
       ]}
       customFeatures={[
-        "多种心率公式计算",
-        "训练强度区间划分",
-        "个性化目标设定",
-        "运动类型推荐",
-        "进度跟踪工具",
-        "安全训练指导"
+        "Multiple heart rate formula calculations",
+        "Training intensity zone breakdown",
+        "Personalized goal setting",
+        "Exercise type recommendations",
+        "Progress tracking tools",
+        "Safe training guidance"
       ]}
+      faqs={faqs}
     >
       <BMICalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

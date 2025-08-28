@@ -1,50 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import CurrencyConverter from '@/components/converters/finance/CurrencyConverter';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'USD to EUR Calculator',
-  'Convert US Dollars to Euros with real-time exchange rates. Calculate USD to EUR currency conversion for travel and business.',
-  'usd-to-eur-calculator',
-  [
-    'USD to EUR calculator',
-    'dollar to euro calculator',
-    'USD EUR converter',
-    'US dollar euro exchange rate',
-    'currency converter USD EUR'
-  ],
-  'currency'
-);
+const keywords = generateOptimizedKeywords('usd-to-eur-calculator', 'finance', 'USD to EUR Calculator');
+
+export const metadata: Metadata = {
+  title: 'USD to EUR Calculator - Dollar to Euro Converter | InterConverter',
+  description: 'Convert US Dollars to Euros with real-time exchange rates. Get accurate USD to EUR conversion with instant calculations.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'USD to EUR Calculator - Dollar to Euro Converter',
+    description: 'Professional USD to EUR currency converter with real-time exchange rates. Convert dollars to euros instantly.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-usd-to-eur-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'USD to EUR Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/usd-to-eur-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function USDToEURCalculatorPage() {
+  const faqs = getFAQsByToolId('usd-to-eur-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="USD to EUR Calculator"
-      description="Convert US Dollars to Euros with live exchange rates and historical data for accurate currency conversion"
+      description="Convert US Dollars to Euros with real-time exchange rates and instant calculations."
+      keywords={keywords}
       toolId="usd-to-eur-calculator"
-      category="currency"
+      category="finance"
       emoji="💱"
       customHowToUse={[
-        "Enter the USD amount to convert",
-        "View current USD to EUR exchange rate",
-        "Calculate equivalent EUR amount",
+        "Enter USD amount to convert",
+        "View current USD/EUR exchange rate",
+        "Get instant EUR conversion result",
         "Check historical rate trends",
         "Compare with other currency pairs",
-        "Get conversion for travel or business"
+        "Set up rate change alerts"
       ]}
       customFeatures={[
-        "Real-time exchange rates",
-        "Historical rate charts",
-        "Rate change notifications",
-        "Conversion fee calculations",
-        "Travel budget planning",
-        "Business transaction support"
+        "Real-time USD to EUR exchange rates",
+        "Historical exchange rate charts",
+        "Rate change notifications and alerts",
+        "Multiple currency pair support",
+        "Conversion history tracking",
+        "Market analysis and trend tools"
       ]}
+      faqs={faqs}
     >
       <CurrencyConverter />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

@@ -1,51 +1,63 @@
 import { Metadata } from 'next';
-import { ToolLayout } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import MortgageCalculator from '@/components/converters/finance/MortgageCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
-const title = '30-Year Fixed Mortgage Calculator';
-const description = 'Calculate 30-year fixed mortgage payments with amortization schedule. Compare monthly payments, total interest, and loan costs for 30-year mortgages.';
-const keywordsArr = [
-  '30 year mortgage calculator',
-  '30 year fixed mortgage calculator',
-  '30 year loan calculator',
-  '30 year mortgage payment',
-  'thirty year mortgage calculator',
-  '30 year home loan calculator',
-  '30 year mortgage amortization',
-  'fixed rate mortgage calculator',
-  '30 year mortgage interest',
-  'conventional 30 year mortgage',
-  '30 year mortgage rates',
-  'long term mortgage calculator',
-  '30 year principal and interest',
-  'traditional mortgage calculator'
-];
+
+const keywords = generateOptimizedKeywords('30-year-fixed-mortgage-calculator', 'finance', '30-Year Fixed Mortgage Calculator');
 
 export const metadata: Metadata = {
-  title: `${title} | InterConverter`,
-  description,
-  keywords: keywordsArr.join(', '),
+  title: '30-Year Fixed Mortgage Calculator - Traditional Mortgage Calculator | InterConverter',
+  description: 'Calculate 30-year fixed mortgage payments with lowest monthly payments. Traditional long-term mortgage calculator for maximum affordability.',
+  keywords: keywords.join(', '),
   openGraph: {
-    title: `${title} | InterConverter`,
-    description,
+    title: '30-Year Fixed Mortgage Calculator - Traditional Mortgage Calculator',
+    description: 'Professional 30-year mortgage calculator for lowest monthly payments and maximum affordability. Traditional long-term mortgage planning.',
     type: 'website',
+    images: [
+      {
+        url: '/images/og-30-year-fixed-mortgage-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: '30-Year Fixed Mortgage Calculator Tool'
+      }
+    ]
   },
-  alternates: { canonical: '/finance/30-year-fixed-mortgage-calculator' }
+  alternates: {
+    canonical: '/finance/30-year-fixed-mortgage-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
 };
 
 export default function ThirtyYearFixedMortgageCalculatorPage() {
+  const faqs = getFAQsByToolId('30-year-fixed-mortgage-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="30-Year Fixed Mortgage Calculator"
-      description="Calculate monthly payments and total costs for a 30-year fixed-rate mortgage with detailed amortization schedule"
+      description="Calculate 30-year fixed mortgage payments for lowest monthly payments and maximum affordability with instant calculations."
+      keywords={keywords}
       toolId="30-year-fixed-mortgage-calculator"
-      category="mortgages"
+      category="finance"
       emoji="🏠"
       customHowToUse={[
-        "Enter the loan amount or home price",
-        "Input your down payment (if calculating from home price)",
+        "Enter the loan amount for your mortgage",
         "Set the 30-year fixed interest rate",
         "Add property taxes and insurance estimates",
         "Review monthly payment breakdown",
@@ -59,8 +71,9 @@ export default function ThirtyYearFixedMortgageCalculatorPage() {
         "Loan balance progression chart",
         "Tax and insurance escrow calculations"
       ]}
+      faqs={faqs}
     >
       <MortgageCalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

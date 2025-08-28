@@ -1,50 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import TaxCalculator from '@/components/converters/finance/TaxCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Income Tax Calculator',
-  'Calculate federal and state income taxes based on your income, filing status, and deductions. Estimate tax liability and refunds.',
-  'income-tax-calculator',
-  [
-    'income tax calculator',
-    'federal tax calculator',
-    'state tax calculator',
-    'tax liability calculator',
-    'tax refund calculator'
-  ],
-  'taxes'
-);
+const keywords = generateOptimizedKeywords('income-tax-calculator', 'finance', 'Income Tax Calculator');
+
+export const metadata: Metadata = {
+  title: 'Income Tax Calculator - Federal & State Tax Calculator | InterConverter',
+  description: 'Calculate federal and state income tax liability. Estimate tax refunds and plan tax withholdings with instant calculations.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Income Tax Calculator - Federal & State Tax Calculator',
+    description: 'Professional income tax calculator for federal and state taxes. Calculate liability, refunds, and plan withholdings.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-income-tax-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Income Tax Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/income-tax-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function IncomeTaxCalculatorPage() {
+  const faqs = getFAQsByToolId('income-tax-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Income Tax Calculator"
-      description="Calculate your federal and state income tax liability based on income, filing status, and deductions"
+      description="Calculate federal and state income tax liability with instant calculations."
+      keywords={keywords}
       toolId="income-tax-calculator"
-      category="taxes"
-      emoji="🧾"
+      category="finance"
+      emoji="💰"
       customHowToUse={[
-        "Enter your annual gross income",
-        "Select filing status (single, married, etc.)",
-        "Input deductions and credits",
-        "Choose your state for state tax calculation",
+        "Enter total annual income amount",
+        "Select appropriate filing status",
+        "Input standard or itemized deductions",
+        "Choose current tax year",
         "Calculate total tax liability",
-        "Estimate refund or amount owed"
+        "Review detailed tax breakdown"
       ]}
       customFeatures={[
-        "Federal tax bracket calculations",
-        "State tax estimations",
-        "Standard vs itemized deductions",
-        "Tax credit applications",
-        "Withholding analysis",
-        "Tax planning strategies"
+        "Federal income tax calculation",
+        "State tax estimation by location",
+        "Tax bracket analysis and optimization",
+        "Deduction comparison and planning",
+        "Tax refund estimation tools",
+        "Withholding adjustment planning"
       ]}
+      faqs={faqs}
     >
       <TaxCalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

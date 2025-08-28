@@ -1,55 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import MortgageCalculator from '@/components/converters/finance/MortgageCalculator';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
+import LoanCalculator from '@/components/converters/finance/LoanCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Home Equity Loan Calculator',
-  'Calculate home equity loan payments with fixed rates and terms. Second mortgage calculator for lump sum home equity loans.',
-  'home-equity-loan-calculator',
-  [
-    'home equity loan calculator',
-    'home equity loan payment calculator',
-    'second mortgage calculator',
-    'equity loan calculator',
-    'home equity borrowing calculator',
-    'fixed rate equity loan calculator',
-    'home equity installment loan calculator',
-    'equity loan payment estimator',
-    'home equity financing calculator',
-    'second mortgage payment calculator'
-  ],
-  'home-equity'
-);
+const keywords = generateOptimizedKeywords('home-equity-loan-calculator', 'finance', 'Home Equity Loan Calculator');
+
+export const metadata: Metadata = {
+  title: 'Home Equity Loan Calculator - HELOC Calculator | InterConverter',
+  description: 'Calculate home equity loan payments, available equity, and borrowing capacity based on home value with instant calculations.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Home Equity Loan Calculator - HELOC Calculator',
+    description: 'Professional home equity loan calculator for borrowing capacity. Calculate payments and available equity.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-home-equity-loan-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Home Equity Loan Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/home-equity-loan-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function HomeEquityLoanCalculatorPage() {
+  const faqs = getFAQsByToolId('home-equity-loan-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Home Equity Loan Calculator"
-      description="Calculate fixed-rate home equity loan payments and total interest costs for lump sum borrowing against your home's equity"
+      description="Calculate home equity loan payments and available borrowing capacity with instant calculations."
+      keywords={keywords}
       toolId="home-equity-loan-calculator"
-      category="home-equity"
-      emoji="🏠💰"
+      category="finance"
+      emoji="🏠"
       customHowToUse={[
-        "Enter your home's current market value",
-        "Input your existing mortgage balance",
-        "Set the desired loan amount (up to 80% LTV)",
-        "Enter the fixed interest rate and loan term",
-        "Calculate fixed monthly payments",
-        "Review total interest cost and payoff schedule"
+        "Enter current home market value",
+        "Input remaining mortgage balance owed",
+        "Set desired loan amount to borrow",
+        "Choose interest rate and loan term",
+        "Calculate monthly payment and costs",
+        "Review equity requirements and LTV limits"
       ]}
       customFeatures={[
-        "Fixed monthly payment calculation",
-        "Available equity assessment",
-        "Loan-to-value ratio analysis",
-        "Complete amortization schedule",
-        "Total interest cost projection",
-        "Comparison with HELOC options"
+        "Available equity calculation based on home value",
+        "Loan-to-value ratio analysis and limits",
+        "Monthly payment estimation with interest",
+        "HELOC vs home equity loan comparison",
+        "Interest rate impact and cost analysis",
+        "Borrowing capacity and qualification assessment"
       ]}
+      faqs={faqs}
     >
-      <MortgageCalculator />
-    </ToolLayout>
+      <LoanCalculator />
+    </EnhancedToolLayout>
   );
 }

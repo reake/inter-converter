@@ -1,53 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import MortgageCalculator from '@/components/converters/finance/MortgageCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  '15 vs 30 Year Mortgage Calculator',
-  'Compare 15-year vs 30-year mortgage payments, interest costs, and total savings. Side-by-side mortgage term comparison calculator.',
-  '15-vs-30-year-mortgage-calculator',
-  [
-    '15 vs 30 year mortgage calculator',
-    '15 year vs 30 year mortgage',
-    'mortgage term comparison calculator',
-    '15 30 mortgage comparison',
-    'short vs long term mortgage',
-    'mortgage payment comparison',
-    'interest savings calculator',
-    'mortgage term analyzer'
-  ],
-  'mortgages'
-);
+const keywords = generateOptimizedKeywords('15-vs-30-year-mortgage-calculator', 'finance', '15 vs 30 Year Mortgage Calculator');
+
+export const metadata: Metadata = {
+  title: '15 vs 30 Year Mortgage Calculator - Compare Mortgage Terms | InterConverter',
+  description: 'Compare 15-year vs 30-year mortgage payments, interest costs, and total savings. Make informed mortgage term decisions with detailed analysis.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: '15 vs 30 Year Mortgage Calculator - Compare Mortgage Terms',
+    description: 'Professional mortgage comparison calculator. Compare 15-year vs 30-year mortgage terms, payments, and total interest costs.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-15-vs-30-year-mortgage-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: '15 vs 30 Year Mortgage Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/15-vs-30-year-mortgage-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function FifteenVsThirtyYearMortgageCalculatorPage() {
+  const faqs = getFAQsByToolId('15-vs-30-year-mortgage-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="15 vs 30 Year Mortgage Calculator"
-      description="Compare 15-year and 30-year mortgage options side-by-side to determine the best loan term for your situation"
+      description="Compare 15-year vs 30-year mortgage terms to make the best financial decision for your home loan with instant calculations."
+      keywords={keywords}
       toolId="15-vs-30-year-mortgage-calculator"
-      category="mortgages"
+      category="finance"
       emoji="⚖️"
       customHowToUse={[
-        "Enter loan amount and interest rates for both terms",
-        "Compare monthly payment differences",
-        "Analyze total interest cost savings",
-        "Review cash flow impact",
-        "Consider opportunity cost of higher payments",
-        "Make informed decision based on your financial goals"
+        "Enter the loan amount for comparison",
+        "Set interest rates for both 15 and 30-year terms",
+        "Compare monthly payments side by side",
+        "Analyze total interest costs over loan life",
+        "Review equity building speed differences",
+        "Make informed mortgage term decision"
       ]}
       customFeatures={[
-        "Side-by-side payment comparison",
-        "Total interest savings analysis",
-        "Cash flow impact assessment",
-        "Break-even analysis",
-        "Opportunity cost calculations",
-        "Personalized recommendation engine"
+        "Side-by-side mortgage comparison",
+        "Total interest savings calculation",
+        "Monthly payment difference analysis",
+        "Equity building timeline comparison",
+        "Break-even analysis tools",
+        "Financial impact assessment"
       ]}
+      faqs={faqs}
     >
       <MortgageCalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

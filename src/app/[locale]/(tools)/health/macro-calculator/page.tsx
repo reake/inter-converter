@@ -1,50 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import BMICalculator from '@/components/converters/health/BMICalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Macro Calculator',
-  'Calculate macronutrient ratios (carbs, protein, fat) based on fitness goals, activity level, and dietary preferences.',
-  'macro-calculator',
-  [
-    'macro calculator',
-    'macronutrient calculator',
-    'carbs protein fat calculator',
-    'nutrition macro calculator',
-    'diet macro calculator'
-  ],
-  'health'
-);
+const keywords = generateOptimizedKeywords('macro-calculator', 'health', 'Macro Calculator');
+
+export const metadata: Metadata = {
+  title: 'Macro Calculator - Macronutrient Calculator | InterConverter',
+  description: 'Calculate optimal macronutrient ratios (protein, carbs, fats) based on your fitness goals, activity level, and body composition for effective nutrition planning.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Macro Calculator - Macronutrient Calculator',
+    description: 'Professional macronutrient calculator for optimal nutrition planning. Calculate protein, carbs, and fat ratios for your fitness goals.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-macro-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Macro Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/health/macro-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function MacroCalculatorPage() {
+  const faqs = getFAQsByToolId('macro-calculator', 'health');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Macro Calculator"
-      description="Calculate optimal macronutrient ratios for carbohydrates, protein, and fat based on your fitness goals and lifestyle"
+      description="Calculate optimal macronutrient distribution for your fitness and health goals with instant calculations."
+      keywords={keywords}
       toolId="macro-calculator"
       category="health"
-      emoji="🍽️"
+      emoji="🥗"
       customHowToUse={[
-        "输入基本信息（体重、身高、年龄）",
-        "选择健身目标（减脂、增肌、维持）",
-        "设置活动强度等级",
-        "选择饮食偏好和限制",
-        "计算每日宏量营养素需求",
-        "制定个性化饮食计划"
+        "Enter basic information (age, gender, weight, height)",
+        "Select activity level and fitness goals",
+        "Set weight goals (fat loss, muscle gain, maintain)",
+        "Calculate daily macronutrient requirements",
+        "View protein, carbohydrate, and fat distribution",
+        "Create personalized meal planning"
       ]}
       customFeatures={[
-        "个性化宏量营养素比例",
-        "多种健身目标支持",
-        "饮食偏好调整",
-        "每日卡路里分配",
-        "营养时间安排",
-        "进度跟踪工具"
+        "Personalized macronutrient calculations",
+        "Multiple fitness goal support",
+        "Activity level adjustments",
+        "Nutrient grams and calorie breakdown",
+        "Meal planning recommendations",
+        "Progress tracking tools"
       ]}
+      faqs={faqs}
     >
       <BMICalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

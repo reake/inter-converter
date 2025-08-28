@@ -1,61 +1,78 @@
 import { Metadata } from 'next';
-import { ToolLayout } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import { RamAirCalculator } from '@/components/converters/automotive/RamAirCalculator';
-
-
-
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
-const keywords = [
-  'ram air calculator',
-  'ram air induction',
-  'horsepower gain',
-  'pontiac ram air',
-  'cold air intake',
-  'performance calculator',
-  'automotive calculator',
-];
+
+const keywords = generateOptimizedKeywords('ram-air-calculator', 'auto', 'Ram Air Calculator');
 
 export const metadata: Metadata = {
-  title: 'Ram Air Calculator',
-  description:
-    'Calculate horsepower gains from ram air induction systems. Determine PSI increase and total horsepower output based on vehicle speed and engine power.',
+  title: 'Ram Air Calculator - Dynamic Pressure & Intake Analysis | InterConverter',
+  description: 'Calculate ram air effect and dynamic pressure from vehicle speed. Free ram air calculator for automotive intake systems with professional accuracy.',
   keywords: keywords.join(', '),
   openGraph: {
-    title: 'Ram Air Calculator',
-    description:
-      'Calculate horsepower gains from ram air induction systems. Determine PSI increase and total horsepower output based on vehicle speed and engine power.',
+    title: 'Ram Air Calculator - Dynamic Pressure & Intake Analysis',
+    description: 'Professional ram air calculator for automotive intake systems. Calculate dynamic pressure effects and ram air benefits from vehicle speed.',
     type: 'website',
+    images: [
+      {
+        url: '/images/og-ram-air-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Ram Air Calculator Tool'
+      }
+    ]
   },
   alternates: {
-    canonical: '/auto/ram-air-calculator',
+    canonical: '/auto/ram-air-calculator'
   },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
 };
 
 export default function RamAirCalculatorPage() {
+  const faqs = getFAQsByToolId('ram-air-calculator', 'auto');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Ram Air Calculator"
-      description="Calculate horsepower gains from ram air induction systems. Determine PSI increase and total horsepower output based on vehicle speed and engine power"
+      description="Calculate ram air effect and dynamic pressure from vehicle speed. Essential for intake system design and performance analysis."
       keywords={keywords}
       toolId="ram-air-calculator"
       category="auto"
       emoji="💨"
       customHowToUse={[
-        "Enter base engine horsepower",
-        "Input vehicle speed in MPH",
-        "View calculated ram air pressure increase",
-        "See total horsepower with ram air effect"
+        "Enter vehicle speed in MPH or KPH",
+        "View calculated ram air pressure",
+        "Analyze dynamic pressure effects",
+        "Use for intake system design and optimization",
+        "Compare different speed scenarios"
       ]}
       customFeatures={[
         "Ram air pressure calculations",
-        "Speed-based horsepower gains",
-        "Pontiac Ram Air system analysis",
-        "Cold air intake comparisons"
+        "Dynamic pressure analysis",
+        "Speed to pressure conversion",
+        "Intake system optimization",
+        "Professional automotive accuracy"
       ]}
+      faqs={faqs}
     >
       <RamAirCalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

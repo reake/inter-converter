@@ -1,50 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import BMICalculator from '@/components/converters/health/BMICalculator';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
+import SleepCalculator from '@/components/converters/health/SleepCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Sleep Calculator',
-  'Calculate optimal sleep and wake times based on sleep cycles. Plan bedtime and wake-up schedules for better sleep quality.',
-  'sleep-calculator',
-  [
-    'sleep calculator',
-    'sleep cycle calculator',
-    'bedtime calculator',
-    'wake up time calculator',
-    'sleep schedule calculator'
-  ],
-  'health'
-);
+const keywords = generateOptimizedKeywords('sleep-calculator', 'health', 'Sleep Calculator');
+
+export const metadata: Metadata = {
+  title: 'Sleep Calculator - Optimal Sleep & Wake Time Calculator | InterConverter',
+  description: 'Calculate optimal sleep and wake times based on sleep cycles. Improve sleep quality with personalized sleep schedules and instant calculations.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Sleep Calculator - Optimal Sleep & Wake Time Calculator',
+    description: 'Professional sleep calculator for better rest. Calculate optimal bedtime and wake times based on sleep cycles.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-sleep-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Sleep Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/health/sleep-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function SleepCalculatorPage() {
+  const faqs = getFAQsByToolId('sleep-calculator', 'health');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Sleep Calculator"
-      description="Calculate optimal sleep and wake times based on natural sleep cycles for better rest and recovery"
+      description="Calculate optimal sleep and wake times based on natural sleep cycles with instant calculations."
+      keywords={keywords}
       toolId="sleep-calculator"
       category="health"
       emoji="😴"
       customHowToUse={[
-        "选择入睡时间或起床时间",
-        "考虑睡眠周期（90分钟循环）",
-        "计算最佳睡眠和起床时间",
-        "查看推荐的睡眠时长",
-        "制定规律的睡眠计划",
-        "跟踪睡眠质量改善"
+        "Enter desired wake-up time",
+        "Or input preferred bedtime",
+        "Select sleep cycle duration",
+        "Calculate optimal sleep schedule",
+        "View sleep quality recommendations",
+        "Create personalized sleep plan"
       ]}
       customFeatures={[
-        "睡眠周期优化",
-        "年龄段睡眠需求",
-        "最佳入睡时间计算",
-        "睡眠质量评估",
-        "作息规律建议",
-        "睡眠健康指导"
+        "Sleep cycle optimization",
+        "Optimal bedtime calculation",
+        "Wake-up time recommendations",
+        "Sleep quality assessment",
+        "Rest and recovery planning",
+        "Comprehensive sleep health guidance"
       ]}
+      faqs={faqs}
     >
-      <BMICalculator />
-    </ToolLayout>
+      <SleepCalculator />
+    </EnhancedToolLayout>
   );
 }

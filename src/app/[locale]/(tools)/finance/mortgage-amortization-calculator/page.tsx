@@ -1,55 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import MortgageCalculator from '@/components/converters/finance/MortgageCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Mortgage Amortization Calculator',
-  'Calculate mortgage amortization schedule with monthly principal and interest breakdown. View complete payment schedule and loan balance over time.',
-  'mortgage-amortization-calculator',
-  [
-    'mortgage amortization calculator',
-    'amortization schedule calculator',
-    'loan amortization calculator',
-    'mortgage payment schedule',
-    'principal and interest calculator',
-    'mortgage amortization table',
-    'loan payment schedule',
-    'mortgage balance calculator',
-    'amortization chart calculator',
-    'mortgage paydown calculator'
-  ],
-  'mortgages'
-);
+const keywords = generateOptimizedKeywords('mortgage-amortization-calculator', 'finance', 'Mortgage Amortization Calculator');
+
+export const metadata: Metadata = {
+  title: 'Mortgage Amortization Calculator - Payment Schedule | InterConverter',
+  description: 'Calculate mortgage amortization schedule with principal and interest breakdown for each payment with instant calculations.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Mortgage Amortization Calculator - Payment Schedule',
+    description: 'Professional mortgage amortization calculator for payment schedules. Calculate principal and interest breakdown.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-mortgage-amortization-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Mortgage Amortization Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/mortgage-amortization-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function MortgageAmortizationCalculatorPage() {
+  const faqs = getFAQsByToolId('mortgage-amortization-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Mortgage Amortization Calculator"
-      description="Generate complete mortgage amortization schedule showing monthly principal and interest payments over the loan term"
+      description="Calculate mortgage amortization schedule and payment breakdown with instant calculations."
+      keywords={keywords}
       toolId="mortgage-amortization-calculator"
-      category="mortgages"
+      category="finance"
       emoji="📊"
       customHowToUse={[
-        "Enter loan amount, interest rate, and term",
-        "Generate complete amortization schedule",
-        "View monthly principal vs interest breakdown",
-        "Track remaining loan balance over time",
-        "Analyze total interest paid over loan life",
-        "Export or print amortization table"
+        "Enter total loan amount",
+        "Set annual interest rate",
+        "Choose loan term in years",
+        "Calculate amortization schedule",
+        "View detailed payment schedule",
+        "Analyze principal vs interest breakdown"
       ]}
       customFeatures={[
-        "Complete payment-by-payment schedule",
-        "Principal vs interest breakdown",
-        "Remaining balance tracking",
-        "Cumulative interest calculations",
-        "Year-by-year summary tables",
-        "Visual amortization charts"
+        "Complete mortgage amortization schedule",
+        "Monthly payment breakdown analysis",
+        "Principal vs interest tracking over time",
+        "Remaining balance calculation by period",
+        "Total interest cost calculation",
+        "Interactive payment schedule visualization"
       ]}
+      faqs={faqs}
     >
       <MortgageCalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

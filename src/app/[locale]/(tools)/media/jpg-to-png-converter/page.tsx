@@ -1,36 +1,76 @@
 import { Metadata } from 'next';
-import { ToolLayout } from '@/components/tools/ToolLayout';
-
-
-
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
-const title = 'JPG to PNG Converter';
-const description = 'Convert JPG images to PNG format with transparency support. Free online image converter with batch processing.';
-const keywordsArr = ['jpg', 'jpeg', 'png', 'image', 'converter', 'photo', 'transparency', 'format'];
+
+const keywords = generateOptimizedKeywords('jpg-to-png-converter', 'media', 'JPG to PNG Converter');
 
 export const metadata: Metadata = {
-  title: `${title} | InterConverter`,
-  description,
-  keywords: keywordsArr.join(', '),
+  title: 'JPG to PNG Converter - Convert Images Online | InterConverter',
+  description: 'Convert JPG images to PNG format with transparency support. Free online image converter with batch processing and quality optimization.',
+  keywords: keywords.join(', '),
   openGraph: {
-    title: `${title} | InterConverter`,
-    description,
+    title: 'JPG to PNG Converter - Image Format Converter',
+    description: 'Professional image converter for JPG to PNG conversion. Preserve transparency and image quality with batch processing.',
     type: 'website',
+    images: [
+      {
+        url: '/images/og-jpg-to-png-converter.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'JPG to PNG Converter Tool'
+      }
+    ]
   },
-  alternates: { canonical: '/media/jpg-to-png-converter' }
+  alternates: {
+    canonical: '/media/jpg-to-png-converter'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
 };
 
 export default function JpgToPngConverterPage() {
+  const faqs = getFAQsByToolId('jpg-to-png-converter', 'media');
+
   return (
-    <ToolLayout
-      title={title}
-      description={description}
-      keywords={keywordsArr}
+    <EnhancedToolLayout
+      title="JPG to PNG Converter"
+      description="Convert JPG images to PNG format with transparency support and instant processing."
+      keywords={keywords}
       toolId="jpg-to-png-converter"
       category="media"
       emoji="🖼️"
+      customHowToUse={[
+        "Select or drag and drop your JPG/JPEG image files",
+        "Choose PNG conversion settings and quality options",
+        "Click convert to process your images instantly",
+        "Download the converted PNG files with transparency support",
+        "Use batch processing for multiple image conversions"
+      ]}
+      customFeatures={[
+        "Convert JPG/JPEG to PNG format",
+        "Preserve image transparency in PNG output",
+        "Batch processing for multiple files",
+        "Quality optimization settings",
+        "Drag and drop file upload",
+        "Instant download of converted images"
+      ]}
+      faqs={faqs}
     >
       <div className="text-center py-12 bg-muted rounded-lg">
         <div className="text-6xl mb-4">🚧</div>
@@ -57,6 +97,6 @@ export default function JpgToPngConverterPage() {
           </div>
         </div>
       </div>
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

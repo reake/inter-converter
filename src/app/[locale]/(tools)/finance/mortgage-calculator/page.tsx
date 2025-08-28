@@ -1,60 +1,79 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import MortgageCalculator from '@/components/converters/finance/MortgageCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Mortgage Calculator',
-  'Calculate monthly mortgage payments, total interest, and amortization schedule. Free mortgage payment calculator with taxes, insurance, and PMI.',
-  'mortgage-calculator',
-  [
-    'mortgage calculator',
-    'mortgage payment calculator',
-    'home loan calculator',
-    'monthly mortgage payment',
-    'mortgage amortization calculator',
-    'home mortgage calculator',
-    'loan payment calculator',
-    'mortgage interest calculator',
-    'house payment calculator',
-    'mortgage estimator',
-    'home loan payment',
-    'mortgage payment estimator',
-    'principal and interest calculator',
-    'mortgage cost calculator',
-    'home financing calculator'
-  ],
-  'mortgages'
-);
+const keywords = generateOptimizedKeywords('mortgage-calculator', 'finance', 'Mortgage Calculator');
+
+export const metadata: Metadata = {
+  title: 'Mortgage Calculator - Monthly Payment & Amortization | InterConverter',
+  description: 'Calculate monthly mortgage payments, total interest, and amortization schedule. Free mortgage payment calculator with taxes, insurance, and PMI.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Mortgage Calculator - Monthly Payment & Amortization',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-mortgage-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Mortgage Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/mortgage-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function MortgageCalculatorPage() {
+  const faqs = getFAQsByToolId('mortgage-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Mortgage Calculator"
-      description="Calculate your monthly mortgage payments including principal, interest, taxes, insurance, and PMI"
+      description="Calculate mortgage payments and analyze home loan options with instant calculations."
+      keywords={keywords}
       toolId="mortgage-calculator"
-      category="mortgages"
+      category="finance"
       emoji="🏠"
       customHowToUse={[
-        "Enter the home purchase price or loan amount",
-        "Input your down payment amount or percentage",
-        "Set the loan term (typically 15 or 30 years)",
-        "Enter the annual interest rate",
-        "Add property taxes, insurance, and PMI if applicable",
-        "View your monthly payment breakdown and amortization schedule"
+        "Enter home price or loan amount",
+        "Set down payment amount and percentage",
+        "Input interest rate from lender",
+        "Choose loan term (15, 20, or 30 years)",
+        "Add property taxes and insurance estimates",
+        "Calculate total monthly payment instantly"
       ]}
       customFeatures={[
-        "Monthly payment calculation with PITI breakdown",
-        "Complete amortization schedule",
-        "Total interest cost over loan term",
+        "Monthly payment calculation with PITI",
+        "Principal and interest breakdown by year",
         "Property tax and insurance estimates",
-        "PMI calculation for loans with less than 20% down",
-        "Loan-to-value ratio analysis"
+        "Complete amortization schedule",
+        "Total interest cost analysis over loan life",
+        "Refinancing comparison and savings analysis"
       ]}
+      faqs={faqs}
     >
       <MortgageCalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

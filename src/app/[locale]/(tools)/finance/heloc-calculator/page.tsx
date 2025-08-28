@@ -1,36 +1,60 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import MortgageCalculator from '@/components/converters/finance/MortgageCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'HELOC Calculator',
-  'Calculate HELOC payments, credit limits, and interest costs. Home Equity Line of Credit calculator with draw and repayment periods.',
-  'heloc-calculator',
-  [
-    'HELOC calculator',
-    'home equity line of credit calculator',
-    'HELOC payment calculator',
-    'home equity credit line calculator',
-    'HELOC interest calculator',
-    'equity line calculator',
-    'home equity LOC calculator',
-    'HELOC draw period calculator',
-    'variable rate HELOC calculator',
-    'home equity borrowing calculator'
-  ],
-  'home-equity'
-);
+const keywords = generateOptimizedKeywords('heloc-calculator', 'finance', 'HELOC Calculator');
+
+export const metadata: Metadata = {
+  title: 'HELOC Calculator - Home Equity Line of Credit | InterConverter',
+  description: 'Calculate HELOC payments, credit limits, and interest costs. Home Equity Line of Credit calculator with draw and repayment periods.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'HELOC Calculator - Home Equity Line of Credit',
+    description: 'Professional HELOC calculator for home equity lines of credit. Calculate payments, credit limits, and interest costs with draw periods.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-heloc-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'HELOC Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/heloc-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function HELOCCalculatorPage() {
+  const faqs = getFAQsByToolId('heloc-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="HELOC Calculator"
-      description="Calculate Home Equity Line of Credit payments, available credit limits, and total interest costs over draw and repayment periods"
+      description="Calculate Home Equity Line of Credit payments, available credit limits, and total interest costs over draw and repayment periods."
+      keywords={keywords}
       toolId="heloc-calculator"
-      category="home-equity"
+      category="finance"
       emoji="🏠💳"
       customHowToUse={[
         "Enter your home's current market value",
@@ -48,8 +72,9 @@ export default function HELOCCalculatorPage() {
         "Payment shock assessment",
         "Total interest cost projections"
       ]}
+      faqs={faqs}
     >
       <MortgageCalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

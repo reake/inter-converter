@@ -1,50 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import BMICalculator from '@/components/converters/health/BMICalculator';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
+import OvulationCalculator from '@/components/converters/health/OvulationCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Ovulation Calculator',
-  'Calculate ovulation dates and fertile window for family planning. Track menstrual cycle and predict best conception times.',
-  'ovulation-calculator',
-  [
-    'ovulation calculator',
-    'fertile window calculator',
-    'ovulation predictor',
-    'fertility calculator',
-    'menstrual cycle calculator'
-  ],
-  'health'
-);
+const keywords = generateOptimizedKeywords('ovulation-calculator', 'health', 'Ovulation Calculator');
+
+export const metadata: Metadata = {
+  title: 'Ovulation Calculator - Fertile Window & Conception Calculator | InterConverter',
+  description: 'Calculate ovulation dates and fertile window for family planning. Track menstrual cycle and predict best conception times with instant calculations.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Ovulation Calculator - Fertile Window & Conception Calculator',
+    description: 'Professional ovulation calculator for family planning. Calculate fertile window and track menstrual cycles.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-ovulation-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Ovulation Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/health/ovulation-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function OvulationCalculatorPage() {
+  const faqs = getFAQsByToolId('ovulation-calculator', 'health');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Ovulation Calculator"
-      description="Calculate ovulation dates and fertile window to optimize conception chances and track menstrual cycle patterns"
+      description="Calculate ovulation dates and fertile window for family planning with instant calculations."
+      keywords={keywords}
       toolId="ovulation-calculator"
       category="health"
       emoji="🌸"
       customHowToUse={[
-        "输入末次月经开始日期",
-        "设置平均月经周期长度",
-        "计算排卵日和受孕窗口期",
-        "查看最佳受孕时间",
-        "跟踪月经周期规律",
-        "获取备孕指导建议"
+        "Enter last menstrual period start date",
+        "Set average menstrual cycle length",
+        "Calculate ovulation date and fertile window",
+        "View best conception timing",
+        "Track menstrual cycle patterns",
+        "Get personalized fertility guidance"
       ]}
       customFeatures={[
-        "精确排卵日预测",
-        "受孕窗口期计算",
-        "月经周期跟踪",
-        "生育力评估",
-        "备孕时间规划",
-        "个性化建议"
+        "Accurate ovulation date prediction",
+        "Fertile window calculation",
+        "Menstrual cycle tracking tools",
+        "Fertility assessment indicators",
+        "Conception timing optimization",
+        "Personalized fertility recommendations"
       ]}
+      faqs={faqs}
     >
-      <BMICalculator />
-    </ToolLayout>
+      <OvulationCalculator />
+    </EnhancedToolLayout>
   );
 }

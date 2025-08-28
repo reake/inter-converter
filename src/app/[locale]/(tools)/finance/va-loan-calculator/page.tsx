@@ -1,55 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import MortgageCalculator from '@/components/converters/finance/MortgageCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'VA Loan Calculator',
-  'Calculate VA loan payments with no down payment and no PMI. Veterans mortgage calculator with VA funding fee and military benefits.',
-  'va-loan-calculator',
-  [
-    'VA loan calculator',
-    'VA mortgage calculator',
-    'veterans loan calculator',
-    'military mortgage calculator',
-    'VA loan payment calculator',
-    'VA funding fee calculator',
-    'no down payment mortgage calculator',
-    'veterans benefits calculator',
-    'VA home loan calculator',
-    'military home buying calculator'
-  ],
-  'mortgages'
-);
+const keywords = generateOptimizedKeywords('va-loan-calculator', 'finance', 'VA Loan Calculator');
+
+export const metadata: Metadata = {
+  title: 'VA Loan Calculator - Veterans Home Loan Calculator | InterConverter',
+  description: 'Calculate VA loan payments with no down payment and no PMI for eligible veterans and service members with instant calculations.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'VA Loan Calculator - Veterans Home Loan Calculator',
+    description: 'Professional VA loan calculator for veterans and military. Calculate payments with no down payment and no PMI.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-va-loan-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'VA Loan Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/va-loan-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function VALoanCalculatorPage() {
+  const faqs = getFAQsByToolId('va-loan-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="VA Loan Calculator"
-      description="Calculate VA loan payments with no down payment, no PMI, and VA funding fee for eligible veterans and service members"
+      description="Calculate VA loan payments for veterans and military members with instant calculations."
+      keywords={keywords}
       toolId="va-loan-calculator"
-      category="mortgages"
+      category="finance"
       emoji="🇺🇸"
       customHowToUse={[
-        "Enter the home purchase price",
-        "Select VA funding fee rate (varies by service type)",
-        "Input current VA loan interest rates",
+        "Enter home purchase price or loan amount",
+        "Set VA loan interest rate from lender",
+        "Add VA funding fee (if applicable)",
         "Calculate monthly payment without PMI",
         "Review VA loan benefits and savings",
         "Compare with conventional loan options"
       ]}
       customFeatures={[
-        "No down payment calculations",
-        "No private mortgage insurance (PMI)",
-        "VA funding fee calculations",
-        "Veteran and service member benefits",
-        "Competitive interest rate analysis",
-        "VA loan limit verification"
+        "No down payment calculation (0% down)",
+        "No PMI requirements or costs",
+        "VA funding fee analysis and exemptions",
+        "Veteran benefit optimization and savings",
+        "Eligibility requirements and verification",
+        "VA loan limit calculations by county"
       ]}
+      faqs={faqs}
     >
       <MortgageCalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

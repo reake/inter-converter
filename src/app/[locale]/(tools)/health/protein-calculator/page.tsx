@@ -1,50 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import BMICalculator from '@/components/converters/health/BMICalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Protein Calculator',
-  'Calculate daily protein needs based on weight, activity level, and fitness goals. Optimize protein intake for muscle building and health.',
-  'protein-calculator',
-  [
-    'protein calculator',
-    'daily protein calculator',
-    'protein intake calculator',
-    'protein needs calculator',
-    'muscle building protein calculator'
-  ],
-  'health'
-);
+const keywords = generateOptimizedKeywords('protein-calculator', 'health', 'Protein Calculator');
+
+export const metadata: Metadata = {
+  title: 'Protein Calculator - Daily Protein Intake Calculator | InterConverter',
+  description: 'Calculate daily protein requirements based on body weight, activity level, and fitness goals for optimal muscle building and recovery.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Protein Calculator - Daily Protein Intake Calculator',
+    description: 'Professional protein calculator for optimal muscle building and recovery. Calculate daily protein requirements based on your fitness goals.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-protein-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Protein Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/health/protein-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function ProteinCalculatorPage() {
+  const faqs = getFAQsByToolId('protein-calculator', 'health');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Protein Calculator"
-      description="Calculate your daily protein requirements based on body weight, activity level, and fitness goals"
+      description="Calculate optimal daily protein intake for muscle building, weight loss, and general health based on your goals with instant calculations."
+      keywords={keywords}
       toolId="protein-calculator"
       category="health"
       emoji="🥩"
       customHowToUse={[
-        "输入体重和年龄",
-        "选择活动强度和健身目标",
-        "考虑特殊需求（怀孕、哺乳等）",
-        "计算每日蛋白质需求量",
-        "查看蛋白质食物来源建议",
-        "制定蛋白质摄入计划"
+        "Enter weight and height information",
+        "Select activity level and fitness goals",
+        "Set weight goals (muscle gain, fat loss, maintain)",
+        "Calculate daily protein requirements",
+        "View per-meal protein distribution recommendations",
+        "Get protein food source recommendations"
       ]}
       customFeatures={[
-        "个性化蛋白质需求计算",
-        "健身目标调整",
-        "特殊人群需求",
-        "食物来源推荐",
-        "营养时间安排",
-        "进度跟踪工具"
+        "Personalized protein requirement calculations",
+        "Multiple fitness goal support",
+        "Activity level adjustments",
+        "Per-meal distribution recommendations",
+        "Food source recommendations",
+        "Nutrition timing guidance"
       ]}
+      faqs={faqs}
     >
       <BMICalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

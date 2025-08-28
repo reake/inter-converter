@@ -1,55 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import MortgageCalculator from '@/components/converters/finance/MortgageCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Mortgage Payoff Calculator',
-  'Calculate early mortgage payoff with extra payments. See how additional principal payments reduce loan term and save interest.',
-  'mortgage-payoff-calculator',
-  [
-    'mortgage payoff calculator',
-    'extra payment calculator',
-    'mortgage early payoff calculator',
-    'additional principal calculator',
-    'mortgage acceleration calculator',
-    'early mortgage payoff',
-    'extra mortgage payment calculator',
-    'mortgage paydown calculator',
-    'biweekly mortgage calculator',
-    'mortgage overpayment calculator'
-  ],
-  'mortgages'
-);
+const keywords = generateOptimizedKeywords('mortgage-payoff-calculator', 'finance', 'Mortgage Payoff Calculator');
+
+export const metadata: Metadata = {
+  title: 'Mortgage Payoff Calculator - Extra Payment Calculator | InterConverter',
+  description: 'Calculate mortgage payoff time with extra payments. See how additional payments reduce loan term with instant calculations.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Mortgage Payoff Calculator - Extra Payment Calculator',
+    description: 'Professional mortgage payoff calculator for extra payments. Calculate time reduction and interest savings.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-mortgage-payoff-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Mortgage Payoff Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/mortgage-payoff-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function MortgagePayoffCalculatorPage() {
+  const faqs = getFAQsByToolId('mortgage-payoff-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Mortgage Payoff Calculator"
-      description="Calculate how extra payments can accelerate your mortgage payoff and reduce total interest costs"
+      description="Calculate mortgage payoff time with extra payments with instant calculations."
+      keywords={keywords}
       toolId="mortgage-payoff-calculator"
-      category="mortgages"
-      emoji="💰"
+      category="finance"
+      emoji="🏠"
       customHowToUse={[
-        "Enter your current mortgage details",
-        "Add extra monthly payment amount",
-        "Or enter one-time additional payments",
-        "Compare payoff scenarios",
-        "View interest savings from extra payments",
-        "Analyze different acceleration strategies"
+        "Enter current loan details and balance",
+        "Set extra payment amount per month",
+        "Choose payment frequency options",
+        "Calculate new payoff time",
+        "View total interest savings",
+        "Compare different payment strategies"
       ]}
       customFeatures={[
-        "Extra monthly payment calculations",
-        "One-time additional payment analysis",
-        "Biweekly payment option",
-        "Interest savings comparison",
-        "Payoff time reduction analysis",
-        "Multiple payment strategy comparison"
+        "Extra payment impact calculation",
+        "Loan payoff time reduction analysis",
+        "Total interest savings calculation",
+        "Payment strategy comparison tools",
+        "Updated amortization schedule",
+        "Early payoff benefits analysis"
       ]}
+      faqs={faqs}
     >
       <MortgageCalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

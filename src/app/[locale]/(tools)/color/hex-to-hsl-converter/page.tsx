@@ -1,34 +1,79 @@
 import { Metadata } from 'next';
-import { ToolLayout } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import HexToHslConverter from '@/components/converters/color/HexToHslConverter';
-import { getSEOConfigByToolId } from '@/config/seo-tools';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
-const seoConfig = getSEOConfigByToolId('hex-to-hsl');
+// Force static generation
+export const dynamic = 'force-static';
+
+const keywords = generateOptimizedKeywords('hex-to-hsl-converter', 'color', 'HEX to HSL Converter');
 
 export const metadata: Metadata = {
-  title: seoConfig?.title || 'HEX to HSL Converter - Convert Colors Online | InterConverter',
-  description: seoConfig?.description || 'Convert HEX color codes to HSL values instantly. Free online color converter with live preview and HSL breakdown.',
-  keywords: seoConfig?.keywords?.join(', ') || 'hex to hsl, color converter, hsl converter, color code converter',
+  title: 'HEX to HSL Converter - Convert Colors Online | InterConverter',
+  description: 'Convert HEX color codes to HSL values instantly. Free online color converter with live preview and HSL breakdown for web designers and developers.',
+  keywords: keywords.join(', '),
   openGraph: {
-    title: seoConfig?.title || 'HEX to HSL Converter | InterConverter',
-    description: seoConfig?.description || 'Convert HEX color codes to HSL values',
+    title: 'HEX to HSL Converter - Color Code Converter',
+    description: 'Professional color converter for HEX to HSL conversion. Live preview and HSL breakdown for web design and development.',
     type: 'website',
+    images: [
+      {
+        url: '/images/og-hex-to-hsl-converter.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'HEX to HSL Converter Tool'
+      }
+    ]
   },
   alternates: {
-    canonical: seoConfig?.canonicalPath || '/color/hex-to-hsl'
+    canonical: '/color/hex-to-hsl-converter'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   }
 };
 
 export default function HexToHslPage() {
+  const faqs = getFAQsByToolId('hex-to-hsl-converter', 'color');
+
   return (
-    <ToolLayout
-      title={metadata.title as string}
-      description={metadata.description as string}
-      keywords={seoConfig?.keywords || []}
-      toolId="hex-to-hsl"
+    <EnhancedToolLayout
+      title="HEX to HSL Converter"
+      description="Convert HEX color codes to HSL values instantly with live preview and instant calculations."
+      keywords={keywords}
+      toolId="hex-to-hsl-converter"
       category="color"
+      emoji="🎨"
+      customHowToUse={[
+        "Enter a HEX color code (e.g., #FF5733)",
+        "View the instant HSL conversion values",
+        "Use the color preview to see the actual color",
+        "Copy HSL values for your design project",
+        "Adjust HSL values to fine-tune colors"
+      ]}
+      customFeatures={[
+        "Convert HEX to HSL color format",
+        "Live color preview and breakdown",
+        "HSL value explanations (Hue, Saturation, Lightness)",
+        "CSS-ready HSL color values",
+        "Real-time color visualization",
+        "Copy to clipboard functionality"
+      ]}
+      faqs={faqs}
     >
       <HexToHslConverter />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

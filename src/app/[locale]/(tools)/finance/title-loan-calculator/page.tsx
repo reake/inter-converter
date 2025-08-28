@@ -1,50 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import LoanCalculator from '@/components/converters/finance/LoanCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Title Loan Calculator',
-  'Calculate auto title loan costs and APR. Understand the high cost of title loans and explore safer borrowing alternatives.',
-  'title-loan-calculator',
-  [
-    'title loan calculator',
-    'car title loan calculator',
-    'auto title loan calculator',
-    'vehicle title loan calculator',
-    'title pawn calculator'
-  ],
-  'loans'
-);
+const keywords = generateOptimizedKeywords('title-loan-calculator', 'finance', 'Title Loan Calculator');
+
+export const metadata: Metadata = {
+  title: 'Title Loan Calculator - Car Title Loan Payment Calculator | InterConverter',
+  description: 'Calculate title loan payments and costs. Understand the risks and costs of car title loans with instant calculations.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Title Loan Calculator - Car Title Loan Payment Calculator',
+    description: 'Professional title loan calculator for car title loans. Calculate payments and understand loan risks.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-title-loan-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Title Loan Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/title-loan-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function TitleLoanCalculatorPage() {
+  const faqs = getFAQsByToolId('title-loan-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Title Loan Calculator"
-      description="Calculate the true cost and risks of auto title loans and explore safer borrowing alternatives"
+      description="Calculate title loan payments and costs with instant calculations."
+      keywords={keywords}
       toolId="title-loan-calculator"
-      category="loans"
-      emoji="🚗💸"
+      category="finance"
+      emoji="🚗"
       customHowToUse={[
-        "Enter vehicle value and loan amount",
-        "Input loan fees and interest rate",
-        "Set loan term (typically 30 days)",
-        "Calculate effective APR",
-        "Review repossession risks",
-        "Compare with safer alternatives"
+        "Enter vehicle market value",
+        "Set desired loan amount",
+        "Input annual interest rate",
+        "Choose loan term length",
+        "Calculate monthly payments",
+        "Review loan risks and warnings"
       ]}
       customFeatures={[
-        "High APR calculations",
-        "Repossession risk warnings",
-        "Alternative loan suggestions",
-        "Cost comparison analysis",
-        "Financial education resources",
-        "Debt cycle prevention tools"
+        "Title loan payment calculations",
+        "High-interest rate impact analysis",
+        "Comprehensive risk assessment",
+        "Alternative loan option comparison",
+        "Vehicle value estimation tools",
+        "Cost warning and alert system"
       ]}
+      faqs={faqs}
     >
       <LoanCalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

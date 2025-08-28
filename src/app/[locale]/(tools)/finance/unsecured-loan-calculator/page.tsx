@@ -1,49 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import LoanCalculator from '@/components/converters/finance/LoanCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Unsecured Loan Calculator',
-  'Calculate unsecured personal loan payments without collateral requirements. Compare rates and terms for signature loans.',
-  'unsecured-loan-calculator',
-  [
-    'unsecured loan calculator',
-    'signature loan calculator',
-    'unsecured personal loan calculator',
-    'no collateral loan calculator'
-  ],
-  'loans'
-);
+const keywords = generateOptimizedKeywords('unsecured-loan-calculator', 'finance', 'Unsecured Loan Calculator');
+
+export const metadata: Metadata = {
+  title: 'Unsecured Loan Calculator - Personal Loan Payment Calculator | InterConverter',
+  description: 'Calculate unsecured loan payments and interest costs. Compare personal loan options and rates with instant calculations.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Unsecured Loan Calculator - Personal Loan Payment Calculator',
+    description: 'Professional unsecured loan calculator for personal loans. Calculate payments and compare loan options.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-unsecured-loan-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Unsecured Loan Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/unsecured-loan-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function UnsecuredLoanCalculatorPage() {
+  const faqs = getFAQsByToolId('unsecured-loan-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Unsecured Loan Calculator"
-      description="Calculate unsecured loan payments for personal loans that don't require collateral or asset backing"
+      description="Calculate unsecured loan payments and interest costs with instant calculations."
+      keywords={keywords}
       toolId="unsecured-loan-calculator"
-      category="loans"
-      emoji="📝"
+      category="finance"
+      emoji="💳"
       customHowToUse={[
         "Enter desired loan amount",
-        "Input interest rate based on credit score",
-        "Set loan term (typically 2-7 years)",
+        "Set annual interest rate",
+        "Choose loan term in months",
         "Calculate monthly payments",
-        "Compare with secured options",
-        "Analyze qualification requirements"
+        "Compare different loan options",
+        "Review total interest cost"
       ]}
       customFeatures={[
-        "No collateral required calculations",
-        "Credit score impact analysis",
-        "Higher rate considerations",
-        "Qualification assessment",
-        "Secured vs unsecured comparison",
-        "Risk-based pricing analysis"
+        "Unsecured loan payment calculations",
+        "Detailed payment schedule generation",
+        "Total interest cost analysis",
+        "Loan option comparison tools",
+        "Interest rate impact assessment",
+        "Loan affordability analysis"
       ]}
+      faqs={faqs}
     >
       <LoanCalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

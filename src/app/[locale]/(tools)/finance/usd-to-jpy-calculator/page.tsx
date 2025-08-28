@@ -1,50 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import CurrencyConverter from '@/components/converters/finance/CurrencyConverter';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'USD to JPY Calculator',
-  'Convert US Dollars to Japanese Yen with real-time exchange rates. Calculate USD to JPY currency conversion for Japan travel and business.',
-  'usd-to-jpy-calculator',
-  [
-    'USD to JPY calculator',
-    'dollar to yen calculator',
-    'USD JPY converter',
-    'US dollar Japanese yen exchange rate',
-    'currency converter USD JPY'
-  ],
-  'currency'
-);
+const keywords = generateOptimizedKeywords('usd-to-jpy-calculator', 'finance', 'USD to JPY Calculator');
+
+export const metadata: Metadata = {
+  title: 'USD to JPY Calculator - Dollar to Yen Converter | InterConverter',
+  description: 'Convert US Dollars to Japanese Yen with real-time exchange rates. Get accurate USD to JPY conversion with instant calculations.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'USD to JPY Calculator - Dollar to Yen Converter',
+    description: 'Professional USD to JPY currency converter with real-time exchange rates. Convert dollars to yen instantly.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-usd-to-jpy-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'USD to JPY Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/usd-to-jpy-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function USDToJPYCalculatorPage() {
+  const faqs = getFAQsByToolId('usd-to-jpy-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="USD to JPY Calculator"
-      description="Convert US Dollars to Japanese Yen with live exchange rates and historical data for accurate currency conversion"
+      description="Convert US Dollars to Japanese Yen with real-time exchange rates and instant calculations."
+      keywords={keywords}
       toolId="usd-to-jpy-calculator"
-      category="currency"
-      emoji="💴"
+      category="finance"
+      emoji="💱"
       customHowToUse={[
-        "Enter the USD amount to convert",
-        "View current USD to JPY exchange rate",
-        "Calculate equivalent JPY amount",
+        "Enter USD amount to convert",
+        "View current USD/JPY exchange rate",
+        "Get instant JPY conversion result",
         "Check historical rate trends",
-        "Compare with other Asian currencies",
-        "Get conversion for Japan travel or business"
+        "Compare with other currency pairs",
+        "Set up rate change alerts"
       ]}
       customFeatures={[
-        "Live USD/JPY exchange rates",
-        "Historical rate charts",
-        "Bank of Japan policy impact",
-        "Travel expense calculations",
-        "Japan business transaction support",
-        "Cross-rate comparisons"
+        "Real-time USD to JPY exchange rates",
+        "Historical exchange rate charts",
+        "Rate change notifications and alerts",
+        "Multiple currency pair support",
+        "Conversion history tracking",
+        "Market analysis and trend tools"
       ]}
+      faqs={faqs}
     >
-      <CurrencyConverter />
-    </ToolLayout>
+      <CurrencyConverter fromCurrency="USD" toCurrency="JPY" />
+    </EnhancedToolLayout>
   );
 }

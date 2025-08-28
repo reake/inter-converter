@@ -1,50 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import BMICalculator from '@/components/converters/health/BMICalculator';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
+import PregnancyCalculator from '@/components/converters/health/PregnancyCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Pregnancy Calculator',
-  'Calculate pregnancy due date, gestational age, and track pregnancy milestones. Estimate conception date and pregnancy timeline.',
-  'pregnancy-calculator',
-  [
-    'pregnancy calculator',
-    'due date calculator',
-    'pregnancy due date calculator',
-    'gestational age calculator',
-    'conception calculator'
-  ],
-  'health'
-);
+const keywords = generateOptimizedKeywords('pregnancy-calculator', 'health', 'Pregnancy Calculator');
+
+export const metadata: Metadata = {
+  title: 'Pregnancy Calculator - Due Date & Pregnancy Tracker | InterConverter',
+  description: 'Calculate pregnancy due date and track pregnancy progress. Estimate conception date and pregnancy milestones with instant calculations.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Pregnancy Calculator - Due Date & Pregnancy Tracker',
+    description: 'Professional pregnancy calculator for expectant mothers. Calculate due dates and track pregnancy progress.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-pregnancy-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Pregnancy Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/health/pregnancy-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function PregnancyCalculatorPage() {
+  const faqs = getFAQsByToolId('pregnancy-calculator', 'health');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Pregnancy Calculator"
-      description="Calculate pregnancy due date, gestational age, and track important pregnancy milestones and development stages"
+      description="Calculate pregnancy due date and track pregnancy progress with instant calculations."
+      keywords={keywords}
       toolId="pregnancy-calculator"
       category="health"
-      emoji="🤱"
+      emoji="🤰"
       customHowToUse={[
-        "输入末次月经开始日期",
-        "或输入预计受孕日期",
-        "计算预产期和孕周",
-        "查看胎儿发育里程碑",
-        "跟踪孕期重要检查时间",
-        "获取孕期健康指导"
+        "Enter last menstrual period start date",
+        "Or input estimated conception date",
+        "Calculate due date and pregnancy weeks",
+        "View fetal development milestones",
+        "Track pregnancy progress stages",
+        "Get personalized pregnancy guidance"
       ]}
       customFeatures={[
-        "精确预产期计算",
-        "孕周和胎龄追踪",
-        "胎儿发育里程碑",
-        "产检时间提醒",
-        "孕期营养建议",
-        "健康监测指标"
+        "Accurate due date calculation",
+        "Pregnancy week and gestational age tracking",
+        "Fetal development milestone tracking",
+        "Pregnancy milestone reminders",
+        "Prenatal appointment scheduling",
+        "Comprehensive pregnancy health guidance"
       ]}
+      faqs={faqs}
     >
-      <BMICalculator />
-    </ToolLayout>
+      <PregnancyCalculator />
+    </EnhancedToolLayout>
   );
 }

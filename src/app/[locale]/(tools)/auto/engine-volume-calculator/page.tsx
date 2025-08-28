@@ -1,60 +1,78 @@
 import { Metadata } from 'next';
-import { ToolLayout } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import { EngineVolumeCalculator } from '@/components/converters/automotive/EngineVolumeCalculator';
-
-
-
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
-const keywords = [
-  'engine volume calculator',
-  'cylinder volume',
-  'engine displacement',
-  'bore stroke calculator',
-  'cubic inches to cc',
-  'automotive calculator',
-];
+
+const keywords = generateOptimizedKeywords('engine-volume-calculator', 'auto', 'Engine Volume Calculator');
 
 export const metadata: Metadata = {
-  title: 'Engine Volume Calculator',
-  description:
-    'Calculate cylinder volume from bore and stroke, engine displacement from cylinder volume, and convert between CI and CC.',
+  title: 'Engine Volume Calculator - Bore & Stroke to Displacement | InterConverter',
+  description: 'Calculate engine volume and displacement from bore and stroke measurements. Free engine volume calculator for automotive applications with CI and liter results.',
   keywords: keywords.join(', '),
   openGraph: {
-    title: 'Engine Volume Calculator',
-    description:
-      'Calculate cylinder volume from bore and stroke, engine displacement from cylinder volume, and convert between CI and CC.',
+    title: 'Engine Volume Calculator - Bore & Stroke to Displacement',
+    description: 'Professional engine volume calculator for automotive applications. Calculate total displacement from bore, stroke, and cylinder count.',
     type: 'website',
+    images: [
+      {
+        url: '/images/og-engine-volume-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Engine Volume Calculator Tool'
+      }
+    ]
   },
   alternates: {
-    canonical: '/auto/engine-volume-calculator',
+    canonical: '/auto/engine-volume-calculator'
   },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
 };
 
 export default function EngineVolumeCalculatorPage() {
+  const faqs = getFAQsByToolId('engine-volume-calculator', 'auto');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Engine Volume Calculator"
-      description="Calculate cylinder volume from bore and stroke, engine displacement from cylinder volume, and convert between CI and CC"
+      description="Calculate engine volume and displacement from bore and stroke measurements. Essential tool for engine building and performance planning."
       keywords={keywords}
       toolId="engine-volume-calculator"
       category="auto"
-      emoji="🔧"
+      emoji="📐"
       customHowToUse={[
-        "Enter cylinder bore diameter",
-        "Input stroke length",
+        "Enter cylinder bore diameter in inches",
+        "Input stroke length in inches",
         "Specify number of cylinders",
-        "View calculated volumes and displacement"
+        "View calculated engine volume in CI and liters",
+        "Use for engine planning and identification"
       ]}
       customFeatures={[
-        "Cylinder volume calculations",
-        "Engine displacement calculation",
-        "Cubic inch to CC conversion",
-        "Bore and stroke analysis"
+        "Accurate volume calculations",
+        "Multiple unit support (CI/Liters)",
+        "Professional automotive tool",
+        "Engine building applications",
+        "Real-time calculation updates"
       ]}
+      faqs={faqs}
     >
       <EngineVolumeCalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

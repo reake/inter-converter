@@ -1,49 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import LoanCalculator from '@/components/converters/finance/LoanCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Motorcycle Loan Calculator',
-  'Calculate motorcycle loan payments and financing costs. Compare rates and terms for new and used motorcycle purchases.',
-  'motorcycle-loan-calculator',
-  [
-    'motorcycle loan calculator',
-    'bike loan calculator',
-    'motorcycle financing calculator',
-    'motorcycle payment calculator'
-  ],
-  'loans'
-);
+const keywords = generateOptimizedKeywords('motorcycle-loan-calculator', 'finance', 'Motorcycle Loan Calculator');
+
+export const metadata: Metadata = {
+  title: 'Motorcycle Loan Calculator - Bike Financing Calculator | InterConverter',
+  description: 'Calculate motorcycle loan payments and financing options for bike purchases with instant calculations.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Motorcycle Loan Calculator - Bike Financing Calculator',
+    description: 'Professional motorcycle loan calculator for bike financing. Calculate payments and compare loan options.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-motorcycle-loan-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Motorcycle Loan Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/motorcycle-loan-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function MotorcycleLoanCalculatorPage() {
+  const faqs = getFAQsByToolId('motorcycle-loan-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Motorcycle Loan Calculator"
-      description="Calculate monthly payments and total costs for motorcycle loans and bike financing options"
+      description="Calculate motorcycle loan payments and financing options with instant calculations."
+      keywords={keywords}
       toolId="motorcycle-loan-calculator"
-      category="loans"
+      category="finance"
       emoji="🏍️"
       customHowToUse={[
         "Enter motorcycle purchase price",
-        "Input down payment amount",
-        "Set loan term (typically 3-7 years)",
-        "Enter interest rate",
-        "Calculate monthly payments",
-        "Compare financing options"
+        "Set down payment amount",
+        "Input loan interest rate",
+        "Choose loan term in years",
+        "Calculate monthly payment",
+        "Review total financing costs"
       ]}
       customFeatures={[
-        "New and used bike calculations",
-        "Seasonal payment considerations",
-        "Insurance cost factors",
-        "Trade-in value analysis",
-        "Total ownership costs",
-        "Payment affordability assessment"
+        "Motorcycle loan payment calculation",
+        "Bike financing options analysis",
+        "Down payment impact on payments",
+        "Interest rate comparison tools",
+        "Loan term optimization strategies",
+        "Total cost analysis with insurance"
       ]}
+      faqs={faqs}
     >
       <LoanCalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

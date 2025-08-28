@@ -1,40 +1,79 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import { CountdownTimer } from '@/components/converters/time/CountdownTimer';
-import { getSEOConfigByToolId } from '@/config/seo-tools';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
-const seoConfig = getSEOConfigByToolId('countdown-timer');
+// Force static generation
+export const dynamic = 'force-static';
+
+const keywords = generateOptimizedKeywords('countdown-timer', 'time', 'Countdown Timer');
 
 export const metadata: Metadata = {
-  title: seoConfig?.title || 'Countdown Timer - Online Timer Tool | InterConverter',
-  description: seoConfig?.description || 'Free online countdown timer with custom time settings. Perfect for events, meetings, cooking, and productivity sessions.',
-  keywords: seoConfig?.keywords?.join(', ') || 'countdown timer, online timer, event timer, meeting timer, productivity timer',
+  title: 'Countdown Timer - Online Timer Tool | InterConverter',
+  description: 'Free online countdown timer with custom time settings. Perfect for events, meetings, cooking, and productivity sessions.',
+  keywords: keywords.join(', '),
   openGraph: {
-    title: seoConfig?.title || 'Countdown Timer | InterConverter',
-    description: seoConfig?.description || 'Online countdown timer for events and productivity',
+    title: 'Countdown Timer - Online Timer Tool',
+    description: 'Professional countdown timer for events and productivity. Set custom timers for meetings, cooking, workouts, and time management.',
     type: 'website',
+    images: [
+      {
+        url: '/images/og-countdown-timer.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Countdown Timer Tool'
+      }
+    ]
   },
   alternates: {
-    canonical: seoConfig?.canonicalPath || '/time/countdown-timer'
+    canonical: '/time/countdown-timer'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   }
 };
 
 export default function CountdownTimerPage() {
+  const faqs = getFAQsByToolId('countdown-timer', 'time');
+
   return (
-    <ToolLayout
-      title={metadata.title as string}
-      description={metadata.description as string}
-      keywords={seoConfig?.keywords || []}
+    <EnhancedToolLayout
+      title="Countdown Timer"
+      description="Free online countdown timer with custom time settings for events, meetings, and productivity sessions."
+      keywords={keywords}
       toolId="countdown-timer"
       category="time"
+      emoji="⏰"
+      customHowToUse={[
+        "Set hours, minutes, and seconds",
+        "Click start to begin countdown",
+        "Use pause/resume controls as needed",
+        "Get audio/visual alerts when time expires",
+        "Reset timer for repeated use"
+      ]}
+      customFeatures={[
+        "Custom time duration setting",
+        "Audio notification alerts",
+        "Visual countdown display",
+        "Pause and resume functionality",
+        "Full-screen timer mode",
+        "Multiple timer presets"
+      ]}
+      faqs={faqs}
     >
-      <div className="space-y-6">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Countdown Timer</h1>
-          <p className="text-gray-600">Set custom countdown timers for events, meetings, and productivity sessions</p>
-        </div>
-        <CountdownTimer />
-      </div>
-    </ToolLayout>
+      <CountdownTimer />
+    </EnhancedToolLayout>
   );
 }

@@ -1,51 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import LoanCalculator from '@/components/converters/finance/LoanCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'RV Loan Calculator',
-  'Calculate RV loan payments and recreational vehicle financing costs. Compare rates for motorhomes, travel trailers, and campers.',
-  'rv-loan-calculator',
-  [
-    'RV loan calculator',
-    'recreational vehicle loan calculator',
-    'motorhome loan calculator',
-    'travel trailer loan calculator',
-    'camper loan calculator',
-    'RV financing calculator'
-  ],
-  'loans'
-);
+const keywords = generateOptimizedKeywords('rv-loan-calculator', 'finance', 'RV Loan Calculator');
+
+export const metadata: Metadata = {
+  title: 'RV Loan Calculator - Recreational Vehicle Financing Calculator | InterConverter',
+  description: 'Calculate RV loan payments and financing options. Compare recreational vehicle loan rates and terms with instant calculations.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'RV Loan Calculator - Recreational Vehicle Financing Calculator',
+    description: 'Professional RV loan calculator for recreational vehicles. Calculate payments and compare financing options.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-rv-loan-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'RV Loan Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/rv-loan-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function RVLoanCalculatorPage() {
+  const faqs = getFAQsByToolId('rv-loan-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="RV Loan Calculator"
-      description="Calculate monthly payments and financing costs for RV loans including motorhomes, travel trailers, and campers"
+      description="Calculate RV loan payments and financing options with instant calculations."
+      keywords={keywords}
       toolId="rv-loan-calculator"
-      category="loans"
-      emoji="🚐"
+      category="finance"
+      emoji="🚙"
       customHowToUse={[
         "Enter RV purchase price",
-        "Input down payment amount",
-        "Set loan term (typically 10-20 years)",
-        "Enter interest rate",
+        "Set down payment amount",
+        "Input annual interest rate",
+        "Choose loan term length",
         "Calculate monthly payments",
-        "Compare different RV financing options"
+        "Compare financing options"
       ]}
       customFeatures={[
-        "New and used RV calculations",
-        "Extended financing terms",
-        "Down payment optimization",
-        "Seasonal usage considerations",
-        "Insurance and maintenance costs",
-        "Total ownership expense analysis"
+        "RV loan payment calculations",
+        "Down payment impact analysis",
+        "Loan term length comparison",
+        "Interest rate effect assessment",
+        "Total cost breakdown analysis",
+        "Financing option comparison tools"
       ]}
+      faqs={faqs}
     >
       <LoanCalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

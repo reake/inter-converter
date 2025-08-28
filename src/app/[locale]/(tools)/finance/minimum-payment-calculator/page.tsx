@@ -1,51 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import CreditCardPayoffCalculator from '@/components/converters/finance/CreditCardPayoffCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Credit Card Minimum Payment Calculator',
-  'Calculate credit card minimum payments and understand the long-term cost of paying only minimums. Plan better payment strategies.',
-  'minimum-payment-calculator',
-  [
-    'minimum payment calculator',
-    'credit card minimum payment calculator',
-    'minimum payment cost calculator',
-    'credit card payment calculator',
-    'minimum payment analysis',
-    'credit card minimum calculator'
-  ],
-  'credit-cards'
-);
+const keywords = generateOptimizedKeywords('minimum-payment-calculator', 'finance', 'Minimum Payment Calculator');
+
+export const metadata: Metadata = {
+  title: 'Minimum Payment Calculator - Credit Card Payoff Time | InterConverter',
+  description: 'Calculate minimum credit card payments and payoff time. Understand the impact of minimum payments on debt with instant calculations.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Minimum Payment Calculator - Credit Card Payoff Time',
+    description: 'Professional minimum payment calculator for credit card debt. Calculate payoff time and total interest costs.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-minimum-payment-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Minimum Payment Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/minimum-payment-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function MinimumPaymentCalculatorPage() {
+  const faqs = getFAQsByToolId('minimum-payment-calculator', 'finance');
+
   return (
-    <ToolLayout
-      title="Credit Card Minimum Payment Calculator"
-      description="Calculate your credit card minimum payments and see the true cost of paying only the minimum amount due"
+    <EnhancedToolLayout
+      title="Minimum Payment Calculator"
+      description="Calculate minimum credit card payments and payoff time with instant calculations."
+      keywords={keywords}
       toolId="minimum-payment-calculator"
-      category="credit-cards"
-      emoji="⚠️"
+      category="finance"
+      emoji="💳"
       customHowToUse={[
-        "Enter your credit card balance",
-        "Input the annual percentage rate (APR)",
-        "Set minimum payment percentage (typically 2-3%)",
-        "Calculate minimum payment amount",
-        "View total payoff time and interest costs",
-        "Compare with higher payment scenarios"
+        "Enter current credit card balance",
+        "Input annual interest rate (APR)",
+        "Set minimum payment percentage or amount",
+        "Calculate total payoff time",
+        "View detailed payment schedule",
+        "Compare different payment strategies"
       ]}
       customFeatures={[
-        "Minimum payment calculation",
-        "Total payoff time analysis",
-        "Interest cost projection",
-        "Payment comparison scenarios",
-        "Debt trap visualization",
-        "Payment optimization recommendations"
+        "Minimum payment calculation by balance",
+        "Payoff time estimation with interest",
+        "Total interest cost analysis",
+        "Monthly payment schedule breakdown",
+        "Debt payoff strategy comparison",
+        "Total cost vs payment amount analysis"
       ]}
+      faqs={faqs}
     >
       <CreditCardPayoffCalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

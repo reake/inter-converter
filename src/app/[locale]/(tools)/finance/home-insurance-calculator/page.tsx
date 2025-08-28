@@ -1,50 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import InsuranceCalculator from '@/components/converters/finance/InsuranceCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Home Insurance Calculator',
-  'Calculate home insurance premiums and coverage needs. Estimate dwelling, personal property, and liability coverage costs.',
-  'home-insurance-calculator',
-  [
-    'home insurance calculator',
-    'homeowners insurance calculator',
-    'property insurance calculator',
-    'house insurance calculator',
-    'dwelling coverage calculator'
-  ],
-  'insurance'
-);
+const keywords = generateOptimizedKeywords('home-insurance-calculator', 'finance', 'Home Insurance Calculator');
+
+export const metadata: Metadata = {
+  title: 'Home Insurance Calculator - Homeowners Insurance Premium | InterConverter',
+  description: 'Calculate home insurance premiums and coverage costs. Compare dwelling, personal property, and liability coverage options with instant calculations.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Home Insurance Calculator - Homeowners Insurance Premium',
+    description: 'Professional home insurance calculator for premium estimation. Compare coverage options and calculate insurance costs.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-home-insurance-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Home Insurance Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/home-insurance-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function HomeInsuranceCalculatorPage() {
+  const faqs = getFAQsByToolId('home-insurance-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Home Insurance Calculator"
-      description="Calculate homeowners insurance premiums and determine appropriate coverage amounts for dwelling, personal property, and liability"
+      description="Calculate home insurance premiums and coverage costs with instant calculations."
+      keywords={keywords}
       toolId="home-insurance-calculator"
-      category="insurance"
+      category="finance"
       emoji="🏠"
       customHowToUse={[
-        "Enter home value and replacement cost",
-        "Input personal property value",
-        "Set liability coverage limits",
-        "Choose deductible amounts",
-        "Calculate premium estimates",
-        "Compare coverage options and costs"
+        "Enter current home market value",
+        "Set desired coverage amounts for dwelling",
+        "Choose deductible amount preference",
+        "Input location and zip code details",
+        "Calculate estimated premium costs",
+        "Compare different coverage options"
       ]}
       customFeatures={[
-        "Dwelling coverage calculations",
-        "Personal property valuation",
-        "Liability limit recommendations",
-        "Deductible impact analysis",
-        "Natural disaster coverage options",
-        "Premium optimization tools"
+        "Home insurance premium calculation",
+        "Coverage comparison and analysis tools",
+        "Deductible impact on premium costs",
+        "Location-based risk pricing factors",
+        "Multi-policy and safety discounts",
+        "Replacement cost estimation tools"
       ]}
+      faqs={faqs}
     >
       <InsuranceCalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

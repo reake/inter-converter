@@ -1,68 +1,79 @@
 import { Metadata } from 'next';
-import { ToolLayout } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import { DateDifferenceCalculator } from '@/components/converters/time/DateDifferenceCalculator';
-import { ToolSEOContent } from '@/components/seo/ToolSEOContent';
-
-
-
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
-const title = 'Date Difference Calculator';
-const description = 'Calculate the difference between two dates in days, months, years, hours, and minutes. Free online date calculator.';
-const keywordsArr = ['date', 'difference', 'calculator', 'days', 'between', 'duration', 'time', 'period'];
+
+const keywords = generateOptimizedKeywords('date-difference-calculator', 'time', 'Date Difference Calculator');
 
 export const metadata: Metadata = {
-  title: `${title} | InterConverter`,
-  description,
-  keywords: keywordsArr.join(', '),
+  title: 'Date Difference Calculator - Calculate Days Between Dates | InterConverter',
+  description: 'Calculate the difference between two dates in days, months, years, hours, and minutes. Free online date calculator with business days support.',
+  keywords: keywords.join(', '),
   openGraph: {
-    title: `${title} | InterConverter`,
-    description,
+    title: 'Date Difference Calculator - Calculate Days Between Dates',
+    description: 'Professional date difference calculator for precise time calculations. Calculate duration between dates in multiple formats with business days support.',
     type: 'website',
+    images: [
+      {
+        url: '/images/og-date-difference-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Date Difference Calculator Tool'
+      }
+    ]
   },
-  alternates: { canonical: '/time/date-difference-calculator' }
+  alternates: {
+    canonical: '/time/date-difference-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
 };
 
 export default function DateDifferenceCalculatorPage() {
+  const faqs = getFAQsByToolId('date-difference-calculator', 'time');
+
   return (
-    <ToolLayout
-      title={title}
-      description={description}
-      keywords={keywordsArr}
+    <EnhancedToolLayout
+      title="Date Difference Calculator"
+      description="Calculate the difference between two dates in days, months, years, hours, and minutes with precise date arithmetic."
+      keywords={keywords}
       toolId="date-difference-calculator"
       category="time"
       emoji="📅"
+      customHowToUse={[
+        "Select or enter the start date",
+        "Select or enter the end date",
+        "Choose calculation options (include/exclude end date)",
+        "View results in multiple formats",
+        "Copy the results you need"
+      ]}
+      customFeatures={[
+        "Calculate difference in years, months, and days",
+        "Show total days, hours, and minutes",
+        "Business days calculation",
+        "Age calculation mode",
+        "Leap year and month length accuracy",
+        "Copy results to clipboard"
+      ]}
+      faqs={faqs}
     >
       <DateDifferenceCalculator />
-      <ToolSEOContent
-        title="Date Difference Calculator"
-        description="This date difference calculator helps you find the exact time duration between two dates. Whether you need to calculate someone's age, project duration, or time until an event, this tool provides precise results in multiple formats."
-        features={[
-          'Calculate difference in years, months, and days',
-          'Show total days, hours, and minutes',
-          'Include or exclude the end date',
-          'Business days calculation',
-          'Age calculation mode',
-          'Copy results to clipboard'
-        ]}
-        useCases={[
-          { icon: '🎂', text: 'Age calculation' },
-          { icon: '📊', text: 'Project duration planning' },
-          { icon: '⏰', text: 'Event countdown' },
-          { icon: '💼', text: 'Employment duration' },
-          { icon: '💕', text: 'Relationship milestones' },
-          { icon: '📚', text: 'Historical date analysis' }
-        ]}
-        instructions={[
-          'Select or enter the start date',
-          'Select or enter the end date',
-          'Choose calculation options',
-          'View results in multiple formats',
-          'Copy the results you need'
-        ]}
-        additionalInfo="The calculator uses precise date arithmetic to ensure accurate results. It accounts for leap years, different month lengths, and provides both exact and approximate calculations for maximum flexibility."
-      />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

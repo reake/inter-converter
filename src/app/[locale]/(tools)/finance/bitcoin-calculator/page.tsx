@@ -1,31 +1,60 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
-import { CurrencyConverter } from '@/components/converters/finance/CurrencyConverter';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
+import CurrencyConverter from '@/components/converters/finance/CurrencyConverter';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Bitcoin Calculator',
-  'Convert Bitcoin to USD, EUR and other currencies with real-time BTC exchange rates. Calculate Bitcoin value and cryptocurrency conversions.',
-  'bitcoin-calculator',
-  [
-    'bitcoin calculator',
-    'BTC calculator',
-    'bitcoin to USD calculator',
-    'cryptocurrency calculator',
-    'bitcoin converter'
-  ],
-  'investments'
-);
+const keywords = generateOptimizedKeywords('bitcoin-calculator', 'finance', 'Bitcoin Calculator');
+
+export const metadata: Metadata = {
+  title: 'Bitcoin Calculator - BTC to USD Converter | InterConverter',
+  description: 'Convert Bitcoin to USD, EUR and other currencies with real-time BTC exchange rates. Calculate Bitcoin value and cryptocurrency conversions.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Bitcoin Calculator - BTC to USD Converter',
+    description: 'Professional Bitcoin calculator with real-time exchange rates. Convert BTC to major currencies and track cryptocurrency values.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-bitcoin-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Bitcoin Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/bitcoin-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function BitcoinCalculatorPage() {
+  const faqs = getFAQsByToolId('bitcoin-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Bitcoin Calculator"
-      description="Convert Bitcoin to major currencies with live exchange rates and track cryptocurrency value fluctuations"
+      description="Convert Bitcoin to major currencies with live exchange rates and track cryptocurrency value fluctuations."
+      keywords={keywords}
       toolId="bitcoin-calculator"
-      category="investments"
+      category="finance"
       emoji="₿"
       customHowToUse={[
         "Enter Bitcoin amount to convert",
@@ -43,8 +72,9 @@ export default function BitcoinCalculatorPage() {
         "Market cap information",
         "Portfolio value calculations"
       ]}
+      faqs={faqs}
     >
       <CurrencyConverter />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

@@ -1,50 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import BMICalculator from '@/components/converters/health/BMICalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Body Fat Calculator',
-  'Calculate body fat percentage using various methods including skinfold, bioelectrical impedance, and body measurements.',
-  'body-fat-calculator',
-  [
-    'body fat calculator',
-    'body fat percentage calculator',
-    'body composition calculator',
-    'fat percentage calculator',
-    'lean body mass calculator'
-  ],
-  'health'
-);
+const keywords = generateOptimizedKeywords('body-fat-calculator', 'health', 'Body Fat Calculator');
+
+export const metadata: Metadata = {
+  title: 'Body Fat Calculator - Body Fat Percentage Calculator | InterConverter',
+  description: 'Calculate body fat percentage using various methods including skinfold, bioelectrical impedance, and body measurements. Track your body composition progress.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Body Fat Calculator - Body Fat Percentage Calculator',
+    description: 'Professional body fat calculator with multiple calculation methods. Track your body composition and lean body mass.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-body-fat-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Body Fat Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/health/body-fat-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function BodyFatCalculatorPage() {
+  const faqs = getFAQsByToolId('body-fat-calculator', 'health');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Body Fat Calculator"
-      description="Calculate your body fat percentage using multiple methods and track your body composition progress"
+      description="Calculate your body fat percentage using multiple methods and track your body composition progress with instant calculations."
+      keywords={keywords}
       toolId="body-fat-calculator"
       category="health"
       emoji="📏"
       customHowToUse={[
-        "选择计算方法（皮褶厚度、生物电阻抗等）",
-        "输入身高、体重和年龄",
-        "测量并输入相关身体部位尺寸",
-        "计算体脂百分比",
-        "查看健康范围对比",
-        "跟踪身体成分变化"
+        "Choose calculation method (skinfold, bioelectrical impedance, etc.)",
+        "Enter your height, weight, and age",
+        "Measure and input relevant body part dimensions",
+        "Calculate body fat percentage instantly",
+        "Compare with healthy ranges for your demographics",
+        "Track body composition changes over time"
       ]}
       customFeatures={[
-        "多种计算方法支持",
-        "性别和年龄调整",
-        "健康范围参考",
-        "瘦体重计算",
-        "进度跟踪工具",
-        "个性化建议"
+        "Multiple calculation methods support",
+        "Gender and age adjustments",
+        "Healthy range references",
+        "Lean body mass calculation",
+        "Progress tracking tools",
+        "Personalized recommendations"
       ]}
+      faqs={faqs}
     >
       <BMICalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }

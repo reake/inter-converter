@@ -1,50 +1,79 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import InvestmentCalculator from '@/components/converters/finance/InvestmentCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Bond Calculator',
-  'Calculate bond yields, prices, and returns. Analyze government and corporate bond investments with maturity calculations.',
-  'bond-calculator',
-  [
-    'bond calculator',
-    'bond yield calculator',
-    'bond price calculator',
-    'treasury bond calculator',
-    'corporate bond calculator'
-  ],
-  'investing'
-);
+const keywords = generateOptimizedKeywords('bond-calculator', 'finance', 'Bond Calculator');
+
+export const metadata: Metadata = {
+  title: 'Bond Calculator - Yield & Price Analysis | InterConverter',
+  description: 'Calculate bond yields, prices, and returns. Analyze government and corporate bond investments with maturity calculations.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Bond Calculator - Yield & Price Analysis',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-bond-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Bond Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/bond-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function BondCalculatorPage() {
+  const faqs = getFAQsByToolId('bond-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Bond Calculator"
-      description="Calculate bond yields, prices, and total returns for government and corporate bond investments"
+      description="Calculate bond yield, price, and investment returns with instant calculations."
+      keywords={keywords}
       toolId="bond-calculator"
-      category="investing"
-      emoji="📜"
+      category="finance"
+      emoji="💸"
       customHowToUse={[
-        "Enter bond face value and coupon rate",
-        "Input current market price",
-        "Set maturity date and years to maturity",
-        "Calculate yield to maturity",
-        "Analyze current yield and total return",
-        "Compare different bond investments"
+        "Enter bond face value and par amount",
+        "Set coupon rate and payment frequency",
+        "Input current market price or yield",
+        "Specify maturity date and time to maturity",
+        "Calculate yield to maturity instantly",
+        "Analyze bond investment returns and risks"
       ]}
       customFeatures={[
-        "Yield to maturity calculations",
-        "Current yield analysis",
-        "Bond price sensitivity",
-        "Interest rate risk assessment",
-        "Duration and convexity metrics",
-        "Fixed income portfolio planning"
+        "Bond yield to maturity calculation",
+        "Current yield and capital gains analysis",
+        "Bond price valuation and fair value",
+        "Duration and convexity risk metrics",
+        "Interest rate sensitivity analysis",
+        "Investment return and income projections"
       ]}
+      faqs={faqs}
     >
-      <InvestmentCalculator />
-    </ToolLayout>
+      <BondCalculator />
+    </EnhancedToolLayout>
   );
 }

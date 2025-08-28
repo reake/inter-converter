@@ -1,59 +1,80 @@
 import { Metadata } from 'next';
-import { ToolLayout, generateToolMetadata } from '@/components/tools/ToolLayout';
+import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import MortgageCalculator from '@/components/converters/finance/MortgageCalculator';
+import { getFAQsByToolId } from '@/config/tool-faqs';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = generateToolMetadata(
-  'Mortgage Refinance Calculator',
-  'Calculate refinance savings, break-even point, and new monthly payments. Compare current mortgage with refinance options and closing costs.',
-  'mortgage-refinance-calculator',
-  [
-    'mortgage refinance calculator',
-    'refinance calculator',
-    'refi calculator',
-    'mortgage refi calculator',
-    'refinance savings calculator',
-    'refinance break even calculator',
-    'should I refinance calculator',
-    'refinance comparison calculator',
-    'mortgage refinancing calculator',
-    'home loan refinance calculator',
-    'refinance payment calculator',
-    'refinance cost calculator',
-    'cash out refinance calculator',
-    'rate and term refinance calculator'
-  ],
-  'mortgages'
-);
+const keywords = generateOptimizedKeywords('mortgage-refinance-calculator', 'finance', 'Mortgage Refinance Calculator');
+
+export const metadata: Metadata = {
+  title: 'Mortgage Refinance Calculator - Refinancing Savings Analysis | InterConverter',
+  description: 'Calculate mortgage refinancing savings and break-even analysis. Compare current vs new mortgage terms with instant calculations.',
+  keywords: keywords.join(', '),
+  openGraph: {
+    title: 'Mortgage Refinance Calculator - Refinancing Savings Analysis',
+    description: 'Professional mortgage refinance calculator for savings analysis. Calculate break-even points and compare terms.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-mortgage-refinance-calculator.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Mortgage Refinance Calculator Tool'
+      }
+    ]
+  },
+  alternates: {
+    canonical: '/finance/mortgage-refinance-calculator'
+  },
+  authors: [{ name: 'InterConverter Team' }],
+  creator: 'InterConverter',
+  publisher: 'InterConverter',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function MortgageRefinanceCalculatorPage() {
+  const faqs = getFAQsByToolId('mortgage-refinance-calculator', 'finance');
+
   return (
-    <ToolLayout
+    <EnhancedToolLayout
       title="Mortgage Refinance Calculator"
-      description="Calculate potential savings from refinancing your mortgage, including break-even analysis and new payment comparisons"
+      description="Calculate mortgage refinancing savings and break-even analysis with instant calculations."
+      keywords={keywords}
       toolId="mortgage-refinance-calculator"
-      category="mortgages"
+      category="finance"
       emoji="🔄"
       customHowToUse={[
-        "Enter your current mortgage details (balance, rate, remaining term)",
-        "Input the new loan terms (rate, term, closing costs)",
-        "Compare monthly payment differences",
-        "Calculate break-even point in months",
-        "Review total interest savings over loan life",
-        "Analyze cash-out refinance options if applicable"
+        "Enter current mortgage balance and terms",
+        "Input new loan interest rate and terms",
+        "Set total refinancing closing costs",
+        "Calculate monthly payment savings",
+        "Analyze break-even point timeline",
+        "Compare total interest costs over time"
       ]}
       customFeatures={[
-        "Current vs new payment comparison",
-        "Break-even analysis with closing costs",
-        "Total interest savings calculation",
-        "Monthly and lifetime savings breakdown",
-        "Cash-out refinance calculations",
-        "Refinance recommendation analysis"
+        "Refinance savings calculation with all costs",
+        "Break-even analysis and timeline projection",
+        "Side-by-side mortgage cost comparison",
+        "Monthly payment reduction analysis",
+        "Total interest savings tracking over time",
+        "Closing cost impact on savings assessment"
       ]}
+      faqs={faqs}
     >
       <MortgageCalculator />
-    </ToolLayout>
+    </EnhancedToolLayout>
   );
 }
