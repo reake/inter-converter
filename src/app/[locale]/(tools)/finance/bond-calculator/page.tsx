@@ -73,7 +73,7 @@ export default function BondCalculatorPage() {
       ]}
       faqs={faqs}
     >
-      <BondCalculator />
+      <InvestmentCalculator />
     </EnhancedToolLayout>
   );
 }

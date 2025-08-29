@@ -74,7 +74,7 @@ export default function CreditCardPayoffCalculatorPage() {
       ]}
       faqs={faqs}
     >
-      <CreditCardCalculator />
+      <CreditCardPayoffCalculator />
     </EnhancedToolLayout>
   );
 }

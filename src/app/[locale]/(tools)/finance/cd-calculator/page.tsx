@@ -74,7 +74,7 @@ export default function CDCalculatorPage() {
       ]}
       faqs={faqs}
     >
-      <InvestmentCalculator />
+      <SavingsCalculator />
     </EnhancedToolLayout>
   );
 }

@@ -74,7 +74,7 @@ export default function AnnuityCalculatorPage() {
       ]}
       faqs={faqs}
     >
-      <InvestmentCalculator />
+      <SavingsCalculator />
     </EnhancedToolLayout>
   );
 }

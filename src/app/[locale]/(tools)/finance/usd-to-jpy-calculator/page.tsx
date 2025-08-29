@@ -74,7 +74,7 @@ export default function USDToJPYCalculatorPage() {
       ]}
       faqs={faqs}
     >
-      <CurrencyConverter fromCurrency="USD" toCurrency="JPY" />
+      <CurrencyConverter />
     </EnhancedToolLayout>
   );
 }

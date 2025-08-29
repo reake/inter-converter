@@ -74,7 +74,7 @@ export default function AutoLoanCalculatorPage() {
       ]}
       faqs={faqs}
     >
-      <LoanCalculator />
+      <AutoLoanCalculator />
     </EnhancedToolLayout>
   );
 }

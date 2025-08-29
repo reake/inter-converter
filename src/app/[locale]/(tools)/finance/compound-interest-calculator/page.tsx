@@ -73,7 +73,7 @@ export default function CompoundInterestCalculatorPage() {
       ]}
       faqs={faqs}
     >
-      <CompoundInterestCalculator />
+      <SavingsCalculator />
     </EnhancedToolLayout>
   );
 }

@@ -13,7 +13,7 @@ import { Link } from "@/i18n/routing";
 import { getPopularTools } from "@/config/tools";
 import { EnhancedToolCard } from "@/components/tools/EnhancedToolCard";
 import { generateHomeMetadata } from "@/config/seo";
-import { StructuredData } from "@/components/seo/StructuredData";
+import { StructuredData } from "@/components/tools/StructuredData";
 
 
 

@@ -74,7 +74,7 @@ export default function RetirementCalculatorPage() {
       ]}
       faqs={faqs}
     >
-      <RetirementCalculator />
+      <InvestmentCalculator />
     </EnhancedToolLayout>
   );
 }

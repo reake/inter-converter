@@ -3,7 +3,6 @@ import { ToolLayoutProps } from '@/types/tools';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ToolFAQs, FAQ } from './ToolFAQs';
 import { RelatedTools } from './RelatedTools';
-import { getToolsByCategory } from '@/config/tools';
 import { ToolConfig } from '@/types/tools';
 
 interface EnhancedToolLayoutProps extends ToolLayoutProps {
@@ -22,13 +21,13 @@ export function EnhancedToolLayout({
   children,
   toolId,
   keywords = [],
-  category,
+  category = '',
   emoji,
   includeStructuredData = true,
   customHowToUse,
   customFeatures,
   faqs = [],
-  relatedTools
+  relatedTools = []
 }: EnhancedToolLayoutProps) {
   const structuredData = includeStructuredData ? generateEnhancedStructuredData(title, description, toolId, category, faqs) : null;
 
@@ -49,8 +48,8 @@ export function EnhancedToolLayout({
   const howToUseSteps = customHowToUse || defaultHowToUse;
   const features = customFeatures || defaultFeatures;
   
-  // Get related tools from the same category if not provided
-  const toolsToShow = relatedTools || getToolsByCategory(category as any);
+  // Use provided related tools or empty array to avoid SSR issues
+  const toolsToShow = relatedTools;
 
   return (
     <>
@@ -132,7 +131,7 @@ function generateEnhancedStructuredData(
   title: string,
   description: string,
   toolId: string,
-  category?: string,
+  category: string = '',
   faqs: FAQ[] = []
 ) {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://interconverter.com';

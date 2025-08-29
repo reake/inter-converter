@@ -363,7 +363,7 @@ export default function CapitalGainsTaxCalculator() {
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-start gap-2">
                         <span className="text-green-600 font-bold">•</span>
-                        <span>Hold investments > 1 year for long-term rates</span>
+                        <span>Hold investments &gt; 1 year for long-term rates</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-green-600 font-bold">•</span>
@@ -458,7 +458,7 @@ export default function CapitalGainsTaxCalculator() {
                         <div className="p-3 bg-yellow-50 rounded-lg">
                           <div className="font-semibold text-yellow-800 mb-1">⏰ Consider Waiting:</div>
                           <div className="text-yellow-700 text-sm">
-                            Holding for > 1 year could save you {formatCurrency(results.federalTax - (results.capitalGain * (parseFloat(annualIncome) > 44625 ? 0.15 : 0)))} in federal taxes.
+                            Holding for &gt; 1 year could save you {formatCurrency(results.federalTax - (results.capitalGain * (parseFloat(annualIncome) > 44625 ? 0.15 : 0)))} in federal taxes.
                           </div>
                         </div>
                       )}
@@ -494,7 +494,7 @@ export default function CapitalGainsTaxCalculator() {
                 <CardContent>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <h4 className="font-semibold mb-3 text-green-800">Long-term Capital Gains (> 1 year)</h4>
+                      <h4 className="font-semibold mb-3 text-green-800">Long-term Capital Gains (&gt; 1 year)</h4>
                       <div className="overflow-x-auto">
                         <table className="w-full text-sm">
                           <thead>

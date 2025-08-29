@@ -74,7 +74,7 @@ export default function FourOhOneKCalculatorPage() {
       ]}
       faqs={faqs}
     >
-      <RetirementCalculator />
+      <InvestmentCalculator />
     </EnhancedToolLayout>
   );
 }
