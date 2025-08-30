@@ -1,0 +1,38 @@
+{
+  "about": [
+    "The Fluid Weight Calculator determines the weight of automotive fluids based on volume and fluid type. Essential for calculating total vehicle weight, fluid capacity planning, and performance modifications.",
+    "Accurate fluid weight calculations help with weight distribution, performance tuning, and ensuring proper fluid levels for optimal vehicle operation and safety."
+  ],
+  "howToUse": [
+    "Select fluid type (oil, coolant, fuel, etc.)",
+    "Enter fluid volume in gallons or liters",
+    "View calculated weight in pounds and kilograms",
+    "Use for weight distribution and capacity planning"
+  ],
+  "features": [
+    "Multiple automotive fluid types",
+    "Volume to weight conversion",
+    "Metric and imperial units",
+    "Weight distribution calculations",
+    "Performance tuning support",
+    "Professional accuracy"
+  ],
+  "faqs": [
+    {
+      "question": "Why is fluid weight important in automotive applications?",
+      "answer": "Fluid weight affects overall vehicle weight, weight distribution, and performance. It's crucial for racing, towing capacity calculations, and fuel economy considerations."
+    },
+    {
+      "question": "How much does a gallon of gasoline weigh?",
+      "answer": "Gasoline weighs approximately 6.0-6.3 pounds per gallon, depending on temperature and specific gravity. This varies slightly with fuel additives and seasonal blends."
+    },
+    {
+      "question": "What's the heaviest automotive fluid?",
+      "answer": "Gear oil and differential fluid are among the heaviest, weighing around 7.5-8.0 pounds per gallon due to their high viscosity and additives."
+    },
+    {
+      "question": "How does temperature affect fluid weight?",
+      "answer": "Higher temperatures reduce fluid density, making fluids lighter per unit volume. Cold fluids are denser and heavier than the same volume when warm."
+    }
+  ]
+}

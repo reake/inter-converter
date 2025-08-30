@@ -3,72 +3,127 @@ import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import { TireCalculator } from '@/components/converters/automotive/TireCalculator';
 import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/auto/tire-calculator-en.json';
+import zhTool from '@/data/tools/auto/tire-calculator-zh.json';
+import autoEn from '@/data/tools/auto.json';
+import autoZh from '@/data/tools/auto-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('tire-calculator', 'auto', 'Tire Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Tire Calculator - Size Comparison & Performance Impact | InterConverter',
-  description: 'Calculate how tire diameter changes affect vehicle speed, RPM, and performance. Professional tire size comparison calculator with accurate results.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Tire Calculator - Size Comparison & Performance Impact',
-    description: 'Professional tire calculator for automotive performance. Compare tire sizes and analyze their impact on speed, RPM, and vehicle performance.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-tire-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Tire Calculator Tool'
+  // Localized catalog and helper
+  const catalogs: Record<string, any[]> = {
+    en: autoEn as any[],
+    zh: (autoZh as any[]) || (autoEn as any[])
+  };
+  const getEntry = (id: string) => {
+    const list = catalogs[l] || catalogs.en;
+    return list.find((it) => it.id === id) || catalogs.en.find((it) => it.id === id);
+  };
+  const entry = getEntry('tire-calculator');
+
+  const toolName: string = entry?.name ?? 'Tire Calculator';
+  const description: string = entry?.description ?? 'Calculate how tire diameter changes affect vehicle speed, RPM, and performance.';
+  const baseKeywords = generateOptimizedKeywords('tire-calculator', 'auto', 'Tire Calculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+
+  const canonicalPath = `/${l}/auto/tire-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-tire-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/auto/tire-calculator',
+        zh: '/zh/auto/tire-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/auto/tire-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function TireCalculatorPage() {
-  const faqs = getFAQsByToolId('tire-calculator', 'auto');
+export default async function TireCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? (zhTool as ToolContent) : (enTool as ToolContent);
+
+  const faqsFromJson = Array.isArray(toolContent.faqs) ? toolContent.faqs : [];
+  const faqs = faqsFromJson.length > 0
+    ? faqsFromJson
+    : getFAQsByToolId('tire-calculator', 'auto');
+
+  // Load catalog entry for this tool to source localized name/description/keywords
+  const catalogMap: Record<string, any[]> = { en: autoEn as any[], zh: (autoZh as any[]) || (autoEn as any[]) };
+  const catalog = catalogMap[l] || (autoEn as any[]);
+  const entry = catalog.find((it) => it.id === 'tire-calculator') || (autoEn as any[]).find((it) => it.id === 'tire-calculator');
+
+  const toolName: string = entry?.name || 'Tire Calculator';
+  const descriptionText: string = entry?.description || 'Calculate how tire diameter changes affect vehicle speed, RPM, and performance.';
+  const baseKeywords = generateOptimizedKeywords('tire-calculator', 'auto', 'Tire Calculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Tire Calculator"
-      description="Calculate how tire diameter changes affect vehicle speed, RPM, and performance. Essential for tire upgrades and performance tuning."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="tire-calculator"
       category="auto"
-      emoji="🛖"
-      customHowToUse={[
-        "Enter original tire size (width/aspect/rim)",
-        "Input new tire size for comparison",
-        "View speed and RPM differences",
-        "Analyze performance impact and make informed decisions"
-      ]}
-      customFeatures={[
-        "Tire size comparison",
-        "Speed difference calculation",
-        "RPM change analysis",
-        "Performance impact assessment",
-        "Professional tire upgrade guidance"
-      ]}
+      locale={l}
+      emoji="🛞"
+      aboutContent={toolContent.about}
+      customHowToUse={toolContent.howToUse}
+      customFeatures={toolContent.features}
       faqs={faqs}
     >
       <TireCalculator />

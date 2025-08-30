@@ -1,0 +1,93 @@
+[
+  {
+    "id": "rgb-to-hex-converter",
+    "name": "RGB转HEX转换器",
+    "description": "将RGB颜色值转换为HEX代码，支持颜色预览和双向转换",
+    "category": "color",
+    "keywords": ["rgb", "hex", "颜色", "转换器", "css", "设计", "网页", "调色板"],
+    "path": "/color/rgb-to-hex-converter",
+    "isActive": true,
+    "searchVolume": 85000,
+    "difficulty": 1,
+    "icon": "🎨",
+    "titleSuffix": "颜色代码转换器"
+  },
+  {
+    "id": "color-picker-tool",
+    "name": "颜色选择器工具",
+    "description": "专业颜色选择器，支持HSL控制、调色板和颜色历史记录",
+    "category": "color",
+    "keywords": ["颜色", "选择器", "hsl", "调色板", "设计", "网页", "css", "工具"],
+    "path": "/color/color-picker-tool",
+    "isActive": true,
+    "searchVolume": 78000,
+    "difficulty": 2,
+    "icon": "🌈",
+    "titleSuffix": "专业颜色选择器"
+  },
+  {
+    "id": "hex-to-rgb-converter",
+    "name": "HEX转RGB转换器",
+    "description": "将HEX颜色代码转换为RGB值，支持颜色预览和验证",
+    "category": "color",
+    "keywords": ["hex", "rgb", "颜色", "转换器", "css", "设计", "hex转rgb", "颜色代码转换器"],
+    "path": "/color/hex-to-rgb-converter",
+    "isActive": true,
+    "searchVolume": 67000,
+    "difficulty": 1,
+    "icon": "🎨",
+    "titleSuffix": "颜色代码转换器"
+  },
+  {
+    "id": "color-palette-generator",
+    "name": "颜色调色板生成器",
+    "description": "为设计项目生成美丽的颜色调色板和配色方案",
+    "category": "color",
+    "keywords": ["颜色", "调色板", "生成器", "配色", "设计", "颜色", "和谐"],
+    "path": "/color/color-palette-generator",
+    "isActive": true,
+    "searchVolume": 45000,
+    "difficulty": 2,
+    "icon": "🎨",
+    "titleSuffix": "设计配色方案"
+  },
+  {
+    "id": "contrast-checker",
+    "name": "颜色对比度检查器",
+    "description": "检查颜色对比度比例，确保符合无障碍访问标准(WCAG)",
+    "category": "color",
+    "keywords": ["对比度", "无障碍", "wcag", "颜色", "检查器", "比例"],
+    "path": "/color/contrast-checker",
+    "isActive": false,
+    "searchVolume": 35000,
+    "difficulty": 2,
+    "icon": "⚖️",
+    "titleSuffix": "WCAG无障碍工具"
+  },
+  {
+    "id": "gradient-generator",
+    "name": "CSS渐变生成器",
+    "description": "创建美丽的CSS渐变效果，支持实时预览和代码生成",
+    "category": "color",
+    "keywords": ["渐变", "css", "生成器", "线性", "径向", "背景"],
+    "path": "/color/gradient-generator",
+    "isActive": false,
+    "searchVolume": 28000,
+    "difficulty": 3,
+    "icon": "🌈",
+    "titleSuffix": "CSS背景生成器"
+  },
+  {
+    "id": "hex-to-hsl-converter",
+    "name": "HEX转HSL转换器",
+    "description": "将HEX颜色代码转换为HSL值，支持颜色预览",
+    "category": "color",
+    "keywords": ["hex", "hsl", "颜色", "转换器", "css", "设计"],
+    "path": "/color/hex-to-hsl-converter",
+    "isActive": false,
+    "searchVolume": 22000,
+    "difficulty": 1,
+    "icon": "🎨",
+    "titleSuffix": "颜色格式转换器"
+  }
+]

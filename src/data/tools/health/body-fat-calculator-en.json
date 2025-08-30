@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Body Fat Calculator estimates your body fat percentage using various measurement methods including waist circumference, hip measurements, and other body dimensions. Body fat percentage is a more accurate indicator of health than BMI alone.",
+    "Understanding your body composition helps in setting realistic fitness goals and tracking progress more effectively than weight alone."
+  ],
+  "howToUse": [
+    "Select your gender and measurement method",
+    "Enter required body measurements",
+    "Input your age and weight",
+    "View calculated body fat percentage",
+    "Review health category and recommendations"
+  ],
+  "features": [
+    "Multiple calculation methods (Navy, Army, YMCA)",
+    "Gender-specific formulas",
+    "Body fat category classifications",
+    "Health risk assessments",
+    "Progress tracking capabilities",
+    "Metric and imperial unit support"
+  ],
+  "faqs": [
+    {
+      "question": "What's a healthy body fat percentage?",
+      "answer": "For men: 10-20% is considered healthy. For women: 16-25% is healthy. Athletes may have lower percentages, while essential fat is 2-5% for men and 10-13% for women."
+    },
+    {
+      "question": "How accurate are body fat calculators?",
+      "answer": "Body fat calculators provide estimates with 3-5% margin of error. For more accurate measurements, consider DEXA scans or professional body composition analysis."
+    },
+    {
+      "question": "Which measurement method is most accurate?",
+      "answer": "The Navy method (waist and neck for men, waist, neck, and hips for women) is generally considered most accurate for home measurements."
+    },
+    {
+      "question": "How often should I measure body fat?",
+      "answer": "Monthly measurements are sufficient for tracking progress. Daily fluctuations are normal due to hydration and other factors."
+    }
+  ]
+}

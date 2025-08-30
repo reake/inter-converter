@@ -3,76 +3,126 @@ import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import { AutomotiveTemperatureConverter } from '@/components/converters/automotive/AutomotiveTemperatureConverter';
 import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/auto/temperature-converter-enhanced-en.json';
+import zhTool from '@/data/tools/auto/temperature-converter-enhanced-zh.json';
+import autoEn from '@/data/tools/auto.json';
+import autoZh from '@/data/tools/auto-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-// SEO-optimized keywords using our new system
-const keywords = generateOptimizedKeywords('temperature-converter', 'auto', 'Automotive Temperature Converter');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-// Enhanced metadata with Google SEO best practices
-export const metadata: Metadata = {
-  title: 'Automotive Temperature Converter - Engine Coolant °F to °C | InterConverter',
-  description: 'Convert engine temperatures between Fahrenheit and Celsius. Free automotive temperature converter for coolant, oil, and engine diagnostics with normal operating ranges.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Automotive Temperature Converter - Engine Coolant °F to °C',
-    description: 'Professional automotive temperature converter for engine diagnostics, coolant temperature, and oil temperature conversion between Fahrenheit and Celsius.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-automotive-temperature-converter.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Automotive Temperature Converter Tool'
+  const catalogs: Record<string, any[]> = {
+    en: autoEn as any[],
+    zh: (autoZh as any[]) || (autoEn as any[])
+  };
+  const getEntry = (id: string) => {
+    const list = catalogs[l] || catalogs.en;
+    return list.find((it) => it.id === id) || catalogs.en.find((it) => it.id === id);
+  };
+  const entry = getEntry('temperature-converter-enhanced');
+
+  const toolName: string = entry?.name ?? 'Automotive Temperature Converter';
+  const description: string = entry?.description ?? 'Convert engine temperatures between Fahrenheit and Celsius. Free automotive temperature converter for coolant, oil, and engine diagnostics with normal operating ranges.';
+  const baseKeywords = generateOptimizedKeywords('temperature-converter-enhanced', 'auto', 'Automotive Temperature Converter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+
+  const canonicalPath = `/${l}/auto/temperature-converter-enhanced`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-automotive-temperature-converter.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/auto/temperature-converter-enhanced',
+        zh: '/zh/auto/temperature-converter-enhanced'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/auto/temperature-converter'
-  },
-  // Enhanced SEO metadata
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function AutomotiveTemperatureConverterPage() {
-  // Get FAQs for this specific tool
-  const faqs = getFAQsByToolId('temperature-converter', 'auto');
+export default async function AutomotiveTemperatureConverterPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? (zhTool as ToolContent) : (enTool as ToolContent);
+
+  const faqsFromJson = Array.isArray(toolContent.faqs) ? toolContent.faqs : [];
+  const faqs = faqsFromJson.length > 0
+    ? faqsFromJson
+    : getFAQsByToolId('temperature-converter-enhanced', 'auto');
+
+  // Load catalog entry for this tool to source localized name/description/keywords
+  const catalogMap: Record<string, any[]> = { en: autoEn as any[], zh: (autoZh as any[]) || (autoEn as any[]) };
+  const catalog = catalogMap[l] || (autoEn as any[]);
+  const entry = catalog.find((it) => it.id === 'temperature-converter-enhanced') || (autoEn as any[]).find((it) => it.id === 'temperature-converter-enhanced');
+
+  const toolName: string = entry?.name || 'Automotive Temperature Converter';
+  const descriptionText: string = entry?.description || 'Convert between Fahrenheit and Celsius for automotive applications. Perfect for engine diagnostics, coolant temperature monitoring, and maintenance.';
+  const baseKeywords = generateOptimizedKeywords('temperature-converter-enhanced', 'auto', 'Automotive Temperature Converter');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Automotive Temperature Converter"
-      description="Convert between Fahrenheit and Celsius for automotive applications. Perfect for engine diagnostics, coolant temperature monitoring, and maintenance."
-      keywords={keywords}
-      toolId="temperature-converter"
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
+      toolId="temperature-converter-enhanced"
       category="auto"
+      locale={l}
       emoji="🌡️"
-      customHowToUse={[
-        "Enter temperature in Fahrenheit or Celsius",
-        "View instant conversion to other scale",
-        "Reference normal automotive temperature ranges",
-        "Use for engine diagnostics and maintenance planning"
-      ]}
-      customFeatures={[
-        "Instant Fahrenheit to Celsius conversion",
-        "Normal engine operating temperature references",
-        "Coolant and oil temperature guidelines",
-        "Professional automotive accuracy",
-        "Mobile-friendly for shop use"
-      ]}
+      aboutContent={toolContent.about}
+      customHowToUse={toolContent.howToUse}
+      customFeatures={toolContent.features}
       faqs={faqs}
     >
       <AutomotiveTemperatureConverter />

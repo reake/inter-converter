@@ -3,73 +3,126 @@ import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import PowerToWeightCalculator from '@/components/converters/automotive/PowerToWeightCalculator';
 import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/auto/power-to-weight-ratio-en.json';
+import zhTool from '@/data/tools/auto/power-to-weight-ratio-zh.json';
+import autoEn from '@/data/tools/auto.json';
+import autoZh from '@/data/tools/auto-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('power-to-weight-ratio', 'auto', 'Power to Weight Ratio Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Power to Weight Ratio Calculator - HP/LB Performance Analysis | InterConverter',
-  description: 'Calculate power-to-weight ratio for automotive performance analysis. Compare horsepower per pound and acceleration potential with professional accuracy.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Power to Weight Ratio Calculator - HP/LB Performance Analysis',
-    description: 'Professional power-to-weight ratio calculator for automotive performance. Analyze acceleration potential and compare vehicle performance metrics.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-power-to-weight-ratio.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Power to Weight Ratio Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: autoEn as any[],
+    zh: (autoZh as any[]) || (autoEn as any[])
+  };
+  const getEntry = (id: string) => {
+    const list = catalogs[l] || catalogs.en;
+    return list.find((it) => it.id === id) || catalogs.en.find((it) => it.id === id);
+  };
+  const entry = getEntry('power-to-weight-ratio');
+
+  const toolName: string = entry?.name ?? 'Power to Weight Ratio Calculator';
+  const description: string = entry?.description ?? 'Calculate power-to-weight ratio for automotive performance analysis. Compare horsepower per pound and acceleration potential with professional accuracy.';
+  const baseKeywords = generateOptimizedKeywords('power-to-weight-ratio', 'auto', 'Power to Weight Ratio Calculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+
+  const canonicalPath = `/${l}/auto/power-to-weight-ratio`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-power-to-weight-ratio.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/auto/power-to-weight-ratio',
+        zh: '/zh/auto/power-to-weight-ratio'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/auto/power-to-weight-ratio'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function PowerToWeightRatioPage() {
-  const faqs = getFAQsByToolId('power-to-weight-ratio', 'auto');
+export default async function PowerToWeightRatioPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? (zhTool as ToolContent) : (enTool as ToolContent);
+
+  const faqsFromJson = Array.isArray(toolContent.faqs) ? toolContent.faqs : [];
+  const faqs = faqsFromJson.length > 0
+    ? faqsFromJson
+    : getFAQsByToolId('power-to-weight-ratio', 'auto');
+
+  // Load catalog entry for this tool to source localized name/description/keywords
+  const catalogMap: Record<string, any[]> = { en: autoEn as any[], zh: (autoZh as any[]) || (autoEn as any[]) };
+  const catalog = catalogMap[l] || (autoEn as any[]);
+  const entry = catalog.find((it) => it.id === 'power-to-weight-ratio') || (autoEn as any[]).find((it) => it.id === 'power-to-weight-ratio');
+
+  const toolName: string = entry?.name || 'Power to Weight Ratio Calculator';
+  const descriptionText: string = entry?.description || 'Calculate power-to-weight ratio for automotive performance analysis. Compare horsepower per pound and acceleration potential for any vehicle.';
+  const baseKeywords = generateOptimizedKeywords('power-to-weight-ratio', 'auto', 'Power to Weight Ratio Calculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Power to Weight Ratio Calculator"
-      description="Calculate power-to-weight ratio for automotive performance analysis. Compare horsepower per pound and acceleration potential for any vehicle."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="power-to-weight-ratio"
       category="auto"
+      locale={l}
       emoji="⚡"
-      customHowToUse={[
-        "Enter vehicle horsepower (HP)",
-        "Input vehicle weight in pounds or kilograms",
-        "View power-to-weight ratio calculations",
-        "Compare with performance benchmarks",
-        "Analyze acceleration potential"
-      ]}
-      customFeatures={[
-        "HP per pound calculation",
-        "Performance analysis",
-        "Benchmark comparisons",
-        "Multiple unit support",
-        "Real-time calculations"
-      ]}
+      aboutContent={toolContent.about}
+      customHowToUse={toolContent.howToUse}
+      customFeatures={toolContent.features}
       faqs={faqs}
     >
       <PowerToWeightCalculator />

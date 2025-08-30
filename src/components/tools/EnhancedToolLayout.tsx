@@ -13,6 +13,16 @@ interface EnhancedToolLayoutProps extends ToolLayoutProps {
   customFeatures?: string[];
   faqs?: FAQ[];
   relatedTools?: ToolConfig[];
+  aboutContent?: string | string[];
+  detailsContent?: string[];
+  sectionTitles?: {
+    howToUse?: string;
+    features?: string;
+    faq?: string;
+    faqSubtitleTemplate?: string; // e.g., "Common questions about {{tool}}"
+    about?: string;
+    details?: string;
+  };
 }
 
 export function EnhancedToolLayout({
@@ -27,7 +37,11 @@ export function EnhancedToolLayout({
   customHowToUse,
   customFeatures,
   faqs = [],
-  relatedTools = []
+  relatedTools = [],
+  aboutContent,
+  detailsContent,
+  sectionTitles,
+  locale
 }: EnhancedToolLayoutProps) {
   const structuredData = includeStructuredData ? generateEnhancedStructuredData(title, description, toolId, category, faqs) : null;
 
@@ -50,6 +64,25 @@ export function EnhancedToolLayout({
   
   // Use provided related tools or empty array to avoid SSR issues
   const toolsToShow = relatedTools;
+
+  // Localized section titles (defaults), override by incoming sectionTitles
+  const l = (locale || 'en').toLowerCase();
+  const defaultTitles = l === 'zh'
+    ? {
+        about: `关于${title}`,
+        howToUse: `如何使用${title}`,
+        features: `${title}的功能特点`,
+        faq: `${title}常见问题`,
+        faqSubtitleTemplate: `关于 {{tool}} 的常见问题`,
+      }
+    : {
+        about: `About ${title}`,
+        howToUse: `How to Use ${title}`,
+        features: `Features of ${title}`,
+        faq: `${title} FAQs`,
+        faqSubtitleTemplate: `Common questions about {{tool}}`,
+      };
+  const mergedTitles = { ...defaultTitles, ...(sectionTitles || {}) };
 
   return (
     <>
@@ -78,11 +111,33 @@ export function EnhancedToolLayout({
             </CardContent>
           </Card>
 
+          {/* About Section */}
+          {aboutContent && (
+            <Card className="mb-8">
+              <CardHeader>
+                <CardTitle className="text-lg">{mergedTitles.about}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                {Array.isArray(aboutContent) ? (
+                  <div className="space-y-3 text-sm text-muted-foreground">
+                    {aboutContent.map((p, idx) => (
+                      <p key={idx}>{p}</p>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="prose max-w-none text-sm text-muted-foreground">
+                    <p>{aboutContent}</p>
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+          )}
+
           {/* How to Use and Features */}
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">How to Use</CardTitle>
+                <CardTitle className="text-lg">{mergedTitles.howToUse}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-2 text-sm text-muted-foreground">
@@ -95,7 +150,7 @@ export function EnhancedToolLayout({
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">Features</CardTitle>
+                <CardTitle className="text-lg">{mergedTitles.features}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-2 text-sm text-muted-foreground">
@@ -110,7 +165,12 @@ export function EnhancedToolLayout({
           {/* FAQs Section */}
           {faqs.length > 0 && (
             <div className="mb-8">
-              <ToolFAQs faqs={faqs} toolName={title} />
+              <ToolFAQs 
+                faqs={faqs} 
+                toolName={title}
+                title={mergedTitles.faq}
+                subtitle={mergedTitles.faqSubtitleTemplate ? mergedTitles.faqSubtitleTemplate.replace('{{tool}}', title) : undefined}
+              />
             </div>
           )}
 

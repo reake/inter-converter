@@ -20,6 +20,28 @@ export const AUTOMOTIVE_FAQS: Record<string, FAQ[]> = {
       answer: 'Our converter provides precise calculations using standard conversion formulas. Results are accurate to multiple decimal places, making it suitable for both casual use and professional automotive applications.'
     }
   ],
+  'gear-ratio-calculator': [
+    {
+      question: 'What is a gear ratio and why does it matter?',
+      answer: 'Gear ratio is the ratio of ring gear teeth to pinion gear teeth (e.g., 41 ÷ 11 = 3.73). A higher numerical ratio multiplies torque for better acceleration but increases cruising RPM; a lower ratio reduces RPM at speed and improves economy.'
+    },
+    {
+      question: 'How do I calculate ring and pinion gear ratio?',
+      answer: 'Divide the number of ring gear teeth by the number of pinion gear teeth. Our calculator performs this automatically and displays the result to two decimals by default.'
+    },
+    {
+      question: 'Which ratio should I choose for larger tires or off-road use?',
+      answer: 'Larger tires reduce effective torque. Many off-road builds move to a higher numerical axle ratio (e.g., 4.10–4.88) to restore drivability and keep the engine in its power band.'
+    },
+    {
+      question: 'Will a higher gear ratio hurt highway fuel economy?',
+      answer: 'Usually yes. Higher numerical ratios raise RPM at a given speed, which can increase noise and fuel consumption. Balance your needs: acceleration, towing, and cruising comfort.'
+    },
+    {
+      question: 'Do I need to re-gear both axles on a 4x4?',
+      answer: 'Yes. Front and rear axle ratios must match to prevent driveline binding in 4WD. Re-gear both axles to the same ratio when changing ring and pinion sets.'
+    }
+  ],
   'compression-ratio-calculator': [
     {
       question: 'What is compression ratio and why does it matter?',

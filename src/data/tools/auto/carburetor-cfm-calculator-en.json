@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Carburetor CFM Calculator determines the correct carburetor airflow capacity (CFM) for your engine based on displacement, RPM, and modification level. Essential for proper carburetor sizing and optimal engine performance.",
+    "Proper carburetor sizing ensures optimal air-fuel mixture delivery, preventing lean or rich conditions that can damage engines or reduce performance. This tool helps match carburetor capacity to engine requirements."
+  ],
+  "howToUse": [
+    "Enter engine displacement in cubic inches",
+    "Select engine type (stock or modified)",
+    "Choose target RPM range",
+    "View calculated CFM requirements",
+    "Use result to select appropriate carburetor brand and model"
+  ],
+  "features": [
+    "Stock and modified engine calculations",
+    "CFM per cubic inch ratios",
+    "Carburetor sizing recommendations",
+    "Performance optimization guidance",
+    "Support for Holley, Edelbrock, and other brands",
+    "Professional tuning accuracy"
+  ],
+  "faqs": [
+    {
+      "question": "What happens if my carburetor CFM is too small?",
+      "answer": "A carburetor that's too small restricts airflow, causing lean conditions, power loss, and potential engine damage. The engine won't reach its full performance potential."
+    },
+    {
+      "question": "Can a carburetor be too big for my engine?",
+      "answer": "Yes, an oversized carburetor can cause poor idle quality, reduced low-end torque, and difficulty tuning. It's better to be slightly undersized than oversized."
+    },
+    {
+      "question": "How does engine modification level affect CFM requirements?",
+      "answer": "Modified engines with performance cams, headers, and higher compression need more CFM due to improved breathing and higher RPM capability."
+    },
+    {
+      "question": "What's the difference between primary and secondary CFM?",
+      "answer": "Primary CFM handles idle and low-speed operation, while secondary CFM provides additional airflow for high-RPM performance. Total CFM is the sum of both."
+    }
+  ]
+}

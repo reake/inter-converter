@@ -3,75 +3,128 @@ import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import { ContrastChecker } from '@/components/converters/color/ContrastChecker';
 import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/color/contrast-checker-en.json';
+import zhTool from '@/data/tools/color/contrast-checker-zh.json';
+import colorEn from '@/data/tools/color.json';
+import colorZh from '@/data/tools/color-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('contrast-checker', 'color', 'Color Contrast Checker');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Color Contrast Checker - WCAG Accessibility Tool | InterConverter',
-  description: 'Check color contrast ratios for WCAG AA and AAA compliance. Ensure your designs meet accessibility standards with our contrast analyzer.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Color Contrast Checker - WCAG Accessibility Tool',
-    description: 'Professional contrast checker for WCAG AA and AAA compliance. Ensure your designs meet accessibility standards.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-contrast-checker.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Color Contrast Checker Tool'
+  const catalogs: Record<string, any[]> = {
+    en: colorEn as any[],
+    zh: (colorZh as any[]) || (colorEn as any[])
+  };
+  const getEntry = (id: string) => {
+    const list = catalogs[l] || catalogs.en;
+    return list.find((it) => it.id === id) || catalogs.en.find((it) => it.id === id);
+  };
+  const entry = getEntry('contrast-checker');
+
+  const toolName: string = entry?.name ?? 'Color Contrast Checker';
+  const description: string = entry?.description ?? 'Check color contrast ratios for WCAG AA and AAA compliance. Ensure your designs meet accessibility standards with our contrast analyzer.';
+  const baseKeywords = generateOptimizedKeywords('contrast-checker', 'color', 'Color Contrast Checker');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+
+  const canonicalPath = `/${l}/color/contrast-checker`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-contrast-checker.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/color/contrast-checker',
+        zh: '/zh/color/contrast-checker'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/color/contrast-checker'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function ContrastCheckerPage() {
+export default async function ContrastCheckerPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  // Load tool-specific content from JSON files
+  const toolContents: Record<string, ToolContent> = {
+    en: enTool as ToolContent,
+    zh: zhTool as ToolContent
+  };
+  const toolContent = toolContents[l] || toolContents.en;
+
   const faqs = getFAQsByToolId('contrast-checker', 'color');
+
+  const catalogs: Record<string, any[]> = { en: colorEn as any[], zh: (colorZh as any[]) || (colorEn as any[]) };
+  const catalog = catalogs[l] || catalogs.en;
+  const entry = catalog.find((it) => it.id === 'contrast-checker') || (colorEn as any[]).find((it) => it.id === 'contrast-checker');
+
+  const toolName: string = entry?.name || 'Color Contrast Checker';
+  const descriptionText: string = entry?.description || 'Check color contrast ratios for WCAG AA and AAA compliance with instant calculations and accessibility analysis.';
+  const baseKeywords = generateOptimizedKeywords('contrast-checker', 'color', 'Color Contrast Checker');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Color Contrast Checker"
-      description="Check color contrast ratios for WCAG AA and AAA compliance with instant calculations and accessibility analysis."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="contrast-checker"
       category="color"
+      locale={l}
       emoji="♿"
-      customHowToUse={[
-        "Select or enter foreground and background colors",
-        "View the contrast ratio calculation instantly",
-        "Check WCAG AA and AAA compliance status",
-        "Test with different text sizes and weights",
-        "Adjust colors to meet accessibility standards"
-      ]}
-      customFeatures={[
-        "WCAG 2.1 AA and AAA compliance checking",
-        "Real-time contrast ratio calculation",
-        "Text size and weight considerations",
-        "Color accessibility recommendations",
-        "Visual preview of text on background",
-        "Pass/fail indicators for compliance levels"
-      ]}
-      faqs={faqs}
+      aboutContent={toolContent.about}
+      customHowToUse={toolContent.howToUse}
+      customFeatures={toolContent.features}
+      faqs={toolContent.faqs}
     >
       <ContrastChecker />
     </EnhancedToolLayout>

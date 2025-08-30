@@ -3,72 +3,128 @@ import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import { RPMCalculator } from '@/components/converters/automotive/RPMCalculator';
 import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/auto/rpm-calculator-en.json';
+import zhTool from '@/data/tools/auto/rpm-calculator-zh.json';
+import autoEn from '@/data/tools/auto.json';
+import autoZh from '@/data/tools/auto-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('rpm-calculator', 'auto', 'RPM Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'RPM Calculator - Engine Speed from Vehicle Speed | InterConverter',
-  description: 'Calculate engine RPM based on vehicle speed, gear ratio, and tire diameter. Free automotive RPM calculator with professional accuracy.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'RPM Calculator - Engine Speed from Vehicle Speed',
-    description: 'Professional RPM calculator for automotive applications. Calculate engine speed from vehicle speed, gear ratio, and tire diameter.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-rpm-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'RPM Calculator Tool'
+  // Localized catalog and helper
+  const catalogs: Record<string, any[]> = {
+    en: autoEn as any[],
+    zh: (autoZh as any[]) || (autoEn as any[])
+  };
+  const getEntry = (id: string) => {
+    const list = catalogs[l] || catalogs.en;
+    return list.find((it) => it.id === id) || catalogs.en.find((it) => it.id === id);
+  };
+  const entry = getEntry('rpm-calculator');
+
+  const toolName: string = entry?.name ?? 'RPM Calculator';
+  const description: string = entry?.description ?? 'Calculate engine RPM based on vehicle speed, gear ratio, and tire diameter.';
+  const baseKeywords = generateOptimizedKeywords('rpm-calculator', 'auto', 'RPM Calculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+
+  const canonicalPath = `/${l}/auto/rpm-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-rpm-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/auto/rpm-calculator',
+        zh: '/zh/auto/rpm-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/auto/rpm-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function RPMCalculatorPage() {
-  const faqs = getFAQsByToolId('rpm-calculator', 'auto');
+export default async function RPMCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  // Tool-specific localized content (strongly typed)
+  const toolContent: ToolContent = l === 'zh' ? (zhTool as ToolContent) : (enTool as ToolContent);
+
+  const faqsFromJson = Array.isArray(toolContent.faqs) ? toolContent.faqs : [];
+  const faqs = faqsFromJson.length > 0
+    ? faqsFromJson
+    : getFAQsByToolId('rpm-calculator', 'auto');
+
+  // Load catalog entry for this tool to source localized name/description/keywords
+  const catalogs: Record<string, any[]> = { en: autoEn as any[], zh: (autoZh as any[]) || (autoEn as any[]) };
+  const catalog = catalogs[l] || catalogs.en;
+  const entry = catalog.find((it) => it.id === 'rpm-calculator') || (autoEn as any[]).find((it) => it.id === 'rpm-calculator');
+
+  const toolName: string = entry?.name || 'RPM Calculator';
+  const descriptionText: string = entry?.description || 'Calculate engine RPM based on vehicle speed, gear ratio, and tire diameter.';
+  const baseKeywords = generateOptimizedKeywords('rpm-calculator', 'auto', 'RPM Calculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="RPM Calculator"
-      description="Calculate engine RPM based on vehicle speed, gear ratio, and tire diameter. Essential for performance tuning and drivetrain analysis."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="rpm-calculator"
       category="auto"
-      emoji="🏎️"
-      customHowToUse={[
-        "Enter vehicle speed in MPH or KPH",
-        "Input tire diameter in inches",
-        "Enter gear ratio for current gear",
-        "View calculated engine RPM instantly"
-      ]}
-      customFeatures={[
-        "Speed to RPM conversion",
-        "Gear ratio calculations",
-        "Tire size considerations",
-        "Multiple unit support",
-        "Performance tuning analysis"
-      ]}
+      locale={l}
+      emoji="🌀"
+      aboutContent={toolContent.about}
+      customHowToUse={toolContent.howToUse}
+      customFeatures={toolContent.features}
       faqs={faqs}
     >
       <RPMCalculator />

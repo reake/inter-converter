@@ -1,0 +1,37 @@
+{
+  "about": [
+    "The Engine Displacement Calculator determines total engine displacement based on bore, stroke, and number of cylinders. This fundamental measurement affects power output, fuel consumption, and engine classification.",
+    "Understanding engine displacement helps with performance modifications, engine swaps, and regulatory compliance for racing classes or emissions requirements."
+  ],
+  "howToUse": [
+    "Enter cylinder bore diameter in inches or mm",
+    "Input stroke length in inches or mm",
+    "Enter number of cylinders",
+    "View calculated displacement in cubic inches, liters, or cc"
+  ],
+  "features": [
+    "Multi-unit displacement calculation",
+    "Bore and stroke analysis",
+    "Cylinder count flexibility",
+    "Instant conversion between units",
+    "Performance impact assessment"
+  ],
+  "faqs": [
+    {
+      "question": "How does displacement affect engine power?",
+      "answer": "Larger displacement generally produces more power by burning more fuel per cycle. However, efficiency, compression ratio, and breathing also significantly impact power output."
+    },
+    {
+      "question": "What's the difference between bore and stroke?",
+      "answer": "Bore is cylinder diameter, stroke is piston travel distance. Larger bore favors high RPM power, longer stroke provides more torque at lower RPM."
+    },
+    {
+      "question": "How do I measure bore and stroke?",
+      "answer": "Bore can be measured with calipers in the cylinder. Stroke is measured as crankshaft throw (distance from center to rod journal) × 2, or by measuring piston travel."
+    },
+    {
+      "question": "Why is displacement important for racing?",
+      "answer": "Many racing classes have displacement limits to ensure fair competition. Displacement also affects weight penalties and restrictor requirements in some series."
+    }
+  ]
+}

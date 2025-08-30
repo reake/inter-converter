@@ -1,0 +1,38 @@
+{
+  "about": [
+    "The Speed Converter provides accurate conversions between MPH, KPH, knots, and other speed units for automotive applications. Essential for international travel, racing, and performance comparisons.",
+    "Understanding speed in different units helps with speedometer calibration, international driving, racing regulations, and comparing vehicle performance across different measurement systems."
+  ],
+  "howToUse": [
+    "Enter speed value in any supported unit",
+    "Select source and target speed units",
+    "View instant conversion results",
+    "Use for international travel and racing applications"
+  ],
+  "features": [
+    "Multiple speed units (MPH, KPH, knots, m/s)",
+    "Bidirectional conversion support",
+    "Automotive and marine applications",
+    "Racing regulation compliance",
+    "International compatibility",
+    "Professional accuracy"
+  ],
+  "faqs": [
+    {
+      "question": "What's the difference between MPH and KPH?",
+      "answer": "MPH (miles per hour) is used primarily in the US, while KPH (kilometers per hour) is used globally. 1 MPH equals approximately 1.609 KPH."
+    },
+    {
+      "question": "Why do some countries use different speed units?",
+      "answer": "Speed units follow the measurement system used in each country. Metric countries use KPH, while countries using imperial measurements typically use MPH."
+    },
+    {
+      "question": "How accurate is GPS speed compared to speedometer?",
+      "answer": "GPS speed is typically more accurate than speedometers, which often read 2-10% higher than actual speed due to tire wear, pressure, and calibration factors."
+    },
+    {
+      "question": "What speed unit do racing series use?",
+      "answer": "It varies by series and location. Formula 1 uses KPH, NASCAR uses MPH, while marine racing often uses knots. Always check specific series regulations."
+    }
+  ]
+}

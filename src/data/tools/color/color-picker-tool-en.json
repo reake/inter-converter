@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Color Picker Tool provides an intuitive interface for selecting, analyzing, and converting colors across multiple formats. This comprehensive tool supports HEX, RGB, HSL, and other color models for professional design work.",
+    "Perfect for web designers, graphic artists, and developers who need precise color selection and format conversion capabilities in a single, user-friendly interface."
+  ],
+  "howToUse": [
+    "Click on the color canvas to select your desired color",
+    "Use the hue slider to adjust the color spectrum",
+    "Fine-tune saturation and lightness with precision controls",
+    "View color values in multiple formats simultaneously",
+    "Copy any color format with one click"
+  ],
+  "features": [
+    "Interactive color canvas and sliders",
+    "Multiple color format support (HEX, RGB, HSL)",
+    "Real-time color preview",
+    "Precision color adjustment controls",
+    "One-click copy functionality",
+    "Color history and favorites"
+  ],
+  "faqs": [
+    {
+      "question": "What color formats are supported?",
+      "answer": "Our color picker supports HEX, RGB, HSL, and CSS color names. All formats are displayed simultaneously for easy comparison and copying."
+    },
+    {
+      "question": "How accurate is the color selection?",
+      "answer": "The color picker provides pixel-perfect accuracy with precise numerical controls for fine-tuning colors to exact specifications."
+    },
+    {
+      "question": "Can I save my favorite colors?",
+      "answer": "Yes, the tool includes color history and favorites functionality to save and quickly access your most-used colors."
+    },
+    {
+      "question": "Is this tool suitable for professional design work?",
+      "answer": "Absolutely! The color picker meets professional standards with accurate color representation and support for all major color formats used in design."
+    }
+  ]
+}

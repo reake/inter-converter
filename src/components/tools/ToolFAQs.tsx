@@ -12,9 +12,11 @@ export interface FAQ {
 interface ToolFAQsProps {
   faqs: FAQ[];
   toolName: string;
+  title?: string;
+  subtitle?: string;
 }
 
-export function ToolFAQs({ faqs, toolName }: ToolFAQsProps) {
+export function ToolFAQs({ faqs, toolName, title, subtitle }: ToolFAQsProps) {
   const [openItems, setOpenItems] = useState<number[]>([]);
 
   const toggleItem = (index: number) => {
@@ -30,9 +32,9 @@ export function ToolFAQs({ faqs, toolName }: ToolFAQsProps) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-xl">Frequently Asked Questions</CardTitle>
+        <CardTitle className="text-xl">{title || 'Frequently Asked Questions'}</CardTitle>
         <p className="text-sm text-muted-foreground">
-          Common questions about {toolName}
+          {subtitle || `Common questions about ${toolName}`}
         </p>
       </CardHeader>
       <CardContent className="space-y-4">

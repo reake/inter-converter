@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Engine Volume Calculator computes engine displacement from bore and stroke measurements. Essential for engine building, performance planning, and calculating exact displacement for racing classifications.",
+    "Accurate displacement calculations are crucial for engine builders, racers, and enthusiasts who need precise measurements for competition rules, performance tuning, and engine specifications."
+  ],
+  "howToUse": [
+    "Enter cylinder bore diameter in inches",
+    "Input stroke length in inches",
+    "Specify number of cylinders",
+    "View calculated engine volume in CI and liters",
+    "Use for engine planning and identification"
+  ],
+  "features": [
+    "Accurate volume calculations",
+    "Multiple unit support (CI/Liters)",
+    "Professional automotive tool",
+    "Engine building applications",
+    "Real-time calculation updates",
+    "Racing classification support"
+  ],
+  "faqs": [
+    {
+      "question": "How accurate are the displacement calculations?",
+      "answer": "Our calculator uses precise mathematical formulas accounting for cylinder volume (π × bore² × stroke ÷ 4) multiplied by cylinder count, providing professional accuracy."
+    },
+    {
+      "question": "What's the difference between bore and stroke?",
+      "answer": "Bore is the cylinder diameter, while stroke is the distance the piston travels. Together with cylinder count, these determine total engine displacement."
+    },
+    {
+      "question": "Why is exact displacement important for racing?",
+      "answer": "Racing classes often have strict displacement limits. Knowing exact displacement ensures compliance with rules and helps optimize performance within class restrictions."
+    },
+    {
+      "question": "How does bore-to-stroke ratio affect engine characteristics?",
+      "answer": "Oversquare engines (larger bore than stroke) typically rev higher and produce more power, while undersquare engines (longer stroke) generate more torque."
+    }
+  ]
+}

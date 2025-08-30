@@ -1,0 +1,37 @@
+{
+  "about": [
+    "The Torque Horsepower Calculator converts between torque and horsepower measurements, essential for understanding engine performance characteristics. This tool helps analyze power delivery across different RPM ranges.",
+    "Understanding the relationship between torque and horsepower helps optimize engine tuning, transmission selection, and performance modifications for specific applications."
+  ],
+  "howToUse": [
+    "Enter torque value in lb-ft or Nm",
+    "Input RPM for the measurement",
+    "View calculated horsepower instantly",
+    "Compare power curves at different RPM ranges"
+  ],
+  "features": [
+    "Torque to horsepower conversion",
+    "Multiple unit support (lb-ft, Nm, HP, kW)",
+    "RPM-based calculations",
+    "Power curve analysis",
+    "Performance comparison tools"
+  ],
+  "faqs": [
+    {
+      "question": "What's the difference between torque and horsepower?",
+      "answer": "Torque is rotational force, while horsepower is the rate of doing work. Horsepower = (Torque × RPM) ÷ 5,252. Torque determines acceleration feel, horsepower determines top speed capability."
+    },
+    {
+      "question": "Which is more important for performance?",
+      "answer": "Both matter for different reasons. High torque provides strong acceleration and pulling power. High horsepower enables higher top speeds. The torque curve shape affects drivability."
+    },
+    {
+      "question": "Why do torque and horsepower curves cross?",
+      "answer": "They mathematically cross at 5,252 RPM due to the conversion formula. Below this RPM, torque numbers are higher; above it, horsepower numbers are higher."
+    },
+    {
+      "question": "How do I interpret dyno results?",
+      "answer": "Look at peak numbers and curve shapes. Broad, flat torque curves provide better drivability than peaky curves. Consider the RPM range where you'll actually drive the vehicle."
+    }
+  ]
+}

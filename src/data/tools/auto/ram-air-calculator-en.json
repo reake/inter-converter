@@ -1,0 +1,38 @@
+{
+  "about": [
+    "The Ram Air Calculator determines the pressure increase and power gain from ram air intake systems based on vehicle speed. Essential for understanding cold air intake benefits and forced induction effects.",
+    "Ram air effect occurs when vehicle motion forces air into the intake system, creating positive pressure that increases air density and potential power output, especially at higher speeds."
+  ],
+  "howToUse": [
+    "Enter vehicle speed in MPH or KPH",
+    "Select intake efficiency percentage",
+    "View calculated pressure increase",
+    "Estimate potential power gains"
+  ],
+  "features": [
+    "Speed-based pressure calculations",
+    "Power gain estimation",
+    "Multiple speed units",
+    "Intake efficiency factors",
+    "Performance optimization",
+    "Professional accuracy"
+  ],
+  "faqs": [
+    {
+      "question": "At what speed does ram air effect become significant?",
+      "answer": "Ram air effects become noticeable around 60-80 MPH, with meaningful gains typically starting above 100 MPH. The effect increases exponentially with speed."
+    },
+    {
+      "question": "How much power can ram air add?",
+      "answer": "At highway speeds, ram air might add 1-3% power increase. At racing speeds (150+ MPH), gains can reach 5-10% depending on intake design and efficiency."
+    },
+    {
+      "question": "Do cold air intakes provide ram air effect?",
+      "answer": "Most aftermarket cold air intakes provide minimal ram air effect as they're not positioned to capture forward-moving air efficiently. True ram air requires specific ducting design."
+    },
+    {
+      "question": "How does altitude affect ram air calculations?",
+      "answer": "Higher altitude reduces air density, diminishing ram air effectiveness. The pressure differential becomes less significant as ambient air pressure decreases."
+    }
+  ]
+}

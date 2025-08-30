@@ -1,0 +1,38 @@
+{
+  "about": [
+    "The Automotive Weight Converter provides precise conversions between pounds, kilograms, ounces, and grams for automotive applications. Essential for weight reduction projects, performance calculations, and parts comparison.",
+    "Accurate weight measurements are crucial for automotive performance tuning, racing applications, and understanding how component changes affect overall vehicle dynamics and performance."
+  ],
+  "howToUse": [
+    "Enter weight value in any supported unit",
+    "Select source and target weight units",
+    "View instant conversion results",
+    "Use for automotive weight calculations and performance tuning"
+  ],
+  "features": [
+    "Multiple weight unit support (lbs, kg, oz, g)",
+    "Pounds to kilograms conversion",
+    "Ounces to grams conversion",
+    "Automotive weight calculations",
+    "Performance optimization support",
+    "High precision conversions"
+  ],
+  "faqs": [
+    {
+      "question": "Why is weight important in automotive performance?",
+      "answer": "Weight directly affects acceleration, braking, fuel economy, and handling. Reducing weight improves power-to-weight ratio and overall performance across all driving conditions."
+    },
+    {
+      "question": "How much weight reduction makes a noticeable difference?",
+      "answer": "Generally, every 100 pounds removed can improve acceleration by 0.1-0.2 seconds in quarter-mile times, depending on the vehicle's power and weight distribution."
+    },
+    {
+      "question": "What automotive parts benefit most from weight conversion?",
+      "answer": "Wheels, exhaust systems, body panels, and engine components. Converting weights helps compare aftermarket parts and calculate overall weight savings."
+    },
+    {
+      "question": "How accurate are the weight conversions?",
+      "answer": "Our converter provides precise conversions using standard international conversion factors, ensuring accuracy for professional automotive applications."
+    }
+  ]
+}

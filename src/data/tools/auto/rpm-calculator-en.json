@@ -1,0 +1,37 @@
+{
+  "about": [
+    "The RPM Calculator determines engine speed based on vehicle speed, gear ratio, and tire diameter. This tool is essential for performance tuning, transmission selection, and drivetrain optimization.",
+    "Understanding the relationship between vehicle speed and engine RPM helps optimize fuel economy, reduce engine wear, and ensure proper power band utilization across different driving conditions."
+  ],
+  "howToUse": [
+    "Enter vehicle speed in MPH or KPH",
+    "Input tire diameter in inches",
+    "Enter gear ratio for current gear",
+    "View calculated engine RPM instantly"
+  ],
+  "features": [
+    "Speed to RPM conversion",
+    "Gear ratio calculations", 
+    "Tire size considerations",
+    "Multiple unit support",
+    "Performance tuning analysis"
+  ],
+  "faqs": [
+    {
+      "question": "How does tire diameter affect RPM calculations?",
+      "answer": "Larger tires reduce engine RPM at a given speed because they cover more ground per revolution. A 10% increase in tire diameter typically reduces RPM by about 10%."
+    },
+    {
+      "question": "What's the ideal cruising RPM for fuel economy?",
+      "answer": "Most engines achieve best fuel economy between 1,500-2,500 RPM during steady cruising. Higher RPM increases fuel consumption and engine wear."
+    },
+    {
+      "question": "How do I calculate overall gear ratio?",
+      "answer": "Multiply transmission gear ratio by final drive (differential) ratio. For example: 3rd gear (1.30) × final drive (3.73) = 4.85 overall ratio."
+    },
+    {
+      "question": "Why is RPM calculation important for performance?",
+      "answer": "Proper RPM matching ensures the engine operates in its power band, optimizes acceleration, and prevents over-revving or lugging the engine."
+    }
+  ]
+}

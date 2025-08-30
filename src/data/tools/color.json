@@ -9,7 +9,8 @@
     "isActive": true,
     "searchVolume": 85000,
     "difficulty": 1,
-    "icon": "🎨"
+    "icon": "🎨",
+    "titleSuffix": "Color Code Converter"
   },
   {
     "id": "color-picker-tool",
@@ -21,7 +22,8 @@
     "isActive": true,
     "searchVolume": 78000,
     "difficulty": 2,
-    "icon": "🌈"
+    "icon": "🌈",
+    "titleSuffix": "Professional Color Picker"
   },
   {
     "id": "hex-to-rgb-converter",
@@ -33,7 +35,8 @@
     "isActive": true,
     "searchVolume": 67000,
     "difficulty": 1,
-    "icon": "🎨"
+    "icon": "🎨",
+    "titleSuffix": "Color Code Converter"
   },
   {
     "id": "color-palette-generator",
@@ -45,7 +48,8 @@
     "isActive": true,
     "searchVolume": 45000,
     "difficulty": 2,
-    "icon": "🎨"
+    "icon": "🎨",
+    "titleSuffix": "Design Color Schemes"
   },
   {
     "id": "contrast-checker",
@@ -57,7 +61,8 @@
     "isActive": false,
     "searchVolume": 35000,
     "difficulty": 2,
-    "icon": "⚖️"
+    "icon": "⚖️",
+    "titleSuffix": "WCAG Accessibility Tool"
   },
   {
     "id": "gradient-generator",
@@ -69,7 +74,8 @@
     "isActive": false,
     "searchVolume": 28000,
     "difficulty": 3,
-    "icon": "🌈"
+    "icon": "🌈",
+    "titleSuffix": "CSS Background Generator"
   },
   {
     "id": "hex-to-hsl-converter",
@@ -81,6 +87,7 @@
     "isActive": false,
     "searchVolume": 22000,
     "difficulty": 1,
-    "icon": "🎨"
+    "icon": "🎨",
+    "titleSuffix": "Color Format Converter"
   }
 ]

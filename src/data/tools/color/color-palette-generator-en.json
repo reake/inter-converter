@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Color Palette Generator creates harmonious color schemes based on color theory principles. Generate complementary, triadic, analogous, and other professional color combinations for your design projects.",
+    "This tool helps designers and artists create cohesive color palettes that work well together, ensuring visual harmony and professional aesthetics in web design, branding, and digital art."
+  ],
+  "howToUse": [
+    "Select a base color using the color picker",
+    "Choose a color harmony type (complementary, triadic, etc.)",
+    "Adjust the number of colors in your palette",
+    "Fine-tune individual colors as needed",
+    "Export or copy the complete color palette"
+  ],
+  "features": [
+    "Multiple color harmony algorithms",
+    "Customizable palette size",
+    "Real-time palette preview",
+    "Export in various formats",
+    "Color accessibility checking",
+    "Palette sharing and saving"
+  ],
+  "faqs": [
+    {
+      "question": "What are color harmonies?",
+      "answer": "Color harmonies are combinations of colors that are pleasing to the eye based on their relationships on the color wheel, such as complementary (opposite colors) or analogous (adjacent colors)."
+    },
+    {
+      "question": "How many colors should be in a palette?",
+      "answer": "Most effective palettes contain 3-5 colors. Too few colors may be limiting, while too many can create visual chaos. The optimal number depends on your specific project needs."
+    },
+    {
+      "question": "Can I check color accessibility?",
+      "answer": "Yes, our tool includes accessibility checking to ensure your color combinations meet WCAG guidelines for contrast ratios and readability."
+    },
+    {
+      "question": "What export formats are available?",
+      "answer": "You can export palettes as CSS variables, JSON, Adobe Swatch Exchange (ASE), or simple text lists in HEX, RGB, or HSL formats."
+    }
+  ]
+}

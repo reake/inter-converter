@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Ovulation Calculator predicts your most fertile days based on your menstrual cycle length and last period date. Understanding your ovulation window is crucial for family planning, whether trying to conceive or avoid pregnancy.",
+    "Ovulation typically occurs 12-16 days before your next period. This calculator helps identify your fertile window, peak fertility days, and provides insights for reproductive health planning."
+  ],
+  "howToUse": [
+    "Enter the date of your last menstrual period",
+    "Input your average cycle length (21-35 days)",
+    "View your predicted ovulation date",
+    "See your fertile window (6-day period)",
+    "Track patterns over multiple cycles"
+  ],
+  "features": [
+    "Ovulation date prediction",
+    "Fertile window calculation",
+    "Cycle length customization",
+    "Multiple cycle tracking",
+    "Conception probability indicators",
+    "Calendar view of fertile days"
+  ],
+  "faqs": [
+    {
+      "question": "When am I most fertile?",
+      "answer": "You're most fertile 2-3 days before and on the day of ovulation. The fertile window spans about 6 days, including the 5 days before ovulation and ovulation day."
+    },
+    {
+      "question": "How accurate is ovulation prediction?",
+      "answer": "Predictions are estimates based on average cycles. Individual variation is common. For more accuracy, combine with ovulation tests, basal body temperature, or cervical mucus tracking."
+    },
+    {
+      "question": "What if my cycles are irregular?",
+      "answer": "Irregular cycles make prediction challenging. Track several cycles to find patterns, or consult a healthcare provider for personalized guidance."
+    },
+    {
+      "question": "Can I use this for birth control?",
+      "answer": "This calculator is not reliable for contraception. Sperm can survive up to 5 days, and ovulation timing varies. Use proven contraceptive methods for pregnancy prevention."
+    }
+  ]
+}

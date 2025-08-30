@@ -1,0 +1,79 @@
+[
+  {
+    "id": "tire-calculator",
+    "name": "轮胎计算器",
+    "description": "计算轮胎直径变化对车速、转速与性能的影响，提供轮胎尺寸比较与升级参考。",
+    "category": "auto",
+    "keywords": ["轮胎计算器", "轮胎尺寸 比较", "轮胎直径 性能", "速度表 误差", "轮胎 升级"] ,
+    "path": "/zh/auto/tire-calculator",
+    "titleSuffix": "轮胎尺寸比较与性能影响",
+    "isActive": true,
+    "icon": "🛞"
+  },
+  {
+    "id": "rpm-calculator",
+    "name": "转速计算器",
+    "description": "根据车速、齿轮比和轮胎直径计算发动机转速，适用于性能调校与传动系统分析。",
+    "category": "auto",
+    "keywords": ["转速计算器", "发动机转速 车速", "齿轮比 转速", "RPM 计算"],
+    "path": "/zh/auto/rpm-calculator",
+    "titleSuffix": "车速与齿轮比分析",
+    "isActive": true,
+    "icon": "🌀"
+  },
+  {
+    "id": "gear-ratio-calculator",
+    "name": "齿轮比计算器",
+    "description": "根据环齿与小齿齿数计算齿轮比，评估加速、巡航转速与传动系统表现。",
+    "category": "auto",
+    "keywords": ["齿轮比 计算", "差速器 齿比", "传动 比率", "环齿 小齿"],
+    "path": "/zh/auto/gear-ratio-calculator",
+    "titleSuffix": "差速器与传动系统分析",
+    "isActive": true,
+    "icon": "⚙️"
+  },
+  {
+    "id": "compression-ratio-calculator",
+    "name": "压缩比计算器",
+    "description": "基于气缸容积、燃烧室容积与活塞排量计算发动机压缩比，辅助燃油与调校决策。",
+    "category": "auto",
+    "keywords": ["压缩比 计算", "发动机 压缩", "燃烧室 容积", "辛烷值 要求"],
+    "path": "/zh/auto/compression-ratio-calculator",
+    "titleSuffix": "发动机性能与功率分析",
+    "isActive": true,
+    "icon": "⚙️"
+  },
+  {
+    "id": "engine-displacement-calculator",
+    "name": "发动机排量计算器",
+    "description": "根据缸径、冲程与气缸数计算总排量，支持英制与公制单位。",
+    "category": "auto",
+    "keywords": ["发动机 排量 计算", "缸径 冲程", "cc L CI"],
+    "path": "/zh/auto/engine-displacement-calculator",
+    "titleSuffix": "缸径、冲程与气缸分析",
+    "isActive": true,
+    "icon": "🔧"
+  },
+  {
+    "id": "power-to-weight-calculator",
+    "name": "功重比计算器",
+    "description": "计算车辆功重比，作为加速潜力与性能对比的重要指标。",
+    "category": "auto",
+    "keywords": ["功重比 计算", "马力 重量", "加速 性能"],
+    "path": "/zh/auto/power-to-weight-calculator",
+    "titleSuffix": "车辆性能分析",
+    "isActive": true,
+    "icon": "⚡"
+  },
+  {
+    "id": "torque-horsepower-calculator",
+    "name": "扭矩马力计算器",
+    "description": "在不同转速下进行扭矩与马力的相互换算，理解动力输出特性。",
+    "category": "auto",
+    "keywords": ["扭矩 马力 转换", "HP kW lb-ft Nm", "5252 相交"],
+    "path": "/zh/auto/torque-horsepower-calculator",
+    "titleSuffix": "功率转换与转速分析",
+    "isActive": true,
+    "icon": "🔩"
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Sleep Calculator helps determine optimal bedtime and wake-up times based on sleep cycles. Quality sleep follows 90-minute cycles, and waking up at the end of a cycle helps you feel more refreshed and alert.",
+    "Understanding sleep cycles and timing can significantly improve sleep quality and daytime energy levels. The calculator considers natural circadian rhythms to optimize your sleep schedule."
+  ],
+  "howToUse": [
+    "Enter your desired wake-up time",
+    "Or enter when you want to go to bed",
+    "Select your age group for sleep recommendations",
+    "View optimal sleep and wake times",
+    "Follow the schedule for better sleep quality"
+  ],
+  "features": [
+    "Sleep cycle-based calculations",
+    "Age-appropriate sleep duration recommendations",
+    "Optimal bedtime and wake-up suggestions",
+    "Sleep quality optimization tips",
+    "Circadian rhythm considerations",
+    "Multiple sleep duration options"
+  ],
+  "faqs": [
+    {
+      "question": "How much sleep do I need?",
+      "answer": "Adults typically need 7-9 hours, teenagers 8-10 hours, and children 9-11 hours. Individual needs may vary based on lifestyle and health factors."
+    },
+    {
+      "question": "What are sleep cycles?",
+      "answer": "Sleep cycles are 90-minute periods consisting of light sleep, deep sleep, and REM sleep. Completing full cycles helps you wake up feeling refreshed."
+    },
+    {
+      "question": "Why do I feel groggy when I wake up?",
+      "answer": "Waking up in the middle of a deep sleep phase can cause grogginess. Try adjusting your bedtime to complete full 90-minute cycles."
+    },
+    {
+      "question": "Should I keep the same sleep schedule on weekends?",
+      "answer": "Yes, maintaining consistent sleep and wake times, even on weekends, helps regulate your circadian rhythm and improves overall sleep quality."
+    }
+  ]
+}

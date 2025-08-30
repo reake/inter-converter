@@ -20,7 +20,8 @@
     "isActive": true,
     "searchVolume": 135000,
     "difficulty": 1,
-    "icon": "⚖️"
+    "icon": "⚖️",
+    "titleSuffix": "Body Mass Index Calculator"
   },
   {
     "id": "calorie-calculator",
@@ -32,7 +33,8 @@
     "isActive": true,
     "searchVolume": 245000,
     "difficulty": 2,
-    "icon": "🔥"
+    "icon": "🔥",
+    "titleSuffix": "Daily Calorie Needs"
   },
   {
     "id": "body-fat-calculator",
@@ -44,7 +46,8 @@
     "isActive": true,
     "searchVolume": 89000,
     "difficulty": 2,
-    "icon": "📊"
+    "icon": "📊",
+    "titleSuffix": "Body Fat Percentage"
   },
   {
     "id": "ideal-weight-calculator",
@@ -56,7 +59,8 @@
     "isActive": true,
     "searchVolume": 156000,
     "difficulty": 1,
-    "icon": "🎯"
+    "icon": "🎯",
+    "titleSuffix": "Healthy Weight Range"
   },
   {
     "id": "pregnancy-calculator",
@@ -68,7 +72,8 @@
     "isActive": false,
     "searchVolume": 198000,
     "difficulty": 2,
-    "icon": "🤱"
+    "icon": "🤱",
+    "titleSuffix": "Due Date Calculator"
   },
   {
     "id": "water-intake-calculator",
@@ -80,7 +85,8 @@
     "isActive": false,
     "searchVolume": 125000,
     "difficulty": 1,
-    "icon": "💧"
+    "icon": "💧",
+    "titleSuffix": "Daily Hydration Needs"
   },
   {
     "id": "heart-rate-calculator",
@@ -92,7 +98,8 @@
     "isActive": false,
     "searchVolume": 78000,
     "difficulty": 2,
-    "icon": "❤️"
+    "icon": "❤️",
+    "titleSuffix": "Target Heart Rate Zones"
   },
   {
     "id": "macro-calculator",
@@ -104,7 +111,8 @@
     "isActive": false,
     "searchVolume": 167000,
     "difficulty": 2,
-    "icon": "🥗"
+    "icon": "🥗",
+    "titleSuffix": "Macronutrient Calculator"
   },
   {
     "id": "sleep-calculator",
@@ -116,7 +124,8 @@
     "isActive": false,
     "searchVolume": 145000,
     "difficulty": 1,
-    "icon": "😴"
+    "icon": "😴",
+    "titleSuffix": "Sleep Cycle Calculator"
   },
   {
     "id": "ovulation-calculator",
@@ -128,7 +137,8 @@
     "isActive": false,
     "searchVolume": 234000,
     "difficulty": 2,
-    "icon": "🌸"
+    "icon": "🌸",
+    "titleSuffix": "Fertile Window Calculator"
   },
   {
     "id": "protein-calculator",
@@ -140,6 +150,7 @@
     "isActive": false,
     "searchVolume": 89000,
     "difficulty": 1,
-    "icon": "🥩"
+    "icon": "🥩",
+    "titleSuffix": "Daily Protein Needs"
   }
 ]

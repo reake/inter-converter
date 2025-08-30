@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Water Intake Calculator determines your daily hydration needs based on weight, activity level, and environmental factors. Proper hydration is essential for optimal body function, energy levels, and overall health.",
+    "Water requirements vary based on individual factors like body size, physical activity, climate, and health conditions. This calculator provides personalized recommendations to help maintain optimal hydration."
+  ],
+  "howToUse": [
+    "Enter your weight and select units",
+    "Choose your activity level",
+    "Select climate conditions",
+    "View your daily water intake goal",
+    "Track your consumption throughout the day"
+  ],
+  "features": [
+    "Weight-based water calculations",
+    "Activity level adjustments",
+    "Climate factor considerations",
+    "Hourly intake recommendations",
+    "Hydration tracking guidance",
+    "Multiple unit options"
+  ],
+  "faqs": [
+    {
+      "question": "How much water should I drink daily?",
+      "answer": "Generally 8-10 cups (64-80 oz) for adults, but individual needs vary. The calculator provides personalized recommendations based on your specific factors."
+    },
+    {
+      "question": "Do other beverages count toward water intake?",
+      "answer": "Yes, most beverages contribute to hydration, but water is best. Limit caffeinated and alcoholic drinks as they can have mild diuretic effects."
+    },
+    {
+      "question": "How do I know if I'm properly hydrated?",
+      "answer": "Check your urine color - pale yellow indicates good hydration. Dark yellow suggests dehydration. Also monitor energy levels and thirst."
+    },
+    {
+      "question": "Should I drink more water when exercising?",
+      "answer": "Yes, increase intake by 12-16 oz for every hour of exercise, plus additional amounts to replace sweat losses in hot conditions."
+    }
+  ]
+}

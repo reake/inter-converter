@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The RGB to HEX converter transforms RGB color values into hexadecimal format and vice versa. This tool is essential for web developers, designers, and digital artists who work with different color systems.",
+    "Converting between RGB and HEX formats ensures color consistency across different platforms, applications, and coding environments while maintaining precise color accuracy."
+  ],
+  "howToUse": [
+    "Enter RGB values (Red: 0-255, Green: 0-255, Blue: 0-255)",
+    "Or input a HEX color code (e.g., #FF5733)",
+    "Use the interactive color picker for visual selection",
+    "Copy the converted color values instantly",
+    "Preview the color in real-time"
+  ],
+  "features": [
+    "Bidirectional RGB to HEX conversion",
+    "Interactive color picker interface",
+    "Real-time color preview",
+    "CSS-ready output formats",
+    "HSL color support",
+    "One-click copy functionality"
+  ],
+  "faqs": [
+    {
+      "question": "What are RGB values?",
+      "answer": "RGB stands for Red, Green, Blue. Each channel uses values from 0-255, where 0 is no color and 255 is full intensity. Combining these creates millions of possible colors."
+    },
+    {
+      "question": "When should I use RGB vs HEX?",
+      "answer": "Use RGB for programming languages and image editing software. Use HEX for web development and CSS styling as it's more compact and widely supported."
+    },
+    {
+      "question": "How do I create custom colors?",
+      "answer": "Adjust the RGB sliders or use the color picker to find your desired color. The tool will automatically generate both RGB and HEX values for your selection."
+    },
+    {
+      "question": "Are the conversions mathematically accurate?",
+      "answer": "Yes, our converter uses precise mathematical formulas to ensure exact color matching between RGB and HEX formats with no color loss."
+    }
+  ]
+}

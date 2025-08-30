@@ -1,0 +1,38 @@
+{
+  "about": [
+    "The Temperature Converter provides accurate conversions between Fahrenheit, Celsius, and Kelvin for automotive applications. Essential for engine tuning, cooling system analysis, and international specifications.",
+    "Temperature conversions are crucial for understanding engine operating conditions, coolant specifications, oil viscosity ratings, and ensuring proper thermal management in automotive systems."
+  ],
+  "howToUse": [
+    "Enter temperature value in any supported unit",
+    "Select source and target temperature units",
+    "View instant conversion results",
+    "Use for engine tuning and thermal analysis"
+  ],
+  "features": [
+    "Fahrenheit, Celsius, and Kelvin support",
+    "Bidirectional conversion capability",
+    "Automotive temperature applications",
+    "Engine tuning support",
+    "Cooling system analysis",
+    "Professional accuracy"
+  ],
+  "faqs": [
+    {
+      "question": "What's the normal engine operating temperature?",
+      "answer": "Most engines operate between 180-220°F (82-104°C). Modern engines often run hotter for efficiency, while older engines typically ran cooler around 160-180°F."
+    },
+    {
+      "question": "Why is temperature conversion important in automotive work?",
+      "answer": "Different regions use different temperature scales. Converting helps with international parts compatibility, tuning specifications, and understanding manufacturer recommendations."
+    },
+    {
+      "question": "How does temperature affect engine performance?",
+      "answer": "Cooler air is denser and provides more power. Every 10°F decrease in intake air temperature can increase power by 1-2%. Engine oil also performs differently at various temperatures."
+    },
+    {
+      "question": "What temperature should I use for performance tuning?",
+      "answer": "Tuning should account for expected operating temperatures. Cold weather tuning differs from hot weather tuning due to air density and fuel vaporization changes."
+    }
+  ]
+}

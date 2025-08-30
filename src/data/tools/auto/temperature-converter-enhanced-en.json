@@ -1,0 +1,38 @@
+{
+  "about": [
+    "The Enhanced Temperature Converter provides advanced temperature conversions with additional automotive-specific features like thermal efficiency calculations and temperature differential analysis.",
+    "This enhanced version includes specialized automotive temperature calculations for performance tuning, thermal management, and advanced engine diagnostics."
+  ],
+  "howToUse": [
+    "Enter temperature value in any supported unit",
+    "Select conversion type and additional calculations",
+    "View enhanced results with automotive context",
+    "Use for advanced thermal analysis and tuning"
+  ],
+  "features": [
+    "Enhanced temperature conversions",
+    "Thermal efficiency calculations",
+    "Temperature differential analysis",
+    "Automotive-specific features",
+    "Advanced tuning support",
+    "Professional diagnostics"
+  ],
+  "faqs": [
+    {
+      "question": "What makes this temperature converter enhanced?",
+      "answer": "It includes automotive-specific calculations like thermal efficiency, heat transfer analysis, and temperature differential calculations for advanced tuning applications."
+    },
+    {
+      "question": "How do I use thermal efficiency calculations?",
+      "answer": "Input operating temperatures to calculate thermal efficiency ratios, helping optimize engine performance and identify thermal management issues."
+    },
+    {
+      "question": "What is temperature differential analysis?",
+      "answer": "It calculates temperature differences across components like radiators, intercoolers, and oil coolers to assess cooling system effectiveness."
+    },
+    {
+      "question": "When should I use the enhanced version?",
+      "answer": "Use this for advanced tuning, racing applications, or when you need detailed thermal analysis beyond basic temperature conversions."
+    }
+  ]
+}

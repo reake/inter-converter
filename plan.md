@@ -95,3 +95,26 @@ World Clock	/time/world-clock	显示不同城市的当前时间
 3，统一的现代化架构，具备完整的 SEO 优化、统一布局，统一规范和一致的用户体验。
 4，多语言,语言内容@messages目录下，en.json，zh.json，default为en
 5，工具页的多语言内容，可交流是否放到@data/tools/下的工具json文件中，根据语言读取不同的json文件内容；
+
+
+
+1，分析优化每个工具落地页，根据主要关键字+长尾关键字进行重构，符合google seo规范，增加关键字的密度1.5%-2%之间，每个工具落地页总字数600-1000词，主要关键词出现 8-10 次，次要关键词出现 5-7 次，密度合理。
+2，要求：
+每页 600–1000 词最佳
+关键词密度 1.5%–2%（主要）
+同义词 1% 左右
+增加About {工具名},{工具名}Features,How to Use {工具名},FAQ 等模块，并能覆盖长尾词流量
+3，根据现有的布局架构，持续优化用户体验友好。
+4，多语言,公共语言内容@messages目录下，en.json，zh.json，default为en
+5，所有工具页的多语言内容，可交流是否放到@data/tools/下的工具json文件中，比如unit.json,unit-zh.json等根据语言读取不同的json文件内容；
+
+
+
+Color Palette Generator - Create Harmonious Color Schemes
+
+后面根据品牌InterConverte，副标题Free Online Converters & Calculators Tools，以及工具分类，重写首页工具落地页；
+2，要求：
+每页 600–1000 词最佳
+关键词密度 1.5%–2%（主要）
+同义词 1% 左右
+多语言

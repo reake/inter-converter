@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Heart Rate Calculator determines your target heart rate zones for different exercise intensities based on your age and fitness level. Understanding your heart rate zones helps optimize workout effectiveness and ensures safe exercise intensity.",
+    "Target heart rate zones are essential for cardiovascular training, fat burning, and improving overall fitness. The calculator uses established formulas to provide personalized heart rate ranges for various training goals."
+  ],
+  "howToUse": [
+    "Enter your age and resting heart rate",
+    "Select your fitness level (beginner to athlete)",
+    "Choose your training goal (fat burn, cardio, peak)",
+    "View your personalized heart rate zones",
+    "Use the zones during exercise for optimal results"
+  ],
+  "features": [
+    "Multiple heart rate zone calculations",
+    "Age-based maximum heart rate estimation",
+    "Fitness level adjustments",
+    "Training goal-specific zones",
+    "Karvonen and percentage methods",
+    "Real-time zone monitoring guidance"
+  ],
+  "faqs": [
+    {
+      "question": "What is target heart rate?",
+      "answer": "Target heart rate is the ideal heart rate range during exercise to achieve specific fitness goals. It's typically expressed as a percentage of your maximum heart rate."
+    },
+    {
+      "question": "How do I measure my resting heart rate?",
+      "answer": "Measure your pulse for 60 seconds immediately after waking up, before getting out of bed. Take measurements for several days and use the average."
+    },
+    {
+      "question": "What's the fat burning zone?",
+      "answer": "The fat burning zone is typically 60-70% of maximum heart rate, where your body primarily uses fat for energy. However, higher intensities burn more total calories."
+    },
+    {
+      "question": "Is it safe to exercise at maximum heart rate?",
+      "answer": "Exercising at maximum heart rate should only be done by well-trained athletes for short periods. Most people should stay within 50-85% of maximum heart rate."
+    }
+  ]
+}

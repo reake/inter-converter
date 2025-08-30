@@ -3,72 +3,127 @@ import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import TorqueHorsepowerCalculator from '@/components/converters/automotive/TorqueHorsepowerCalculator';
 import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/auto/torque-horsepower-calculator-en.json';
+import zhTool from '@/data/tools/auto/torque-horsepower-calculator-zh.json';
+import autoEn from '@/data/tools/auto.json';
+import autoZh from '@/data/tools/auto-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('torque-horsepower-calculator', 'auto', 'Torque & Horsepower Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Torque & Horsepower Calculator - Engine Power Analysis | InterConverter',
-  description: 'Convert between torque and horsepower at different RPMs. Calculate engine power and torque relationships with professional accuracy.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Torque & Horsepower Calculator - Engine Power Analysis',
-    description: 'Professional torque and horsepower calculator for automotive performance. Convert between engine power metrics at different RPM levels.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-torque-horsepower-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Torque & Horsepower Calculator Tool'
+  // Localized catalog and helper
+  const catalogs: Record<string, any[]> = {
+    en: autoEn as any[],
+    zh: (autoZh as any[]) || (autoEn as any[])
+  };
+  const getEntry = (id: string) => {
+    const list = catalogs[l] || catalogs.en;
+    return list.find((it) => it.id === id) || catalogs.en.find((it) => it.id === id);
+  };
+  const entry = getEntry('torque-horsepower-calculator');
+
+  const toolName: string = entry?.name ?? 'Torque & Horsepower Calculator';
+  const description: string = entry?.description ?? 'Convert between torque and horsepower at different RPMs.';
+  const baseKeywords = generateOptimizedKeywords('torque-horsepower-calculator', 'auto', 'Torque Horsepower Calculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+
+  const canonicalPath = `/${l}/auto/torque-horsepower-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-torque-horsepower-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/auto/torque-horsepower-calculator',
+        zh: '/zh/auto/torque-horsepower-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/auto/torque-horsepower-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function TorqueHorsepowerCalculatorPage() {
-  const faqs = getFAQsByToolId('torque-horsepower-calculator', 'auto');
+export default async function TorqueHorsepowerCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? (zhTool as ToolContent) : (enTool as ToolContent);
+
+  const faqsFromJson = Array.isArray(toolContent.faqs) ? toolContent.faqs : [];
+  const faqs = faqsFromJson.length > 0
+    ? faqsFromJson
+    : getFAQsByToolId('torque-horsepower-calculator', 'auto');
+
+  // Load catalog entry for this tool to source localized name/description/keywords
+  const catalogs: Record<string, any[]> = { en: autoEn as any[], zh: (autoZh as any[]) || (autoEn as any[]) };
+  const catalog = catalogs[l] || catalogs.en;
+  const entry = catalog.find((it) => it.id === 'torque-horsepower-calculator') || (autoEn as any[]).find((it) => it.id === 'torque-horsepower-calculator');
+
+  const toolName: string = entry?.name || 'Torque & Horsepower Calculator';
+  const descriptionText: string = entry?.description || 'Convert between torque and horsepower at different RPMs.';
+  const baseKeywords = generateOptimizedKeywords('torque-horsepower-calculator', 'auto', 'Torque Horsepower Calculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Torque & Horsepower Calculator"
-      description="Convert between torque and horsepower at different RPMs. Essential for engine performance analysis and power calculations."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="torque-horsepower-calculator"
       category="auto"
-      emoji="⚡"
-      customHowToUse={[
-        "Enter torque value in lb-ft or Nm",
-        "Input RPM (revolutions per minute)",
-        "View calculated horsepower automatically",
-        "Switch between metric and imperial units for flexibility"
-      ]}
-      customFeatures={[
-        "Torque to horsepower conversion",
-        "Support for multiple unit systems",
-        "Real-time RPM calculations",
-        "Engine performance analysis",
-        "Professional automotive calculations"
-      ]}
+      locale={l}
+      emoji="🔩"
+      aboutContent={toolContent.about}
+      customHowToUse={toolContent.howToUse}
+      customFeatures={toolContent.features}
       faqs={faqs}
     >
       <TorqueHorsepowerCalculator />

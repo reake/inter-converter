@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Gradient Generator creates smooth color transitions and gradients for web design and digital art. Generate linear, radial, and conic gradients with multiple color stops and customizable directions.",
+    "Perfect for creating background effects, button styles, and visual elements that require smooth color transitions. Supports CSS-ready output for immediate use in web projects."
+  ],
+  "howToUse": [
+    "Choose gradient type (linear, radial, or conic)",
+    "Add color stops by clicking on the gradient bar",
+    "Adjust colors using the color picker",
+    "Set gradient direction and angle",
+    "Copy the generated CSS code"
+  ],
+  "features": [
+    "Multiple gradient types (linear, radial, conic)",
+    "Unlimited color stops",
+    "Real-time gradient preview",
+    "CSS code generation",
+    "Direction and angle controls",
+    "Gradient presets and templates"
+  ],
+  "faqs": [
+    {
+      "question": "What's the difference between gradient types?",
+      "answer": "Linear gradients transition in a straight line, radial gradients emanate from a center point in a circular pattern, and conic gradients rotate around a center point."
+    },
+    {
+      "question": "How many colors can I use in a gradient?",
+      "answer": "You can add unlimited color stops to create complex gradients. However, 2-4 colors typically provide the best visual results for most design purposes."
+    },
+    {
+      "question": "Can I use the gradients in CSS?",
+      "answer": "Yes! The tool generates CSS-ready code that you can copy and paste directly into your stylesheets. All modern browsers support CSS gradients."
+    },
+    {
+      "question": "How do I create smooth color transitions?",
+      "answer": "Use colors that are close to each other on the color wheel, or gradually adjust saturation and lightness while keeping the same hue for natural-looking transitions."
+    }
+  ]
+}

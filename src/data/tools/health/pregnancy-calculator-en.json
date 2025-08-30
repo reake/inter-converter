@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Pregnancy Calculator estimates your due date, current pregnancy week, and important milestones based on your last menstrual period or conception date. Accurate pregnancy dating is essential for proper prenatal care and monitoring.",
+    "Understanding pregnancy timeline helps track fetal development, schedule important appointments, and prepare for each trimester. The calculator provides comprehensive pregnancy information and milestone tracking."
+  ],
+  "howToUse": [
+    "Enter your last menstrual period date",
+    "Or input your estimated conception date",
+    "View your estimated due date",
+    "See current pregnancy week and trimester",
+    "Track important pregnancy milestones"
+  ],
+  "features": [
+    "Due date calculation",
+    "Current pregnancy week tracking",
+    "Trimester breakdown",
+    "Fetal development milestones",
+    "Important appointment reminders",
+    "Pregnancy timeline visualization"
+  ],
+  "faqs": [
+    {
+      "question": "How accurate is the due date calculation?",
+      "answer": "Due dates are estimates with a 2-week window. Only 5% of babies are born on their exact due date. Most are born within 2 weeks before or after."
+    },
+    {
+      "question": "What's the difference between gestational age and fetal age?",
+      "answer": "Gestational age is calculated from the last menstrual period (about 2 weeks longer). Fetal age is from conception. Medical professionals typically use gestational age."
+    },
+    {
+      "question": "When do the trimesters begin and end?",
+      "answer": "First trimester: weeks 1-12, Second trimester: weeks 13-27, Third trimester: weeks 28-40. Each trimester has distinct developmental milestones."
+    },
+    {
+      "question": "Should I rely solely on this calculator?",
+      "answer": "This calculator provides estimates. Always consult healthcare providers for accurate dating, especially if you have irregular cycles or other complications."
+    }
+  ]
+}

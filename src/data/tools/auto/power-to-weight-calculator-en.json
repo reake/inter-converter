@@ -1,0 +1,37 @@
+{
+  "about": [
+    "The Power-to-Weight Calculator determines the power-to-weight ratio of a vehicle, a critical metric for acceleration performance and overall vehicle dynamics. This ratio is fundamental in automotive performance analysis.",
+    "Understanding power-to-weight ratios helps compare vehicles across different classes and predict acceleration performance regardless of absolute power or weight figures."
+  ],
+  "howToUse": [
+    "Enter vehicle power in HP or kW",
+    "Input vehicle weight in lbs or kg",
+    "View calculated power-to-weight ratio",
+    "Compare with other vehicles or performance targets"
+  ],
+  "features": [
+    "Power-to-weight ratio calculation",
+    "Multiple unit support",
+    "Performance comparison metrics",
+    "Acceleration prediction tools",
+    "Vehicle classification analysis"
+  ],
+  "faqs": [
+    {
+      "question": "What's a good power-to-weight ratio?",
+      "answer": "Sports cars typically have 8-15 lb/hp, supercars 5-8 lb/hp, and hypercars under 5 lb/hp. Lower numbers indicate better acceleration potential."
+    },
+    {
+      "question": "How does power-to-weight affect acceleration?",
+      "answer": "Lower power-to-weight ratios generally mean faster acceleration. A 10% improvement in ratio can reduce 0-60 times by roughly 8-10%."
+    },
+    {
+      "question": "Should I focus on adding power or reducing weight?",
+      "answer": "Weight reduction affects handling, braking, and acceleration equally. Adding power only improves acceleration and top speed. Weight reduction is often more cost-effective."
+    },
+    {
+      "question": "How do I calculate curb weight vs race weight?",
+      "answer": "Curb weight includes all fluids and standard equipment. Race weight may exclude passenger seats, spare tire, and include safety equipment. Use the weight that matches your application."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The HEX to HSL converter transforms hexadecimal color codes into HSL (Hue, Saturation, Lightness) values and vice versa. HSL provides an intuitive way to work with colors by separating hue from saturation and lightness.",
+    "HSL color model is particularly useful for creating color variations, adjusting brightness, and building harmonious color schemes in design and web development projects."
+  ],
+  "howToUse": [
+    "Enter a HEX color code (e.g., #3498DB)",
+    "Or input HSL values (Hue: 0-360°, Saturation: 0-100%, Lightness: 0-100%)",
+    "Use the color picker for visual color selection",
+    "Adjust HSL sliders to modify colors intuitively",
+    "Copy the converted values for your project"
+  ],
+  "features": [
+    "HEX to HSL and HSL to HEX conversion",
+    "Interactive HSL color sliders",
+    "Real-time color preview",
+    "Visual color picker interface",
+    "CSS-compatible output formats",
+    "Instant copy to clipboard"
+  ],
+  "faqs": [
+    {
+      "question": "What is HSL color model?",
+      "answer": "HSL stands for Hue (color type 0-360°), Saturation (color intensity 0-100%), and Lightness (brightness 0-100%). It's more intuitive than RGB for color manipulation."
+    },
+    {
+      "question": "Why use HSL instead of HEX or RGB?",
+      "answer": "HSL makes it easier to create color variations, adjust brightness, and maintain color harmony. You can easily make colors lighter, darker, or more/less vibrant."
+    },
+    {
+      "question": "How do I create color variations with HSL?",
+      "answer": "Keep the hue constant and adjust saturation for intensity or lightness for brightness. This creates natural color variations while maintaining the base color."
+    },
+    {
+      "question": "Is HSL supported in CSS?",
+      "answer": "Yes, modern browsers fully support HSL in CSS. You can use hsl(hue, saturation%, lightness%) directly in your stylesheets."
+    }
+  ]
+}

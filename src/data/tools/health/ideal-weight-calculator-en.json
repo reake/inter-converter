@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Ideal Weight Calculator estimates your ideal body weight using multiple established formulas including Devine, Robinson, Miller, and Hamwi methods. These calculations consider your height, gender, and body frame to provide personalized weight recommendations.",
+    "Understanding your ideal weight range helps set realistic health and fitness goals. The calculator provides multiple estimates since ideal weight can vary based on body composition, muscle mass, and individual factors."
+  ],
+  "howToUse": [
+    "Enter your height in feet/inches or centimeters",
+    "Select your gender and body frame size",
+    "View multiple ideal weight calculations",
+    "Compare results with your current weight",
+    "Use the range as a general health guideline"
+  ],
+  "features": [
+    "Multiple calculation methods (Devine, Robinson, Miller, Hamwi)",
+    "Gender-specific formulas",
+    "Body frame size considerations",
+    "Metric and imperial unit support",
+    "Weight range recommendations",
+    "Comparison with current weight"
+  ],
+  "faqs": [
+    {
+      "question": "Which ideal weight formula is most accurate?",
+      "answer": "No single formula is perfect for everyone. The Devine formula is widely used, but it's best to consider the range from multiple formulas and consult healthcare professionals."
+    },
+    {
+      "question": "How do I determine my body frame size?",
+      "answer": "Measure your wrist circumference. For women: <6 inches = small, 6-6.25 = medium, >6.25 = large. For men: <6.5 = small, 6.5-7.5 = medium, >7.5 = large."
+    },
+    {
+      "question": "Should I aim for my exact ideal weight?",
+      "answer": "Ideal weight calculators provide general guidelines. Focus on a healthy weight range rather than an exact number, considering your body composition and overall health."
+    },
+    {
+      "question": "Do these formulas work for athletes?",
+      "answer": "These formulas may not be accurate for athletes with high muscle mass, as they don't account for body composition. Athletes should focus on body fat percentage instead."
+    }
+  ]
+}

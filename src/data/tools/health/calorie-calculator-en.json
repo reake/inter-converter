@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Calorie Calculator estimates your daily caloric needs based on age, gender, weight, height, and activity level. It calculates your Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE) to help you maintain, lose, or gain weight effectively.",
+    "Understanding your caloric needs is essential for achieving fitness goals, whether you're trying to lose weight, build muscle, or maintain your current weight. The calculator provides personalized recommendations based on scientifically proven formulas."
+  ],
+  "howToUse": [
+    "Enter your age, gender, weight, and height",
+    "Select your activity level (sedentary to very active)",
+    "Choose your goal (maintain, lose, or gain weight)",
+    "View your calculated BMR and TDEE",
+    "Follow the recommended daily calorie intake"
+  ],
+  "features": [
+    "BMR calculation using Mifflin-St Jeor equation",
+    "TDEE calculation with activity multipliers",
+    "Weight goal customization (lose/maintain/gain)",
+    "Macronutrient breakdown recommendations",
+    "Multiple activity level options",
+    "Personalized calorie targets"
+  ],
+  "faqs": [
+    {
+      "question": "What's the difference between BMR and TDEE?",
+      "answer": "BMR (Basal Metabolic Rate) is calories burned at rest. TDEE (Total Daily Energy Expenditure) includes BMR plus calories burned through activity and exercise."
+    },
+    {
+      "question": "How accurate are calorie calculations?",
+      "answer": "Calorie calculators provide estimates based on population averages. Individual metabolism can vary by 10-15%, so use results as a starting point and adjust based on your progress."
+    },
+    {
+      "question": "Should I eat exactly the calculated calories?",
+      "answer": "Use the calculation as a baseline. Monitor your weight and energy levels, then adjust intake up or down by 100-200 calories as needed to reach your goals."
+    },
+    {
+      "question": "How often should I recalculate my calorie needs?",
+      "answer": "Recalculate every 10-15 pounds of weight change, or every 2-3 months if your activity level changes significantly."
+    }
+  ]
+}

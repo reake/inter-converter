@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Protein Calculator determines your daily protein needs based on your weight, activity level, and fitness goals. Adequate protein intake is crucial for muscle maintenance, recovery, and overall health.",
+    "Protein requirements vary significantly based on age, gender, activity level, and specific goals like muscle building or weight loss. This calculator provides personalized recommendations using established nutritional guidelines."
+  ],
+  "howToUse": [
+    "Enter your weight and select units",
+    "Choose your activity level",
+    "Select your primary fitness goal",
+    "View your daily protein requirement",
+    "Plan meals to meet your protein target"
+  ],
+  "features": [
+    "Activity-based protein calculations",
+    "Goal-specific recommendations",
+    "Multiple calculation methods",
+    "Protein timing suggestions",
+    "Food source recommendations",
+    "Metric and imperial units"
+  ],
+  "faqs": [
+    {
+      "question": "How much protein do I need per day?",
+      "answer": "Sedentary adults need 0.8g per kg body weight. Active individuals need 1.2-2.0g per kg, and athletes may need up to 2.2g per kg for muscle building."
+    },
+    {
+      "question": "What are the best protein sources?",
+      "answer": "Complete proteins include meat, fish, eggs, dairy, and quinoa. Plant sources like beans, nuts, and seeds can be combined for complete amino acid profiles."
+    },
+    {
+      "question": "When should I consume protein?",
+      "answer": "Distribute protein throughout the day, with 20-30g per meal. Post-workout protein within 2 hours helps with muscle recovery and growth."
+    },
+    {
+      "question": "Can I have too much protein?",
+      "answer": "Excessive protein (>2.5g per kg) may strain kidneys and isn't beneficial for muscle building. Stick to recommended amounts based on your goals."
+    }
+  ]
+}

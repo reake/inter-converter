@@ -3,75 +3,128 @@ import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import { ColorPaletteGenerator } from '@/components/converters/color/ColorPaletteGenerator';
 import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/color/color-palette-generator-en.json';
+import zhTool from '@/data/tools/color/color-palette-generator-zh.json';
+import colorEn from '@/data/tools/color.json';
+import colorZh from '@/data/tools/color-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('color-palette-generator', 'color', 'Color Palette Generator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Color Palette Generator - Create Harmonious Color Schemes | InterConverter',
-  description: 'Generate beautiful color palettes using color theory. Create monochromatic, complementary, triadic and other color schemes instantly for web design and branding.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Color Palette Generator - Create Harmonious Color Schemes',
-    description: 'Professional color palette generator using color theory. Create monochromatic, complementary, triadic color schemes for design projects.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-color-palette-generator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Color Palette Generator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: colorEn as any[],
+    zh: (colorZh as any[]) || (colorEn as any[])
+  };
+  const getEntry = (id: string) => {
+    const list = catalogs[l] || catalogs.en;
+    return list.find((it) => it.id === id) || catalogs.en.find((it) => it.id === id);
+  };
+  const entry = getEntry('color-palette-generator');
+
+  const toolName: string = entry?.name ?? 'Color Palette Generator';
+  const description: string = entry?.description ?? 'Generate beautiful color palettes using color theory. Create monochromatic, complementary, triadic and other color schemes instantly for web design and branding.';
+  const baseKeywords = generateOptimizedKeywords('color-palette-generator', 'color', 'Color Palette Generator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+
+  const canonicalPath = `/${l}/color/color-palette-generator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-color-palette-generator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/color/color-palette-generator',
+        zh: '/zh/color/color-palette-generator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/color/color-palette-generator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function ColorPaletteGeneratorPage() {
+export default async function ColorPaletteGeneratorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  // Load tool-specific content from JSON files
+  const toolContents: Record<string, ToolContent> = {
+    en: enTool as ToolContent,
+    zh: zhTool as ToolContent
+  };
+  const toolContent = toolContents[l] || toolContents.en;
+
   const faqs = getFAQsByToolId('color-palette-generator', 'color');
+
+  const catalogs: Record<string, any[]> = { en: colorEn as any[], zh: (colorZh as any[]) || (colorEn as any[]) };
+  const catalog = catalogs[l] || catalogs.en;
+  const entry = catalog.find((it) => it.id === 'color-palette-generator') || (colorEn as any[]).find((it) => it.id === 'color-palette-generator');
+
+  const toolName: string = entry?.name || 'Color Palette Generator';
+  const descriptionText: string = entry?.description || 'Generate beautiful color palettes using color theory with instant calculations and harmonious color schemes.';
+  const baseKeywords = generateOptimizedKeywords('color-palette-generator', 'color', 'Color Palette Generator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Color Palette Generator"
-      description="Generate beautiful color palettes using color theory with instant calculations and harmonious color schemes."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="color-palette-generator"
       category="color"
+      locale={l}
       emoji="🎨"
-      customHowToUse={[
-        "Select a base color using the color picker",
-        "Choose a color harmony type (monochromatic, complementary, triadic, etc.)",
-        "View the generated color palette with HEX and RGB codes",
-        "Copy individual colors or export the entire palette",
-        "Adjust colors manually to fine-tune your palette"
-      ]}
-      customFeatures={[
-        "Multiple color harmony algorithms",
-        "Monochromatic, complementary, and triadic schemes",
-        "Real-time color preview",
-        "Export palettes in multiple formats",
-        "Color accessibility checking",
-        "Professional color theory application"
-      ]}
-      faqs={faqs}
+      aboutContent={toolContent.about}
+      customHowToUse={toolContent.howToUse}
+      customFeatures={toolContent.features}
+      faqs={toolContent.faqs}
     >
       <ColorPaletteGenerator />
     </EnhancedToolLayout>

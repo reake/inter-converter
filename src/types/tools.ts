@@ -46,6 +46,7 @@ export interface ToolLayoutProps {
   toolId: string;
   keywords?: string[];
   category?: string;
+  locale?: string;
 }
 
 export interface ToolCardProps {

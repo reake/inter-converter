@@ -1,0 +1,38 @@
+{
+  "about": [
+    "The Supercharger Calculator determines boost pressure, power gains, and pulley ratios for supercharged engines. Essential for supercharger sizing, tuning, and performance optimization.",
+    "Proper supercharger calculations ensure optimal boost levels, prevent engine damage from excessive pressure, and maximize power gains while maintaining reliability and drivability."
+  ],
+  "howToUse": [
+    "Enter engine displacement and target boost pressure",
+    "Select supercharger type and efficiency",
+    "Input pulley ratios for drive calculations",
+    "View calculated power gains and CFM requirements"
+  ],
+  "features": [
+    "Boost pressure calculations",
+    "Power gain estimation",
+    "Pulley ratio optimization",
+    "CFM requirement analysis",
+    "Multiple supercharger types",
+    "Professional tuning support"
+  ],
+  "faqs": [
+    {
+      "question": "What's the difference between superchargers and turbochargers?",
+      "answer": "Superchargers are belt-driven and provide immediate boost, while turbochargers use exhaust gases and have some lag. Superchargers consume engine power but offer linear power delivery."
+    },
+    {
+      "question": "How much boost pressure is safe?",
+      "answer": "Safe boost levels depend on engine internals, fuel quality, and tuning. Stock engines typically handle 6-8 PSI, while built engines can handle 15+ PSI with proper tuning."
+    },
+    {
+      "question": "How do pulley ratios affect boost pressure?",
+      "answer": "Smaller supercharger pulleys or larger crank pulleys increase boost by spinning the supercharger faster. The ratio determines supercharger speed relative to engine RPM."
+    },
+    {
+      "question": "What's volumetric efficiency in supercharger calculations?",
+      "answer": "Volumetric efficiency measures how effectively the supercharger fills the cylinders. Higher efficiency means more power per PSI of boost and better fuel economy."
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "about": [
+    "The Volumetric Efficiency Calculator determines how effectively an engine fills its cylinders with air-fuel mixture. Essential for engine tuning, performance analysis, and understanding breathing efficiency.",
+    "Volumetric efficiency is a key metric for engine performance, affecting power output, fuel economy, and tuning requirements. Higher efficiency indicates better engine breathing and potential for more power."
+  ],
+  "howToUse": [
+    "Enter engine displacement and operating conditions",
+    "Input airflow measurements or estimates",
+    "Specify engine RPM and atmospheric conditions",
+    "View calculated volumetric efficiency percentage"
+  ],
+  "features": [
+    "Volumetric efficiency calculations",
+    "Engine breathing analysis",
+    "Performance optimization guidance",
+    "Tuning parameter assessment",
+    "Atmospheric correction factors",
+    "Professional accuracy"
+  ],
+  "faqs": [
+    {
+      "question": "What is good volumetric efficiency?",
+      "answer": "Stock engines typically achieve 80-85% VE, while well-tuned performance engines can reach 95-100%. Race engines with optimal porting and cams may exceed 100% at peak RPM."
+    },
+    {
+      "question": "How does volumetric efficiency affect power?",
+      "answer": "Higher VE directly correlates with more power. A 10% increase in VE typically results in approximately 10% more power, assuming fuel delivery keeps pace."
+    },
+    {
+      "question": "What factors affect volumetric efficiency?",
+      "answer": "Camshaft timing, port design, intake manifold design, exhaust system, compression ratio, and engine RPM all significantly impact volumetric efficiency."
+    },
+    {
+      "question": "Can volumetric efficiency exceed 100%?",
+      "answer": "Yes, through resonance tuning, forced induction, or optimal intake design. Some naturally aspirated engines achieve over 100% VE at specific RPM ranges."
+    }
+  ]
+}

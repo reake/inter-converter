@@ -3,76 +3,128 @@ import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import { GradientGenerator } from '@/components/converters/color/GradientGenerator';
 import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/color/gradient-generator-en.json';
+import zhTool from '@/data/tools/color/gradient-generator-zh.json';
+import colorEn from '@/data/tools/color.json';
+import colorZh from '@/data/tools/color-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('gradient-generator', 'color', 'CSS Gradient Generator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'CSS Gradient Generator - Create Beautiful Gradients | InterConverter',
-  description: 'Generate CSS gradients with live preview. Create linear and radial gradients with custom colors and directions. Copy CSS code instantly for web design.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'CSS Gradient Generator - Create Beautiful Gradients',
-    description: 'Professional CSS gradient generator with live preview. Create linear and radial gradients with custom colors for web design.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-gradient-generator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'CSS Gradient Generator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: colorEn as any[],
+    zh: (colorZh as any[]) || (colorEn as any[])
+  };
+  const getEntry = (id: string) => {
+    const list = catalogs[l] || catalogs.en;
+    return list.find((it) => it.id === id) || catalogs.en.find((it) => it.id === id);
+  };
+  const entry = getEntry('gradient-generator');
+
+  const toolName: string = entry?.name ?? 'CSS Gradient Generator';
+  const description: string = entry?.description ?? 'Generate CSS gradients with live preview. Create linear and radial gradients with custom colors and directions. Copy CSS code instantly for web design.';
+  const baseKeywords = generateOptimizedKeywords('gradient-generator', 'color', 'CSS Gradient Generator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+
+  const canonicalPath = `/${l}/color/gradient-generator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-gradient-generator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/color/gradient-generator',
+        zh: '/zh/color/gradient-generator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/color/gradient-generator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function GradientGeneratorPage() {
+export default async function GradientGeneratorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  // Load tool-specific content from JSON files
+  const toolContents: Record<string, ToolContent> = {
+    en: enTool as ToolContent,
+    zh: zhTool as ToolContent
+  };
+  const toolContent = toolContents[l] || toolContents.en;
+
   const faqs = getFAQsByToolId('gradient-generator', 'color');
+
+  const catalogs: Record<string, any[]> = { en: colorEn as any[], zh: (colorZh as any[]) || (colorEn as any[]) };
+  const catalog = catalogs[l] || catalogs.en;
+  const entry = catalog.find((it) => it.id === 'gradient-generator') || (colorEn as any[]).find((it) => it.id === 'gradient-generator');
+
+  const toolName: string = entry?.name || 'CSS Gradient Generator';
+  const descriptionText: string = entry?.description || 'Generate CSS gradients with live preview and create beautiful linear and radial gradients with instant calculations.';
+  const baseKeywords = generateOptimizedKeywords('gradient-generator', 'color', 'CSS Gradient Generator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="CSS Gradient Generator"
-      description="Generate CSS gradients with live preview and create beautiful linear and radial gradients with instant calculations."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="gradient-generator"
       category="color"
+      locale={l}
       emoji="🌈"
-      customHowToUse={[
-        "Choose gradient type (linear or radial)",
-        "Add and adjust color stops with the color picker",
-        "Set gradient direction and angle",
-        "Preview the gradient in real-time",
-        "Copy the generated CSS code to clipboard",
-        "Use the gradient in your web projects"
-      ]}
-      customFeatures={[
-        "Linear and radial gradient support",
-        "Multiple color stops with opacity control",
-        "Custom gradient directions and angles",
-        "Live preview with real-time updates",
-        "CSS code generation and copy functionality",
-        "Preset gradient templates"
-      ]}
-      faqs={faqs}
+      aboutContent={toolContent.about}
+      customHowToUse={toolContent.howToUse}
+      customFeatures={toolContent.features}
+      faqs={toolContent.faqs}
     >
       <GradientGenerator />
     </EnhancedToolLayout>

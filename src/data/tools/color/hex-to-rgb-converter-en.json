@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The HEX to RGB converter transforms hexadecimal color codes into RGB values and vice versa. This essential tool bridges different color representation systems used in web development, graphic design, and digital art.",
+    "Understanding color conversions helps designers maintain consistency across platforms, optimize color workflows, and ensure accurate color reproduction in various digital media formats."
+  ],
+  "howToUse": [
+    "Enter a HEX color code (e.g., #FF0000)",
+    "Or enter RGB values (e.g., 255, 0, 0)",
+    "Use the color picker to select colors visually",
+    "Copy the converted values for your project",
+    "Preview colors in real-time"
+  ],
+  "features": [
+    "Convert HEX to RGB and RGB to HEX",
+    "Visual color preview and picker",
+    "Support for HSL color format",
+    "CSS-ready color values",
+    "Real-time color preview",
+    "Copy to clipboard functionality"
+  ],
+  "faqs": [
+    {
+      "question": "What is the difference between HEX and RGB?",
+      "answer": "HEX uses hexadecimal notation (#RRGGBB) while RGB uses decimal values (0-255) for red, green, and blue channels. Both represent the same colors but in different formats."
+    },
+    {
+      "question": "Why do web developers use HEX codes?",
+      "answer": "HEX codes are compact, widely supported in CSS, and easy to copy/paste. They're the standard format for web colors and are supported by all browsers."
+    },
+    {
+      "question": "Can I convert colors with transparency?",
+      "answer": "Standard HEX codes don't support transparency. For transparency, use RGBA format or 8-digit HEX codes (#RRGGBBAA) where the last two digits represent alpha."
+    },
+    {
+      "question": "How accurate are the color conversions?",
+      "answer": "Our converter provides mathematically precise conversions between HEX and RGB formats, ensuring exact color matching across different representation systems."
+    }
+  ]
+}

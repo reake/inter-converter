@@ -3,73 +3,126 @@ import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import { TireSpeedCalculator } from '@/components/converters/automotive/TireSpeedCalculator';
 import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/auto/tire-speed-calculator-en.json';
+import zhTool from '@/data/tools/auto/tire-speed-calculator-zh.json';
+import autoEn from '@/data/tools/auto.json';
+import autoZh from '@/data/tools/auto-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('tire-speed-calculator', 'auto', 'Tire Speed Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Tire Speed Calculator - RPM, Gear Ratio & Tire Size | InterConverter',
-  description: 'Calculate vehicle speed based on tire diameter, gear ratio, and RPM. Essential tool for performance tuning and gear selection with professional accuracy.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Tire Speed Calculator - RPM, Gear Ratio & Tire Size',
-    description: 'Professional tire speed calculator for automotive performance. Calculate vehicle speed from tire diameter, gear ratio, and engine RPM.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-tire-speed-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Tire Speed Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: autoEn as any[],
+    zh: (autoZh as any[]) || (autoEn as any[])
+  };
+  const getEntry = (id: string) => {
+    const list = catalogs[l] || catalogs.en;
+    return list.find((it) => it.id === id) || catalogs.en.find((it) => it.id === id);
+  };
+  const entry = getEntry('tire-speed-calculator');
+
+  const toolName: string = entry?.name ?? 'Tire Speed Calculator';
+  const description: string = entry?.description ?? 'Calculate vehicle speed based on tire diameter, gear ratio, and RPM. Essential tool for performance tuning and gear selection with professional accuracy.';
+  const baseKeywords = generateOptimizedKeywords('tire-speed-calculator', 'auto', 'Tire Speed Calculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+
+  const canonicalPath = `/${l}/auto/tire-speed-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-tire-speed-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/auto/tire-speed-calculator',
+        zh: '/zh/auto/tire-speed-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/auto/tire-speed-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function TireSpeedCalculatorPage() {
-  const faqs = getFAQsByToolId('tire-speed-calculator', 'auto');
+export default async function TireSpeedCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? (zhTool as ToolContent) : (enTool as ToolContent);
+
+  const faqsFromJson = Array.isArray(toolContent.faqs) ? toolContent.faqs : [];
+  const faqs = faqsFromJson.length > 0
+    ? faqsFromJson
+    : getFAQsByToolId('tire-speed-calculator', 'auto');
+
+  // Load catalog entry for this tool to source localized name/description/keywords
+  const catalogMap: Record<string, any[]> = { en: autoEn as any[], zh: (autoZh as any[]) || (autoEn as any[]) };
+  const catalog = catalogMap[l] || (autoEn as any[]);
+  const entry = catalog.find((it) => it.id === 'tire-speed-calculator') || (autoEn as any[]).find((it) => it.id === 'tire-speed-calculator');
+
+  const toolName: string = entry?.name || 'Tire Speed Calculator';
+  const descriptionText: string = entry?.description || 'Calculate vehicle speed based on tire diameter, gear ratio, and RPM. Essential tool for performance tuning and optimal gear selection.';
+  const baseKeywords = generateOptimizedKeywords('tire-speed-calculator', 'auto', 'Tire Speed Calculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Tire Speed Calculator"
-      description="Calculate vehicle speed based on tire diameter, gear ratio, and RPM. Essential tool for performance tuning and optimal gear selection."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="tire-speed-calculator"
       category="auto"
-      emoji="🏎️"
-      customHowToUse={[
-        "Enter tire diameter in inches",
-        "Input gear ratio (e.g., 3.73)",
-        "Enter engine RPM",
-        "View calculated speed in MPH",
-        "Compare different tire sizes and ratios for optimization"
-      ]}
-      customFeatures={[
-        "Larger tire diameter increases speed at same RPM",
-        "Lower gear ratio increases speed but reduces acceleration",
-        "Use for selecting optimal tire and gear combinations",
-        "Consider transmission ratio for final calculations",
-        "Account for tire wear affecting actual diameter"
-      ]}
+      locale={l}
+      emoji="🏁"
+      aboutContent={toolContent.about}
+      customHowToUse={toolContent.howToUse}
+      customFeatures={toolContent.features}
       faqs={faqs}
     >
       <TireSpeedCalculator />

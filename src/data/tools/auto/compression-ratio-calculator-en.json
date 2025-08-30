@@ -1,0 +1,37 @@
+{
+  "about": [
+    "The Compression Ratio Calculator determines the compression ratio of an engine based on cylinder volume, combustion chamber volume, and piston displacement. This tool is essential for engine building, performance tuning, and fuel octane requirements.",
+    "Understanding compression ratio helps optimize engine performance, determine fuel requirements, and ensure proper engine operation across different applications from street driving to racing."
+  ],
+  "howToUse": [
+    "Enter cylinder bore diameter in inches",
+    "Input stroke length in inches", 
+    "Enter combustion chamber volume in cc",
+    "View calculated compression ratio instantly"
+  ],
+  "features": [
+    "Accurate compression ratio calculation",
+    "Cylinder volume computation",
+    "Combustion chamber analysis",
+    "Performance optimization guidance",
+    "Fuel octane requirement estimation"
+  ],
+  "faqs": [
+    {
+      "question": "What's the ideal compression ratio for pump gas?",
+      "answer": "For 91-93 octane pump gas, compression ratios of 9.5:1 to 10.5:1 are typically safe. Higher ratios may require race fuel or careful tuning to avoid detonation."
+    },
+    {
+      "question": "How does compression ratio affect power?",
+      "answer": "Higher compression ratios generally increase power and efficiency by extracting more energy from the fuel. However, they also increase heat and pressure, requiring higher octane fuel."
+    },
+    {
+      "question": "Can I calculate compression ratio without removing the head?",
+      "answer": "Yes, if you know the engine specifications. Use manufacturer data for bore, stroke, and combustion chamber volume, or measure with a burette through the spark plug hole."
+    },
+    {
+      "question": "What happens if compression ratio is too high?",
+      "answer": "Excessive compression can cause detonation (knock), which damages pistons, rings, and bearings. Use higher octane fuel or reduce compression through head work or thicker gaskets."
+    }
+  ]
+}

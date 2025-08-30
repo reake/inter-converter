@@ -3,75 +3,127 @@ import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import BMICalculator from '@/components/converters/health/BMICalculator';
 import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/health/body-fat-calculator-en.json';
+import zhTool from '@/data/tools/health/body-fat-calculator-zh.json';
+import healthEn from '@/data/tools/health.json';
+import healthZh from '@/data/tools/health-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('body-fat-calculator', 'health', 'Body Fat Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Body Fat Calculator - Body Fat Percentage Calculator | InterConverter',
-  description: 'Calculate body fat percentage using various methods including skinfold, bioelectrical impedance, and body measurements. Track your body composition progress.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Body Fat Calculator - Body Fat Percentage Calculator',
-    description: 'Professional body fat calculator with multiple calculation methods. Track your body composition and lean body mass.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-body-fat-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Body Fat Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: healthEn as any[],
+    zh: (healthZh as any[]) || (healthEn as any[])
+  };
+  const getEntry = (id: string) => {
+    const list = catalogs[l] || catalogs.en;
+    return list.find((it) => it.id === id) || catalogs.en.find((it) => it.id === id);
+  };
+  const entry = getEntry('body-fat-calculator');
+
+  const toolName: string = entry?.name ?? 'Body Fat Calculator';
+  const description: string = entry?.description ?? 'Calculate body fat percentage using various methods including skinfold, bioelectrical impedance, and body measurements. Track your body composition progress.';
+  const baseKeywords = generateOptimizedKeywords('body-fat-calculator', 'health', 'Body Fat Calculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+
+  const canonicalPath = `/${l}/health/body-fat-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-body-fat-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/health/body-fat-calculator',
+        zh: '/zh/health/body-fat-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/health/body-fat-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function BodyFatCalculatorPage() {
-  const faqs = getFAQsByToolId('body-fat-calculator', 'health');
+export default async function BodyFatCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  // Load localized content
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: healthEn as any[], zh: (healthZh as any[]) || (healthEn as any[]) };
+  const catalog = catalogs[l] || catalogs.en;
+  const entry = catalog.find((it) => it.id === 'body-fat-calculator') || (healthEn as any[]).find((it) => it.id === 'body-fat-calculator');
+
+  const toolName: string = entry?.name || 'Body Fat Calculator';
+  const descriptionText: string = entry?.description || 'Calculate body fat percentage using various measurement methods with instant results and health insights.';
+  const baseKeywords = generateOptimizedKeywords('body-fat-calculator', 'health', 'Body Fat Calculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Body Fat Calculator"
-      description="Calculate your body fat percentage using multiple methods and track your body composition progress with instant calculations."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="body-fat-calculator"
       category="health"
+      locale={l}
       emoji="📏"
-      customHowToUse={[
-        "Choose calculation method (skinfold, bioelectrical impedance, etc.)",
-        "Enter your height, weight, and age",
-        "Measure and input relevant body part dimensions",
-        "Calculate body fat percentage instantly",
-        "Compare with healthy ranges for your demographics",
-        "Track body composition changes over time"
-      ]}
-      customFeatures={[
-        "Multiple calculation methods support",
-        "Gender and age adjustments",
-        "Healthy range references",
-        "Lean body mass calculation",
-        "Progress tracking tools",
-        "Personalized recommendations"
-      ]}
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
       faqs={faqs}
     >
       <BMICalculator />

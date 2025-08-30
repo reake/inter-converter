@@ -1,0 +1,38 @@
+{
+  "about": [
+    "The Engine Size Converter provides accurate conversions between cubic inches (CI) and liters for engine displacement measurements. Essential for engine identification, comparison, and automotive applications worldwide.",
+    "Understanding engine displacement in both metric and imperial units helps with parts compatibility, performance comparisons, and international automotive specifications."
+  ],
+  "howToUse": [
+    "Enter engine size in cubic inches or liters",
+    "View instant conversion to other unit",
+    "Use for engine identification and comparison",
+    "Reference common engine sizes and specifications"
+  ],
+  "features": [
+    "Cubic inch to liter conversion",
+    "Bidirectional conversion support",
+    "Common engine size references",
+    "Automotive applications",
+    "Professional accuracy",
+    "International compatibility"
+  ],
+  "faqs": [
+    {
+      "question": "Why do some countries use liters while others use cubic inches?",
+      "answer": "Metric countries typically use liters, while the US automotive industry traditionally uses cubic inches. Both measure the same displacement volume."
+    },
+    {
+      "question": "How accurate is the conversion between CI and liters?",
+      "answer": "The conversion uses the precise factor: 1 cubic inch = 0.016387064 liters, providing professional-grade accuracy for all automotive applications."
+    },
+    {
+      "question": "What are some common engine size conversions?",
+      "answer": "Popular conversions include 350 CI = 5.7L, 454 CI = 7.4L, 302 CI = 5.0L, and 427 CI = 7.0L. These are common in American muscle cars."
+    },
+    {
+      "question": "Does engine displacement affect performance?",
+      "answer": "Generally, larger displacement engines produce more torque and power, but efficiency, design, and technology also play crucial roles in overall performance."
+    }
+  ]
+}

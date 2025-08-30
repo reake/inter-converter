@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The BMI Calculator determines your Body Mass Index based on height and weight measurements. BMI is a widely used screening tool to categorize weight status and assess potential health risks associated with being underweight, normal weight, overweight, or obese.",
+    "Understanding your BMI helps in making informed decisions about diet, exercise, and lifestyle changes. While BMI has limitations and doesn't account for muscle mass or body composition, it remains a valuable initial assessment tool for general health screening."
+  ],
+  "howToUse": [
+    "Enter your height in feet/inches or centimeters",
+    "Input your weight in pounds or kilograms",
+    "Select your preferred measurement units",
+    "View your calculated BMI and weight category",
+    "Review health recommendations based on your results"
+  ],
+  "features": [
+    "Support for metric and imperial units",
+    "Instant BMI calculation and categorization",
+    "Health risk assessment indicators",
+    "Weight category classifications (underweight, normal, overweight, obese)",
+    "Personalized health recommendations",
+    "BMI chart and reference ranges"
+  ],
+  "faqs": [
+    {
+      "question": "What is a healthy BMI range?",
+      "answer": "A healthy BMI typically ranges from 18.5 to 24.9. Below 18.5 is considered underweight, 25-29.9 is overweight, and 30+ is classified as obese according to WHO standards."
+    },
+    {
+      "question": "Is BMI accurate for everyone?",
+      "answer": "BMI has limitations and may not be accurate for athletes with high muscle mass, elderly individuals, or certain ethnic groups. It's best used as a general screening tool alongside other health assessments."
+    },
+    {
+      "question": "How often should I check my BMI?",
+      "answer": "For general health monitoring, checking BMI monthly or quarterly is sufficient. If you're actively trying to lose or gain weight, weekly measurements can help track progress."
+    },
+    {
+      "question": "What should I do if my BMI is outside the healthy range?",
+      "answer": "Consult with a healthcare professional for personalized advice. They can assess your overall health, body composition, and recommend appropriate diet and exercise plans."
+    }
+  ]
+}
