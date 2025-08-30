@@ -7,6 +7,7 @@ export {
   getPopularTools,
   getToolsBySearch,
   getFeaturedToolsByCategory,
+  getToolsByAllCategories,
   // Category-specific exports
   getUnitTools,
   getTimeTools,

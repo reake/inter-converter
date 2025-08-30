@@ -11,23 +11,52 @@ import { getToolsByCategory } from '@/config/tools';
 export const dynamic = 'force-static';
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'File & Media Converters - PDF, Image, Document Converters Tools',
-    description: 'Professional file Converters tools for documents and media. Convert PDF to Word, JPG to PNG, and more file formats.',
+    title: 'Free File & Media Converters - PDF, Image, Document Conversion Tools | InterConverter',
+    description: 'Professional file and media conversion tools for documents, images, and multimedia files. Convert PDF to Word, JPG to PNG, video formats, and more. Free, secure, and fast online file converters.',
     keywords: [
       'file converter',
-      'pdf to word',
+      'pdf to word converter',
       'image converter',
-      'jpg to png',
+      'jpg to png converter',
       'document converter',
-      'media converter'
+      'media converter',
+      'video converter',
+      'audio converter',
+      'pdf converter',
+      'image format converter',
+      'free file converter',
+      'online file conversion',
+      'document conversion tools',
+      'multimedia converter',
+      'file format converter'
     ],
     openGraph: {
-      title: 'File & Media Converters',
-      description: 'Professional file and media Converters tools for all your document needs.',
+      title: 'Free File & Media Converters | InterConverter',
+      description: 'Professional file and media conversion tools for documents, images, and multimedia files. Free, secure online converters.',
       type: 'website',
+      url: 'https://interconverter.com/media',
+      siteName: 'InterConverter',
+      images: [
+        {
+          url: 'https://interconverter.com/images/og-media.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'File & Media Converters - InterConverter',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Free File & Media Converters | InterConverter',
+      description: 'Professional file conversion tools for documents, images, and multimedia files.',
+      creator: '@interconverter',
     },
     alternates: {
-      canonical: '/media'
+      canonical: 'https://interconverter.com/media'
+    },
+    robots: {
+      index: true,
+      follow: true,
     }
   };
 }

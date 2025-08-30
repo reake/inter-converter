@@ -9,7 +9,7 @@ export const dynamic = 'force-static';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Free Financial Calculators & Tools | Loans, Mortgages, Investments | InterConverter',
+    title: 'Free Financial Calculators & Tools - Loans, Mortgages, Investments | InterConverter',
     description: 'Comprehensive financial calculators for loans, mortgages, investments, taxes, and more. Free tools for personal finance planning and analysis.',
     keywords: [
       'financial calculators',

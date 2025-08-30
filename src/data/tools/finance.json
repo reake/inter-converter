@@ -65,7 +65,7 @@
     "category": "finance",
     "keywords": ["auto loan", "car loan", "vehicle financing", "payment calculator"],
     "path": "/finance/auto-loan-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 180000,
     "difficulty": 1,
     "icon": "🚗"
@@ -77,7 +77,7 @@
     "category": "finance",
     "keywords": ["credit card", "debt payoff", "payment calculator", "interest"],
     "path": "/finance/credit-card-payoff-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 195000,
     "difficulty": 1,
     "icon": "💳"
@@ -89,7 +89,7 @@
     "category": "finance",
     "keywords": ["savings", "compound interest", "deposit", "growth calculator"],
     "path": "/finance/savings-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 220000,
     "difficulty": 1,
     "icon": "💰"
@@ -101,7 +101,7 @@
     "category": "finance",
     "keywords": ["401k", "retirement", "savings", "contribution calculator"],
     "path": "/finance/401k-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 85000,
     "difficulty": 2,
     "icon": "🏛️"
@@ -113,7 +113,7 @@
     "category": "finance",
     "keywords": ["compound interest", "investment", "growth", "calculator"],
     "path": "/finance/compound-interest-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 135000,
     "difficulty": 1,
     "icon": "📈"
@@ -125,7 +125,7 @@
     "category": "finance",
     "keywords": ["retirement", "savings", "planning", "calculator"],
     "path": "/finance/retirement-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 185000,
     "difficulty": 3,
     "icon": "🌅"
@@ -137,7 +137,7 @@
     "category": "finance",
     "keywords": ["investment", "returns", "portfolio", "calculator"],
     "path": "/finance/investment-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 145000,
     "difficulty": 2,
     "icon": "📊"
@@ -149,7 +149,7 @@
     "category": "finance",
     "keywords": ["home affordability", "house price", "income", "calculator"],
     "path": "/finance/home-affordability-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 125000,
     "difficulty": 2,
     "icon": "🏡"
@@ -161,7 +161,7 @@
     "category": "finance",
     "keywords": ["debt payoff", "snowball", "avalanche", "calculator"],
     "path": "/finance/debt-payoff-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 85000,
     "difficulty": 2,
     "icon": "❄️"
@@ -173,7 +173,7 @@
     "category": "finance",
     "keywords": ["income tax", "federal tax", "state tax", "calculator"],
     "path": "/finance/income-tax-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 150000,
     "difficulty": 2,
     "icon": "💼"
@@ -185,7 +185,7 @@
     "category": "finance",
     "keywords": ["cost of living", "city comparison", "expenses", "calculator"],
     "path": "/finance/cost-of-living-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 165000,
     "difficulty": 2,
     "icon": "🏙️"
@@ -197,7 +197,7 @@
     "category": "finance",
     "keywords": ["bitcoin", "cryptocurrency", "investment", "calculator"],
     "path": "/finance/bitcoin-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 125000,
     "difficulty": 3,
     "icon": "₿"
@@ -209,7 +209,7 @@
     "category": "finance",
     "keywords": ["roi", "return on investment", "profit", "calculator", "business"],
     "path": "/finance/roi-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 89000,
     "difficulty": 2,
     "icon": "📈"
@@ -221,7 +221,7 @@
     "category": "finance",
     "keywords": ["break even", "business", "profit", "calculator", "analysis"],
     "path": "/finance/break-even-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 67000,
     "difficulty": 2,
     "icon": "⚖️"
@@ -233,7 +233,7 @@
     "category": "finance",
     "keywords": ["net worth", "assets", "liabilities", "wealth", "calculator"],
     "path": "/finance/net-worth-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 78000,
     "difficulty": 1,
     "icon": "💎"
@@ -245,7 +245,7 @@
     "category": "finance",
     "keywords": ["budget", "expenses", "income", "planning", "calculator"],
     "path": "/finance/budget-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 156000,
     "difficulty": 2,
     "icon": "📊"
@@ -257,7 +257,7 @@
     "category": "finance",
     "keywords": ["tip", "gratuity", "bill split", "restaurant", "calculator"],
     "path": "/finance/tip-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 234000,
     "difficulty": 1,
     "icon": "🧾"
@@ -269,7 +269,7 @@
     "category": "finance",
     "keywords": ["sales tax", "vat", "tax calculator", "purchase", "state tax"],
     "path": "/finance/sales-tax-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 145000,
     "difficulty": 1,
     "icon": "🏪"
@@ -281,7 +281,7 @@
     "category": "finance",
     "keywords": ["inflation", "purchasing power", "money value", "calculator", "cpi"],
     "path": "/finance/inflation-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 98000,
     "difficulty": 2,
     "icon": "📉"
@@ -293,7 +293,7 @@
     "category": "finance",
     "keywords": ["present value", "npv", "discount rate", "cash flow", "calculator"],
     "path": "/finance/present-value-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 56000,
     "difficulty": 3,
     "icon": "💰"
@@ -305,7 +305,7 @@
     "category": "finance",
     "keywords": ["future value", "investment", "compound interest", "growth", "calculator"],
     "path": "/finance/future-value-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 67000,
     "difficulty": 2,
     "icon": "🔮"
@@ -317,7 +317,7 @@
     "category": "finance",
     "keywords": ["annuity", "payments", "present value", "retirement", "calculator"],
     "path": "/finance/annuity-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 45000,
     "difficulty": 3,
     "icon": "📅"
@@ -329,7 +329,7 @@
     "category": "finance",
     "keywords": ["bond", "yield", "price", "duration", "fixed income", "calculator"],
     "path": "/finance/bond-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 38000,
     "difficulty": 3,
     "icon": "📜"
@@ -341,7 +341,7 @@
     "category": "finance",
     "keywords": ["dividend", "yield", "growth", "stocks", "returns", "calculator"],
     "path": "/finance/dividend-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 52000,
     "difficulty": 2,
     "icon": "💰"
@@ -353,7 +353,7 @@
     "category": "finance",
     "keywords": ["stock", "returns", "profit", "loss", "investment", "calculator"],
     "path": "/finance/stock-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 89000,
     "difficulty": 2,
     "icon": "📈"
@@ -365,7 +365,7 @@
     "category": "finance",
     "keywords": ["options", "pricing", "greeks", "profit", "loss", "calculator"],
     "path": "/finance/options-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 34000,
     "difficulty": 4,
     "icon": "📊"
@@ -377,7 +377,7 @@
     "category": "finance",
     "keywords": ["forex", "pip", "position size", "profit", "loss", "calculator"],
     "path": "/finance/forex-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 67000,
     "difficulty": 3,
     "icon": "💱"
@@ -389,7 +389,7 @@
     "category": "finance",
     "keywords": ["crypto", "cryptocurrency", "returns", "dca", "portfolio", "calculator"],
     "path": "/finance/crypto-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 145000,
     "difficulty": 2,
     "icon": "₿"
@@ -401,7 +401,7 @@
     "category": "finance",
     "keywords": ["ethereum", "eth", "investment", "staking", "rewards", "calculator"],
     "path": "/finance/ethereum-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 78000,
     "difficulty": 2,
     "icon": "⟠"
@@ -413,7 +413,7 @@
     "category": "finance",
     "keywords": ["refinance", "savings", "break even", "mortgage", "calculator"],
     "path": "/finance/refinance-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 125000,
     "difficulty": 2,
     "icon": "🏠"
@@ -425,7 +425,7 @@
     "category": "finance",
     "keywords": ["rent", "buy", "home", "comparison", "real estate", "calculator"],
     "path": "/finance/rent-vs-buy-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 89000,
     "difficulty": 2,
     "icon": "🏘️"
@@ -437,7 +437,7 @@
     "category": "finance",
     "keywords": ["property tax", "real estate", "assessed value", "tax rate", "calculator"],
     "path": "/finance/property-tax-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 156000,
     "difficulty": 2,
     "icon": "🏛️"
@@ -449,7 +449,7 @@
     "category": "finance",
     "keywords": ["capital gains", "tax", "investment", "property", "sales", "calculator"],
     "path": "/finance/capital-gains-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 134000,
     "difficulty": 3,
     "icon": "📈"
@@ -461,7 +461,7 @@
     "category": "finance",
     "keywords": ["business loan", "payments", "interest", "small business", "calculator"],
     "path": "/finance/business-loan-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 67000,
     "difficulty": 2,
     "icon": "🏢"
@@ -473,7 +473,7 @@
     "category": "finance",
     "keywords": ["sba loan", "small business", "payments", "qualification", "calculator"],
     "path": "/finance/sba-loan-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 34000,
     "difficulty": 3,
     "icon": "🏛️"
@@ -485,7 +485,7 @@
     "category": "finance",
     "keywords": ["personal loan", "payments", "interest rate", "comparison", "calculator"],
     "path": "/finance/personal-loan-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 189000,
     "difficulty": 1,
     "icon": "💳"
@@ -497,7 +497,7 @@
     "category": "finance",
     "keywords": ["student loan", "payments", "repayment", "education", "calculator"],
     "path": "/finance/student-loan-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 167000,
     "difficulty": 2,
     "icon": "🎓"
@@ -509,7 +509,7 @@
     "category": "finance",
     "keywords": ["heloc", "home equity", "line of credit", "payments", "calculator"],
     "path": "/finance/heloc-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 78000,
     "difficulty": 2,
     "icon": "🏠"
@@ -521,7 +521,7 @@
     "category": "finance",
     "keywords": ["home equity", "loan", "available equity", "ltv", "calculator"],
     "path": "/finance/home-equity-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 95000,
     "difficulty": 2,
     "icon": "🏡"
@@ -533,7 +533,7 @@
     "category": "finance",
     "keywords": ["cd", "certificate of deposit", "returns", "maturity", "calculator"],
     "path": "/finance/cd-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 67000,
     "difficulty": 1,
     "icon": "💿"
@@ -545,7 +545,7 @@
     "category": "finance",
     "keywords": ["ira", "retirement", "contributions", "savings", "growth", "calculator"],
     "path": "/finance/ira-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 89000,
     "difficulty": 2,
     "icon": "🏛️"
@@ -557,7 +557,7 @@
     "category": "finance",
     "keywords": ["roth ira", "retirement", "tax free", "contributions", "calculator"],
     "path": "/finance/roth-ira-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 78000,
     "difficulty": 2,
     "icon": "🏛️"
@@ -569,7 +569,7 @@
     "category": "finance",
     "keywords": ["pension", "benefits", "retirement income", "annuity", "calculator"],
     "path": "/finance/pension-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 56000,
     "difficulty": 3,
     "icon": "👴"
@@ -581,7 +581,7 @@
     "category": "finance",
     "keywords": ["social security", "benefits", "claiming strategy", "retirement", "calculator"],
     "path": "/finance/social-security-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 145000,
     "difficulty": 3,
     "icon": "🏛️"
@@ -593,7 +593,7 @@
     "category": "finance",
     "keywords": ["fire", "financial independence", "retire early", "savings", "calculator"],
     "path": "/finance/fire-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 67000,
     "difficulty": 2,
     "icon": "🔥"
@@ -605,7 +605,7 @@
     "category": "finance",
     "keywords": ["emergency fund", "expenses", "savings", "financial security", "calculator"],
     "path": "/finance/emergency-fund-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 45000,
     "difficulty": 1,
     "icon": "🚨"
@@ -617,7 +617,7 @@
     "category": "finance",
     "keywords": ["debt to income", "dti", "ratio", "loan qualification", "calculator"],
     "path": "/finance/debt-to-income-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 89000,
     "difficulty": 1,
     "icon": "📊"
@@ -629,7 +629,7 @@
     "category": "finance",
     "keywords": ["loan to value", "ltv", "ratio", "mortgage", "refinancing", "calculator"],
     "path": "/finance/loan-to-value-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 67000,
     "difficulty": 2,
     "icon": "🏠"
@@ -641,7 +641,7 @@
     "category": "finance",
     "keywords": ["apr", "annual percentage rate", "fees", "costs", "calculator"],
     "path": "/finance/apr-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 78000,
     "difficulty": 2,
     "icon": "📈"
@@ -653,7 +653,7 @@
     "category": "finance",
     "keywords": ["effective interest rate", "annual rate", "compounding", "calculator"],
     "path": "/finance/effective-interest-rate-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 34000,
     "difficulty": 3,
     "icon": "📊"
@@ -665,7 +665,7 @@
     "category": "finance",
     "keywords": ["amortization", "schedule", "principal", "interest", "loan", "calculator"],
     "path": "/finance/amortization-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 95000,
     "difficulty": 2,
     "icon": "📋"
@@ -677,7 +677,7 @@
     "category": "finance",
     "keywords": ["balloon payment", "loan", "final payment", "calculator"],
     "path": "/finance/balloon-payment-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 23000,
     "difficulty": 3,
     "icon": "🎈"
@@ -689,7 +689,7 @@
     "category": "finance",
     "keywords": ["lease", "car lease", "payments", "lease vs buy", "calculator"],
     "path": "/finance/lease-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 134000,
     "difficulty": 2,
     "icon": "🚗"
@@ -701,7 +701,7 @@
     "category": "finance",
     "keywords": ["lease vs buy", "car", "comparison", "costs", "calculator"],
     "path": "/finance/lease-vs-buy-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 67000,
     "difficulty": 2,
     "icon": "🚙"
@@ -713,7 +713,7 @@
     "category": "finance",
     "keywords": ["car depreciation", "vehicle", "future value", "resale", "calculator"],
     "path": "/finance/car-depreciation-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 45000,
     "difficulty": 2,
     "icon": "📉"
@@ -725,7 +725,7 @@
     "category": "finance",
     "keywords": ["insurance", "coverage", "needs", "life insurance", "calculator"],
     "path": "/finance/insurance-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 89000,
     "difficulty": 2,
     "icon": "🛡️"
@@ -737,7 +737,7 @@
     "category": "finance",
     "keywords": ["life insurance", "coverage", "needs", "premiums", "calculator"],
     "path": "/finance/life-insurance-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 123000,
     "difficulty": 2,
     "icon": "👨‍👩‍👧‍👦"
@@ -749,7 +749,7 @@
     "category": "finance",
     "keywords": ["disability insurance", "benefits", "needs", "income protection", "calculator"],
     "path": "/finance/disability-insurance-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 34000,
     "difficulty": 2,
     "icon": "♿"
@@ -761,7 +761,7 @@
     "category": "finance",
     "keywords": ["health insurance", "costs", "plans", "comparison", "calculator"],
     "path": "/finance/health-insurance-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 167000,
     "difficulty": 2,
     "icon": "🏥"
@@ -773,7 +773,7 @@
     "category": "finance",
     "keywords": ["auto insurance", "premiums", "coverage", "car insurance", "calculator"],
     "path": "/finance/auto-insurance-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 145000,
     "difficulty": 2,
     "icon": "🚗"
@@ -785,7 +785,7 @@
     "category": "finance",
     "keywords": ["home insurance", "homeowners", "coverage", "premiums", "calculator"],
     "path": "/finance/home-insurance-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 89000,
     "difficulty": 2,
     "icon": "🏠"
@@ -797,7 +797,7 @@
     "category": "finance",
     "keywords": ["umbrella insurance", "liability", "coverage", "protection", "calculator"],
     "path": "/finance/umbrella-insurance-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 23000,
     "difficulty": 3,
     "icon": "☂️"
@@ -809,7 +809,7 @@
     "category": "finance",
     "keywords": ["college savings", "529 plan", "education", "tuition", "calculator"],
     "path": "/finance/college-savings-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 78000,
     "difficulty": 2,
     "icon": "🎓"
@@ -821,7 +821,7 @@
     "category": "finance",
     "keywords": ["529 plan", "education savings", "tax benefits", "college", "calculator"],
     "path": "/finance/529-plan-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 45000,
     "difficulty": 2,
     "icon": "📚"
@@ -833,7 +833,7 @@
     "category": "finance",
     "keywords": ["child support", "payments", "guidelines", "custody", "calculator"],
     "path": "/finance/child-support-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 134000,
     "difficulty": 3,
     "icon": "👶"
@@ -845,7 +845,7 @@
     "category": "finance",
     "keywords": ["alimony", "spousal support", "payments", "divorce", "calculator"],
     "path": "/finance/alimony-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 67000,
     "difficulty": 3,
     "icon": "💔"
@@ -857,7 +857,7 @@
     "category": "finance",
     "keywords": ["divorce settlement", "asset division", "financial", "property", "calculator"],
     "path": "/finance/divorce-settlement-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 45000,
     "difficulty": 3,
     "icon": "⚖️"
@@ -869,7 +869,7 @@
     "category": "finance",
     "keywords": ["estate tax", "liability", "exemptions", "inheritance", "calculator"],
     "path": "/finance/estate-tax-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 34000,
     "difficulty": 3,
     "icon": "🏛️"
@@ -881,7 +881,7 @@
     "category": "finance",
     "keywords": ["gift tax", "liability", "annual exclusion", "gifts", "calculator"],
     "path": "/finance/gift-tax-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 23000,
     "difficulty": 3,
     "icon": "🎁"
@@ -893,7 +893,7 @@
     "category": "finance",
     "keywords": ["inheritance", "distribution", "tax implications", "estate", "calculator"],
     "path": "/finance/inheritance-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 56000,
     "difficulty": 3,
     "icon": "👴"
@@ -905,7 +905,7 @@
     "category": "finance",
     "keywords": ["trust", "distributions", "tax benefits", "estate planning", "calculator"],
     "path": "/finance/trust-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 28000,
     "difficulty": 4,
     "icon": "🏛️"
@@ -917,7 +917,7 @@
     "category": "finance",
     "keywords": ["paycheck", "take home pay", "taxes", "deductions", "calculator"],
     "path": "/finance/paycheck-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 234000,
     "difficulty": 2,
     "icon": "💰"
@@ -929,7 +929,7 @@
     "category": "finance",
     "keywords": ["hourly", "salary", "wage", "annual", "conversion", "calculator"],
     "path": "/finance/hourly-to-salary-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 167000,
     "difficulty": 1,
     "icon": "⏰"

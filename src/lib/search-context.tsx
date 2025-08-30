@@ -65,7 +65,7 @@ export function SearchProvider({ children }: SearchProviderProps) {
     });
 
     setRecentSearches(prev => {
-      const newRecent = [query, ...prev.filter(q => q !== query)].slice(0, 10);
+      const newRecent = [query, ...prev.filter(q => q !== query)].slice(0, 8);
       if (typeof window !== 'undefined') {
         localStorage.setItem('recent_searches', JSON.stringify(newRecent));
       }

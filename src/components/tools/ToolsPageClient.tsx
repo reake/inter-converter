@@ -79,13 +79,13 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
     });
   }, [selectedCategory, sortBy, allTools, currentFilters, filteredTools]);
 
-  // Initialize filteredTools on mount
+  // Initialize filteredTools on mount and when allTools changes
   useEffect(() => {
     if (!currentFilters) {
       const initial = allTools.sort((a, b) => (b.searchVolume || 0) - (a.searchVolume || 0));
       setFilteredTools(initial);
     }
-  }, []); // Only run on mount
+  }, [allTools, currentFilters]); // Update when allTools or currentFilters change
 
   const categoryStats = useMemo(() =>
     Object.entries(toolsByCategory).map(([key, tools]) => ({
@@ -138,7 +138,7 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
               onClick={() => handleCategorySelect('all')}
               className="transition-all duration-200"
             >
-{t.allTools} ({allTools.length})
+{t.allTools} ({TOOLS_CONFIG.length})
             </Button>
             {categoryStats.map(({ key, name, count }) => (
               <Button
@@ -210,7 +210,7 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
           {/* Results Summary */}
           <div className="mb-8 text-center">
             <div className="flex flex-wrap justify-center items-center gap-4 text-sm text-gray-600">
-              <span>Showing {displayTools.length} of {allTools.length} tools</span>
+              <span>Showing {displayTools.length} of {TOOLS_CONFIG.length} tools</span>
               {currentFilters && (currentFilters.categories.length > 0 || currentFilters.difficulties.length > 0 || currentFilters.searchVolume !== 'all') && (
                 <Badge variant="outline" className="bg-blue-50 text-blue-700">
                   Filtered results
@@ -241,9 +241,14 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
                         </h3>
                         <p className="text-gray-600">{categoryInfo.description}</p>
                       </div>
-                      <Badge variant="secondary" className="text-sm">
-                        {categoryTools.length} tools
-                      </Badge>
+                      <div className="flex items-center gap-3">
+                        <Badge variant="secondary" className="text-sm">
+                          {categoryTools.length} tools
+                        </Badge>
+                        <Button asChild variant="outline" size="sm">
+                          <a href={`/${categoryKey}`}>View More</a>
+                        </Button>
+                      </div>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                       {displayTools.map((tool, index) => (

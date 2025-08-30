@@ -65,7 +65,7 @@
     "category": "health",
     "keywords": ["pregnancy calculator", "due date", "pregnancy weeks", "conception", "trimester"],
     "path": "/health/pregnancy-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 198000,
     "difficulty": 2,
     "icon": "🤱"
@@ -77,7 +77,7 @@
     "category": "health",
     "keywords": ["water intake", "hydration", "daily water", "fluid needs", "health"],
     "path": "/health/water-intake-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 125000,
     "difficulty": 1,
     "icon": "💧"
@@ -89,7 +89,7 @@
     "category": "health",
     "keywords": ["heart rate", "target heart rate", "exercise", "fitness", "cardio", "training zones"],
     "path": "/health/heart-rate-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 78000,
     "difficulty": 2,
     "icon": "❤️"
@@ -101,7 +101,7 @@
     "category": "health",
     "keywords": ["macro calculator", "macronutrients", "protein", "carbs", "fats", "nutrition"],
     "path": "/health/macro-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 167000,
     "difficulty": 2,
     "icon": "🥗"
@@ -113,7 +113,7 @@
     "category": "health",
     "keywords": ["sleep calculator", "bedtime", "wake time", "sleep cycles", "rem sleep"],
     "path": "/health/sleep-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 145000,
     "difficulty": 1,
     "icon": "😴"
@@ -125,7 +125,7 @@
     "category": "health",
     "keywords": ["ovulation calculator", "fertile window", "conception", "family planning", "menstrual cycle"],
     "path": "/health/ovulation-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 234000,
     "difficulty": 2,
     "icon": "🌸"
@@ -137,7 +137,7 @@
     "category": "health",
     "keywords": ["protein calculator", "daily protein", "protein needs", "fitness", "muscle building"],
     "path": "/health/protein-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 89000,
     "difficulty": 1,
     "icon": "🥩"

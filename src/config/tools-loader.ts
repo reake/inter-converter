@@ -86,8 +86,9 @@ export const getToolById = (id: string): ToolConfig | undefined => {
   return TOOLS_CONFIG.find(tool => tool.id === id);
 };
 
-export const getToolsByCategory = (category: ToolCategory): ToolConfig[] => {
-  return TOOLS_CONFIG.filter(tool => tool.category === category && tool.isActive);
+export const getToolsByCategory = (category: ToolCategory, limit?: number): ToolConfig[] => {
+  const tools = TOOLS_CONFIG.filter(tool => tool.category === category && tool.isActive);
+  return limit ? tools.slice(0, limit) : tools;
 };
 
 export const getPopularTools = (limit: number = 5): ToolConfig[] => {
@@ -158,6 +159,20 @@ export const getFeaturedToolsByCategory = (): Record<ToolCategory, ToolConfig[]>
   return featured as Record<ToolCategory, ToolConfig[]>;
 };
 
+// Get tools by all categories with limit
+export const getToolsByAllCategories = (limit: number = 10): Record<ToolCategory, ToolConfig[]> => {
+  const categories: ToolCategory[] = ['unit', 'time', 'finance', 'auto', 'color', 'health', 'media'];
+  const result: Record<string, ToolConfig[]> = {};
+  
+  categories.forEach(category => {
+    const categoryTools = getToolsByCategory(category, limit);
+    if (categoryTools.length > 0) {
+      result[category] = categoryTools;
+    }
+  });
+  
+  return result as Record<ToolCategory, ToolConfig[]>;
+};
 
 // Export individual category configs for backward compatibility
 export {

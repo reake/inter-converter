@@ -105,7 +105,7 @@
       "exact age calculator"
     ],
     "path": "/time/age-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 125000,
     "difficulty": 1,
     "icon": "🎂"
@@ -123,7 +123,7 @@
       "future date calculator"
     ],
     "path": "/time/date-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 95000,
     "difficulty": 1,
     "icon": "📅"
@@ -142,7 +142,7 @@
       "split timer"
     ],
     "path": "/time/online-stopwatch",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 85000,
     "difficulty": 1,
     "icon": "⏱️"
@@ -160,7 +160,7 @@
       "epoch converter"
     ],
     "path": "/time/unix-timestamp-converter",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 155000,
     "difficulty": 1,
     "icon": "🕐"
@@ -178,7 +178,7 @@
       "business days counter"
     ],
     "path": "/time/working-days-calculator",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 45000,
     "difficulty": 2,
     "icon": "💼"
@@ -197,7 +197,7 @@
       "current time worldwide"
     ],
     "path": "/time/world-clock",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 75000,
     "difficulty": 2,
     "icon": "🌍"

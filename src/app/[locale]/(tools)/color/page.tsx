@@ -6,13 +6,13 @@ import { getColorTools } from '@/config/tools';
 import { ArrowRight, TrendingUp, Users, Star, Palette } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Color & Design Tools - Free Online Color Converters | InterConverter',
-  description: 'Professional color conversion tools including HEX to RGB, color picker, gradient generator, palette creator, and contrast checker. Free web design tools for developers and designers.',
+  title: 'Free Color & Design Tools - HEX to RGB, Color Picker, Palette Generator | InterConverter',
+  description: 'Professional color conversion and design tools including HEX to RGB converter, color picker, gradient generator, palette creator, and WCAG contrast checker. Free web design tools for developers and designers.',
   keywords: [
     'color converter',
     'hex to rgb converter',
     'rgb to hex converter',
-    'color picker',
+    'color picker tool',
     'gradient generator',
     'color palette generator',
     'contrast checker',
@@ -21,16 +21,39 @@ export const metadata: Metadata = {
     'color code converter',
     'design tools',
     'accessibility tools',
-    'wcag contrast',
-    'color theory tools'
+    'wcag contrast checker',
+    'color theory tools',
+    'hsl converter',
+    'free color tools',
+    'online color picker'
   ].join(', '),
   openGraph: {
-    title: 'Color & Design Tools | InterConverter',
-    description: 'Professional color conversion and design tools for web developers and designers.',
+    title: 'Free Color & Design Tools | InterConverter',
+    description: 'Professional color conversion and design tools for web developers and designers. HEX to RGB, color picker, and more.',
     type: 'website',
+    url: 'https://interconverter.com/color',
+    siteName: 'InterConverter',
+    images: [
+      {
+        url: 'https://interconverter.com/images/og-color.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Color & Design Tools - InterConverter',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Color & Design Tools | InterConverter',
+    description: 'Professional color tools: HEX to RGB converter, color picker, gradient generator, and WCAG contrast checker.',
+    creator: '@interconverter',
   },
   alternates: {
-    canonical: '/color'
+    canonical: 'https://interconverter.com/color'
+  },
+  robots: {
+    index: true,
+    follow: true,
   }
 };
 

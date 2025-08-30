@@ -6,8 +6,8 @@ import { getUnitTools, getPopularTools } from '@/config/tools';
 import { ArrowRight, TrendingUp, Users, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Unit & Measurement Converters - Free Online Tools | InterConverter',
-  description: 'Convert between different units of measurement including length, weight, temperature, area, volume, speed, pressure, energy, power, and data storage. Free, accurate, and instant conversion tools.',
+  title: 'Free Unit & Measurement Converters - Length, Weight, Temperature Tools | InterConverter',
+  description: 'Convert between different units of measurement including length, weight, temperature, area, volume, speed, pressure, energy, power, and data storage. Free, accurate, and instant conversion tools with real-time results.',
   keywords: [
     'unit converter',
     'measurement converter',
@@ -23,26 +23,51 @@ export const metadata: Metadata = {
     'data converter',
     'metric imperial converter',
     'measurement tools',
-    'conversion calculator'
+    'conversion calculator',
+    'meters to feet',
+    'celsius to fahrenheit',
+    'pounds to kg',
+    'free unit converter',
+    'online measurement tools'
   ].join(', '),
   openGraph: {
-    title: 'Unit & Measurement Converters | InterConverter',
+    title: 'Free Unit & Measurement Converters | InterConverter',
     description: 'Convert between different units of measurement with our comprehensive collection of free online conversion tools.',
     type: 'website',
-    url: 'https://interconverter.com/unit'
+    url: 'https://interconverter.com/unit',
+    siteName: 'InterConverter',
+    images: [
+      {
+        url: 'https://interconverter.com/images/og-unit.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Unit & Measurement Converters - InterConverter',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Unit & Measurement Converters | InterConverter',
+    description: 'Convert length, weight, temperature, and more units with accurate online tools.',
+    creator: '@interconverter',
   },
   alternates: {
-    canonical: '/unit'
+    canonical: 'https://interconverter.com/unit'
+  },
+  robots: {
+    index: true,
+    follow: true,
   }
 };
 
 export default function UnitPage() {
+  // Get all active unit tools from JSON data (isActive filtering is already applied in getUnitTools)
   const allUnitTools = getUnitTools();
   
   // Get popular tools (top 6 by search volume)
   const popularTools = getPopularTools().filter(tool => tool.category === 'unit').slice(0, 6);
 
-  // Get tools by keywords/type
+  // Get tools by keywords/type - now using the JSON data with isActive filtering
   const lengthTools = allUnitTools.filter(tool => 
     tool.keywords.some(keyword => keyword.includes('length') || keyword.includes('meter') || keyword.includes('feet') || keyword.includes('inch'))
   );

@@ -10,7 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Link } from "@/i18n/routing";
-import { getPopularTools } from "@/config/tools";
+import { getPopularTools, getToolsByAllCategories, TOOL_CATEGORIES } from "@/config/tools";
 import { EnhancedToolCard } from "@/components/tools/EnhancedToolCard";
 import { generateHomeMetadata } from "@/config/seo";
 import { StructuredData } from "@/components/tools/StructuredData";
@@ -36,6 +36,7 @@ export default async function HomePage({
 }) {
   const { locale } = await params;
   const popularTools = getPopularTools(6);
+  const toolsByCategory = getToolsByAllCategories(4);
 
   return (
     <>
@@ -99,6 +100,41 @@ export default async function HomePage({
           <Button asChild variant="outline">
             <Link href="/tools">View All Tools</Link>
           </Button>
+        </div>
+      </section>
+
+      {/* Tools by Category Section */}
+      <section className="py-12">
+        <h2 className="text-3xl font-bold text-center mb-12">
+          Browse Tools by Category
+        </h2>
+        <div className="space-y-12">
+          {Object.entries(toolsByCategory).map(([categoryKey, tools]) => {
+            const category = TOOL_CATEGORIES[categoryKey as keyof typeof TOOL_CATEGORIES];
+            return (
+              <div key={categoryKey} className="">
+                <div className="flex items-center justify-between mb-6">
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">{category.name}</h3>
+                    <p className="text-gray-600 mt-1">{category.description}</p>
+                  </div>
+                  <Button asChild variant="outline" size="sm">
+                    <a href={`/${categoryKey}`}>View More</a>
+                  </Button>
+                </div>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                  {tools.map((tool) => (
+                    <EnhancedToolCard
+                      key={tool.id}
+                      tool={tool}
+                      featured={false}
+                      showStats={false}
+                    />
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 

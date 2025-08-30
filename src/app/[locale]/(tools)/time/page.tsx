@@ -6,8 +6,8 @@ import { getTimeTools } from '@/config/tools';
 import { ArrowRight, TrendingUp, Users, Star, Clock } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Time & Date Tools - Free Online Converters & Calculators | InterConverter',
-  description: 'Professional time and date tools including timestamp converter, timezone converter, date calculator, age calculator, countdown timer, and world clock. Free online time conversion tools.',
+  title: 'Free Time & Date Tools - Timestamp, Timezone, Date Calculator | InterConverter',
+  description: 'Professional time and date tools including timestamp converter, timezone converter, date calculator, age calculator, countdown timer, and world clock. Free online time conversion tools for developers and businesses.',
   keywords: [
     'timestamp converter',
     'timezone converter',
@@ -15,22 +15,45 @@ export const metadata: Metadata = {
     'age calculator',
     'countdown timer',
     'world clock',
-    'unix timestamp',
+    'unix timestamp converter',
     'epoch converter',
     'time zone conversion',
     'date difference calculator',
     'working days calculator',
     'stopwatch online',
     'time conversion tools',
-    'date tools'
+    'date tools',
+    'free timestamp converter',
+    'online timezone converter',
+    'date and time calculator'
   ].join(', '),
   openGraph: {
-    title: 'Time & Date Tools | InterConverter',
+    title: 'Free Time & Date Tools | InterConverter',
     description: 'Professional time and date conversion tools for developers, businesses, and everyday use.',
     type: 'website',
+    url: 'https://interconverter.com/time',
+    siteName: 'InterConverter',
+    images: [
+      {
+        url: 'https://interconverter.com/images/og-time.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Time & Date Tools - InterConverter',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Time & Date Tools | InterConverter',
+    description: 'Professional timestamp converter, timezone tools, and date calculators for developers.',
+    creator: '@interconverter',
   },
   alternates: {
-    canonical: '/time'
+    canonical: 'https://interconverter.com/time'
+  },
+  robots: {
+    index: true,
+    follow: true,
   }
 };
 

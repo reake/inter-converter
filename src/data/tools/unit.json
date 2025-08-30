@@ -109,7 +109,7 @@
       "square unit converter"
     ],
     "path": "/unit/area-converter",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 85000,
     "difficulty": 1,
     "icon": "📐"
@@ -132,7 +132,7 @@
       "velocity calculator"
     ],
     "path": "/unit/speed-converter",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 95000,
     "difficulty": 1,
     "icon": "🏃"
@@ -155,7 +155,7 @@
       "energy unit converter"
     ],
     "path": "/unit/energy-converter",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 65000,
     "difficulty": 2,
     "icon": "⚡"
@@ -178,7 +178,7 @@
       "bar to psi"
     ],
     "path": "/unit/pressure-converter",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 55000,
     "difficulty": 2,
     "icon": "🌪️"
@@ -201,7 +201,7 @@
       "watts to hp"
     ],
     "path": "/unit/power-converter",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 45000,
     "difficulty": 2,
     "icon": "⚡"
@@ -224,7 +224,7 @@
       "storage calculator"
     ],
     "path": "/unit/data-converter",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 75000,
     "difficulty": 1,
     "icon": "💾"
@@ -247,7 +247,7 @@
       "fahrenheit to c converter"
     ],
     "path": "/unit/fahrenheit-to-celsius-converter",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 245000,
     "difficulty": 1,
     "icon": "🌡️"
@@ -270,7 +270,7 @@
       "celsius to f converter"
     ],
     "path": "/unit/celsius-to-fahrenheit-converter",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 225000,
     "difficulty": 1,
     "icon": "🌡️"
@@ -293,7 +293,7 @@
       "pounds to kilograms converter"
     ],
     "path": "/unit/pounds-to-kg-converter",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 198000,
     "difficulty": 1,
     "icon": "⚖️"
@@ -316,7 +316,7 @@
       "kg to lb converter"
     ],
     "path": "/unit/kg-to-pounds-converter",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 185000,
     "difficulty": 1,
     "icon": "⚖️"
@@ -339,7 +339,7 @@
       "measurement calculator"
     ],
     "path": "/unit/unit-converter",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 325000,
     "difficulty": 2,
     "icon": "🔄"
@@ -357,7 +357,7 @@
       "cm to inches calculator"
     ],
     "path": "/unit/cm-to-inches-converter",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 155000,
     "difficulty": 1,
     "icon": "📏"
@@ -375,7 +375,7 @@
       "inches to cm calculator"
     ],
     "path": "/unit/inches-to-cm-converter",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 145000,
     "difficulty": 1,
     "icon": "📏"
@@ -393,7 +393,7 @@
       "feet to meters calculator"
     ],
     "path": "/unit/feet-to-meters-converter",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 125000,
     "difficulty": 1,
     "icon": "📏"
@@ -411,7 +411,7 @@
       "meters to feet calculator"
     ],
     "path": "/unit/meters-to-feet-converter",
-    "isActive": true,
+    "isActive": false,
     "searchVolume": 115000,
     "difficulty": 1,
     "icon": "📏"

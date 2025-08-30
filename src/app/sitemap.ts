@@ -31,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Category pages
+  // Category pages (these are in the (tools) route group)
   const categories = ['unit', 'time', 'finance', 'auto', 'color', 'health', 'media'];
   const categoryPages: MetadataRoute.Sitemap = categories.map(category => ({
     url: `${baseUrl}/${category}`,

@@ -11,23 +11,52 @@ import { getToolsByCategory } from '@/config/tools';
 export const dynamic = 'force-static';
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Health & Fitness Calculators - BMI, Body Fat, Calorie Tools',
-    description: 'Professional health and fitness calculators including BMI calculator, body fat percentage, calorie needs, and fitness tracking tools.',
+    title: 'Free Health & Fitness Calculators - BMI, Body Fat, Calorie Tools | InterConverter',
+    description: 'Professional health and fitness calculators including BMI calculator, body fat percentage, calorie needs, ideal weight, heart rate zones, and fitness tracking tools. Free, accurate health metrics for wellness planning.',
     keywords: [
       'bmi calculator',
-      'body mass index',
+      'body mass index calculator',
       'health calculator',
       'fitness calculator',
       'calorie calculator',
-      'body fat calculator'
+      'body fat calculator',
+      'ideal weight calculator',
+      'health metrics calculator',
+      'wellness calculator',
+      'fitness tracking tools',
+      'health assessment tools',
+      'body composition calculator',
+      'heart rate calculator',
+      'free health calculators',
+      'online health tools'
     ],
     openGraph: {
-      title: 'Health & Fitness Calculators',
-      description: 'Professional health and fitness calculation tools for wellness tracking.',
+      title: 'Free Health & Fitness Calculators | InterConverter',
+      description: 'Professional health and fitness calculators for BMI, body fat, calories, and wellness tracking. Free online health tools.',
       type: 'website',
+      url: 'https://interconverter.com/health',
+      siteName: 'InterConverter',
+      images: [
+        {
+          url: 'https://interconverter.com/images/og-health.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Health & Fitness Calculators - InterConverter',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Free Health & Fitness Calculators | InterConverter',
+      description: 'Professional health calculators for BMI, body fat, calories, and wellness tracking.',
+      creator: '@interconverter',
     },
     alternates: {
-      canonical: '/health'
+      canonical: 'https://interconverter.com/health'
+    },
+    robots: {
+      index: true,
+      follow: true,
     }
   };
 }
