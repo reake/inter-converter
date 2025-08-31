@@ -20,7 +20,8 @@
     "isActive": true,
     "searchVolume": 285000,
     "difficulty": 1,
-    "icon": "🌡️"
+    "icon": "🌡️",
+    "titleSuffix": "Temperature Scale Converter"
   },
   {
     "id": "length-converter",
@@ -43,7 +44,8 @@
     "isActive": true,
     "searchVolume": 195000,
     "difficulty": 1,
-    "icon": "📏"
+    "icon": "📏",
+    "titleSuffix": "Distance & Length Calculator"
   },
   {
     "id": "weight-converter",
@@ -66,7 +68,8 @@
     "isActive": true,
     "searchVolume": 175000,
     "difficulty": 1,
-    "icon": "⚖️"
+    "icon": "⚖️",
+    "titleSuffix": "Mass & Weight Calculator"
   },
   {
     "id": "volume-converter",
@@ -89,7 +92,8 @@
     "isActive": true,
     "searchVolume": 125000,
     "difficulty": 1,
-    "icon": "🥤"
+    "icon": "🥤",
+    "titleSuffix": "Liquid Volume Calculator"
   },
   {
     "id": "area-converter",
@@ -112,7 +116,8 @@
     "isActive": false,
     "searchVolume": 85000,
     "difficulty": 1,
-    "icon": "📐"
+    "icon": "📐",
+    "titleSuffix": "Surface Area Calculator"
   },
   {
     "id": "speed-converter",
@@ -135,7 +140,8 @@
     "isActive": false,
     "searchVolume": 95000,
     "difficulty": 1,
-    "icon": "🏃"
+    "icon": "🏃",
+    "titleSuffix": "Velocity & Speed Calculator"
   },
   {
     "id": "energy-converter",
@@ -158,7 +164,8 @@
     "isActive": false,
     "searchVolume": 65000,
     "difficulty": 2,
-    "icon": "⚡"
+    "icon": "⚡",
+    "titleSuffix": "Energy & Power Calculator"
   },
   {
     "id": "pressure-converter",
@@ -181,7 +188,8 @@
     "isActive": false,
     "searchVolume": 55000,
     "difficulty": 2,
-    "icon": "🌪️"
+    "icon": "🌪️",
+    "titleSuffix": "Pressure Unit Calculator"
   },
   {
     "id": "power-converter",
@@ -204,7 +212,8 @@
     "isActive": false,
     "searchVolume": 45000,
     "difficulty": 2,
-    "icon": "⚡"
+    "icon": "⚡",
+    "titleSuffix": "Electrical Power Calculator"
   },
   {
     "id": "data-converter",
@@ -227,7 +236,8 @@
     "isActive": false,
     "searchVolume": 75000,
     "difficulty": 1,
-    "icon": "💾"
+    "icon": "💾",
+    "titleSuffix": "Digital Storage Calculator"
   },
   {
     "id": "fahrenheit-to-celsius-converter",
@@ -250,7 +260,8 @@
     "isActive": false,
     "searchVolume": 245000,
     "difficulty": 1,
-    "icon": "🌡️"
+    "icon": "🌡️",
+    "titleSuffix": "F to C Temperature Converter"
   },
   {
     "id": "celsius-to-fahrenheit-converter",
@@ -273,7 +284,8 @@
     "isActive": false,
     "searchVolume": 225000,
     "difficulty": 1,
-    "icon": "🌡️"
+    "icon": "🌡️",
+    "titleSuffix": "C to F Temperature Converter"
   },
   {
     "id": "pounds-to-kg-converter",
@@ -296,7 +308,8 @@
     "isActive": false,
     "searchVolume": 198000,
     "difficulty": 1,
-    "icon": "⚖️"
+    "icon": "⚖️",
+    "titleSuffix": "Lbs to Kg Weight Converter"
   },
   {
     "id": "kg-to-pounds-converter",
@@ -319,7 +332,8 @@
     "isActive": false,
     "searchVolume": 185000,
     "difficulty": 1,
-    "icon": "⚖️"
+    "icon": "⚖️",
+    "titleSuffix": "Kg to Lbs Weight Converter"
   },
   {
     "id": "unit-converter",
@@ -342,7 +356,8 @@
     "isActive": false,
     "searchVolume": 325000,
     "difficulty": 2,
-    "icon": "🔄"
+    "icon": "🔄",
+    "titleSuffix": "All-in-One Unit Converter"
   },
   {
     "id": "cm-to-inches-converter",
@@ -360,7 +375,8 @@
     "isActive": false,
     "searchVolume": 155000,
     "difficulty": 1,
-    "icon": "📏"
+    "icon": "📏",
+    "titleSuffix": "CM to Inches Length Converter"
   },
   {
     "id": "inches-to-cm-converter",
@@ -378,7 +394,8 @@
     "isActive": false,
     "searchVolume": 145000,
     "difficulty": 1,
-    "icon": "📏"
+    "icon": "📏",
+    "titleSuffix": "Inches to CM Length Converter"
   },
   {
     "id": "feet-to-meters-converter",
@@ -396,7 +413,8 @@
     "isActive": false,
     "searchVolume": 125000,
     "difficulty": 1,
-    "icon": "📏"
+    "icon": "📏",
+    "titleSuffix": "Feet to Meters Length Converter"
   },
   {
     "id": "meters-to-feet-converter",
@@ -414,6 +432,7 @@
     "isActive": false,
     "searchVolume": 115000,
     "difficulty": 1,
-    "icon": "📏"
+    "icon": "📏",
+    "titleSuffix": "Meters to Feet Length Converter"
   }
 ]

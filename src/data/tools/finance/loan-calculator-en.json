@@ -1,0 +1,40 @@
+{
+  "about": [
+    "The Loan Calculator helps you determine monthly payments, total interest costs, and amortization schedules for any type of loan. Whether it's a mortgage, auto loan, personal loan, or business loan, this tool provides comprehensive loan analysis.",
+    "Understanding your loan terms before signing helps you make informed financial decisions and compare different loan offers effectively. Calculate the true cost of borrowing and plan your budget accordingly."
+  ],
+  "howToUse": [
+    "Enter the loan amount (principal)",
+    "Input the annual interest rate (APR)",
+    "Set the loan term (years or months)",
+    "View monthly payment and total costs",
+    "Analyze the amortization schedule and payment breakdown"
+  ],
+  "features": [
+    "Monthly payment calculation",
+    "Total interest cost analysis",
+    "Detailed amortization schedule",
+    "Principal vs interest breakdown",
+    "Multiple loan comparison",
+    "Extra payment impact calculator",
+    "Loan affordability assessment"
+  ],
+  "faqs": [
+    {
+      "question": "What's included in the monthly payment calculation?",
+      "answer": "The basic calculation includes principal and interest (P&I). For mortgages, you may need to add property taxes, insurance, and PMI separately for the total monthly housing payment."
+    },
+    {
+      "question": "How does the loan term affect my payments?",
+      "answer": "Longer terms result in lower monthly payments but higher total interest costs. Shorter terms mean higher monthly payments but significant interest savings over the life of the loan."
+    },
+    {
+      "question": "Can I calculate the impact of extra payments?",
+      "answer": "Yes, you can see how additional principal payments reduce the loan term and total interest. Even small extra payments can save thousands in interest over time."
+    },
+    {
+      "question": "What's the difference between interest rate and APR?",
+      "answer": "Interest rate is the cost of borrowing the principal. APR includes the interest rate plus additional fees and costs, giving you the true annual cost of the loan."
+    }
+  ]
+}

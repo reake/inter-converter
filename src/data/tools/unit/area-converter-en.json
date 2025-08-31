@@ -1,0 +1,46 @@
+{
+  "about": [
+    "The Area Converter is a comprehensive tool for converting between different units of area measurement. From square meters to acres, square feet to hectares, this converter handles all common area measurements used in real estate, agriculture, construction, and land surveying.",
+    "Area conversion is essential in property transactions, agricultural planning, construction projects, and international land dealings. Our converter provides accurate conversions between metric and imperial area systems.",
+    "Whether you're calculating property sizes, planning agricultural plots, or working with architectural specifications, this tool ensures precise area conversions with support for both common and specialized units."
+  ],
+  "howToUse": [
+    "Enter the area value you want to convert",
+    "Select the source unit (square meters, acres, square feet, etc.)",
+    "Choose the target unit for conversion",
+    "View the converted area instantly",
+    "Use the result for your property, construction, or planning calculations"
+  ],
+  "features": [
+    "Convert between metric and imperial area units",
+    "Support for square meters, square kilometers, hectares",
+    "Imperial units: square feet, square yards, acres, square miles",
+    "Real-time conversion as you type",
+    "High precision calculations",
+    "Scientific notation for large areas",
+    "Mobile-optimized interface",
+    "Educational area measurement information"
+  ],
+  "faqs": [
+    {
+      "question": "What area units are supported?",
+      "answer": "We support metric units (m², km², hectares), imperial units (ft², yd², acres, mi²), and specialized land measurement units."
+    },
+    {
+      "question": "How big is an acre?",
+      "answer": "An acre is 43,560 square feet or 4,047 square meters. It's commonly used in real estate and agriculture."
+    },
+    {
+      "question": "What's the difference between a hectare and an acre?",
+      "answer": "A hectare is 10,000 square meters (2.47 acres), while an acre is 4,047 square meters. Hectares are metric, acres are imperial."
+    },
+    {
+      "question": "How accurate are the area conversions?",
+      "answer": "All conversions use precise mathematical formulas with high decimal accuracy suitable for professional surveying and real estate."
+    },
+    {
+      "question": "Can I convert very large or very small areas?",
+      "answer": "Yes, the converter handles everything from square millimeters to square kilometers with appropriate precision and scientific notation."
+    }
+  ]
+}

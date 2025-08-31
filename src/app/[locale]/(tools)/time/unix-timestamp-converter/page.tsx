@@ -1,77 +1,117 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import { TimestampConverter } from '@/components/converters/time/TimestampConverter';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/time/unix-timestamp-converter-en.json';
+import zhTool from '@/data/tools/time/unix-timestamp-converter-zh.json';
+import timeEn from '@/data/tools/time.json';
+import timeZh from '@/data/tools/time-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('unix-timestamp-converter', 'time', 'Unix Timestamp Converter');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Unix Timestamp Converter - Convert Unix Time Online | InterConverter',
-  description: 'Convert Unix timestamps to human-readable dates and vice versa. Free online Unix time converter with timezone support.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Unix Timestamp Converter - Convert Unix Time Online',
-    description: 'Professional Unix timestamp converter for developers. Convert epoch time to readable dates and vice versa with timezone support.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-unix-timestamp-converter.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Unix Timestamp Converter Tool'
+  const catalogs: Record<string, any[]> = {
+    en: timeEn as any[],
+    zh: (timeZh as any[]) || (timeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'unix-timestamp-converter') || catalogs.en.find((it) => it.id === 'unix-timestamp-converter');
+
+  const toolName: string = entry?.name ?? 'UnixTimestampConverter';
+  const description: string = entry?.description ?? '';
+  const baseKeywords = generateOptimizedKeywords('unix-timestamp-converter', 'time', 'UnixTimestampConverter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/time/unix-timestamp-converter`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-unix-timestamp-converter.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/time/unix-timestamp-converter',
+        zh: '/zh/time/unix-timestamp-converter'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/time/unix-timestamp-converter'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function UnixTimestampConverterPage() {
-  const faqs = getFAQsByToolId('unix-timestamp-converter', 'time');
+export default async function UnixTimestampConverterPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  // Load JSON content based on locale
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const catalogs: Record<string, any[]> = {
+    en: timeEn as any[],
+    zh: (timeZh as any[]) || (timeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'unix-timestamp-converter') || catalogs.en.find((it) => it.id === 'unix-timestamp-converter');
+
+  const toolName: string = entry?.name ?? 'UnixTimestampConverter';
+  const description: string = entry?.description ?? '';
+  const baseKeywords = generateOptimizedKeywords('unix-timestamp-converter', 'time', 'UnixTimestampConverter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Unix Timestamp Converter"
-      description="Convert Unix timestamps to human-readable dates and vice versa with timezone support."
+      title={toolName}
+      description={description}
       keywords={keywords}
       toolId="unix-timestamp-converter"
       category="time"
-      emoji="⏱️"
-      customHowToUse={[
-        "Enter a Unix timestamp (epoch time)",
-        "Or select a date and time to convert",
-        "Choose your preferred timezone",
-        "View the converted result instantly",
-        "Copy the result for your application"
-      ]}
-      customFeatures={[
-        "Bidirectional timestamp conversion",
-        "Timezone support for accurate conversion",
-        "Current timestamp display",
-        "Millisecond precision support",
-        "Batch conversion capabilities",
-        "Developer-friendly output formats"
-      ]}
-      faqs={faqs}
+      aboutContent={toolContent.about}
+      customHowToUse={toolContent.howToUse}
+      customFeatures={toolContent.features}
+      faqs={toolContent.faqs}
     >
       <TimestampConverter />
     </EnhancedToolLayout>

@@ -1,0 +1,46 @@
+{
+  "about": [
+    "The Weight Converter is an essential tool for converting between different units of weight and mass. From grams to pounds, kilograms to ounces, this converter handles all common weight measurements used in cooking, shipping, science, and commerce.",
+    "Weight conversion is crucial in international trade, cooking, fitness tracking, and scientific research. Our converter provides accurate conversions between metric and imperial weight systems.",
+    "Whether you're following a recipe, calculating shipping costs, or conducting scientific experiments, this tool ensures precise weight conversions with support for both everyday and specialized units."
+  ],
+  "howToUse": [
+    "Enter the weight value you want to convert",
+    "Select the source unit (grams, pounds, kilograms, etc.)",
+    "Choose the target unit for conversion",
+    "View the converted weight instantly",
+    "Use the result for your cooking, shipping, or calculations"
+  ],
+  "features": [
+    "Convert between metric and imperial weight units",
+    "Support for grams, kilograms, metric tons",
+    "Imperial units: ounces, pounds, stones, tons",
+    "Specialized units: carats, grains, troy ounces",
+    "Real-time conversion as you type",
+    "High precision calculations",
+    "Scientific notation for large masses",
+    "Mobile-friendly responsive design"
+  ],
+  "faqs": [
+    {
+      "question": "What weight units are supported?",
+      "answer": "We support metric units (g, kg, tonnes), imperial units (oz, lb, stone, ton), and specialized units like carats and troy ounces."
+    },
+    {
+      "question": "What's the difference between mass and weight?",
+      "answer": "Mass is the amount of matter in an object, while weight is the force of gravity on that mass. For practical conversions, they're used interchangeably."
+    },
+    {
+      "question": "How accurate are the weight conversions?",
+      "answer": "All conversions use precise mathematical formulas with high decimal accuracy suitable for commercial and scientific applications."
+    },
+    {
+      "question": "What is a troy ounce?",
+      "answer": "A troy ounce (31.1 grams) is used for precious metals and is different from a regular ounce (28.35 grams)."
+    },
+    {
+      "question": "Can I convert very small or very large weights?",
+      "answer": "Yes, the converter handles everything from milligrams to metric tons with appropriate precision and scientific notation."
+    }
+  ]
+}

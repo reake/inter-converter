@@ -1,77 +1,121 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import MortgageCalculator from '@/components/converters/finance/MortgageCalculator';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/va-loan-calculator-en.json';
+import zhTool from '@/data/tools/finance/va-loan-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('va-loan-calculator', 'finance', 'VA Loan Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'VA Loan Calculator - Veterans Home Loan Calculator | InterConverter',
-  description: 'Calculate VA loan payments with no down payment and no PMI for eligible veterans and service members with instant calculations.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'VA Loan Calculator - Veterans Home Loan Calculator',
-    description: 'Professional VA loan calculator for veterans and military. Calculate payments with no down payment and no PMI.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-va-loan-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'VA Loan Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'va-loan-calculator') || catalogs.en.find((it) => it.id === 'va-loan-calculator');
+
+  const toolName: string = entry?.name ?? 'MortgageCalculator';
+  const description: string = entry?.description ?? 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('va-loan-calculator', 'finance', 'MortgageCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/finance/va-loan-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-va-loan-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/va-loan-calculator',
+        zh: '/zh/finance/va-loan-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/finance/va-loan-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function VALoanCalculatorPage() {
-  const faqs = getFAQsByToolId('va-loan-calculator', 'finance');
+export default async function MortgageCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === 'va-loan-calculator') || catalogs.en.find((it) => it.id === 'va-loan-calculator');
+
+  const toolName: string = entry?.name || 'MortgageCalculator';
+  const descriptionText: string = entry?.description || 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('va-loan-calculator', 'finance', 'MortgageCalculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="VA Loan Calculator"
-      description="Calculate VA loan payments for veterans and military members with instant calculations."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="va-loan-calculator"
       category="finance"
-      emoji="🇺🇸"
-      customHowToUse={[
-        "Enter home purchase price or loan amount",
-        "Set VA loan interest rate from lender",
-        "Add VA funding fee (if applicable)",
-        "Calculate monthly payment without PMI",
-        "Review VA loan benefits and savings",
-        "Compare with conventional loan options"
-      ]}
-      customFeatures={[
-        "No down payment calculation (0% down)",
-        "No PMI requirements or costs",
-        "VA funding fee analysis and exemptions",
-        "Veteran benefit optimization and savings",
-        "Eligibility requirements and verification",
-        "VA loan limit calculations by county"
-      ]}
+      locale={l}
+      emoji="💰"
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
       faqs={faqs}
     >
       <MortgageCalculator />

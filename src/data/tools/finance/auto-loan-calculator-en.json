@@ -1,0 +1,43 @@
+{
+  "about": [
+    "The Auto Loan Calculator is a comprehensive tool designed to help you calculate monthly payments, total interest costs, and loan terms for vehicle financing. Whether you're buying a new or used car, this calculator provides accurate payment estimates and helps you compare different loan scenarios to find the best financing option.",
+    "Understanding your auto loan payments is crucial for budgeting and making informed purchasing decisions. This calculator takes into account the vehicle price, down payment, trade-in value, loan term, and interest rate to provide detailed payment breakdowns and total cost analysis.",
+    "Use this tool to explore different financing scenarios, compare loan offers from multiple lenders, and determine how factors like down payment size and loan term affect your monthly payments and total interest costs."
+  ],
+  "howToUse": [
+    "Enter the vehicle purchase price or MSRP",
+    "Input your down payment amount",
+    "Add trade-in value if applicable",
+    "Set the loan term (typically 36-72 months)",
+    "Enter the annual interest rate (APR)",
+    "Review monthly payment and total loan cost calculations"
+  ],
+  "features": [
+    "Monthly payment calculation with taxes and fees",
+    "Total interest cost and loan summary analysis",
+    "Amortization schedule showing payment breakdown",
+    "Trade-in value integration for accurate calculations",
+    "Multiple loan term comparison (24-84 months)",
+    "Down payment impact analysis on monthly payments",
+    "Sales tax and additional fees calculation",
+    "Loan affordability assessment and recommendations"
+  ],
+  "faqs": [
+    {
+      "question": "What's a good interest rate for an auto loan?",
+      "answer": "Auto loan rates vary based on credit score, loan term, and vehicle age. Excellent credit (750+) may qualify for rates as low as 3-5%, while fair credit (600-699) might see rates of 8-12%. New cars typically have lower rates than used cars."
+    },
+    {
+      "question": "How much should I put down on a car loan?",
+      "answer": "A down payment of 10-20% is recommended for new cars and 10% for used cars. Larger down payments reduce monthly payments, total interest costs, and help avoid being underwater on the loan."
+    },
+    {
+      "question": "What loan term should I choose?",
+      "answer": "Shorter terms (36-48 months) have higher monthly payments but lower total interest costs. Longer terms (60-72 months) have lower monthly payments but higher total costs. Choose based on your budget and total cost preference."
+    },
+    {
+      "question": "Should I include taxes and fees in my loan?",
+      "answer": "You can finance taxes, title, and dealer fees, but it increases your loan amount and total interest paid. If possible, pay these costs upfront to reduce your loan balance and monthly payments."
+    }
+  ]
+}

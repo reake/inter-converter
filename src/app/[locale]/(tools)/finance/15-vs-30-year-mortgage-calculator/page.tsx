@@ -1,77 +1,121 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import MortgageCalculator from '@/components/converters/finance/MortgageCalculator';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/15-vs-30-year-mortgage-calculator-en.json';
+import zhTool from '@/data/tools/finance/15-vs-30-year-mortgage-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('15-vs-30-year-mortgage-calculator', 'finance', '15 vs 30 Year Mortgage Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: '15 vs 30 Year Mortgage Calculator - Compare Mortgage Terms | InterConverter',
-  description: 'Compare 15-year vs 30-year mortgage payments, interest costs, and total savings. Make informed mortgage term decisions with detailed analysis.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: '15 vs 30 Year Mortgage Calculator - Compare Mortgage Terms',
-    description: 'Professional mortgage comparison calculator. Compare 15-year vs 30-year mortgage terms, payments, and total interest costs.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-15-vs-30-year-mortgage-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: '15 vs 30 Year Mortgage Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === '15-vs-30-year-mortgage-calculator') || catalogs.en.find((it) => it.id === '15-vs-30-year-mortgage-calculator');
+
+  const toolName: string = entry?.name ?? 'MortgageCalculator';
+  const description: string = entry?.description ?? 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('15-vs-30-year-mortgage-calculator', 'finance', 'MortgageCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/finance/15-vs-30-year-mortgage-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-15-vs-30-year-mortgage-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/15-vs-30-year-mortgage-calculator',
+        zh: '/zh/finance/15-vs-30-year-mortgage-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/finance/15-vs-30-year-mortgage-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function FifteenVsThirtyYearMortgageCalculatorPage() {
-  const faqs = getFAQsByToolId('15-vs-30-year-mortgage-calculator', 'finance');
+export default async function MortgageCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === '15-vs-30-year-mortgage-calculator') || catalogs.en.find((it) => it.id === '15-vs-30-year-mortgage-calculator');
+
+  const toolName: string = entry?.name || 'MortgageCalculator';
+  const descriptionText: string = entry?.description || 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('15-vs-30-year-mortgage-calculator', 'finance', 'MortgageCalculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="15 vs 30 Year Mortgage Calculator"
-      description="Compare 15-year vs 30-year mortgage terms to make the best financial decision for your home loan with instant calculations."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="15-vs-30-year-mortgage-calculator"
       category="finance"
-      emoji="⚖️"
-      customHowToUse={[
-        "Enter the loan amount for comparison",
-        "Set interest rates for both 15 and 30-year terms",
-        "Compare monthly payments side by side",
-        "Analyze total interest costs over loan life",
-        "Review equity building speed differences",
-        "Make informed mortgage term decision"
-      ]}
-      customFeatures={[
-        "Side-by-side mortgage comparison",
-        "Total interest savings calculation",
-        "Monthly payment difference analysis",
-        "Equity building timeline comparison",
-        "Break-even analysis tools",
-        "Financial impact assessment"
-      ]}
+      locale={l}
+      emoji="💰"
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
       faqs={faqs}
     >
       <MortgageCalculator />

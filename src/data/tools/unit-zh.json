@@ -1,0 +1,268 @@
+[
+  {
+    "id": "temperature-converter",
+    "name": "温度转换器",
+    "description": "在摄氏度、华氏度和开尔文温度标度之间进行精确计算转换。",
+    "category": "unit",
+    "keywords": [
+      "温度转换器",
+      "摄氏度转华氏度",
+      "华氏度转摄氏度",
+      "开尔文转换",
+      "温度计算器"
+    ],
+    "titleSuffix": "温度刻度转换器"
+  },
+  {
+    "id": "length-converter",
+    "name": "长度转换器",
+    "description": "在米、英尺、英寸、厘米等长度单位之间进行转换。支持公制和英制系统。",
+    "category": "unit",
+    "keywords": [
+      "长度转换器",
+      "米转英尺",
+      "英尺转米",
+      "英寸转厘米",
+      "距离转换"
+    ],
+    "titleSuffix": "距离和长度计算器"
+  },
+  {
+    "id": "weight-converter",
+    "name": "重量转换器",
+    "description": "在千克、磅、盎司、克等重量单位之间进行转换。适用于烹饪和商业用途。",
+    "category": "unit",
+    "keywords": [
+      "重量转换器",
+      "千克转磅",
+      "磅转千克",
+      "盎司转克",
+      "质量转换"
+    ],
+    "titleSuffix": "质量和重量计算器"
+  },
+  {
+    "id": "volume-converter",
+    "name": "体积转换器",
+    "description": "在升、加仑、毫升、液体盎司等体积单位之间进行转换。适用于烹饪和化学。",
+    "category": "unit",
+    "keywords": [
+      "体积转换器",
+      "升转加仑",
+      "毫升转液体盎司",
+      "容量转换",
+      "液体转换"
+    ],
+    "titleSuffix": "液体体积计算器"
+  },
+  {
+    "id": "area-converter",
+    "name": "面积转换器",
+    "description": "在平方米、英亩、平方英尺、公顷等面积单位之间进行转换。适用于房地产和农业。",
+    "category": "unit",
+    "keywords": [
+      "面积转换器",
+      "平方米转英亩",
+      "公顷转换",
+      "土地面积",
+      "房产测量"
+    ],
+    "titleSuffix": "表面面积计算器"
+  },
+  {
+    "id": "speed-converter",
+    "name": "速度转换器",
+    "description": "在千米/小时、英里/小时、米/秒、节等速度单位之间进行转换。",
+    "category": "unit",
+    "keywords": [
+      "速度转换器",
+      "千米小时转英里小时",
+      "米秒转换",
+      "节转换",
+      "速率计算"
+    ],
+    "titleSuffix": "速度和速率计算器"
+  },
+  {
+    "id": "pressure-converter",
+    "name": "压力转换器",
+    "description": "在帕斯卡、巴、大气压、磅每平方英寸等压力单位之间进行转换。",
+    "category": "unit",
+    "keywords": [
+      "压力转换器",
+      "帕斯卡转换",
+      "大气压转换",
+      "压强计算",
+      "气压单位"
+    ],
+    "titleSuffix": "压力单位计算器"
+  },
+  {
+    "id": "energy-converter",
+    "name": "能量转换器",
+    "description": "在焦耳、卡路里、千瓦时、英热单位等能量单位之间进行转换。",
+    "category": "unit",
+    "keywords": [
+      "能量转换器",
+      "焦耳转换",
+      "卡路里转换",
+      "千瓦时转换",
+      "能源计算"
+    ],
+    "titleSuffix": "能量和功率计算器"
+  },
+  {
+    "id": "power-converter",
+    "name": "功率转换器",
+    "description": "在瓦特、马力、英热单位每小时等功率单位之间进行转换。",
+    "category": "unit",
+    "keywords": [
+      "功率转换器",
+      "瓦特转马力",
+      "马力转换",
+      "电力单位",
+      "功率计算"
+    ],
+    "titleSuffix": "电力功率计算器"
+  },
+  {
+    "id": "data-converter",
+    "name": "数据转换器",
+    "description": "在字节、千字节、兆字节、吉字节等数据存储单位之间进行转换。",
+    "category": "unit",
+    "keywords": [
+      "数据转换器",
+      "字节转换",
+      "存储单位",
+      "文件大小",
+      "数据容量"
+    ],
+    "titleSuffix": "数字存储计算器"
+  },
+  {
+    "id": "unit-converter",
+    "name": "通用单位转换器",
+    "description": "全面的单位转换工具，支持长度、重量、温度、体积等多种单位转换。",
+    "category": "unit",
+    "keywords": [
+      "单位转换器",
+      "通用转换",
+      "度量衡转换",
+      "单位计算器",
+      "测量转换"
+    ],
+    "titleSuffix": "全能单位转换器"
+  },
+  {
+    "id": "celsius-to-fahrenheit-converter",
+    "name": "摄氏度转华氏度转换器",
+    "description": "专门的摄氏度到华氏度温度转换工具，提供精确的转换结果。",
+    "category": "unit",
+    "keywords": [
+      "摄氏度转华氏度",
+      "温度转换",
+      "°C转°F",
+      "华氏温度",
+      "摄氏温度"
+    ],
+    "titleSuffix": "C到F温度转换器"
+  },
+  {
+    "id": "fahrenheit-to-celsius-converter",
+    "name": "华氏度转摄氏度转换器",
+    "description": "专门的华氏度到摄氏度温度转换工具，提供精确的转换结果。",
+    "category": "unit",
+    "keywords": [
+      "华氏度转摄氏度",
+      "温度转换",
+      "°F转°C",
+      "摄氏温度",
+      "华氏温度"
+    ],
+    "titleSuffix": "F到C温度转换器"
+  },
+  {
+    "id": "pounds-to-kg-converter",
+    "name": "磅转千克转换器",
+    "description": "专门的磅到千克重量转换工具，适用于健身、运输和国际贸易。",
+    "category": "unit",
+    "keywords": [
+      "磅转千克",
+      "重量转换",
+      "lbs转kg",
+      "体重转换",
+      "质量单位"
+    ],
+    "titleSuffix": "Lbs到Kg重量转换器"
+  },
+  {
+    "id": "kg-to-pounds-converter",
+    "name": "千克转磅转换器",
+    "description": "专门的千克到磅重量转换工具，适用于健身、运输和国际贸易。",
+    "category": "unit",
+    "keywords": [
+      "千克转磅",
+      "重量转换",
+      "kg转lbs",
+      "体重转换",
+      "质量单位"
+    ],
+    "titleSuffix": "Kg到Lbs重量转换器"
+  },
+  {
+    "id": "feet-to-meters-converter",
+    "name": "英尺转米转换器",
+    "description": "专门的英尺到米长度转换工具，适用于建筑、房地产和国际项目。",
+    "category": "unit",
+    "keywords": [
+      "英尺转米",
+      "长度转换",
+      "ft转m",
+      "距离转换",
+      "建筑测量"
+    ],
+    "titleSuffix": "英尺到米长度转换器"
+  },
+  {
+    "id": "meters-to-feet-converter",
+    "name": "米转英尺转换器",
+    "description": "专门的米到英尺长度转换工具，适用于建筑、房地产和国际项目。",
+    "category": "unit",
+    "keywords": [
+      "米转英尺",
+      "长度转换",
+      "m转ft",
+      "距离转换",
+      "建筑测量"
+    ],
+    "titleSuffix": "米到英尺长度转换器"
+  },
+  {
+    "id": "inches-to-cm-converter",
+    "name": "英寸转厘米转换器",
+    "description": "专门的英寸到厘米长度转换工具，适用于服装、制造和精密测量。",
+    "category": "unit",
+    "keywords": [
+      "英寸转厘米",
+      "长度转换",
+      "in转cm",
+      "尺寸转换",
+      "精密测量"
+    ],
+    "titleSuffix": "英寸到CM长度转换器"
+  },
+  {
+    "id": "cm-to-inches-converter",
+    "name": "厘米转英寸转换器",
+    "description": "专门的厘米到英寸长度转换工具，适用于服装、制造和精密测量。",
+    "category": "unit",
+    "keywords": [
+      "厘米转英寸",
+      "长度转换",
+      "cm转in",
+      "尺寸转换",
+      "精密测量"
+    ],
+    "titleSuffix": "CM到英寸长度转换器"
+  }
+]

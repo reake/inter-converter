@@ -1,0 +1,38 @@
+{
+  "about": [
+    "The Universal Unit Converter provides comprehensive conversion between multiple unit categories including length, weight, temperature, area, volume, and more. This all-in-one tool is perfect for students, professionals, and anyone needing quick unit conversions.",
+    "Supporting dozens of unit types across different measurement systems, this converter eliminates the need for multiple specialized tools by providing accurate conversions in one convenient interface."
+  ],
+  "howToUse": [
+    "Select the unit category (length, weight, etc.)",
+    "Choose the source unit from the dropdown",
+    "Enter the value you want to convert",
+    "Select the target unit for conversion",
+    "View the instant conversion result"
+  ],
+  "features": [
+    "Multiple unit categories in one tool",
+    "Comprehensive unit support",
+    "Instant conversion results",
+    "Metric and imperial systems",
+    "Professional accuracy across all units"
+  ],
+  "faqs": [
+    {
+      "question": "What unit categories are supported?",
+      "answer": "The converter supports length, weight, temperature, area, volume, speed, pressure, energy, power, and many other unit categories."
+    },
+    {
+      "question": "Can I convert between different measurement systems?",
+      "answer": "Yes, the converter seamlessly handles conversions between metric, imperial, and other measurement systems."
+    },
+    {
+      "question": "How accurate are the conversions?",
+      "answer": "All conversions use internationally accepted conversion factors and provide professional-grade accuracy for technical applications."
+    },
+    {
+      "question": "Is this better than using separate converters?",
+      "answer": "The universal converter is convenient for quick conversions across different categories, while specialized converters may offer more detailed features for specific units."
+    }
+  ]
+}

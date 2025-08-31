@@ -1,77 +1,117 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import PoundsToKgConverter from '@/components/converters/unit/PoundsToKgConverter';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/unit/pounds-to-kg-converter-en.json';
+import zhTool from '@/data/tools/unit/pounds-to-kg-converter-zh.json';
+import unitEn from '@/data/tools/unit.json';
+import unitZh from '@/data/tools/unit-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('pounds-to-kg-converter', 'unit', 'Pounds to Kilograms Converter');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Pounds to Kilograms Converter - lbs to kg Calculator | InterConverter',
-  description: 'Convert pounds to kilograms (lbs to kg) instantly. Free weight converter with common values, conversion formula, and usage guide for fitness, shipping, and cooking.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Pounds to Kilograms Converter - lbs to kg Calculator',
-    description: 'Professional weight converter for pounds to kilograms conversion. Instant calculations with formulas and reference tables for fitness and shipping.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-pounds-to-kg-converter.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Pounds to Kilograms Converter Tool'
+  const catalogs: Record<string, any[]> = {
+    en: unitEn as any[],
+    zh: (unitZh as any[]) || (unitEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'pounds-to-kg-converter') || catalogs.en.find((it) => it.id === 'pounds-to-kg-converter');
+
+  const toolName: string = entry?.name ?? 'PoundsToKgConverter';
+  const description: string = entry?.description ?? '';
+  const baseKeywords = generateOptimizedKeywords('pounds-to-kg-converter', 'unit', 'PoundsToKgConverter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/unit/pounds-to-kg-converter`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-pounds-to-kg-converter.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/unit/pounds-to-kg-converter',
+        zh: '/zh/unit/pounds-to-kg-converter'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/unit/pounds-to-kg-converter'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function PoundsToKgConverterPage() {
-  const faqs = getFAQsByToolId('pounds-to-kg-converter', 'unit');
+export default async function PoundsToKgConverterPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  // Load JSON content based on locale
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const catalogs: Record<string, any[]> = {
+    en: unitEn as any[],
+    zh: (unitZh as any[]) || (unitEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'pounds-to-kg-converter') || catalogs.en.find((it) => it.id === 'pounds-to-kg-converter');
+
+  const toolName: string = entry?.name ?? 'PoundsToKgConverter';
+  const description: string = entry?.description ?? '';
+  const baseKeywords = generateOptimizedKeywords('pounds-to-kg-converter', 'unit', 'PoundsToKgConverter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Pounds to Kilograms Converter"
-      description="Convert weight from pounds to kilograms with precision and instant calculations."
+      title={toolName}
+      description={description}
       keywords={keywords}
       toolId="pounds-to-kg-converter"
       category="unit"
-      emoji="⚖️"
-      customHowToUse={[
-        "Enter weight in pounds in the input field",
-        "View the instant kilograms conversion result",
-        "Use the common weights tab for quick reference",
-        "Copy results or use the conversion formula",
-        "Switch to reverse conversion if needed"
-      ]}
-      customFeatures={[
-        "Bidirectional weight conversion",
-        "Common weight reference table",
-        "Precise conversion formulas (kg = lbs ÷ 2.205)",
-        "Fitness and health applications",
-        "Shipping and logistics support",
-        "Instant calculation as you type"
-      ]}
-      faqs={faqs}
+      aboutContent={toolContent.about}
+      customHowToUse={toolContent.howToUse}
+      customFeatures={toolContent.features}
+      faqs={toolContent.faqs}
     >
       <PoundsToKgConverter />
     </EnhancedToolLayout>

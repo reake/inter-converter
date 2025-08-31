@@ -1,77 +1,121 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import CreditCardPayoffCalculator from '@/components/converters/finance/CreditCardPayoffCalculator';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/credit-utilization-calculator-en.json';
+import zhTool from '@/data/tools/finance/credit-utilization-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('credit-utilization-calculator', 'finance', 'Credit Utilization Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Credit Utilization Calculator - Credit Score Impact Analysis | InterConverter',
-  description: 'Calculate credit utilization ratio and its impact on credit score. Optimize credit card balances for better credit health with professional analysis.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Credit Utilization Calculator - Credit Score Impact Analysis',
-    description: 'Professional credit utilization calculator. Calculate your credit utilization ratio and understand its impact on your credit score and financial health.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-credit-utilization-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Credit Utilization Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'credit-utilization-calculator') || catalogs.en.find((it) => it.id === 'credit-utilization-calculator');
+
+  const toolName: string = entry?.name ?? 'CreditCardPayoffCalculator';
+  const description: string = entry?.description ?? 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('credit-utilization-calculator', 'finance', 'CreditCardPayoffCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/finance/credit-utilization-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-credit-utilization-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/credit-utilization-calculator',
+        zh: '/zh/finance/credit-utilization-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/finance/credit-utilization-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function CreditUtilizationCalculatorPage() {
-  const faqs = getFAQsByToolId('credit-utilization-calculator', 'finance');
+export default async function CreditCardPayoffCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === 'credit-utilization-calculator') || catalogs.en.find((it) => it.id === 'credit-utilization-calculator');
+
+  const toolName: string = entry?.name || 'CreditCardPayoffCalculator';
+  const descriptionText: string = entry?.description || 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('credit-utilization-calculator', 'finance', 'CreditCardPayoffCalculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Credit Utilization Calculator"
-      description="Calculate your credit utilization ratio and understand how it affects your credit score and financial health."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="credit-utilization-calculator"
       category="finance"
-      emoji="📈"
-      customHowToUse={[
-        "Enter total credit card balances",
-        "Input total available credit limits",
-        "Calculate overall utilization ratio",
-        "Analyze per-card utilization rates",
-        "Review credit score impact",
-        "Get recommendations for optimization"
-      ]}
-      customFeatures={[
-        "Overall utilization ratio calculation",
-        "Per-card utilization analysis",
-        "Credit score impact assessment",
-        "Optimization recommendations",
-        "Target utilization guidance",
-        "Credit health monitoring tools"
-      ]}
+      locale={l}
+      emoji="💰"
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
       faqs={faqs}
     >
       <CreditCardPayoffCalculator />

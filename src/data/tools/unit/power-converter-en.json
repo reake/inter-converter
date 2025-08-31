@@ -1,0 +1,37 @@
+{
+  "about": [
+    "The Power Converter provides comprehensive conversion between different power units including watts, kilowatts, horsepower, BTU/hour, and more. This tool is essential for engineers, electricians, and professionals working with power calculations.",
+    "Understanding power unit conversions helps in electrical system design, motor specifications, and energy efficiency analysis across various applications."
+  ],
+  "howToUse": [
+    "Select the source power unit from the dropdown",
+    "Enter the power value you want to convert",
+    "Choose the target unit for conversion",
+    "View the instant conversion result"
+  ],
+  "features": [
+    "Multiple power unit conversions",
+    "Electrical and mechanical power units",
+    "High precision calculations",
+    "Support for metric and imperial units",
+    "Professional accuracy for technical use"
+  ],
+  "faqs": [
+    {
+      "question": "What's the difference between watts and horsepower?",
+      "answer": "Watts are the SI unit for power, while horsepower is a traditional unit. 1 horsepower equals approximately 745.7 watts."
+    },
+    {
+      "question": "How do I convert kilowatts to horsepower?",
+      "answer": "1 kilowatt equals approximately 1.341 horsepower. Multiply kW by 1.341 to get horsepower."
+    },
+    {
+      "question": "What are BTU/hour used for?",
+      "answer": "BTU/hour measures thermal power, commonly used in heating and cooling system specifications."
+    },
+    {
+      "question": "Which power unit should I use?",
+      "answer": "Use watts for electrical power, horsepower for mechanical power, and BTU/hour for thermal power applications."
+    }
+  ]
+}

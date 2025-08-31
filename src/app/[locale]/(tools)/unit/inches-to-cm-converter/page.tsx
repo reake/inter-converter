@@ -1,77 +1,117 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import InchesToCmConverter from '@/components/converters/unit/InchesToCmConverter';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/unit/inches-to-cm-converter-en.json';
+import zhTool from '@/data/tools/unit/inches-to-cm-converter-zh.json';
+import unitEn from '@/data/tools/unit.json';
+import unitZh from '@/data/tools/unit-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('inches-to-cm-converter', 'unit', 'Inches to Centimeters Converter');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Inches to Centimeters Converter - in to cm Calculator | InterConverter',
-  description: 'Convert inches to centimeters (in to cm) instantly. Free length converter with common sizes, conversion formula, and usage guide for design, manufacturing, and measurements.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Inches to Centimeters Converter - in to cm Calculator',
-    description: 'Professional length converter for inches to centimeters conversion. Instant calculations with formulas and reference tables for design and manufacturing.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-inches-to-cm-converter.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Inches to Centimeters Converter Tool'
+  const catalogs: Record<string, any[]> = {
+    en: unitEn as any[],
+    zh: (unitZh as any[]) || (unitEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'inches-to-cm-converter') || catalogs.en.find((it) => it.id === 'inches-to-cm-converter');
+
+  const toolName: string = entry?.name ?? 'InchesToCmConverter';
+  const description: string = entry?.description ?? '';
+  const baseKeywords = generateOptimizedKeywords('inches-to-cm-converter', 'unit', 'InchesToCmConverter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/unit/inches-to-cm-converter`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-inches-to-cm-converter.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/unit/inches-to-cm-converter',
+        zh: '/zh/unit/inches-to-cm-converter'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/unit/inches-to-cm-converter'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function InchesToCmConverterPage() {
-  const faqs = getFAQsByToolId('inches-to-cm-converter', 'unit');
+export default async function InchesToCmConverterPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  // Load JSON content based on locale
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const catalogs: Record<string, any[]> = {
+    en: unitEn as any[],
+    zh: (unitZh as any[]) || (unitEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'inches-to-cm-converter') || catalogs.en.find((it) => it.id === 'inches-to-cm-converter');
+
+  const toolName: string = entry?.name ?? 'InchesToCmConverter';
+  const description: string = entry?.description ?? '';
+  const baseKeywords = generateOptimizedKeywords('inches-to-cm-converter', 'unit', 'InchesToCmConverter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Inches to Centimeters Converter"
-      description="Convert length from inches to centimeters with precision and instant calculations."
+      title={toolName}
+      description={description}
       keywords={keywords}
       toolId="inches-to-cm-converter"
       category="unit"
-      emoji="📐"
-      customHowToUse={[
-        "Enter length in inches in the input field",
-        "View the instant centimeters conversion result",
-        "Use the common sizes tab for quick reference",
-        "Copy results or use the conversion formula",
-        "Switch to reverse conversion if needed"
-      ]}
-      customFeatures={[
-        "Bidirectional length conversion",
-        "Common size reference table",
-        "Precise conversion formulas (cm = in × 2.54)",
-        "Design and manufacturing applications",
-        "Screen and display measurements",
-        "Instant calculation as you type"
-      ]}
-      faqs={faqs}
+      aboutContent={toolContent.about}
+      customHowToUse={toolContent.howToUse}
+      customFeatures={toolContent.features}
+      faqs={toolContent.faqs}
     >
       <InchesToCmConverter />
     </EnhancedToolLayout>

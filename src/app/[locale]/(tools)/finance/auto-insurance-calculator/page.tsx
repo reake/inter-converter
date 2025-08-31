@@ -1,77 +1,121 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import InsuranceCalculator from '@/components/converters/finance/InsuranceCalculator';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/auto-insurance-calculator-en.json';
+import zhTool from '@/data/tools/finance/auto-insurance-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('auto-insurance-calculator', 'finance', 'Auto Insurance Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Auto Insurance Calculator - Car Insurance Premium Calculator | InterConverter',
-  description: 'Calculate auto insurance premiums and coverage costs. Compare liability, collision, and comprehensive coverage options with instant calculations.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Auto Insurance Calculator - Car Insurance Premium Calculator',
-    description: 'Professional auto insurance calculator for premium estimation. Compare coverage options and calculate insurance costs.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-auto-insurance-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Auto Insurance Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'auto-insurance-calculator') || catalogs.en.find((it) => it.id === 'auto-insurance-calculator');
+
+  const toolName: string = entry?.name ?? 'InsuranceCalculator';
+  const description: string = entry?.description ?? 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('auto-insurance-calculator', 'finance', 'InsuranceCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/finance/auto-insurance-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-auto-insurance-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/auto-insurance-calculator',
+        zh: '/zh/finance/auto-insurance-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/finance/auto-insurance-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function AutoInsuranceCalculatorPage() {
-  const faqs = getFAQsByToolId('auto-insurance-calculator', 'finance');
+export default async function InsuranceCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === 'auto-insurance-calculator') || catalogs.en.find((it) => it.id === 'auto-insurance-calculator');
+
+  const toolName: string = entry?.name || 'InsuranceCalculator';
+  const descriptionText: string = entry?.description || 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('auto-insurance-calculator', 'finance', 'InsuranceCalculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Auto Insurance Calculator"
-      description="Calculate auto insurance premiums and coverage costs with instant calculations."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="auto-insurance-calculator"
       category="finance"
-      emoji="🚗"
-      customHowToUse={[
-        "Enter vehicle make, model, and year",
-        "Select desired coverage types and limits",
-        "Set deductible amounts for each coverage",
-        "Input driver details and history",
-        "Calculate estimated premium costs",
-        "Compare different coverage options"
-      ]}
-      customFeatures={[
-        "Auto insurance premium calculation",
-        "Coverage comparison and analysis tools",
-        "Deductible impact on premium costs",
-        "Multi-vehicle and multi-driver discounts",
-        "Driver profile risk assessment",
-        "State-specific insurance requirements"
-      ]}
+      locale={l}
+      emoji="💰"
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
       faqs={faqs}
     >
       <InsuranceCalculator />

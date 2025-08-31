@@ -1,77 +1,121 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import LoanCalculator from '@/components/converters/finance/LoanCalculator';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/boat-loan-calculator-en.json';
+import zhTool from '@/data/tools/finance/boat-loan-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('boat-loan-calculator', 'finance', 'Boat Loan Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Boat Loan Calculator - Marine Financing Calculator | InterConverter',
-  description: 'Calculate boat loan payments, interest costs, and financing options for marine vessel purchases with instant calculations.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Boat Loan Calculator - Marine Financing Calculator',
-    description: 'Professional boat loan calculator for marine financing. Calculate payments and interest costs for watercraft purchases.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-boat-loan-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Boat Loan Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'boat-loan-calculator') || catalogs.en.find((it) => it.id === 'boat-loan-calculator');
+
+  const toolName: string = entry?.name ?? 'LoanCalculator';
+  const description: string = entry?.description ?? 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('boat-loan-calculator', 'finance', 'LoanCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/finance/boat-loan-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-boat-loan-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/boat-loan-calculator',
+        zh: '/zh/finance/boat-loan-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/finance/boat-loan-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function BoatLoanCalculatorPage() {
-  const faqs = getFAQsByToolId('boat-loan-calculator', 'finance');
+export default async function LoanCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === 'boat-loan-calculator') || catalogs.en.find((it) => it.id === 'boat-loan-calculator');
+
+  const toolName: string = entry?.name || 'LoanCalculator';
+  const descriptionText: string = entry?.description || 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('boat-loan-calculator', 'finance', 'LoanCalculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Boat Loan Calculator"
-      description="Calculate boat loan payments and marine financing options with instant calculations."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="boat-loan-calculator"
       category="finance"
-      emoji="⛵"
-      customHowToUse={[
-        "Enter boat purchase price or loan amount",
-        "Set down payment amount and percentage",
-        "Input interest rate from marine lender",
-        "Choose loan term in years",
-        "Calculate monthly payment instantly",
-        "Review total financing costs and options"
-      ]}
-      customFeatures={[
-        "Boat loan payment calculation with taxes",
-        "Marine financing options and rates",
-        "Down payment impact analysis",
-        "Interest rate comparison tools",
-        "Loan term optimization strategies",
-        "Total cost analysis including insurance"
-      ]}
+      locale={l}
+      emoji="💰"
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
       faqs={faqs}
     >
       <LoanCalculator />

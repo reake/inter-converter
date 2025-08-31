@@ -1,0 +1,46 @@
+{
+  "about": [
+    "The Speed Converter is a versatile tool for converting between different units of speed and velocity. From kilometers per hour to miles per hour, meters per second to knots, this converter handles all common speed measurements used in transportation, sports, science, and engineering.",
+    "Speed conversion is essential in automotive engineering, aviation, maritime navigation, and scientific research. Our converter provides accurate conversions between metric and imperial speed systems.",
+    "Whether you're comparing vehicle speeds, calculating travel times, or working with scientific data, this tool ensures precise speed conversions with support for both everyday and specialized units."
+  ],
+  "howToUse": [
+    "Enter the speed value you want to convert",
+    "Select the source unit (km/h, mph, m/s, etc.)",
+    "Choose the target unit for conversion",
+    "View the converted speed instantly",
+    "Use the result for your calculations or comparisons"
+  ],
+  "features": [
+    "Convert between metric and imperial speed units",
+    "Support for km/h, m/s, meters per minute",
+    "Imperial units: mph, feet per second, feet per minute",
+    "Maritime and aviation: knots, Mach numbers",
+    "Real-time conversion as you type",
+    "High precision calculations",
+    "Scientific notation for extreme speeds",
+    "Mobile-friendly responsive design"
+  ],
+  "faqs": [
+    {
+      "question": "What speed units are supported?",
+      "answer": "We support metric units (km/h, m/s), imperial units (mph, ft/s), and specialized units like knots and Mach numbers."
+    },
+    {
+      "question": "What is a knot?",
+      "answer": "A knot is one nautical mile per hour (1.852 km/h or 1.151 mph), commonly used in maritime and aviation navigation."
+    },
+    {
+      "question": "How do I convert between km/h and mph quickly?",
+      "answer": "Multiply km/h by 0.621 to get mph, or multiply mph by 1.609 to get km/h. Use our converter for exact results."
+    },
+    {
+      "question": "What is Mach speed?",
+      "answer": "Mach speed is the ratio of an object's speed to the speed of sound. Mach 1 is approximately 343 m/s or 1,235 km/h at sea level."
+    },
+    {
+      "question": "How accurate are the speed conversions?",
+      "answer": "All conversions use precise mathematical formulas with high decimal accuracy suitable for engineering and scientific applications."
+    }
+  ]
+}

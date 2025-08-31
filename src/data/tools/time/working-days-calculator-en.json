@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Working Days Calculator computes the number of business days between two dates, excluding weekends and optionally holidays. Essential for project planning, payroll calculations, and business scheduling.",
+    "Supports custom holiday calendars and different working week configurations, making it adaptable to various business environments and international working patterns."
+  ],
+  "howToUse": [
+    "Enter the start date",
+    "Enter the end date",
+    "Select your country for holiday calendar",
+    "Choose working days configuration",
+    "View total working days and breakdown"
+  ],
+  "features": [
+    "Business days calculation",
+    "Holiday calendar integration",
+    "Custom working week setup",
+    "Multiple country support",
+    "Weekend exclusion options",
+    "Detailed day breakdown"
+  ],
+  "faqs": [
+    {
+      "question": "Which holidays are included?",
+      "answer": "The calculator includes major national holidays for supported countries. You can also customize the holiday list for your specific needs."
+    },
+    {
+      "question": "Can I change the working week?",
+      "answer": "Yes, you can configure which days are considered working days, accommodating different business schedules and cultural practices."
+    },
+    {
+      "question": "How are partial days handled?",
+      "answer": "The calculator counts complete working days only. If you need partial day calculations, use the date difference calculator instead."
+    },
+    {
+      "question": "Does it support different countries?",
+      "answer": "Yes, the calculator includes holiday calendars for major countries and regions, with options to add custom holidays."
+    }
+  ]
+}

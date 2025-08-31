@@ -1,77 +1,121 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import MortgageCalculator from '@/components/converters/finance/MortgageCalculator';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/15-year-fixed-mortgage-calculator-en.json';
+import zhTool from '@/data/tools/finance/15-year-fixed-mortgage-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('15-year-fixed-mortgage-calculator', 'finance', '15-Year Fixed Mortgage Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: '15-Year Fixed Mortgage Calculator - Accelerated Payoff Calculator | InterConverter',
-  description: 'Calculate 15-year fixed mortgage payments with significant interest savings. Accelerated mortgage payoff calculator with faster equity building.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: '15-Year Fixed Mortgage Calculator - Accelerated Payoff Calculator',
-    description: 'Professional 15-year mortgage calculator for accelerated payoff and substantial interest savings. Calculate faster equity building.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-15-year-fixed-mortgage-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: '15-Year Fixed Mortgage Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === '15-year-fixed-mortgage-calculator') || catalogs.en.find((it) => it.id === '15-year-fixed-mortgage-calculator');
+
+  const toolName: string = entry?.name ?? 'MortgageCalculator';
+  const description: string = entry?.description ?? 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('15-year-fixed-mortgage-calculator', 'finance', 'MortgageCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/finance/15-year-fixed-mortgage-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-15-year-fixed-mortgage-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/15-year-fixed-mortgage-calculator',
+        zh: '/zh/finance/15-year-fixed-mortgage-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/finance/15-year-fixed-mortgage-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function FifteenYearFixedMortgageCalculatorPage() {
-  const faqs = getFAQsByToolId('15-year-fixed-mortgage-calculator', 'finance');
+export default async function MortgageCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === '15-year-fixed-mortgage-calculator') || catalogs.en.find((it) => it.id === '15-year-fixed-mortgage-calculator');
+
+  const toolName: string = entry?.name || 'MortgageCalculator';
+  const descriptionText: string = entry?.description || 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('15-year-fixed-mortgage-calculator', 'finance', 'MortgageCalculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="15-Year Fixed Mortgage Calculator"
-      description="Calculate 15-year fixed mortgage payments for accelerated payoff and substantial interest savings with instant calculations."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="15-year-fixed-mortgage-calculator"
       category="finance"
-      emoji="🚀"
-      customHowToUse={[
-        "Enter the loan amount for your mortgage",
-        "Set the 15-year fixed interest rate",
-        "Calculate monthly payments instantly",
-        "Compare interest savings vs 30-year mortgage",
-        "Analyze accelerated equity building speed",
-        "Review total cost benefits and savings"
-      ]}
-      customFeatures={[
-        "15-year accelerated payment calculation",
-        "Substantial interest savings analysis",
-        "Faster equity building projection",
-        "Payment affordability assessment",
-        "Comparison with standard mortgage terms",
-        "Total cost optimization strategies"
-      ]}
+      locale={l}
+      emoji="💰"
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
       faqs={faqs}
     >
       <MortgageCalculator />

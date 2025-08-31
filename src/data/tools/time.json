@@ -20,7 +20,8 @@
     "isActive": true,
     "searchVolume": 185000,
     "difficulty": 1,
-    "icon": "🕐"
+    "icon": "🕐",
+    "titleSuffix": "Unix Time Converter"
   },
   {
     "id": "timezone-converter",
@@ -43,7 +44,8 @@
     "isActive": true,
     "searchVolume": 225000,
     "difficulty": 2,
-    "icon": "🌍"
+    "icon": "🌍",
+    "titleSuffix": "World Time Converter"
   },
   {
     "id": "date-difference-calculator",
@@ -66,7 +68,8 @@
     "isActive": true,
     "searchVolume": 165000,
     "difficulty": 1,
-    "icon": "📅"
+    "icon": "📅",
+    "titleSuffix": "Date Calculator Tool"
   },
   {
     "id": "countdown-timer",
@@ -89,7 +92,8 @@
     "isActive": true,
     "searchVolume": 145000,
     "difficulty": 1,
-    "icon": "⏰"
+    "icon": "⏰",
+    "titleSuffix": "Event Timer Tool"
   },
   {
     "id": "age-calculator",
@@ -108,7 +112,8 @@
     "isActive": false,
     "searchVolume": 125000,
     "difficulty": 1,
-    "icon": "🎂"
+    "icon": "🎂",
+    "titleSuffix": "Birth Date Calculator"
   },
   {
     "id": "date-calculator",
@@ -126,7 +131,8 @@
     "isActive": false,
     "searchVolume": 95000,
     "difficulty": 1,
-    "icon": "📅"
+    "icon": "📅",
+    "titleSuffix": "Date Math Calculator"
   },
   {
     "id": "stopwatch",
@@ -145,7 +151,8 @@
     "isActive": false,
     "searchVolume": 85000,
     "difficulty": 1,
-    "icon": "⏱️"
+    "icon": "⏱️",
+    "titleSuffix": "Precision Timer Tool"
   },
   {
     "id": "unix-timestamp-converter",
@@ -163,7 +170,8 @@
     "isActive": false,
     "searchVolume": 155000,
     "difficulty": 1,
-    "icon": "🕐"
+    "icon": "🕐",
+    "titleSuffix": "Epoch Time Converter"
   },
   {
     "id": "working-days-calculator",
@@ -181,7 +189,8 @@
     "isActive": false,
     "searchVolume": 45000,
     "difficulty": 2,
-    "icon": "💼"
+    "icon": "💼",
+    "titleSuffix": "Business Days Calculator"
   },
   {
     "id": "world-clock",
@@ -200,6 +209,7 @@
     "isActive": false,
     "searchVolume": 75000,
     "difficulty": 2,
-    "icon": "🌍"
+    "icon": "🌍",
+    "titleSuffix": "Global Time Display"
   }
 ]

@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Online Stopwatch is a precise digital timer that measures elapsed time from start to stop. Perfect for sports timing, productivity tracking, cooking, workouts, or any activity requiring accurate time measurement.",
+    "Features lap timing, split times, and can run continuously in the background. The stopwatch maintains accuracy even when switching between browser tabs or applications."
+  ],
+  "howToUse": [
+    "Click start to begin timing",
+    "Use lap button to record split times",
+    "Click stop to pause the timer",
+    "Reset to clear and start over",
+    "View lap times and total elapsed time"
+  ],
+  "features": [
+    "Precise millisecond timing",
+    "Lap and split time recording",
+    "Background operation support",
+    "Large, easy-to-read display",
+    "Start, stop, and reset controls",
+    "Lap time history tracking"
+  ],
+  "faqs": [
+    {
+      "question": "How accurate is the stopwatch?",
+      "answer": "The stopwatch is accurate to milliseconds and uses high-precision browser timing APIs for reliable measurements."
+    },
+    {
+      "question": "Can I record multiple lap times?",
+      "answer": "Yes, you can record unlimited lap times during a timing session, with each lap showing both split and cumulative times."
+    },
+    {
+      "question": "Does it work in the background?",
+      "answer": "Yes, the stopwatch continues running accurately even when you switch to other browser tabs or minimize the window."
+    },
+    {
+      "question": "What happens if I accidentally close the browser?",
+      "answer": "The timing will be lost if you close the browser. For important timing sessions, keep the tab open or use the lap feature to record intermediate times."
+    }
+  ]
+}

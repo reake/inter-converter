@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Unix Timestamp Converter specializes in converting Unix timestamps to human-readable dates and vice versa. Essential for developers working with Unix systems, databases, and APIs that store time as epoch values.",
+    "Provides precise conversion with support for both 32-bit and 64-bit timestamps, handling the full range from 1970 to beyond 2038, making it future-proof for modern applications."
+  ],
+  "howToUse": [
+    "Enter a Unix timestamp (seconds since epoch)",
+    "View the converted human-readable date",
+    "Or enter a date to get Unix timestamp",
+    "Choose your preferred time zone",
+    "Copy the result for development use"
+  ],
+  "features": [
+    "Unix epoch time conversion",
+    "32-bit and 64-bit timestamp support",
+    "Multiple date format outputs",
+    "Time zone conversion options",
+    "Current timestamp display",
+    "Batch conversion support"
+  ],
+  "faqs": [
+    {
+      "question": "What is the Unix epoch?",
+      "answer": "The Unix epoch is January 1, 1970, 00:00:00 UTC. Unix timestamps count seconds (or milliseconds) from this point in time."
+    },
+    {
+      "question": "What happens after 2038?",
+      "answer": "The 2038 problem affects 32-bit systems, but modern 64-bit systems and this converter support timestamps well beyond 2038."
+    },
+    {
+      "question": "Can I convert negative timestamps?",
+      "answer": "Yes, negative timestamps represent dates before 1970 and are supported for historical date conversions."
+    },
+    {
+      "question": "How precise are the conversions?",
+      "answer": "Conversions are precise to the second for standard Unix timestamps, with millisecond precision available for extended formats."
+    }
+  ]
+}

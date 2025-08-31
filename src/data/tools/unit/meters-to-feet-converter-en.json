@@ -1,0 +1,46 @@
+{
+  "about": [
+    "The Meters to Feet Converter is a specialized tool for converting length from meters (m) to feet (ft). This converter is essential for international construction projects, architectural plans, and applications where imperial length conversions are needed.",
+    "Meters are the standard metric unit used worldwide, while feet are commonly used in the United States for construction, real estate, and personal measurements. This converter provides precise mathematical conversion between these units.",
+    "Whether you're adapting international blueprints, converting property dimensions, or working with US-based contractors, this tool delivers instant and accurate meter to feet conversions."
+  ],
+  "howToUse": [
+    "Enter the length in meters (m)",
+    "The feet equivalent will be calculated instantly",
+    "View the result in feet (ft)",
+    "Copy the converted length for your use",
+    "Use the reverse converter for feet to meters"
+  ],
+  "features": [
+    "Instant meters to feet conversion",
+    "High precision mathematical calculation (1 m = 3.28084 ft)",
+    "Real-time conversion as you type",
+    "Support for decimal measurements",
+    "Scientific precision for professional use",
+    "Mobile-optimized interface",
+    "One-click result copying",
+    "Educational length conversion information"
+  ],
+  "faqs": [
+    {
+      "question": "What is the exact conversion factor from meters to feet?",
+      "answer": "1 meter = 3.28084 feet exactly. This is the internationally accepted conversion factor."
+    },
+    {
+      "question": "How do I convert meters to feet quickly?",
+      "answer": "Multiply the meter value by 3.3 for a quick approximation, or use our converter for exact results."
+    },
+    {
+      "question": "What are some common length conversions?",
+      "answer": "Common conversions: 1 m = 3.28 ft, 2 m = 6.56 ft, 5 m = 16.40 ft, 10 m = 32.81 ft, 100 m = 328.08 ft."
+    },
+    {
+      "question": "Why do different countries use different measurement systems?",
+      "answer": "Historical development - the metric system was designed for international standardization, while imperial units evolved from traditional measurements."
+    },
+    {
+      "question": "How accurate is this converter for architectural work?",
+      "answer": "The converter uses the exact international conversion factor, making it suitable for architectural drawings and construction specifications."
+    }
+  ]
+}

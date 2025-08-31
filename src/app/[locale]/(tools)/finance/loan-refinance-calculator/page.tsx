@@ -1,77 +1,121 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import LoanCalculator from '@/components/converters/finance/LoanCalculator';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/loan-refinance-calculator-en.json';
+import zhTool from '@/data/tools/finance/loan-refinance-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('loan-refinance-calculator', 'finance', 'Loan Refinance Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Loan Refinance Calculator - Refinancing Savings Analysis | InterConverter',
-  description: 'Calculate loan refinancing savings and break-even analysis. Compare current vs new loan terms with instant calculations.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Loan Refinance Calculator - Refinancing Savings Analysis',
-    description: 'Professional loan refinance calculator for savings analysis. Calculate break-even points and compare loan terms.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-loan-refinance-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Loan Refinance Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'loan-refinance-calculator') || catalogs.en.find((it) => it.id === 'loan-refinance-calculator');
+
+  const toolName: string = entry?.name ?? 'LoanCalculator';
+  const description: string = entry?.description ?? 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('loan-refinance-calculator', 'finance', 'LoanCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/finance/loan-refinance-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-loan-refinance-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/loan-refinance-calculator',
+        zh: '/zh/finance/loan-refinance-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/finance/loan-refinance-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function LoanRefinanceCalculatorPage() {
-  const faqs = getFAQsByToolId('loan-refinance-calculator', 'finance');
+export default async function LoanCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === 'loan-refinance-calculator') || catalogs.en.find((it) => it.id === 'loan-refinance-calculator');
+
+  const toolName: string = entry?.name || 'LoanCalculator';
+  const descriptionText: string = entry?.description || 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('loan-refinance-calculator', 'finance', 'LoanCalculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Loan Refinance Calculator"
-      description="Calculate loan refinancing savings and break-even analysis with instant calculations."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="loan-refinance-calculator"
       category="finance"
-      emoji="🔄"
-      customHowToUse={[
-        "Enter current loan balance and terms",
-        "Input new loan interest rate and terms",
-        "Set total refinancing closing costs",
-        "Calculate monthly payment savings",
-        "Analyze break-even point timeline",
-        "Compare total interest costs"
-      ]}
-      customFeatures={[
-        "Refinance savings calculation with fees",
-        "Break-even analysis and timeline",
-        "Side-by-side loan cost comparison",
-        "Monthly payment reduction analysis",
-        "Total interest savings tracking",
-        "Closing cost impact assessment"
-      ]}
+      locale={l}
+      emoji="💰"
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
       faqs={faqs}
     >
       <LoanCalculator />

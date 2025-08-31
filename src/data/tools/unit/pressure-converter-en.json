@@ -1,0 +1,37 @@
+{
+  "about": [
+    "The Pressure Converter provides comprehensive conversion between different pressure units including pascals, bar, PSI, atmospheres, and more. This tool is essential for engineers, scientists, and professionals working with pressure measurements.",
+    "Understanding pressure unit conversions helps in fluid mechanics, pneumatics, hydraulics, and various engineering applications where accurate pressure measurements are crucial."
+  ],
+  "howToUse": [
+    "Select the source pressure unit from the dropdown",
+    "Enter the pressure value you want to convert",
+    "Choose the target unit for conversion",
+    "View the instant conversion result"
+  ],
+  "features": [
+    "Multiple pressure unit conversions",
+    "Scientific and engineering units",
+    "High precision calculations",
+    "Support for absolute and gauge pressure",
+    "Professional accuracy for technical use"
+  ],
+  "faqs": [
+    {
+      "question": "What's the difference between PSI and bar?",
+      "answer": "PSI (pounds per square inch) is an imperial unit, while bar is a metric unit. 1 bar equals approximately 14.504 PSI."
+    },
+    {
+      "question": "How do I convert pascals to atmospheres?",
+      "answer": "1 atmosphere equals 101,325 pascals. Divide pascals by 101,325 to get atmospheres."
+    },
+    {
+      "question": "What are torr units used for?",
+      "answer": "Torr units are commonly used in vacuum technology and scientific applications, especially in chemistry and physics."
+    },
+    {
+      "question": "Which pressure unit should I use?",
+      "answer": "Use pascals for scientific calculations, bar for metric engineering, PSI for imperial systems, and atmospheres for atmospheric pressure."
+    }
+  ]
+}

@@ -1,77 +1,121 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import CreditCardPayoffCalculator from '@/components/converters/finance/CreditCardPayoffCalculator';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/minimum-payment-calculator-en.json';
+import zhTool from '@/data/tools/finance/minimum-payment-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('minimum-payment-calculator', 'finance', 'Minimum Payment Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Minimum Payment Calculator - Credit Card Payoff Time | InterConverter',
-  description: 'Calculate minimum credit card payments and payoff time. Understand the impact of minimum payments on debt with instant calculations.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Minimum Payment Calculator - Credit Card Payoff Time',
-    description: 'Professional minimum payment calculator for credit card debt. Calculate payoff time and total interest costs.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-minimum-payment-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Minimum Payment Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'minimum-payment-calculator') || catalogs.en.find((it) => it.id === 'minimum-payment-calculator');
+
+  const toolName: string = entry?.name ?? 'CreditCardPayoffCalculator';
+  const description: string = entry?.description ?? 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('minimum-payment-calculator', 'finance', 'CreditCardPayoffCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/finance/minimum-payment-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-minimum-payment-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/minimum-payment-calculator',
+        zh: '/zh/finance/minimum-payment-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/finance/minimum-payment-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function MinimumPaymentCalculatorPage() {
-  const faqs = getFAQsByToolId('minimum-payment-calculator', 'finance');
+export default async function CreditCardPayoffCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === 'minimum-payment-calculator') || catalogs.en.find((it) => it.id === 'minimum-payment-calculator');
+
+  const toolName: string = entry?.name || 'CreditCardPayoffCalculator';
+  const descriptionText: string = entry?.description || 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('minimum-payment-calculator', 'finance', 'CreditCardPayoffCalculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Minimum Payment Calculator"
-      description="Calculate minimum credit card payments and payoff time with instant calculations."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="minimum-payment-calculator"
       category="finance"
-      emoji="💳"
-      customHowToUse={[
-        "Enter current credit card balance",
-        "Input annual interest rate (APR)",
-        "Set minimum payment percentage or amount",
-        "Calculate total payoff time",
-        "View detailed payment schedule",
-        "Compare different payment strategies"
-      ]}
-      customFeatures={[
-        "Minimum payment calculation by balance",
-        "Payoff time estimation with interest",
-        "Total interest cost analysis",
-        "Monthly payment schedule breakdown",
-        "Debt payoff strategy comparison",
-        "Total cost vs payment amount analysis"
-      ]}
+      locale={l}
+      emoji="💰"
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
       faqs={faqs}
     >
       <CreditCardPayoffCalculator />

@@ -1,0 +1,37 @@
+{
+  "about": [
+    "The Energy Converter provides comprehensive conversion between different energy units including joules, calories, BTUs, kilowatt-hours, and more. This tool is essential for engineers, scientists, and professionals working with energy calculations.",
+    "Understanding energy unit conversions helps in power system design, thermal calculations, and energy efficiency analysis across various applications."
+  ],
+  "howToUse": [
+    "Select the source energy unit from the dropdown",
+    "Enter the energy value you want to convert",
+    "Choose the target unit for conversion",
+    "View the instant conversion result"
+  ],
+  "features": [
+    "Multiple energy unit conversions",
+    "Scientific and engineering units",
+    "High precision calculations",
+    "Support for thermal and electrical energy",
+    "Professional accuracy for technical use"
+  ],
+  "faqs": [
+    {
+      "question": "What's the difference between joules and calories?",
+      "answer": "Joules are the SI unit for energy, while calories measure thermal energy. 1 calorie equals approximately 4.184 joules."
+    },
+    {
+      "question": "How do I convert kWh to joules?",
+      "answer": "1 kilowatt-hour equals 3,600,000 joules (3.6 MJ). Multiply kWh by 3,600,000 to get joules."
+    },
+    {
+      "question": "What are BTUs used for?",
+      "answer": "BTUs (British Thermal Units) are commonly used in heating, ventilation, and air conditioning systems to measure thermal energy."
+    },
+    {
+      "question": "Which energy unit should I use?",
+      "answer": "Use joules for scientific calculations, kWh for electrical energy, calories for food energy, and BTUs for HVAC applications."
+    }
+  ]
+}

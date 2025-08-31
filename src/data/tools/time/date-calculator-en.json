@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Date Calculator performs various date calculations including adding or subtracting days, weeks, months, or years from any given date. It's essential for project planning, scheduling, legal deadlines, and personal milestone tracking.",
+    "This tool handles complex date arithmetic while accounting for leap years, varying month lengths, and calendar irregularities to provide accurate results for any date calculation need."
+  ],
+  "howToUse": [
+    "Enter your starting date",
+    "Choose to add or subtract time",
+    "Select the time unit (days, weeks, months, years)",
+    "Enter the amount to add or subtract",
+    "View the calculated result date"
+  ],
+  "features": [
+    "Add or subtract days, weeks, months, years",
+    "Leap year and month-end handling",
+    "Business day calculations",
+    "Multiple date format support",
+    "Historical and future date calculations",
+    "Calendar-aware computations"
+  ],
+  "faqs": [
+    {
+      "question": "How does it handle leap years?",
+      "answer": "The calculator automatically accounts for leap years when adding or subtracting months and years, ensuring accurate date calculations."
+    },
+    {
+      "question": "Can I calculate business days only?",
+      "answer": "Yes, the calculator can exclude weekends and optionally holidays when performing day-based calculations."
+    },
+    {
+      "question": "What date range is supported?",
+      "answer": "The calculator supports dates from year 1 to 9999, covering historical dates and far future planning needs."
+    },
+    {
+      "question": "How are month-end dates handled?",
+      "answer": "When adding months to dates like January 31st, the calculator intelligently handles cases where the target month has fewer days."
+    }
+  ]
+}

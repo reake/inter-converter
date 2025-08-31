@@ -1,0 +1,46 @@
+{
+  "about": [
+    "The Temperature Converter is a comprehensive tool for converting between different temperature scales including Celsius, Fahrenheit, Kelvin, and Rankine. Whether you're a scientist, engineer, cook, or student, this converter provides accurate temperature conversions for all your needs.",
+    "Temperature conversion is essential in many fields including meteorology, cooking, scientific research, and international communication. Our converter handles all major temperature scales with precision and provides instant results.",
+    "The tool supports bidirectional conversion between all temperature scales, making it perfect for educational purposes, professional work, and everyday temperature calculations."
+  ],
+  "howToUse": [
+    "Enter the temperature value you want to convert",
+    "Select the source temperature scale (Celsius, Fahrenheit, Kelvin, or Rankine)",
+    "Choose the target temperature scale for conversion",
+    "View the converted temperature instantly",
+    "Copy the result or perform additional conversions"
+  ],
+  "features": [
+    "Convert between Celsius, Fahrenheit, Kelvin, and Rankine",
+    "Instant real-time conversion as you type",
+    "High precision calculations with decimal support",
+    "Bidirectional conversion between all scales",
+    "Scientific notation support for extreme temperatures",
+    "Educational information about temperature scales",
+    "Mobile-friendly responsive design",
+    "Copy results with one click"
+  ],
+  "faqs": [
+    {
+      "question": "What temperature scales are supported?",
+      "answer": "Our converter supports Celsius (°C), Fahrenheit (°F), Kelvin (K), and Rankine (°R) temperature scales."
+    },
+    {
+      "question": "How accurate are the temperature conversions?",
+      "answer": "The conversions are mathematically precise using standard temperature conversion formulas with high decimal precision."
+    },
+    {
+      "question": "What is the difference between Celsius and Fahrenheit?",
+      "answer": "Celsius uses water's freezing point (0°C) and boiling point (100°C) as references, while Fahrenheit uses 32°F for freezing and 212°F for boiling water."
+    },
+    {
+      "question": "When should I use Kelvin?",
+      "answer": "Kelvin is the SI base unit for temperature, commonly used in scientific calculations. It starts at absolute zero (0 K = -273.15°C)."
+    },
+    {
+      "question": "Can I convert negative temperatures?",
+      "answer": "Yes, the converter handles negative temperatures correctly for all supported scales."
+    }
+  ]
+}

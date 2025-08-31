@@ -1,0 +1,40 @@
+{
+  "about": [
+    "The Tax Calculator helps you estimate your federal and state income tax liability, plan for tax payments, and optimize your tax strategy. Calculate your expected tax refund or amount owed based on your income, deductions, and filing status.",
+    "Stay ahead of tax season by understanding your tax obligations throughout the year. This tool helps with tax planning, withholding adjustments, and estimated quarterly payments for self-employed individuals."
+  ],
+  "howToUse": [
+    "Select your filing status (Single, Married Filing Jointly, etc.)",
+    "Enter your annual income from all sources",
+    "Input your deductions (standard or itemized)",
+    "Add any tax credits you qualify for",
+    "Review your estimated tax liability and refund"
+  ],
+  "features": [
+    "Federal and state tax calculation",
+    "Multiple filing status options",
+    "Standard and itemized deduction support",
+    "Tax credit calculations",
+    "Marginal tax rate analysis",
+    "Quarterly payment estimates",
+    "Tax planning scenarios"
+  ],
+  "faqs": [
+    {
+      "question": "Should I take the standard deduction or itemize?",
+      "answer": "Take the standard deduction if it's larger than your itemized deductions. For 2023, the standard deduction is $13,850 for single filers and $27,700 for married filing jointly."
+    },
+    {
+      "question": "What's the difference between marginal and effective tax rates?",
+      "answer": "Your marginal tax rate is the rate on your last dollar of income. Your effective tax rate is your total tax divided by total income - this is your average tax rate."
+    },
+    {
+      "question": "How accurate are these tax estimates?",
+      "answer": "Our calculator provides good estimates for planning purposes, but your actual tax liability may vary based on specific circumstances. Consult a tax professional for complex situations."
+    },
+    {
+      "question": "When should I make quarterly estimated payments?",
+      "answer": "If you expect to owe $1,000 or more in taxes and your withholding/credits don't cover 90% of this year's tax or 100% of last year's tax, you should make quarterly payments."
+    }
+  ]
+}

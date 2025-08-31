@@ -1,77 +1,117 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import TimezoneConverter from '@/components/converters/time/TimezoneConverter';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/time/timezone-converter-en.json';
+import zhTool from '@/data/tools/time/timezone-converter-zh.json';
+import timeEn from '@/data/tools/time.json';
+import timeZh from '@/data/tools/time-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('timezone-converter', 'time', 'Timezone Converter');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Timezone Converter - Convert Time Between Zones | InterConverter',
-  description: 'Convert time between different timezones worldwide. Free timezone converter with support for all major time zones and DST.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Timezone Converter - Convert Time Between Zones',
-    description: 'Professional timezone converter for global time conversion. Convert time between any timezones with DST support and world clock features.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-timezone-converter.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Timezone Converter Tool'
+  const catalogs: Record<string, any[]> = {
+    en: timeEn as any[],
+    zh: (timeZh as any[]) || (timeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'timezone-converter') || catalogs.en.find((it) => it.id === 'timezone-converter');
+
+  const toolName: string = entry?.name ?? 'TimezoneConverter';
+  const description: string = entry?.description ?? '';
+  const baseKeywords = generateOptimizedKeywords('timezone-converter', 'time', 'TimezoneConverter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/time/timezone-converter`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-timezone-converter.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/time/timezone-converter',
+        zh: '/zh/time/timezone-converter'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/time/timezone-converter'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function TimezoneConverterPage() {
-  const faqs = getFAQsByToolId('timezone-converter', 'time');
+export default async function TimezoneConverterPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  // Load JSON content based on locale
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const catalogs: Record<string, any[]> = {
+    en: timeEn as any[],
+    zh: (timeZh as any[]) || (timeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'timezone-converter') || catalogs.en.find((it) => it.id === 'timezone-converter');
+
+  const toolName: string = entry?.name ?? 'TimezoneConverter';
+  const description: string = entry?.description ?? '';
+  const baseKeywords = generateOptimizedKeywords('timezone-converter', 'time', 'TimezoneConverter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Timezone Converter"
-      description="Convert time between different timezones worldwide with support for all major time zones and DST."
+      title={toolName}
+      description={description}
       keywords={keywords}
       toolId="timezone-converter"
       category="time"
-      emoji="🌍"
-      customHowToUse={[
-        "Select the source timezone",
-        "Enter the time to convert",
-        "Choose the target timezone",
-        "View the converted time instantly",
-        "Add multiple timezones for comparison"
-      ]}
-      customFeatures={[
-        "Support for all world timezones",
-        "Automatic DST handling",
-        "Multiple timezone comparison",
-        "UTC and local time display",
-        "Business hours calculator",
-        "Meeting time planner"
-      ]}
-      faqs={faqs}
+      aboutContent={toolContent.about}
+      customHowToUse={toolContent.howToUse}
+      customFeatures={toolContent.features}
+      faqs={toolContent.faqs}
     >
       <TimezoneConverter />
     </EnhancedToolLayout>

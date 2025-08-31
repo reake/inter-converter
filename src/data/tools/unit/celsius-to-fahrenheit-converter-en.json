@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Celsius to Fahrenheit Converter provides instant temperature conversion between Celsius (°C) and Fahrenheit (°F) scales. Essential for weather interpretation, cooking, scientific calculations, and international communication.",
+    "Uses the precise conversion formula °F = (°C × 9/5) + 32 to ensure accurate results for all temperature ranges, from extreme cold to high heat applications."
+  ],
+  "howToUse": [
+    "Enter temperature in Celsius in the input field",
+    "View the instant Fahrenheit conversion result",
+    "Use the common temperatures tab for quick reference",
+    "Copy results or use the conversion formula",
+    "Switch to reverse conversion if needed"
+  ],
+  "features": [
+    "Bidirectional temperature conversion",
+    "Common temperature reference table",
+    "Precise conversion formulas",
+    "Weather and cooking applications",
+    "Scientific accuracy with decimal precision",
+    "Instant calculation as you type"
+  ],
+  "faqs": [
+    {
+      "question": "What is the formula for Celsius to Fahrenheit?",
+      "answer": "The formula is °F = (°C × 9/5) + 32. For example, 0°C = 32°F and 100°C = 212°F."
+    },
+    {
+      "question": "Why are there two temperature scales?",
+      "answer": "Celsius is based on water's freezing (0°C) and boiling (100°C) points, while Fahrenheit uses different reference points, making it more granular for everyday temperatures."
+    },
+    {
+      "question": "Which countries use Fahrenheit?",
+      "answer": "Primarily the United States, Bahamas, Belize, and Cayman Islands use Fahrenheit. Most other countries use Celsius."
+    },
+    {
+      "question": "How accurate is the conversion?",
+      "answer": "The conversion is mathematically precise. Any rounding depends on the number of decimal places you choose to display."
+    }
+  ]
+}

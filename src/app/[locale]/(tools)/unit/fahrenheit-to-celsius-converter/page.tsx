@@ -1,77 +1,117 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import FahrenheitToCelsiusConverter from '@/components/converters/unit/FahrenheitToCelsiusConverter';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/unit/fahrenheit-to-celsius-converter-en.json';
+import zhTool from '@/data/tools/unit/fahrenheit-to-celsius-converter-zh.json';
+import unitEn from '@/data/tools/unit.json';
+import unitZh from '@/data/tools/unit-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('fahrenheit-to-celsius-converter', 'unit', 'Fahrenheit to Celsius Converter');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Fahrenheit to Celsius Converter - °F to °C Calculator | InterConverter',
-  description: 'Convert Fahrenheit to Celsius instantly. Free online temperature converter with formula, common values, and usage guide. Perfect for weather, cooking, and science.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Fahrenheit to Celsius Converter - °F to °C Calculator',
-    description: 'Professional temperature converter for Fahrenheit to Celsius conversion. Instant calculations with formulas and reference tables for weather and cooking.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-fahrenheit-to-celsius-converter.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Fahrenheit to Celsius Converter Tool'
+  const catalogs: Record<string, any[]> = {
+    en: unitEn as any[],
+    zh: (unitZh as any[]) || (unitEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'fahrenheit-to-celsius-converter') || catalogs.en.find((it) => it.id === 'fahrenheit-to-celsius-converter');
+
+  const toolName: string = entry?.name ?? 'FahrenheitToCelsiusConverter';
+  const description: string = entry?.description ?? '';
+  const baseKeywords = generateOptimizedKeywords('fahrenheit-to-celsius-converter', 'unit', 'FahrenheitToCelsiusConverter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/unit/fahrenheit-to-celsius-converter`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-fahrenheit-to-celsius-converter.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/unit/fahrenheit-to-celsius-converter',
+        zh: '/zh/unit/fahrenheit-to-celsius-converter'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/unit/fahrenheit-to-celsius-converter'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function FahrenheitToCelsiusConverterPage() {
-  const faqs = getFAQsByToolId('fahrenheit-to-celsius-converter', 'unit');
+export default async function FahrenheitToCelsiusConverterPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  // Load JSON content based on locale
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const catalogs: Record<string, any[]> = {
+    en: unitEn as any[],
+    zh: (unitZh as any[]) || (unitEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'fahrenheit-to-celsius-converter') || catalogs.en.find((it) => it.id === 'fahrenheit-to-celsius-converter');
+
+  const toolName: string = entry?.name ?? 'FahrenheitToCelsiusConverter';
+  const description: string = entry?.description ?? '';
+  const baseKeywords = generateOptimizedKeywords('fahrenheit-to-celsius-converter', 'unit', 'FahrenheitToCelsiusConverter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Fahrenheit to Celsius Converter"
-      description="Convert temperatures from Fahrenheit to Celsius with precision and instant calculations."
+      title={toolName}
+      description={description}
       keywords={keywords}
       toolId="fahrenheit-to-celsius-converter"
       category="unit"
-      emoji="🌡️"
-      customHowToUse={[
-        "Enter temperature in Fahrenheit in the input field",
-        "View the instant Celsius conversion result",
-        "Use the common temperatures tab for quick reference",
-        "Copy results or use the conversion formula",
-        "Switch to reverse conversion if needed"
-      ]}
-      customFeatures={[
-        "Bidirectional temperature conversion",
-        "Common temperature reference table",
-        "Precise conversion formulas (°C = (°F - 32) × 5/9)",
-        "Weather and cooking applications",
-        "Scientific accuracy with decimal precision",
-        "Instant calculation as you type"
-      ]}
-      faqs={faqs}
+      aboutContent={toolContent.about}
+      customHowToUse={toolContent.howToUse}
+      customFeatures={toolContent.features}
+      faqs={toolContent.faqs}
     >
       <FahrenheitToCelsiusConverter />
     </EnhancedToolLayout>

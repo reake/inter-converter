@@ -1,77 +1,117 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import { WorkingDaysCalculator } from '@/components/converters/time/WorkingDaysCalculator';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/time/working-days-calculator-en.json';
+import zhTool from '@/data/tools/time/working-days-calculator-zh.json';
+import timeEn from '@/data/tools/time.json';
+import timeZh from '@/data/tools/time-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('working-days-calculator', 'time', 'Working Days Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Working Days Calculator - Business Days Between Dates | InterConverter',
-  description: 'Calculate working days between dates excluding weekends and holidays. Free business days calculator with custom holiday support.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Working Days Calculator - Business Days Between Dates',
-    description: 'Professional working days calculator for business planning. Calculate business days between dates excluding weekends and holidays.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-working-days-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Working Days Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: timeEn as any[],
+    zh: (timeZh as any[]) || (timeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'working-days-calculator') || catalogs.en.find((it) => it.id === 'working-days-calculator');
+
+  const toolName: string = entry?.name ?? 'WorkingDaysCalculator';
+  const description: string = entry?.description ?? '';
+  const baseKeywords = generateOptimizedKeywords('working-days-calculator', 'time', 'WorkingDaysCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/time/working-days-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-working-days-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/time/working-days-calculator',
+        zh: '/zh/time/working-days-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/time/working-days-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function WorkingDaysCalculatorPage() {
-  const faqs = getFAQsByToolId('working-days-calculator', 'time');
+export default async function WorkingDaysCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  // Load JSON content based on locale
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const catalogs: Record<string, any[]> = {
+    en: timeEn as any[],
+    zh: (timeZh as any[]) || (timeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'working-days-calculator') || catalogs.en.find((it) => it.id === 'working-days-calculator');
+
+  const toolName: string = entry?.name ?? 'WorkingDaysCalculator';
+  const description: string = entry?.description ?? '';
+  const baseKeywords = generateOptimizedKeywords('working-days-calculator', 'time', 'WorkingDaysCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Working Days Calculator"
-      description="Calculate working days between dates excluding weekends and holidays with custom holiday support."
+      title={toolName}
+      description={description}
       keywords={keywords}
       toolId="working-days-calculator"
       category="time"
-      emoji="📊"
-      customHowToUse={[
-        "Select the start date for calculation",
-        "Choose the end date",
-        "Configure weekend days (Saturday/Sunday)",
-        "Add custom holidays if needed",
-        "View total working days result"
-      ]}
-      customFeatures={[
-        "Weekend exclusion (customizable)",
-        "Holiday calendar integration",
-        "Custom holiday date support",
-        "Business planning tools",
-        "Project timeline calculation",
-        "Multiple country holiday support"
-      ]}
-      faqs={faqs}
+      aboutContent={toolContent.about}
+      customHowToUse={toolContent.howToUse}
+      customFeatures={toolContent.features}
+      faqs={toolContent.faqs}
     >
       <WorkingDaysCalculator />
     </EnhancedToolLayout>

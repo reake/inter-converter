@@ -1,0 +1,43 @@
+{
+  "about": [
+    "The 401k Calculator is a comprehensive retirement planning tool designed to help you estimate your 401k savings growth over time. This calculator takes into account your current age, retirement age, current 401k balance, annual contributions, employer matching, and expected rate of return to provide accurate projections of your retirement savings.",
+    "Understanding your 401k potential is crucial for retirement planning. This tool helps you visualize how consistent contributions, employer matching, and compound interest work together to build substantial retirement wealth. Whether you're just starting your career or planning for retirement in the near future, this calculator provides valuable insights into your financial future.",
+    "The calculator also helps you optimize your contribution strategy by showing the impact of different contribution levels and the importance of maximizing employer matching benefits. Use this tool to make informed decisions about your retirement savings and ensure you're on track to meet your retirement goals."
+  ],
+  "howToUse": [
+    "Enter your current age and planned retirement age to establish your investment timeline",
+    "Input your current 401k balance if you have an existing account",
+    "Set your annual contribution amount and contribution percentage",
+    "Add employer matching details including match percentage and vesting schedule",
+    "Specify the expected annual rate of return (typically 6-8% for diversified portfolios)",
+    "Review the projected retirement savings and adjust parameters as needed"
+  ],
+  "features": [
+    "401k growth projection with compound interest calculations",
+    "Employer matching calculation and optimization recommendations",
+    "Annual contribution limit tracking and compliance checking",
+    "Tax benefit analysis showing pre-tax savings advantages",
+    "Retirement readiness assessment with goal comparison",
+    "Contribution optimization suggestions for maximum growth",
+    "Interactive charts showing savings growth over time",
+    "Scenario analysis for different contribution strategies"
+  ],
+  "faqs": [
+    {
+      "question": "What is the maximum 401k contribution limit?",
+      "answer": "For 2024, the maximum 401k contribution limit is $23,000 for employees under 50, and $30,500 for those 50 and older (including the $7,500 catch-up contribution). These limits are adjusted annually for inflation."
+    },
+    {
+      "question": "How does employer matching work?",
+      "answer": "Employer matching is when your company contributes additional money to your 401k based on your contributions. Common matches include 50% or 100% of your contributions up to a certain percentage of your salary. This is essentially free money that significantly boosts your retirement savings."
+    },
+    {
+      "question": "What's a good rate of return to expect?",
+      "answer": "Historical stock market returns average around 10% annually, but a conservative estimate of 6-8% is often used for retirement planning to account for market volatility and diversified portfolios that include bonds and other assets."
+    },
+    {
+      "question": "Should I contribute enough to get the full employer match?",
+      "answer": "Yes, absolutely. Contributing enough to receive the full employer match should be a priority as it provides an immediate 100% return on your investment. It's essentially free money that significantly accelerates your retirement savings growth."
+    }
+  ]
+}

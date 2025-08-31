@@ -1,0 +1,46 @@
+{
+  "about": [
+    "The Length Converter is a versatile tool for converting between various units of length and distance. From millimeters to miles, this converter handles all common length measurements used in engineering, construction, science, and everyday life.",
+    "Length conversion is fundamental in many industries including construction, manufacturing, textiles, and international trade. Our converter provides accurate conversions between metric and imperial systems.",
+    "Whether you're working on architectural plans, measuring fabric, or calculating distances, this tool ensures precise length conversions with support for both common and specialized units."
+  ],
+  "howToUse": [
+    "Enter the length value you want to convert",
+    "Select the source unit (meters, feet, inches, etc.)",
+    "Choose the target unit for conversion",
+    "View the converted length instantly",
+    "Use the result for your calculations or measurements"
+  ],
+  "features": [
+    "Convert between metric and imperial length units",
+    "Support for millimeters, centimeters, meters, kilometers",
+    "Imperial units: inches, feet, yards, miles",
+    "Specialized units: nautical miles, light years",
+    "Real-time conversion as you type",
+    "High precision calculations",
+    "Scientific notation for large distances",
+    "Mobile-optimized interface"
+  ],
+  "faqs": [
+    {
+      "question": "What length units are supported?",
+      "answer": "We support metric units (mm, cm, m, km), imperial units (in, ft, yd, mi), and specialized units like nautical miles and light years."
+    },
+    {
+      "question": "How accurate are the length conversions?",
+      "answer": "All conversions use precise mathematical formulas with high decimal accuracy for professional and scientific use."
+    },
+    {
+      "question": "What's the difference between a mile and a nautical mile?",
+      "answer": "A statute mile is 5,280 feet, while a nautical mile is 6,076 feet (1,852 meters), used in maritime and aviation navigation."
+    },
+    {
+      "question": "Can I convert very small or very large distances?",
+      "answer": "Yes, the converter handles everything from microscopic measurements to astronomical distances with scientific notation."
+    },
+    {
+      "question": "Is there a limit to the precision?",
+      "answer": "The converter provides up to 15 decimal places of precision for highly accurate scientific and engineering calculations."
+    }
+  ]
+}

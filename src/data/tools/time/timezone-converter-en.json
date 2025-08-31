@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Timezone Converter helps you convert time between different time zones around the world. Perfect for scheduling international meetings, coordinating with global teams, or planning travel across time zones.",
+    "Features real-time conversion with daylight saving time awareness, making it essential for business communications, event planning, and managing relationships across different geographical locations."
+  ],
+  "howToUse": [
+    "Select your source time zone",
+    "Enter the time you want to convert",
+    "Choose the target time zone",
+    "View the converted time instantly",
+    "Add multiple time zones for comparison"
+  ],
+  "features": [
+    "Global time zone database",
+    "Daylight saving time handling",
+    "Multiple time zone comparison",
+    "Real-time conversion updates",
+    "Popular cities quick selection",
+    "UTC offset display"
+  ],
+  "faqs": [
+    {
+      "question": "Does it handle daylight saving time automatically?",
+      "answer": "Yes, the converter automatically accounts for daylight saving time changes in all supported time zones throughout the year."
+    },
+    {
+      "question": "How many time zones are supported?",
+      "answer": "The converter supports all major world time zones, including regional variations and historical time zone changes."
+    },
+    {
+      "question": "Can I compare multiple time zones at once?",
+      "answer": "Yes, you can add multiple time zones to see the same time across different regions simultaneously."
+    },
+    {
+      "question": "What if a time zone changes its rules?",
+      "answer": "The converter uses an updated time zone database that reflects current and historical time zone rules and changes."
+    }
+  ]
+}

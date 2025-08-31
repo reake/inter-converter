@@ -1,77 +1,121 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import MortgageCalculator from '@/components/converters/finance/MortgageCalculator';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/mortgage-apr-calculator-en.json';
+import zhTool from '@/data/tools/finance/mortgage-apr-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('mortgage-apr-calculator', 'finance', 'Mortgage APR Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Mortgage APR Calculator - True Mortgage Cost Calculator | InterConverter',
-  description: 'Calculate mortgage APR including fees and closing costs. Compare true cost of mortgage loans with instant calculations.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Mortgage APR Calculator - True Mortgage Cost Calculator',
-    description: 'Professional mortgage APR calculator for true loan costs. Calculate APR including fees and closing costs.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-mortgage-apr-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Mortgage APR Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'mortgage-apr-calculator') || catalogs.en.find((it) => it.id === 'mortgage-apr-calculator');
+
+  const toolName: string = entry?.name ?? 'MortgageCalculator';
+  const description: string = entry?.description ?? 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('mortgage-apr-calculator', 'finance', 'MortgageCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/finance/mortgage-apr-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-mortgage-apr-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/mortgage-apr-calculator',
+        zh: '/zh/finance/mortgage-apr-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/finance/mortgage-apr-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function MortgageAPRCalculatorPage() {
-  const faqs = getFAQsByToolId('mortgage-apr-calculator', 'finance');
+export default async function MortgageCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === 'mortgage-apr-calculator') || catalogs.en.find((it) => it.id === 'mortgage-apr-calculator');
+
+  const toolName: string = entry?.name || 'MortgageCalculator';
+  const descriptionText: string = entry?.description || 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('mortgage-apr-calculator', 'finance', 'MortgageCalculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Mortgage APR Calculator"
-      description="Calculate mortgage APR including fees and closing costs with instant calculations."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="mortgage-apr-calculator"
       category="finance"
-      emoji="📊"
-      customHowToUse={[
-        "Enter total loan amount",
-        "Set nominal interest rate",
-        "Input total closing costs",
-        "Add all lender fees",
-        "Calculate true APR instantly",
-        "Compare different loan offers"
-      ]}
-      customFeatures={[
-        "True APR calculation with all costs",
-        "Closing cost inclusion and analysis",
-        "Lender fee impact assessment",
-        "Loan offer comparison tools",
-        "Detailed cost breakdown display",
-        "Interest rate vs APR comparison"
-      ]}
+      locale={l}
+      emoji="💰"
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
       faqs={faqs}
     >
       <MortgageCalculator />

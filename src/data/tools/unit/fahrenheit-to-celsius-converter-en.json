@@ -1,0 +1,46 @@
+{
+  "about": [
+    "The Fahrenheit to Celsius Converter is a specialized tool for converting temperatures from the Fahrenheit scale to the Celsius scale. This converter is essential for international communication, scientific work, and everyday temperature understanding.",
+    "Fahrenheit is primarily used in the United States, while Celsius is the standard in most other countries and scientific applications. This converter bridges that gap with precise mathematical conversion.",
+    "Whether you're traveling internationally, following international recipes, or working with scientific data, this tool provides instant and accurate Fahrenheit to Celsius conversions."
+  ],
+  "howToUse": [
+    "Enter the temperature in Fahrenheit (°F)",
+    "The Celsius equivalent will be calculated instantly",
+    "View the result in Celsius (°C)",
+    "Copy the converted temperature for your use",
+    "Use the reverse converter for Celsius to Fahrenheit"
+  ],
+  "features": [
+    "Instant Fahrenheit to Celsius conversion",
+    "High precision mathematical calculation",
+    "Real-time conversion as you type",
+    "Support for negative temperatures",
+    "Decimal precision for accurate results",
+    "Mobile-optimized interface",
+    "One-click result copying",
+    "Educational temperature scale information"
+  ],
+  "faqs": [
+    {
+      "question": "What is the formula for Fahrenheit to Celsius?",
+      "answer": "The formula is: °C = (°F - 32) × 5/9. For example, 68°F = (68-32) × 5/9 = 20°C."
+    },
+    {
+      "question": "At what temperature are Fahrenheit and Celsius equal?",
+      "answer": "Fahrenheit and Celsius are equal at -40 degrees (-40°F = -40°C)."
+    },
+    {
+      "question": "What are some common temperature conversions?",
+      "answer": "Common conversions: 32°F = 0°C (freezing), 68°F = 20°C (room temp), 98.6°F = 37°C (body temp), 212°F = 100°C (boiling)."
+    },
+    {
+      "question": "Why does the US use Fahrenheit?",
+      "answer": "The US adopted Fahrenheit before Celsius was widely accepted. Fahrenheit offers more precise whole numbers for everyday temperatures."
+    },
+    {
+      "question": "How accurate is this converter?",
+      "answer": "The converter uses the exact mathematical formula with high decimal precision for professional and scientific accuracy."
+    }
+  ]
+}

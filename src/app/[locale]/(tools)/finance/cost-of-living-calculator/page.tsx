@@ -1,77 +1,121 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import CostOfLivingCalculator from '@/components/converters/finance/CostOfLivingCalculator';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/cost-of-living-calculator-en.json';
+import zhTool from '@/data/tools/finance/cost-of-living-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('cost-of-living-calculator', 'finance', 'Cost of Living Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Cost of Living Calculator - City Comparison | InterConverter',
-  description: 'Compare cost of living between cities for home buying decisions. Calculate salary adjustments and housing affordability by location.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Cost of Living Calculator - City Comparison',
-    description: 'Professional cost of living calculator for relocation planning. Compare cities, calculate salary adjustments, and make informed decisions.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-cost-of-living-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Cost of Living Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'cost-of-living-calculator') || catalogs.en.find((it) => it.id === 'cost-of-living-calculator');
+
+  const toolName: string = entry?.name ?? 'CostOfLivingCalculator';
+  const description: string = entry?.description ?? 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('cost-of-living-calculator', 'finance', 'CostOfLivingCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/finance/cost-of-living-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-cost-of-living-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/cost-of-living-calculator',
+        zh: '/zh/finance/cost-of-living-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/finance/cost-of-living-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function CostOfLivingCalculatorPage() {
-  const faqs = getFAQsByToolId('cost-of-living-calculator', 'finance');
+export default async function CostOfLivingCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === 'cost-of-living-calculator') || catalogs.en.find((it) => it.id === 'cost-of-living-calculator');
+
+  const toolName: string = entry?.name || 'CostOfLivingCalculator';
+  const descriptionText: string = entry?.description || 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('cost-of-living-calculator', 'finance', 'CostOfLivingCalculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Cost of Living Calculator"
-      description="Compare cost of living between different cities to make informed home buying and relocation decisions."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="cost-of-living-calculator"
       category="finance"
-      emoji="🏙️"
-      customHowToUse={[
-        "Select your current city and target city",
-        "Enter your current salary and expenses",
-        "Compare housing costs between locations",
-        "Calculate required salary adjustment",
-        "Analyze total cost differences",
-        "Make informed relocation decisions"
-      ]}
-      customFeatures={[
-        "City-to-city cost comparison",
-        "Housing affordability analysis",
-        "Salary adjustment calculations",
-        "Living expense breakdowns",
-        "Quality of life factors",
-        "Relocation decision support"
-      ]}
+      locale={l}
+      emoji="💰"
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
       faqs={faqs}
     >
       <CostOfLivingCalculator />

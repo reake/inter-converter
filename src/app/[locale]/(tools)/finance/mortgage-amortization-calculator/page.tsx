@@ -1,77 +1,121 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import MortgageCalculator from '@/components/converters/finance/MortgageCalculator';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/mortgage-amortization-calculator-en.json';
+import zhTool from '@/data/tools/finance/mortgage-amortization-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('mortgage-amortization-calculator', 'finance', 'Mortgage Amortization Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Mortgage Amortization Calculator - Payment Schedule | InterConverter',
-  description: 'Calculate mortgage amortization schedule with principal and interest breakdown for each payment with instant calculations.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Mortgage Amortization Calculator - Payment Schedule',
-    description: 'Professional mortgage amortization calculator for payment schedules. Calculate principal and interest breakdown.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-mortgage-amortization-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Mortgage Amortization Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'mortgage-amortization-calculator') || catalogs.en.find((it) => it.id === 'mortgage-amortization-calculator');
+
+  const toolName: string = entry?.name ?? 'MortgageCalculator';
+  const description: string = entry?.description ?? 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('mortgage-amortization-calculator', 'finance', 'MortgageCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/finance/mortgage-amortization-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-mortgage-amortization-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/mortgage-amortization-calculator',
+        zh: '/zh/finance/mortgage-amortization-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/finance/mortgage-amortization-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function MortgageAmortizationCalculatorPage() {
-  const faqs = getFAQsByToolId('mortgage-amortization-calculator', 'finance');
+export default async function MortgageCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === 'mortgage-amortization-calculator') || catalogs.en.find((it) => it.id === 'mortgage-amortization-calculator');
+
+  const toolName: string = entry?.name || 'MortgageCalculator';
+  const descriptionText: string = entry?.description || 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('mortgage-amortization-calculator', 'finance', 'MortgageCalculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Mortgage Amortization Calculator"
-      description="Calculate mortgage amortization schedule and payment breakdown with instant calculations."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="mortgage-amortization-calculator"
       category="finance"
-      emoji="📊"
-      customHowToUse={[
-        "Enter total loan amount",
-        "Set annual interest rate",
-        "Choose loan term in years",
-        "Calculate amortization schedule",
-        "View detailed payment schedule",
-        "Analyze principal vs interest breakdown"
-      ]}
-      customFeatures={[
-        "Complete mortgage amortization schedule",
-        "Monthly payment breakdown analysis",
-        "Principal vs interest tracking over time",
-        "Remaining balance calculation by period",
-        "Total interest cost calculation",
-        "Interactive payment schedule visualization"
-      ]}
+      locale={l}
+      emoji="💰"
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
       faqs={faqs}
     >
       <MortgageCalculator />

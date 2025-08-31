@@ -1,77 +1,121 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import LoanCalculator from '@/components/converters/finance/LoanCalculator';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/home-equity-loan-calculator-en.json';
+import zhTool from '@/data/tools/finance/home-equity-loan-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('home-equity-loan-calculator', 'finance', 'Home Equity Loan Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Home Equity Loan Calculator - HELOC Calculator | InterConverter',
-  description: 'Calculate home equity loan payments, available equity, and borrowing capacity based on home value with instant calculations.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Home Equity Loan Calculator - HELOC Calculator',
-    description: 'Professional home equity loan calculator for borrowing capacity. Calculate payments and available equity.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-home-equity-loan-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Home Equity Loan Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'home-equity-loan-calculator') || catalogs.en.find((it) => it.id === 'home-equity-loan-calculator');
+
+  const toolName: string = entry?.name ?? 'LoanCalculator';
+  const description: string = entry?.description ?? 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('home-equity-loan-calculator', 'finance', 'LoanCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/finance/home-equity-loan-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-home-equity-loan-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/home-equity-loan-calculator',
+        zh: '/zh/finance/home-equity-loan-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/finance/home-equity-loan-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function HomeEquityLoanCalculatorPage() {
-  const faqs = getFAQsByToolId('home-equity-loan-calculator', 'finance');
+export default async function LoanCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === 'home-equity-loan-calculator') || catalogs.en.find((it) => it.id === 'home-equity-loan-calculator');
+
+  const toolName: string = entry?.name || 'LoanCalculator';
+  const descriptionText: string = entry?.description || 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('home-equity-loan-calculator', 'finance', 'LoanCalculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Home Equity Loan Calculator"
-      description="Calculate home equity loan payments and available borrowing capacity with instant calculations."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="home-equity-loan-calculator"
       category="finance"
-      emoji="🏠"
-      customHowToUse={[
-        "Enter current home market value",
-        "Input remaining mortgage balance owed",
-        "Set desired loan amount to borrow",
-        "Choose interest rate and loan term",
-        "Calculate monthly payment and costs",
-        "Review equity requirements and LTV limits"
-      ]}
-      customFeatures={[
-        "Available equity calculation based on home value",
-        "Loan-to-value ratio analysis and limits",
-        "Monthly payment estimation with interest",
-        "HELOC vs home equity loan comparison",
-        "Interest rate impact and cost analysis",
-        "Borrowing capacity and qualification assessment"
-      ]}
+      locale={l}
+      emoji="💰"
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
       faqs={faqs}
     >
       <LoanCalculator />

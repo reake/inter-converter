@@ -1,0 +1,41 @@
+{
+  "about": [
+    "The Savings Calculator helps you plan and track your savings goals with compound interest calculations. Whether you're saving for a house, vacation, emergency fund, or retirement, this tool shows how regular deposits and interest can help you reach your financial targets.",
+    "Plan your savings strategy by adjusting deposit amounts, frequency, and interest rates to see how different approaches affect your timeline and final savings amount."
+  ],
+  "howToUse": [
+    "Set your savings goal amount",
+    "Enter your current savings balance",
+    "Input the interest rate on your savings account",
+    "Choose your deposit frequency (weekly, monthly, quarterly)",
+    "Enter your regular deposit amount",
+    "View timeline to reach your goal and total interest earned"
+  ],
+  "features": [
+    "Savings goal timeline calculation",
+    "Regular deposit planning",
+    "Compound interest growth tracking",
+    "Multiple deposit frequency options",
+    "Goal achievement projections",
+    "Interest earnings breakdown",
+    "Savings strategy optimization"
+  ],
+  "faqs": [
+    {
+      "question": "How much should I save each month?",
+      "answer": "A common rule is to save 20% of your income, but this varies by individual circumstances. Start with what you can afford and gradually increase as your income grows."
+    },
+    {
+      "question": "What's a good interest rate for savings?",
+      "answer": "High-yield savings accounts typically offer 0.5% to 5% APY, depending on market conditions. Online banks often offer higher rates than traditional banks."
+    },
+    {
+      "question": "Should I save daily, weekly, or monthly?",
+      "answer": "More frequent deposits can slightly increase compound interest earnings, but the convenience of monthly deposits often outweighs the small difference in returns."
+    },
+    {
+      "question": "How long will it take to reach my savings goal?",
+      "answer": "This depends on your goal amount, current savings, deposit frequency, and interest rate. Our calculator shows exactly how long based on your specific inputs."
+    }
+  ]
+}

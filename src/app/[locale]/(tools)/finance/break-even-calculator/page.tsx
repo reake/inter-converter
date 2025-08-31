@@ -1,61 +1,122 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import { BreakEvenCalculator } from '@/components/converters/finance/BreakEvenCalculator';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/break-even-calculator-en.json';
+import zhTool from '@/data/tools/finance/break-even-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
-export const metadata: Metadata = {
-  title: 'Break Even Calculator - Business Break Even Analysis | InterConverter',
-  description: 'Calculate break-even point for business and investment decisions. Free break-even analysis calculator with profit planning.',
-  keywords: ['break even calculator', 'break even analysis', 'business calculator', 'profit planning', 'cost analysis'],
-  openGraph: {
-    title: 'Break Even Calculator - Business Break Even Analysis',
-    description: 'Calculate break-even point for business and investment decisions.',
-    type: 'website',
-  },
-};
+// Force static generation
+export const dynamic = 'force-static';
 
-const toolConfig = {
-  title: 'Break Even Calculator',
-  description: 'Calculate break-even point for business and investment decisions',
-  features: [
-    'Break-even point calculation',
-    'Fixed and variable cost analysis',
-    'Profit margin planning',
-    'Sales target determination',
-    'Business viability assessment'
-  ],
-  usageGuide: [
-    'Enter fixed costs (rent, salaries, etc.)',
-    'Input variable cost per unit',
-    'Set selling price per unit',
-    'Calculate break-even point',
-    'Analyze profit scenarios'
-  ],
-  faqs: [
-    {
-      question: 'What is break-even point?',
-      answer: 'Break-even point is the level of sales at which total revenues equal total costs, resulting in neither profit nor loss. It\'s calculated as Fixed Costs ÷ (Price per Unit - Variable Cost per Unit).'
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'break-even-calculator') || catalogs.en.find((it) => it.id === 'break-even-calculator');
+
+  const toolName: string = entry?.name ?? 'BreakEvenCalculatorCalculator';
+  const description: string = entry?.description ?? 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('break-even-calculator', 'finance', 'BreakEvenCalculatorCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/finance/break-even-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-break-even-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
     },
-    {
-      question: 'Why is break-even analysis important?',
-      answer: 'Break-even analysis helps businesses understand the minimum sales needed to cover costs, set pricing strategies, and make informed decisions about investments and operations.'
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/break-even-calculator',
+        zh: '/zh/finance/break-even-calculator'
+      }
     },
-    {
-      question: 'What are fixed vs variable costs?',
-      answer: 'Fixed costs remain constant regardless of production volume (rent, insurance, salaries). Variable costs change with production volume (materials, direct labor, shipping).'
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
     }
-  ]
-};
+  };
+}
 
-export default function BreakEvenCalculatorPage() {
+export default async function BreakEvenCalculatorCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === 'break-even-calculator') || catalogs.en.find((it) => it.id === 'break-even-calculator');
+
+  const toolName: string = entry?.name || 'BreakEvenCalculatorCalculator';
+  const descriptionText: string = entry?.description || 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('break-even-calculator', 'finance', 'BreakEvenCalculatorCalculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
   return (
     <EnhancedToolLayout
-      title={toolConfig.title}
-      description={toolConfig.description}
-      customFeatures={toolConfig.features}
-      customHowToUse={toolConfig.usageGuide}
-      faqs={toolConfig.faqs}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="break-even-calculator"
       category="finance"
+      locale={l}
+      emoji="💰"
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
+      faqs={faqs}
     >
       <BreakEvenCalculator />
     </EnhancedToolLayout>

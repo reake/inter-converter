@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Timestamp Converter converts between human-readable dates and Unix timestamps (epoch time). Essential for developers, system administrators, and anyone working with databases, APIs, or log files that use timestamp formats.",
+    "Supports bidirectional conversion with multiple timestamp formats including seconds and milliseconds since epoch, making it invaluable for debugging, data analysis, and system integration tasks."
+  ],
+  "howToUse": [
+    "Enter a Unix timestamp or select current time",
+    "View the converted human-readable date",
+    "Or enter a date to get the timestamp",
+    "Choose between seconds or milliseconds format",
+    "Copy the result for use in your applications"
+  ],
+  "features": [
+    "Bidirectional timestamp conversion",
+    "Seconds and milliseconds support",
+    "Current timestamp generation",
+    "Multiple date format display",
+    "Time zone awareness",
+    "Batch conversion capabilities"
+  ],
+  "faqs": [
+    {
+      "question": "What is a Unix timestamp?",
+      "answer": "A Unix timestamp is the number of seconds (or milliseconds) that have elapsed since January 1, 1970, 00:00:00 UTC, also known as the Unix epoch."
+    },
+    {
+      "question": "How do I know if my timestamp is in seconds or milliseconds?",
+      "answer": "Timestamps with 10 digits are typically in seconds, while 13-digit timestamps are in milliseconds. The converter automatically detects the format."
+    },
+    {
+      "question": "Does it handle time zones?",
+      "answer": "Yes, the converter can display results in different time zones and accounts for daylight saving time changes."
+    },
+    {
+      "question": "What's the valid timestamp range?",
+      "answer": "The converter supports timestamps from 1970 to 2038 for 32-bit systems, and much further for 64-bit timestamps."
+    }
+  ]
+}

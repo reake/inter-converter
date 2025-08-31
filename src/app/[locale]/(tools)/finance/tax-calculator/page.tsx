@@ -3,75 +3,120 @@ import { EnhancedToolLayout } from "@/components/tools/EnhancedToolLayout";
 import TaxCalculator from "@/components/converters/finance/TaxCalculator";
 import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/tax-calculator-en.json';
+import zhTool from '@/data/tools/finance/tax-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('tax-calculator', 'finance', 'Tax Calculator');
 
-export const metadata: Metadata = {
-  title: 'Tax Calculator - Income Tax & Refund Estimator | InterConverter',
-  description: 'Calculate income tax, estimate tax liability, and plan your tax strategy. Free tax calculator with multiple filing statuses and professional accuracy.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Tax Calculator - Income Tax & Refund Estimator',
-    description: 'Professional tax calculator for income tax planning. Calculate tax liability, estimate refunds, and optimize your tax strategy.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-tax-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Tax Calculator Tool'
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'tax-calculator') || catalogs.en.find((it) => it.id === 'tax-calculator');
+
+  const toolName: string = entry?.name ?? 'Tax Calculator';
+  const description: string = entry?.description ?? 'Calculate federal and state income taxes, estimate refunds, and plan tax payments. Free tax calculator with deductions and credits.';
+  const baseKeywords = generateOptimizedKeywords('tax-calculator', 'finance', 'Tax Calculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const title = `${toolName} | InterConverter`;
+  const canonicalPath = `/${l}/finance/tax-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-tax-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/tax-calculator',
+        zh: '/zh/finance/tax-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/finance/tax-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function TaxCalculatorPage() {
-  const faqs = getFAQsByToolId('tax-calculator', 'finance');
+export default async function TaxCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === 'tax-calculator') || catalogs.en.find((it) => it.id === 'tax-calculator');
+
+  const toolName: string = entry?.name || 'Tax Calculator';
+  const descriptionText: string = entry?.description || 'Calculate federal and state income taxes, estimate refunds, and plan tax payments. Free tax calculator with deductions and credits.';
+  const baseKeywords = generateOptimizedKeywords('tax-calculator', 'finance', 'Tax Calculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Tax Calculator"
-      description="Calculate income tax and plan tax strategies with instant calculations."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="tax-calculator"
       category="finance"
-      emoji="💰"
-      customHowToUse={[
-        "Enter annual gross income amount",
-        "Select filing status (single, married, etc.)",
-        "Add deductions and tax credits",
-        "Calculate federal and state tax liability",
-        "Review applicable tax brackets",
-        "Plan tax optimization strategies"
-      ]}
-      customFeatures={[
-        "Federal and state tax calculation",
-        "Progressive tax bracket analysis",
-        "Standard and itemized deduction optimization",
-        "Tax credit planning and maximization",
-        "Withholding adjustment recommendations",
-        "Tax planning strategies and tips"
-      ]}
+      locale={l}
+      emoji="📊"
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
       faqs={faqs}
     >
       <TaxCalculator />

@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Date Difference Calculator computes the exact time span between two dates, showing results in years, months, weeks, days, hours, minutes, and seconds. Perfect for calculating age differences, project durations, relationship anniversaries, or any time period analysis.",
+    "This tool provides comprehensive date difference analysis with multiple output formats, making it invaluable for legal documentation, project management, and personal milestone tracking."
+  ],
+  "howToUse": [
+    "Enter the start date",
+    "Enter the end date",
+    "View the difference in multiple formats",
+    "Choose specific units for detailed breakdown",
+    "Copy results for documentation"
+  ],
+  "features": [
+    "Precise date difference calculation",
+    "Multiple time unit displays",
+    "Business days calculation",
+    "Leap year consideration",
+    "Historical date support",
+    "Detailed breakdown options"
+  ],
+  "faqs": [
+    {
+      "question": "Can I calculate differences for past dates?",
+      "answer": "Yes, the calculator works with any date combination - past, present, or future dates for comprehensive time span analysis."
+    },
+    {
+      "question": "How accurate are the calculations?",
+      "answer": "The calculator is extremely precise, accounting for leap years, varying month lengths, and exact time differences down to the second."
+    },
+    {
+      "question": "Does it show business days only?",
+      "answer": "Yes, you can view the difference in business days, excluding weekends and optionally holidays from the calculation."
+    },
+    {
+      "question": "What if I enter dates in wrong order?",
+      "answer": "The calculator automatically handles date order and will show the absolute difference between the two dates regardless of input order."
+    }
+  ]
+}

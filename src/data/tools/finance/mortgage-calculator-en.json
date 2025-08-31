@@ -1,0 +1,41 @@
+{
+  "about": [
+    "The Mortgage Calculator provides comprehensive analysis of home loan payments including principal, interest, taxes, insurance, and PMI. This essential tool helps homebuyers understand the true cost of homeownership and plan their budget effectively.",
+    "Calculate monthly payments, compare loan terms, and analyze the impact of down payments and interest rates. Make informed decisions about one of the largest financial commitments of your lifetime."
+  ],
+  "howToUse": [
+    "Enter the home purchase price",
+    "Input your down payment amount or percentage",
+    "Set the loan term (typically 15 or 30 years)",
+    "Enter the interest rate",
+    "Add property taxes, insurance, and PMI if applicable",
+    "Review total monthly payment and cost breakdown"
+  ],
+  "features": [
+    "Complete PITI payment calculation",
+    "Down payment impact analysis",
+    "Loan term comparison (15 vs 30 year)",
+    "PMI calculation and removal timeline",
+    "Property tax and insurance estimates",
+    "Amortization schedule with extra payments",
+    "Total cost of homeownership analysis"
+  ],
+  "faqs": [
+    {
+      "question": "What does PITI stand for?",
+      "answer": "PITI stands for Principal, Interest, Taxes, and Insurance. This represents your total monthly housing payment including the loan payment plus property taxes and homeowners insurance."
+    },
+    {
+      "question": "How much should I put down on a house?",
+      "answer": "While 20% down avoids PMI, many programs allow 3-5% down. Consider your cash flow, other debts, and emergency fund needs when deciding on down payment amount."
+    },
+    {
+      "question": "What is PMI and when can I remove it?",
+      "answer": "PMI (Private Mortgage Insurance) is required when you put down less than 20%. It can typically be removed when you reach 20% equity through payments or home value appreciation."
+    },
+    {
+      "question": "Should I choose a 15-year or 30-year mortgage?",
+      "answer": "15-year mortgages have higher monthly payments but lower total interest costs. 30-year mortgages offer lower monthly payments but cost more over time. Choose based on your budget and financial goals."
+    }
+  ]
+}

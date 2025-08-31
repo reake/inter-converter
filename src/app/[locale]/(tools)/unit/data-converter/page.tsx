@@ -1,77 +1,117 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import DataConverter from '@/components/converters/unit/DataConverter';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/unit/data-converter-en.json';
+import zhTool from '@/data/tools/unit/data-converter-zh.json';
+import unitEn from '@/data/tools/unit.json';
+import unitZh from '@/data/tools/unit-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('data-converter', 'unit', 'Data Storage Converter');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Data Storage Converter - KB, MB, GB, TB & More | InterConverter',
-  description: 'Convert between KB, MB, GB, TB and other data storage units. Free file size conversion calculator for digital storage.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Data Storage Converter - Universal File Size Calculator',
-    description: 'Professional data storage converter supporting all major units. Convert KB, MB, GB, TB with precision for digital storage.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-data-converter.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Data Storage Converter Tool'
+  const catalogs: Record<string, any[]> = {
+    en: unitEn as any[],
+    zh: (unitZh as any[]) || (unitEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'data-converter') || catalogs.en.find((it) => it.id === 'data-converter');
+
+  const toolName: string = entry?.name ?? 'DataConverter';
+  const description: string = entry?.description ?? '';
+  const baseKeywords = generateOptimizedKeywords('data-converter', 'unit', 'DataConverter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/unit/data-converter`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-data-converter.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/unit/data-converter',
+        zh: '/zh/unit/data-converter'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/unit/data-converter'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function DataConverterPage() {
-  const faqs = getFAQsByToolId('data-converter', 'unit');
+export default async function DataConverterPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  // Load JSON content based on locale
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const catalogs: Record<string, any[]> = {
+    en: unitEn as any[],
+    zh: (unitZh as any[]) || (unitEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'data-converter') || catalogs.en.find((it) => it.id === 'data-converter');
+
+  const toolName: string = entry?.name ?? 'DataConverter';
+  const description: string = entry?.description ?? '';
+  const baseKeywords = generateOptimizedKeywords('data-converter', 'unit', 'DataConverter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Data Storage Converter"
-      description="Convert between KB, MB, GB, TB and other data storage units with precision and instant calculations."
+      title={toolName}
+      description={description}
       keywords={keywords}
       toolId="data-converter"
       category="unit"
-      emoji="💾"
-      customHowToUse={[
-        "Select the source data unit from the dropdown",
-        "Enter the data size value in the input field",
-        "Choose the target unit for conversion",
-        "View instant conversion results",
-        "Copy results or switch units as needed"
-      ]}
-      customFeatures={[
-        "Support for all major data storage units",
-        "Binary and decimal system conversions",
-        "High precision calculations",
-        "Common file size reference values",
-        "Bidirectional conversion support",
-        "Real-time calculation as you type"
-      ]}
-      faqs={faqs}
+      aboutContent={toolContent.about}
+      customHowToUse={toolContent.howToUse}
+      customFeatures={toolContent.features}
+      faqs={toolContent.faqs}
     >
       <DataConverter />
     </EnhancedToolLayout>

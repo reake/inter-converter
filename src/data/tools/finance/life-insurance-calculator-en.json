@@ -1,0 +1,31 @@
+{
+  "about": [
+    "The Life Insurance Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
+    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
+    "Use this calculator to make informed financial decisions and optimize your financial strategies."
+  ],
+  "howToUse": [
+    "Enter the relevant financial parameters",
+    "Set calculation options and preferences",
+    "Review detailed calculation results",
+    "Analyze the impact of different scenarios",
+    "Export or save calculation results"
+  ],
+  "features": [
+    "Accurate financial calculation algorithms",
+    "Multiple calculation modes and options",
+    "Real-time result updates",
+    "Detailed analysis reports",
+    "User-friendly interface design"
+  ],
+  "faqs": [
+    {
+      "question": "How do I use this calculator?",
+      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+    },
+    {
+      "question": "Are the calculation results accurate?",
+      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+    }
+  ]
+}

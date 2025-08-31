@@ -1,76 +1,121 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import CreditCardPayoffCalculator from '@/components/converters/finance/CreditCardPayoffCalculator';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/credit-card-interest-calculator-en.json';
+import zhTool from '@/data/tools/finance/credit-card-interest-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('credit-card-interest-calculator', 'finance', 'Credit Card Interest Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Credit Card Interest Calculator - APR Calculator | InterConverter',
-  description: 'Calculate daily and monthly credit card interest charges. Understand how APR affects your balance and minimum payments with instant calculations.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Credit Card Interest Calculator - APR Calculator',
-    description: 'Professional credit card interest calculator for APR analysis. Calculate daily and monthly interest charges.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-credit-card-interest-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Credit Card Interest Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'credit-card-interest-calculator') || catalogs.en.find((it) => it.id === 'credit-card-interest-calculator');
+
+  const toolName: string = entry?.name ?? 'CreditCardPayoffCalculator';
+  const description: string = entry?.description ?? 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('credit-card-interest-calculator', 'finance', 'CreditCardPayoffCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/finance/credit-card-interest-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-credit-card-interest-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/credit-card-interest-calculator',
+        zh: '/zh/finance/credit-card-interest-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/finance/credit-card-interest-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function CreditCardInterestCalculatorPage() {
-  const faqs = getFAQsByToolId('credit-card-interest-calculator', 'finance');
+export default async function CreditCardPayoffCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === 'credit-card-interest-calculator') || catalogs.en.find((it) => it.id === 'credit-card-interest-calculator');
+
+  const toolName: string = entry?.name || 'CreditCardPayoffCalculator';
+  const descriptionText: string = entry?.description || 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('credit-card-interest-calculator', 'finance', 'CreditCardPayoffCalculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Credit Card Interest Calculator"
-      description="Calculate daily and monthly interest charges on your credit card balance based on APR and payment timing"
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="credit-card-interest-calculator"
-      category="credit-cards"
-      emoji="📊"
-      customHowToUse={[
-        "Enter your credit card balance",
-        "Input the annual percentage rate (APR)",
-        "Set your average daily balance",
-        "Calculate daily interest charges",
-        "View monthly finance charges",
-        "Understand compound interest impact"
-      ]}
-      customFeatures={[
-        "Daily interest rate calculation",
-        "Monthly finance charge estimation",
-        "Average daily balance method",
-        "Compound interest visualization",
-        "APR to daily rate conversion",
-        "Interest cost projections"
-      ]}
+      category="finance"
+      locale={l}
+      emoji="💰"
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
       faqs={faqs}
     >
       <CreditCardPayoffCalculator />

@@ -1,77 +1,121 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import SavingsCalculator from '@/components/converters/finance/SavingsCalculator';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/cd-calculator-en.json';
+import zhTool from '@/data/tools/finance/cd-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('cd-calculator', 'finance', 'CD Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'CD Calculator - Certificate of Deposit Returns | InterConverter',
-  description: 'Calculate Certificate of Deposit returns and compare CD rates. Plan fixed-term savings with guaranteed returns.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'CD Calculator - Certificate of Deposit Returns',
-    description: 'Professional CD calculator for fixed-term savings. Calculate Certificate of Deposit returns and compare different CD options.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-cd-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'CD Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'cd-calculator') || catalogs.en.find((it) => it.id === 'cd-calculator');
+
+  const toolName: string = entry?.name ?? 'SavingsCalculator';
+  const description: string = entry?.description ?? 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('cd-calculator', 'finance', 'SavingsCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/finance/cd-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-cd-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/cd-calculator',
+        zh: '/zh/finance/cd-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/finance/cd-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function CDCalculatorPage() {
-  const faqs = getFAQsByToolId('cd-calculator', 'finance');
+export default async function SavingsCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === 'cd-calculator') || catalogs.en.find((it) => it.id === 'cd-calculator');
+
+  const toolName: string = entry?.name || 'SavingsCalculator';
+  const descriptionText: string = entry?.description || 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('cd-calculator', 'finance', 'SavingsCalculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="CD Calculator"
-      description="Calculate certificate of deposit returns and compare CD rates with instant calculations."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="cd-calculator"
       category="finance"
+      locale={l}
       emoji="💰"
-      customHowToUse={[
-        "Enter initial deposit amount for CD",
-        "Set CD interest rate (APY) from bank",
-        "Choose CD term length in months or years",
-        "Select compounding frequency (daily, monthly, quarterly)",
-        "Calculate maturity value and total interest",
-        "Compare different CD options and rates"
-      ]}
-      customFeatures={[
-        "CD maturity value calculation with compound interest",
-        "Interest earnings projection over term",
-        "APY vs APR comparison and analysis",
-        "Compounding frequency impact analysis",
-        "Early withdrawal penalty calculations",
-        "CD ladder planning and optimization"
-      ]}
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
       faqs={faqs}
     >
       <SavingsCalculator />

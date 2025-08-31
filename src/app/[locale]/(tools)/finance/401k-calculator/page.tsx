@@ -3,75 +3,120 @@ import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import InvestmentCalculator from '@/components/converters/finance/InvestmentCalculator';
 import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/401k-calculator-en.json';
+import zhTool from '@/data/tools/finance/401k-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('401k-calculator', 'finance', '401k Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: '401k Calculator - Retirement Savings & Employer Match | InterConverter',
-  description: 'Calculate 401k retirement savings growth with employer matching. Plan your retirement contributions and track long-term growth with professional accuracy.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: '401k Calculator - Retirement Savings Calculator',
-    description: 'Professional 401k calculator with employer matching and contribution optimization. Calculate retirement savings growth and tax benefits.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-401k-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: '401k Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === '401k-calculator') || catalogs.en.find((it) => it.id === '401k-calculator');
+
+  const toolName: string = entry?.name ?? '401k Calculator';
+  const description: string = entry?.description ?? 'Calculate 401k retirement savings growth with employer matching. Plan your retirement contributions and track long-term growth with professional accuracy.';
+  const baseKeywords = generateOptimizedKeywords('401k-calculator', 'finance', '401k Calculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/finance/401k-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-401k-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/401k-calculator',
+        zh: '/zh/finance/401k-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/finance/401k-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function FourOhOneKCalculatorPage() {
-  const faqs = getFAQsByToolId('401k-calculator', 'finance');
+export default async function FourOhOneKCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === '401k-calculator') || catalogs.en.find((it) => it.id === '401k-calculator');
+
+  const toolName: string = entry?.name || '401k Calculator';
+  const descriptionText: string = entry?.description || 'Calculate 401k retirement savings growth with employer matching. Plan your retirement contributions and track long-term growth with professional accuracy.';
+  const baseKeywords = generateOptimizedKeywords('401k-calculator', 'finance', '401k Calculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="401k Calculator"
-      description="Calculate 401k retirement savings growth with employer matching and contribution optimization with instant calculations."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="401k-calculator"
       category="finance"
+      locale={l}
       emoji="💰"
-      customHowToUse={[
-        "Enter current age and planned retirement age",
-        "Input current 401k balance if any",
-        "Set annual contribution amount and percentage",
-        "Add employer matching details and vesting schedule",
-        "Review projected retirement savings growth",
-        "Optimize contribution strategy for maximum benefits"
-      ]}
-      customFeatures={[
-        "401k growth projection with compound interest",
-        "Employer matching calculation and optimization",
-        "Annual contribution limit tracking",
-        "Tax benefit analysis and savings",
-        "Retirement readiness assessment",
-        "Contribution optimization recommendations"
-      ]}
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
       faqs={faqs}
     >
       <InvestmentCalculator />

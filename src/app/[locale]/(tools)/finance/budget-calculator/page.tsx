@@ -3,74 +3,120 @@ import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import BudgetCalculator from '@/components/converters/finance/BudgetCalculator';
 import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/budget-calculator-en.json';
+import zhTool from '@/data/tools/finance/budget-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('budget-calculator', 'finance', 'Budget Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Budget Calculator - Personal Finance Planning | InterConverter',
-  description: 'Create and manage personal budgets with income and expense tracking. Plan your finances effectively with our comprehensive budget planning tool.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Budget Calculator - Personal Finance Planning',
-    description: 'Professional budget calculator for personal finance management. Track income, expenses, and savings goals with comprehensive planning tools.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-budget-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Budget Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'budget-calculator') || catalogs.en.find((it) => it.id === 'budget-calculator');
+
+  const toolName: string = entry?.name ?? 'Budget Calculator';
+  const description: string = entry?.description ?? 'Create and manage personal budgets with income and expense tracking. Plan your finances effectively with our comprehensive budget planning tool.';
+  const baseKeywords = generateOptimizedKeywords('budget-calculator', 'finance', 'Budget Calculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/finance/budget-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-budget-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/budget-calculator',
+        zh: '/zh/finance/budget-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/finance/budget-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function BudgetCalculatorPage() {
-  const faqs = getFAQsByToolId('budget-calculator', 'finance');
+export default async function BudgetCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === 'budget-calculator') || catalogs.en.find((it) => it.id === 'budget-calculator');
+
+  const toolName: string = entry?.name || 'Budget Calculator';
+  const descriptionText: string = entry?.description || 'Create and manage personal budgets with income and expense tracking. Plan your finances effectively with our comprehensive budget planning tool.';
+  const baseKeywords = generateOptimizedKeywords('budget-calculator', 'finance', 'Budget Calculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Budget Calculator"
-      description="Create and manage personal budgets with comprehensive income and expense tracking."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="budget-calculator"
       category="finance"
+      locale={l}
       emoji="💰"
-      customHowToUse={[
-        "Enter your monthly income from all sources",
-        "Add your fixed expenses (rent, utilities, insurance)",
-        "Include variable expenses (groceries, entertainment)",
-        "Set savings goals and track your progress",
-        "Review the budget breakdown and recommendations"
-      ]}
-      customFeatures={[
-        "Income and expense tracking",
-        "Savings goal planning",
-        "Budget category breakdown",
-        "Financial health analysis",
-        "Spending pattern insights",
-        "Budget optimization recommendations"
-      ]}
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
       faqs={faqs}
     >
       <BudgetCalculator />

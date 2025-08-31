@@ -1,61 +1,122 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import { InflationCalculator } from '@/components/converters/finance/InflationCalculator';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/inflation-calculator-en.json';
+import zhTool from '@/data/tools/finance/inflation-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
-export const metadata: Metadata = {
-  title: 'Inflation Calculator - Calculate Inflation Impact | InterConverter',
-  description: 'Calculate the impact of inflation on money value over time. Free inflation calculator with purchasing power analysis.',
-  keywords: ['inflation calculator', 'purchasing power', 'money value', 'cpi calculator', 'inflation impact'],
-  openGraph: {
-    title: 'Inflation Calculator - Calculate Inflation Impact',
-    description: 'Calculate the impact of inflation on money value over time.',
-    type: 'website',
-  },
-};
+// Force static generation
+export const dynamic = 'force-static';
 
-const toolConfig = {
-  title: 'Inflation Calculator',
-  description: 'Calculate the impact of inflation on money value over time',
-  features: [
-    'Inflation impact calculation',
-    'Purchasing power analysis',
-    'Future value estimation',
-    'Historical inflation data',
-    'Real vs nominal value comparison'
-  ],
-  usageGuide: [
-    'Enter initial amount',
-    'Set inflation rate percentage',
-    'Specify time period',
-    'Review purchasing power impact',
-    'Compare real vs nominal values'
-  ],
-  faqs: [
-    {
-      question: 'What is inflation?',
-      answer: 'Inflation is the rate at which the general level of prices for goods and services rises, eroding purchasing power. A 3% inflation rate means what costs $100 today will cost $103 next year.'
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'inflation-calculator') || catalogs.en.find((it) => it.id === 'inflation-calculator');
+
+  const toolName: string = entry?.name ?? 'InflationCalculatorCalculator';
+  const description: string = entry?.description ?? 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('inflation-calculator', 'finance', 'InflationCalculatorCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/finance/inflation-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-inflation-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
     },
-    {
-      question: 'How does inflation affect my money?',
-      answer: 'Inflation reduces the purchasing power of money over time. If inflation is 3% annually, $1000 today will only buy what $970 could buy next year.'
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/inflation-calculator',
+        zh: '/zh/finance/inflation-calculator'
+      }
     },
-    {
-      question: 'What is a typical inflation rate?',
-      answer: 'The Federal Reserve targets 2% annual inflation. Historical US inflation has averaged around 3.2% since 1913, but varies significantly by time period.'
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
     }
-  ]
-};
+  };
+}
 
-export default function InflationCalculatorPage() {
+export default async function InflationCalculatorCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === 'inflation-calculator') || catalogs.en.find((it) => it.id === 'inflation-calculator');
+
+  const toolName: string = entry?.name || 'InflationCalculatorCalculator';
+  const descriptionText: string = entry?.description || 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('inflation-calculator', 'finance', 'InflationCalculatorCalculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
   return (
     <EnhancedToolLayout
-      title={toolConfig.title}
-      description={toolConfig.description}
-      customFeatures={toolConfig.features}
-      customHowToUse={toolConfig.usageGuide}
-      faqs={toolConfig.faqs}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="inflation-calculator"
       category="finance"
+      locale={l}
+      emoji="💰"
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
+      faqs={faqs}
     >
       <InflationCalculator />
     </EnhancedToolLayout>

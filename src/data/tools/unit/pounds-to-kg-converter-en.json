@@ -1,0 +1,46 @@
+{
+  "about": [
+    "The Pounds to Kilograms Converter is a specialized tool for converting weight from pounds (lbs) to kilograms (kg). This converter is essential for international shipping, fitness tracking, cooking, and scientific applications where metric conversions are needed.",
+    "Pounds are commonly used in the United States and UK, while kilograms are the standard metric unit used worldwide. This converter provides precise mathematical conversion between these two important weight units.",
+    "Whether you're calculating shipping weights, tracking fitness goals, converting recipe measurements, or working with international specifications, this tool delivers instant and accurate pound to kilogram conversions."
+  ],
+  "howToUse": [
+    "Enter the weight in pounds (lbs)",
+    "The kilogram equivalent will be calculated instantly",
+    "View the result in kilograms (kg)",
+    "Copy the converted weight for your use",
+    "Use the reverse converter for kilograms to pounds"
+  ],
+  "features": [
+    "Instant pounds to kilograms conversion",
+    "High precision mathematical calculation (1 lb = 0.453592 kg)",
+    "Real-time conversion as you type",
+    "Support for decimal weights",
+    "Scientific precision for professional use",
+    "Mobile-optimized interface",
+    "One-click result copying",
+    "Educational weight conversion information"
+  ],
+  "faqs": [
+    {
+      "question": "What is the exact conversion factor from pounds to kilograms?",
+      "answer": "1 pound = 0.45359237 kilograms exactly. This is the internationally accepted conversion factor."
+    },
+    {
+      "question": "How do I convert pounds to kg quickly?",
+      "answer": "Divide the pound value by 2.205 for a quick approximation, or use our converter for exact results."
+    },
+    {
+      "question": "What are some common weight conversions?",
+      "answer": "Common conversions: 1 lb = 0.45 kg, 10 lbs = 4.54 kg, 50 lbs = 22.68 kg, 100 lbs = 45.36 kg, 200 lbs = 90.72 kg."
+    },
+    {
+      "question": "Why are there different weight systems?",
+      "answer": "The imperial system (pounds) developed in Britain, while the metric system (kilograms) was created for international standardization."
+    },
+    {
+      "question": "How accurate is this converter for shipping?",
+      "answer": "The converter uses the exact international conversion factor, making it suitable for commercial shipping and official documentation."
+    }
+  ]
+}

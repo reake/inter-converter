@@ -1,0 +1,43 @@
+{
+  "about": [
+    "The Credit Card Payoff Calculator is a powerful debt management tool that helps you create a strategic plan to eliminate credit card debt. This calculator shows you exactly how long it will take to pay off your credit cards and how much interest you'll pay based on different payment strategies.",
+    "Credit card debt can be overwhelming, but with the right payoff strategy, you can become debt-free faster and save thousands in interest charges. This calculator compares minimum payments versus accelerated payment plans, helping you visualize the dramatic difference that extra payments can make.",
+    "Whether you're dealing with one credit card or multiple cards, this tool helps you prioritize payments, understand the true cost of carrying balances, and create a realistic timeline for achieving financial freedom from credit card debt."
+  ],
+  "howToUse": [
+    "Enter your current credit card balance",
+    "Input the annual percentage rate (APR)",
+    "Set your planned monthly payment amount",
+    "Compare minimum payment vs. fixed payment scenarios",
+    "Review payoff timeline and total interest calculations",
+    "Adjust payment amounts to optimize your debt elimination strategy"
+  ],
+  "features": [
+    "Payoff timeline calculation with exact month and year",
+    "Total interest cost comparison for different payment amounts",
+    "Minimum payment vs. accelerated payment analysis",
+    "Monthly payment breakdown showing principal and interest",
+    "Interest savings calculation for extra payments",
+    "Multiple credit card debt consolidation planning",
+    "Payment schedule visualization and progress tracking",
+    "Debt avalanche vs. debt snowball strategy comparison"
+  ],
+  "faqs": [
+    {
+      "question": "Should I pay more than the minimum on my credit cards?",
+      "answer": "Yes, paying more than the minimum can save you thousands in interest and help you become debt-free years earlier. Even an extra $25-50 per month can make a significant difference in your payoff timeline."
+    },
+    {
+      "question": "Which credit card should I pay off first?",
+      "answer": "The debt avalanche method suggests paying minimums on all cards while putting extra money toward the highest interest rate card. The debt snowball method focuses on the smallest balance first for psychological motivation."
+    },
+    {
+      "question": "How much should I pay toward credit card debt each month?",
+      "answer": "Aim to pay at least 2-3% of your balance monthly, but ideally pay as much as your budget allows. The faster you pay, the less interest you'll pay overall."
+    },
+    {
+      "question": "Is it worth transferring balances to a 0% APR card?",
+      "answer": "Balance transfers can be beneficial if you qualify for 0% APR promotions and can pay off the balance during the promotional period. Consider transfer fees (typically 3-5%) in your calculations."
+    }
+  ]
+}

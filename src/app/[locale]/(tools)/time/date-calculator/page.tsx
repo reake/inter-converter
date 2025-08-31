@@ -1,77 +1,117 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import { DateCalculator } from '@/components/converters/time/DateCalculator';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/time/date-calculator-en.json';
+import zhTool from '@/data/tools/time/date-calculator-zh.json';
+import timeEn from '@/data/tools/time.json';
+import timeZh from '@/data/tools/time-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('date-calculator', 'time', 'Date Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Date Calculator - Calculate Date Differences & Add Time | InterConverter',
-  description: 'Calculate differences between dates, add or subtract time from dates. Free date calculator with years, months, days breakdown.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Date Calculator - Calculate Date Differences & Add Time',
-    description: 'Professional date calculator for time calculations. Add or subtract time from dates and calculate differences with precise results.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-date-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Date Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: timeEn as any[],
+    zh: (timeZh as any[]) || (timeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'date-calculator') || catalogs.en.find((it) => it.id === 'date-calculator');
+
+  const toolName: string = entry?.name ?? 'DateCalculator';
+  const description: string = entry?.description ?? '';
+  const baseKeywords = generateOptimizedKeywords('date-calculator', 'time', 'DateCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/time/date-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-date-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/time/date-calculator',
+        zh: '/zh/time/date-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/time/date-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function DateCalculatorPage() {
-  const faqs = getFAQsByToolId('date-calculator', 'time');
+export default async function DateCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  // Load JSON content based on locale
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const catalogs: Record<string, any[]> = {
+    en: timeEn as any[],
+    zh: (timeZh as any[]) || (timeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'date-calculator') || catalogs.en.find((it) => it.id === 'date-calculator');
+
+  const toolName: string = entry?.name ?? 'DateCalculator';
+  const description: string = entry?.description ?? '';
+  const baseKeywords = generateOptimizedKeywords('date-calculator', 'time', 'DateCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Date Calculator"
-      description="Calculate differences between dates, add or subtract time from dates with precise calculations."
+      title={toolName}
+      description={description}
       keywords={keywords}
       toolId="date-calculator"
       category="time"
-      emoji="📅"
-      customHowToUse={[
-        "Choose calculation mode (add/subtract or difference)",
-        "Select or enter the starting date",
-        "Add/subtract years, months, days, or hours",
-        "Or select end date for difference calculation",
-        "View results in multiple formats"
-      ]}
-      customFeatures={[
-        "Add or subtract time from dates",
-        "Calculate differences between dates",
-        "Years, months, days breakdown",
-        "Business days calculation",
-        "Leap year handling",
-        "Multiple output formats"
-      ]}
-      faqs={faqs}
+      aboutContent={toolContent.about}
+      customHowToUse={toolContent.howToUse}
+      customFeatures={toolContent.features}
+      faqs={toolContent.faqs}
     >
       <DateCalculator />
     </EnhancedToolLayout>

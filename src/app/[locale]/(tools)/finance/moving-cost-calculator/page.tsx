@@ -1,77 +1,121 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import MovingCostCalculator from '@/components/converters/finance/MovingCostCalculator';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/moving-cost-calculator-en.json';
+import zhTool from '@/data/tools/finance/moving-cost-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('moving-cost-calculator', 'finance', 'Moving Cost Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Moving Cost Calculator - Relocation Expense Calculator | InterConverter',
-  description: 'Calculate moving costs and relocation expenses. Estimate costs for local and long-distance moves with instant calculations.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Moving Cost Calculator - Relocation Expense Calculator',
-    description: 'Professional moving cost calculator for relocation planning. Calculate expenses for local and long-distance moves.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-moving-cost-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Moving Cost Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'moving-cost-calculator') || catalogs.en.find((it) => it.id === 'moving-cost-calculator');
+
+  const toolName: string = entry?.name ?? 'MovingCostCalculator';
+  const description: string = entry?.description ?? 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('moving-cost-calculator', 'finance', 'MovingCostCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/finance/moving-cost-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-moving-cost-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/moving-cost-calculator',
+        zh: '/zh/finance/moving-cost-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/finance/moving-cost-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function MovingCostCalculatorPage() {
-  const faqs = getFAQsByToolId('moving-cost-calculator', 'finance');
+export default async function MovingCostCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === 'moving-cost-calculator') || catalogs.en.find((it) => it.id === 'moving-cost-calculator');
+
+  const toolName: string = entry?.name || 'MovingCostCalculator';
+  const descriptionText: string = entry?.description || 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('moving-cost-calculator', 'finance', 'MovingCostCalculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Moving Cost Calculator"
-      description="Calculate moving costs and relocation expenses with instant calculations."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="moving-cost-calculator"
       category="finance"
-      emoji="📦"
-      customHowToUse={[
-        "Enter total move distance in miles",
-        "Set home size and room count",
-        "Choose required moving services",
-        "Input additional moving costs",
-        "Calculate total moving expense",
-        "Compare different moving options"
-      ]}
-      customFeatures={[
-        "Moving cost estimation by distance",
-        "Detailed service cost breakdown",
-        "Distance-based pricing calculations",
-        "Additional expense tracking tools",
-        "Comprehensive moving budget planning",
-        "Moving company cost comparison"
-      ]}
+      locale={l}
+      emoji="💰"
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
       faqs={faqs}
     >
       <MovingCostCalculator />

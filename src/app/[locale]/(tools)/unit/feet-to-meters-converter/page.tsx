@@ -1,79 +1,119 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
-import FeetToMetersOnlyConverter from '@/components/converters/unit/FeetToMetersOnlyConverter';
-import { getFAQsByToolId } from '@/config/tool-faqs';
+import FeetToMetersConverter from '@/components/converters/unit/FeetToMetersConverter';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/unit/feet-to-meters-converter-en.json';
+import zhTool from '@/data/tools/unit/feet-to-meters-converter-zh.json';
+import unitEn from '@/data/tools/unit.json';
+import unitZh from '@/data/tools/unit-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('feet-to-meters-converter', 'unit', 'Feet to Meters Converter');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Feet to Meters Converter - ft to m Calculator | InterConverter',
-  description: 'Convert feet to meters instantly. Free length converter with common measurements, conversion formula, and usage guide for construction, sports, and international use.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Feet to Meters Converter - ft to m Calculator',
-    description: 'Professional length converter for feet to meters conversion. Instant calculations with formulas and reference tables for construction and sports.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-feet-to-meters-converter.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Feet to Meters Converter Tool'
+  const catalogs: Record<string, any[]> = {
+    en: unitEn as any[],
+    zh: (unitZh as any[]) || (unitEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'feet-to-meters-converter') || catalogs.en.find((it) => it.id === 'feet-to-meters-converter');
+
+  const toolName: string = entry?.name ?? 'FeetToMetersConverter';
+  const description: string = entry?.description ?? '';
+  const baseKeywords = generateOptimizedKeywords('feet-to-meters-converter', 'unit', 'FeetToMetersConverter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/unit/feet-to-meters-converter`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-feet-to-meters-converter.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/unit/feet-to-meters-converter',
+        zh: '/zh/unit/feet-to-meters-converter'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/unit/feet-to-meters-converter'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function FeetToMetersConverterPage() {
-  const faqs = getFAQsByToolId('feet-to-meters-converter', 'unit');
+export default async function FeetToMetersConverterPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  // Load JSON content based on locale
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const catalogs: Record<string, any[]> = {
+    en: unitEn as any[],
+    zh: (unitZh as any[]) || (unitEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'feet-to-meters-converter') || catalogs.en.find((it) => it.id === 'feet-to-meters-converter');
+
+  const toolName: string = entry?.name ?? 'FeetToMetersConverter';
+  const description: string = entry?.description ?? '';
+  const baseKeywords = generateOptimizedKeywords('feet-to-meters-converter', 'unit', 'FeetToMetersConverter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Feet to Meters Converter"
-      description="Convert length from feet to meters with precision and instant calculations."
+      title={toolName}
+      description={description}
       keywords={keywords}
       toolId="feet-to-meters-converter"
       category="unit"
-      emoji="📏"
-      customHowToUse={[
-        "Enter length in feet in the input field",
-        "View the instant meters conversion result",
-        "Use the common lengths tab for quick reference",
-        "Copy results or use the conversion formula",
-        "Switch to reverse conversion if needed"
-      ]}
-      customFeatures={[
-        "Bidirectional length conversion",
-        "Common length reference table",
-        "Precise conversion formulas (m = ft × 0.3048)",
-        "Construction and engineering applications",
-        "Sports and athletics support",
-        "Instant calculation as you type"
-      ]}
-      faqs={faqs}
+      aboutContent={toolContent.about}
+      customHowToUse={toolContent.howToUse}
+      customFeatures={toolContent.features}
+      faqs={toolContent.faqs}
     >
-      <FeetToMetersOnlyConverter />
+      <FeetToMetersConverter />
     </EnhancedToolLayout>
   );
 }

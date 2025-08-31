@@ -20,7 +20,8 @@
     "isActive": true,
     "searchVolume": 165000,
     "difficulty": 3,
-    "icon": "💱"
+    "icon": "💱",
+    "titleSuffix": "Live Exchange Rates for 150+ Currencies"
   },
   {
     "id": "loan-calculator",
@@ -32,7 +33,8 @@
     "isActive": true,
     "searchVolume": 74000,
     "difficulty": 2,
-    "icon": "🏦"
+    "icon": "🏦",
+    "titleSuffix": "Monthly Payment & Amortization Schedule"
   },
   {
     "id": "tax-calculator",
@@ -44,7 +46,8 @@
     "isActive": true,
     "searchVolume": 156000,
     "difficulty": 3,
-    "icon": "🧾"
+    "icon": "🧾",
+    "titleSuffix": "Income Tax & Refund Estimator"
   },
   {
     "id": "mortgage-calculator",
@@ -56,7 +59,8 @@
     "isActive": true,
     "searchVolume": 380000,
     "difficulty": 2,
-    "icon": "🏠"
+    "icon": "🏠",
+    "titleSuffix": "Monthly Payment & Amortization"
   },
   {
     "id": "auto-loan-calculator",
@@ -68,7 +72,8 @@
     "isActive": false,
     "searchVolume": 180000,
     "difficulty": 1,
-    "icon": "🚗"
+    "icon": "🚗",
+    "titleSuffix": "Car Loan Payment Calculator"
   },
   {
     "id": "credit-card-payoff-calculator",
@@ -76,11 +81,12 @@
     "description": "Calculate time and cost to pay off credit card debt",
     "category": "finance",
     "keywords": ["credit card", "debt payoff", "payment calculator", "interest"],
-    "path": "/finance/credit-card-payoff-calculator",
+    "path": "/finance/credit-card-calculator",
     "isActive": false,
-    "searchVolume": 195000,
+    "searchVolume": 134000,
     "difficulty": 1,
-    "icon": "💳"
+    "icon": "💳",
+    "titleSuffix": "Credit Card Payment Calculator"
   },
   {
     "id": "savings-calculator",
@@ -92,7 +98,8 @@
     "isActive": false,
     "searchVolume": 220000,
     "difficulty": 1,
-    "icon": "💰"
+    "icon": "💰",
+    "titleSuffix": "Compound Interest Growth Calculator"
   },
   {
     "id": "401k-calculator",
@@ -104,7 +111,8 @@
     "isActive": false,
     "searchVolume": 85000,
     "difficulty": 2,
-    "icon": "🏛️"
+    "icon": "🏛️",
+    "titleSuffix": "Retirement Savings Calculator"
   },
   {
     "id": "compound-interest-calculator",
@@ -116,7 +124,8 @@
     "isActive": false,
     "searchVolume": 135000,
     "difficulty": 1,
-    "icon": "📈"
+    "icon": "📈",
+    "titleSuffix": "Investment Growth Calculator"
   },
   {
     "id": "retirement-calculator",
@@ -128,7 +137,8 @@
     "isActive": false,
     "searchVolume": 185000,
     "difficulty": 3,
-    "icon": "🌅"
+    "icon": "🌅",
+    "titleSuffix": "Retirement Planning Calculator"
   },
   {
     "id": "investment-calculator",
@@ -140,7 +150,8 @@
     "isActive": false,
     "searchVolume": 145000,
     "difficulty": 2,
-    "icon": "📊"
+    "icon": "📊",
+    "titleSuffix": "Returns & Portfolio Growth Calculator"
   },
   {
     "id": "home-affordability-calculator",
@@ -152,7 +163,8 @@
     "isActive": false,
     "searchVolume": 125000,
     "difficulty": 2,
-    "icon": "🏡"
+    "icon": "🏡",
+    "titleSuffix": "How Much House Can I Afford"
   },
   {
     "id": "debt-payoff-calculator",
@@ -164,7 +176,8 @@
     "isActive": false,
     "searchVolume": 85000,
     "difficulty": 2,
-    "icon": "❄️"
+    "icon": "❄️",
+    "titleSuffix": "Snowball vs Avalanche Method"
   },
   {
     "id": "income-tax-calculator",
@@ -176,7 +189,8 @@
     "isActive": false,
     "searchVolume": 150000,
     "difficulty": 2,
-    "icon": "💼"
+    "icon": "💼",
+    "titleSuffix": "Federal & State Tax Calculator"
   },
   {
     "id": "cost-of-living-calculator",
@@ -188,7 +202,8 @@
     "isActive": false,
     "searchVolume": 165000,
     "difficulty": 2,
-    "icon": "🏙️"
+    "icon": "🏙️",
+    "titleSuffix": "City Comparison Calculator"
   },
   {
     "id": "bitcoin-calculator",
@@ -200,7 +215,8 @@
     "isActive": false,
     "searchVolume": 125000,
     "difficulty": 3,
-    "icon": "₿"
+    "icon": "₿",
+    "titleSuffix": "BTC Investment Returns Calculator"
   },
   {
     "id": "roi-calculator",
@@ -210,9 +226,10 @@
     "keywords": ["roi", "return on investment", "profit", "calculator", "business"],
     "path": "/finance/roi-calculator",
     "isActive": false,
-    "searchVolume": 89000,
-    "difficulty": 2,
-    "icon": "📈"
+    "searchVolume": 78000,
+    "difficulty": 1,
+    "icon": "📈",
+    "titleSuffix": "Return on Investment Calculator"
   },
   {
     "id": "break-even-calculator",
@@ -224,7 +241,8 @@
     "isActive": false,
     "searchVolume": 67000,
     "difficulty": 2,
-    "icon": "⚖️"
+    "icon": "⚖️",
+    "titleSuffix": "Break-Even Analysis Calculator"
   },
   {
     "id": "net-worth-calculator",
@@ -236,7 +254,8 @@
     "isActive": false,
     "searchVolume": 78000,
     "difficulty": 1,
-    "icon": "💎"
+    "icon": "💎",
+    "titleSuffix": "Assets vs Liabilities Calculator"
   },
   {
     "id": "budget-calculator",
@@ -247,8 +266,9 @@
     "path": "/finance/budget-calculator",
     "isActive": false,
     "searchVolume": 156000,
-    "difficulty": 2,
-    "icon": "📊"
+    "difficulty": 1,
+    "icon": "📊",
+    "titleSuffix": "Personal Budget Calculator"
   },
   {
     "id": "tip-calculator",
@@ -260,7 +280,8 @@
     "isActive": false,
     "searchVolume": 234000,
     "difficulty": 1,
-    "icon": "🧾"
+    "icon": "🧾",
+    "titleSuffix": "Tip & Bill Split Calculator"
   },
   {
     "id": "sales-tax-calculator",
@@ -272,7 +293,8 @@
     "isActive": false,
     "searchVolume": 145000,
     "difficulty": 1,
-    "icon": "🏪"
+    "icon": "🏪",
+    "titleSuffix": "VAT & Purchase Tax Calculator"
   },
   {
     "id": "inflation-calculator",
@@ -284,7 +306,8 @@
     "isActive": false,
     "searchVolume": 98000,
     "difficulty": 2,
-    "icon": "📉"
+    "icon": "📉",
+    "titleSuffix": "Purchasing Power Calculator"
   },
   {
     "id": "present-value-calculator",
@@ -296,7 +319,8 @@
     "isActive": false,
     "searchVolume": 56000,
     "difficulty": 3,
-    "icon": "💰"
+    "icon": "💰",
+    "titleSuffix": "NPV & Cash Flow Calculator"
   },
   {
     "id": "future-value-calculator",
@@ -308,7 +332,8 @@
     "isActive": false,
     "searchVolume": 67000,
     "difficulty": 2,
-    "icon": "🔮"
+    "icon": "🔮",
+    "titleSuffix": "Investment Future Value Calculator"
   },
   {
     "id": "annuity-calculator",
@@ -320,7 +345,8 @@
     "isActive": false,
     "searchVolume": 45000,
     "difficulty": 3,
-    "icon": "📅"
+    "icon": "📅",
+    "titleSuffix": "Annuity Payment Calculator"
   },
   {
     "id": "bond-calculator",
@@ -332,7 +358,8 @@
     "isActive": false,
     "searchVolume": 38000,
     "difficulty": 3,
-    "icon": "📜"
+    "icon": "📜",
+    "titleSuffix": "Bond Yield & Price Calculator"
   },
   {
     "id": "dividend-calculator",
@@ -344,7 +371,8 @@
     "isActive": false,
     "searchVolume": 52000,
     "difficulty": 2,
-    "icon": "💰"
+    "icon": "💰",
+    "titleSuffix": "Dividend Yield Calculator"
   },
   {
     "id": "stock-calculator",
@@ -356,7 +384,8 @@
     "isActive": false,
     "searchVolume": 89000,
     "difficulty": 2,
-    "icon": "📈"
+    "icon": "📈",
+    "titleSuffix": "Stock Profit & Loss Calculator"
   },
   {
     "id": "options-calculator",
@@ -368,7 +397,8 @@
     "isActive": false,
     "searchVolume": 34000,
     "difficulty": 4,
-    "icon": "📊"
+    "icon": "📊",
+    "titleSuffix": "Options Pricing Calculator"
   },
   {
     "id": "forex-calculator",
@@ -380,7 +410,8 @@
     "isActive": false,
     "searchVolume": 67000,
     "difficulty": 3,
-    "icon": "💱"
+    "icon": "💱",
+    "titleSuffix": "Forex Pip & Position Calculator"
   },
   {
     "id": "crypto-calculator",
@@ -392,7 +423,8 @@
     "isActive": false,
     "searchVolume": 145000,
     "difficulty": 2,
-    "icon": "₿"
+    "icon": "₿",
+    "titleSuffix": "Cryptocurrency Returns Calculator"
   },
   {
     "id": "ethereum-calculator",
@@ -404,7 +436,8 @@
     "isActive": false,
     "searchVolume": 78000,
     "difficulty": 2,
-    "icon": "⟠"
+    "icon": "⟠",
+    "titleSuffix": "ETH Investment & Staking Calculator"
   },
   {
     "id": "refinance-calculator",
@@ -416,7 +449,8 @@
     "isActive": false,
     "searchVolume": 125000,
     "difficulty": 2,
-    "icon": "🏠"
+    "icon": "🏠",
+    "titleSuffix": "Mortgage Refinance Savings Calculator"
   },
   {
     "id": "rent-vs-buy-calculator",
@@ -428,7 +462,8 @@
     "isActive": false,
     "searchVolume": 89000,
     "difficulty": 2,
-    "icon": "🏘️"
+    "icon": "🏘️",
+    "titleSuffix": "Rent vs Buy Comparison Calculator"
   },
   {
     "id": "property-tax-calculator",
@@ -440,7 +475,8 @@
     "isActive": false,
     "searchVolume": 156000,
     "difficulty": 2,
-    "icon": "🏛️"
+    "icon": "🏛️",
+    "titleSuffix": "Real Estate Tax Calculator"
   },
   {
     "id": "capital-gains-calculator",
@@ -452,7 +488,8 @@
     "isActive": false,
     "searchVolume": 134000,
     "difficulty": 3,
-    "icon": "📈"
+    "icon": "📈",
+    "titleSuffix": "Capital Gains Tax Calculator"
   },
   {
     "id": "business-loan-calculator",
@@ -464,7 +501,8 @@
     "isActive": false,
     "searchVolume": 67000,
     "difficulty": 2,
-    "icon": "🏢"
+    "icon": "🏢",
+    "titleSuffix": "Small Business Loan Calculator"
   },
   {
     "id": "sba-loan-calculator",
@@ -476,7 +514,8 @@
     "isActive": false,
     "searchVolume": 34000,
     "difficulty": 3,
-    "icon": "🏛️"
+    "icon": "🏛️",
+    "titleSuffix": "SBA Loan Payment Calculator"
   },
   {
     "id": "personal-loan-calculator",
@@ -488,7 +527,8 @@
     "isActive": false,
     "searchVolume": 189000,
     "difficulty": 1,
-    "icon": "💳"
+    "icon": "💳",
+    "titleSuffix": "Personal Loan Payment Calculator"
   },
   {
     "id": "student-loan-calculator",
@@ -500,7 +540,8 @@
     "isActive": false,
     "searchVolume": 167000,
     "difficulty": 2,
-    "icon": "🎓"
+    "icon": "🎓",
+    "titleSuffix": "Education Loan Payment Calculator"
   },
   {
     "id": "heloc-calculator",
@@ -512,7 +553,8 @@
     "isActive": false,
     "searchVolume": 78000,
     "difficulty": 2,
-    "icon": "🏠"
+    "icon": "🏠",
+    "titleSuffix": "Home Equity Line of Credit Calculator"
   },
   {
     "id": "home-equity-calculator",
@@ -524,7 +566,8 @@
     "isActive": false,
     "searchVolume": 95000,
     "difficulty": 2,
-    "icon": "🏡"
+    "icon": "🏡",
+    "titleSuffix": "Home Equity Loan Calculator"
   },
   {
     "id": "cd-calculator",
@@ -536,7 +579,8 @@
     "isActive": false,
     "searchVolume": 67000,
     "difficulty": 1,
-    "icon": "💿"
+    "icon": "💿",
+    "titleSuffix": "Certificate of Deposit Calculator"
   },
   {
     "id": "ira-calculator",
@@ -548,7 +592,8 @@
     "isActive": false,
     "searchVolume": 89000,
     "difficulty": 2,
-    "icon": "🏛️"
+    "icon": "🏛️",
+    "titleSuffix": "IRA Retirement Calculator"
   },
   {
     "id": "roth-ira-calculator",
@@ -560,7 +605,8 @@
     "isActive": false,
     "searchVolume": 78000,
     "difficulty": 2,
-    "icon": "🏛️"
+    "icon": "🏛️",
+    "titleSuffix": "Roth IRA Tax-Free Calculator"
   },
   {
     "id": "pension-calculator",
@@ -572,7 +618,8 @@
     "isActive": false,
     "searchVolume": 56000,
     "difficulty": 3,
-    "icon": "👴"
+    "icon": "👴",
+    "titleSuffix": "Pension Benefits Calculator"
   },
   {
     "id": "social-security-calculator",
@@ -584,7 +631,8 @@
     "isActive": false,
     "searchVolume": 145000,
     "difficulty": 3,
-    "icon": "🏛️"
+    "icon": "🏛️",
+    "titleSuffix": "Social Security Benefits Calculator"
   },
   {
     "id": "fire-calculator",
@@ -596,7 +644,8 @@
     "isActive": false,
     "searchVolume": 67000,
     "difficulty": 2,
-    "icon": "🔥"
+    "icon": "🔥",
+    "titleSuffix": "Financial Independence Calculator"
   },
   {
     "id": "emergency-fund-calculator",
@@ -608,7 +657,8 @@
     "isActive": false,
     "searchVolume": 45000,
     "difficulty": 1,
-    "icon": "🚨"
+    "icon": "🚨",
+    "titleSuffix": "Emergency Savings Calculator"
   },
   {
     "id": "debt-to-income-calculator",
@@ -620,7 +670,8 @@
     "isActive": false,
     "searchVolume": 89000,
     "difficulty": 1,
-    "icon": "📊"
+    "icon": "📉",
+    "titleSuffix": "DTI Ratio Calculator"
   },
   {
     "id": "loan-to-value-calculator",
@@ -632,7 +683,8 @@
     "isActive": false,
     "searchVolume": 67000,
     "difficulty": 2,
-    "icon": "🏠"
+    "icon": "🏠",
+    "titleSuffix": "LTV Ratio Calculator"
   },
   {
     "id": "apr-calculator",
@@ -642,9 +694,10 @@
     "keywords": ["apr", "annual percentage rate", "fees", "costs", "calculator"],
     "path": "/finance/apr-calculator",
     "isActive": false,
-    "searchVolume": 78000,
+    "searchVolume": 56000,
     "difficulty": 2,
-    "icon": "📈"
+    "icon": "📈",
+    "titleSuffix": "Annual Percentage Rate Calculator"
   },
   {
     "id": "effective-interest-rate-calculator",
@@ -656,7 +709,8 @@
     "isActive": false,
     "searchVolume": 34000,
     "difficulty": 3,
-    "icon": "📊"
+    "icon": "📊",
+    "titleSuffix": "Effective Annual Rate Calculator"
   },
   {
     "id": "amortization-calculator",
@@ -668,7 +722,8 @@
     "isActive": false,
     "searchVolume": 95000,
     "difficulty": 2,
-    "icon": "📋"
+    "icon": "📋",
+    "titleSuffix": "Loan Amortization Schedule Calculator"
   },
   {
     "id": "balloon-payment-calculator",
@@ -680,7 +735,8 @@
     "isActive": false,
     "searchVolume": 23000,
     "difficulty": 3,
-    "icon": "🎈"
+    "icon": "🎈",
+    "titleSuffix": "Balloon Loan Calculator"
   },
   {
     "id": "lease-calculator",
@@ -692,7 +748,8 @@
     "isActive": false,
     "searchVolume": 134000,
     "difficulty": 2,
-    "icon": "🚗"
+    "icon": "🚗",
+    "titleSuffix": "Car Lease Payment Calculator"
   },
   {
     "id": "lease-vs-buy-calculator",
@@ -704,7 +761,8 @@
     "isActive": false,
     "searchVolume": 67000,
     "difficulty": 2,
-    "icon": "🚙"
+    "icon": "🚙",
+    "titleSuffix": "Lease vs Buy Car Calculator"
   },
   {
     "id": "car-depreciation-calculator",
@@ -716,7 +774,8 @@
     "isActive": false,
     "searchVolume": 45000,
     "difficulty": 2,
-    "icon": "📉"
+    "icon": "📉",
+    "titleSuffix": "Vehicle Depreciation Calculator"
   },
   {
     "id": "insurance-calculator",
@@ -728,7 +787,8 @@
     "isActive": false,
     "searchVolume": 89000,
     "difficulty": 2,
-    "icon": "🛡️"
+    "icon": "🛡️",
+    "titleSuffix": "Insurance Premium Calculator"
   },
   {
     "id": "life-insurance-calculator",
@@ -740,7 +800,8 @@
     "isActive": false,
     "searchVolume": 123000,
     "difficulty": 2,
-    "icon": "👨‍👩‍👧‍👦"
+    "icon": "👨‍👩‍👧‍👦",
+    "titleSuffix": "Life Insurance Needs Calculator"
   },
   {
     "id": "disability-insurance-calculator",
@@ -752,7 +813,8 @@
     "isActive": false,
     "searchVolume": 34000,
     "difficulty": 2,
-    "icon": "♿"
+    "icon": "♿",
+    "titleSuffix": "Disability Insurance Calculator"
   },
   {
     "id": "health-insurance-calculator",
@@ -764,7 +826,8 @@
     "isActive": false,
     "searchVolume": 167000,
     "difficulty": 2,
-    "icon": "🏥"
+    "icon": "🏥",
+    "titleSuffix": "Health Insurance Cost Calculator"
   },
   {
     "id": "auto-insurance-calculator",
@@ -776,7 +839,8 @@
     "isActive": false,
     "searchVolume": 145000,
     "difficulty": 2,
-    "icon": "🚗"
+    "icon": "🚗",
+    "titleSuffix": "Car Insurance Premium Calculator"
   },
   {
     "id": "home-insurance-calculator",
@@ -788,7 +852,8 @@
     "isActive": false,
     "searchVolume": 89000,
     "difficulty": 2,
-    "icon": "🏠"
+    "icon": "🏠",
+    "titleSuffix": "Homeowners Insurance Calculator"
   },
   {
     "id": "umbrella-insurance-calculator",
@@ -800,7 +865,8 @@
     "isActive": false,
     "searchVolume": 23000,
     "difficulty": 3,
-    "icon": "☂️"
+    "icon": "☂️",
+    "titleSuffix": "Umbrella Insurance Coverage Calculator"
   },
   {
     "id": "college-savings-calculator",
@@ -812,7 +878,8 @@
     "isActive": false,
     "searchVolume": 78000,
     "difficulty": 2,
-    "icon": "🎓"
+    "icon": "🎓",
+    "titleSuffix": "College Education Savings Calculator"
   },
   {
     "id": "529-plan-calculator",
@@ -824,7 +891,8 @@
     "isActive": false,
     "searchVolume": 45000,
     "difficulty": 2,
-    "icon": "📚"
+    "icon": "📚",
+    "titleSuffix": "529 Education Savings Plan Calculator"
   },
   {
     "id": "child-support-calculator",
@@ -836,7 +904,8 @@
     "isActive": false,
     "searchVolume": 134000,
     "difficulty": 3,
-    "icon": "👶"
+    "icon": "👶",
+    "titleSuffix": "Child Support Payment Calculator"
   },
   {
     "id": "alimony-calculator",
@@ -848,7 +917,8 @@
     "isActive": false,
     "searchVolume": 67000,
     "difficulty": 3,
-    "icon": "💔"
+    "icon": "💔",
+    "titleSuffix": "Alimony Payment Calculator"
   },
   {
     "id": "divorce-settlement-calculator",
@@ -860,7 +930,8 @@
     "isActive": false,
     "searchVolume": 45000,
     "difficulty": 3,
-    "icon": "⚖️"
+    "icon": "⚖️",
+    "titleSuffix": "Divorce Asset Division Calculator"
   },
   {
     "id": "estate-tax-calculator",
@@ -872,7 +943,8 @@
     "isActive": false,
     "searchVolume": 34000,
     "difficulty": 3,
-    "icon": "🏛️"
+    "icon": "🏛️",
+    "titleSuffix": "Estate Tax Planning Calculator"
   },
   {
     "id": "gift-tax-calculator",
@@ -884,7 +956,8 @@
     "isActive": false,
     "searchVolume": 23000,
     "difficulty": 3,
-    "icon": "🎁"
+    "icon": "🎁",
+    "titleSuffix": "Gift Tax Liability Calculator"
   },
   {
     "id": "inheritance-calculator",
@@ -896,7 +969,8 @@
     "isActive": false,
     "searchVolume": 56000,
     "difficulty": 3,
-    "icon": "👴"
+    "icon": "👴",
+    "titleSuffix": "Inheritance Tax Calculator"
   },
   {
     "id": "trust-calculator",
@@ -908,7 +982,8 @@
     "isActive": false,
     "searchVolume": 28000,
     "difficulty": 4,
-    "icon": "🏛️"
+    "icon": "🏛️",
+    "titleSuffix": "Trust Fund Calculator"
   },
   {
     "id": "paycheck-calculator",
@@ -920,7 +995,8 @@
     "isActive": false,
     "searchVolume": 234000,
     "difficulty": 2,
-    "icon": "💰"
+    "icon": "💰",
+    "titleSuffix": "Salary & Tax Calculator"
   },
   {
     "id": "hourly-to-salary-calculator",
@@ -932,6 +1008,7 @@
     "isActive": false,
     "searchVolume": 167000,
     "difficulty": 1,
-    "icon": "⏰"
+    "icon": "⏰",
+    "titleSuffix": "Hourly to Annual Salary Calculator"
   }
 ]

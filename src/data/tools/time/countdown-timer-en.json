@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Countdown Timer is a versatile online timer that counts down from a specified time to zero. Perfect for productivity sessions, cooking, workouts, presentations, or any activity that requires precise time tracking.",
+    "Features customizable time settings, visual and audio alerts, and can run in the background while you work on other tasks. The timer continues running even if you switch browser tabs."
+  ],
+  "howToUse": [
+    "Set your desired countdown time (hours, minutes, seconds)",
+    "Click start to begin the countdown",
+    "Monitor progress with the visual display",
+    "Receive alerts when time expires",
+    "Use pause/resume controls as needed"
+  ],
+  "features": [
+    "Customizable countdown duration",
+    "Visual progress indicator",
+    "Audio notification alerts",
+    "Pause and resume functionality",
+    "Background operation support",
+    "Full-screen timer mode"
+  ],
+  "faqs": [
+    {
+      "question": "Does the timer work in the background?",
+      "answer": "Yes, the countdown timer continues running even when you switch to other browser tabs or minimize the window."
+    },
+    {
+      "question": "Can I customize the alert sound?",
+      "answer": "The timer includes built-in alert sounds. You can enable or disable audio notifications based on your preference."
+    },
+    {
+      "question": "What's the maximum countdown time?",
+      "answer": "You can set countdowns up to 24 hours, making it suitable for long-duration activities and events."
+    },
+    {
+      "question": "Will the timer reset if I refresh the page?",
+      "answer": "Yes, refreshing the page will reset the timer. Make sure to complete your countdown session before closing or refreshing."
+    }
+  ]
+}

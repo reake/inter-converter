@@ -1,77 +1,117 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import { AreaConverter } from '@/components/converters/unit/AreaConverter';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/unit/area-converter-en.json';
+import zhTool from '@/data/tools/unit/area-converter-zh.json';
+import unitEn from '@/data/tools/unit.json';
+import unitZh from '@/data/tools/unit-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('area-converter', 'unit', 'Area Converter');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Area Converter - Square Meters, Feet, Acres & More | InterConverter',
-  description: 'Convert area units including square meters, square feet, acres, hectares. Professional area conversion calculator for land and property measurements.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Area Converter - Universal Area & Land Calculator',
-    description: 'Professional area converter supporting all major units. Convert square meters, square feet, acres, hectares with precision.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-area-converter.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Area Converter Tool'
+  const catalogs: Record<string, any[]> = {
+    en: unitEn as any[],
+    zh: (unitZh as any[]) || (unitEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'area-converter') || catalogs.en.find((it) => it.id === 'area-converter');
+
+  const toolName: string = entry?.name ?? 'AreaConverter';
+  const description: string = entry?.description ?? '';
+  const baseKeywords = generateOptimizedKeywords('area-converter', 'unit', 'AreaConverter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/unit/area-converter`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-area-converter.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/unit/area-converter',
+        zh: '/zh/unit/area-converter'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/unit/area-converter'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function AreaConverterPage() {
-  const faqs = getFAQsByToolId('area-converter', 'unit');
+export default async function AreaConverterPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  // Load JSON content based on locale
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const catalogs: Record<string, any[]> = {
+    en: unitEn as any[],
+    zh: (unitZh as any[]) || (unitEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'area-converter') || catalogs.en.find((it) => it.id === 'area-converter');
+
+  const toolName: string = entry?.name ?? 'AreaConverter';
+  const description: string = entry?.description ?? '';
+  const baseKeywords = generateOptimizedKeywords('area-converter', 'unit', 'AreaConverter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Area Converter"
-      description="Convert area units including square meters, square feet, acres, hectares with precision and instant calculations."
+      title={toolName}
+      description={description}
       keywords={keywords}
       toolId="area-converter"
       category="unit"
-      emoji="🏞️"
-      customHowToUse={[
-        "Select the source area unit from the dropdown",
-        "Enter the area value in the input field",
-        "Choose the target unit for conversion",
-        "View instant conversion results",
-        "Copy results or switch units as needed"
-      ]}
-      customFeatures={[
-        "Support for all major area units",
-        "Land and property measurement conversions",
-        "High precision calculations",
-        "Common area reference values",
-        "Bidirectional conversion support",
-        "Real-time calculation as you type"
-      ]}
-      faqs={faqs}
+      aboutContent={toolContent.about}
+      customHowToUse={toolContent.howToUse}
+      customFeatures={toolContent.features}
+      faqs={toolContent.faqs}
     >
       <AreaConverter />
     </EnhancedToolLayout>

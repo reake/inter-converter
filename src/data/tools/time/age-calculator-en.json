@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The Age Calculator determines your exact age in years, months, days, hours, minutes, and seconds based on your birth date. It provides comprehensive age information including next birthday countdown, zodiac sign, and interesting age statistics.",
+    "This tool is perfect for calculating precise age for official documents, birthday planning, or simply satisfying curiosity about your exact time on Earth. It handles leap years and different calendar systems accurately."
+  ],
+  "howToUse": [
+    "Enter your birth date using the date picker",
+    "Select the calculation date (default: today)",
+    "View your exact age in multiple formats",
+    "Check your next birthday countdown",
+    "Discover your zodiac sign and fun facts"
+  ],
+  "features": [
+    "Exact age calculation in years, months, days",
+    "Age in hours, minutes, and seconds",
+    "Next birthday countdown",
+    "Zodiac sign determination",
+    "Age milestones and statistics",
+    "Leap year birthday handling"
+  ],
+  "faqs": [
+    {
+      "question": "How accurate is the age calculation?",
+      "answer": "The age calculator is extremely accurate, accounting for leap years, different month lengths, and precise time calculations down to the second."
+    },
+    {
+      "question": "Can I calculate age for future dates?",
+      "answer": "Yes, you can set any calculation date to see how old you'll be on a specific future date, which is useful for planning milestones."
+    },
+    {
+      "question": "What zodiac signs are supported?",
+      "answer": "The calculator determines your Western zodiac sign based on your birth date, covering all 12 traditional astrological signs."
+    },
+    {
+      "question": "Does it handle different time zones?",
+      "answer": "The calculator uses the date you enter without time zone conversion, so enter your birth date in your local time zone for accuracy."
+    }
+  ]
+}

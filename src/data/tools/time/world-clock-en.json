@@ -1,0 +1,39 @@
+{
+  "about": [
+    "The World Clock displays current time across multiple time zones simultaneously, making it perfect for tracking time in different cities around the world. Essential for international business, travel planning, and staying connected with global contacts.",
+    "Features real-time updates with automatic daylight saving time adjustments, customizable city selection, and clean visual display for easy time comparison across regions."
+  ],
+  "howToUse": [
+    "Select cities or time zones to display",
+    "View current time for all selected locations",
+    "Add or remove cities as needed",
+    "Use search to find specific locations",
+    "Monitor time differences at a glance"
+  ],
+  "features": [
+    "Real-time multi-city display",
+    "Automatic DST adjustments",
+    "Searchable city database",
+    "Customizable location list",
+    "Time difference indicators",
+    "24-hour and 12-hour formats"
+  ],
+  "faqs": [
+    {
+      "question": "How often does the time update?",
+      "answer": "The world clock updates in real-time, typically every second, ensuring you always see the current time for all displayed locations."
+    },
+    {
+      "question": "Can I add custom time zones?",
+      "answer": "Yes, you can search for and add any city or time zone from our comprehensive database of world locations."
+    },
+    {
+      "question": "Does it handle daylight saving time?",
+      "answer": "Yes, the clock automatically adjusts for daylight saving time changes in all supported locations throughout the year."
+    },
+    {
+      "question": "How many cities can I display at once?",
+      "answer": "You can display multiple cities simultaneously, with the interface optimized for easy comparison of times across different zones."
+    }
+  ]
+}

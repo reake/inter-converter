@@ -3,72 +3,119 @@ import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import CurrencyConverter from '@/components/converters/finance/CurrencyConverter';
 import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/currency-converter-en.json';
+import zhTool from '@/data/tools/finance/currency-converter-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('currency-converter', 'finance', 'Currency Converter');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'Currency Converter - Live Exchange Rates for 150+ Currencies | InterConverter',
-  description: 'Convert 150+ currencies with live exchange rates. Free, accurate, instant results. USD, EUR, GBP, JPY & more. No registration required.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'Currency Converter - Live Exchange Rates for 150+ Currencies',
-    description: 'Professional currency converter with real-time exchange rates. Convert between 150+ currencies including USD, EUR, GBP, JPY and cryptocurrencies.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-currency-converter.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Currency Converter Tool'
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'currency-converter') || catalogs.en.find((it) => it.id === 'currency-converter');
+
+  const toolName: string = entry?.name ?? 'Currency Converter';
+  const description: string = entry?.description ?? 'Convert between different currencies with real-time exchange rates. Free, accurate, and up-to-date Converters for 150+ currencies.';
+  const baseKeywords = generateOptimizedKeywords('currency-converter', 'finance', 'Currency Converter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const title = `${toolName} | InterConverter`;
+  const canonicalPath = `/${l}/finance/currency-converter`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-currency-converter.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/currency-converter',
+        zh: '/zh/finance/currency-converter'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/finance/currency-converter'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    }
+  };
+}
 
-export default function CurrencyConverterPage() {
-  const faqs = getFAQsByToolId('currency-converter', 'finance');
+export default async function CurrencyConverterPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === 'currency-converter') || catalogs.en.find((it) => it.id === 'currency-converter');
+
+  const toolName: string = entry?.name || 'Currency Converter';
+  const descriptionText: string = entry?.description || 'Convert between different currencies with real-time exchange rates. Free, accurate, and up-to-date Converters for 150+ currencies.';
+  const baseKeywords = generateOptimizedKeywords('currency-converter', 'finance', 'Currency Converter');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="Currency Converter"
-      description="Convert between 150+ currencies with real-time exchange rates. Get accurate currency conversion for travel, business, and trading."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="currency-converter"
       category="finance"
+      locale={l}
       emoji="💱"
-      customHowToUse={[
-        "Enter the amount you want to convert",
-        "Select the source currency (what you have)",
-        "Select the target currency (what you want)",
-        "View the converted amount instantly with current exchange rates"
-      ]}
-      customFeatures={[
-        "Real-time exchange rates for 150+ currencies",
-        "Support for major cryptocurrencies",
-        "Historical exchange rate data",
-        "Popular currency pairs and trends",
-        "Professional trading accuracy"
-      ]}
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
       faqs={faqs}
     >
       <CurrencyConverter />

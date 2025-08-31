@@ -1,77 +1,121 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import CurrencyConverter from '@/components/converters/finance/CurrencyConverter';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/eur-to-usd-calculator-en.json';
+import zhTool from '@/data/tools/finance/eur-to-usd-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('eur-to-usd-calculator', 'finance', 'EUR to USD Calculator');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'EUR to USD Calculator - Euro to Dollar Converter | InterConverter',
-  description: 'Convert Euros to US Dollars with real-time exchange rates. Calculate EUR to USD currency conversion for travel and international transactions.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'EUR to USD Calculator - Euro to Dollar Converter',
-    description: 'Professional EUR to USD calculator with live exchange rates. Convert Euros to US Dollars for travel, business, and international transactions.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-eur-to-usd-calculator.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'EUR to USD Calculator Tool'
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'eur-to-usd-calculator') || catalogs.en.find((it) => it.id === 'eur-to-usd-calculator');
+
+  const toolName: string = entry?.name ?? 'CurrencyConverter';
+  const description: string = entry?.description ?? 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('eur-to-usd-calculator', 'finance', 'CurrencyConverter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/finance/eur-to-usd-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-eur-to-usd-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/eur-to-usd-calculator',
+        zh: '/zh/finance/eur-to-usd-calculator'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/finance/eur-to-usd-calculator'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function EURToUSDCalculatorPage() {
-  const faqs = getFAQsByToolId('eur-to-usd-calculator', 'finance');
+export default async function CurrencyConverterPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === 'eur-to-usd-calculator') || catalogs.en.find((it) => it.id === 'eur-to-usd-calculator');
+
+  const toolName: string = entry?.name || 'CurrencyConverter';
+  const descriptionText: string = entry?.description || 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('eur-to-usd-calculator', 'finance', 'CurrencyConverter');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="EUR to USD Calculator"
-      description="Convert Euros to US Dollars with live exchange rates and historical data for accurate currency conversion."
-      keywords={keywords}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="eur-to-usd-calculator"
       category="finance"
-      emoji="💶"
-      customHowToUse={[
-        "Enter the EUR amount to convert",
-        "View current EUR to USD exchange rate",
-        "Calculate equivalent USD amount",
-        "Check historical rate trends",
-        "Compare with other major currencies",
-        "Get conversion for US travel or business"
-      ]}
-      customFeatures={[
-        "Live EUR/USD exchange rates",
-        "ECB policy impact tracking",
-        "Historical rate analysis",
-        "Cross-border fee calculations",
-        "US travel budget planning",
-        "International trade support"
-      ]}
+      locale={l}
+      emoji="💰"
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
       faqs={faqs}
     >
       <CurrencyConverter />

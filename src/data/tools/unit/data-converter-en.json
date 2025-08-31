@@ -1,0 +1,37 @@
+{
+  "about": [
+    "The Data Converter provides comprehensive conversion between different data storage units including bytes, kilobytes, megabytes, gigabytes, and terabytes. This tool is essential for IT professionals, developers, and anyone working with digital storage calculations.",
+    "Understanding data unit conversions helps in storage planning, bandwidth calculations, and file size management across different systems and applications."
+  ],
+  "howToUse": [
+    "Select the source data unit from the dropdown",
+    "Enter the value you want to convert",
+    "Choose the target unit for conversion",
+    "View the instant conversion result"
+  ],
+  "features": [
+    "Multiple data unit conversions",
+    "Binary and decimal calculations",
+    "Instant conversion results",
+    "Support for all common data units",
+    "Professional accuracy for technical use"
+  ],
+  "faqs": [
+    {
+      "question": "What's the difference between binary and decimal data units?",
+      "answer": "Binary units (1024-based) are used by operating systems, while decimal units (1000-based) are often used by storage manufacturers. Our converter supports both standards."
+    },
+    {
+      "question": "How many bytes are in a kilobyte?",
+      "answer": "In binary: 1 KB = 1,024 bytes. In decimal: 1 KB = 1,000 bytes. The difference becomes more significant with larger units."
+    },
+    {
+      "question": "Why do hard drive sizes appear smaller than advertised?",
+      "answer": "Manufacturers use decimal units (1000-based) while operating systems use binary units (1024-based), creating apparent size differences."
+    },
+    {
+      "question": "Which unit system should I use?",
+      "answer": "Use binary units for system memory and file sizes, decimal units when matching manufacturer specifications or network speeds."
+    }
+  ]
+}

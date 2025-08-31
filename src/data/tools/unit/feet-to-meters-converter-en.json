@@ -1,0 +1,46 @@
+{
+  "about": [
+    "The Feet to Meters Converter is a specialized tool for converting length from feet (ft) to meters (m). This converter is essential for construction, architecture, real estate, and international projects where metric conversions are needed.",
+    "Feet are commonly used in the United States for measuring height, room dimensions, and construction materials, while meters are the standard metric unit used worldwide. This converter provides precise mathematical conversion between these units.",
+    "Whether you're planning construction projects, converting property measurements, or working with international specifications, this tool delivers instant and accurate feet to meter conversions."
+  ],
+  "howToUse": [
+    "Enter the length in feet (ft)",
+    "The meter equivalent will be calculated instantly",
+    "View the result in meters (m)",
+    "Copy the converted length for your use",
+    "Use the reverse converter for meters to feet"
+  ],
+  "features": [
+    "Instant feet to meters conversion",
+    "High precision mathematical calculation (1 ft = 0.3048 m)",
+    "Real-time conversion as you type",
+    "Support for decimal measurements",
+    "Scientific precision for professional use",
+    "Mobile-optimized interface",
+    "One-click result copying",
+    "Educational length conversion information"
+  ],
+  "faqs": [
+    {
+      "question": "What is the exact conversion factor from feet to meters?",
+      "answer": "1 foot = 0.3048 meters exactly. This is the internationally accepted conversion factor."
+    },
+    {
+      "question": "How do I convert feet to meters quickly?",
+      "answer": "Multiply the feet value by 0.3 for a quick approximation, or use our converter for exact results."
+    },
+    {
+      "question": "What are some common length conversions?",
+      "answer": "Common conversions: 1 ft = 0.30 m, 3 ft = 0.91 m, 6 ft = 1.83 m, 10 ft = 3.05 m, 100 ft = 30.48 m."
+    },
+    {
+      "question": "Why are there different measurement systems?",
+      "answer": "The imperial system (feet) developed from traditional English units, while the metric system (meters) was created for international standardization."
+    },
+    {
+      "question": "How accurate is this converter for construction?",
+      "answer": "The converter uses the exact international conversion factor, making it suitable for architectural plans and construction specifications."
+    }
+  ]
+}

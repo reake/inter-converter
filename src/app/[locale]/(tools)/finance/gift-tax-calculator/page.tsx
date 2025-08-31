@@ -1,61 +1,122 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import { GiftTaxCalculator } from '@/components/converters/finance/GiftTaxCalculator';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/gift-tax-calculator-en.json';
+import zhTool from '@/data/tools/finance/gift-tax-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
-export const metadata: Metadata = {
-  title: 'Gift Tax Calculator - Calculate Gift Tax Liability | InterConverter',
-  description: 'Calculate gift tax liability and annual exclusions with our free gift tax calculator. Determine tax obligations for gifts and estate planning.',
-  keywords: ['gift tax calculator', 'gift tax liability', 'annual exclusion', 'estate planning', 'tax calculator'],
-  openGraph: {
-    title: 'Gift Tax Calculator - Calculate Gift Tax Liability',
-    description: 'Calculate gift tax liability and annual exclusions with our free gift tax calculator.',
-    type: 'website',
-  },
-};
+// Force static generation
+export const dynamic = 'force-static';
 
-const toolConfig = {
-  title: 'Gift Tax Calculator',
-  description: 'Calculate gift tax liability and annual exclusions for estate planning',
-  features: [
-    'Calculate federal gift tax liability',
-    'Annual exclusion tracking',
-    'Lifetime exemption calculations',
-    'Multiple gift scenarios',
-    'Tax planning insights'
-  ],
-  usageGuide: [
-    'Enter the total gift amount',
-    'Specify the relationship to recipient',
-    'Review annual exclusion limits',
-    'Calculate tax liability',
-    'Plan your gift strategy'
-  ],
-  faqs: [
-    {
-      question: 'What is the annual gift tax exclusion?',
-      answer: 'The annual gift tax exclusion is the amount you can give to any individual each year without triggering gift tax. For 2024, this amount is $18,000 per recipient.'
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'gift-tax-calculator') || catalogs.en.find((it) => it.id === 'gift-tax-calculator');
+
+  const toolName: string = entry?.name ?? 'GiftTaxCalculatorCalculator';
+  const description: string = entry?.description ?? 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('gift-tax-calculator', 'finance', 'GiftTaxCalculatorCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/finance/gift-tax-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-gift-tax-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
     },
-    {
-      question: 'When do I need to pay gift tax?',
-      answer: 'Gift tax is owed when you exceed both the annual exclusion and your lifetime exemption amount. Most people never pay gift tax due to the high lifetime exemption.'
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/gift-tax-calculator',
+        zh: '/zh/finance/gift-tax-calculator'
+      }
     },
-    {
-      question: 'Do I need to file a gift tax return?',
-      answer: 'You must file Form 709 if you give more than the annual exclusion to any individual, even if no tax is owed due to the lifetime exemption.'
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
     }
-  ]
-};
+  };
+}
 
-export default function GiftTaxCalculatorPage() {
+export default async function GiftTaxCalculatorCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === 'gift-tax-calculator') || catalogs.en.find((it) => it.id === 'gift-tax-calculator');
+
+  const toolName: string = entry?.name || 'GiftTaxCalculatorCalculator';
+  const descriptionText: string = entry?.description || 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('gift-tax-calculator', 'finance', 'GiftTaxCalculatorCalculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
   return (
     <EnhancedToolLayout
-      title={toolConfig.title}
-      description={toolConfig.description}
-      customFeatures={toolConfig.features}
-      customHowToUse={toolConfig.usageGuide}
-      faqs={toolConfig.faqs}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="gift-tax-calculator"
       category="finance"
+      locale={l}
+      emoji="💰"
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
+      faqs={faqs}
     >
       <GiftTaxCalculator />
     </EnhancedToolLayout>

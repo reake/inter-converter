@@ -1,0 +1,43 @@
+{
+  "about": [
+    "The Retirement Calculator is a comprehensive financial planning tool designed to help you determine how much you need to save for retirement and whether you're on track to meet your retirement goals. This calculator takes into account your current age, desired retirement age, current savings, expected contributions, and investment returns to project your retirement readiness.",
+    "Planning for retirement is one of the most important financial decisions you'll make. This tool helps you understand the power of compound interest, the impact of consistent contributions, and the importance of starting early. Whether you're just beginning your career or approaching retirement, this calculator provides valuable insights into your financial future.",
+    "The calculator also helps you explore different scenarios, such as increasing your contributions, delaying retirement, or adjusting your expected lifestyle in retirement. Use this tool to make informed decisions about your retirement savings strategy and ensure you can maintain your desired standard of living in retirement."
+  ],
+  "howToUse": [
+    "Enter your current age and desired retirement age",
+    "Input your current retirement savings balance across all accounts",
+    "Set your expected annual contribution amount",
+    "Specify your expected annual rate of return (typically 6-8%)",
+    "Enter your desired annual retirement income",
+    "Review the projection and adjust parameters to optimize your plan"
+  ],
+  "features": [
+    "Comprehensive retirement savings projection with compound growth",
+    "Retirement readiness assessment and gap analysis",
+    "Multiple scenario planning for different contribution levels",
+    "Social Security benefit estimation and integration",
+    "Inflation adjustment calculations for realistic planning",
+    "Required savings rate calculation to meet retirement goals",
+    "Interactive charts showing savings growth over time",
+    "Retirement income sustainability analysis"
+  ],
+  "faqs": [
+    {
+      "question": "How much should I save for retirement?",
+      "answer": "Financial experts generally recommend saving 10-15% of your income for retirement. However, the exact amount depends on your retirement goals, current age, and expected retirement lifestyle. Starting early allows compound interest to work in your favor."
+    },
+    {
+      "question": "What's a realistic rate of return for retirement investments?",
+      "answer": "Historical stock market returns average around 10% annually, but a conservative estimate of 6-8% is often used for retirement planning to account for market volatility and a more conservative asset allocation as you approach retirement."
+    },
+    {
+      "question": "When should I start saving for retirement?",
+      "answer": "The best time to start saving for retirement is as early as possible. Due to compound interest, someone who starts saving at 25 will need to save much less per month than someone who starts at 35 to reach the same retirement goal."
+    },
+    {
+      "question": "How much income will I need in retirement?",
+      "answer": "A common rule of thumb is that you'll need 70-90% of your pre-retirement income to maintain your lifestyle in retirement. However, this varies based on your expected expenses, healthcare costs, and desired activities in retirement."
+    }
+  ]
+}

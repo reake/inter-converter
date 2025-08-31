@@ -1,61 +1,122 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import { ROICalculator } from '@/components/converters/finance/ROICalculator';
+import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/finance/roi-calculator-en.json';
+import zhTool from '@/data/tools/finance/roi-calculator-zh.json';
+import financeEn from '@/data/tools/finance.json';
+import financeZh from '@/data/tools/finance-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
-export const metadata: Metadata = {
-  title: 'ROI Calculator - Return on Investment Calculator | InterConverter',
-  description: 'Calculate return on investment (ROI) for business and personal investments. Free ROI calculator with profit analysis.',
-  keywords: ['roi calculator', 'return on investment', 'profit calculator', 'investment analysis', 'business calculator'],
-  openGraph: {
-    title: 'ROI Calculator - Return on Investment Calculator',
-    description: 'Calculate return on investment (ROI) for business and personal investments.',
-    type: 'website',
-  },
-};
+// Force static generation
+export const dynamic = 'force-static';
 
-const toolConfig = {
-  title: 'ROI Calculator',
-  description: 'Calculate return on investment for business and personal investments',
-  features: [
-    'Calculate ROI percentage',
-    'Investment profit analysis',
-    'Multiple investment comparison',
-    'Time-based ROI calculations',
-    'Business investment evaluation'
-  ],
-  usageGuide: [
-    'Enter initial investment amount',
-    'Input final investment value',
-    'Specify investment period',
-    'Review ROI percentage',
-    'Compare investment options'
-  ],
-  faqs: [
-    {
-      question: 'What is ROI?',
-      answer: 'ROI (Return on Investment) is a performance measure used to evaluate the efficiency of an investment. It measures the amount of return on an investment relative to the investment\'s cost.'
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const catalogs: Record<string, any[]> = {
+    en: financeEn as any[],
+    zh: (financeZh as any[]) || (financeEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'roi-calculator') || catalogs.en.find((it) => it.id === 'roi-calculator');
+
+  const toolName: string = entry?.name ?? 'RoiCalculatorCalculator';
+  const description: string = entry?.description ?? 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('roi-calculator', 'finance', 'RoiCalculatorCalculator');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/finance/roi-calculator`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-roi-calculator.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
     },
-    {
-      question: 'How is ROI calculated?',
-      answer: 'ROI is calculated as: (Current Value - Initial Investment) / Initial Investment × 100%. A positive ROI indicates a profitable investment.'
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/finance/roi-calculator',
+        zh: '/zh/finance/roi-calculator'
+      }
     },
-    {
-      question: 'What is a good ROI?',
-      answer: 'A good ROI varies by industry and investment type. Generally, an annual ROI of 7-10% is considered good for long-term investments, while business investments may target higher returns.'
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
     }
-  ]
-};
+  };
+}
 
-export default function ROICalculatorPage() {
+export default async function RoiCalculatorCalculatorPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const fallbackContent: ToolContent = enTool;
+
+  const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
+  const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;
+  const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
+  const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
+
+  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
+  const entry = catalogs[l]?.find((it) => it.id === 'roi-calculator') || catalogs.en.find((it) => it.id === 'roi-calculator');
+
+  const toolName: string = entry?.name || 'RoiCalculatorCalculator';
+  const descriptionText: string = entry?.description || 'Professional financial calculator for accurate calculations and planning.';
+  const baseKeywords = generateOptimizedKeywords('roi-calculator', 'finance', 'RoiCalculatorCalculator');
+  const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
   return (
     <EnhancedToolLayout
-      title={toolConfig.title}
-      description={toolConfig.description}
-      customFeatures={toolConfig.features}
-      customHowToUse={toolConfig.usageGuide}
-      faqs={toolConfig.faqs}
+      title={toolName}
+      description={descriptionText}
+      keywords={pageKeywords}
       toolId="roi-calculator"
       category="finance"
+      locale={l}
+      emoji="💰"
+      aboutContent={about}
+      customHowToUse={howToUse}
+      customFeatures={features}
+      faqs={faqs}
     >
       <ROICalculator />
     </EnhancedToolLayout>

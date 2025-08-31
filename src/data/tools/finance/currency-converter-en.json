@@ -1,0 +1,40 @@
+{
+  "about": [
+    "The Currency Converter provides real-time exchange rates for over 150 currencies worldwide. Whether you're traveling, conducting international business, or trading forex, this tool delivers accurate and up-to-date conversion rates.",
+    "Our converter supports major currencies like USD, EUR, GBP, JPY, CNY, and many others, plus popular cryptocurrencies. Get instant conversions with professional-grade accuracy for all your financial needs."
+  ],
+  "howToUse": [
+    "Enter the amount you want to convert",
+    "Select the source currency (what you have)",
+    "Select the target currency (what you want)",
+    "View the converted amount instantly with current exchange rates",
+    "Check historical rates and trends for better timing"
+  ],
+  "features": [
+    "Real-time exchange rates for 150+ currencies",
+    "Support for major cryptocurrencies",
+    "Historical exchange rate data and charts",
+    "Popular currency pairs and trends",
+    "Professional trading accuracy",
+    "No registration required",
+    "Mobile-friendly responsive design"
+  ],
+  "faqs": [
+    {
+      "question": "How often are exchange rates updated?",
+      "answer": "Our exchange rates are updated in real-time from multiple financial data providers to ensure accuracy. Rates refresh automatically every few minutes during market hours."
+    },
+    {
+      "question": "Are the conversion rates accurate for large amounts?",
+      "answer": "Yes, our rates are suitable for both small personal transactions and large business conversions. However, for very large transactions, banks may offer different rates due to spreads and fees."
+    },
+    {
+      "question": "Can I see historical exchange rates?",
+      "answer": "Yes, you can view historical exchange rate data and charts to analyze trends and make informed decisions about when to exchange currencies."
+    },
+    {
+      "question": "Do you support cryptocurrency conversions?",
+      "answer": "Yes, we support major cryptocurrencies including Bitcoin, Ethereum, and others. Crypto rates are updated frequently due to their volatile nature."
+    }
+  ]
+}

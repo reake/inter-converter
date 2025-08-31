@@ -1,0 +1,37 @@
+{
+  "about": [
+    "The CM to Inches Converter provides instant conversion from centimeters to inches with high precision. This tool is essential for international measurements, design work, and everyday conversions between metric and imperial systems.",
+    "Understanding centimeter to inch conversions helps in various fields including construction, fashion, engineering, and crafts where precise measurements are crucial."
+  ],
+  "howToUse": [
+    "Enter the centimeter value in the input field",
+    "View the instant conversion to inches",
+    "Copy the result for your calculations",
+    "Use the reverse conversion if needed"
+  ],
+  "features": [
+    "Instant CM to inches conversion",
+    "High precision calculations",
+    "Reverse conversion capability",
+    "Copy result functionality",
+    "Clean, intuitive interface"
+  ],
+  "faqs": [
+    {
+      "question": "How many inches are in 1 centimeter?",
+      "answer": "1 centimeter equals approximately 0.393701 inches. This is the standard conversion factor used internationally."
+    },
+    {
+      "question": "What's the formula for converting CM to inches?",
+      "answer": "To convert centimeters to inches, multiply the centimeter value by 0.393701. Formula: inches = cm × 0.393701"
+    },
+    {
+      "question": "Why do we need CM to inches conversion?",
+      "answer": "This conversion is essential when working with international measurements, especially when dealing with US imperial system requirements in global projects."
+    },
+    {
+      "question": "Is the conversion accurate for all measurements?",
+      "answer": "Yes, our converter uses the internationally accepted conversion factor and provides accurate results for all practical measurement needs."
+    }
+  ]
+}
