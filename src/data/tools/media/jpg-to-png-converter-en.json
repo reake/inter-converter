@@ -1,0 +1,46 @@
+{
+  "about": [
+    "The JPG to PNG Converter is a powerful online tool that transforms JPEG images into PNG format with transparency support. This converter is essential for web designers, graphic artists, and content creators who need to maintain image quality while adding transparency capabilities to their images.",
+    "Converting JPG to PNG format allows you to preserve image quality while gaining the ability to use transparent backgrounds, making it perfect for logos, icons, and web graphics that need to blend seamlessly with different backgrounds."
+  ],
+  "howToUse": [
+    "Select or drag and drop your JPG/JPEG image files into the upload area",
+    "Choose PNG conversion settings and quality optimization options",
+    "Click the convert button to process your images instantly",
+    "Preview the converted PNG files with transparency support",
+    "Download individual files or use batch download for multiple conversions",
+    "Use advanced settings for compression and transparency options"
+  ],
+  "features": [
+    "High-quality JPG to PNG conversion",
+    "Transparency support and background removal",
+    "Batch processing for multiple image files",
+    "Quality optimization and compression settings",
+    "Drag and drop file upload interface",
+    "Instant preview and download capabilities",
+    "Support for various JPEG formats and sizes",
+    "Secure client-side processing for privacy"
+  ],
+  "faqs": [
+    {
+      "question": "What's the difference between JPG and PNG formats?",
+      "answer": "JPG uses lossy compression and doesn't support transparency, while PNG uses lossless compression and supports transparent backgrounds. PNG is ideal for graphics with text, logos, and images requiring transparency."
+    },
+    {
+      "question": "Will converting JPG to PNG improve image quality?",
+      "answer": "Converting JPG to PNG won't improve the original quality, but it prevents further quality loss and adds transparency support. PNG preserves the current quality without additional compression."
+    },
+    {
+      "question": "Can I convert multiple JPG files to PNG at once?",
+      "answer": "Yes, our converter supports batch processing. You can upload multiple JPG files simultaneously and convert them all to PNG format in one operation."
+    },
+    {
+      "question": "Does the PNG conversion support transparency?",
+      "answer": "Yes, the converted PNG files support full transparency. You can use additional tools to remove backgrounds or add transparent areas to your converted images."
+    },
+    {
+      "question": "Are there file size limits for JPG to PNG conversion?",
+      "answer": "Our converter handles various file sizes efficiently. For optimal performance, we recommend files under 50MB per image, though larger files are supported."
+    }
+  ]
+}

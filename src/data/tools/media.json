@@ -9,7 +9,8 @@
     "isActive": true,
     "searchVolume": 201000,
     "difficulty": 4,
-    "icon": "📄"
+    "icon": "📄",
+    "titleSuffix": "Document Format Converter"
   },
   {
     "id": "jpg-to-png-converter",
@@ -21,6 +22,7 @@
     "isActive": true,
     "searchVolume": 89000,
     "difficulty": 2,
-    "icon": "🖼️"
+    "icon": "🖼️",
+    "titleSuffix": "Image Format Converter"
   }
 ]

@@ -10,7 +10,694 @@
     "theme": "Theme",
     "light": "Light",
     "dark": "Dark",
-    "system": "System"
+    "system": "System",
+    "exploreAllTools": "Explore All Tools",
+    "browseCategories": "Browse Categories",
+    "viewAllTools": "View All Tools",
+    "viewMore": "View More",
+    "searchPlaceholder": "Search Converters tools..."
+  },
+  "homepage": {
+    "hero": {
+      "title": "InterConverter",
+      "subtitle": "Free Online Converters & Calculators Tools",
+      "description": "Professional-grade Converters tools and calculators for developers, engineers, students, and professionals. Completely free, secure, and works instantly in your browser without downloads."
+    },
+    "sections": {
+      "popularTools": "Most Popular Tools",
+      "browseByCategory": "Browse Tools by Category",
+      "faq": "Frequently Asked Questions",
+      "faqSubtitle": "Everything you need to know about our Converters tools",
+      "aboutTitle": "About InterConverter.com",
+      "aboutDescription": "InterConverter.com is the premier destination for professional-grade Converters tools and calculators. Built by developers for developers, designers, engineers, and professionals who demand accuracy and efficiency.",
+      "whyChoose": "Why Choose InterConverter?",
+      "trustedBy": "Trusted by Professionals Worldwide",
+      "trustedByDescription": "From automotive engineers calculating compression ratios to web developers converting colors, InterConverter.com serves thousands of professionals daily. Join the community of users who rely on our tools for accurate, fast, and reliable Converterss."
+    },
+    "features": {
+      "professionalQuality": {
+        "title": "Professional Quality",
+        "description": "Every tool is built with precision and tested for accuracy. We use industry-standard algorithms and formulas to ensure reliable results for professional use."
+      },
+      "lightningFast": {
+        "title": "Lightning Fast",
+        "description": "All calculations happen instantly in your browser. No server delays, no waiting times. Get results immediately with our optimized, client-side processing."
+      },
+      "privacyFirst": {
+        "title": "Privacy First",
+        "description": "Your data never leaves your device. No tracking, no data collection, no user accounts required. Complete privacy and security for all your Converterss."
+      },
+      "mobileOptimized": {
+        "title": "Mobile Optimized",
+        "description": "Perfect experience on all devices. Responsive design ensures all tools work flawlessly on desktop, tablet, and mobile devices."
+      },
+      "globalStandards": {
+        "title": "Global Standards",
+        "description": "Support for international standards, multiple currencies, units, and formats. Built for a global audience with localization and accessibility in mind."
+      },
+      "alwaysUpdated": {
+        "title": "Always Updated",
+        "description": "Regular updates with new tools, features, and improvements. We continuously add new Converters tools based on user feedback and industry needs."
+      },
+      "instantResults": {
+        "title": "Instant Results",
+        "description": "Get immediate, accurate Converterss without delays. All processing happens in your browser for maximum speed."
+      },
+      "completelyFree": {
+        "title": "Completely Free",
+        "description": "No subscriptions, no hidden fees, no registration required. Professional-grade tools available to everyone."
+      },
+      "privacyProtected": {
+        "title": "Privacy Protected",
+        "description": "Your data stays on your device. No tracking, no data collection, complete privacy for all your Converterss."
+      }
+    },
+    "faq": [
+      {
+        "question": "Are these tools really free?",
+        "answer": "Yes! All our Converters tools are completely free to use with no hidden costs, registration requirements, or usage limits. We believe in providing accessible tools for everyone."
+      },
+      {
+        "question": "Do you store my data?",
+        "answer": "No, all calculations are performed locally in your browser. We don't store, track, or have access to your input data or results. Your privacy is our priority."
+      },
+      {
+        "question": "How accurate are the results?",
+        "answer": "Our tools use industry-standard formulas and regularly updated data sources to ensure maximum accuracy. For financial tools, we use real-time exchange rates and official data."
+      },
+      {
+        "question": "Do I need to create an account?",
+        "answer": "No registration required! Simply visit any tool page and start converting immediately. All tools work instantly without any sign-up process."
+      },
+      {
+        "question": "Can I use these tools on mobile?",
+        "answer": "Absolutely! All our tools are fully responsive and optimized for mobile devices. They work perfectly on smartphones, tablets, and desktop computers."
+      },
+      {
+        "question": "How often are exchange rates updated?",
+        "answer": "Currency exchange rates are updated every 15 minutes during market hours from reliable financial data providers to ensure you get the most current rates."
+      }
+    ],
+    "professionals": [
+      "🔧 Engineers",
+      "💻 Developers",
+      "🎨 Designers",
+      "🏗️ Architects",
+      "📊 Analysts",
+      "🔬 Scientists"
+    ]
+  },
+  "toolsPage": {
+    "hero": {
+      "title": "All Free Online Tools",
+      "description": "Browse our complete collection of converters and calculators. Covering unit conversion, financial calculations, health tools, and more categories.",
+      "stats": {
+        "professionalTools": "250+ Professional Tools",
+        "freeToUse": "100% Free to Use",
+        "accurateResults": "Real-time Accurate Results"
+      }
+    },
+    "sections": {
+      "popularTools": "Most Popular Tools",
+      "popularToolsDescription": "The most frequently used converters and calculators by our users",
+      "browseByCategory": "Browse Tools by Category",
+      "browseByCategoryDescription": "Explore our professional tool collections organized by functionality",
+      "callToAction": "Need a Specific Calculator or Converter?",
+      "callToActionDescription": "We're continuously expanding our collection of professional tools. Request new calculators or suggest improvements!"
+    },
+    "actions": {
+      "useTool": "Use Tool",
+      "viewMore": "View More",
+      "requestNewTool": "Request New Tool",
+      "backToHome": "Back to Home",
+      "toolsCount": "tools"
+    }
+  },
+  "categoryPages": {
+    "auto": {
+      "title": "Automotive Calculators",
+      "description": "19+ professional automotive calculators for engine performance, tuning, and modifications. Based on the original Mark's Street And Strip InterConverter™.",
+      "stats": {
+        "autoTools": "19+ Auto Tools",
+        "realTimeCalculations": "Real-time calculations",
+        "professionalFormulas": "Professional formulas",
+        "mobileOptimized": "Mobile optimized"
+      },
+      "sections": {
+        "enginePerformance": {
+          "title": "Engine Performance",
+          "description": "Calculate displacement, compression ratios, and carburetor sizing for optimal engine performance"
+        },
+        "drivetrainGearing": {
+          "title": "Drivetrain & Gearing",
+          "description": "Optimize gear ratios and analyze drivetrain performance for better acceleration and top speed"
+        },
+        "performanceAnalysis": {
+          "title": "Performance Analysis",
+          "description": "Analyze horsepower, torque, and overall vehicle performance metrics"
+        },
+        "fluidsWeight": {
+          "title": "Fluids & Weight",
+          "description": "Calculate fluid capacities and weight distributions for optimal vehicle setup"
+        }
+      },
+      "infoCards": {
+        "aboutCalculators": {
+          "title": "About These Calculators",
+          "content": "These automotive calculators are based on proven formulas and real-world experience from the original Mark's Street And Strip InterConverter™. They're designed for mechanics, racers, and automotive enthusiasts who need accurate calculations for engine modifications and performance tuning."
+        },
+        "safetyNotice": {
+          "title": "Safety Notice",
+          "content": "These calculations are for educational and estimation purposes only. Always consult with qualified automotive professionals for engine modifications, tuning, and safety considerations. Actual results may vary based on specific conditions."
+        }
+      },
+      "difficulty": {
+        "beginner": "Beginner",
+        "intermediate": "Intermediate",
+        "advanced": "Advanced"
+      },
+      "seo": {
+        "title": "Free Automotive Converters & Engine Tools | InterConverter",
+        "keywords": ["automotive calculators", "engine calculators", "carburetor cfm calculator", "compression ratio calculator", "gear ratio calculator", "horsepower calculator", "rpm calculator", "engine tuning tools", "automotive performance tools", "free automotive calculators"]
+      }
+    },
+    "finance": {
+      "title": "Financial Calculators & Tools",
+      "description": "Comprehensive collection of 77+ financial calculators for loans, mortgages, investments, taxes, and more. Free tools to help you make informed financial decisions and plan your financial future.",
+      "stats": {
+        "financialTools": "77+ Financial Tools",
+        "bankingLoans": "Banking & Loans",
+        "investmentPlanning": "Investment Planning",
+        "realEstate": "Real Estate"
+      },
+      "sections": {
+        "popular": {
+          "title": "Most Popular Financial Calculators",
+          "description": "Start with these most-used financial planning tools"
+        },
+        "loansCredit": {
+          "title": "Loans & Credit",
+          "description": "Calculate loan payments, interest costs, and repayment strategies"
+        },
+        "mortgagesRealEstate": {
+          "title": "Mortgages & Real Estate",
+          "description": "Home loan calculators, refinancing tools, and real estate analysis"
+        },
+        "creditCards": {
+          "title": "Credit Cards",
+          "description": "Credit card payoff calculators and debt management tools"
+        },
+        "bankingSavings": {
+          "title": "Banking & Savings",
+          "description": "Savings growth calculators and compound interest tools"
+        },
+        "allCategories": {
+          "title": "All Financial Categories",
+          "description": "Browse tools by category"
+        }
+      },
+      "categories": {
+        "loans": {
+          "name": "Loans & Credit",
+          "description": "Loan calculators and credit tools"
+        },
+        "mortgages": {
+          "name": "Mortgages",
+          "description": "Home loan and mortgage calculators"
+        },
+        "investments": {
+          "name": "Investments",
+          "description": "Investment and portfolio tools"
+        },
+        "banking": {
+          "name": "Banking",
+          "description": "Savings and banking calculators"
+        }
+      },
+      "tips": {
+        "planningTips": {
+          "title": "Financial Planning Tips",
+          "emergencyFund": {
+            "title": "Build Emergency Fund",
+            "description": "Save 3-6 months of expenses for unexpected situations"
+          },
+          "payOffDebt": {
+            "title": "Pay Off High-Interest Debt",
+            "description": "Prioritize credit card debt and high-interest loans"
+          },
+          "startInvesting": {
+            "title": "Start Investing Early",
+            "description": "Take advantage of compound interest and time"
+          },
+          "diversify": {
+            "title": "Diversify Investments",
+            "description": "Spread risk across different asset classes"
+          }
+        },
+        "milestones": {
+          "title": "Financial Milestones",
+          "twenties": {
+            "title": "20s: Build Foundation",
+            "description": "Emergency fund, pay off student loans, start 401k"
+          },
+          "thirties": {
+            "title": "30s: Accelerate Growth",
+            "description": "Increase savings rate, consider home purchase"
+          },
+          "forties": {
+            "title": "40s: Peak Earning",
+            "description": "Maximize retirement contributions, plan for kids' college"
+          },
+          "fifties": {
+            "title": "50s+: Pre-Retirement",
+            "description": "Catch-up contributions, reduce investment risk"
+          }
+        }
+      },
+      "concepts": {
+        "title": "Key Financial Concepts",
+        "compoundInterest": {
+          "title": "Compound Interest",
+          "point1": "Interest earned on interest",
+          "point2": "Time is your best friend",
+          "point3": "Start investing early",
+          "point4": "Reinvest dividends and gains"
+        },
+        "riskReturn": {
+          "title": "Risk vs Return",
+          "point1": "Higher returns require higher risk",
+          "point2": "Diversification reduces risk",
+          "point3": "Match risk to time horizon",
+          "point4": "Don't put all eggs in one basket"
+        },
+        "timeValue": {
+          "title": "Time Value of Money",
+          "point1": "Money today is worth more than tomorrow",
+          "point2": "Inflation reduces purchasing power",
+          "point3": "Present value vs future value",
+          "point4": "Discount rates and opportunity cost"
+        }
+      },
+      "disclaimer": {
+        "title": "Important Disclaimer",
+        "content": "These financial calculators provide estimates for educational and informational purposes only. Results may vary based on individual circumstances, market conditions, interest rates, and other factors. This information should not be considered as professional financial, investment, tax, or legal advice. Always consult with qualified financial professionals before making important financial decisions. Past performance does not guarantee future results. Interest rates, tax laws, and market conditions can change significantly over time."
+      },
+      "difficulty": {
+        "beginner": "Beginner",
+        "intermediate": "Intermediate",
+        "advanced": "Advanced"
+      },
+      "common": {
+        "tools": "Tools"
+      },
+      "seo": {
+        "title": "Free Financial Calculators & Tools - Loans, Mortgages, Investments | InterConverter",
+        "keywords": ["financial calculators", "loan calculator", "mortgage calculator", "investment calculator", "tax calculator", "finance tools", "personal finance", "financial planning", "money calculator", "free financial tools"]
+      }
+    },
+    "health": {
+      "title": "Health & Fitness Calculators",
+      "description": "Free health and fitness calculators including BMI calculator, body fat calculator, calorie calculator, and more. Professional health assessment tools for wellness tracking.",
+      "seo": {
+        "title": "Free Health & Fitness Calculators - BMI, Body Fat, Calorie Tools | InterConverter",
+        "keywords": ["bmi calculator", "body mass index calculator", "health calculator", "fitness calculator", "calorie calculator", "body fat calculator", "ideal weight calculator", "health metrics calculator", "wellness calculator", "fitness tracking tools", "health assessment tools", "body composition calculator", "heart rate calculator", "free health calculators", "online health tools"]
+      },
+      "stats": {
+        "accurateCalculations": "Accurate calculations",
+        "goalTracking": "Goal tracking",
+        "healthFocused": "Health focused"
+      },
+      "sections": {
+        "calculators": {
+          "title": "Health Calculators",
+          "description": "Track your health metrics and fitness progress with our professional-grade calculators"
+        },
+        "bmiCategories": {
+          "title": "BMI Categories",
+          "description": "Understand your Body Mass Index classification and what it means for your health"
+        }
+      },
+      "bmiCategories": {
+        "underweight": {
+          "title": "Underweight",
+          "range": "BMI < 18.5",
+          "description": "May need to gain weight"
+        },
+        "normal": {
+          "title": "Normal Weight",
+          "range": "BMI 18.5-24.9",
+          "description": "Healthy weight range"
+        },
+        "overweight": {
+          "title": "Overweight",
+          "range": "BMI 25-29.9",
+          "description": "Consider weight loss"
+        },
+        "obese": {
+          "title": "Obese",
+          "range": "BMI ≥ 30",
+          "description": "Consult healthcare provider"
+        }
+      },
+      "infoCards": {
+        "bodyComposition": {
+          "title": "Body Composition Tools",
+          "features": {
+            "bmi": "BMI (Body Mass Index) calculation",
+            "bodyFat": "Body fat percentage estimation",
+            "idealWeight": "Ideal weight range calculations",
+            "waistHip": "Waist-to-hip ratio analysis"
+          }
+        },
+        "fitnessNutrition": {
+          "title": "Fitness & Nutrition",
+          "features": {
+            "calories": "Daily calorie requirements",
+            "exercise": "Exercise calorie burn estimation",
+            "heartRate": "Heart rate zone calculations",
+            "goalTracking": "Fitness goal tracking tools"
+          }
+        }
+      },
+      "disclaimer": {
+        "title": "Important Health Disclaimer",
+        "content": "These calculators are provided for educational and informational purposes only. They should not replace professional medical advice, diagnosis, or treatment. Always consult with qualified healthcare professionals for personalized health guidance, especially before starting any new diet or exercise program."
+      },
+      "common": {
+        "level": "Level"
+      }
+    },
+    "media": {
+      "title": "File & Media Converters",
+      "description": "Professional file and media conversion tools for documents, images, and multimedia files. Convert PDF to Word, JPG to PNG, video formats, and more. Free, secure, and fast online file converters.",
+      "seo": {
+        "title": "Free File & Media Converters - PDF to Word, JPG to PNG, Video Tools | InterConverter",
+        "keywords": ["file converter", "media converter", "pdf to word converter", "jpg to png converter", "image converter", "video converter", "audio converter", "document converter", "format converter", "online file converter", "free media tools", "file format conversion", "multimedia converter", "digital file tools", "conversion software"]
+      },
+      "stats": {
+        "secureProcessing": "Secure processing",
+        "fastConversion": "Fast conversion",
+        "highQuality": "High quality"
+      },
+      "sections": {
+        "converters": {
+          "title": "File Converter Tools",
+          "description": "Convert documents, images, and media files between different formats with ease"
+        },
+        "fileTypes": {
+          "title": "Supported File Types",
+          "description": "Convert between popular document, image, and media formats"
+        },
+        "features": {
+          "title": "Why Choose Our Converters?",
+          "description": "Professional-grade conversion tools with security and quality in mind"
+        }
+      },
+      "fileTypes": {
+        "documents": {
+          "title": "Documents",
+          "formats": {
+            "pdfDocx": "PDF ↔ DOCX",
+            "docPdf": "DOC ↔ PDF",
+            "xlsxPdf": "XLSX ↔ PDF"
+          }
+        },
+        "images": {
+          "title": "Images",
+          "formats": {
+            "jpgPng": "JPG ↔ PNG",
+            "pngWebp": "PNG ↔ WebP",
+            "gifMp4": "GIF ↔ MP4"
+          }
+        },
+        "media": {
+          "title": "Media",
+          "formats": {
+            "mp4Avi": "MP4 ↔ AVI",
+            "mp3Wav": "MP3 ↔ WAV",
+            "movMp4": "MOV ↔ MP4"
+          }
+        }
+      },
+      "features": {
+        "secure": {
+          "title": "Secure Processing",
+          "description": "Files are processed securely and automatically deleted after conversion"
+        },
+        "fast": {
+          "title": "Lightning Fast",
+          "description": "Optimized algorithms ensure quick conversion without quality loss"
+        },
+        "quality": {
+          "title": "High Quality",
+          "description": "Maintain original quality and formatting during conversion process"
+        }
+      },
+      "privacy": {
+        "title": "Privacy & Security Notice",
+        "content": "Your privacy is our priority. All files are processed securely using encrypted connections. Files are automatically deleted from our servers immediately after conversion. We never store, access, or share your files with third parties."
+      },
+      "difficulty": {
+        "beginner": "Beginner",
+        "intermediate": "Intermediate",
+        "advanced": "Advanced"
+      },
+      "common": {
+        "level": "Level"
+      }
+    },
+    "time": {
+      "title": "Time & Date Tools",
+      "description": "Professional time and date calculation tools including timestamp converter, timezone converter, date calculator, age calculator, and countdown timer. Essential tools for developers and time management.",
+      "seo": {
+        "title": "Free Time & Date Tools - Timestamp Converter, Timezone Calculator | InterConverter",
+        "keywords": ["timestamp converter", "timezone converter", "date calculator", "age calculator", "countdown timer", "unix timestamp", "time zone calculator", "date difference calculator", "world clock", "time converter", "date tools", "time management tools", "developer time tools", "epoch converter", "date formatter"]
+      },
+      "stats": {
+        "conversions": "15M+ time conversions",
+        "timezoneAccurate": "Timezone Accurate",
+        "realTimeUpdates": "Real-time Updates"
+      },
+      "sections": {
+        "popular": {
+          "title": "Most Used Time Tools",
+          "useToolText": "Use Tool"
+        },
+        "categories": {
+          "title": "Browse by Category"
+        },
+        "developer": {
+          "title": "Essential for Developers & Businesses"
+        },
+        "professional": {
+          "title": "Professional Time Management Tools"
+        }
+      },
+      "categories": {
+        "timeConversion": {
+          "name": "Time Conversion",
+          "description": "Convert between different time formats and zones",
+          "icon": "🌍"
+        },
+        "dateCalculation": {
+          "name": "Date Calculation", 
+          "description": "Calculate dates, ages, and time differences",
+          "icon": "📅"
+        },
+        "timeTracking": {
+          "name": "Time Tracking",
+          "description": "Timers, stopwatches, and countdown tools",
+          "icon": "⏱️"
+        }
+      },
+      "features": {
+        "unixTimestamps": {
+          "title": "Unix Timestamps",
+          "description": "Convert Unix timestamps to human-readable dates for database queries, API responses, and log analysis."
+        },
+        "globalTimezones": {
+          "title": "Global Timezones",
+          "description": "Handle international business with accurate timezone conversions and daylight saving time support."
+        },
+        "businessPlanning": {
+          "title": "Business Planning",
+          "description": "Calculate working days, project timelines, and business deadlines with precision and accuracy."
+        }
+      },
+      "content": {
+        "intro": "Our comprehensive time and date tool collection serves developers, businesses, and individuals who need accurate time calculations and conversions. From Unix timestamp conversion to international timezone management, our tools handle complex time-related tasks with precision.",
+        "developerTools": "Convert Unix timestamps (epoch time) to readable dates, handle API timestamps, debug time-related issues, and manage database date fields with our professional timestamp converter.",
+        "businessApplications": "Calculate working days between project milestones, plan international meetings across timezones, and track deadlines with our business-focused date calculation tools.",
+        "globalOperations": "Our timezone converter supports all world timezones with automatic daylight saving time adjustments. Perfect for international teams, global businesses, and remote work coordination.",
+        "personalProductivity": "Use our countdown timers for events, calculate your exact age, track time with our stopwatch, and stay organized with world clock displays for multiple cities.",
+        "conclusion": "All tools provide real-time accuracy, work offline after loading, and support multiple date formats. Essential for software development, project management, and international business.",
+        "personalProductivityLabel": "Personal Productivity"
+      },
+      "common": {
+        "monthlySearches": "monthly searches"
+      }
+    },
+    "unit": {
+      "title": "Unit & Measurement Converters",
+      "description": "Convert between different units of measurement with our comprehensive collection of free online tools. Accurate, fast, and easy-to-use converters for length, weight, temperature, and more.",
+      "seo": {
+        "title": "Free Unit & Measurement Converters - Length, Weight, Temperature Tools | InterConverter",
+        "keywords": ["unit converter", "measurement converter", "length converter", "weight converter", "temperature converter", "area converter", "volume converter", "speed converter", "pressure converter", "energy converter", "power converter", "data converter", "metric imperial converter", "measurement tools", "conversion calculator", "meters to feet", "celsius to fahrenheit", "pounds to kg", "free unit converter", "online measurement tools"]
+      },
+      "stats": {
+        "conversions": "10M+ conversions monthly",
+        "freeAccurate": "100% Free & Accurate",
+        "realTimeResults": "Real-time Results"
+      },
+      "sections": {
+        "popular": {
+          "title": "Most Popular Converters",
+          "convertNow": "Convert Now"
+        },
+        "categories": {
+          "title": "Browse by Category"
+        },
+        "features": {
+          "title": "Why Choose Our Unit Converters?"
+        },
+        "complete": {
+          "title": "Complete Unit Conversion Solutions"
+        }
+      },
+      "categories": {
+        "lengthDistance": {
+          "name": "Length & Distance",
+          "description": "Convert between meters, feet, inches, miles, and more",
+          "icon": "📏"
+        },
+        "weightMass": {
+          "name": "Weight & Mass",
+          "description": "Convert between kilograms, pounds, grams, ounces, and more",
+          "icon": "⚖️"
+        },
+        "temperature": {
+          "name": "Temperature",
+          "description": "Convert between Celsius, Fahrenheit, and Kelvin",
+          "icon": "🌡️"
+        },
+        "areaVolume": {
+          "name": "Area & Volume",
+          "description": "Convert area and volume measurements",
+          "icon": "📐"
+        },
+        "speedMotion": {
+          "name": "Speed & Motion",
+          "description": "Convert between different speed and velocity units",
+          "icon": "🏃"
+        },
+        "engineeringUnits": {
+          "name": "Engineering Units",
+          "description": "Convert pressure, energy, power, and data storage units",
+          "icon": "🔧"
+        }
+      },
+      "features": {
+        "precisionAccuracy": {
+          "title": "Precision Accuracy",
+          "description": "Our converters use precise mathematical formulas to ensure accurate results every time."
+        },
+        "realTimeResults": {
+          "title": "Real-time Results",
+          "description": "Get instant conversions as you type, with no delays or waiting times."
+        },
+        "userFriendly": {
+          "title": "User-Friendly",
+          "description": "Clean, intuitive interface designed for both beginners and professionals."
+        }
+      },
+      "content": {
+        "intro": "Our comprehensive unit converter collection covers all major measurement systems used worldwide. Whether you need to convert between metric and imperial units, or work with specialized engineering measurements, our tools provide accurate and reliable results.",
+        "lengthConversions": "Convert between meters, feet, inches, centimeters, millimeters, kilometers, miles, yards, and more. Perfect for construction, engineering, and everyday measurements.",
+        "weightMass": "Easily convert between kilograms, pounds, grams, ounces, stones, and other weight units. Ideal for cooking, fitness, shipping, and scientific applications.",
+        "temperatureScales": "Convert between Celsius, Fahrenheit, and Kelvin temperature scales. Essential for weather, cooking, scientific research, and international communication.",
+        "engineeringUnits": "Professional-grade converters for pressure (PSI, Bar, Pascal), energy (Joules, calories, BTU), power (Watts, horsepower), and data storage (KB, MB, GB, TB).",
+        "conclusion": "All our converters are free to use, require no registration, and work on all devices. Perfect for students, professionals, and anyone who needs quick and accurate unit conversions."
+      },
+      "common": {
+        "searchesPerMonth": "searches/mo",
+        "monthlySearches": "monthly searches"
+      }
+    },
+    "color": {
+      "title": "Color & Design Tools",
+      "description": "Professional color conversion tools for web developers and designers. Convert color codes, pick colors, generate gradients, and ensure accessibility compliance.",
+      "seo": {
+        "title": "Free Color & Design Tools - HEX to RGB, Color Picker, Palette Generator | InterConverter",
+        "keywords": ["color converter", "hex to rgb converter", "rgb to hex converter", "color picker tool", "gradient generator", "color palette generator", "contrast checker", "web design tools", "css color tools", "color code converter", "design tools", "accessibility tools", "wcag contrast checker", "color theory tools", "hsl converter", "free color tools", "online color picker"]
+      },
+      "stats": {
+        "designers": "5M+ designers trust us",
+        "professionalGrade": "Professional Grade Tools",
+        "wcagCompliant": "WCAG Compliant"
+      },
+      "sections": {
+        "essential": {
+          "title": "Essential Color Tools",
+          "useTool": "Use Tool"
+        },
+        "categories": {
+          "title": "Browse by Category"
+        },
+        "workflows": {
+          "title": "Professional Color Workflows"
+        },
+        "complete": {
+          "title": "Complete Color Tool Suite for Designers"
+        }
+      },
+      "categories": {
+        "colorConversion": {
+          "name": "Color Conversion",
+          "description": "Convert between different color formats and codes",
+          "icon": "🎨"
+        },
+        "colorSelection": {
+          "name": "Color Selection",
+          "description": "Pick and choose colors with advanced tools",
+          "icon": "🎯"
+        },
+        "designGeneration": {
+          "name": "Design Generation",
+          "description": "Create gradients and color schemes",
+          "icon": "🌅"
+        },
+        "accessibility": {
+          "name": "Accessibility",
+          "description": "Ensure your designs meet accessibility standards",
+          "icon": "♿"
+        }
+      },
+      "workflows": {
+        "designSystems": {
+          "title": "Design Systems",
+          "description": "Create consistent color palettes for your brand and design system with our palette generator."
+        },
+        "webDevelopment": {
+          "title": "Web Development",
+          "description": "Convert between HEX, RGB, and HSL formats for seamless CSS integration and web development."
+        },
+        "accessibility": {
+          "title": "Accessibility",
+          "description": "Ensure your designs meet WCAG guidelines with our contrast checker and accessibility tools."
+        }
+      },
+      "content": {
+        "intro": "Our comprehensive color tool collection provides everything designers and developers need for professional color workflows. From basic color conversions to advanced palette generation, our tools support modern design and development practices.",
+        "colorConversion": "Seamlessly convert between HEX, RGB, and HSL color formats. Perfect for web development, CSS styling, and cross-platform design consistency.",
+        "designGeneration": "Create beautiful gradients, extract color palettes from images, and generate harmonious color schemes based on color theory principles.",
+        "professionalColorPicker": "Advanced color selection with HSL controls, color history, and real-time preview. Supports all major color formats and provides instant CSS code generation.",
+        "accessibilityCompliance": "Ensure your designs meet WCAG AA and AAA standards with our contrast checker. Test text readability and color combinations for optimal accessibility.",
+        "conclusion": "All tools are free, work offline after loading, and provide professional-grade accuracy. Perfect for UI/UX designers, web developers, graphic designers, and digital artists."
+      },
+      "common": {
+        "monthlySearches": "monthly searches"
+      }
+    }
   },
   "home": {
     "hero": {
@@ -34,335 +721,6 @@
           "description": "Works perfectly on all devices and screen sizes"
         }
       ]
-    }
-  },
-  "tools": {
-    "title": "Available Tools",
-    "search": "Search tools...",
-    "popular": "Popular Tools",
-    "recent": "Recently Used",
-    "categories": "Categories",
-    "jsonFormatter": {
-      "title": "JSON Formatter",
-      "description": "Format and validate JSON data",
-      "placeholder": "Paste your JSON here...",
-      "format": "Format",
-      "minify": "Minify",
-      "validate": "Validate",
-      "copy": "Copy",
-      "clear": "Clear"
-    },
-    "base64": {
-      "title": "Base64 Encoder/Decoder",
-      "description": "Encode and decode Base64 strings",
-      "encode": "Encode",
-      "decode": "Decode",
-      "input": "Input",
-      "output": "Output"
-    },
-    "colorPicker": {
-      "title": "Color Picker",
-      "description": "Pick colors and convert between formats",
-      "hex": "HEX",
-      "rgb": "RGB",
-      "hsl": "HSL"
-    },
-    "timestampConverter": {
-      "title": "Timestamp Converter",
-      "description": "Convert Unix timestamps to human-readable dates and vice versa",
-      "timestamp": "Unix Timestamp",
-      "date": "Date & Time",
-      "timezone": "Timezone",
-      "convert": "Convert",
-      "copy": "Copy",
-      "clear": "Clear",
-      "now": "Current Time"
-    },
-    "currencyConverter": {
-      "title": "Currency Converter",
-      "description": "Convert between different currencies with real-time exchange rates",
-      "amount": "Amount",
-      "from": "From",
-      "to": "To",
-      "result": "Result",
-      "rate": "Exchange Rate",
-      "lastUpdated": "Last Updated"
-    },
-    "loanCalculator": {
-      "title": "Loan Calculator",
-      "description": "Calculate monthly payments, interest, and amortization schedules",
-      "loanAmount": "Loan Amount",
-      "interestRate": "Annual Interest Rate (%)",
-      "loanTerm": "Loan Term (years)",
-      "monthlyPayment": "Monthly Payment",
-      "totalInterest": "Total Interest",
-      "totalPayment": "Total Payment"
-    },
-    "mortgageCalculator": {
-      "title": "Mortgage Calculator",
-      "description": "Calculate your monthly mortgage payment including principal, interest, taxes, and insurance",
-      "homePrice": "Home Price ($)",
-      "downPayment": "Down Payment ($)",
-      "interestRate": "Interest Rate (%)",
-      "loanTerm": "Loan Term (Years)",
-      "annualPropertyTax": "Annual Property Tax ($)",
-      "annualHomeInsurance": "Annual Home Insurance ($)",
-      "pmiRate": "PMI Rate (% annually)",
-      "calculate": "Calculate Mortgage Payment",
-      "monthlyPaymentBreakdown": "Monthly Payment Breakdown",
-      "totalMonthlyPayment": "Total Monthly Payment",
-      "principalAndInterest": "Principal & Interest",
-      "propertyTaxes": "Property Taxes",
-      "monthlyHomeInsurance": "Home Insurance",
-      "pmi": "PMI",
-      "totalInterestPaid": "Total Interest",
-      "totalPayments": "Total Payments",
-      "amortizationSchedule": "Amortization Schedule (First 5 Years)",
-      "month": "Month",
-      "payment": "Payment",
-      "principal": "Principal",
-      "interest": "Interest",
-      "balance": "Balance",
-      "tips": {
-        "title": "🏠 Mortgage Tips",
-        "tip1": "A 20% down payment helps you avoid PMI",
-        "tip2": "Consider 15-year loans for lower total interest costs",
-        "tip3": "Shop around with multiple lenders for the best rates",
-        "tip4": "Factor in closing costs (typically 2-5% of loan amount)",
-        "tip5": "Get pre-approved to strengthen your offer",
-        "tip6": "Consider property taxes and insurance in your budget"
-      }
-    },
-    "homeAffordabilityCalculator": {
-      "title": "Home Affordability Calculator",
-      "description": "Calculate how much house you can afford based on your income, debts, and financial situation",
-      "financialInformation": "Financial Information",
-      "annualIncome": "Annual Income",
-      "monthlyDebts": "Monthly Debt Payments",
-      "monthlyDebtsDesc": "Include student loans, car payments, credit cards, etc.",
-      "downPaymentAmount": "Down Payment Amount",
-      "interestRate": "Interest Rate",
-      "loanTerm": "Loan Term",
-      "propertyTaxAnnual": "Property Tax (Annual)",
-      "homeInsuranceAnnual": "Home Insurance (Annual)",
-      "monthlyHoaFees": "HOA Fees (Monthly)",
-      "creditScoreRange": "Credit Score Range",
-      "creditScoreOptions": {
-        "excellent": "Excellent (740-850)",
-        "good": "Good (670-739)",
-        "fair": "Fair (580-669)",
-        "poor": "Poor (300-579)"
-      },
-      "calculateAffordability": "Calculate Affordability",
-      "affordabilityResults": "Affordability Results",
-      "maxHomePrice": "Maximum Home Price",
-      "basedOnProfile": "Based on your financial profile",
-      "monthlyPayment": "Monthly Payment",
-      "cashNeeded": "Cash Needed",
-      "monthlyPaymentBreakdown": "Monthly Payment Breakdown",
-      "principalAndInterest": "Principal & Interest",
-      "propertyTax": "Property Tax",
-      "homeInsurance": "Home Insurance",
-      "pmi": "PMI",
-      "hoaFeesBreakdown": "HOA Fees",
-      "debtToIncomeRatios": "Debt-to-Income Ratios",
-      "frontEndRatio": "Front-End Ratio",
-      "housingOnly": "(Housing only)",
-      "backEndRatio": "Back-End Ratio",
-      "allDebts": "(All debts)",
-      "maxLoanAmount": "Maximum Loan Amount:",
-      "downPayment": "Down Payment:",
-      "closingCosts": "Estimated Closing Costs:",
-      "personalizedRecommendations": "Personalized Recommendations",
-      "understandingAffordability": "Understanding Home Affordability",
-      "rule2836": "The 28/36 Rule",
-      "frontEndRule": "Front-end ratio: Housing costs ≤ 28% of gross income",
-      "backEndRule": "Back-end ratio: Total debt payments ≤ 36% of gross income",
-      "guidelinesNote": "These are guidelines - actual approval depends on credit, assets, and loan type",
-      "fhaNote": "FHA loans may allow higher ratios (up to 43% back-end)",
-      "keyFactors": "Key Factors That Impact Affordability",
-      "creditScoreFactor": "Credit Score: Higher scores get better rates",
-      "downPaymentFactor": "Down Payment: 20%+ avoids PMI",
-      "dtiFactor": "Debt-to-Income: Lower DTI = more buying power",
-      "interestRateFactor": "Interest Rates: Even 0.5% makes a big difference",
-      "locationFactor": "Location: Property taxes and insurance vary",
-      "importantReminders": "Important Reminders",
-      "estimateNote": "This calculator provides estimates - actual loan approval depends on many factors",
-      "maintenanceNote": "Budget for maintenance (1-3% of home value annually)",
-      "emergencyFundNote": "Keep an emergency fund separate from your down payment",
-      "preApprovalNote": "Get pre-approved before house hunting for accurate numbers",
-      "ownershipCostsNote": "Consider all homeownership costs: utilities, repairs, upgrades",
-      "qualificationStatus": {
-        "excellent": "Excellent",
-        "good": "Good", 
-        "marginal": "Marginal",
-        "poor": "Poor"
-      }
-    },
-    "pdfToWord": {
-      "title": "PDF to Word Converter",
-      "description": "Convert PDF files to editable Word documents",
-      "upload": "Upload PDF",
-      "convert": "Convert to Word",
-      "download": "Download Word Document",
-      "processing": "Processing..."
-    },
-    "jpgToPng": {
-      "title": "JPG to PNG Converter",
-      "description": "Convert JPG images to PNG format with transparency support",
-      "upload": "Upload JPG",
-      "convert": "Convert to PNG",
-      "download": "Download PNG",
-      "preview": "Preview"
-    },
-    "hexToRgb": {
-      "title": "HEX to RGB Converter",
-      "description": "Convert HEX color codes to RGB values and vice versa",
-      "hexColor": "HEX Color",
-      "rgbColor": "RGB Color",
-      "preview": "Color Preview",
-      "copy": "Copy"
-    },
-    "bmiCalculator": {
-      "title": "BMI Calculator",
-      "description": "Calculate Body Mass Index and get health recommendations",
-      "height": "Height",
-      "weight": "Weight",
-      "unit": "Unit System",
-      "metric": "Metric (cm, kg)",
-      "imperial": "Imperial (ft/in, lbs)",
-      "bmi": "BMI",
-      "category": "Category",
-      "recommendation": "Recommendation"
-    },
-    "unitConverter": {
-      "title": "Unit Converter",
-      "description": "Convert between different units of length, weight, and temperature",
-      "category": "Category",
-      "length": "Length",
-      "weight": "Weight",
-      "temperature": "Temperature",
-      "from": "From",
-      "to": "To",
-      "value": "Value",
-      "result": "Result"
-    },
-    "countdownTimer": {
-      "title": "Countdown Timer",
-      "description": "Create countdown timers for events and deadlines",
-      "eventName": "Event Name",
-      "targetDate": "Target Date",
-      "targetTime": "Target Time",
-      "days": "Days",
-      "hours": "Hours",
-      "minutes": "Minutes",
-      "seconds": "Seconds",
-      "expired": "Time's Up!"
-    },
-    "taxCalculator": {
-      "title": "Tax Calculator",
-      "description": "Calculate income tax and estimate tax liability",
-      "income": "Annual Income",
-      "filingStatus": "Filing Status",
-      "deductions": "Deductions",
-      "taxOwed": "Tax Owed",
-      "effectiveRate": "Effective Tax Rate",
-      "marginalRate": "Marginal Tax Rate"
-    },
-    "dateDifferenceCalculator": {
-      "title": "Date Difference Calculator",
-      "description": "Calculate the exact time duration between two dates",
-      "startDate": "Start Date",
-      "endDate": "End Date",
-      "includeEndDate": "Include End Date",
-      "businessDaysOnly": "Business Days Only",
-      "calculate": "Calculate",
-      "years": "Years",
-      "months": "Months",
-      "days": "Days",
-      "totalDays": "Total Days",
-      "hours": "Hours",
-      "minutes": "Minutes",
-      "copy": "Copy Result"
-    },
-    "automotive": {
-      "engineSizeConverter": {
-        "title": "Engine Size Converter",
-        "description": "Convert between cubic inches and liters for engine displacement"
-      },
-      "gearRatioCalculator": {
-        "title": "Gear Ratio Calculator",
-        "description": "Calculate gear ratios, RPM, and speed relationships"
-      },
-      "powerToWeightRatio": {
-        "title": "Power to Weight Ratio Calculator",
-        "description": "Calculate horsepower to weight ratio for performance analysis",
-        "horsepower": "Horsepower (HP)",
-        "weight": "Vehicle Weight (lbs)",
-        "hpPerLb": "HP per Pound",
-        "lbPerHp": "Pounds per HP",
-        "calculate": "Calculate Power to Weight Ratio",
-        "performanceCategories": "Performance Categories",
-        "exampleVehicles": "Example Vehicles",
-        "calculationFormula": "Calculation Formula",
-        "categories": {
-          "economy": "Economy",
-          "average": "Average",
-          "performance": "Performance",
-          "sports": "Sports Car",
-          "highPerformance": "High Performance",
-          "supercar": "Supercar"
-        },
-        "categoryDescriptions": {
-          "economyCars": "Economy Cars",
-          "economyDesc": "Typical economy cars, hybrids",
-          "averagePerformance": "Average Performance", 
-          "averageDesc": "Mid-size sedans, crossovers",
-          "performanceCars": "Performance Cars",
-          "performanceDesc": "Hot hatches, muscle cars",
-          "sportsCars": "Sports Cars",
-          "sportsDesc": "Corvette, Mustang GT, Camaro SS",
-          "highPerformance": "High Performance",
-          "highDesc": "Porsche 911, BMW M3, Hellcat",
-          "supercars": "Supercars",
-          "superDesc": "Ferrari, Lamborghini, McLaren"
-        },
-        "examples": {
-          "classicMuscle": "Classic Muscle Cars",
-          "modernPerformance": "Modern Performance"
-        },
-        "formulas": {
-          "powerToWeight": "Power to Weight Ratio:",
-          "powerFormula": "HP per Pound = Horsepower ÷ Vehicle Weight (lbs)",
-          "weightToPower": "Weight to Power Ratio:",
-          "weightFormula": "Pounds per HP = Vehicle Weight (lbs) ÷ Horsepower",
-          "note": "Power to weight ratio is a key indicator of vehicle performance. Higher ratios generally mean better acceleration and performance, but other factors like aerodynamics, traction, and gearing also play important roles."
-        }
-      },
-      "rpmCalculator": {
-        "title": "RPM Calculator",
-        "description": "Calculate RPM based on speed, gear ratio, and tire diameter"
-      },
-      "speedConverter": {
-        "title": "Speed Converter",
-        "description": "Convert between MPH and KPH with automotive references"
-      },
-      "torqueHorsepowerCalculator": {
-        "title": "Torque & Horsepower Calculator",
-        "description": "Convert between torque, horsepower, and RPM"
-      },
-      "temperatureConverter": {
-        "title": "Automotive Temperature Converter",
-        "description": "Convert temperatures for automotive applications"
-      },
-      "tireCalculator": {
-        "title": "Tire Calculator",
-        "description": "Calculate tire diameter effects on speed and performance"
-      },
-      "tireSpeedCalculator": {
-        "title": "Tire Speed Calculator",
-        "description": "Calculate vehicle speed based on tire diameter, gear ratio, and RPM"
-      }
     }
   },
   "notFound": {

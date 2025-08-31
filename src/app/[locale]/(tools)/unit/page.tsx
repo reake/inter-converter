@@ -1,66 +1,37 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { getUnitTools, getPopularTools } from '@/config/tools';
 import { ArrowRight, TrendingUp, Users, Star } from 'lucide-react';
+import { generateMetadata as generateSEOMetadata } from '@/lib/seo/metadata';
+import { HreflangLinks } from '@/components/seo/HreflangLinks';
+import { CanonicalLink } from '@/components/seo/CanonicalLink';
+import { JsonLd } from '@/components/seo/JsonLd';
 
-export const metadata: Metadata = {
-  title: 'Free Unit & Measurement Converters - Length, Weight, Temperature Tools | InterConverter',
-  description: 'Convert between different units of measurement including length, weight, temperature, area, volume, speed, pressure, energy, power, and data storage. Free, accurate, and instant conversion tools with real-time results.',
-  keywords: [
-    'unit converter',
-    'measurement converter',
-    'length converter',
-    'weight converter',
-    'temperature converter',
-    'area converter',
-    'volume converter',
-    'speed converter',
-    'pressure converter',
-    'energy converter',
-    'power converter',
-    'data converter',
-    'metric imperial converter',
-    'measurement tools',
-    'conversion calculator',
-    'meters to feet',
-    'celsius to fahrenheit',
-    'pounds to kg',
-    'free unit converter',
-    'online measurement tools'
-  ].join(', '),
-  openGraph: {
-    title: 'Free Unit & Measurement Converters | InterConverter',
-    description: 'Convert between different units of measurement with our comprehensive collection of free online conversion tools.',
-    type: 'website',
-    url: 'https://interconverter.com/unit',
-    siteName: 'InterConverter',
-    images: [
-      {
-        url: 'https://interconverter.com/images/og-unit.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Unit & Measurement Converters - InterConverter',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Free Unit & Measurement Converters | InterConverter',
-    description: 'Convert length, weight, temperature, and more units with accurate online tools.',
-    creator: '@interconverter',
-  },
-  alternates: {
-    canonical: 'https://interconverter.com/unit'
-  },
-  robots: {
-    index: true,
-    follow: true,
-  }
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'categoryPages.unit' });
+  
+  const title = t('seo.title');
+  const description = t('description');
+  // Keywords are already an array in JSON, no need to parse
+  const keywordsRaw = t.raw('seo.keywords') as string[];
+  const keywords = keywordsRaw || [];
+  
+  return generateSEOMetadata({
+    title,
+    description,
+    locale,
+    pathname: '/unit',
+    keywords
+  });
+}
 
-export default function UnitPage() {
+export default async function UnitPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'categoryPages.unit' });
   // Get all active unit tools from JSON data (isActive filtering is already applied in getUnitTools)
   const allUnitTools = getUnitTools();
   
@@ -101,57 +72,57 @@ export default function UnitPage() {
 
   const toolCategories = [
     {
-      name: 'Length & Distance',
-      description: 'Convert between meters, feet, inches, miles, and more',
+      name: t('categories.lengthDistance.name'),
+      description: t('categories.lengthDistance.description'),
       tools: lengthTools,
-      icon: '📏',
+      icon: t('categories.lengthDistance.icon'),
       color: 'bg-blue-50 border-blue-200'
     },
     {
-      name: 'Weight & Mass',
-      description: 'Convert between kilograms, pounds, grams, ounces, and more',
+      name: t('categories.weightMass.name'),
+      description: t('categories.weightMass.description'),
       tools: weightTools,
-      icon: '⚖️',
+      icon: t('categories.weightMass.icon'),
       color: 'bg-green-50 border-green-200'
     },
     {
-      name: 'Temperature',
-      description: 'Convert between Celsius, Fahrenheit, and Kelvin',
+      name: t('categories.temperature.name'),
+      description: t('categories.temperature.description'),
       tools: temperatureTools,
-      icon: '🌡️',
+      icon: t('categories.temperature.icon'),
       color: 'bg-red-50 border-red-200'
     },
     {
-      name: 'Area & Volume',
-      description: 'Convert area and volume measurements',
+      name: t('categories.areaVolume.name'),
+      description: t('categories.areaVolume.description'),
       tools: [...areaTools, ...volumeTools],
-      icon: '📐',
+      icon: t('categories.areaVolume.icon'),
       color: 'bg-purple-50 border-purple-200'
     },
     {
-      name: 'Speed & Motion',
-      description: 'Convert between different speed and velocity units',
+      name: t('categories.speedMotion.name'),
+      description: t('categories.speedMotion.description'),
       tools: speedTools,
-      icon: '🏃',
+      icon: t('categories.speedMotion.icon'),
       color: 'bg-orange-50 border-orange-200'
     },
     {
-      name: 'Engineering Units',
-      description: 'Convert pressure, energy, power, and data storage units',
+      name: t('categories.engineeringUnits.name'),
+      description: t('categories.engineeringUnits.description'),
       tools: [...pressureTools, ...energyTools, ...powerTools, ...dataTools],
-      icon: '🔧',
+      icon: t('categories.engineeringUnits.icon'),
       color: 'bg-indigo-50 border-indigo-200'
     }
   ];
 
   const ToolCard = ({ tool }: { tool: any }) => (
-    <Link key={tool.id} href={tool.path} className="group">
+    <Link key={tool.id} href={tool.path as any} className="group">
       <Card className="h-full hover:shadow-lg transition-all duration-200 border-2 hover:border-primary/20">
         <CardHeader className="pb-3">
           <div className="flex items-center justify-between">
             <div className="text-2xl">{tool.icon}</div>
             <Badge variant="secondary" className="text-xs">
-              {(tool.searchVolume || 0).toLocaleString()} searches/mo
+              {(tool.searchVolume || 0).toLocaleString()} {t('common.searchesPerMonth')}
             </Badge>
           </div>
           <CardTitle className="text-lg group-hover:text-primary transition-colors">
@@ -163,7 +134,7 @@ export default function UnitPage() {
             {tool.description}
           </CardDescription>
           <div className="flex items-center text-primary text-sm font-medium">
-            Convert Now
+            {t('sections.popular.convertNow')}
             <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
           </div>
         </CardContent>
@@ -172,68 +143,85 @@ export default function UnitPage() {
   );
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-7xl">
-      {/* Hero Section */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-          Unit & Measurement Converters
-        </h1>
-        <p className="text-xl text-gray-600 mb-6 max-w-3xl mx-auto">
-          Convert between different units of measurement with our comprehensive collection of free online tools. 
-          Accurate, fast, and easy-to-use converters for length, weight, temperature, and more.
-        </p>
-        <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
-          <div className="flex items-center gap-1">
-            <Users className="h-4 w-4" />
-            <span>10M+ conversions monthly</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <Star className="h-4 w-4" />
-            <span>100% Free & Accurate</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <TrendingUp className="h-4 w-4" />
-            <span>Real-time Results</span>
+    <>
+      <HreflangLinks pathname="/unit" currentLocale={locale} />
+      <CanonicalLink pathname="/unit" locale={locale} />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": t('title'),
+          "description": t('description'),
+          "url": `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/unit`,
+          "inLanguage": locale,
+          "isPartOf": {
+            "@type": "WebSite",
+            "name": "InterConverter",
+            "url": process.env.NEXT_PUBLIC_SITE_URL
+          }
+        }}
+      />
+      <div className="container mx-auto px-4 py-8 max-w-7xl">
+        {/* Hero Section */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            {t('title')}
+          </h1>
+          <p className="text-xl text-gray-600 mb-6 max-w-3xl mx-auto">
+            {t('description')}
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
+            <div className="flex items-center gap-1">
+              <Users className="h-4 w-4" />
+              <span>{t('stats.conversions')}</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Star className="h-4 w-4" />
+              <span>{t('stats.freeAccurate')}</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <TrendingUp className="h-4 w-4" />
+              <span>{t('stats.realTimeResults')}</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Popular Tools */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Most Popular Converters</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {popularTools.map((tool) => (
-            <Link key={tool.id} href={tool.path} className="group">
-              <Card className="h-full hover:shadow-lg transition-all duration-200 border-2 hover:border-primary/20">
-                <CardHeader className="pb-3">
-                  <div className="flex items-center justify-between">
-                    <div className="text-2xl">{tool.icon}</div>
-                    <Badge variant="secondary" className="text-xs">
-                      {(tool.searchVolume || 0).toLocaleString()} searches/mo
-                    </Badge>
-                  </div>
-                  <CardTitle className="text-lg group-hover:text-primary transition-colors">
-                    {tool.name}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-sm mb-3">
-                    {tool.description}
-                  </CardDescription>
-                  <div className="flex items-center text-primary text-sm font-medium">
-                    Convert Now
-                    <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
-        </div>
-      </section>
+        {/* Popular Tools */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('sections.popular.title')}</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {popularTools.map((tool) => (
+              <Link key={tool.id} href={tool.path as any} className="group">
+                <Card className="h-full hover:shadow-lg transition-all duration-200 border-2 hover:border-primary/20">
+                  <CardHeader className="pb-3">
+                    <div className="flex items-center justify-between">
+                      <div className="text-2xl">{tool.icon}</div>
+                      <Badge variant="secondary" className="text-xs">
+                        {(tool.searchVolume || 0).toLocaleString()} {t('common.searchesPerMonth')}
+                      </Badge>
+                    </div>
+                    <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                      {tool.name}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-sm mb-3">
+                      {tool.description}
+                    </CardDescription>
+                    <div className="flex items-center text-primary text-sm font-medium">
+                      {t('sections.popular.convertNow')}
+                      <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </section>
 
-      {/* Tool Categories */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Browse by Category</h2>
+        {/* Tool Categories */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('sections.categories.title')}</h2>
         <div className="grid lg:grid-cols-2 gap-8">
           {toolCategories.map((category) => (
             <Card key={category.name} className={`${category.color} border-2`}>
@@ -253,7 +241,7 @@ export default function UnitPage() {
                   {category.tools.map((tool) => (
                     <Link
                       key={tool.id}
-                      href={tool.path}
+                      href={tool.path as any}
                       className="flex items-center justify-between p-3 rounded-lg bg-white/60 hover:bg-white/80 transition-colors group"
                     >
                       <div className="flex items-center gap-3">
@@ -263,7 +251,7 @@ export default function UnitPage() {
                             {tool.name}
                           </div>
                           <div className="text-xs text-gray-500">
-                            {(tool.searchVolume || 0).toLocaleString()} monthly searches
+                            {(tool.searchVolume || 0).toLocaleString()} {t('common.monthlySearches')}
                           </div>
                         </div>
                       </div>
@@ -274,85 +262,78 @@ export default function UnitPage() {
               </CardContent>
             </Card>
           ))}
-        </div>
-      </section>
+          </div>
+        </section>
 
-      {/* Features Section */}
-      <section className="mb-12">
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-200">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-            Why Choose Our Unit Converters?
+        {/* Features Section */}
+        <section className="mb-12">
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-200">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              {t('sections.features.title')}
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Star className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">{t('features.precisionAccuracy.title')}</h3>
+                <p className="text-sm text-gray-600">
+                  {t('features.precisionAccuracy.description')}
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <TrendingUp className="h-6 w-6 text-green-600" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">{t('features.realTimeResults.title')}</h3>
+                <p className="text-sm text-gray-600">
+                  {t('features.realTimeResults.description')}
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Users className="h-6 w-6 text-purple-600" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">{t('features.userFriendly.title')}</h3>
+                <p className="text-sm text-gray-600">
+                  {t('features.userFriendly.description')}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SEO Content */}
+        <section className="prose max-w-none">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            {t('sections.complete.title')}
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Star className="h-6 w-6 text-blue-600" />
-              </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Precision Accuracy</h3>
-              <p className="text-sm text-gray-600">
-                Our converters use precise mathematical formulas to ensure accurate results every time.
+          <div className="grid md:grid-cols-2 gap-8 text-sm text-gray-600">
+            <div>
+              <p className="mb-4">
+                {t('content.intro')}
+              </p>
+              <p className="mb-4">
+                <strong>{t('categories.lengthDistance.name')}:</strong> {t('content.lengthConversions')}
+              </p>
+              <p>
+                <strong>{t('categories.weightMass.name')}:</strong> {t('content.weightMass')}
               </p>
             </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <TrendingUp className="h-6 w-6 text-green-600" />
-              </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Real-time Results</h3>
-              <p className="text-sm text-gray-600">
-                Get instant conversions as you type, with no delays or waiting times.
+            <div>
+              <p className="mb-4">
+                <strong>{t('categories.temperature.name')}:</strong> {t('content.temperatureScales')}
               </p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Users className="h-6 w-6 text-purple-600" />
-              </div>
-              <h3 className="font-semibold text-gray-900 mb-2">User-Friendly</h3>
-              <p className="text-sm text-gray-600">
-                Clean, intuitive interface designed for both beginners and professionals.
+              <p className="mb-4">
+                <strong>{t('categories.engineeringUnits.name')}:</strong> {t('content.engineeringUnits')}
+              </p>
+              <p>
+                {t('content.conclusion')}
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* SEO Content */}
-      <section className="prose max-w-none">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          Complete Unit Conversion Solutions
-        </h2>
-        <div className="grid md:grid-cols-2 gap-8 text-sm text-gray-600">
-          <div>
-            <p className="mb-4">
-              Our comprehensive unit converter collection covers all major measurement systems used worldwide. 
-              Whether you need to convert between metric and imperial units, or work with specialized 
-              engineering measurements, our tools provide accurate and reliable results.
-            </p>
-            <p className="mb-4">
-              <strong>Length Conversions:</strong> Convert between meters, feet, inches, centimeters, 
-              millimeters, kilometers, miles, yards, and more. Perfect for construction, engineering, 
-              and everyday measurements.
-            </p>
-            <p>
-              <strong>Weight & Mass:</strong> Easily convert between kilograms, pounds, grams, ounces, 
-              stones, and other weight units. Ideal for cooking, fitness, shipping, and scientific applications.
-            </p>
-          </div>
-          <div>
-            <p className="mb-4">
-              <strong>Temperature Scales:</strong> Convert between Celsius, Fahrenheit, and Kelvin 
-              temperature scales. Essential for weather, cooking, scientific research, and international communication.
-            </p>
-            <p className="mb-4">
-              <strong>Engineering Units:</strong> Professional-grade converters for pressure (PSI, Bar, Pascal), 
-              energy (Joules, calories, BTU), power (Watts, horsepower), and data storage (KB, MB, GB, TB).
-            </p>
-            <p>
-              All our converters are free to use, require no registration, and work on all devices. 
-              Perfect for students, professionals, and anyone who needs quick and accurate unit conversions.
-            </p>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 }

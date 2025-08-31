@@ -1,0 +1,47 @@
+{
+  "about": [
+    "The PDF to Word Converter is an advanced online tool that transforms PDF documents into editable Word formats (DOC/DOCX) with exceptional accuracy. This converter is essential for professionals, students, and businesses who need to edit, modify, or repurpose content from PDF files while maintaining original formatting and layout.",
+    "Converting PDF to Word format enables you to edit text, modify layouts, add comments, and collaborate on documents that were previously locked in PDF format. Our converter uses advanced OCR technology to handle both text-based and scanned PDF documents with high precision."
+  ],
+  "howToUse": [
+    "Select or drag and drop your PDF file into the upload area",
+    "Choose your preferred output format (DOC or DOCX)",
+    "Select conversion options including OCR for scanned documents",
+    "Click convert to process your PDF document instantly",
+    "Preview the converted Word document with preserved formatting",
+    "Download the editable Word file for immediate use",
+    "Use batch processing for multiple PDF conversions"
+  ],
+  "features": [
+    "High-accuracy PDF to Word conversion",
+    "Advanced OCR for scanned PDF documents",
+    "Preserve original formatting and layout structure",
+    "Support for both DOC and DOCX output formats",
+    "Batch processing for multiple PDF files",
+    "Secure client-side processing for privacy",
+    "Text extraction with font and style preservation",
+    "Table and image conversion capabilities"
+  ],
+  "faqs": [
+    {
+      "question": "Can the converter handle scanned PDF documents?",
+      "answer": "Yes, our converter includes advanced OCR (Optical Character Recognition) technology that can extract text from scanned PDF documents and convert them into editable Word format with high accuracy."
+    },
+    {
+      "question": "Will the formatting be preserved during conversion?",
+      "answer": "Our converter is designed to maintain original formatting, including fonts, styles, tables, and layout structure. While complex layouts may require minor adjustments, most formatting is preserved accurately."
+    },
+    {
+      "question": "What's the difference between DOC and DOCX output formats?",
+      "answer": "DOCX is the newer XML-based format that offers better compatibility, smaller file sizes, and enhanced features. DOC is the legacy format compatible with older versions of Microsoft Word."
+    },
+    {
+      "question": "Are there file size limits for PDF conversion?",
+      "answer": "Our converter efficiently handles various PDF sizes. For optimal performance, we recommend files under 100MB, though larger documents are supported with extended processing time."
+    },
+    {
+      "question": "Is my document data secure during conversion?",
+      "answer": "Yes, all conversions are processed securely with client-side processing where possible. Your documents are not stored on our servers, ensuring complete privacy and data security."
+    }
+  ]
+}

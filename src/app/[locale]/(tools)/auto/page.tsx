@@ -1,62 +1,49 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/routing';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { getAutoTools, getPopularTools } from '@/config/tools';
+import { generateMetadata as generateSEOMetadata } from '@/lib/seo/metadata';
+import { HreflangLinks } from '@/components/seo/HreflangLinks';
+import { CanonicalLink } from '@/components/seo/CanonicalLink';
+import { JsonLd, generateWebsiteSchema } from '@/components/seo/JsonLd';
 
 
 
 
 // Force static generation
 export const dynamic = 'force-static';
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'Free Automotive Converters & Engine Tools | InterConverter',
-    description: 'Professional automotive calculators: carburetor CFM, compression ratio, gear ratio, horsepower, RPM & more. Free engine tuning tools for mechanics.',
-    keywords: [
-      'automotive calculators',
-      'engine calculators',
-      'carburetor cfm calculator',
-      'compression ratio calculator',
-      'gear ratio calculator',
-      'horsepower calculator',
-      'rpm calculator',
-      'engine tuning tools',
-      'automotive performance tools',
-      'free automotive calculators'
-    ],
-    openGraph: {
-      title: 'Free Automotive Calculators & Engine Tools | InterConverter',
-      description: 'Professional automotive calculators: carburetor CFM, compression ratio, gear ratio, horsepower, RPM & more. Free engine tuning tools.',
-      type: 'website',
-      url: 'https://interconverter.com/auto',
-      siteName: 'InterConverter',
-      images: [
-        {
-          url: 'https://interconverter.com/images/og-auto.jpg',
-          width: 1200,
-          height: 630,
-          alt: 'Automotive Calculators & Engine Tools - InterConverter',
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: 'Free Automotive Calculators & Engine Tools | InterConverter',
-      description: 'Professional automotive calculators: carburetor CFM, compression ratio, gear ratio, horsepower, RPM & more.',
-      creator: '@interconverter',
-    },
-    alternates: {
-      canonical: 'https://interconverter.com/auto'
-    },
-    robots: {
-      index: true,
-      follow: true,
-    }
-  };
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'categoryPages.auto' });
+  
+  const title = t('seo.title');
+  const description = t('description');
+  // Keywords are already an array in JSON, no need to parse
+  const keywordsRaw = t.raw('seo.keywords') as string[];
+  const keywords = keywordsRaw || [];
+  
+  return generateSEOMetadata({
+    title,
+    description,
+    locale,
+    pathname: '/auto',
+    keywords
+  });
 }
 
-export default function AutoPage() {
+export default async function AutoPage({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'categoryPages.auto' });
   const allAutoTools = getAutoTools();
   
   // Get popular tools (top 6 by search volume)
@@ -104,17 +91,44 @@ export default function AutoPage() {
     )
   );
 
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
+  const getDifficultyColor = (difficulty: string | number) => {
+    // Convert numeric difficulty to string
+    const difficultyMap: { [key: string]: string } = {
+      '0': 'beginner',
+      '1': 'intermediate', 
+      '2': 'advanced',
+      'beginner': 'beginner',
+      'intermediate': 'intermediate',
+      'advanced': 'advanced'
+    };
+    
+    const difficultyKey = difficultyMap[String(difficulty)] || 'beginner';
+    
+    switch (difficultyKey) {
       case 'beginner': return 'bg-green-100 text-green-800 border-green-200';
       case 'intermediate': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
       case 'advanced': return 'bg-red-100 text-red-800 border-red-200';
       default: return 'bg-gray-100 text-gray-800 border-gray-200';
     }
   };
+  
+  const getDifficultyLabel = (difficulty: string | number) => {
+    // Convert numeric difficulty to string
+    const difficultyMap: { [key: string]: string } = {
+      '0': 'beginner',
+      '1': 'intermediate', 
+      '2': 'advanced',
+      'beginner': 'beginner',
+      'intermediate': 'intermediate',
+      'advanced': 'advanced'
+    };
+    
+    const difficultyKey = difficultyMap[String(difficulty)] || 'beginner';
+    return t(`difficulty.${difficultyKey}`);
+  };
 
   const ToolCard = ({ tool }: { tool: any }) => (
-    <Link href={tool.path} className="block group">
+    <Link href={tool.path as any} className="block group">
       <Card className="h-full hover:shadow-xl transition-all duration-300 group-hover:scale-[1.02] border-0 shadow-md bg-gradient-to-br from-white to-gray-50">
         <CardHeader className="pb-3">
           <div className="flex items-start justify-between">
@@ -134,7 +148,7 @@ export default function AutoPage() {
         <CardContent className="pt-0">
           <div className="flex items-center justify-between">
             <Badge variant="outline" className={`capitalize font-medium ${getDifficultyColor(tool.difficulty)}`}>
-              {tool.difficulty}
+              {getDifficultyLabel(tool.difficulty)}
             </Badge>
             {tool.searchVolume && (
               <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200">
@@ -157,7 +171,12 @@ export default function AutoPage() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <>
+      <HreflangLinks currentLocale={locale} pathname="/auto" />
+      <CanonicalLink locale={locale} pathname="/auto" />
+      <JsonLd data={generateWebsiteSchema(locale)} />
+      
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-red-600 via-red-700 to-orange-600 text-white">
         <div className="container mx-auto px-4 py-16 max-w-6xl">
@@ -166,28 +185,27 @@ export default function AutoPage() {
               <span className="text-4xl">🏎️</span>
             </div>
             <h1 className="text-5xl font-bold mb-6">
-              Automotive Calculators
+              {t('title')}
             </h1>
             <p className="text-xl text-red-100 max-w-3xl mx-auto mb-8">
-              19+ professional automotive calculators for engine performance, tuning, and modifications. 
-              Based on the original Mark's Street And Strip InterConverter™.
+              {t('description')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
                 <span>🏎️</span>
-                <span>19+ Auto Tools</span>
+                <span>{t('stats.autoTools')}</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
                 <span>⚡</span>
-                <span>Real-time calculations</span>
+                <span>{t('stats.realTimeCalculations')}</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
                 <span>🔧</span>
-                <span>Professional formulas</span>
+                <span>{t('stats.professionalFormulas')}</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
                 <span>📱</span>
-                <span>Mobile optimized</span>
+                <span>{t('stats.mobileOptimized')}</span>
               </div>
             </div>
           </div>
@@ -198,8 +216,8 @@ export default function AutoPage() {
         {/* Engine Tools */}
         <section className="mb-16">
           <SectionHeader 
-            title="Engine Performance" 
-            description="Calculate displacement, compression ratios, and carburetor sizing for optimal engine performance"
+            title={t('sections.enginePerformance.title')} 
+            description={t('sections.enginePerformance.description')}
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {engineTools.map((tool) => (
@@ -211,8 +229,8 @@ export default function AutoPage() {
         {/* Drivetrain Tools */}
         <section className="mb-16">
           <SectionHeader 
-            title="Drivetrain & Gearing" 
-            description="Optimize gear ratios and analyze drivetrain performance for better acceleration and top speed"
+            title={t('sections.drivetrainGearing.title')} 
+            description={t('sections.drivetrainGearing.description')}
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {drivetrainTools.map((tool) => (
@@ -224,8 +242,8 @@ export default function AutoPage() {
         {/* Performance Tools */}
         <section className="mb-16">
           <SectionHeader 
-            title="Performance Analysis" 
-            description="Analyze horsepower, torque, and overall vehicle performance metrics"
+            title={t('sections.performanceAnalysis.title')} 
+            description={t('sections.performanceAnalysis.description')}
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {performanceTools.map((tool) => (
@@ -238,8 +256,8 @@ export default function AutoPage() {
         {fluidTools.length > 0 && (
           <section className="mb-16">
             <SectionHeader 
-              title="Fluids & Weight" 
-              description="Calculate fluid capacities and weight distributions for optimal vehicle setup"
+              title={t('sections.fluidsWeight.title')} 
+              description={t('sections.fluidsWeight.description')}
             />
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {fluidTools.map((tool) => (
@@ -255,15 +273,12 @@ export default function AutoPage() {
             <CardHeader>
               <CardTitle className="flex items-center gap-3 text-blue-900">
                 <span className="text-2xl">📚</span>
-                About These Calculators
+                {t('infoCards.aboutCalculators.title')}
               </CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-blue-800 leading-relaxed">
-                These automotive calculators are based on proven formulas and real-world experience from 
-                the original Mark's Street And Strip InterConverter™. They're designed for mechanics, 
-                racers, and automotive enthusiasts who need accurate calculations for engine modifications 
-                and performance tuning.
+                {t('infoCards.aboutCalculators.content')}
               </p>
             </CardContent>
           </Card>
@@ -272,19 +287,18 @@ export default function AutoPage() {
             <CardHeader>
               <CardTitle className="flex items-center gap-3 text-amber-900">
                 <span className="text-2xl">⚠️</span>
-                Safety Notice
+                {t('infoCards.safetyNotice.title')}
               </CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-amber-800 leading-relaxed">
-                These calculations are for educational and estimation purposes only. 
-                Always consult with qualified automotive professionals for engine modifications, 
-                tuning, and safety considerations. Actual results may vary based on specific conditions.
+                {t('infoCards.safetyNotice.content')}
               </p>
             </CardContent>
           </Card>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

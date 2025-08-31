@@ -1,76 +1,117 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/media/pdf-to-word-converter-en.json';
+import zhTool from '@/data/tools/media/pdf-to-word-converter-zh.json';
+import mediaEn from '@/data/tools/media.json';
+import mediaZh from '@/data/tools/media-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('pdf-to-word-converter', 'media', 'PDF to Word Converter');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'PDF to Word Converter - Convert PDF to DOC/DOCX | InterConverter',
-  description: 'Convert PDF files to editable Word documents. Free online PDF to Word converter with high-quality conversion, OCR support, and layout preservation.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'PDF to Word Converter - Document Format Converter',
-    description: 'Professional PDF to Word converter with OCR support. Convert PDF files to editable DOC/DOCX documents with layout preservation.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-pdf-to-word-converter.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'PDF to Word Converter Tool'
+  const catalogs: Record<string, any[]> = {
+    en: mediaEn as any[],
+    zh: (mediaZh as any[]) || (mediaEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'pdf-to-word-converter') || catalogs.en.find((it) => it.id === 'pdf-to-word-converter');
+
+  const toolName: string = entry?.name ?? 'PDF to Word Converter';
+  const description: string = entry?.description ?? 'Convert PDF files to editable Word documents. Free online PDF to Word converter with high-quality conversion, OCR support, and layout preservation.';
+  const baseKeywords = generateOptimizedKeywords('pdf-to-word-converter', 'media', 'PDF to Word Converter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/media/pdf-to-word-converter`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-pdf-to-word-converter.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/media/pdf-to-word-converter',
+        zh: '/zh/media/pdf-to-word-converter'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/media/pdf-to-word-converter'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function PdfToWordConverterPage() {
-  const faqs = getFAQsByToolId('pdf-to-word-converter', 'media');
+export default async function PdfToWordConverterPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  // Load JSON content based on locale
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const catalogs: Record<string, any[]> = {
+    en: mediaEn as any[],
+    zh: (mediaZh as any[]) || (mediaEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'pdf-to-word-converter') || catalogs.en.find((it) => it.id === 'pdf-to-word-converter');
+
+  const toolName: string = entry?.name ?? 'PDF to Word Converter';
+  const description: string = entry?.description ?? 'Convert PDF files to editable Word documents with instant processing and layout preservation.';
+  const baseKeywords = generateOptimizedKeywords('pdf-to-word-converter', 'media', 'PDF to Word Converter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="PDF to Word Converter"
-      description="Convert PDF files to editable Word documents with instant processing and layout preservation."
+      title={toolName}
+      description={description}
       keywords={keywords}
       toolId="pdf-to-word-converter"
       category="media"
       emoji="📄"
-      customHowToUse={[
-        "Select or drag and drop your PDF file",
-        "Choose output format (DOC or DOCX)",
-        "Click convert to process your document",
-        "Download the editable Word document",
-        "Use OCR for scanned PDF documents"
-      ]}
-      customFeatures={[
-        "Convert PDF to DOC/DOCX format",
-        "Advanced OCR for scanned documents",
-        "Preserve original formatting and layout",
-        "Batch processing for multiple files",
-        "Secure local file processing",
-        "High-quality text extraction"
-      ]}
-      faqs={faqs}
+      aboutContent={toolContent.about}
+      customHowToUse={toolContent.howToUse}
+      customFeatures={toolContent.features}
+      faqs={toolContent.faqs}
     >
       <div className="text-center py-12 bg-muted rounded-lg">
         <div className="text-6xl mb-4">🚧</div>

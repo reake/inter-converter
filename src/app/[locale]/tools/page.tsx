@@ -1,101 +1,53 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/routing';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { getToolsByAllCategories, TOOL_CATEGORIES, getPopularTools } from '@/config/tools';
 import { ArrowRight, TrendingUp, Users, Star, Calculator } from 'lucide-react';
+import { generateMetadata as generateSEOMetadata } from '@/lib/seo/metadata';
+import { HreflangLinks } from '@/components/seo/HreflangLinks';
+import { CanonicalLink } from '@/components/seo/CanonicalLink';
+import { JsonLd, generateWebsiteSchema } from '@/components/seo/JsonLd';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export const metadata: Metadata = {
-  title: 'Free Online Converters & Calculators - 250+ Tools | InterConverter',
-  description: 'Discover 250+ free online converters and calculators at InterConverter. Convert units, currencies, colors, calculate health metrics, financial tools, automotive calculators, and more. Fast, accurate, and completely free.',
-  keywords: [
-    'online converter',
-    'free calculator',
-    'unit converter',
-    'currency converter',
-    'color converter',
-    'health calculator',
-    'financial calculator',
-    'automotive calculator',
-    'time converter',
-    'measurement tools',
-    'conversion tools',
-    'online tools',
-    'free tools',
-    'calculator online',
-    'converter online',
-    'metric converter',
-    'imperial converter',
-    'temperature converter',
-    'weight converter',
-    'length converter',
-    'area converter',
-    'volume converter',
-    'speed converter',
-    'pressure converter',
-    'energy converter',
-    'power converter',
-    'data converter',
-    'timestamp converter',
-    'timezone converter',
-    'date calculator',
-    'age calculator',
-    'bmi calculator',
-    'loan calculator',
-    'mortgage calculator',
-    'tax calculator',
-    'horsepower calculator',
-    'compression ratio calculator',
-    'hex color converter',
-    'rgb color converter',
-    'file converter',
-    'media converter'
-  ].join(', '),
-  openGraph: {
-    title: 'Free Online Converters & Calculators - 250+ Tools | InterConverter',
-    description: 'Discover 250+ free online converters and calculators at InterConverter. Convert units, currencies, colors, calculate health metrics, financial tools, automotive calculators, and more. Fast, accurate, and completely free.',
-    type: 'website',
-    url: 'https://interconverter.com/tools',
-    siteName: 'InterConverter',
-    images: [
-      {
-        url: 'https://interconverter.com/images/og-tools.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Free Online Converters & Calculators - InterConverter',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Free Online Converters & Calculators - 250+ Tools | InterConverter',
-    description: '250+ free online converters and calculators covering units, currency, colors, health, finance, automotive tools.',
-    creator: '@interconverter',
-  },
-  alternates: {
-    canonical: 'https://interconverter.com/tools'
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: process.env.GOOGLE_SITE_VERIFICATION,
-  },
-};
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'toolsPage' });
+  
+  const title = locale === 'zh' 
+    ? '免费在线转换器和计算器 - 250+ 工具 | InterConverter'
+    : 'Free Online Converters & Calculators - 250+ Tools | InterConverter';
+  
+  const description = t('hero.description');
+  
+  const keywords = locale === 'zh' 
+    ? ['在线转换器', '免费计算器', '单位转换器', '货币转换器', '颜色转换器', '健康计算器', '金融计算器', '汽车计算器', '时间转换器', '测量工具', '转换工具', '在线工具', '免费工具']
+    : ['online converter', 'free calculator', 'unit converter', 'currency converter', 'color converter', 'health calculator', 'financial calculator', 'automotive calculator', 'time converter', 'measurement tools', 'conversion tools', 'online tools', 'free tools'];
+  
+  return generateSEOMetadata({
+    title,
+    description,
+    locale,
+    pathname: '/tools',
+    keywords
+  });
+}
 
-export default function ToolsPage() {
+export default async function ToolsPage({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'toolsPage' });
   
   // Get all tools by categories with isActive filtering (limit 8 per category for overview)
   const toolsByCategory = getToolsByAllCategories(8);
@@ -128,7 +80,12 @@ export default function ToolsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <>
+      <HreflangLinks currentLocale={locale} pathname="/tools" />
+      <CanonicalLink locale={locale} pathname="/tools" />
+      <JsonLd data={generateWebsiteSchema(locale)} />
+      
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white">
         <div className="absolute inset-0 bg-black opacity-10"></div>
@@ -148,23 +105,23 @@ export default function ToolsPage() {
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              All Free Online Tools
+              {t('hero.title')}
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
-              Browse our complete collection of converters and calculators. Covering unit conversion, financial calculations, health tools, and more categories.
+              {t('hero.description')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
                 <Users className="h-4 w-4" />
-                <span>250+ Professional Tools</span>
+                <span>{t('hero.stats.professionalTools')}</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
                 <Star className="h-4 w-4" />
-                <span>100% Free to Use</span>
+                <span>{t('hero.stats.freeToUse')}</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
                 <TrendingUp className="h-4 w-4" />
-                <span>Real-time Accurate Results</span>
+                <span>{t('hero.stats.accurateResults')}</span>
               </div>
             </div>
           </div>
@@ -176,15 +133,15 @@ export default function ToolsPage() {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Most Popular Tools
+              {t('sections.popularTools')}
             </h2>
             <p className="text-lg text-gray-600">
-              The most frequently used converters and calculators by our users
+              {t('sections.popularToolsDescription')}
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {popularTools.map((tool) => (
-              <Link key={tool.id} href={tool.path} className="group">
+              <Link key={tool.id} href={tool.path as any} className="group">
                 <Card className="h-full hover:shadow-xl transition-all duration-300 group-hover:scale-[1.02] border-0 shadow-md">
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between">
@@ -202,7 +159,7 @@ export default function ToolsPage() {
                       {tool.description}
                     </CardDescription>
                     <div className="flex items-center text-primary text-sm font-medium">
-                      Use Tool
+                      {t('actions.useTool')}
                       <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </CardContent>
@@ -218,10 +175,10 @@ export default function ToolsPage() {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Browse Tools by Category
+              {t('sections.browseByCategory')}
             </h2>
             <p className="text-lg text-gray-600">
-              Explore our professional tool collections organized by functionality
+              {t('sections.browseByCategoryDescription')}
             </p>
           </div>
 
@@ -250,11 +207,11 @@ export default function ToolsPage() {
                     </div>
                     <div className="flex items-center gap-3">
                       <Badge variant="secondary" className="text-sm">
-                        {categoryTools.length} tools
+                        {categoryTools.length} {t('actions.toolsCount')}
                       </Badge>
                       <Button asChild variant="outline" size="sm" className="hover:bg-primary hover:text-white transition-colors">
-                        <Link href={`/${categoryKey}`}>
-                          View More
+                        <Link href={`/${categoryKey}` as any}>
+                          {t('actions.viewMore')}
                           <ArrowRight className="h-4 w-4 ml-1" />
                         </Link>
                       </Button>
@@ -264,7 +221,7 @@ export default function ToolsPage() {
                   {/* Tools Grid */}
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {categoryTools.map((tool) => (
-                      <Link key={tool.id} href={tool.path} className="group">
+                      <Link key={tool.id} href={tool.path as any} className="group">
                         <Card className="h-full hover:shadow-lg transition-all duration-200 border-2 hover:border-primary/20 bg-white">
                           <CardHeader className="pb-3">
                             <div className="flex items-center justify-between">
@@ -287,7 +244,7 @@ export default function ToolsPage() {
                               {tool.description}
                             </CardDescription>
                             <div className="flex items-center text-primary text-sm font-medium">
-                              Use Tool
+                              {t('actions.useTool')}
                               <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
                             </div>
                           </CardContent>
@@ -306,23 +263,24 @@ export default function ToolsPage() {
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">
-            Need a Specific Calculator or Converter?
+            {t('sections.callToAction')}
           </h2>
           <p className="text-xl mb-8 text-blue-100">
-            We're continuously expanding our collection of professional tools. Request new calculators or suggest improvements!
+            {t('sections.callToActionDescription')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-blue-50">
-              Request New Tool
+              {t('actions.requestNewTool')}
             </Button>
             <Button asChild size="lg" className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold shadow-lg border-0">
               <Link href="/">
-                Back to Home
+                {t('actions.backToHome')}
               </Link>
             </Button>
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

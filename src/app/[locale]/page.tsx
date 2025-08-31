@@ -1,5 +1,7 @@
 import React from "react";
 import { Metadata } from 'next';
+import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Button } from "@/components/ui/button";
 import { SearchInput } from "@/components/ui/SearchInput";
 import {
@@ -12,8 +14,12 @@ import {
 import { Link } from "@/i18n/routing";
 import { getPopularTools, getToolsByAllCategories, TOOL_CATEGORIES } from "@/config/tools";
 import { EnhancedToolCard } from "@/components/tools/EnhancedToolCard";
-import { generateHomeMetadata } from "@/config/seo";
+import { generateMetadata as generateSEOMetadata } from "@/lib/seo/metadata";
 import { StructuredData } from "@/components/tools/StructuredData";
+import { JsonLd, generateWebsiteSchema, generateFAQSchema } from "@/components/seo/JsonLd";
+import { HreflangLinks } from "@/components/seo/HreflangLinks";
+import { CanonicalLink } from "@/components/seo/CanonicalLink";
+import { FaqSection } from "@/components/seo/FaqSection";
 
 
 
@@ -25,7 +31,21 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  return generateHomeMetadata(locale);
+  const t = await getTranslations({ locale, namespace: 'homepage' });
+  
+  return generateSEOMetadata({
+    title: `${t('hero.title')} - ${t('hero.subtitle')}`,
+    description: t('hero.description'),
+    locale,
+    pathname: '/',
+    keywords: [
+      locale === 'zh' ? '在线转换器' : 'online converter',
+      locale === 'zh' ? '计算器工具' : 'calculator tools',
+      locale === 'zh' ? '免费工具' : 'free tools',
+      locale === 'zh' ? '单位转换' : 'unit conversion',
+      locale === 'zh' ? '货币转换' : 'currency converter'
+    ]
+  });
 }
 
 
@@ -35,11 +55,19 @@ export default async function HomePage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'homepage' });
+  const tCommon = await getTranslations({ locale, namespace: 'common' });
   const popularTools = getPopularTools(6);
   const toolsByCategory = getToolsByAllCategories(4);
+  
+  const faqItems = t.raw('faq') as Array<{question: string, answer: string}>;
+  const professionals = t.raw('professionals') as string[];
 
   return (
     <>
+      <HreflangLinks currentLocale={locale} pathname="/" />
+      <CanonicalLink locale={locale} pathname="/" />
+      <JsonLd data={generateWebsiteSchema(locale)} />
       <StructuredData tools={popularTools} locale={locale} />
      
       {/* Hero Section */}
@@ -47,21 +75,19 @@ export default async function HomePage({
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 via-purple-600/90 to-indigo-700/90"></div>
         <div className="relative container mx-auto px-4 py-20 text-center text-white max-w-7xl">
           <h1 className="text-5xl md:text-7xl font-bold mb-4 text-white">
-            InterConverter
+            {t('hero.title')}
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-blue-100">
-            Free Online Converters & Calculators Tools
+            {t('hero.subtitle')}
           </h2>
           <p className="text-lg md:text-xl text-blue-100 mb-12 max-w-5xl mx-auto leading-relaxed">
-            Professional-grade Converters tools and calculators for developers, engineers,
-            students, and professionals. Completely free, secure, and works instantly in your
-            browser without downloads.
+            {t('hero.description')}
           </p>
 
           {/* Search */}
           <div className="max-w-2xl mx-auto mb-8 relative z-50">
             <SearchInput
-              placeholder="Search Converters tools..."
+              placeholder={tCommon('searchPlaceholder')}
               redirectTo="/tools"
               locale={locale}
               showSuggestions={true}
@@ -70,10 +96,10 @@ export default async function HomePage({
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold shadow-lg">
-              <Link href="/tools">Explore All Tools</Link>
+              <Link href="/tools">{tCommon('exploreAllTools')}</Link>
             </Button>
             <Button asChild size="lg" className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold shadow-lg border-0">
-              <Link href="/tools">Browse Categories</Link>
+              <Link href="/tools">{tCommon('browseCategories')}</Link>
             </Button>
           </div>
         </div>
@@ -84,7 +110,7 @@ export default async function HomePage({
       {/* Popular Tools Section */}
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center mb-12">
-          Most Popular Tools
+          {t('sections.popularTools')}
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {popularTools.map((tool, index) => (
@@ -98,7 +124,7 @@ export default async function HomePage({
         </div>
         <div className="text-center">
           <Button asChild variant="outline">
-            <Link href="/tools">View All Tools</Link>
+            <Link href="/tools">{tCommon('viewAllTools')}</Link>
           </Button>
         </div>
       </section>
@@ -106,7 +132,7 @@ export default async function HomePage({
       {/* Tools by Category Section */}
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center mb-12">
-          Browse Tools by Category
+          {t('sections.browseByCategory')}
         </h2>
         <div className="space-y-12">
           {Object.entries(toolsByCategory).map(([categoryKey, tools]) => {
@@ -119,7 +145,7 @@ export default async function HomePage({
                     <p className="text-gray-600 mt-1">{category.description}</p>
                   </div>
                   <Button asChild variant="outline" size="sm">
-                    <a href={`/${categoryKey}`}>View More</a>
+                    <a href={`/${categoryKey}`}>{tCommon('viewMore')}</a>
                   </Button>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -139,95 +165,22 @@ export default async function HomePage({
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gray-50 rounded-3xl mx-4">
-        <div className="max-w-4xl mx-auto px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-lg text-gray-600">
-              Everything you need to know about our Converters tools
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="font-semibold text-lg mb-3 text-gray-900">
-                  Are these tools really free?
-                </h3>
-                <p className="text-gray-700">
-                  Yes! All our Converters tools are completely free to use with no hidden costs,
-                  registration requirements, or usage limits. We believe in providing accessible tools for everyone.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="font-semibold text-lg mb-3 text-gray-900">
-                  Do you store my data?
-                </h3>
-                <p className="text-gray-700">
-                  No, all calculations are performed locally in your browser. We don't store, track,
-                  or have access to your input data or results. Your privacy is our priority.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="font-semibold text-lg mb-3 text-gray-900">
-                  How accurate are the results?
-                </h3>
-                <p className="text-gray-700">
-                  Our tools use industry-standard formulas and regularly updated data sources to ensure
-                  maximum accuracy. For financial tools, we use real-time exchange rates and official data.
-                </p>
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="font-semibold text-lg mb-3 text-gray-900">
-                  Do I need to create an account?
-                </h3>
-                <p className="text-gray-700">
-                  No registration required! Simply visit any tool page and start converting immediately.
-                  All tools work instantly without any sign-up process.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="font-semibold text-lg mb-3 text-gray-900">
-                  Can I use these tools on mobile?
-                </h3>
-                <p className="text-gray-700">
-                  Absolutely! All our tools are fully responsive and optimized for mobile devices.
-                  They work perfectly on smartphones, tablets, and desktop computers.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="font-semibold text-lg mb-3 text-gray-900">
-                  How often are exchange rates updated?
-                </h3>
-                <p className="text-gray-700">
-                  Currency exchange rates are updated every 15 minutes during market hours from reliable
-                  financial data providers to ensure you get the most current rates.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FaqSection 
+        title={t('sections.faq')}
+        subtitle={t('sections.faqSubtitle')}
+        faqItems={faqItems}
+        locale={locale}
+      />
 
       {/* About InterConverter Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl mx-4">
         <div className="max-w-6xl mx-auto px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              About InterConverter.com
+              {t('sections.aboutTitle')}
             </h2>
             <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              InterConverter.com is the premier destination for professional-grade Converters tools and calculators. 
-              Built by developers for developers, designers, engineers, and professionals who demand accuracy and efficiency.
+              {t('sections.aboutDescription')}
             </p>
           </div>
 
@@ -237,12 +190,11 @@ export default async function HomePage({
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4">
                   <span className="text-2xl">🎯</span>
                 </div>
-                <CardTitle className="text-xl">Professional Quality</CardTitle>
+                <CardTitle className="text-xl">{t('features.professionalQuality.title')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base leading-relaxed">
-                  Every tool is built with precision and tested for accuracy. We use industry-standard algorithms 
-                  and formulas to ensure reliable results for professional use.
+                  {t('features.professionalQuality.description')}
                 </CardDescription>
               </CardContent>
             </Card>
@@ -252,12 +204,11 @@ export default async function HomePage({
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
                   <span className="text-2xl">🚀</span>
                 </div>
-                <CardTitle className="text-xl">Lightning Fast</CardTitle>
+                <CardTitle className="text-xl">{t('features.lightningFast.title')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base leading-relaxed">
-                  All calculations happen instantly in your browser. No server delays, no waiting times. 
-                  Get results immediately with our optimized, client-side processing.
+                  {t('features.lightningFast.description')}
                 </CardDescription>
               </CardContent>
             </Card>
@@ -267,12 +218,11 @@ export default async function HomePage({
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4">
                   <span className="text-2xl">🔒</span>
                 </div>
-                <CardTitle className="text-xl">Privacy First</CardTitle>
+                <CardTitle className="text-xl">{t('features.privacyFirst.title')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base leading-relaxed">
-                  Your data never leaves your device. No tracking, no data collection, no user accounts required. 
-                  Complete privacy and security for all your Converterss.
+                  {t('features.privacyFirst.description')}
                 </CardDescription>
               </CardContent>
             </Card>
@@ -282,12 +232,11 @@ export default async function HomePage({
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-4">
                   <span className="text-2xl">📱</span>
                 </div>
-                <CardTitle className="text-xl">Mobile Optimized</CardTitle>
+                <CardTitle className="text-xl">{t('features.mobileOptimized.title')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base leading-relaxed">
-                  Perfect experience on all devices. Responsive design ensures all tools work flawlessly 
-                  on desktop, tablet, and mobile devices.
+                  {t('features.mobileOptimized.description')}
                 </CardDescription>
               </CardContent>
             </Card>
@@ -297,12 +246,11 @@ export default async function HomePage({
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4">
                   <span className="text-2xl">🌍</span>
                 </div>
-                <CardTitle className="text-xl">Global Standards</CardTitle>
+                <CardTitle className="text-xl">{t('features.globalStandards.title')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base leading-relaxed">
-                  Support for international standards, multiple currencies, units, and formats. 
-                  Built for a global audience with localization and accessibility in mind.
+                  {t('features.globalStandards.description')}
                 </CardDescription>
               </CardContent>
             </Card>
@@ -312,12 +260,11 @@ export default async function HomePage({
                 <div className="w-12 h-12 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-xl flex items-center justify-center mb-4">
                   <span className="text-2xl">⚡</span>
                 </div>
-                <CardTitle className="text-xl">Always Updated</CardTitle>
+                <CardTitle className="text-xl">{t('features.alwaysUpdated.title')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base leading-relaxed">
-                  Regular updates with new tools, features, and improvements. We continuously add 
-                  new Converters tools based on user feedback and industry needs.
+                  {t('features.alwaysUpdated.description')}
                 </CardDescription>
               </CardContent>
             </Card>
@@ -325,20 +272,17 @@ export default async function HomePage({
 
           <div className="text-center">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Trusted by Professionals Worldwide
+              {t('sections.trustedBy')}
             </h3>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
-              From automotive engineers calculating compression ratios to web developers converting colors, 
-              InterConverter.com serves thousands of professionals daily. Join the community of users who 
-              rely on our tools for accurate, fast, and reliable Converterss.
+              {t('sections.trustedByDescription')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
-              <span className="bg-white px-4 py-2 rounded-full shadow-sm">🔧 Engineers</span>
-              <span className="bg-white px-4 py-2 rounded-full shadow-sm">💻 Developers</span>
-              <span className="bg-white px-4 py-2 rounded-full shadow-sm">🎨 Designers</span>
-              <span className="bg-white px-4 py-2 rounded-full shadow-sm">🏗️ Architects</span>
-              <span className="bg-white px-4 py-2 rounded-full shadow-sm">📊 Analysts</span>
-              <span className="bg-white px-4 py-2 rounded-full shadow-sm">🔬 Scientists</span>
+              {professionals.map((professional, index) => (
+                <span key={index} className="bg-white px-4 py-2 rounded-full shadow-sm">
+                  {professional}
+                </span>
+              ))}
             </div>
           </div>
         </div>
@@ -347,7 +291,7 @@ export default async function HomePage({
       {/* Features Section */}
       <section className="py-20">
         <h2 className="text-3xl font-bold text-center mb-12">
-          Why Choose InterConverter?
+          {t('sections.whyChoose')}
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
@@ -355,11 +299,11 @@ export default async function HomePage({
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4">
                 <span className="text-2xl">⚡</span>
               </div>
-              <CardTitle>Instant Results</CardTitle>
+              <CardTitle>{t('features.instantResults.title')}</CardTitle>
             </CardHeader>
             <CardContent>
               <CardDescription>
-                Get immediate, accurate Converterss without delays. All processing happens in your browser for maximum speed.
+                {t('features.instantResults.description')}
               </CardDescription>
             </CardContent>
           </Card>
@@ -369,11 +313,11 @@ export default async function HomePage({
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
                 <span className="text-2xl">🆓</span>
               </div>
-              <CardTitle>Completely Free</CardTitle>
+              <CardTitle>{t('features.completelyFree.title')}</CardTitle>
             </CardHeader>
             <CardContent>
               <CardDescription>
-                No subscriptions, no hidden fees, no registration required. Professional-grade tools available to everyone.
+                {t('features.completelyFree.description')}
               </CardDescription>
             </CardContent>
           </Card>
@@ -383,11 +327,11 @@ export default async function HomePage({
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4">
                 <span className="text-2xl">🔒</span>
               </div>
-              <CardTitle>Privacy Protected</CardTitle>
+              <CardTitle>{t('features.privacyProtected.title')}</CardTitle>
             </CardHeader>
             <CardContent>
               <CardDescription>
-                Your data stays on your device. No tracking, no data collection, complete privacy for all your Converterss.
+                {t('features.privacyProtected.description')}
               </CardDescription>
             </CardContent>
           </Card>

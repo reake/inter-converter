@@ -1,0 +1,16 @@
+[
+  {
+    "id": "jpg-to-png-converter",
+    "name": "JPG转PNG转换器",
+    "description": "将JPG图像转换为支持透明度的PNG格式，保持高质量的在线图像转换工具。",
+    "keywords": ["jpg转png", "图像转换器", "png转换", "透明背景", "图片格式转换", "在线转换"],
+    "titleSuffix": "高质量图像转换"
+  },
+  {
+    "id": "pdf-to-word-converter", 
+    "name": "PDF转Word转换器",
+    "description": "将PDF文档转换为可编辑的Word格式，支持OCR和格式保持的专业文档转换工具。",
+    "keywords": ["pdf转word", "文档转换器", "pdf编辑", "word转换", "ocr识别", "文档处理"],
+    "titleSuffix": "专业文档转换"
+  }
+]

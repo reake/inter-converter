@@ -1,67 +1,49 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/routing';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { getToolsByCategory } from '@/config/tools';
+import { generateMetadata as generateSEOMetadata } from '@/lib/seo/metadata';
+import { HreflangLinks } from '@/components/seo/HreflangLinks';
+import { CanonicalLink } from '@/components/seo/CanonicalLink';
+import { JsonLd, generateWebsiteSchema } from '@/components/seo/JsonLd';
 
 
 
 
 // Force static generation
 export const dynamic = 'force-static';
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'Free Health & Fitness Calculators - BMI, Body Fat, Calorie Tools | InterConverter',
-    description: 'Professional health and fitness calculators including BMI calculator, body fat percentage, calorie needs, ideal weight, heart rate zones, and fitness tracking tools. Free, accurate health metrics for wellness planning.',
-    keywords: [
-      'bmi calculator',
-      'body mass index calculator',
-      'health calculator',
-      'fitness calculator',
-      'calorie calculator',
-      'body fat calculator',
-      'ideal weight calculator',
-      'health metrics calculator',
-      'wellness calculator',
-      'fitness tracking tools',
-      'health assessment tools',
-      'body composition calculator',
-      'heart rate calculator',
-      'free health calculators',
-      'online health tools'
-    ],
-    openGraph: {
-      title: 'Free Health & Fitness Calculators | InterConverter',
-      description: 'Professional health and fitness calculators for BMI, body fat, calories, and wellness tracking. Free online health tools.',
-      type: 'website',
-      url: 'https://interconverter.com/health',
-      siteName: 'InterConverter',
-      images: [
-        {
-          url: 'https://interconverter.com/images/og-health.jpg',
-          width: 1200,
-          height: 630,
-          alt: 'Health & Fitness Calculators - InterConverter',
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: 'Free Health & Fitness Calculators | InterConverter',
-      description: 'Professional health calculators for BMI, body fat, calories, and wellness tracking.',
-      creator: '@interconverter',
-    },
-    alternates: {
-      canonical: 'https://interconverter.com/health'
-    },
-    robots: {
-      index: true,
-      follow: true,
-    }
-  };
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'categoryPages.health' });
+  
+  const title = t('seo.title');
+  const description = t('description');
+  // Keywords are already an array in JSON, no need to parse
+  const keywordsRaw = t.raw('seo.keywords') as string[];
+  const keywords = keywordsRaw || [];
+  
+  return generateSEOMetadata({
+    title,
+    description,
+    locale,
+    pathname: '/health',
+    keywords
+  });
 }
 
-export default function HealthFitnessPage() {
+export default async function HealthFitnessPage({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'categoryPages.health' });
   const tools = getToolsByCategory('health');
 
   const getDifficultyColor = (difficulty: number) => {
@@ -71,7 +53,12 @@ export default function HealthFitnessPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-teal-50 to-blue-50">
+    <>
+      <HreflangLinks currentLocale={locale} pathname="/health" />
+      <CanonicalLink locale={locale} pathname="/health" />
+      <JsonLd data={generateWebsiteSchema(locale)} />
+      
+      <div className="min-h-screen bg-gradient-to-br from-green-50 via-teal-50 to-blue-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-green-500 via-teal-500 to-blue-500 text-white">
         <div className="container mx-auto px-4 py-16 max-w-6xl">
@@ -80,24 +67,23 @@ export default function HealthFitnessPage() {
               <span className="text-4xl">💪</span>
             </div>
             <h1 className="text-5xl font-bold mb-6">
-              Health & Fitness Tools
+              {t('title')}
             </h1>
             <p className="text-xl text-green-100 max-w-3xl mx-auto mb-8">
-              Professional health and fitness calculators to help you track your wellness journey. 
-              Calculate BMI, body fat, calorie needs, and achieve your fitness goals.
+              {t('description')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
                 <span>📊</span>
-                <span>Accurate calculations</span>
+                <span>{t('stats.accurateCalculations')}</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
                 <span>🎯</span>
-                <span>Goal tracking</span>
+                <span>{t('stats.goalTracking')}</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
                 <span>🏥</span>
-                <span>Health focused</span>
+                <span>{t('stats.healthFocused')}</span>
               </div>
             </div>
           </div>
@@ -109,15 +95,15 @@ export default function HealthFitnessPage() {
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Health Calculators
+              {t('sections.calculators.title')}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Track your health metrics and fitness progress with our professional-grade calculators
+              {t('sections.calculators.description')}
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {tools.map((tool) => (
-              <Link key={tool.id} href={tool.path} className="block group">
+              <Link key={tool.id} href={tool.path as any} className="block group">
                 <Card className="h-full hover:shadow-2xl transition-all duration-300 group-hover:scale-[1.02] border-0 shadow-lg bg-gradient-to-br from-white to-gray-50">
                   <CardHeader className="pb-3">
                     <div className="flex items-start justify-between">
@@ -137,7 +123,7 @@ export default function HealthFitnessPage() {
                   <CardContent className="pt-0">
                     <div className="flex items-center justify-between">
                       <Badge variant="outline" className={`font-medium ${getDifficultyColor(tool.difficulty || 1)}`}>
-                        Level {tool.difficulty || 1}/5
+                        {t('common.level')} {tool.difficulty || 1}/5
                       </Badge>
                       {tool.searchVolume && (
                         <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200">
@@ -156,10 +142,10 @@ export default function HealthFitnessPage() {
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              BMI Categories
+              {t('sections.bmiCategories.title')}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Understand your Body Mass Index classification and what it means for your health
+              {t('sections.bmiCategories.description')}
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -168,9 +154,9 @@ export default function HealthFitnessPage() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-500 text-white rounded-2xl mb-4">
                   <span className="text-2xl">📉</span>
                 </div>
-                <h3 className="font-bold text-lg mb-2 text-blue-900">Underweight</h3>
-                <p className="text-blue-800 text-sm mb-2">BMI &lt; 18.5</p>
-                <p className="text-blue-700 text-xs">May need to gain weight</p>
+                <h3 className="font-bold text-lg mb-2 text-blue-900">{t('bmiCategories.underweight.title')}</h3>
+                <p className="text-blue-800 text-sm mb-2">{t('bmiCategories.underweight.range')}</p>
+                <p className="text-blue-700 text-xs">{t('bmiCategories.underweight.description')}</p>
               </CardContent>
             </Card>
 
@@ -179,9 +165,9 @@ export default function HealthFitnessPage() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-500 text-white rounded-2xl mb-4">
                   <span className="text-2xl">✅</span>
                 </div>
-                <h3 className="font-bold text-lg mb-2 text-green-900">Normal Weight</h3>
-                <p className="text-green-800 text-sm mb-2">BMI 18.5-24.9</p>
-                <p className="text-green-700 text-xs">Healthy weight range</p>
+                <h3 className="font-bold text-lg mb-2 text-green-900">{t('bmiCategories.normal.title')}</h3>
+                <p className="text-green-800 text-sm mb-2">{t('bmiCategories.normal.range')}</p>
+                <p className="text-green-700 text-xs">{t('bmiCategories.normal.description')}</p>
               </CardContent>
             </Card>
 
@@ -190,9 +176,9 @@ export default function HealthFitnessPage() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-yellow-500 text-white rounded-2xl mb-4">
                   <span className="text-2xl">⚠️</span>
                 </div>
-                <h3 className="font-bold text-lg mb-2 text-yellow-900">Overweight</h3>
-                <p className="text-yellow-800 text-sm mb-2">BMI 25-29.9</p>
-                <p className="text-yellow-700 text-xs">Consider weight loss</p>
+                <h3 className="font-bold text-lg mb-2 text-yellow-900">{t('bmiCategories.overweight.title')}</h3>
+                <p className="text-yellow-800 text-sm mb-2">{t('bmiCategories.overweight.range')}</p>
+                <p className="text-yellow-700 text-xs">{t('bmiCategories.overweight.description')}</p>
               </CardContent>
             </Card>
 
@@ -201,9 +187,9 @@ export default function HealthFitnessPage() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-red-500 text-white rounded-2xl mb-4">
                   <span className="text-2xl">🚨</span>
                 </div>
-                <h3 className="font-bold text-lg mb-2 text-red-900">Obese</h3>
-                <p className="text-red-800 text-sm mb-2">BMI ≥ 30</p>
-                <p className="text-red-700 text-xs">Consult healthcare provider</p>
+                <h3 className="font-bold text-lg mb-2 text-red-900">{t('bmiCategories.obese.title')}</h3>
+                <p className="text-red-800 text-sm mb-2">{t('bmiCategories.obese.range')}</p>
+                <p className="text-red-700 text-xs">{t('bmiCategories.obese.description')}</p>
               </CardContent>
             </Card>
           </div>
@@ -216,26 +202,26 @@ export default function HealthFitnessPage() {
             <CardHeader className="bg-gradient-to-br from-blue-50 to-cyan-50">
               <CardTitle className="flex items-center gap-3 text-blue-800">
                 <span className="text-2xl">🏋️</span>
-                Body Composition Tools
+                {t('infoCards.bodyComposition.title')}
               </CardTitle>
             </CardHeader>
             <CardContent className="p-6">
               <div className="grid gap-3">
                 <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
                   <span className="text-blue-600">•</span>
-                  <span className="text-gray-700">BMI (Body Mass Index) calculation</span>
+                  <span className="text-gray-700">{t('infoCards.bodyComposition.features.bmi')}</span>
                 </div>
                 <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
                   <span className="text-blue-600">•</span>
-                  <span className="text-gray-700">Body fat percentage estimation</span>
+                  <span className="text-gray-700">{t('infoCards.bodyComposition.features.bodyFat')}</span>
                 </div>
                 <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
                   <span className="text-blue-600">•</span>
-                  <span className="text-gray-700">Ideal weight range calculations</span>
+                  <span className="text-gray-700">{t('infoCards.bodyComposition.features.idealWeight')}</span>
                 </div>
                 <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
                   <span className="text-blue-600">•</span>
-                  <span className="text-gray-700">Waist-to-hip ratio analysis</span>
+                  <span className="text-gray-700">{t('infoCards.bodyComposition.features.waistHip')}</span>
                 </div>
               </div>
             </CardContent>
@@ -246,26 +232,26 @@ export default function HealthFitnessPage() {
             <CardHeader className="bg-gradient-to-br from-green-50 to-emerald-50">
               <CardTitle className="flex items-center gap-3 text-green-800">
                 <span className="text-2xl">🔥</span>
-                Fitness & Nutrition
+                {t('infoCards.fitnessNutrition.title')}
               </CardTitle>
             </CardHeader>
             <CardContent className="p-6">
               <div className="grid gap-3">
                 <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
                   <span className="text-green-600">•</span>
-                  <span className="text-gray-700">Daily calorie requirements</span>
+                  <span className="text-gray-700">{t('infoCards.fitnessNutrition.features.calories')}</span>
                 </div>
                 <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
                   <span className="text-green-600">•</span>
-                  <span className="text-gray-700">Exercise calorie burn estimation</span>
+                  <span className="text-gray-700">{t('infoCards.fitnessNutrition.features.exercise')}</span>
                 </div>
                 <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
                   <span className="text-green-600">•</span>
-                  <span className="text-gray-700">Heart rate zone calculations</span>
+                  <span className="text-gray-700">{t('infoCards.fitnessNutrition.features.heartRate')}</span>
                 </div>
                 <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
                   <span className="text-green-600">•</span>
-                  <span className="text-gray-700">Fitness goal tracking tools</span>
+                  <span className="text-gray-700">{t('infoCards.fitnessNutrition.features.goalTracking')}</span>
                 </div>
               </div>
             </CardContent>
@@ -280,18 +266,16 @@ export default function HealthFitnessPage() {
                 <span className="text-2xl">🏥</span>
               </div>
               <div>
-                <h3 className="font-bold text-amber-900 text-lg mb-2">Important Health Disclaimer</h3>
+                <h3 className="font-bold text-amber-900 text-lg mb-2">{t('disclaimer.title')}</h3>
                 <p className="text-amber-800 leading-relaxed">
-                  These calculators are provided for educational and informational purposes only. 
-                  They should not replace professional medical advice, diagnosis, or treatment. 
-                  Always consult with qualified healthcare professionals for personalized health guidance, 
-                  especially before starting any new diet or exercise program.
+                  {t('disclaimer.content')}
                 </p>
               </div>
             </div>
           </CardContent>
         </Card>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

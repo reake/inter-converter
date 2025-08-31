@@ -1,67 +1,39 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/routing';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { getToolsByCategory } from '@/config/tools';
-
-
-
+import { generateMetadata as generateSEOMetadata } from '@/lib/seo/metadata';
+import { HreflangLinks } from '@/components/seo/HreflangLinks';
+import { CanonicalLink } from '@/components/seo/CanonicalLink';
+import { JsonLd, generateWebsiteSchema } from '@/components/seo/JsonLd';
 
 // Force static generation
 export const dynamic = 'force-static';
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'Free File & Media Converters - PDF, Image, Document Conversion Tools | InterConverter',
-    description: 'Professional file and media conversion tools for documents, images, and multimedia files. Convert PDF to Word, JPG to PNG, video formats, and more. Free, secure, and fast online file converters.',
-    keywords: [
-      'file converter',
-      'pdf to word converter',
-      'image converter',
-      'jpg to png converter',
-      'document converter',
-      'media converter',
-      'video converter',
-      'audio converter',
-      'pdf converter',
-      'image format converter',
-      'free file converter',
-      'online file conversion',
-      'document conversion tools',
-      'multimedia converter',
-      'file format converter'
-    ],
-    openGraph: {
-      title: 'Free File & Media Converters | InterConverter',
-      description: 'Professional file and media conversion tools for documents, images, and multimedia files. Free, secure online converters.',
-      type: 'website',
-      url: 'https://interconverter.com/media',
-      siteName: 'InterConverter',
-      images: [
-        {
-          url: 'https://interconverter.com/images/og-media.jpg',
-          width: 1200,
-          height: 630,
-          alt: 'File & Media Converters - InterConverter',
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: 'Free File & Media Converters | InterConverter',
-      description: 'Professional file conversion tools for documents, images, and multimedia files.',
-      creator: '@interconverter',
-    },
-    alternates: {
-      canonical: 'https://interconverter.com/media'
-    },
-    robots: {
-      index: true,
-      follow: true,
-    }
-  };
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'categoryPages.media' });
+  
+  const title = t('seo.title');
+  const description = t('description');
+  // Keywords are already an array in JSON, no need to parse
+  const keywordsRaw = t.raw('seo.keywords') as string[];
+  const keywords = keywordsRaw || [];
+  
+  return generateSEOMetadata({
+    title,
+    description,
+    locale,
+    pathname: '/media',
+    keywords
+  });
 }
 
-export default function FileMediaPage() {
+export default async function FileMediaPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'categoryPages.media' });
   const tools = getToolsByCategory('media');
 
   const getDifficultyColor = (difficulty: number) => {
@@ -70,54 +42,64 @@ export default function FileMediaPage() {
     return 'bg-red-100 text-red-800 border-red-200';
   };
 
+  const getDifficultyLabel = (difficulty: number) => {
+    if (difficulty <= 2) return t('difficulty.beginner');
+    if (difficulty <= 3) return t('difficulty.intermediate');
+    return t('difficulty.advanced');
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 text-white">
-        <div className="container mx-auto px-4 py-16 max-w-6xl">
-          <div className="text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full mb-6">
-              <span className="text-4xl">📁</span>
-            </div>
-            <h1 className="text-5xl font-bold mb-6">
-              File & Media Converters
-            </h1>
-            <p className="text-xl text-indigo-100 max-w-3xl mx-auto mb-8">
-              Professional file Converters tools for documents, images, and media files. 
-              Convert between different formats quickly, securely, and with high quality.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
-                <span>🔒</span>
-                <span>Secure processing</span>
+    <>
+      <HreflangLinks pathname="/media" currentLocale={locale} />
+      <CanonicalLink pathname="/media" locale={locale} />
+      <JsonLd data={generateWebsiteSchema(locale)} />
+      
+      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 text-white">
+          <div className="container mx-auto px-4 py-16 max-w-6xl">
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full mb-6">
+                <span className="text-4xl">📁</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
-                <span>⚡</span>
-                <span>Fast Converters</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
-                <span>🎯</span>
-                <span>High quality</span>
+              <h1 className="text-5xl font-bold mb-6">
+                {t('title')}
+              </h1>
+              <p className="text-xl text-indigo-100 max-w-3xl mx-auto mb-8">
+                {t('description')}
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 text-sm">
+                <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
+                  <span>🔒</span>
+                  <span>{t('stats.secureProcessing')}</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
+                  <span>⚡</span>
+                  <span>{t('stats.fastConversion')}</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
+                  <span>🎯</span>
+                  <span>{t('stats.highQuality')}</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
       <div className="container mx-auto px-4 py-12 max-w-6xl">
         {/* Tools Grid */}
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              File Converters Tools
+              {t('sections.converters.title')}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Convert documents, images, and media files between different formats with ease
+              {t('sections.converters.description')}
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {tools.map((tool) => (
-              <Link key={tool.id} href={tool.path} className="block group">
+              <Link key={tool.id} href={tool.path as any} className="block group">
                 <Card className="h-full hover:shadow-2xl transition-all duration-300 group-hover:scale-[1.02] border-0 shadow-lg bg-gradient-to-br from-white to-gray-50">
                   <CardHeader className="pb-3">
                     <div className="flex items-start justify-between">
@@ -137,7 +119,7 @@ export default function FileMediaPage() {
                   <CardContent className="pt-0">
                     <div className="flex items-center justify-between">
                       <Badge variant="outline" className={`font-medium ${getDifficultyColor(tool.difficulty || 1)}`}>
-                        Level {tool.difficulty || 1}/5
+                        {t('common.level')} {tool.difficulty || 1}/5
                       </Badge>
                       {tool.searchVolume && (
                         <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200">
@@ -156,10 +138,10 @@ export default function FileMediaPage() {
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Supported File Types
+              {t('sections.fileTypes.title')}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Convert between popular document, image, and media formats
+              {t('sections.fileTypes.description')}
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -168,24 +150,18 @@ export default function FileMediaPage() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-red-500 text-white rounded-2xl mb-4 mx-auto">
                   <span className="text-2xl">📄</span>
                 </div>
-                <CardTitle className="text-red-900">Documents</CardTitle>
+                <CardTitle className="text-red-900">{t('fileTypes.documents.title')}</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <div className="grid gap-2">
                   <div className="flex items-center justify-center gap-2 p-2 bg-red-50 rounded-lg">
-                    <span className="text-red-600 font-mono text-sm">PDF</span>
-                    <span className="text-gray-400">↔</span>
-                    <span className="text-red-600 font-mono text-sm">DOCX</span>
+                    <span className="text-red-600 font-mono text-sm">{t('fileTypes.documents.formats.pdfDocx')}</span>
                   </div>
                   <div className="flex items-center justify-center gap-2 p-2 bg-red-50 rounded-lg">
-                    <span className="text-red-600 font-mono text-sm">DOC</span>
-                    <span className="text-gray-400">↔</span>
-                    <span className="text-red-600 font-mono text-sm">PDF</span>
+                    <span className="text-red-600 font-mono text-sm">{t('fileTypes.documents.formats.docPdf')}</span>
                   </div>
                   <div className="flex items-center justify-center gap-2 p-2 bg-red-50 rounded-lg">
-                    <span className="text-red-600 font-mono text-sm">XLSX</span>
-                    <span className="text-gray-400">↔</span>
-                    <span className="text-red-600 font-mono text-sm">PDF</span>
+                    <span className="text-red-600 font-mono text-sm">{t('fileTypes.documents.formats.xlsxPdf')}</span>
                   </div>
                 </div>
               </CardContent>
@@ -196,24 +172,18 @@ export default function FileMediaPage() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-500 text-white rounded-2xl mb-4 mx-auto">
                   <span className="text-2xl">🖼️</span>
                 </div>
-                <CardTitle className="text-green-900">Images</CardTitle>
+                <CardTitle className="text-green-900">{t('fileTypes.images.title')}</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <div className="grid gap-2">
                   <div className="flex items-center justify-center gap-2 p-2 bg-green-50 rounded-lg">
-                    <span className="text-green-600 font-mono text-sm">JPG</span>
-                    <span className="text-gray-400">↔</span>
-                    <span className="text-green-600 font-mono text-sm">PNG</span>
+                    <span className="text-green-600 font-mono text-sm">{t('fileTypes.images.formats.jpgPng')}</span>
                   </div>
                   <div className="flex items-center justify-center gap-2 p-2 bg-green-50 rounded-lg">
-                    <span className="text-green-600 font-mono text-sm">PNG</span>
-                    <span className="text-gray-400">↔</span>
-                    <span className="text-green-600 font-mono text-sm">WebP</span>
+                    <span className="text-green-600 font-mono text-sm">{t('fileTypes.images.formats.pngWebp')}</span>
                   </div>
                   <div className="flex items-center justify-center gap-2 p-2 bg-green-50 rounded-lg">
-                    <span className="text-green-600 font-mono text-sm">GIF</span>
-                    <span className="text-gray-400">↔</span>
-                    <span className="text-green-600 font-mono text-sm">MP4</span>
+                    <span className="text-green-600 font-mono text-sm">{t('fileTypes.images.formats.gifMp4')}</span>
                   </div>
                 </div>
               </CardContent>
@@ -224,24 +194,18 @@ export default function FileMediaPage() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-500 text-white rounded-2xl mb-4 mx-auto">
                   <span className="text-2xl">🎵</span>
                 </div>
-                <CardTitle className="text-blue-900">Media</CardTitle>
+                <CardTitle className="text-blue-900">{t('fileTypes.media.title')}</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <div className="grid gap-2">
                   <div className="flex items-center justify-center gap-2 p-2 bg-blue-50 rounded-lg">
-                    <span className="text-blue-600 font-mono text-sm">MP4</span>
-                    <span className="text-gray-400">↔</span>
-                    <span className="text-blue-600 font-mono text-sm">AVI</span>
+                    <span className="text-blue-600 font-mono text-sm">{t('fileTypes.media.formats.mp4Avi')}</span>
                   </div>
                   <div className="flex items-center justify-center gap-2 p-2 bg-blue-50 rounded-lg">
-                    <span className="text-blue-600 font-mono text-sm">MP3</span>
-                    <span className="text-gray-400">↔</span>
-                    <span className="text-blue-600 font-mono text-sm">WAV</span>
+                    <span className="text-blue-600 font-mono text-sm">{t('fileTypes.media.formats.mp3Wav')}</span>
                   </div>
                   <div className="flex items-center justify-center gap-2 p-2 bg-blue-50 rounded-lg">
-                    <span className="text-blue-600 font-mono text-sm">MOV</span>
-                    <span className="text-gray-400">↔</span>
-                    <span className="text-blue-600 font-mono text-sm">MP4</span>
+                    <span className="text-blue-600 font-mono text-sm">{t('fileTypes.media.formats.movMp4')}</span>
                   </div>
                 </div>
               </CardContent>
@@ -253,10 +217,10 @@ export default function FileMediaPage() {
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our Converters?
+              {t('sections.features.title')}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Professional-grade Converters tools with security and quality in mind
+              {t('sections.features.description')}
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -265,9 +229,9 @@ export default function FileMediaPage() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-500 text-white rounded-2xl mb-4">
                   <span className="text-2xl">🔒</span>
                 </div>
-                <h3 className="font-bold text-lg mb-2 text-green-900">Secure Processing</h3>
+                <h3 className="font-bold text-lg mb-2 text-green-900">{t('features.secure.title')}</h3>
                 <p className="text-green-800 text-sm">
-                  Files are processed securely and automatically deleted after Converters
+                  {t('features.secure.description')}
                 </p>
               </CardContent>
             </Card>
@@ -277,9 +241,9 @@ export default function FileMediaPage() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-500 text-white rounded-2xl mb-4">
                   <span className="text-2xl">⚡</span>
                 </div>
-                <h3 className="font-bold text-lg mb-2 text-blue-900">Lightning Fast</h3>
+                <h3 className="font-bold text-lg mb-2 text-blue-900">{t('features.fast.title')}</h3>
                 <p className="text-blue-800 text-sm">
-                  Optimized algorithms ensure quick Converters without quality loss
+                  {t('features.fast.description')}
                 </p>
               </CardContent>
             </Card>
@@ -289,9 +253,9 @@ export default function FileMediaPage() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-500 text-white rounded-2xl mb-4">
                   <span className="text-2xl">🎯</span>
                 </div>
-                <h3 className="font-bold text-lg mb-2 text-purple-900">High Quality</h3>
+                <h3 className="font-bold text-lg mb-2 text-purple-900">{t('features.quality.title')}</h3>
                 <p className="text-purple-800 text-sm">
-                  Maintain original quality and formatting during Converters process
+                  {t('features.quality.description')}
                 </p>
               </CardContent>
             </Card>
@@ -306,17 +270,16 @@ export default function FileMediaPage() {
                 <span className="text-2xl">🛡️</span>
               </div>
               <div>
-                <h3 className="font-bold text-amber-900 text-lg mb-2">Privacy & Security Notice</h3>
+                <h3 className="font-bold text-amber-900 text-lg mb-2">{t('privacy.title')}</h3>
                 <p className="text-amber-800 leading-relaxed">
-                  Your privacy is our priority. All files are processed securely using encrypted connections. 
-                  Files are automatically deleted from our servers immediately after Converters. 
-                  We never store, access, or share your files with third parties.
+                  {t('privacy.content')}
                 </p>
               </div>
             </div>
           </CardContent>
         </Card>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

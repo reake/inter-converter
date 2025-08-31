@@ -1,61 +1,48 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/routing';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { getFinanceTools, getToolsByCategory, getPopularTools, FINANCE_TOOLS_CONFIG } from '@/config/tools';
+import { generateMetadata as generateSEOMetadata } from '@/lib/seo/metadata';
+import { HreflangLinks } from '@/components/seo/HreflangLinks';
+import { CanonicalLink } from '@/components/seo/CanonicalLink';
+import { JsonLd, generateWebsiteSchema } from '@/components/seo/JsonLd';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'Free Financial Calculators & Tools - Loans, Mortgages, Investments | InterConverter',
-    description: 'Comprehensive financial calculators for loans, mortgages, investments, taxes, and more. Free tools for personal finance planning and analysis.',
-    keywords: [
-      'financial calculators',
-      'loan calculator',
-      'mortgage calculator',
-      'investment calculator',
-      'tax calculator',
-      'finance tools',
-      'personal finance',
-      'financial planning',
-      'money calculator',
-      'free financial tools'
-    ],
-    openGraph: {
-      title: 'Free Financial Calculators & Tools | InterConverter',
-      description: 'Comprehensive financial calculators for loans, mortgages, investments, taxes, and more. Free tools for personal finance planning.',
-      type: 'website',
-      url: 'https://interconverter.com/finance',
-      siteName: 'InterConverter',
-      images: [
-        {
-          url: 'https://interconverter.com/images/og-finance.jpg',
-          width: 1200,
-          height: 630,
-          alt: 'Financial Calculators & Tools - InterConverter',
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: 'Free Financial Calculators & Tools | InterConverter',
-      description: 'Comprehensive financial calculators for loans, mortgages, investments, taxes, and more.',
-      creator: '@interconverter',
-    },
-    alternates: {
-      canonical: 'https://interconverter.com/finance'
-    },
-    robots: {
-      index: true,
-      follow: true,
-    }
-  };
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'categoryPages.finance' });
+  
+  const title = t('seo.title');
+  const description = t('description');
+  // Keywords are already an array in JSON, no need to parse
+  const keywordsRaw = t.raw('seo.keywords') as string[];
+  const keywords = keywordsRaw || [];
+  
+  return generateSEOMetadata({
+    title,
+    description,
+    locale,
+    pathname: '/finance',
+    keywords
+  });
 }
 
 
-export default function FinancePage() {
+export default async function FinancePage({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'categoryPages.finance' });
   const allFinanceTools = getFinanceTools();
   const popularTools = getPopularTools().filter(tool => tool.category === 'finance').slice(0, 6);
   
@@ -84,17 +71,44 @@ export default function FinancePage() {
     tool.name.toLowerCase().includes('invest') || tool.name.toLowerCase().includes('stock')
   );
 
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
+  const getDifficultyColor = (difficulty: string | number) => {
+    // Convert numeric difficulty to string
+    const difficultyMap: { [key: string]: string } = {
+      '0': 'beginner',
+      '1': 'intermediate', 
+      '2': 'advanced',
+      'beginner': 'beginner',
+      'intermediate': 'intermediate',
+      'advanced': 'advanced'
+    };
+    
+    const difficultyKey = difficultyMap[String(difficulty)] || 'beginner';
+    
+    switch (difficultyKey) {
       case 'beginner': return 'bg-green-100 text-green-800 border-green-200';
       case 'intermediate': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
       case 'advanced': return 'bg-red-100 text-red-800 border-red-200';
       default: return 'bg-gray-100 text-gray-800 border-gray-200';
     }
   };
+  
+  const getDifficultyLabel = (difficulty: string | number) => {
+    // Convert numeric difficulty to string
+    const difficultyMap: { [key: string]: string } = {
+      '0': 'beginner',
+      '1': 'intermediate', 
+      '2': 'advanced',
+      'beginner': 'beginner',
+      'intermediate': 'intermediate',
+      'advanced': 'advanced'
+    };
+    
+    const difficultyKey = difficultyMap[String(difficulty)] || 'beginner';
+    return t(`difficulty.${difficultyKey}`);
+  };
 
   const ToolCard = ({ tool }: { tool: any }) => (
-    <Link href={tool.path} className="block group">
+    <Link href={tool.path as any} className="block group">
       <Card className="h-full hover:shadow-xl transition-all duration-300 group-hover:scale-[1.02] border-0 shadow-md bg-gradient-to-br from-white to-gray-50">
         <CardHeader className="pb-3">
           <div className="flex items-start justify-between">
@@ -114,7 +128,7 @@ export default function FinancePage() {
         <CardContent className="pt-0">
           <div className="flex items-center justify-between">
             <Badge variant="outline" className={`capitalize font-medium ${getDifficultyColor(tool.difficulty)}`}>
-              {tool.difficulty}
+              {getDifficultyLabel(tool.difficulty)}
             </Badge>
             {tool.searchVolume && (
               <Badge variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200">
@@ -137,7 +151,12 @@ export default function FinancePage() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-green-50 to-purple-50">
+    <>
+      <HreflangLinks currentLocale={locale} pathname="/finance" />
+      <CanonicalLink locale={locale} pathname="/finance" />
+      <JsonLd data={generateWebsiteSchema(locale)} />
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-green-50 to-purple-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 via-green-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 py-16 max-w-6xl">
@@ -146,28 +165,27 @@ export default function FinancePage() {
               <span className="text-4xl">💰</span>
             </div>
             <h1 className="text-5xl font-bold mb-6">
-              Financial Calculators & Tools
+              {t('title')}
             </h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-              Comprehensive collection of 77+ financial calculators for loans, mortgages, investments, taxes, and more. 
-              Free tools to help you make informed financial decisions and plan your financial future.
+              {t('description')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
                 <span>💰</span>
-                <span>77+ Financial Tools</span>
+                <span>{t('stats.financialTools')}</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
                 <span>🏦</span>
-                <span>Banking & Loans</span>
+                <span>{t('stats.bankingLoans')}</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
                 <span>📊</span>
-                <span>Investment Planning</span>
+                <span>{t('stats.investmentPlanning')}</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
                 <span>🏠</span>
-                <span>Real Estate</span>
+                <span>{t('stats.realEstate')}</span>
               </div>
             </div>
           </div>
@@ -178,8 +196,8 @@ export default function FinancePage() {
         {/* Popular Financial Tools */}
         <section className="mb-16">
           <SectionHeader 
-            title="Most Popular Financial Calculators" 
-            description="Start with these most-used financial planning tools"
+            title={t('sections.popular.title')} 
+            description={t('sections.popular.description')}
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {popularTools.map((tool) => (
@@ -191,8 +209,8 @@ export default function FinancePage() {
         {/* Loans & Credit */}
         <section className="mb-16">
           <SectionHeader 
-            title="Loans & Credit" 
-            description="Calculate loan payments, interest costs, and repayment strategies"
+            title={t('sections.loansCredit.title')} 
+            description={t('sections.loansCredit.description')}
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {loanTools.map((tool) => (
@@ -204,8 +222,8 @@ export default function FinancePage() {
         {/* Mortgages & Real Estate */}
         <section className="mb-16">
           <SectionHeader 
-            title="Mortgages & Real Estate" 
-            description="Home loan calculators, refinancing tools, and real estate analysis"
+            title={t('sections.mortgagesRealEstate.title')} 
+            description={t('sections.mortgagesRealEstate.description')}
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {mortgageTools.map((tool) => (
@@ -217,8 +235,8 @@ export default function FinancePage() {
         {/* Credit Cards */}
         <section className="mb-16">
           <SectionHeader 
-            title="Credit Cards" 
-            description="Credit card payoff calculators and debt management tools"
+            title={t('sections.creditCards.title')} 
+            description={t('sections.creditCards.description')}
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {creditCardTools.map((tool) => (
@@ -230,8 +248,8 @@ export default function FinancePage() {
         {/* Banking & Savings */}
         <section className="mb-16">
           <SectionHeader 
-            title="Banking & Savings" 
-            description="Savings growth calculators and compound interest tools"
+            title={t('sections.bankingSavings.title')} 
+            description={t('sections.bankingSavings.description')}
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {bankingTools.map((tool) => (
@@ -243,15 +261,15 @@ export default function FinancePage() {
         {/* Financial Tool Categories Overview */}
         <section className="mb-16">
           <SectionHeader 
-            title="All Financial Categories" 
-            description="Browse tools by category"
+            title={t('sections.allCategories.title')} 
+            description={t('sections.allCategories.description')}
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { id: 'loans', name: 'Loans & Credit', description: 'Loan calculators and credit tools', icon: '💳', color: 'bg-blue-500', tools: loanTools },
-              { id: 'mortgages', name: 'Mortgages', description: 'Home loan and mortgage calculators', icon: '🏠', color: 'bg-green-500', tools: mortgageTools },
-              { id: 'investments', name: 'Investments', description: 'Investment and portfolio tools', icon: '📈', color: 'bg-purple-500', tools: investmentTools },
-              { id: 'banking', name: 'Banking', description: 'Savings and banking calculators', icon: '🏦', color: 'bg-indigo-500', tools: bankingTools }
+              { id: 'loans', name: t('categories.loans.name'), description: t('categories.loans.description'), icon: '💳', color: 'bg-blue-500', tools: loanTools },
+              { id: 'mortgages', name: t('categories.mortgages.name'), description: t('categories.mortgages.description'), icon: '🏠', color: 'bg-green-500', tools: mortgageTools },
+              { id: 'investments', name: t('categories.investments.name'), description: t('categories.investments.description'), icon: '📈', color: 'bg-purple-500', tools: investmentTools },
+              { id: 'banking', name: t('categories.banking.name'), description: t('categories.banking.description'), icon: '🏦', color: 'bg-indigo-500', tools: bankingTools }
             ].map((category) => (
               <Card key={category.id} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] text-center">
                 <CardContent className="p-6">
@@ -261,7 +279,7 @@ export default function FinancePage() {
                   <h3 className="font-bold text-lg mb-2 text-gray-900">{category.name}</h3>
                   <p className="text-sm text-gray-600 mb-3">{category.description}</p>
                   <Badge className={`${category.color} text-white border-0`}>
-                    {category.tools.length} Tools
+                    {category.tools.length} {t('common.tools')}
                   </Badge>
                 </CardContent>
               </Card>
@@ -276,26 +294,26 @@ export default function FinancePage() {
             <CardHeader className="bg-gradient-to-br from-green-50 to-emerald-50">
               <CardTitle className="flex items-center gap-3 text-green-800">
                 <span className="text-2xl">💡</span>
-                Financial Planning Tips
+                {t('tips.planningTips.title')}
               </CardTitle>
             </CardHeader>
             <CardContent className="p-6">
               <div className="space-y-3">
                 <div className="p-3 bg-green-50 rounded-lg">
-                  <h4 className="font-bold text-green-700 mb-1">Build Emergency Fund</h4>
-                  <p className="text-sm text-green-600">Save 3-6 months of expenses for unexpected situations</p>
+                  <h4 className="font-bold text-green-700 mb-1">{t('tips.planningTips.emergencyFund.title')}</h4>
+                  <p className="text-sm text-green-600">{t('tips.planningTips.emergencyFund.description')}</p>
                 </div>
                 <div className="p-3 bg-green-50 rounded-lg">
-                  <h4 className="font-bold text-green-700 mb-1">Pay Off High-Interest Debt</h4>
-                  <p className="text-sm text-green-600">Prioritize credit card debt and high-interest loans</p>
+                  <h4 className="font-bold text-green-700 mb-1">{t('tips.planningTips.payOffDebt.title')}</h4>
+                  <p className="text-sm text-green-600">{t('tips.planningTips.payOffDebt.description')}</p>
                 </div>
                 <div className="p-3 bg-green-50 rounded-lg">
-                  <h4 className="font-bold text-green-700 mb-1">Start Investing Early</h4>
-                  <p className="text-sm text-green-600">Take advantage of compound interest and time</p>
+                  <h4 className="font-bold text-green-700 mb-1">{t('tips.planningTips.startInvesting.title')}</h4>
+                  <p className="text-sm text-green-600">{t('tips.planningTips.startInvesting.description')}</p>
                 </div>
                 <div className="p-3 bg-green-50 rounded-lg">
-                  <h4 className="font-bold text-green-700 mb-1">Diversify Investments</h4>
-                  <p className="text-sm text-green-600">Spread risk across different asset classes</p>
+                  <h4 className="font-bold text-green-700 mb-1">{t('tips.planningTips.diversify.title')}</h4>
+                  <p className="text-sm text-green-600">{t('tips.planningTips.diversify.description')}</p>
                 </div>
               </div>
             </CardContent>
@@ -306,26 +324,26 @@ export default function FinancePage() {
             <CardHeader className="bg-gradient-to-br from-blue-50 to-indigo-50">
               <CardTitle className="flex items-center gap-3 text-blue-800">
                 <span className="text-2xl">📊</span>
-                Financial Milestones
+                {t('tips.milestones.title')}
               </CardTitle>
             </CardHeader>
             <CardContent className="p-6">
               <div className="space-y-3">
                 <div className="p-3 bg-blue-50 rounded-lg">
-                  <h4 className="font-bold text-blue-700 mb-1">20s: Build Foundation</h4>
-                  <p className="text-sm text-blue-600">Emergency fund, pay off student loans, start 401k</p>
+                  <h4 className="font-bold text-blue-700 mb-1">{t('tips.milestones.twenties.title')}</h4>
+                  <p className="text-sm text-blue-600">{t('tips.milestones.twenties.description')}</p>
                 </div>
                 <div className="p-3 bg-blue-50 rounded-lg">
-                  <h4 className="font-bold text-blue-700 mb-1">30s: Accelerate Growth</h4>
-                  <p className="text-sm text-blue-600">Increase savings rate, consider home purchase</p>
+                  <h4 className="font-bold text-blue-700 mb-1">{t('tips.milestones.thirties.title')}</h4>
+                  <p className="text-sm text-blue-600">{t('tips.milestones.thirties.description')}</p>
                 </div>
                 <div className="p-3 bg-blue-50 rounded-lg">
-                  <h4 className="font-bold text-blue-700 mb-1">40s: Peak Earning</h4>
-                  <p className="text-sm text-blue-600">Maximize retirement contributions, plan for kids' college</p>
+                  <h4 className="font-bold text-blue-700 mb-1">{t('tips.milestones.forties.title')}</h4>
+                  <p className="text-sm text-blue-600">{t('tips.milestones.forties.description')}</p>
                 </div>
                 <div className="p-3 bg-blue-50 rounded-lg">
-                  <h4 className="font-bold text-blue-700 mb-1">50s+: Pre-Retirement</h4>
-                  <p className="text-sm text-blue-600">Catch-up contributions, reduce investment risk</p>
+                  <h4 className="font-bold text-blue-700 mb-1">{t('tips.milestones.fifties.title')}</h4>
+                  <p className="text-sm text-blue-600">{t('tips.milestones.fifties.description')}</p>
                 </div>
               </div>
             </CardContent>
@@ -335,7 +353,7 @@ export default function FinancePage() {
         {/* Key Financial Concepts */}
         <section className="mb-16 mt-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Key Financial Concepts
+            {t('concepts.title')}
           </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <Card className="border-0 shadow-lg bg-gradient-to-br from-purple-50 to-purple-100">
@@ -344,13 +362,13 @@ export default function FinancePage() {
                   <div className="p-2 bg-purple-500 text-white rounded-lg">
                     <span className="text-xl">📈</span>
                   </div>
-                  <h3 className="font-bold text-lg text-purple-900">Compound Interest</h3>
+                  <h3 className="font-bold text-lg text-purple-900">{t('concepts.compoundInterest.title')}</h3>
                 </div>
                 <div className="space-y-2 text-sm text-purple-700">
-                  <div>• Interest earned on interest</div>
-                  <div>• Time is your best friend</div>
-                  <div>• Start investing early</div>
-                  <div>• Reinvest dividends and gains</div>
+                  <div>• {t('concepts.compoundInterest.point1')}</div>
+                  <div>• {t('concepts.compoundInterest.point2')}</div>
+                  <div>• {t('concepts.compoundInterest.point3')}</div>
+                  <div>• {t('concepts.compoundInterest.point4')}</div>
                 </div>
               </CardContent>
             </Card>
@@ -361,13 +379,13 @@ export default function FinancePage() {
                   <div className="p-2 bg-orange-500 text-white rounded-lg">
                     <span className="text-xl">⚖️</span>
                   </div>
-                  <h3 className="font-bold text-lg text-orange-900">Risk vs Return</h3>
+                  <h3 className="font-bold text-lg text-orange-900">{t('concepts.riskReturn.title')}</h3>
                 </div>
                 <div className="space-y-2 text-sm text-orange-700">
-                  <div>• Higher returns require higher risk</div>
-                  <div>• Diversification reduces risk</div>
-                  <div>• Match risk to time horizon</div>
-                  <div>• Don't put all eggs in one basket</div>
+                  <div>• {t('concepts.riskReturn.point1')}</div>
+                  <div>• {t('concepts.riskReturn.point2')}</div>
+                  <div>• {t('concepts.riskReturn.point3')}</div>
+                  <div>• {t('concepts.riskReturn.point4')}</div>
                 </div>
               </CardContent>
             </Card>
@@ -378,13 +396,13 @@ export default function FinancePage() {
                   <div className="p-2 bg-teal-500 text-white rounded-lg">
                     <span className="text-xl">💰</span>
                   </div>
-                  <h3 className="font-bold text-lg text-teal-900">Time Value of Money</h3>
+                  <h3 className="font-bold text-lg text-teal-900">{t('concepts.timeValue.title')}</h3>
                 </div>
                 <div className="space-y-2 text-sm text-teal-700">
-                  <div>• Money today is worth more than tomorrow</div>
-                  <div>• Inflation reduces purchasing power</div>
-                  <div>• Present value vs future value</div>
-                  <div>• Discount rates and opportunity cost</div>
+                  <div>• {t('concepts.timeValue.point1')}</div>
+                  <div>• {t('concepts.timeValue.point2')}</div>
+                  <div>• {t('concepts.timeValue.point3')}</div>
+                  <div>• {t('concepts.timeValue.point4')}</div>
                 </div>
               </CardContent>
             </Card>
@@ -399,19 +417,16 @@ export default function FinancePage() {
                 <span className="text-2xl">⚠️</span>
               </div>
               <div>
-                <h3 className="font-bold text-amber-900 text-lg mb-2">Important Disclaimer</h3>
+                <h3 className="font-bold text-amber-900 text-lg mb-2">{t('disclaimer.title')}</h3>
                 <p className="text-amber-800 leading-relaxed">
-                  These financial calculators provide estimates for educational and informational purposes only. Results may vary 
-                  based on individual circumstances, market conditions, interest rates, and other factors. This information should 
-                  not be considered as professional financial, investment, tax, or legal advice. Always consult with qualified 
-                  financial professionals before making important financial decisions. Past performance does not guarantee future 
-                  results. Interest rates, tax laws, and market conditions can change significantly over time.
+                  {t('disclaimer.content')}
                 </p>
               </div>
             </div>
           </CardContent>
         </Card>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

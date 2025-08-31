@@ -1,76 +1,117 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/media/jpg-to-png-converter-en.json';
+import zhTool from '@/data/tools/media/jpg-to-png-converter-zh.json';
+import mediaEn from '@/data/tools/media.json';
+import mediaZh from '@/data/tools/media-zh.json';
+import { ToolContent } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
 
-const keywords = generateOptimizedKeywords('jpg-to-png-converter', 'media', 'JPG to PNG Converter');
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
 
-export const metadata: Metadata = {
-  title: 'JPG to PNG Converter - Convert Images Online | InterConverter',
-  description: 'Convert JPG images to PNG format with transparency support. Free online image converter with batch processing and quality optimization.',
-  keywords: keywords.join(', '),
-  openGraph: {
-    title: 'JPG to PNG Converter - Image Format Converter',
-    description: 'Professional image converter for JPG to PNG conversion. Preserve transparency and image quality with batch processing.',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-jpg-to-png-converter.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'JPG to PNG Converter Tool'
+  const catalogs: Record<string, any[]> = {
+    en: mediaEn as any[],
+    zh: (mediaZh as any[]) || (mediaEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'jpg-to-png-converter') || catalogs.en.find((it) => it.id === 'jpg-to-png-converter');
+
+  const toolName: string = entry?.name ?? 'JPG to PNG Converter';
+  const description: string = entry?.description ?? 'Convert JPG images to PNG format with transparency support. Free online image converter with batch processing and quality optimization.';
+  const baseKeywords = generateOptimizedKeywords('jpg-to-png-converter', 'media', 'JPG to PNG Converter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
+
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
+  const canonicalPath = `/${l}/media/jpg-to-png-converter`;
+
+  return {
+    title,
+    description,
+    keywords: keywords.join(', '),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: l === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: '/images/og-jpg-to-png-converter.jpg',
+          width: 1200,
+          height: 630,
+          alt: toolName
+        }
+      ]
+    },
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: '/media/jpg-to-png-converter',
+        zh: '/zh/media/jpg-to-png-converter'
       }
-    ]
-  },
-  alternates: {
-    canonical: '/media/jpg-to-png-converter'
-  },
-  authors: [{ name: 'InterConverter Team' }],
-  creator: 'InterConverter',
-  publisher: 'InterConverter',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    },
+    authors: [{ name: 'InterConverter Team' }],
+    creator: 'InterConverter',
+    publisher: 'InterConverter',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  }
-};
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
-export default function JpgToPngConverterPage() {
-  const faqs = getFAQsByToolId('jpg-to-png-converter', 'media');
+export default async function JpgToPngConverterPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const l = (locale || 'en').toLowerCase();
+
+  // Load JSON content based on locale
+  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const catalogs: Record<string, any[]> = {
+    en: mediaEn as any[],
+    zh: (mediaZh as any[]) || (mediaEn as any[])
+  };
+  const entry = catalogs[l]?.find((it) => it.id === 'jpg-to-png-converter') || catalogs.en.find((it) => it.id === 'jpg-to-png-converter');
+
+  const toolName: string = entry?.name ?? 'JPG to PNG Converter';
+  const description: string = entry?.description ?? 'Convert JPG images to PNG format with transparency support and instant processing.';
+  const baseKeywords = generateOptimizedKeywords('jpg-to-png-converter', 'media', 'JPG to PNG Converter');
+  const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
+    ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
+    : baseKeywords;
 
   return (
     <EnhancedToolLayout
-      title="JPG to PNG Converter"
-      description="Convert JPG images to PNG format with transparency support and instant processing."
+      title={toolName}
+      description={description}
       keywords={keywords}
       toolId="jpg-to-png-converter"
       category="media"
       emoji="🖼️"
-      customHowToUse={[
-        "Select or drag and drop your JPG/JPEG image files",
-        "Choose PNG conversion settings and quality options",
-        "Click convert to process your images instantly",
-        "Download the converted PNG files with transparency support",
-        "Use batch processing for multiple image conversions"
-      ]}
-      customFeatures={[
-        "Convert JPG/JPEG to PNG format",
-        "Preserve image transparency in PNG output",
-        "Batch processing for multiple files",
-        "Quality optimization settings",
-        "Drag and drop file upload",
-        "Instant download of converted images"
-      ]}
-      faqs={faqs}
+      aboutContent={toolContent.about}
+      customHowToUse={toolContent.howToUse}
+      customFeatures={toolContent.features}
+      faqs={toolContent.faqs}
     >
       <div className="text-center py-12 bg-muted rounded-lg">
         <div className="text-6xl mb-4">🚧</div>
