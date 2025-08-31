@@ -118,3 +118,109 @@ Color Palette Generator - Create Harmonious Color Schemes
 关键词密度 1.5%–2%（主要）
 同义词 1% 左右
 多语言
+
+
+
+
+auto.json - 20个工具全部调整完成
+
+Carburetor CFM Calculator - Engine Airflow Sizing Tool
+Compression Ratio Calculator - Horsepower & Performance Analysis
+Engine Size Converter - Displacement (CI to L) Conversion Tool
+Gear Ratio Calculator - Differential & Transmission Analysis
+Power to Weight Ratio Calculator - HP/Weight Performance Analysis
+Ram Air Calculator - Cold Air Intake Performance
+RPM Calculator - Speed, Gear & Tire Analysis
+Speed Converter - MPH to KPH Automotive
+Supercharger Calculator - Boost & Performance Analysis
+Temperature Converter - Automotive Temperature Tool
+Tire Calculator - Speedometer & Performance Analysis
+Torque & Horsepower Calculator - Engine Power & RPM Analysis
+Volumetric Efficiency Calculator - Engine Tuning & Airflow Analysis
+Engine Volume Calculator - Bore & Stroke Analysis
+Automotive Fluid Calculator - Fluid Volume & Weight Analysis
+Automotive Weight Converter - Automotive Weight Conversion
+Engine Displacement Calculator - Engine Building & Displacement Analysis
+Power to Weight Calculator - Vehicle Performance Analysis
+Tire Speed Calculator - Tire & Gear Speed Analysis
+✅ unit.json - 16个工具全部调整完成
+
+Temperature Converter - Celsius, Fahrenheit & Kelvin
+Length Converter - Metric & Imperial Units
+Weight Converter - Pounds, Kilograms & More
+Volume Converter - Liters, Gallons & More
+Area Converter - m², ft², Acres & Hectares
+Speed Converter - MPH, KMH, m/s & Knots
+Energy Converter - Joules, Calories, BTU & kWh
+Pressure Converter - PSI, Bar, Pascal & ATM
+Power Converter - Watts, Horsepower & BTU/hr
+Data Size Converter - Bytes, KB, MB, GB & TB
+Fahrenheit to Celsius Converter - °F to °C Formula
+Celsius to Fahrenheit Converter - °C to °F Formula
+Pounds to Kg Converter - Lbs to Kg Conversion
+Kg to Pounds Converter - Kg to Lbs Conversion
+Universal Unit Converter - All-in-One Measurement Tool
+以及其他长度转换工具
+✅ color.json - 7个工具全部调整完成
+
+RGB to HEX Converter - Web Design & CSS Colors
+Color Picker Tool - HSL / RGB Palette Generator
+HEX to RGB Converter - CSS Web Colors
+Color Palette Generator - Harmony & Color Schemes
+Color Contrast Checker - WCAG AA/AAA Standards
+CSS Gradient Generator - Linear & Radial CSS
+HEX to HSL Converter - HSL Color Space
+✅ finance.json - 所有金融工具全部调整完成
+
+Currency Converter - Real-Time Exchange Rates
+Loan Calculator - Payment Schedule Analysis
+Tax Calculator - Income Tax Planning
+Mortgage Calculator - PMI & Property Tax Analysis
+Auto Loan Calculator - Vehicle Payment Analysis
+Credit Card Payoff Calculator - Debt Payoff Strategy
+Savings Calculator - Compound Interest Growth
+401(k) Calculator - Retirement Savings Planning
+Compound Interest Calculator - Investment Growth Analysis
+Retirement Calculator - Retirement Planning Analysis
+Investment Calculator - Portfolio Growth & Returns
+Home Affordability Calculator - Home Buying Budget Analysis
+Debt Payoff Calculator - Debt Elimination Strategy
+Tip Calculator - Bill Split & Gratuity Analysis
+Paycheck Calculator - Take-Home Pay Analysis
+Currency Converter - Real-Time Exchange Rates
+Loan Calculator - Payment Schedule Analysis
+Tax Calculator - Income Tax Planning
+Mortgage Calculator - PMI & Property Tax Analysis
+Bitcoin Calculator - Crypto Investment Analysis
+ROI Calculator - Return on Investment Analysis
+
+
+✅ health.json - 12个工具全部调整完成
+
+BMI Calculator - Body Mass Index Analysis
+Calorie Calculator - TDEE & BMR Metabolism
+Body Fat Calculator - Body Fat Percentage Analysis
+Ideal Weight Calculator - Target Weight & Health Goals
+Pregnancy Calculator - Due Date & Pregnancy Tracker
+Water Intake Calculator - Daily Hydration Analysis
+Heart Rate Calculator - Exercise Heart Rate Zones
+Macro Calculator - Nutrition & Diet Planning
+Sleep Calculator - Sleep Cycle Optimization
+Ovulation Calculator - Fertility & Family Planning
+Protein Calculator - Daily Protein & Fitness Goals
+✅ media.json - 2个工具全部调整完成
+
+PDF to Word Converter - Editable Document Conversion
+JPG to PNG Converter - Image Format & Transparency
+✅ time.json - 10个工具全部调整完成
+
+Unix Timestamp Converter - Epoch Date Time Tool
+Time Zone Converter - Global Time Zones
+Date Difference Calculator - Date Duration Analysis
+Countdown Timer - Event & Deadline Timer
+Age Calculator - Exact Age & Birthday Analysis
+Date Calculator - Date Math & Calculation Tool
+Online Stopwatch - Precision Timing & Lap Timer
+Unix Timestamp Converter - Unix Epoch Time Converter
+Working Days Calculator - Business Days Analysis
+World Clock - Global Time Display

@@ -3,6 +3,7 @@
     "id": "timestamp-converter",
     "name": "Unix Timestamp Converter",
     "description": "Convert Unix timestamps to human-readable dates and vice versa. Free timestamp conversion tool with timezone support.",
+    "titleSuffix": "Epoch Date Time Tool",
     "category": "time",
     "keywords": [
       "timestamp converter",
@@ -20,13 +21,13 @@
     "isActive": true,
     "searchVolume": 185000,
     "difficulty": 1,
-    "icon": "🕐",
-    "titleSuffix": "Unix Time Converter"
+    "icon": "🕐"
   },
   {
     "id": "timezone-converter",
     "name": "Time Zone Converter",
     "description": "Convert time between different time zones worldwide. Free timezone converter with daylight saving time support.",
+    "titleSuffix": "Global Time Zones",
     "category": "time",
     "keywords": [
       "timezone converter",
@@ -44,13 +45,13 @@
     "isActive": true,
     "searchVolume": 225000,
     "difficulty": 2,
-    "icon": "🌍",
-    "titleSuffix": "World Time Converter"
+    "icon": "🌍"
   },
   {
     "id": "date-difference-calculator",
     "name": "Date Difference Calculator",
     "description": "Calculate the difference between two dates in days, weeks, months, and years. Advanced date calculation tool.",
+    "titleSuffix": "Date Duration Analysis",
     "category": "time",
     "keywords": [
       "date calculator",
@@ -68,13 +69,13 @@
     "isActive": true,
     "searchVolume": 165000,
     "difficulty": 1,
-    "icon": "📅",
-    "titleSuffix": "Date Calculator Tool"
+    "icon": "📅"
   },
   {
     "id": "countdown-timer",
     "name": "Countdown Timer",
     "description": "Create customizable countdown timers for events, deadlines, and special occasions. Online countdown clock.",
+    "titleSuffix": "Event & Deadline Timer",
     "category": "time",
     "keywords": [
       "countdown timer",
@@ -92,13 +93,13 @@
     "isActive": true,
     "searchVolume": 145000,
     "difficulty": 1,
-    "icon": "⏰",
-    "titleSuffix": "Event Timer Tool"
+    "icon": "⏰"
   },
   {
     "id": "age-calculator",
     "name": "Age Calculator",
-    "description": "Calculate your exact age in years, months, days, hours, and minutes from birth date.",
+    "description": "Calculate your exact age in years, months, days, hours, and minutes from birth date. Precise age calculator tool.",
+    "titleSuffix": "Exact Age & Birthday Analysis",
     "category": "time",
     "keywords": [
       "age calculator",
@@ -112,13 +113,13 @@
     "isActive": false,
     "searchVolume": 125000,
     "difficulty": 1,
-    "icon": "🎂",
-    "titleSuffix": "Birth Date Calculator"
+    "icon": "🎂"
   },
   {
     "id": "date-calculator",
     "name": "Date Calculator",
-    "description": "Add or subtract days, weeks, months, and years from any date.",
+    "description": "Add or subtract days, weeks, months, and years from any date. Date math calculator for future and past dates.",
+    "titleSuffix": "Date Math & Calculation Tool",
     "category": "time",
     "keywords": [
       "date calculator",
@@ -131,13 +132,13 @@
     "isActive": false,
     "searchVolume": 95000,
     "difficulty": 1,
-    "icon": "📅",
-    "titleSuffix": "Date Math Calculator"
+    "icon": "📅"
   },
   {
     "id": "stopwatch",
     "name": "Online Stopwatch",
-    "description": "Precise online stopwatch with lap times and split functionality.",
+    "description": "Precise online stopwatch with lap times and split functionality. Professional timing tool for sports and activities.",
+    "titleSuffix": "Precision Timing & Lap Timer",
     "category": "time",
     "keywords": [
       "stopwatch",
@@ -151,13 +152,13 @@
     "isActive": false,
     "searchVolume": 85000,
     "difficulty": 1,
-    "icon": "⏱️",
-    "titleSuffix": "Precision Timer Tool"
+    "icon": "⏱️"
   },
   {
     "id": "unix-timestamp-converter",
     "name": "Unix Timestamp Converter",
-    "description": "Convert Unix timestamps to readable dates and vice versa with timezone support.",
+    "description": "Convert Unix timestamps to readable dates and vice versa with timezone support. Unix epoch time converter.",
+    "titleSuffix": "Unix Epoch Time Converter",
     "category": "time",
     "keywords": [
       "unix timestamp",
@@ -170,13 +171,13 @@
     "isActive": false,
     "searchVolume": 155000,
     "difficulty": 1,
-    "icon": "🕐",
-    "titleSuffix": "Epoch Time Converter"
+    "icon": "🕐"
   },
   {
     "id": "working-days-calculator",
     "name": "Working Days Calculator",
-    "description": "Calculate working days between two dates excluding weekends and holidays.",
+    "description": "Calculate working days between two dates excluding weekends and holidays. Business days calculator for project planning.",
+    "titleSuffix": "Business Days Analysis",
     "category": "time",
     "keywords": [
       "working days calculator",
@@ -189,13 +190,13 @@
     "isActive": false,
     "searchVolume": 45000,
     "difficulty": 2,
-    "icon": "💼",
-    "titleSuffix": "Business Days Calculator"
+    "icon": "💼"
   },
   {
     "id": "world-clock",
     "name": "World Clock",
-    "description": "Display current time in multiple time zones around the world.",
+    "description": "Display current time in multiple time zones around the world. Global time display with major cities.",
+    "titleSuffix": "Global Time Display",
     "category": "time",
     "keywords": [
       "world clock",
@@ -209,7 +210,6 @@
     "isActive": false,
     "searchVolume": 75000,
     "difficulty": 2,
-    "icon": "🌍",
-    "titleSuffix": "Global Time Display"
+    "icon": "🌍"
   }
 ]

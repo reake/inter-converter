@@ -49,7 +49,7 @@
 
 ## 4. 单页内容模板（适配所有工具）
 建议模块顺序（均需多语言）：
-1) Title（含主词 + 卖点，≤ 60–65 字符）
+1) Title（含主词 + 卖点或自然语言，≤ 60–65 字符）
 2) Meta Description（≤ 150–160 字符，含主词与关键卖点）
 3) H1（仅 1 个，含主词）
 4) 首屏 Answer/使用区：
@@ -237,31 +237,3 @@
 - 监测：基线记录、事件与转化跟踪就绪。
 
 ---
-
-## 12. 推进计划（Suggested Rollout）
-- Phase 1（本周）：规范定稿 + 公共组件（ToC、FAQ、Schema、hreflang/canonical）+ 模板接入 5 个核心工具。
-- Phase 2（2–4 周）：覆盖 Finance/Media/Auto 类工具；类目落地页上线（Forbes 风格）。
-- Phase 3（4–8 周）：全站迁移完成；建立监测面板与月度迭代例行。
-
----
-
-## 13. 附录：组件与文件清单（建议）
-- 组件：
-  - `src/components/seo/HreflangLinks.tsx`
-  - `src/components/seo/CanonicalLink.tsx`
-  - `src/components/seo/JsonLd.tsx`（支持 Article/HowTo/FAQ/SoftwareApplication）
-  - `src/components/seo/TableOfContents.tsx`
-  - `src/components/seo/FaqSection.tsx`
-- 工具函数：
-  - `src/lib/seo/metadata.ts`（generateMetadata 助手，读取 JSON）
-  - `src/lib/seo/hreflang.ts`、`canonical.ts`、`sitemap.ts`
-- 配置与数据：
-  - 工具 JSON：`src/data/tools/<category>/<tool>-en.json`、`-zh.json`
-  - 类目页 JSON：`src/data/category/<category>-<locale>.json`
-
----
-
-## 14. 维护与质量保证
-- 代码 PR 检查：是否新增 hreflang/canonical/Schema/ToC/FAQ；是否遵循 JSON 数据源。
-- 内容 QA：E‑E‑A‑T、事实核验、反堆砌、语言本地化质量。
-- 技术 QA：Core Web Vitals、索引覆盖、日志抓取、国际化正确性。

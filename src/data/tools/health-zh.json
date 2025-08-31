@@ -2,7 +2,7 @@
   {
     "id": "bmi-calculator",
     "name": "BMI计算器",
-    "description": "计算身体质量指数并获得健康建议。免费BMI计算器，提供体重状态解释和健康提示。",
+    "description": "计算身体质量指数并获得健康建议。免费BMI计算器，提供体重状态解释和健康提示，支持成人和儿童BMI计算。",
     "category": "health",
     "keywords": [
       "bmi计算器",
@@ -20,137 +20,126 @@
     "isActive": true,
     "searchVolume": 135000,
     "difficulty": 1,
-    "icon": "⚖️",
-    "titleSuffix": "身体质量指数计算器"
+    "icon": "⚖️"
   },
   {
     "id": "calorie-calculator",
     "name": "卡路里计算器",
-    "description": "根据年龄、性别、体重、身高和活动水平计算每日卡路里需求",
+    "description": "根据年龄、性别、体重、身高和活动水平计算每日卡路里需求。精确的TDEE和BMR计算，支持减重和增重目标。",
     "category": "health",
     "keywords": ["卡路里计算器", "每日卡路里", "tdee", "bmr", "新陈代谢", "减重"],
     "path": "/health/calorie-calculator",
     "isActive": true,
     "searchVolume": 245000,
     "difficulty": 2,
-    "icon": "🔥",
-    "titleSuffix": "每日卡路里需求"
+    "icon": "🔥"
   },
   {
     "id": "body-fat-calculator",
     "name": "体脂率计算器",
-    "description": "使用多种测量方法计算体脂百分比",
+    "description": "使用多种测量方法计算体脂百分比。支持皮褶厚度、身体围度等多种体脂测量方法，提供健身指导。",
     "category": "health",
     "keywords": ["体脂", "体脂百分比", "健身", "健康", "身体成分"],
     "path": "/health/body-fat-calculator",
     "isActive": true,
     "searchVolume": 89000,
     "difficulty": 2,
-    "icon": "📊",
-    "titleSuffix": "体脂百分比"
+    "icon": "📊"
   },
   {
     "id": "ideal-weight-calculator",
     "name": "理想体重计算器",
-    "description": "使用多种公式和方法计算理想体重",
+    "description": "使用多种公式和方法计算理想体重。基于BMI、体型和健康标准，提供个性化的理想体重范围建议。",
     "category": "health",
     "keywords": ["理想体重", "目标体重", "健康体重", "体重目标", "健身"],
     "path": "/health/ideal-weight-calculator",
     "isActive": true,
     "searchVolume": 156000,
     "difficulty": 1,
-    "icon": "🎯",
-    "titleSuffix": "健康体重范围"
+    "icon": "🎯"
   },
   {
     "id": "pregnancy-calculator",
     "name": "怀孕计算器",
-    "description": "计算预产期、怀孕周数并跟踪怀孕里程碑",
+    "description": "计算预产期、怀孕周数并跟踪怀孕里程碑。基于末次月经期或受孕日期，提供详细的孕期信息和发育里程碑。",
     "category": "health",
     "keywords": ["怀孕计算器", "预产期", "怀孕周数", "受孕", "孕期"],
     "path": "/health/pregnancy-calculator",
     "isActive": false,
     "searchVolume": 198000,
     "difficulty": 2,
-    "icon": "🤱",
-    "titleSuffix": "预产期计算器"
+    "icon": "🤱"
   },
   {
     "id": "water-intake-calculator",
     "name": "饮水量计算器",
-    "description": "根据体重、活动量和气候计算每日饮水需求",
+    "description": "根据体重、活动量和气候计算每日饮水需求。个性化水分摄入建议，支持运动和高温环境调整。",
     "category": "health",
     "keywords": ["饮水量", "水合", "每日饮水", "液体需求", "健康"],
     "path": "/health/water-intake-calculator",
     "isActive": false,
     "searchVolume": 125000,
     "difficulty": 1,
-    "icon": "💧",
-    "titleSuffix": "每日水分需求"
+    "icon": "💧"
   },
   {
     "id": "heart-rate-calculator",
     "name": "心率计算器",
-    "description": "计算运动和健身训练的目标心率区间",
+    "description": "计算运动和健身训练的目标心率区间。基于年龄和健身水平，提供有氧、无氧和脂肪燃烧心率区间。",
     "category": "health",
     "keywords": ["心率", "目标心率", "运动", "健身", "有氧", "训练区间"],
     "path": "/health/heart-rate-calculator",
     "isActive": false,
     "searchVolume": 78000,
     "difficulty": 2,
-    "icon": "❤️",
-    "titleSuffix": "目标心率区间"
+    "icon": "❤️"
   },
   {
     "id": "macro-calculator",
     "name": "营养素计算器",
-    "description": "根据健身目标计算宏量营养素比例（蛋白质、碳水化合物、脂肪）",
+    "description": "根据健身目标计算宏量营养素比例（蛋白质、碳水化合物、脂肪）。支持减脂、增肌、维持体重等不同目标的营养配比。",
     "category": "health",
     "keywords": ["营养素计算器", "宏量营养素", "蛋白质", "碳水", "脂肪", "营养"],
     "path": "/health/macro-calculator",
     "isActive": false,
     "searchVolume": 167000,
     "difficulty": 2,
-    "icon": "🥗",
-    "titleSuffix": "宏量营养素计算器"
+    "icon": "🥗"
   },
   {
     "id": "sleep-calculator",
     "name": "睡眠计算器",
-    "description": "根据睡眠周期计算最佳就寝和起床时间",
+    "description": "根据睡眠周期计算最佳就寝和起床时间。基于90分钟睡眠周期，帮助您在浅睡眠阶段自然醒来。",
     "category": "health",
     "keywords": ["睡眠计算器", "就寝时间", "起床时间", "睡眠周期", "快速眼动睡眠"],
     "path": "/health/sleep-calculator",
     "isActive": false,
     "searchVolume": 145000,
     "difficulty": 1,
-    "icon": "😴",
-    "titleSuffix": "睡眠周期计算器"
+    "icon": "😴"
   },
   {
     "id": "ovulation-calculator",
     "name": "排卵期计算器",
-    "description": "计算排卵日期和受孕窗口期，用于家庭计划",
+    "description": "计算排卵日期和受孕窗口期，用于家庭计划。基于月经周期长度，预测最佳受孕时机和排卵症状。",
     "category": "health",
     "keywords": ["排卵期计算器", "受孕窗口", "受孕", "家庭计划", "月经周期"],
     "path": "/health/ovulation-calculator",
     "isActive": false,
     "searchVolume": 234000,
     "difficulty": 2,
-    "icon": "🌸",
-    "titleSuffix": "受孕窗口计算器"
+    "icon": "🌸"
   },
   {
     "id": "protein-calculator",
     "name": "蛋白质计算器",
-    "description": "根据体重、活动量和健身目标计算每日蛋白质需求",
+    "description": "根据体重、活动量和健身目标计算每日蛋白质需求。支持增肌、减脂、耐力训练等不同目标的蛋白质摄入建议。",
     "category": "health",
     "keywords": ["蛋白质计算器", "每日蛋白质", "蛋白质需求", "健身", "肌肉增长"],
     "path": "/health/protein-calculator",
     "isActive": false,
     "searchVolume": 89000,
     "difficulty": 1,
-    "icon": "🥩",
-    "titleSuffix": "每日蛋白质需求"
-  }
+    "icon": "🥩"
+   }
 ]

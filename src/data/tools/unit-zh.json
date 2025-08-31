@@ -2,7 +2,7 @@
   {
     "id": "temperature-converter",
     "name": "温度转换器",
-    "description": "在摄氏度、华氏度和开尔文温度标度之间进行精确计算转换。",
+    "description": "在摄氏度、华氏度和开尔文温度标度之间进行精确计算转换。支持科学计算和日常温度转换，提供即时转换结果。",
     "category": "unit",
     "keywords": [
       "温度转换器",
@@ -10,13 +10,12 @@
       "华氏度转摄氏度",
       "开尔文转换",
       "温度计算器"
-    ],
-    "titleSuffix": "温度刻度转换器"
+    ]
   },
   {
     "id": "length-converter",
     "name": "长度转换器",
-    "description": "在米、英尺、英寸、厘米等长度单位之间进行转换。支持公制和英制系统。",
+    "description": "在米、英尺、英寸、厘米等长度单位之间进行转换。支持公制和英制系统，涵盖建筑、工程和日常测量需求。",
     "category": "unit",
     "keywords": [
       "长度转换器",
@@ -24,13 +23,12 @@
       "英尺转米",
       "英寸转厘米",
       "距离转换"
-    ],
-    "titleSuffix": "距离和长度计算器"
+    ]
   },
   {
     "id": "weight-converter",
     "name": "重量转换器",
-    "description": "在千克、磅、盎司、克等重量单位之间进行转换。适用于烹饪和商业用途。",
+    "description": "在千克、磅、盎司、克等重量单位之间进行转换。适用于烹饪和商业用途，支持精确的质量单位换算。",
     "category": "unit",
     "keywords": [
       "重量转换器",
@@ -38,13 +36,12 @@
       "磅转千克",
       "盎司转克",
       "质量转换"
-    ],
-    "titleSuffix": "质量和重量计算器"
+    ]
   },
   {
     "id": "volume-converter",
     "name": "体积转换器",
-    "description": "在升、加仑、毫升、液体盎司等体积单位之间进行转换。适用于烹饪和化学。",
+    "description": "在升、加仑、毫升、液体盎司等体积单位之间进行转换。适用于烹饪和化学，支持美制和英制体积单位。",
     "category": "unit",
     "keywords": [
       "体积转换器",
@@ -52,8 +49,7 @@
       "毫升转液体盎司",
       "容量转换",
       "液体转换"
-    ],
-    "titleSuffix": "液体体积计算器"
+    ]
   },
   {
     "id": "area-converter",
@@ -66,8 +62,7 @@
       "公顷转换",
       "土地面积",
       "房产测量"
-    ],
-    "titleSuffix": "表面面积计算器"
+    ]
   },
   {
     "id": "speed-converter",
@@ -80,8 +75,7 @@
       "米秒转换",
       "节转换",
       "速率计算"
-    ],
-    "titleSuffix": "速度和速率计算器"
+    ]
   },
   {
     "id": "pressure-converter",
@@ -94,8 +88,7 @@
       "大气压转换",
       "压强计算",
       "气压单位"
-    ],
-    "titleSuffix": "压力单位计算器"
+    ]
   },
   {
     "id": "energy-converter",
@@ -108,8 +101,7 @@
       "卡路里转换",
       "千瓦时转换",
       "能源计算"
-    ],
-    "titleSuffix": "能量和功率计算器"
+    ]
   },
   {
     "id": "power-converter",
@@ -122,8 +114,7 @@
       "马力转换",
       "电力单位",
       "功率计算"
-    ],
-    "titleSuffix": "电力功率计算器"
+    ]
   },
   {
     "id": "data-converter",
@@ -136,8 +127,7 @@
       "存储单位",
       "文件大小",
       "数据容量"
-    ],
-    "titleSuffix": "数字存储计算器"
+    ]
   },
   {
     "id": "unit-converter",
@@ -150,8 +140,7 @@
       "度量衡转换",
       "单位计算器",
       "测量转换"
-    ],
-    "titleSuffix": "全能单位转换器"
+    ]
   },
   {
     "id": "celsius-to-fahrenheit-converter",
@@ -164,8 +153,7 @@
       "°C转°F",
       "华氏温度",
       "摄氏温度"
-    ],
-    "titleSuffix": "C到F温度转换器"
+    ]
   },
   {
     "id": "fahrenheit-to-celsius-converter",
@@ -178,8 +166,7 @@
       "°F转°C",
       "摄氏温度",
       "华氏温度"
-    ],
-    "titleSuffix": "F到C温度转换器"
+    ]
   },
   {
     "id": "pounds-to-kg-converter",
@@ -192,8 +179,7 @@
       "lbs转kg",
       "体重转换",
       "质量单位"
-    ],
-    "titleSuffix": "Lbs到Kg重量转换器"
+    ]
   },
   {
     "id": "kg-to-pounds-converter",
@@ -206,8 +192,7 @@
       "kg转lbs",
       "体重转换",
       "质量单位"
-    ],
-    "titleSuffix": "Kg到Lbs重量转换器"
+    ]
   },
   {
     "id": "feet-to-meters-converter",
@@ -220,8 +205,7 @@
       "ft转m",
       "距离转换",
       "建筑测量"
-    ],
-    "titleSuffix": "英尺到米长度转换器"
+    ]
   },
   {
     "id": "meters-to-feet-converter",
@@ -234,8 +218,7 @@
       "m转ft",
       "距离转换",
       "建筑测量"
-    ],
-    "titleSuffix": "米到英尺长度转换器"
+    ]
   },
   {
     "id": "inches-to-cm-converter",
@@ -248,8 +231,7 @@
       "in转cm",
       "尺寸转换",
       "精密测量"
-    ],
-    "titleSuffix": "英寸到CM长度转换器"
+    ]
   },
   {
     "id": "cm-to-inches-converter",
@@ -262,7 +244,6 @@
       "cm转in",
       "尺寸转换",
       "精密测量"
-    ],
-    "titleSuffix": "CM到英寸长度转换器"
-  }
+    ]
+   }
 ]
