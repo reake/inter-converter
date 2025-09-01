@@ -3,8 +3,11 @@ import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import { GearRatioCalculator } from '@/components/converters/automotive/GearRatioCalculator';
 import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
+import enTool from '@/data/tools/auto/gear-ratio-calculator-en.json';
+import zhTool from '@/data/tools/auto/gear-ratio-calculator-zh.json';
 import autoEn from '@/data/tools/auto.json';
 import autoZh from '@/data/tools/auto-zh.json';
+import { ToolContent, FAQItem } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -89,11 +92,69 @@ export default async function GearRatioCalculatorPage({
   const { locale } = await params;
   const l = (locale || 'en').toLowerCase();
 
-  const faqs = getFAQsByToolId('gear-ratio-calculator', 'auto');
+  // Normalize rich JSON structure to simple arrays
+  function normalizeToolContent(rawContent: any): ToolContent {
+    // Handle about - ensure it's always a string array
+    let about: string[] = [];
+    if (Array.isArray(rawContent.about)) {
+      about = rawContent.about.filter((item: any) => typeof item === 'string');
+    } else if (rawContent.about?.description) {
+      if (Array.isArray(rawContent.about.description)) {
+        about = rawContent.about.description.filter((item: any) => typeof item === 'string');
+      } else if (typeof rawContent.about.description === 'string') {
+        about = [rawContent.about.description];
+      }
+    } else if (typeof rawContent.about === 'string') {
+      about = [rawContent.about];
+    }
+    
+    // Handle howToUse - ensure it's always a string array
+    let howToUse: string[] = [];
+    if (Array.isArray(rawContent.howToUse)) {
+      howToUse = rawContent.howToUse.filter((item: any) => typeof item === 'string');
+    } else if (rawContent.howTo?.steps && Array.isArray(rawContent.howTo.steps)) {
+      howToUse = rawContent.howTo.steps.map((s: any) => {
+        const title = s.title?.trim();
+        const desc = s.description?.trim();
+        if (title && desc) return `${title}: ${desc}`;
+        return title || desc || '';
+      }).filter((item: string) => item.length > 0);
+    }
+    
+    // Handle features - ensure it's always a string array
+    let features: string[] = [];
+    if (Array.isArray(rawContent.features)) {
+      if (rawContent.features.length > 0 && typeof rawContent.features[0] === 'string') {
+        features = rawContent.features;
+      } else {
+        features = rawContent.features.map((f: any) => {
+          if (typeof f === 'string') return f;
+          const title = f.title?.trim();
+          const desc = f.description?.trim();
+          if (title && desc) return `${title}: ${desc}`;
+          return title || desc || '';
+        }).filter((item: string) => item.length > 0);
+      }
+    }
+    
+    // Handle FAQs - ensure proper format
+    const faqs = (rawContent.faqs ?? rawContent.faq ?? []).map((f: any) => 
+      f.question ? f : { question: f.q || '', answer: f.a || '' }
+    ).filter((f: any) => f.question && f.answer);
+    
+    return { about, howToUse, features, faqs };
+  }
+
+  const rawContent = l === 'zh' ? zhTool : enTool;
+  const toolContent = normalizeToolContent(rawContent);
+  
+  const faqs = toolContent.faqs && toolContent.faqs.length > 0
+    ? toolContent.faqs
+    : getFAQsByToolId('gear-ratio-calculator', 'auto');
 
   // Load catalog entry for this tool to source localized name/description/keywords
-  const catalogs: Record<string, any[]> = { en: autoEn as any[], zh: (autoZh as any[]) || (autoEn as any[]) };
-  const catalog = catalogs[l] || catalogs.en;
+  const catalogMap: Record<string, any[]> = { en: autoEn as any[], zh: (autoZh as any[]) || (autoEn as any[]) };
+  const catalog = catalogMap[l] || (autoEn as any[]);
   const entry = catalog.find((it) => it.id === 'gear-ratio-calculator') || (autoEn as any[]).find((it) => it.id === 'gear-ratio-calculator');
 
   const toolName: string = entry?.name || 'Gear Ratio Calculator';
@@ -112,20 +173,9 @@ export default async function GearRatioCalculatorPage({
       category="auto"
       locale={l}
       emoji="⚙️"
-      customHowToUse={[
-        "Enter ring gear teeth count",
-        "Enter pinion gear teeth count",
-        "View calculated gear ratio instantly",
-        "Compare with common ratio standards",
-        "Use for drivetrain optimization"
-      ]}
-      customFeatures={[
-        "Ring and pinion ratio calculation",
-        "Common gear ratio comparisons",
-        "Performance impact analysis",
-        "Acceleration vs top speed trade-offs",
-        "Real-time calculation updates"
-      ]}
+      aboutContent={toolContent.about}
+      customHowToUse={toolContent.howToUse}
+      customFeatures={toolContent.features}
       faqs={faqs}
     >
       <GearRatioCalculator />

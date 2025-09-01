@@ -8,6 +8,7 @@ import zhTool from '@/data/tools/health/pregnancy-calculator-zh.json';
 import healthEn from '@/data/tools/health.json';
 import healthZh from '@/data/tools/health-zh.json';
 import { ToolContent } from '@/types/tool-content';
+import { normalizeToolContent } from '@/utils/normalize-tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -93,8 +94,9 @@ export default async function PregnancyCalculatorPage({
   const l = (locale || 'en').toLowerCase();
 
   // Load localized content
-  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
-  const fallbackContent: ToolContent = enTool;
+  const rawContent = l === 'zh' ? zhTool : enTool;
+  const toolContent = normalizeToolContent(rawContent);
+  const fallbackContent = normalizeToolContent(enTool);
 
   const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
   const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;

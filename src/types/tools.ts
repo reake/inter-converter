@@ -11,7 +11,7 @@ export interface ToolConfig {
   icon?: string;
 }
 
-export interface ConvertersResult<T = any> {
+export interface ConvertersResult<T = unknown> {
   success: boolean;
   result?: T;
   error?: string;
@@ -36,7 +36,7 @@ export interface SEOConfig {
   description: string;
   keywords: string[];
   canonicalUrl: string;
-  structuredData?: Record<string, any>;
+  structuredData?: Record<string, unknown>;
 }
 
 export interface ToolLayoutProps {
@@ -84,5 +84,5 @@ export interface APIError {
 export interface ProcessingError {
   type: 'validation' | 'processing' | 'network';
   message: string;
-  details?: any;
+  details?: Record<string, unknown> | string;
 }

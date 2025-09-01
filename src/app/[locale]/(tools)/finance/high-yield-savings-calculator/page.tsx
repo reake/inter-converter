@@ -7,6 +7,7 @@ import zhTool from '@/data/tools/finance/high-yield-savings-calculator-zh.json';
 import financeEn from '@/data/tools/finance.json';
 import financeZh from '@/data/tools/finance-zh.json';
 import { ToolContent } from '@/types/tool-content';
+import { normalizeToolContent } from '@/utils/normalize-tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -86,8 +87,9 @@ export default async function SavingsCalculatorPage({
   const { locale } = await params;
   const l = (locale || 'en').toLowerCase();
 
-  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
-  const fallbackContent: ToolContent = enTool;
+  const rawContent = l === 'zh' ? zhTool : enTool;
+  const toolContent = normalizeToolContent(rawContent);
+  const fallbackContent = normalizeToolContent(enTool);
 
   const about = toolContent.about?.length ? toolContent.about : fallbackContent.about;
   const howToUse = toolContent.howToUse?.length ? toolContent.howToUse : fallbackContent.howToUse;

@@ -1,4 +1,4 @@
-import { ConvertersEngine } from '../Converters-engine';
+import { ConvertersEngine } from '../conversion-engine';
 
 describe('ConvertersEngine', () => {
   describe('convertTimestamp', () => {

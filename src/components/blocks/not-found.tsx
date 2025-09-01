@@ -14,14 +14,9 @@ export default function NotFound() {
   const t = useTranslations();
 
   useEffect(() => {
-    // Debug: verify countdown ticks on client
-    // eslint-disable-next-line no-console
-    console.log('[404] countdown start at', seconds);
     let mounted = true;
     const timer = setInterval(() => {
       setSeconds((s) => {
-        // eslint-disable-next-line no-console
-        console.log('[404] countdown tick', s - 1);
         if (s <= 1) {
           // 在归零时跳转首页
           if (mounted && typeof window !== 'undefined') {

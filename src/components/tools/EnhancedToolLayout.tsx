@@ -19,7 +19,7 @@ interface EnhancedToolLayoutProps extends ToolLayoutProps {
     howToUse?: string;
     features?: string;
     faq?: string;
-    faqSubtitleTemplate?: string; // e.g., "Common questions about {{tool}}"
+    faqSubtitleTemplate?: string;
     about?: string;
     details?: string;
   };
@@ -43,8 +43,6 @@ export function EnhancedToolLayout({
   sectionTitles,
   locale
 }: EnhancedToolLayoutProps) {
-  const structuredData = includeStructuredData ? generateEnhancedStructuredData(title, description, toolId, category, faqs) : null;
-
   const defaultHowToUse = [
     "Enter your input in the designated field",
     "The conversion will happen automatically",
@@ -61,28 +59,29 @@ export function EnhancedToolLayout({
 
   const howToUseSteps = customHowToUse || defaultHowToUse;
   const features = customFeatures || defaultFeatures;
+  const normalizedFaqs = faqs || [];
+  const structuredData = includeStructuredData ? generateEnhancedStructuredData(title, description, toolId, category, normalizedFaqs) : null;
   
-  // Use provided related tools or empty array to avoid SSR issues
   const toolsToShow = relatedTools;
 
-  // Localized section titles (defaults), override by incoming sectionTitles
+  // Localized section titles
   const l = (locale || 'en').toLowerCase();
   const defaultTitles = l === 'zh'
-    ? {
-        about: `关于${title}`,
-        howToUse: `如何使用${title}`,
-        features: `${title}的功能特点`,
-        faq: `${title}常见问题`,
-        faqSubtitleTemplate: `关于 {{tool}} 的常见问题`,
-      }
-    : {
-        about: `About ${title}`,
-        howToUse: `How to Use ${title}`,
-        features: `Features of ${title}`,
-        faq: `${title} FAQs`,
-        faqSubtitleTemplate: `Common questions about {{tool}}`,
-      };
-  const mergedTitles = { ...defaultTitles, ...(sectionTitles || {}) };
+  ? {
+      about: `关于${title}`,
+      howToUse: `如何使用${title}`,
+      features: `${title}的功能特点`,
+      faq: `${title}常见问题`,
+      faqSubtitleTemplate: `关于 {{tool}} 的常见问题`,
+    }
+  : {
+      about: `About ${title}`,
+      howToUse: `How to Use ${title}`,
+      features: `Features of ${title}`,
+      faq: `${title} FAQs`,
+      faqSubtitleTemplate: `Common questions about ${title}`,
+    };
+  const mergedTitles = { ...defaultTitles, ...sectionTitles };
 
   return (
     <>
@@ -92,160 +91,163 @@ export function EnhancedToolLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       )}
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto">
-          {/* Tool Header */}
-          <div className="mb-8 text-center">
-            <h1 className="text-4xl font-bold mb-4">
-              {emoji && `${emoji} `}{title}
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {description}
-            </p>
-          </div>
 
-          {/* Tool Content */}
-          <Card className="mb-8">
-            <CardContent className="p-6">
-              {children}
+      <div className="container mx-auto px-4 py-8 max-w-4xl">
+        <div className="mb-8 text-center">
+          <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-3">
+            {emoji && <span className="text-5xl">{emoji}</span>}
+            {title}
+          </h1>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            {description}
+          </p>
+        </div>
+
+        {/* Tool Content */}
+        <Card className="mb-8">
+          <CardContent className="p-6">
+            {children}
+          </CardContent>
+        </Card>
+
+        {/* About Section */}
+        {aboutContent && (
+          <Card className="mb-6">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <span className="text-2xl">{emoji}</span>
+                {mergedTitles.about}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              {Array.isArray(aboutContent) ? (
+                aboutContent.map((p, idx) => (
+                  <p key={idx} className="mb-3 text-gray-700 dark:text-gray-300">
+                    {p}
+                  </p>
+                ))
+              ) : (
+                <p className="mb-3 text-gray-700 dark:text-gray-300">
+                  {aboutContent}
+                </p>
+              )}
+            </CardContent>
+          </Card>
+        )}
+
+        {/* How to Use and Features */}
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          {/* How to Use */}
+          <Card>
+            <CardHeader>
+              <CardTitle>{mergedTitles.howToUse}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ol className="list-decimal list-inside space-y-2">
+                {howToUseSteps.map((step, index) => (
+                  <li key={index} className="text-gray-700 dark:text-gray-300">
+                    {step}
+                  </li>
+                ))}
+              </ol>
             </CardContent>
           </Card>
 
-          {/* About Section */}
-          {aboutContent && (
-            <Card className="mb-8">
-              <CardHeader>
-                <CardTitle className="text-lg">{mergedTitles.about}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                {Array.isArray(aboutContent) ? (
-                  <div className="space-y-3 text-sm text-muted-foreground">
-                    {aboutContent.map((p, idx) => (
-                      <p key={idx}>{p}</p>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="prose max-w-none text-sm text-muted-foreground">
-                    <p>{aboutContent}</p>
-                  </div>
-                )}
-              </CardContent>
-            </Card>
-          )}
-
-          {/* How to Use and Features */}
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">{mergedTitles.howToUse}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2 text-sm text-muted-foreground">
-                  {howToUseSteps.map((step, index) => (
-                    <p key={index}>{index + 1}. {step}</p>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">{mergedTitles.features}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2 text-sm text-muted-foreground">
-                  {features.map((feature, index) => (
-                    <p key={index}>✓ {feature}</p>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* FAQs Section */}
-          {faqs.length > 0 && (
-            <div className="mb-8">
-              <ToolFAQs 
-                faqs={faqs} 
-                toolName={title}
-                title={mergedTitles.faq}
-                subtitle={mergedTitles.faqSubtitleTemplate ? mergedTitles.faqSubtitleTemplate.replace('{{tool}}', title) : undefined}
-              />
-            </div>
-          )}
-
-          {/* Related Tools */}
-          <RelatedTools 
-            tools={toolsToShow} 
-            currentToolId={toolId} 
-            category={category}
-          />
+          {/* Features */}
+          <Card>
+            <CardHeader>
+              <CardTitle>{mergedTitles.features}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="list-disc list-inside space-y-2">
+                {features.map((feature, index) => (
+                  <li key={index} className="text-gray-700 dark:text-gray-300">
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
         </div>
+
+        {/* Details Section */}
+        {detailsContent && detailsContent.length > 0 && (
+          <Card className="mb-8">
+            <CardHeader>
+              <CardTitle>{mergedTitles.details}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-3">
+                {detailsContent.map((detail, index) => (
+                  <p key={index} className="text-gray-700 dark:text-gray-300">
+                    {detail}
+                  </p>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
+        {/* FAQs */}
+        {normalizedFaqs.length > 0 && (
+          <ToolFAQs 
+            faqs={normalizedFaqs} 
+            title={mergedTitles.faq}
+            toolName={title}
+          />
+        )}
+
+        {/* Related Tools */}
+        {toolsToShow && toolsToShow.length > 0 && (
+          <RelatedTools tools={toolsToShow} currentToolId={toolId} category={category} />
+        )}
       </div>
     </>
   );
 }
 
-// Enhanced structured data generation with FAQs
+// Generate enhanced structured data for SEO
 function generateEnhancedStructuredData(
   title: string,
   description: string,
   toolId: string,
-  category: string = '',
-  faqs: FAQ[] = []
+  category: string,
+  faqs: FAQ[]
 ) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://interconverter.com';
-  const categoryPath = category ? `/${category}` : '';
-  const url = `${baseUrl}${categoryPath}/${toolId}`;
-  
-  const baseStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'WebApplication',
-    name: title,
-    description,
-    url,
-    applicationCategory: 'UtilityApplication',
-    operatingSystem: 'Any',
-    permissions: 'browser',
-    isAccessibleForFree: true,
-    offers: {
-      '@type': 'Offer',
-      price: '0',
-      priceCurrency: 'USD'
-    },
-    provider: {
-      '@type': 'Organization',
-      name: 'InterConverter',
-      url: baseUrl,
-      logo: `${baseUrl}/logo.png`
-    },
-    browserRequirements: 'Requires JavaScript. Requires HTML5.',
-    softwareVersion: '1.0',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      ratingCount: '1250'
+  const baseUrl = 'https://interconverter.com';
+  const toolUrl = `${baseUrl}/${category}/${toolId}`;
+
+  const structuredData: any = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": title,
+    "description": description,
+    "url": toolUrl,
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "permissions": "browser",
+    "isAccessibleForFree": true,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
     }
   };
 
-  // Add FAQPage structured data if FAQs exist
+  // Add FAQ structured data if available
   if (faqs.length > 0) {
-    return [
-      baseStructuredData,
-      {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faqs.map(faq => ({
-          '@type': 'Question',
-          name: faq.question,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: faq.answer
-          }
-        }))
-      }
-    ];
+    structuredData.mainEntity = {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    };
   }
 
-  return baseStructuredData;
+  return structuredData;
 }

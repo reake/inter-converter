@@ -8,6 +8,7 @@ import zhTool from '@/data/tools/auto/engine-size-converter-zh.json';
 import autoEn from '@/data/tools/auto.json';
 import autoZh from '@/data/tools/auto-zh.json';
 import { ToolContent } from '@/types/tool-content';
+import { normalizeToolContent } from '@/utils/normalize-tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -92,7 +93,8 @@ export default async function EngineSizeConverterPage({
   const { locale } = await params;
   const l = (locale || 'en').toLowerCase();
 
-  const toolContent: ToolContent = l === 'zh' ? (zhTool as ToolContent) : (enTool as ToolContent);
+  const rawContent = l === 'zh' ? zhTool : enTool;
+  const toolContent = normalizeToolContent(rawContent);
 
   const faqsFromJson = Array.isArray(toolContent.faqs) ? toolContent.faqs : [];
   const faqs = faqsFromJson.length > 0

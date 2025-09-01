@@ -6,6 +6,7 @@ import zhTool from '@/data/tools/media/jpg-to-png-converter-zh.json';
 import mediaEn from '@/data/tools/media.json';
 import mediaZh from '@/data/tools/media-zh.json';
 import { ToolContent } from '@/types/tool-content';
+import { normalizeToolContent } from '@/utils/normalize-tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -86,7 +87,8 @@ export default async function JpgToPngConverterPage({
   const l = (locale || 'en').toLowerCase();
 
   // Load JSON content based on locale
-  const toolContent: ToolContent = l === 'zh' ? zhTool : enTool;
+  const rawContent = l === 'zh' ? zhTool : enTool;
+  const toolContent = normalizeToolContent(rawContent);
   const catalogs: Record<string, any[]> = {
     en: mediaEn as any[],
     zh: (mediaZh as any[]) || (mediaEn as any[])

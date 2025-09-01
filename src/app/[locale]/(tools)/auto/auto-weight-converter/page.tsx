@@ -7,7 +7,7 @@ import enTool from '@/data/tools/auto/auto-weight-converter-en.json';
 import zhTool from '@/data/tools/auto/auto-weight-converter-zh.json';
 import autoEn from '@/data/tools/auto.json';
 import autoZh from '@/data/tools/auto-zh.json';
-import { ToolContent } from '@/types/tool-content';
+import { ToolContent, FAQItem } from '@/types/tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -92,11 +92,64 @@ export default async function AutoWeightConverterPage({
   const { locale } = await params;
   const l = (locale || 'en').toLowerCase();
 
-  const toolContent: ToolContent = l === 'zh' ? (zhTool as ToolContent) : (enTool as ToolContent);
+  // Normalize rich JSON structure to simple arrays
+  function normalizeToolContent(rawContent: any): ToolContent {
+    // Handle about - ensure it's always a string array
+    let about: string[] = [];
+    if (Array.isArray(rawContent.about)) {
+      about = rawContent.about.filter((item: any) => typeof item === 'string');
+    } else if (rawContent.about?.description) {
+      if (Array.isArray(rawContent.about.description)) {
+        about = rawContent.about.description.filter((item: any) => typeof item === 'string');
+      } else if (typeof rawContent.about.description === 'string') {
+        about = [rawContent.about.description];
+      }
+    } else if (typeof rawContent.about === 'string') {
+      about = [rawContent.about];
+    }
+    
+    // Handle howToUse - ensure it's always a string array
+    let howToUse: string[] = [];
+    if (Array.isArray(rawContent.howToUse)) {
+      howToUse = rawContent.howToUse.filter((item: any) => typeof item === 'string');
+    } else if (rawContent.howTo?.steps && Array.isArray(rawContent.howTo.steps)) {
+      howToUse = rawContent.howTo.steps.map((s: any) => {
+        const title = s.title?.trim();
+        const desc = s.description?.trim();
+        if (title && desc) return `${title}: ${desc}`;
+        return title || desc || '';
+      }).filter((item: string) => item.length > 0);
+    }
+    
+    // Handle features - ensure it's always a string array
+    let features: string[] = [];
+    if (Array.isArray(rawContent.features)) {
+      if (rawContent.features.length > 0 && typeof rawContent.features[0] === 'string') {
+        features = rawContent.features;
+      } else {
+        features = rawContent.features.map((f: any) => {
+          if (typeof f === 'string') return f;
+          const title = f.title?.trim();
+          const desc = f.description?.trim();
+          if (title && desc) return `${title}: ${desc}`;
+          return title || desc || '';
+        }).filter((item: string) => item.length > 0);
+      }
+    }
+    
+    // Handle FAQs - ensure proper format
+    const faqs = (rawContent.faqs ?? rawContent.faq ?? []).map((f: any) => 
+      f.question ? f : { question: f.q || '', answer: f.a || '' }
+    ).filter((f: any) => f.question && f.answer);
+    
+    return { about, howToUse, features, faqs };
+  }
 
-  const faqsFromJson = Array.isArray(toolContent.faqs) ? toolContent.faqs : [];
-  const faqs = faqsFromJson.length > 0
-    ? faqsFromJson
+  const rawContent = l === 'zh' ? zhTool : enTool;
+  const toolContent = normalizeToolContent(rawContent);
+  
+  const faqs = toolContent.faqs && toolContent.faqs.length > 0
+    ? toolContent.faqs
     : getFAQsByToolId('auto-weight-converter', 'auto');
 
   // Load catalog entry for this tool to source localized name/description/keywords

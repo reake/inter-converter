@@ -8,6 +8,7 @@ import zhTool from '@/data/tools/health/bmi-calculator-zh.json';
 import healthEn from '@/data/tools/health.json';
 import healthZh from '@/data/tools/health-zh.json';
 import { ToolContent } from '@/types/tool-content';
+import { normalizeToolContent } from '@/utils/normalize-tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -93,11 +94,8 @@ export default async function BMICalculatorPage({
   const l = (locale || 'en').toLowerCase();
 
   // Load tool-specific content from JSON files
-  const toolContents: Record<string, ToolContent> = {
-    en: enTool as ToolContent,
-    zh: zhTool as ToolContent
-  };
-  const toolContent = toolContents[l] || toolContents.en;
+  const rawContent = l === 'zh' ? zhTool : enTool;
+  const toolContent = normalizeToolContent(rawContent);
 
   const faqs = getFAQsByToolId('bmi-calculator', 'health');
 

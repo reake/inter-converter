@@ -9,12 +9,12 @@ export function Header() {
   const t = useTranslations('common');
   const pathname = usePathname();
 
-  // 使用静态导航配置避免翻译不匹配
+  // 使用翻译配置的导航
   const navigation = [
-    { name: 'Home', href: '/', key: 'home' },
-    { name: 'Tools', href: '/tools', key: 'tools' },
-    { name: 'Auto', href: '/auto', key: 'auto' },
-    { name: 'About', href: '/about', key: 'about' },
+    { href: '/', key: 'home' },
+    { href: '/tools', key: 'tools' },
+    { href: '/auto', key: 'auto' },
+    { href: '/about', key: 'about' },
   ];
 
   return (
@@ -38,14 +38,12 @@ export function Header() {
                     isActive ? "text-primary" : "text-muted-foreground"
                   )}
                 >
-                  {item.name}
+                  {t(item.key)}
                 </Link>
               );
             })}
           </nav>
-
           <div className="flex items-center space-x-2">
-            {/* <LanguageToggle /> */}
             <ThemeToggle />
           </div>
         </div>

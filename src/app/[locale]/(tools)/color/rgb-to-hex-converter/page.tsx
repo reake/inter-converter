@@ -8,6 +8,7 @@ import zhTool from '@/data/tools/color/rgb-to-hex-converter-zh.json';
 import colorEn from '@/data/tools/color.json';
 import colorZh from '@/data/tools/color-zh.json';
 import { ToolContent } from '@/types/tool-content';
+import { normalizeToolContent } from '@/utils/normalize-tool-content';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -93,11 +94,8 @@ export default async function RgbToHexConverterPage({
   const l = (locale || 'en').toLowerCase();
 
   // Load tool-specific content from JSON files
-  const toolContents: Record<string, ToolContent> = {
-    en: enTool as ToolContent,
-    zh: zhTool as ToolContent
-  };
-  const toolContent = toolContents[l] || toolContents.en;
+  const rawContent = l === 'zh' ? zhTool : enTool;
+  const toolContent = normalizeToolContent(rawContent);
 
   const faqs = getFAQsByToolId('rgb-to-hex-converter', 'color');
 
