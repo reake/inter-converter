@@ -1,14 +1,30 @@
 [
   {
-    "id": "jpg-to-png-converter",
-    "name": "JPG转PNG转换器",
-    "description": "将JPG图像转换为支持透明度的PNG格式，保持高质量的在线图像转换工具。",
-    "keywords": ["jpg转png", "图像转换器", "png转换", "透明背景", "图片格式转换", "在线转换"]
+    "id": "pdf-to-word-converter",
+    "name": "PDF转Word转换器",
+    "description": "将PDF文件转换为可编辑的Word文档，准确保持格式。专业PDF转Word转换器，支持DOC和DOCX格式，保持布局完整性。",
+    "titleSuffix": "可编辑文档转换",
+    "category": "media",
+    "keywords": ["pdf", "word", "doc", "docx", "转换器", "文档"],
+    "path": "/zh/media/pdf-to-word-converter",
+    "isActive": true,
+    "seoflag": true,
+    "searchVolume": 201000,
+    "difficulty": 4,
+    "icon": "📄"
   },
   {
-    "id": "pdf-to-word-converter", 
-    "name": "PDF转Word转换器",
-    "description": "将PDF文档转换为可编辑的Word格式，支持OCR和格式保持的专业文档转换工具。",
-    "keywords": ["pdf转word", "文档转换器", "pdf编辑", "word转换", "ocr识别", "文档处理"]
+    "id": "jpg-to-png-converter",
+    "name": "JPG转PNG转换器",
+    "description": "将JPG图片转换为PNG格式，支持透明度和无损质量。专业图片转换器，用于网页图形和照片编辑应用。",
+    "titleSuffix": "图片格式和透明度",
+    "category": "media",
+    "keywords": ["jpg", "jpeg", "png", "图片", "转换器", "照片"],
+    "path": "/zh/media/jpg-to-png-converter",
+    "isActive": true,
+    "seoflag": true,
+    "searchVolume": 89000,
+    "difficulty": 2,
+    "icon": "🖼️"
   }
 ]
