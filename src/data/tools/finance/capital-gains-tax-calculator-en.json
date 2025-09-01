@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Capital Gains Tax Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Capital Gains Tax Calculator - Investment Tax Planning Tool",
+    "description": "The Capital Gains Tax Calculator is a comprehensive investment tax planning tool designed to help investors calculate capital gains taxes on stock sales, real estate transactions, and other investment disposals. Whether you're planning to sell stocks, bonds, mutual funds, or property, this calculator provides accurate tax estimates based on holding periods, purchase prices, and current tax rates. Understanding capital gains tax calculations is essential for optimizing investment timing and minimizing tax liabilities."
+  },
+  "howTo": {
+    "title": "How to Use the Capital Gains Tax Calculator",
+    "steps": [
+      {
+        "title": "Purchase Information",
+        "description": "Enter the original purchase price (cost basis) and purchase date of your investment."
+      },
+      {
+        "title": "Sale Details",
+        "description": "Input the sale price and sale date to calculate your capital gain or loss."
+      },
+      {
+        "title": "Holding Period",
+        "description": "The calculator automatically determines if it's a short-term (≤1 year) or long-term (>1 year) gain."
+      },
+      {
+        "title": "Tax Filing Status",
+        "description": "Select your filing status (single, married filing jointly, etc.) for accurate tax calculations."
+      },
+      {
+        "title": "Income Level",
+        "description": "Enter your annual income to determine applicable capital gains tax rates."
+      },
+      {
+        "title": "Review Tax Liability",
+        "description": "Analyze your capital gains tax obligation and net proceeds after taxes."
+      }
+    ],
+    "tips": [
+      "Hold investments for more than one year to qualify for lower long-term capital gains rates",
+      "Consider tax-loss harvesting to offset capital gains with losses",
+      "Time sales strategically to manage your tax bracket",
+      "Keep detailed records of all investment transactions for accurate cost basis"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Short vs Long-Term Analysis",
+      "description": "Calculate tax differences between short-term (ordinary income rates) and long-term capital gains."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Tax Rate Determination",
+      "description": "Automatically apply correct capital gains tax rates based on income level and filing status."
+    },
+    {
+      "title": "Net Proceeds Calculator",
+      "description": "Calculate your after-tax proceeds from investment sales including all applicable taxes."
+    },
+    {
+      "title": "Multiple Transaction Analysis",
+      "description": "Analyze capital gains taxes for multiple investment sales in the same tax year."
+    },
+    {
+      "title": "Tax-Loss Harvesting",
+      "description": "Calculate how capital losses can offset gains to reduce overall tax liability."
+    },
+    {
+      "title": "State Tax Integration",
+      "description": "Include state capital gains taxes for comprehensive tax planning analysis."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What's the difference between short-term and long-term capital gains?",
+      "a": "Short-term capital gains (assets held ≤1 year) are taxed as ordinary income at rates up to 37%. Long-term capital gains (assets held >1 year) have preferential rates of 0%, 15%, or 20% depending on your income level."
+    },
+    {
+      "q": "What are the 2024 capital gains tax rates?",
+      "a": "For 2024, long-term capital gains rates are 0% (income up to $47,025 single/$94,050 married), 15% (up to $518,900 single/$583,750 married), and 20% (above those thresholds). High earners may also pay 3.8% Net Investment Income Tax."
+    },
+    {
+      "q": "How do I calculate cost basis for inherited assets?",
+      "a": "Inherited assets receive a 'stepped-up basis' equal to fair market value on the date of death. This means you can sell inherited assets immediately with minimal capital gains tax, as your cost basis is the current market value."
+    },
+    {
+      "q": "Can I use capital losses to reduce my taxes?",
+      "a": "Yes, capital losses can offset capital gains dollar-for-dollar. If losses exceed gains, you can deduct up to $3,000 against ordinary income annually, with remaining losses carried forward to future years."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Investment Calculator",
+      "url": "/finance/investment-calculator"
+    },
+    {
+      "title": "Tax Calculator",
+      "url": "/finance/tax-calculator"
+    },
+    {
+      "title": "Stock Calculator",
+      "url": "/finance/stock-calculator"
+    },
+    {
+      "title": "Real Estate Calculator",
+      "url": "/finance/real-estate-calculator"
+    },
+    {
+      "title": "Retirement Tax Calculator",
+      "url": "/finance/retirement-tax-calculator"
     }
   ]
 }

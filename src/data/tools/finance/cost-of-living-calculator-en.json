@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Cost Of Living Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Cost of Living Calculator - Location Comparison Tool",
+    "description": "The Cost of Living Calculator is a comprehensive relocation planning tool designed to help you compare living expenses between different cities, states, or countries. This calculator analyzes housing costs, transportation, food, healthcare, and other essential expenses to determine how much income you need to maintain your current lifestyle in a new location. Whether you're considering a job offer, planning retirement, or exploring relocation options, this tool provides accurate cost-of-living comparisons."
+  },
+  "howTo": {
+    "title": "How to Use the Cost of Living Calculator",
+    "steps": [
+      {
+        "title": "Select Current Location",
+        "description": "Choose your current city or region as the baseline for comparison."
+      },
+      {
+        "title": "Enter Target Location",
+        "description": "Select the city or region you're considering moving to."
+      },
+      {
+        "title": "Input Current Income",
+        "description": "Enter your current annual or monthly income for salary adjustment calculations."
+      },
+      {
+        "title": "Review Cost Categories",
+        "description": "Analyze differences in housing, transportation, food, healthcare, and other expenses."
+      },
+      {
+        "title": "Calculate Required Income",
+        "description": "Determine the equivalent income needed to maintain your lifestyle in the new location."
+      },
+      {
+        "title": "Compare Quality of Life",
+        "description": "Evaluate overall affordability and lifestyle changes between locations."
+      }
+    ],
+    "tips": [
+      "Housing typically represents 25-35% of total living costs",
+      "Consider state and local tax differences in your comparison",
+      "Factor in one-time moving costs and setup expenses",
+      "Research job market and salary ranges in the target location"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Multi-City Comparison",
+      "description": "Compare cost of living between multiple cities and regions simultaneously."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Category Breakdown",
+      "description": "Detailed analysis of housing, transportation, food, healthcare, and entertainment costs."
+    },
+    {
+      "title": "Salary Adjustment Calculator",
+      "description": "Calculate the equivalent salary needed to maintain your current lifestyle."
+    },
+    {
+      "title": "Tax Impact Analysis",
+      "description": "Factor in state income tax, sales tax, and property tax differences."
+    },
+    {
+      "title": "Quality of Life Index",
+      "description": "Compare overall affordability and purchasing power between locations."
+    },
+    {
+      "title": "Moving Cost Estimator",
+      "description": "Estimate one-time relocation expenses and setup costs for budgeting."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How accurate are cost of living comparisons?",
+      "a": "Cost of living data is based on comprehensive surveys and government statistics, but individual expenses vary. Use these comparisons as guidelines and research specific neighborhoods and lifestyle choices that affect your personal costs."
+    },
+    {
+      "q": "What factors most impact cost of living differences?",
+      "a": "Housing costs typically have the biggest impact, often varying 50-200% between locations. Other major factors include state taxes, transportation costs, healthcare expenses, and local service prices."
+    },
+    {
+      "q": "Should I negotiate salary based on cost of living?",
+      "a": "Yes, cost of living is a valid factor in salary negotiations, especially for relocations. Research local salary ranges and present data showing cost differences to support your negotiation."
+    },
+    {
+      "q": "How often do cost of living indexes change?",
+      "a": "Cost of living data is typically updated annually or bi-annually. Major economic events, housing market changes, or policy changes can cause more frequent fluctuations in specific categories."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Budget Calculator",
+      "url": "/finance/budget-calculator"
+    },
+    {
+      "title": "Salary Calculator",
+      "url": "/finance/salary-calculator"
+    },
+    {
+      "title": "Tax Calculator",
+      "url": "/finance/tax-calculator"
+    },
+    {
+      "title": "Rent vs Buy Calculator",
+      "url": "/finance/rent-vs-buy-calculator"
+    },
+    {
+      "title": "Moving Cost Calculator",
+      "url": "/finance/moving-cost-calculator"
     }
   ]
 }

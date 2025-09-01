@@ -1,39 +1,102 @@
 {
-  "about": [
-    "The BMI Calculator determines your Body Mass Index based on height and weight measurements. BMI is a widely used screening tool to categorize weight status and assess potential health risks associated with being underweight, normal weight, overweight, or obese.",
-    "Understanding your BMI helps in making informed decisions about diet, exercise, and lifestyle changes. While BMI has limitations and doesn't account for muscle mass or body composition, it remains a valuable initial assessment tool for general health screening."
-  ],
-  "howToUse": [
-    "Enter your height in feet/inches or centimeters",
-    "Input your weight in pounds or kilograms",
-    "Select your preferred measurement units",
-    "View your calculated BMI and weight category",
-    "Review health recommendations based on your results"
-  ],
+  "about": {
+    "title": "About BMI Calculator",
+    "description": "The BMI Calculator determines your Body Mass Index for health assessment and weight management. This professional tool calculates BMI based on height and weight measurements to categorize weight status and assess potential health risks. BMI is a widely used screening tool for underweight, normal weight, overweight, and obesity classifications. Understanding your BMI helps make informed decisions about diet, exercise, and lifestyle changes for optimal health and wellness."
+  },
+  "howTo": {
+    "title": "How to Use the BMI Calculator",
+    "steps": [
+      {
+        "title": "Enter Height",
+        "description": "Input your height in feet/inches or centimeters using your preferred measurement system."
+      },
+      {
+        "title": "Input Weight",
+        "description": "Enter your current weight in pounds or kilograms."
+      },
+      {
+        "title": "Calculate BMI",
+        "description": "Click calculate to get your BMI score and weight category classification."
+      },
+      {
+        "title": "Review Results",
+        "description": "View your BMI score, weight category, and personalized health recommendations."
+      }
+    ],
+    "tips": [
+      "Measure weight at the same time of day for consistency",
+      "Use accurate height and weight measurements",
+      "Consider BMI alongside other health indicators"
+    ]
+  },
   "features": [
-    "Support for metric and imperial units",
-    "Instant BMI calculation and categorization",
-    "Health risk assessment indicators",
-    "Weight category classifications (underweight, normal, overweight, obese)",
-    "Personalized health recommendations",
-    "BMI chart and reference ranges"
+    {
+      "title": "Multiple Unit Support",
+      "description": "Calculate BMI using metric (kg/cm) or imperial (lbs/ft-in) measurement systems."
+    },
+    {
+      "title": "Instant BMI Calculation",
+      "description": "Get immediate BMI results with automatic weight category classification."
+    },
+    {
+      "title": "Health Risk Assessment",
+      "description": "Receive health risk indicators based on your BMI score and weight category."
+    },
+    {
+      "title": "Weight Categories",
+      "description": "Clear classification into underweight, normal weight, overweight, or obese categories."
+    },
+    {
+      "title": "Health Recommendations",
+      "description": "Get personalized health and lifestyle recommendations based on your BMI results."
+    },
+    {
+      "title": "BMI Reference Chart",
+      "description": "Visual BMI chart with standard reference ranges for easy interpretation."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What is a healthy BMI range?",
-      "answer": "A healthy BMI typically ranges from 18.5 to 24.9. Below 18.5 is considered underweight, 25-29.9 is overweight, and 30+ is classified as obese according to WHO standards."
+      "q": "What is a healthy BMI range for adults?",
+      "a": "A healthy BMI typically ranges from 18.5 to 24.9 according to WHO standards. BMI below 18.5 is considered underweight, 25-29.9 is overweight, and 30+ is classified as obese. Our BMI calculator provides these classifications automatically with your results."
     },
     {
-      "question": "Is BMI accurate for everyone?",
-      "answer": "BMI has limitations and may not be accurate for athletes with high muscle mass, elderly individuals, or certain ethnic groups. It's best used as a general screening tool alongside other health assessments."
+      "q": "Is BMI calculation accurate for everyone?",
+      "a": "BMI has limitations and may not be accurate for athletes with high muscle mass, elderly individuals, pregnant women, or certain ethnic groups. It's best used as a general health screening tool alongside other assessments like body fat percentage and waist circumference."
     },
     {
-      "question": "How often should I check my BMI?",
-      "answer": "For general health monitoring, checking BMI monthly or quarterly is sufficient. If you're actively trying to lose or gain weight, weekly measurements can help track progress."
+      "q": "How do I calculate my BMI manually?",
+      "a": "BMI is calculated using the formula: weight (kg) ÷ height (m)². For imperial units: (weight in pounds ÷ height in inches²) × 703. Our BMI calculator automates this process and provides instant results with health recommendations."
     },
     {
-      "question": "What should I do if my BMI is outside the healthy range?",
-      "answer": "Consult with a healthcare professional for personalized advice. They can assess your overall health, body composition, and recommend appropriate diet and exercise plans."
+      "q": "How often should I check my BMI for health monitoring?",
+      "a": "For general health monitoring, checking BMI monthly or quarterly is sufficient. If you're actively trying to lose or gain weight, weekly BMI measurements can help track progress alongside other health metrics."
+    },
+    {
+      "q": "What should I do if my BMI is outside the healthy range?",
+      "a": "If your BMI is outside the healthy range (18.5-24.9), consult with a healthcare professional for personalized advice. They can assess your overall health, body composition, and recommend appropriate diet, exercise, and lifestyle modifications."
+    },
+    {
+      "q": "Can BMI be used for children and teenagers?",
+      "a": "BMI for children and teenagers is calculated differently using age and sex-specific percentiles rather than adult categories. Our calculator is designed for adults 18+. Consult a pediatrician for child BMI assessments."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Ideal Weight Calculator",
+      "url": "/health/ideal-weight-calculator"
+    },
+    {
+      "title": "Body Fat Calculator",
+      "url": "/health/body-fat-calculator"
+    },
+    {
+      "title": "Calorie Calculator",
+      "url": "/health/calorie-calculator"
+    },
+    {
+      "title": "Health Tools Category",
+      "url": "/health"
     }
   ]
 }

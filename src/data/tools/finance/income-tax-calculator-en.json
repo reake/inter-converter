@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Income Tax Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Income Tax Calculator",
+    "description": "The Income Tax Calculator helps you estimate your federal and state income tax liability based on your income, filing status, and deductions. This comprehensive tax planning tool calculates your tax owed, potential refund, and effective tax rate to help you make informed financial decisions. Whether you're planning for tax season, estimating quarterly payments, or evaluating tax strategies, this calculator provides accurate estimates based on current tax brackets and regulations."
+  },
+  "howTo": {
+    "title": "How to Use the Income Tax Calculator",
+    "steps": [
+      {
+        "title": "Enter Income Information",
+        "description": "Input your annual gross income from all sources including wages, self-employment, and investment income."
+      },
+      {
+        "title": "Select Filing Status",
+        "description": "Choose your filing status: Single, Married Filing Jointly, Married Filing Separately, or Head of Household."
+      },
+      {
+        "title": "Add Deductions",
+        "description": "Enter your deductions - either take the standard deduction or itemize deductions like mortgage interest and charitable contributions."
+      },
+      {
+        "title": "Include Tax Credits",
+        "description": "Add applicable tax credits such as Child Tax Credit, Earned Income Credit, or education credits."
+      },
+      {
+        "title": "Review Tax Calculation",
+        "description": "Analyze your estimated tax liability, effective tax rate, and potential refund or amount owed."
+      },
+      {
+        "title": "Plan Tax Strategies",
+        "description": "Use results to plan tax-saving strategies and optimize your financial decisions."
+      }
+    ],
+    "tips": [
+      "Update calculations when tax laws change",
+      "Consider both federal and state tax implications",
+      "Plan deductions and contributions before year-end",
+      "Consult a tax professional for complex situations"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Federal Tax Calculation",
+      "description": "Calculate federal income tax based on current tax brackets and standard/itemized deductions."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "State Tax Integration",
+      "description": "Include state income tax calculations for comprehensive tax liability estimation."
+    },
+    {
+      "title": "Multiple Filing Status",
+      "description": "Support for all filing statuses with appropriate tax brackets and deduction limits."
+    },
+    {
+      "title": "Tax Credit Calculator",
+      "description": "Factor in common tax credits to reduce your overall tax liability."
+    },
+    {
+      "title": "Effective Tax Rate",
+      "description": "Calculate your effective tax rate and marginal tax bracket for tax planning."
+    },
+    {
+      "title": "Refund Estimation",
+      "description": "Estimate tax refund or amount owed based on withholdings and estimated payments."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How accurate are the tax calculations?",
+      "a": "Our calculator uses current federal tax brackets and standard deduction amounts. However, tax calculations can be complex, and this tool provides estimates. Consult a tax professional for precise calculations, especially with complex situations."
+    },
+    {
+      "q": "Should I take the standard deduction or itemize?",
+      "a": "Take the standard deduction if it's higher than your itemized deductions. For 2023, standard deductions are $13,850 (single) and $27,700 (married filing jointly). Itemize if your deductions exceed these amounts."
+    },
+    {
+      "q": "What tax credits can I claim?",
+      "a": "Common tax credits include Child Tax Credit ($2,000 per qualifying child), Earned Income Tax Credit (for lower-income taxpayers), American Opportunity Tax Credit (education), and Child and Dependent Care Credit."
+    },
+    {
+      "q": "How do I calculate quarterly estimated taxes?",
+      "a": "Divide your annual estimated tax liability by 4. You generally need to pay quarterly if you expect to owe $1,000 or more in taxes and your withholding doesn't cover at least 90% of the current year's tax."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Tax Calculator",
+      "url": "/finance/tax-calculator"
+    },
+    {
+      "title": "Payroll Tax Calculator",
+      "url": "/finance/payroll-tax-calculator"
+    },
+    {
+      "title": "Capital Gains Tax Calculator",
+      "url": "/finance/capital-gains-tax-calculator"
+    },
+    {
+      "title": "Self Employment Tax Calculator",
+      "url": "/finance/self-employment-tax-calculator"
+    },
+    {
+      "title": "Tax Refund Calculator",
+      "url": "/finance/tax-refund-calculator"
     }
   ]
 }

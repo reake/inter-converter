@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Roth Ira Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Roth IRA Calculator - Tax-Free Retirement Planning Tool",
+    "description": "The Roth IRA Calculator is a specialized retirement planning tool designed to help you calculate the tax-free growth potential of your Roth Individual Retirement Account. Unlike Traditional IRAs, Roth IRA contributions are made with after-tax dollars, but qualified withdrawals in retirement are completely tax-free. This calculator helps you project your Roth IRA balance at retirement and compare the benefits of tax-free growth versus traditional tax-deferred retirement accounts."
+  },
+  "howTo": {
+    "title": "How to Use the Roth IRA Calculator",
+    "steps": [
+      {
+        "title": "Current Age",
+        "description": "Enter your current age to determine your investment time horizon until retirement."
+      },
+      {
+        "title": "Retirement Age",
+        "description": "Specify your planned retirement age (must be 59½ or later for penalty-free withdrawals)."
+      },
+      {
+        "title": "Current Balance",
+        "description": "Input your existing Roth IRA balance if you already have an account."
+      },
+      {
+        "title": "Annual Contribution",
+        "description": "Enter your planned annual Roth IRA contribution (subject to income and contribution limits)."
+      },
+      {
+        "title": "Expected Return",
+        "description": "Set the expected annual rate of return based on your investment allocation."
+      },
+      {
+        "title": "Income Level",
+        "description": "Verify your income qualifies for Roth IRA contributions or consider backdoor Roth strategies."
+      }
+    ],
+    "tips": [
+      "Maximize contributions early to benefit from decades of tax-free growth",
+      "Consider Roth conversions from Traditional IRAs during low-income years",
+      "Roth IRAs have no required minimum distributions during your lifetime",
+      "Contributions can be withdrawn penalty-free at any time"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Tax-Free Growth Projection",
+      "description": "Calculate projected Roth IRA balance with completely tax-free withdrawals in retirement."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Contribution Eligibility Check",
+      "description": "Verify income eligibility for direct Roth IRA contributions based on current IRS limits."
+    },
+    {
+      "title": "Roth vs Traditional Comparison",
+      "description": "Compare tax-free Roth growth with tax-deferred Traditional IRA benefits."
+    },
+    {
+      "title": "Backdoor Roth Analysis",
+      "description": "Calculate benefits of backdoor Roth conversions for high-income earners."
+    },
+    {
+      "title": "Early Withdrawal Planning",
+      "description": "Analyze penalty-free withdrawal options for contributions and conversion amounts."
+    },
+    {
+      "title": "Estate Planning Benefits",
+      "description": "Evaluate Roth IRA advantages for estate planning with no required distributions."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What are the 2024 Roth IRA contribution limits?",
+      "a": "For 2024, you can contribute up to $7,000 to a Roth IRA ($8,000 if you're 50 or older). However, contribution limits phase out for high earners: $138,000-$153,000 for single filers and $218,000-$228,000 for married filing jointly."
+    },
+    {
+      "q": "When can I withdraw from my Roth IRA tax-free?",
+      "a": "Contributions can be withdrawn tax and penalty-free at any time. Earnings can be withdrawn tax and penalty-free after age 59½ and the account has been open for at least 5 years. Earlier earnings withdrawals may incur taxes and penalties."
+    },
+    {
+      "q": "Should I choose Roth IRA over Traditional IRA?",
+      "a": "Choose Roth IRA if you expect to be in a higher tax bracket in retirement, want tax-free withdrawals, or prefer no required minimum distributions. Choose Traditional IRA if you want current tax deductions and expect lower retirement tax rates."
+    },
+    {
+      "q": "What is a backdoor Roth IRA conversion?",
+      "a": "A backdoor Roth allows high-income earners who exceed Roth IRA income limits to contribute to a non-deductible Traditional IRA and then convert it to a Roth IRA. This strategy requires careful tax planning and professional guidance."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Traditional IRA Calculator",
+      "url": "/finance/ira-calculator"
+    },
+    {
+      "title": "401k Calculator",
+      "url": "/finance/401k-calculator"
+    },
+    {
+      "title": "Retirement Calculator",
+      "url": "/finance/retirement-calculator"
+    },
+    {
+      "title": "Roth Conversion Calculator",
+      "url": "/finance/roth-conversion-calculator"
+    },
+    {
+      "title": "Tax Calculator",
+      "url": "/finance/tax-calculator"
     }
   ]
 }

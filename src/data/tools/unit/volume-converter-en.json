@@ -1,46 +1,102 @@
 {
-  "about": [
-    "The Volume Converter is a comprehensive tool for converting between different units of volume and capacity. From liters to gallons, milliliters to fluid ounces, this converter handles all common volume measurements used in cooking, chemistry, engineering, and everyday life.",
-    "Volume conversion is essential in cooking, scientific research, manufacturing, and international trade. Our converter provides accurate conversions between metric and imperial volume systems.",
-    "Whether you're following recipes, measuring chemicals, calculating fuel consumption, or working with liquid specifications, this tool ensures precise volume conversions with support for both common and specialized units."
-  ],
-  "howToUse": [
-    "Enter the volume value you want to convert",
-    "Select the source unit (liters, gallons, milliliters, etc.)",
-    "Choose the target unit for conversion",
-    "View the converted volume instantly",
-    "Use the result for your cooking, calculations, or measurements"
-  ],
+  "about": {
+    "title": "About Volume Converter",
+    "description": "The Volume Converter is a comprehensive tool for converting between different units of volume and capacity. From liters to gallons, milliliters to fluid ounces, this converter handles all common volume measurements used in cooking, chemistry, engineering, and everyday life. Volume conversion is essential in cooking, scientific research, manufacturing, and international trade. Whether you're following recipes, measuring chemicals, calculating fuel consumption, or working with liquid specifications, this tool ensures precise volume conversions with support for both metric and imperial volume systems."
+  },
+  "howTo": {
+    "title": "How to Use the Volume Converter",
+    "steps": [
+      {
+        "title": "Enter Volume Value",
+        "description": "Input the volume or capacity value you want to convert."
+      },
+      {
+        "title": "Select Source Unit",
+        "description": "Choose the source unit: liters, gallons, milliliters, cups, fluid ounces, etc."
+      },
+      {
+        "title": "Choose Target Unit",
+        "description": "Select the target unit for conversion from metric, imperial, or cooking units."
+      },
+      {
+        "title": "Get Results",
+        "description": "View the converted volume instantly with high precision."
+      }
+    ],
+    "tips": [
+      "Use liters for metric measurements",
+      "US gallon = 3.785 L, UK gallon = 4.546 L",
+      "1 cup = 240 mL for cooking conversions"
+    ]
+  },
   "features": [
-    "Convert between metric and imperial volume units",
-    "Support for liters, milliliters, cubic meters",
-    "Imperial units: gallons, quarts, pints, fluid ounces",
-    "Cooking units: cups, tablespoons, teaspoons",
-    "Real-time conversion as you type",
-    "High precision calculations",
-    "Scientific notation for large volumes",
-    "Mobile-friendly responsive design"
+    {
+      "title": "Comprehensive Volume Units",
+      "description": "Convert between metric (L, mL, m³), imperial (gal, qt, pt, fl oz), and cooking (cups, tbsp, tsp) units."
+    },
+    {
+      "title": "US and UK Gallons",
+      "description": "Support for both US gallons (3.785 L) and UK imperial gallons (4.546 L) with clear distinction."
+    },
+    {
+      "title": "Real-Time Conversion",
+      "description": "Instant volume conversion as you type with immediate results display."
+    },
+    {
+      "title": "High Precision Calculations",
+      "description": "Accurate conversions with decimal precision for cooking, chemistry, and engineering use."
+    },
+    {
+      "title": "Cooking Measurements",
+      "description": "Specialized support for cooking units including cups, tablespoons, and teaspoons."
+    },
+    {
+      "title": "Mobile Optimized",
+      "description": "Responsive design works perfectly on all devices and screen sizes."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What volume units are supported?",
-      "answer": "We support metric units (L, mL, m³), imperial units (gal, qt, pt, fl oz), and cooking units (cups, tbsp, tsp)."
+      "q": "What volume units does the converter support?",
+      "a": "Our volume converter supports metric units (liters, milliliters, cubic meters), imperial units (gallons, quarts, pints, fluid ounces), and cooking units (cups, tablespoons, teaspoons) for comprehensive volume conversion."
     },
     {
-      "question": "What's the difference between US and UK gallons?",
-      "answer": "A US gallon is 3.785 liters, while a UK (imperial) gallon is 4.546 liters. Our converter specifies which type."
+      "q": "What's the difference between US and UK gallons?",
+      "a": "A US gallon equals 3.785 liters (231 cubic inches), while a UK imperial gallon equals 4.546 liters (277.42 cubic inches). Our converter clearly distinguishes between these two gallon types."
     },
     {
-      "question": "How accurate are the volume conversions?",
-      "answer": "All conversions use precise mathematical formulas with high decimal accuracy suitable for scientific and culinary applications."
+      "q": "How accurate are the volume conversions?",
+      "a": "All volume conversions use precise mathematical formulas with high decimal accuracy. Our converter is suitable for scientific research, cooking recipes, chemistry calculations, and professional applications."
     },
     {
-      "question": "Can I convert cooking measurements?",
-      "answer": "Yes, the converter includes common cooking units like cups, tablespoons, and teaspoons with precise conversions."
+      "q": "Can I convert cooking measurements accurately?",
+      "a": "Yes, our converter includes precise cooking units: 1 cup = 240 mL, 1 tablespoon = 15 mL, 1 teaspoon = 5 mL. Perfect for recipe conversions and international cooking."
     },
     {
-      "question": "How do I convert between dry and liquid measurements?",
-      "answer": "Our converter focuses on volume measurements. For dry ingredients, weight conversions may be more accurate depending on density."
+      "q": "How do I convert liters to gallons?",
+      "a": "To convert liters to US gallons, divide by 3.785. For UK gallons, divide by 4.546. For example, 10 liters = 2.64 US gallons or 2.20 UK gallons. Our converter handles this automatically."
+    },
+    {
+      "q": "What about dry vs liquid measurements?",
+      "a": "Our converter focuses on volume measurements for liquids and gases. For dry ingredients in cooking, weight conversions may be more accurate since density varies by ingredient type."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Unit Converter",
+      "url": "/unit/unit-converter"
+    },
+    {
+      "title": "Weight Converter",
+      "url": "/unit/weight-converter"
+    },
+    {
+      "title": "Length Converter",
+      "url": "/unit/length-converter"
+    },
+    {
+      "title": "Unit Tools Category",
+      "url": "/unit"
     }
   ]
 }

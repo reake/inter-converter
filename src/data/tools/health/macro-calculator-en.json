@@ -1,39 +1,107 @@
 {
-  "about": [
-    "The Macro Calculator determines your optimal macronutrient distribution (protein, carbohydrates, and fats) based on your goals, activity level, and body composition. Proper macro balance is essential for muscle building, fat loss, and overall health.",
-    "Understanding macronutrient ratios helps optimize your nutrition for specific fitness goals, whether you're trying to lose weight, gain muscle, or maintain your current physique."
-  ],
-  "howToUse": [
-    "Enter your age, gender, weight, and height",
-    "Select your activity level and fitness goal",
-    "Choose your preferred macro distribution approach",
-    "View your daily macro targets in grams",
-    "Track your intake to meet these targets"
-  ],
+  "about": {
+    "title": "About Macro Calculator - Macronutrient Distribution",
+    "description": "The Macro Calculator determines your optimal macronutrient distribution (protein, carbohydrates, and fats) based on your goals, activity level, and body composition. Proper macro balance is essential for muscle building, fat loss, and overall health. Understanding macronutrient ratios helps optimize your nutrition for specific fitness goals, whether you're trying to lose weight, gain muscle, or maintain your current physique."
+  },
+  "howTo": {
+    "title": "How to Use the Macro Calculator",
+    "steps": [
+      {
+        "title": "Enter Personal Information",
+        "description": "Input your age, gender, weight, and height for accurate metabolic calculations."
+      },
+      {
+        "title": "Select Activity Level",
+        "description": "Choose your daily activity level from sedentary to very active based on exercise routine."
+      },
+      {
+        "title": "Choose Fitness Goal",
+        "description": "Select your primary goal: weight loss (cutting), muscle gain (bulking), or maintenance."
+      },
+      {
+        "title": "Pick Macro Approach",
+        "description": "Choose your preferred macronutrient distribution approach or diet style."
+      },
+      {
+        "title": "View Daily Targets",
+        "description": "See your personalized daily macro targets in grams and percentages."
+      },
+      {
+        "title": "Track Your Intake",
+        "description": "Use the targets to plan meals and track your daily macronutrient consumption."
+      }
+    ],
+    "tips": [
+      "Start by hitting protein targets first, then adjust carbs and fats",
+      "Distribute protein evenly throughout the day for optimal absorption",
+      "Adjust carb intake based on training days vs rest days",
+      "Include healthy fats for hormone production and nutrient absorption"
+    ]
+  },
   "features": [
-    "Goal-specific macro ratios (cutting, bulking, maintenance)",
-    "Activity level adjustments",
-    "Protein, carb, and fat calculations",
-    "Calorie distribution breakdown",
-    "Multiple diet approach options",
-    "Daily and per-meal recommendations"
+    {
+      "title": "Goal-specific Macro Ratios",
+      "description": "Customized macronutrient ratios for cutting, bulking, and maintenance phases."
+    },
+    {
+      "title": "Activity Level Adjustments",
+      "description": "Calorie and macro adjustments based on your daily activity and exercise routine."
+    },
+    {
+      "title": "Complete Macro Breakdown",
+      "description": "Detailed protein, carbohydrate, and fat calculations in grams and percentages."
+    },
+    {
+      "title": "Calorie Distribution",
+      "description": "Clear breakdown of how calories are distributed across each macronutrient."
+    },
+    {
+      "title": "Multiple Diet Approaches",
+      "description": "Support for various diet styles including balanced, low-carb, and high-protein approaches."
+    },
+    {
+      "title": "Meal Planning Guidance",
+      "description": "Daily and per-meal macro recommendations for effective meal planning."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What are macronutrients?",
-      "answer": "Macronutrients are the three main nutrients your body needs in large amounts: protein (4 cal/g), carbohydrates (4 cal/g), and fats (9 cal/g)."
+      "q": "What are macronutrients and why do they matter?",
+      "a": "Macronutrients are the three main nutrients your body needs in large amounts: protein (4 cal/g), carbohydrates (4 cal/g), and fats (9 cal/g). Each serves different functions - protein for muscle building and repair, carbs for energy, and fats for hormone production and nutrient absorption."
     },
     {
-      "question": "How much protein do I need?",
-      "answer": "Generally 0.8-1.2g per pound of body weight for sedentary individuals, and 1.2-2.2g per pound for active individuals and athletes."
+      "q": "How much protein do I need for my goals?",
+      "a": "Generally 0.8-1.2g per pound of body weight for sedentary individuals, and 1.2-2.2g per pound for active individuals and athletes. For muscle building, aim for the higher end (1.6-2.2g/lb), while maintenance can use moderate amounts (1.0-1.6g/lb)."
     },
     {
-      "question": "Should I track macros or just calories?",
-      "answer": "Tracking macros provides better body composition results than calories alone, especially for muscle building and fat loss goals."
+      "q": "Should I track macros or just calories?",
+      "a": "Tracking macros provides better body composition results than calories alone, especially for muscle building and fat loss goals. Macros ensure you get adequate protein for muscle preservation and optimal nutrient distribution for your specific goals."
     },
     {
-      "question": "Can I adjust the macro ratios?",
-      "answer": "Yes, macro ratios can be adjusted based on personal preferences, dietary restrictions, and how your body responds to different approaches."
+      "q": "Can I adjust the macro ratios based on my preferences?",
+      "a": "Yes, macro ratios can be adjusted based on personal preferences, dietary restrictions, and how your body responds to different approaches. The calculator provides starting points, but you can modify ratios while maintaining your calorie target for your goals."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Protein Calculator",
+      "url": "/health/protein-calculator"
+    },
+    {
+      "title": "Calorie Calculator",
+      "url": "/health/calorie-calculator"
+    },
+    {
+      "title": "BMI Calculator",
+      "url": "/health/bmi-calculator"
+    },
+    {
+      "title": "Body Fat Calculator",
+      "url": "/health/body-fat-calculator"
+    },
+    {
+      "title": "Water Intake Calculator",
+      "url": "/health/water-intake-calculator"
     }
   ]
 }

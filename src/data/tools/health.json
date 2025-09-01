@@ -19,6 +19,7 @@
     ],
     "path": "/health/bmi-calculator",
     "isActive": true,
+    "seoflag": true,
     "searchVolume": 135000,
     "difficulty": 1,
     "icon": "⚖️"
@@ -32,6 +33,7 @@
     "keywords": ["calorie calculator", "daily calories", "tdee", "bmr", "metabolism", "weight loss"],
     "path": "/health/calorie-calculator",
     "isActive": true,
+    "seoflag": true,
     "searchVolume": 245000,
     "difficulty": 2,
     "icon": "🔥"
@@ -45,6 +47,7 @@
     "keywords": ["body fat", "body fat percentage", "fitness", "health", "body composition"],
     "path": "/health/body-fat-calculator",
     "isActive": true,
+    "seoflag": true,
     "searchVolume": 89000,
     "difficulty": 2,
     "icon": "📊"
@@ -58,6 +61,7 @@
     "keywords": ["ideal weight", "target weight", "healthy weight", "weight goal", "fitness"],
     "path": "/health/ideal-weight-calculator",
     "isActive": true,
+    "seoflag": true,
     "searchVolume": 156000,
     "difficulty": 1,
     "icon": "🎯"
@@ -71,6 +75,7 @@
     "keywords": ["pregnancy calculator", "due date", "pregnancy weeks", "conception", "trimester"],
     "path": "/health/pregnancy-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 198000,
     "difficulty": 2,
     "icon": "🤱"
@@ -84,6 +89,7 @@
     "keywords": ["water intake", "hydration", "daily water", "fluid needs", "health"],
     "path": "/health/water-intake-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 125000,
     "difficulty": 1,
     "icon": "💧"
@@ -97,6 +103,7 @@
     "keywords": ["heart rate", "target heart rate", "exercise", "fitness", "cardio", "training zones"],
     "path": "/health/heart-rate-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 78000,
     "difficulty": 2,
     "icon": "❤️"
@@ -110,6 +117,7 @@
     "keywords": ["macro calculator", "macronutrients", "protein", "carbs", "fats", "nutrition"],
     "path": "/health/macro-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 167000,
     "difficulty": 2,
     "icon": "🥗"
@@ -123,6 +131,7 @@
     "keywords": ["sleep calculator", "bedtime", "wake time", "sleep cycles", "rem sleep"],
     "path": "/health/sleep-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 145000,
     "difficulty": 1,
     "icon": "😴"
@@ -136,6 +145,7 @@
     "keywords": ["ovulation calculator", "fertile window", "conception", "family planning", "menstrual cycle"],
     "path": "/health/ovulation-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 234000,
     "difficulty": 2,
     "icon": "🌸"
@@ -149,6 +159,7 @@
     "keywords": ["protein calculator", "daily protein", "protein needs", "fitness", "muscle building"],
     "path": "/health/protein-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 89000,
     "difficulty": 1,
     "icon": "🥩"

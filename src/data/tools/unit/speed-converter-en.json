@@ -1,46 +1,102 @@
 {
-  "about": [
-    "The Speed Converter is a versatile tool for converting between different units of speed and velocity. From kilometers per hour to miles per hour, meters per second to knots, this converter handles all common speed measurements used in transportation, sports, science, and engineering.",
-    "Speed conversion is essential in automotive engineering, aviation, maritime navigation, and scientific research. Our converter provides accurate conversions between metric and imperial speed systems.",
-    "Whether you're comparing vehicle speeds, calculating travel times, or working with scientific data, this tool ensures precise speed conversions with support for both everyday and specialized units."
-  ],
-  "howToUse": [
-    "Enter the speed value you want to convert",
-    "Select the source unit (km/h, mph, m/s, etc.)",
-    "Choose the target unit for conversion",
-    "View the converted speed instantly",
-    "Use the result for your calculations or comparisons"
-  ],
+  "about": {
+    "title": "About Speed Converter",
+    "description": "The Speed Converter is a versatile tool for converting between different units of speed and velocity including kilometers per hour, miles per hour, meters per second, knots, and specialized speed measurements. This professional speed conversion tool handles all common speed measurements used in transportation, sports, aviation, maritime navigation, and scientific research. Speed conversion is essential in automotive engineering, flight planning, marine navigation, and physics calculations. Whether you're comparing vehicle speeds, calculating travel times, converting wind speeds, or working with scientific velocity data, our converter ensures precise speed conversions with support for both everyday and specialized units across metric and imperial systems."
+  },
+  "howTo": {
+    "title": "How to Use the Speed Converter",
+    "steps": [
+      {
+        "title": "Enter Speed Value",
+        "description": "Input the speed value you want to convert in the designated field. You can enter whole numbers or decimals for precise measurements."
+      },
+      {
+        "title": "Select Source Unit",
+        "description": "Choose the current speed unit from the dropdown menu (km/h, mph, m/s, knots, etc.)."
+      },
+      {
+        "title": "Choose Target Unit",
+        "description": "Select the speed unit you want to convert to from the available velocity measurement options."
+      },
+      {
+        "title": "View Conversion Results",
+        "description": "The converted speed value will appear instantly with high precision calculations suitable for transportation and scientific applications."
+      }
+    ],
+    "tips": [
+      "Use km/h for automotive speeds and European measurements",
+      "Use mph for US automotive and aviation applications",
+      "Use knots for maritime and aviation navigation"
+    ]
+  },
   "features": [
-    "Convert between metric and imperial speed units",
-    "Support for km/h, m/s, meters per minute",
-    "Imperial units: mph, feet per second, feet per minute",
-    "Maritime and aviation: knots, Mach numbers",
-    "Real-time conversion as you type",
-    "High precision calculations",
-    "Scientific notation for extreme speeds",
-    "Mobile-friendly responsive design"
+    {
+      "title": "Comprehensive Speed Units",
+      "description": "Convert between km/h, mph, m/s, knots, and other speed units covering automotive, aviation, maritime, and scientific applications."
+    },
+    {
+      "title": "Transportation Applications",
+      "description": "Accurate conversions for automotive speeds, flight velocities, and maritime navigation with support for specialized units like knots and Mach numbers."
+    },
+    {
+      "title": "Real-time Conversion",
+      "description": "Instant speed conversion as you type with immediate results display for efficient calculations and comparisons."
+    },
+    {
+      "title": "Scientific Precision",
+      "description": "High-precision calculations suitable for physics research, engineering applications, and scientific velocity measurements."
+    },
+    {
+      "title": "Aviation and Maritime Support",
+      "description": "Specialized support for knots, Mach numbers, and other units commonly used in aviation and maritime navigation systems."
+    },
+    {
+      "title": "Extreme Speed Handling",
+      "description": "Scientific notation support for very high speeds, perfect for aerospace calculations and high-velocity physics applications."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What speed units are supported?",
-      "answer": "We support metric units (km/h, m/s), imperial units (mph, ft/s), and specialized units like knots and Mach numbers."
+      "q": "What speed units does the speed converter support?",
+      "a": "Our speed converter supports comprehensive metric units (km/h, m/s, meters per minute), imperial units (mph, feet per second, feet per minute), and specialized units like knots for maritime navigation and Mach numbers for aviation applications."
     },
     {
-      "question": "What is a knot?",
-      "answer": "A knot is one nautical mile per hour (1.852 km/h or 1.151 mph), commonly used in maritime and aviation navigation."
+      "q": "What is a knot and how does it relate to other speed units?",
+      "a": "A knot is one nautical mile per hour, equal to exactly 1.852 km/h or 1.151 mph. Knots are the standard speed unit used in maritime and aviation navigation worldwide, providing consistent measurements for wind speeds and vessel velocities."
     },
     {
-      "question": "How do I convert between km/h and mph quickly?",
-      "answer": "Multiply km/h by 0.621 to get mph, or multiply mph by 1.609 to get km/h. Use our converter for exact results."
+      "q": "How do I convert between km/h and mph quickly?",
+      "a": "To convert km/h to mph, multiply by 0.621371. To convert mph to km/h, multiply by 1.609344. For example, 100 km/h = 62.14 mph, and 60 mph = 96.56 km/h. Our speed converter performs these calculations automatically with full precision."
     },
     {
-      "question": "What is Mach speed?",
-      "answer": "Mach speed is the ratio of an object's speed to the speed of sound. Mach 1 is approximately 343 m/s or 1,235 km/h at sea level."
+      "q": "What is Mach speed and how is it calculated?",
+      "a": "Mach speed is the ratio of an object's speed to the speed of sound in the surrounding medium. Mach 1 equals approximately 343 m/s (1,235 km/h or 767 mph) at sea level and 20°C. Mach numbers are crucial in aerospace engineering and supersonic flight calculations."
     },
     {
-      "question": "How accurate are the speed conversions?",
-      "answer": "All conversions use precise mathematical formulas with high decimal accuracy suitable for engineering and scientific applications."
+      "q": "How accurate are the speed conversions for professional use?",
+      "a": "Our speed converter uses exact international conversion factors and maintains high decimal precision, making it suitable for automotive engineering, aviation calculations, maritime navigation, and scientific research applications."
+    },
+    {
+      "q": "Can I convert wind speeds and weather-related velocities?",
+      "a": "Yes, our speed converter is perfect for converting wind speeds between different units. Weather services use various units like km/h, mph, m/s, and knots, and our converter handles all these measurements accurately for meteorological applications."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Length Converter",
+      "url": "/unit/length-converter"
+    },
+    {
+      "title": "Time Converter",
+      "url": "/time"
+    },
+    {
+      "title": "Unit Converter",
+      "url": "/unit/unit-converter"
+    },
+    {
+      "title": "Unit Tools Category",
+      "url": "/unit"
     }
   ]
 }

@@ -1,37 +1,102 @@
 {
-  "about": [
-    "The Engine Displacement Calculator determines total engine displacement based on bore, stroke, and number of cylinders. This fundamental measurement affects power output, fuel consumption, and engine classification.",
-    "Understanding engine displacement helps with performance modifications, engine swaps, and regulatory compliance for racing classes or emissions requirements."
-  ],
-  "howToUse": [
-    "Enter cylinder bore diameter in inches or mm",
-    "Input stroke length in inches or mm",
-    "Enter number of cylinders",
-    "View calculated displacement in cubic inches, liters, or cc"
-  ],
+  "about": {
+    "title": "About Engine Displacement Calculator",
+    "description": "The Engine Displacement Calculator determines total engine displacement based on bore, stroke, and number of cylinders. This fundamental measurement affects power output, fuel consumption, and engine classification. Understanding engine displacement helps with performance modifications, engine swaps, and regulatory compliance for racing classes or emissions requirements."
+  },
+  "howTo": {
+    "title": "How to Use the Engine Displacement Calculator",
+    "steps": [
+      {
+        "title": "Enter Bore Diameter",
+        "description": "Input cylinder bore diameter in inches or millimeters (cylinder width)."
+      },
+      {
+        "title": "Input Stroke Length",
+        "description": "Enter stroke length in inches or millimeters (piston travel distance)."
+      },
+      {
+        "title": "Specify Cylinder Count",
+        "description": "Enter the total number of cylinders in the engine."
+      },
+      {
+        "title": "Calculate Displacement",
+        "description": "View calculated total displacement in cubic inches, liters, or cubic centimeters."
+      }
+    ],
+    "tips": [
+      "Formula: Displacement = π × (bore/2)² × stroke × cylinders",
+      "Larger bore favors high RPM power, longer stroke provides more torque",
+      "Use precise measurements for accurate displacement calculations"
+    ]
+  },
   "features": [
-    "Multi-unit displacement calculation",
-    "Bore and stroke analysis",
-    "Cylinder count flexibility",
-    "Instant conversion between units",
-    "Performance impact assessment"
+    {
+      "title": "Multi-Unit Calculations",
+      "description": "Calculate displacement in cubic inches, liters, and cubic centimeters simultaneously."
+    },
+    {
+      "title": "Bore and Stroke Analysis",
+      "description": "Analyze the relationship between bore, stroke, and total engine displacement."
+    },
+    {
+      "title": "Flexible Cylinder Count",
+      "description": "Support for any number of cylinders from single-cylinder to V12 and beyond."
+    },
+    {
+      "title": "Unit Conversion",
+      "description": "Instant conversion between metric and imperial measurement systems."
+    },
+    {
+      "title": "Performance Analysis",
+      "description": "Understand how bore/stroke ratio affects engine characteristics and performance."
+    },
+    {
+      "title": "Racing Compliance",
+      "description": "Verify displacement for racing class eligibility and regulatory requirements."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "How does displacement affect engine power?",
-      "answer": "Larger displacement generally produces more power by burning more fuel per cycle. However, efficiency, compression ratio, and breathing also significantly impact power output."
+      "q": "How does engine displacement affect power output?",
+      "a": "Larger displacement generally produces more power by burning more fuel and air per cycle. However, engine efficiency, compression ratio, valve timing, and breathing characteristics also significantly impact power output. Our displacement calculator helps you understand this fundamental engine measurement."
     },
     {
-      "question": "What's the difference between bore and stroke?",
-      "answer": "Bore is cylinder diameter, stroke is piston travel distance. Larger bore favors high RPM power, longer stroke provides more torque at lower RPM."
+      "q": "What's the difference between bore and stroke?",
+      "a": "Bore is the cylinder diameter (width), while stroke is the piston travel distance (height). Larger bore typically favors high RPM power and breathing, while longer stroke provides more torque at lower RPM due to increased leverage on the crankshaft."
     },
     {
-      "question": "How do I measure bore and stroke?",
-      "answer": "Bore can be measured with calipers in the cylinder. Stroke is measured as crankshaft throw (distance from center to rod journal) × 2, or by measuring piston travel."
+      "q": "How do I accurately measure bore and stroke?",
+      "a": "Bore can be measured with precision calipers or bore gauge inside the cylinder. Stroke is measured as crankshaft throw (distance from center to rod journal) × 2, or by measuring actual piston travel from bottom dead center to top dead center."
     },
     {
-      "question": "Why is displacement important for racing?",
-      "answer": "Many racing classes have displacement limits to ensure fair competition. Displacement also affects weight penalties and restrictor requirements in some series."
+      "q": "Why is displacement important for racing classifications?",
+      "a": "Many racing classes have strict displacement limits to ensure fair competition. Displacement also affects weight penalties, restrictor plate requirements, and class eligibility in various racing series. Our calculator helps verify compliance with racing regulations."
+    },
+    {
+      "q": "What's a good bore-to-stroke ratio for performance?",
+      "a": "Oversquare engines (bore > stroke) favor high RPM power and breathing, while undersquare engines (stroke > bore) produce more torque. Square engines (bore = stroke) offer balanced characteristics. The optimal ratio depends on your performance goals and application."
+    },
+    {
+      "q": "How does displacement relate to fuel consumption?",
+      "a": "Larger displacement engines typically consume more fuel because they move more air and fuel per cycle. However, modern technology, efficiency improvements, and driving conditions significantly affect actual fuel consumption beyond just displacement."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Engine Size Converter",
+      "url": "/auto/engine-size-converter"
+    },
+    {
+      "title": "Compression Ratio Calculator",
+      "url": "/auto/compression-ratio-calculator"
+    },
+    {
+      "title": "Torque Horsepower Calculator",
+      "url": "/auto/torque-horsepower-calculator"
+    },
+    {
+      "title": "Automotive Tools Category",
+      "url": "/auto"
     }
   ]
 }

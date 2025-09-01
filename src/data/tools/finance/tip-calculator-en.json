@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Tip Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Tip Calculator - Restaurant Gratuity Calculation Tool",
+    "description": "The Tip Calculator is a comprehensive dining expense tool designed to help you calculate appropriate tips, split bills among multiple people, and determine total costs for restaurant meals and services. This calculator analyzes bill amounts, service quality, and group sizes to provide accurate tip calculations and bill splitting. Whether you're dining alone or with a group, this tool ensures fair and appropriate tipping."
+  },
+  "howTo": {
+    "title": "How to Use the Tip Calculator",
+    "steps": [
+      {
+        "title": "Enter Bill Amount",
+        "description": "Input the total bill amount before tip from your receipt."
+      },
+      {
+        "title": "Select Tip Percentage",
+        "description": "Choose tip percentage based on service quality (15%, 18%, 20%, or custom)."
+      },
+      {
+        "title": "Add Number of People",
+        "description": "Enter how many people are splitting the bill for per-person calculations."
+      },
+      {
+        "title": "Calculate Tip Amount",
+        "description": "Review the calculated tip amount based on your selected percentage."
+      },
+      {
+        "title": "Review Total Cost",
+        "description": "See the total amount including tip and per-person share if splitting."
+      },
+      {
+        "title": "Round for Convenience",
+        "description": "Optionally round amounts to convenient dollar amounts for easier payment."
+      }
+    ],
+    "tips": [
+      "Standard tip ranges: 15% (adequate), 18% (good), 20%+ (excellent service)",
+      "Consider tipping on pre-tax amount for more accurate calculations",
+      "Round up to convenient amounts when paying with cash",
+      "Factor in service quality, not just bill amount, when determining tips"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Multiple Tip Percentages",
+      "description": "Calculate tips using standard percentages (15%, 18%, 20%) or custom amounts."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Bill Splitting Calculator",
+      "description": "Divide total costs evenly among multiple people for group dining."
+    },
+    {
+      "title": "Pre-Tax vs Post-Tax Options",
+      "description": "Calculate tips based on pre-tax or post-tax bill amounts."
+    },
+    {
+      "title": "Rounding Options",
+      "description": "Round tip amounts to convenient dollar values for easier payment."
+    },
+    {
+      "title": "Service Quality Guide",
+      "description": "Suggested tip percentages based on different levels of service quality."
+    },
+    {
+      "title": "Total Cost Breakdown",
+      "description": "Clear breakdown showing bill amount, tip, tax, and total per person."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What's the standard tip percentage at restaurants?",
+      "a": "Standard restaurant tips range from 15-20% of the pre-tax bill. 15% for adequate service, 18% for good service, and 20%+ for excellent service. Some areas or upscale establishments may expect higher percentages."
+    },
+    {
+      "q": "Should I tip on the pre-tax or post-tax amount?",
+      "a": "Traditionally, tips are calculated on the pre-tax amount since tax isn't part of the service cost. However, some people tip on the post-tax total for simplicity. Both approaches are acceptable."
+    },
+    {
+      "q": "How do I handle tips when splitting bills?",
+      "a": "Calculate the total tip first, then divide the entire amount (bill + tip) by the number of people. This ensures everyone pays their fair share including an equal portion of the gratuity."
+    },
+    {
+      "q": "When should I tip more or less than standard rates?",
+      "a": "Tip more (22-25%) for exceptional service, complex orders, or special accommodations. Tip less (10-15%) only for genuinely poor service, but consider speaking with management about service issues instead."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Budget Calculator",
+      "url": "/finance/budget-calculator"
+    },
+    {
+      "title": "Sales Tax Calculator",
+      "url": "/finance/sales-tax-calculator"
+    },
+    {
+      "title": "Percentage Calculator",
+      "url": "/math/percentage-calculator"
+    },
+    {
+      "title": "Cost Calculator",
+      "url": "/finance/cost-calculator"
+    },
+    {
+      "title": "Split Bill Calculator",
+      "url": "/finance/split-bill-calculator"
     }
   ]
 }

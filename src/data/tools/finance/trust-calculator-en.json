@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Trust Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Trust Calculator - Estate Planning and Trust Analysis Tool",
+    "description": "The Trust Calculator is a comprehensive estate planning tool designed to help you analyze trust fund distributions, calculate beneficiary payments, and evaluate trust performance over time. This calculator analyzes trust assets, distribution rates, growth assumptions, and time periods to project trust values and beneficiary income. Whether you're setting up a trust or managing existing trust assets, this tool provides accurate trust financial projections."
+  },
+  "howTo": {
+    "title": "How to Use the Trust Calculator",
+    "steps": [
+      {
+        "title": "Enter Trust Assets",
+        "description": "Input the initial trust fund value and any additional contributions planned."
+      },
+      {
+        "title": "Set Distribution Rate",
+        "description": "Enter the annual distribution percentage or fixed dollar amount for beneficiaries."
+      },
+      {
+        "title": "Add Growth Assumptions",
+        "description": "Include expected annual investment returns and inflation rates."
+      },
+      {
+        "title": "Define Time Period",
+        "description": "Set the trust duration or analysis period for projections."
+      },
+      {
+        "title": "Include Expenses",
+        "description": "Add trustee fees, administrative costs, and tax considerations."
+      },
+      {
+        "title": "Review Projections",
+        "description": "Analyze trust value over time and annual beneficiary distributions."
+      }
+    ],
+    "tips": [
+      "Consider inflation impact on distribution purchasing power",
+      "Factor in trustee fees and administrative expenses",
+      "Use conservative growth assumptions for planning",
+      "Review tax implications of trust distributions with professionals"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Distribution Calculator",
+      "description": "Calculate annual distributions based on percentage or fixed amounts."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Trust Growth Projections",
+      "description": "Project trust value growth considering investments and distributions."
+    },
+    {
+      "title": "Beneficiary Income Analysis",
+      "description": "Analyze annual income streams for trust beneficiaries over time."
+    },
+    {
+      "title": "Expense Impact Calculator",
+      "description": "Factor in trustee fees, taxes, and administrative costs."
+    },
+    {
+      "title": "Inflation Adjustment",
+      "description": "Adjust distributions and projections for inflation over time."
+    },
+    {
+      "title": "Scenario Comparison",
+      "description": "Compare different distribution strategies and investment assumptions."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How much should a trust distribute annually?",
+      "a": "Common distribution rates range from 3-5% annually to preserve principal while providing income. Higher rates (5-7%) may be appropriate for shorter-term trusts. Consider the trust's purpose, beneficiary needs, and long-term sustainability."
+    },
+    {
+      "q": "What expenses reduce trust value?",
+      "a": "Trust expenses include trustee fees (0.5-2% annually), investment management fees (0.25-1%), legal and accounting costs, tax preparation, and administrative expenses. These costs reduce the trust's net growth and available distributions."
+    },
+    {
+      "q": "How do taxes affect trust distributions?",
+      "a": "Trust taxation is complex. Trusts may pay taxes on undistributed income, while beneficiaries typically pay taxes on distributions received. Income character (ordinary vs. capital gains) affects tax rates. Consult tax professionals for specific situations."
+    },
+    {
+      "q": "Should trust distributions be fixed or variable?",
+      "a": "Fixed dollar amounts provide predictable income but may not keep pace with inflation. Percentage-based distributions maintain purchasing power but create variable income. Many trusts use hybrid approaches or include inflation adjustments."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Investment Calculator",
+      "url": "/finance/investment-calculator"
+    },
+    {
+      "title": "Retirement Calculator",
+      "url": "/finance/retirement-calculator"
+    },
+    {
+      "title": "Life Insurance Calculator",
+      "url": "/finance/life-insurance-calculator"
+    },
+    {
+      "title": "Tax Calculator",
+      "url": "/finance/tax-calculator"
+    },
+    {
+      "title": "Compound Interest Calculator",
+      "url": "/finance/compound-interest-calculator"
     }
   ]
 }

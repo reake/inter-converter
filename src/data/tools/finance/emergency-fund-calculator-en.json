@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Emergency Fund Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Emergency Fund Calculator",
+    "description": "The Emergency Fund Calculator helps you determine how much money you should save for unexpected expenses and financial emergencies. This essential financial planning tool calculates your ideal emergency fund size based on your monthly expenses, income stability, and personal risk factors. Having an adequate emergency fund provides financial security and peace of mind, protecting you from debt when facing job loss, medical expenses, or other unexpected costs."
+  },
+  "howTo": {
+    "title": "How to Use the Emergency Fund Calculator",
+    "steps": [
+      {
+        "title": "Monthly Expenses",
+        "description": "Enter your total monthly essential expenses including housing, utilities, food, transportation, and minimum debt payments."
+      },
+      {
+        "title": "Income Stability",
+        "description": "Assess your job security and income predictability to determine appropriate fund size multiplier."
+      },
+      {
+        "title": "Risk Factors",
+        "description": "Consider factors like dependents, health conditions, and industry stability that might affect your needs."
+      },
+      {
+        "title": "Current Savings",
+        "description": "Input your existing emergency fund balance to see how much more you need to save."
+      },
+      {
+        "title": "Savings Plan",
+        "description": "Set a monthly savings target to reach your emergency fund goal within a specific timeframe."
+      },
+      {
+        "title": "Review Results",
+        "description": "Analyze your recommended emergency fund size and timeline to reach your goal."
+      }
+    ],
+    "tips": [
+      "Start with $1,000 minimum emergency fund, then build to 3-6 months",
+      "Keep emergency funds in high-yield savings accounts for easy access",
+      "Automate transfers to build your emergency fund consistently",
+      "Review and adjust your emergency fund size annually"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Personalized Fund Size",
+      "description": "Calculate your ideal emergency fund based on expenses, income stability, and personal risk factors."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Savings Timeline",
+      "description": "Determine how long it will take to reach your emergency fund goal with different savings rates."
+    },
+    {
+      "title": "Risk Assessment",
+      "description": "Factor in job security, dependents, and other variables that affect your emergency fund needs."
+    },
+    {
+      "title": "Progress Tracking",
+      "description": "Monitor your progress toward your emergency fund goal and adjust savings as needed."
+    },
+    {
+      "title": "Multiple Scenarios",
+      "description": "Compare different fund sizes (3, 6, 9 months) to find the right balance for your situation."
+    },
+    {
+      "title": "Savings Strategy",
+      "description": "Get recommendations on where to keep your emergency fund for optimal accessibility and growth."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How much should I have in my emergency fund?",
+      "a": "Most financial experts recommend 3-6 months of essential expenses. If you have stable employment, 3 months may suffice. If you're self-employed, have variable income, or work in an unstable industry, aim for 6-9 months of expenses."
+    },
+    {
+      "q": "Where should I keep my emergency fund?",
+      "a": "Keep your emergency fund in easily accessible accounts like high-yield savings accounts, money market accounts, or short-term CDs. Avoid investing emergency funds in stocks or other volatile investments that could lose value when you need the money."
+    },
+    {
+      "q": "Should I pay off debt or build an emergency fund first?",
+      "a": "Start with a small emergency fund ($500-1,000), then focus on high-interest debt. Once high-interest debt is paid off, build your full 3-6 month emergency fund. This prevents you from going further into debt during emergencies."
+    },
+    {
+      "q": "What counts as an emergency expense?",
+      "a": "True emergencies include job loss, major medical expenses, urgent home or car repairs, and unexpected family emergencies. Vacations, holidays, or planned purchases are not emergencies and should be budgeted separately."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Budget Calculator",
+      "url": "/finance/budget-calculator"
+    },
+    {
+      "title": "Savings Calculator",
+      "url": "/finance/savings-calculator"
+    },
+    {
+      "title": "Debt Payoff Calculator",
+      "url": "/finance/debt-payoff-calculator"
+    },
+    {
+      "title": "High Yield Savings Calculator",
+      "url": "/finance/high-yield-savings-calculator"
+    },
+    {
+      "title": "Financial Planning Calculator",
+      "url": "/finance/financial-planning-calculator"
     }
   ]
 }

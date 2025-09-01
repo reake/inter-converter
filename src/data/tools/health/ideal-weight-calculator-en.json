@@ -1,39 +1,102 @@
 {
-  "about": [
-    "The Ideal Weight Calculator estimates your ideal body weight using multiple established formulas including Devine, Robinson, Miller, and Hamwi methods. These calculations consider your height, gender, and body frame to provide personalized weight recommendations.",
-    "Understanding your ideal weight range helps set realistic health and fitness goals. The calculator provides multiple estimates since ideal weight can vary based on body composition, muscle mass, and individual factors."
-  ],
-  "howToUse": [
-    "Enter your height in feet/inches or centimeters",
-    "Select your gender and body frame size",
-    "View multiple ideal weight calculations",
-    "Compare results with your current weight",
-    "Use the range as a general health guideline"
-  ],
+  "about": {
+    "title": "About Ideal Weight Calculator",
+    "description": "The Ideal Weight Calculator estimates your ideal body weight using multiple established formulas including Devine, Robinson, Miller, and Hamwi methods. These calculations consider your height, gender, and body frame to provide personalized weight recommendations. Understanding your ideal weight range helps set realistic health and fitness goals. The calculator provides multiple estimates since ideal weight can vary based on body composition, muscle mass, and individual factors."
+  },
+  "howTo": {
+    "title": "How to Use the Ideal Weight Calculator",
+    "steps": [
+      {
+        "title": "Enter Height",
+        "description": "Input your height in feet/inches or centimeters for accurate calculations."
+      },
+      {
+        "title": "Select Gender and Frame",
+        "description": "Choose your gender and body frame size (small, medium, or large)."
+      },
+      {
+        "title": "View Multiple Results",
+        "description": "Review ideal weight estimates from Devine, Robinson, Miller, and Hamwi formulas."
+      },
+      {
+        "title": "Compare with Current Weight",
+        "description": "Use the weight range as a general health guideline for your goals."
+      }
+    ],
+    "tips": [
+      "Consider the range from multiple formulas, not just one result",
+      "Measure wrist circumference to determine body frame size",
+      "Focus on healthy weight range rather than exact numbers"
+    ]
+  },
   "features": [
-    "Multiple calculation methods (Devine, Robinson, Miller, Hamwi)",
-    "Gender-specific formulas",
-    "Body frame size considerations",
-    "Metric and imperial unit support",
-    "Weight range recommendations",
-    "Comparison with current weight"
+    {
+      "title": "Multiple Calculation Methods",
+      "description": "Uses Devine, Robinson, Miller, and Hamwi formulas for comprehensive weight estimates."
+    },
+    {
+      "title": "Gender-Specific Formulas",
+      "description": "Separate calculations for men and women based on physiological differences."
+    },
+    {
+      "title": "Body Frame Considerations",
+      "description": "Adjusts recommendations based on small, medium, or large body frame sizes."
+    },
+    {
+      "title": "Dual Unit Support",
+      "description": "Calculate using metric (cm/kg) or imperial (feet/inches/pounds) measurements."
+    },
+    {
+      "title": "Weight Range Recommendations",
+      "description": "Provides healthy weight ranges rather than single target numbers."
+    },
+    {
+      "title": "Current Weight Comparison",
+      "description": "Compare your current weight with ideal weight estimates for goal setting."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "Which ideal weight formula is most accurate?",
-      "answer": "No single formula is perfect for everyone. The Devine formula is widely used, but it's best to consider the range from multiple formulas and consult healthcare professionals."
+      "q": "Which ideal weight formula is most accurate?",
+      "a": "No single ideal weight formula is perfect for everyone. The Devine formula is widely used in medical settings, but our calculator shows multiple formulas (Devine, Robinson, Miller, Hamwi) so you can consider the range. Consult healthcare professionals for personalized recommendations."
     },
     {
-      "question": "How do I determine my body frame size?",
-      "answer": "Measure your wrist circumference. For women: <6 inches = small, 6-6.25 = medium, >6.25 = large. For men: <6.5 = small, 6.5-7.5 = medium, >7.5 = large."
+      "q": "How do I determine my body frame size for the calculator?",
+      "a": "Measure your wrist circumference at the narrowest point. For women: <6 inches = small frame, 6-6.25 inches = medium frame, >6.25 inches = large frame. For men: <6.5 inches = small, 6.5-7.5 inches = medium, >7.5 inches = large frame."
     },
     {
-      "question": "Should I aim for my exact ideal weight?",
-      "answer": "Ideal weight calculators provide general guidelines. Focus on a healthy weight range rather than an exact number, considering your body composition and overall health."
+      "q": "Should I aim for my exact ideal weight number?",
+      "a": "Ideal weight calculators provide general guidelines, not exact targets. Focus on achieving a healthy weight range rather than an exact number, considering your body composition, muscle mass, and overall health. The range is more important than precision."
     },
     {
-      "question": "Do these formulas work for athletes?",
-      "answer": "These formulas may not be accurate for athletes with high muscle mass, as they don't account for body composition. Athletes should focus on body fat percentage instead."
+      "q": "Do ideal weight formulas work for athletes and muscular people?",
+      "a": "These traditional ideal weight formulas may not be accurate for athletes with high muscle mass, as they don't account for body composition differences. Athletes and very muscular individuals should focus on body fat percentage and overall health markers instead."
+    },
+    {
+      "q": "What's the difference between ideal weight and healthy weight?",
+      "a": "Ideal weight formulas provide mathematical estimates based on height and gender. Healthy weight is a broader concept that includes factors like body composition, fitness level, and overall health. Our calculator helps estimate ideal ranges, but healthy weight varies individually."
+    },
+    {
+      "q": "How does age affect ideal weight calculations?",
+      "a": "Most traditional ideal weight formulas don't factor in age, but metabolism and body composition naturally change with age. Older adults may have slightly higher healthy weight ranges. Consider age-related factors when interpreting calculator results."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "BMI Calculator",
+      "url": "/health/bmi-calculator"
+    },
+    {
+      "title": "Calorie Calculator",
+      "url": "/health/calorie-calculator"
+    },
+    {
+      "title": "Body Fat Calculator",
+      "url": "/health/body-fat-calculator"
+    },
+    {
+      "title": "Health Tools Category",
+      "url": "/health"
     }
   ]
 }

@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Home Improvement Loan Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Home Improvement Loan Calculator - Home Renovation Financing Tool",
+    "description": "The Home Improvement Loan Calculator is a specialized financing tool designed to help homeowners calculate monthly payments and costs for home renovation projects. Whether you're planning a kitchen remodel, bathroom renovation, or major home addition, this calculator helps you evaluate different financing options including personal loans, home equity loans, and contractor financing. Understanding home improvement loan calculations is essential for budgeting your renovation project and choosing the most cost-effective financing solution."
+  },
+  "howTo": {
+    "title": "How to Use the Home Improvement Loan Calculator",
+    "steps": [
+      {
+        "title": "Project Cost",
+        "description": "Enter the total estimated cost of your home improvement project including materials and labor."
+      },
+      {
+        "title": "Loan Type",
+        "description": "Select the type of financing: personal loan, home equity loan, HELOC, or contractor financing."
+      },
+      {
+        "title": "Interest Rate",
+        "description": "Input the interest rate offered by your lender for the chosen loan type."
+      },
+      {
+        "title": "Loan Term",
+        "description": "Set the repayment period (typically 2-15 years depending on loan type and amount)."
+      },
+      {
+        "title": "Down Payment",
+        "description": "Enter any upfront payment you plan to make toward the project cost."
+      },
+      {
+        "title": "Compare Options",
+        "description": "Review monthly payments and total costs across different financing options."
+      }
+    ],
+    "tips": [
+      "Get multiple contractor quotes before finalizing your project budget",
+      "Consider tax benefits if using home equity financing for qualifying improvements",
+      "Factor in permit costs and potential cost overruns (add 10-20% buffer)",
+      "Compare secured vs unsecured loan options based on your equity and credit"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Multiple Financing Options",
+      "description": "Compare personal loans, home equity loans, HELOCs, and contractor financing for your project."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Project Budget Planning",
+      "description": "Calculate total project costs including financing charges and help plan your renovation budget."
+    },
+    {
+      "title": "Monthly Payment Analysis",
+      "description": "Determine monthly payments for different loan amounts and terms to fit your budget."
+    },
+    {
+      "title": "Tax Benefit Calculator",
+      "description": "Evaluate potential tax benefits when using home equity financing for qualifying improvements."
+    },
+    {
+      "title": "ROI Analysis",
+      "description": "Analyze potential return on investment for different types of home improvement projects."
+    },
+    {
+      "title": "Cash vs Financing Comparison",
+      "description": "Compare paying cash versus financing to determine the best approach for your situation."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What's the best type of loan for home improvements?",
+      "a": "The best loan depends on your equity, credit score, and project size. Home equity loans offer lower rates but use your home as collateral. Personal loans are faster but have higher rates. HELOCs provide flexibility for phased projects."
+    },
+    {
+      "q": "How much can I borrow for home improvements?",
+      "a": "Personal loans typically range from $5,000-$100,000. Home equity loans can go up to 80-85% of your home's value minus existing mortgage. The amount also depends on your income, credit score, and debt-to-income ratio."
+    },
+    {
+      "q": "Are home improvement loan interest payments tax deductible?",
+      "a": "Interest on home equity loans and HELOCs may be tax deductible if used for qualifying home improvements that add value to your property. Personal loan interest is generally not deductible. Consult a tax professional for specific guidance."
+    },
+    {
+      "q": "Should I finance or pay cash for home improvements?",
+      "a": "Consider financing if you can get low rates (especially with home equity), want to preserve cash reserves, or if the improvements significantly increase home value. Pay cash if you have sufficient reserves and want to avoid interest costs."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Home Equity Loan Calculator",
+      "url": "/finance/home-equity-loan-calculator"
+    },
+    {
+      "title": "HELOC Calculator",
+      "url": "/finance/heloc-calculator"
+    },
+    {
+      "title": "Personal Loan Calculator",
+      "url": "/finance/personal-loan-calculator"
+    },
+    {
+      "title": "Cash-Out Refinance Calculator",
+      "url": "/finance/cash-out-refinance-calculator"
+    },
+    {
+      "title": "Home Value Calculator",
+      "url": "/finance/home-value-calculator"
     }
   ]
 }

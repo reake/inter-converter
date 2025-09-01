@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Auto Insurance Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Auto Insurance Calculator - Vehicle Insurance Cost Estimator",
+    "description": "The Auto Insurance Calculator is a comprehensive vehicle insurance tool designed to help drivers estimate auto insurance costs and find the best coverage options. Whether you're shopping for new car insurance, comparing quotes, or evaluating coverage changes, this calculator provides accurate premium estimates based on your vehicle, driving history, and coverage preferences. Understanding auto insurance calculations helps you make informed decisions about coverage levels and find the most cost-effective insurance protection."
+  },
+  "howTo": {
+    "title": "How to Use the Auto Insurance Calculator",
+    "steps": [
+      {
+        "title": "Vehicle Information",
+        "description": "Enter your vehicle's make, model, year, and VIN to get accurate insurance rate estimates."
+      },
+      {
+        "title": "Driver Details",
+        "description": "Input driver age, gender, marital status, and years of driving experience."
+      },
+      {
+        "title": "Driving History",
+        "description": "Provide information about accidents, violations, and claims history from the past 3-5 years."
+      },
+      {
+        "title": "Coverage Options",
+        "description": "Select desired coverage types including liability, collision, comprehensive, and optional coverages."
+      },
+      {
+        "title": "Deductibles",
+        "description": "Choose deductible amounts for collision and comprehensive coverage to balance premiums and out-of-pocket costs."
+      },
+      {
+        "title": "Compare Quotes",
+        "description": "Review premium estimates from multiple insurance companies and coverage scenarios."
+      }
+    ],
+    "tips": [
+      "Maintain a clean driving record to qualify for lower rates",
+      "Consider higher deductibles to reduce monthly premiums",
+      "Bundle auto and home insurance for potential discounts",
+      "Take advantage of safe driver and defensive driving course discounts"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Premium Estimation",
+      "description": "Calculate accurate auto insurance premiums based on vehicle, driver, and coverage factors."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Coverage Comparison",
+      "description": "Compare different coverage levels and see how they affect your premium costs."
+    },
+    {
+      "title": "Deductible Analysis",
+      "description": "Analyze how different deductible amounts impact your premiums and potential out-of-pocket costs."
+    },
+    {
+      "title": "Discount Calculator",
+      "description": "Calculate potential savings from various insurance discounts and safe driving programs."
+    },
+    {
+      "title": "Multi-Vehicle Analysis",
+      "description": "Estimate costs for insuring multiple vehicles under the same policy."
+    },
+    {
+      "title": "State Requirements",
+      "description": "Check minimum insurance requirements for your state and ensure adequate coverage."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What factors affect auto insurance rates?",
+      "a": "Key factors include your age, driving record, credit score, vehicle type and age, location, coverage levels, deductibles, and annual mileage. Insurance companies also consider marital status, education level, and occupation in some states."
+    },
+    {
+      "q": "How much auto insurance coverage do I need?",
+      "a": "At minimum, carry your state's required liability coverage. Consider higher limits (100/300/100) for better protection. Add collision and comprehensive if you have a loan or valuable vehicle. Uninsured motorist coverage is also recommended."
+    },
+    {
+      "q": "How can I lower my auto insurance premiums?",
+      "a": "Maintain a clean driving record, choose higher deductibles, bundle policies, take defensive driving courses, install safety features, park in a garage, and shop around annually. Many insurers offer discounts for good students, military members, and safe drivers."
+    },
+    {
+      "q": "Should I file a claim for minor accidents?",
+      "a": "Consider the cost of repairs versus your deductible and potential rate increases. Small claims under $1,000-2,000 might be better paid out-of-pocket to avoid rate increases and maintain your claims-free discount."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Auto Loan Calculator",
+      "url": "/finance/auto-loan-calculator"
+    },
+    {
+      "title": "Car Lease Calculator",
+      "url": "/finance/car-lease-calculator"
+    },
+    {
+      "title": "Vehicle Depreciation Calculator",
+      "url": "/finance/vehicle-depreciation-calculator"
+    },
+    {
+      "title": "Home Insurance Calculator",
+      "url": "/finance/home-insurance-calculator"
+    },
+    {
+      "title": "Insurance Comparison Calculator",
+      "url": "/finance/insurance-comparison-calculator"
     }
   ]
 }

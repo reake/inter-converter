@@ -1,39 +1,107 @@
 {
-  "about": [
-    "The Gradient Generator creates smooth color transitions and gradients for web design and digital art. Generate linear, radial, and conic gradients with multiple color stops and customizable directions.",
-    "Perfect for creating background effects, button styles, and visual elements that require smooth color transitions. Supports CSS-ready output for immediate use in web projects."
-  ],
-  "howToUse": [
-    "Choose gradient type (linear, radial, or conic)",
-    "Add color stops by clicking on the gradient bar",
-    "Adjust colors using the color picker",
-    "Set gradient direction and angle",
-    "Copy the generated CSS code"
-  ],
+  "about": {
+    "title": "About CSS Gradient Generator - Linear & Radial CSS",
+    "description": "The CSS Gradient Generator creates smooth color transitions and gradients for web design and digital art. Generate linear, radial, and conic gradients with multiple color stops and customizable directions. Perfect for creating background effects, button styles, and visual elements that require smooth color transitions. Supports CSS-ready output for immediate use in web projects with cross-browser compatibility."
+  },
+  "howTo": {
+    "title": "How to Use the CSS Gradient Generator",
+    "steps": [
+      {
+        "title": "Choose Gradient Type",
+        "description": "Select from linear, radial, or conic gradient types based on your design needs."
+      },
+      {
+        "title": "Add Color Stops",
+        "description": "Click on the gradient bar to add color stops and create multi-color transitions."
+      },
+      {
+        "title": "Adjust Colors",
+        "description": "Use the color picker to modify each color stop and create your desired palette."
+      },
+      {
+        "title": "Set Direction and Angle",
+        "description": "Configure gradient direction, angle, and positioning for optimal visual effect."
+      },
+      {
+        "title": "Preview Gradient",
+        "description": "View real-time preview of your gradient as you make adjustments."
+      },
+      {
+        "title": "Copy CSS Code",
+        "description": "Copy the generated CSS code for immediate use in your web projects."
+      }
+    ],
+    "tips": [
+      "Use 2-4 colors for the most visually appealing gradients",
+      "Test gradients on different screen sizes and devices",
+      "Consider color accessibility when choosing gradient colors",
+      "Save successful gradient combinations for future projects"
+    ]
+  },
   "features": [
-    "Multiple gradient types (linear, radial, conic)",
-    "Unlimited color stops",
-    "Real-time gradient preview",
-    "CSS code generation",
-    "Direction and angle controls",
-    "Gradient presets and templates"
+    {
+      "title": "Multiple Gradient Types",
+      "description": "Support for linear, radial, and conic gradients with full customization options."
+    },
+    {
+      "title": "Unlimited Color Stops",
+      "description": "Add as many color stops as needed to create complex gradient effects."
+    },
+    {
+      "title": "Real-time Preview",
+      "description": "Live gradient preview that updates instantly as you make changes."
+    },
+    {
+      "title": "CSS Code Generation",
+      "description": "Automatic CSS code generation with cross-browser compatibility prefixes."
+    },
+    {
+      "title": "Direction and Angle Controls",
+      "description": "Precise control over gradient direction, angle, and positioning parameters."
+    },
+    {
+      "title": "Gradient Presets",
+      "description": "Pre-built gradient templates and popular color combinations for quick starts."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What's the difference between gradient types?",
-      "answer": "Linear gradients transition in a straight line, radial gradients emanate from a center point in a circular pattern, and conic gradients rotate around a center point."
+      "q": "What's the difference between gradient types?",
+      "a": "Linear gradients transition in a straight line from one point to another. Radial gradients emanate from a center point in a circular or elliptical pattern. Conic gradients rotate around a center point, creating a cone-like effect."
     },
     {
-      "question": "How many colors can I use in a gradient?",
-      "answer": "You can add unlimited color stops to create complex gradients. However, 2-4 colors typically provide the best visual results for most design purposes."
+      "q": "How many colors can I use in a gradient?",
+      "a": "You can add unlimited color stops to create complex gradients. However, 2-4 colors typically provide the best visual results for most design purposes. Too many colors can create muddy or overwhelming effects."
     },
     {
-      "question": "Can I use the gradients in CSS?",
-      "answer": "Yes! The tool generates CSS-ready code that you can copy and paste directly into your stylesheets. All modern browsers support CSS gradients."
+      "q": "Can I use the gradients directly in CSS?",
+      "a": "Yes! The tool generates CSS-ready code with proper vendor prefixes that you can copy and paste directly into your stylesheets. All modern browsers support CSS gradients natively."
     },
     {
-      "question": "How do I create smooth color transitions?",
-      "answer": "Use colors that are close to each other on the color wheel, or gradually adjust saturation and lightness while keeping the same hue for natural-looking transitions."
+      "q": "How do I create smooth color transitions?",
+      "a": "Use colors that are close to each other on the color wheel, or gradually adjust saturation and lightness while keeping the same hue. Avoid high contrast colors next to each other for smoother transitions."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Color Picker Tool",
+      "url": "/color/color-picker-tool"
+    },
+    {
+      "title": "Color Palette Generator",
+      "url": "/color/color-palette-generator"
+    },
+    {
+      "title": "HEX to RGB Converter",
+      "url": "/color/hex-to-rgb-converter"
+    },
+    {
+      "title": "RGB to HEX Converter",
+      "url": "/color/rgb-to-hex-converter"
+    },
+    {
+      "title": "Color Contrast Checker",
+      "url": "/color/contrast-checker"
     }
   ]
 }

@@ -1,37 +1,102 @@
 {
-  "about": [
-    "The Pressure Converter provides comprehensive conversion between different pressure units including pascals, bar, PSI, atmospheres, and more. This tool is essential for engineers, scientists, and professionals working with pressure measurements.",
-    "Understanding pressure unit conversions helps in fluid mechanics, pneumatics, hydraulics, and various engineering applications where accurate pressure measurements are crucial."
-  ],
-  "howToUse": [
-    "Select the source pressure unit from the dropdown",
-    "Enter the pressure value you want to convert",
-    "Choose the target unit for conversion",
-    "View the instant conversion result"
-  ],
+  "about": {
+    "title": "About Pressure Converter",
+    "description": "The Pressure Converter provides comprehensive conversion between different pressure units including pascals, bar, PSI, atmospheres, torr, and more specialized pressure measurements. This professional pressure conversion tool is essential for engineers, scientists, HVAC professionals, and anyone working with pressure measurements in fluid mechanics, pneumatics, hydraulics, and vacuum systems. Understanding pressure unit conversions helps in system design, equipment specifications, safety calculations, and scientific research where accurate pressure measurements are crucial for optimal performance and safety."
+  },
+  "howTo": {
+    "title": "How to Use the Pressure Converter",
+    "steps": [
+      {
+        "title": "Enter Pressure Value",
+        "description": "Input the pressure value you want to convert in the designated field. You can enter whole numbers or decimals for precise measurements."
+      },
+      {
+        "title": "Select Source Unit",
+        "description": "Choose the current pressure unit from the dropdown menu (PSI, bar, pascal, atmosphere, torr, etc.)."
+      },
+      {
+        "title": "Choose Target Unit",
+        "description": "Select the pressure unit you want to convert to from the available pressure measurement options."
+      },
+      {
+        "title": "View Conversion Results",
+        "description": "The converted pressure value will appear instantly with high precision calculations suitable for engineering and scientific applications."
+      }
+    ],
+    "tips": [
+      "Use PSI for tire pressure and imperial system applications",
+      "Use bar for metric engineering and hydraulic systems",
+      "Use pascals for scientific calculations and SI units"
+    ]
+  },
   "features": [
-    "Multiple pressure unit conversions",
-    "Scientific and engineering units",
-    "High precision calculations",
-    "Support for absolute and gauge pressure",
-    "Professional accuracy for technical use"
+    {
+      "title": "Comprehensive Pressure Units",
+      "description": "Convert between PSI, bar, pascal, atmosphere, torr, and other pressure units covering automotive, industrial, and scientific applications."
+    },
+    {
+      "title": "Engineering Precision",
+      "description": "High-precision calculations using exact conversion factors suitable for hydraulic systems, pneumatic design, and pressure vessel calculations."
+    },
+    {
+      "title": "Real-time Conversion",
+      "description": "Instant pressure conversion as you type with immediate results display for efficient engineering workflow and system design."
+    },
+    {
+      "title": "Vacuum and High Pressure Support",
+      "description": "Accurate conversions for both vacuum applications (torr, mmHg) and high-pressure systems used in industrial and scientific equipment."
+    },
+    {
+      "title": "HVAC and Automotive Applications",
+      "description": "Specialized support for pressure units commonly used in HVAC systems, tire pressure, and automotive applications."
+    },
+    {
+      "title": "Scientific Standards",
+      "description": "Compliant with international pressure measurement standards for laboratory, research, and industrial quality control applications."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What's the difference between PSI and bar?",
-      "answer": "PSI (pounds per square inch) is an imperial unit, while bar is a metric unit. 1 bar equals approximately 14.504 PSI."
+      "q": "What's the difference between PSI and bar pressure units?",
+      "a": "PSI (pounds per square inch) is an imperial pressure unit commonly used in the United States for tire pressure and industrial applications, while bar is a metric pressure unit used internationally. 1 bar equals exactly 14.504 PSI. Our pressure converter handles both units with precise calculations for all applications."
     },
     {
-      "question": "How do I convert pascals to atmospheres?",
-      "answer": "1 atmosphere equals 101,325 pascals. Divide pascals by 101,325 to get atmospheres."
+      "q": "How do I convert pascals to atmospheres?",
+      "a": "1 standard atmosphere equals exactly 101,325 pascals. To convert pascals to atmospheres, divide the pascal value by 101,325. For example, 202,650 pascals = 2 atmospheres. Our pressure converter performs this calculation automatically with full precision."
     },
     {
-      "question": "What are torr units used for?",
-      "answer": "Torr units are commonly used in vacuum technology and scientific applications, especially in chemistry and physics."
+      "q": "What are torr units used for in pressure measurement?",
+      "a": "Torr units are commonly used in vacuum technology, scientific research, and laboratory applications, especially in chemistry and physics. 1 torr equals 1/760 of an atmosphere (approximately 133.322 pascals). Torr is ideal for measuring low pressures and vacuum levels."
     },
     {
-      "question": "Which pressure unit should I use?",
-      "answer": "Use pascals for scientific calculations, bar for metric engineering, PSI for imperial systems, and atmospheres for atmospheric pressure."
+      "q": "Which pressure unit should I use for different applications?",
+      "a": "Use pascals for scientific calculations and SI units, bar for metric engineering and hydraulic systems, PSI for tire pressure and imperial systems, atmospheres for atmospheric pressure references, and torr for vacuum and low-pressure applications."
+    },
+    {
+      "q": "How accurate is the pressure converter for engineering use?",
+      "a": "Our pressure converter uses exact international conversion factors and maintains high decimal precision, making it suitable for hydraulic system design, pneumatic calculations, HVAC engineering, and scientific research applications."
+    },
+    {
+      "q": "Can I convert between absolute and gauge pressure?",
+      "a": "Our converter handles the mathematical relationships between pressure units. However, note that absolute pressure = gauge pressure + atmospheric pressure. The converter focuses on unit conversions rather than absolute/gauge pressure calculations."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Power Converter",
+      "url": "/unit/power-converter"
+    },
+    {
+      "title": "Energy Converter",
+      "url": "/unit/energy-converter"
+    },
+    {
+      "title": "Unit Converter",
+      "url": "/unit/unit-converter"
+    },
+    {
+      "title": "Unit Tools Category",
+      "url": "/unit"
     }
   ]
 }

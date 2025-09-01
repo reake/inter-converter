@@ -1,38 +1,102 @@
 {
-  "about": [
-    "The Automotive Weight Converter provides precise conversions between pounds, kilograms, ounces, and grams for automotive applications. Essential for weight reduction projects, performance calculations, and parts comparison.",
-    "Accurate weight measurements are crucial for automotive performance tuning, racing applications, and understanding how component changes affect overall vehicle dynamics and performance."
-  ],
-  "howToUse": [
-    "Enter weight value in any supported unit",
-    "Select source and target weight units",
-    "View instant conversion results",
-    "Use for automotive weight calculations and performance tuning"
-  ],
+  "about": {
+    "title": "About Automotive Weight Converter",
+    "description": "The Automotive Weight Converter provides precise weight conversions between pounds, kilograms, ounces, and grams specifically designed for automotive applications. This professional tool is essential for weight reduction projects, performance calculations, parts comparison, and racing modifications. Accurate weight measurements are crucial for automotive performance tuning, understanding power-to-weight ratios, and calculating how component changes affect overall vehicle dynamics and performance optimization."
+  },
+  "howTo": {
+    "title": "How to Use the Automotive Weight Converter",
+    "steps": [
+      {
+        "title": "Enter Weight Value",
+        "description": "Input the weight value you want to convert in any supported unit (pounds, kilograms, ounces, or grams)."
+      },
+      {
+        "title": "Select Units",
+        "description": "Choose your source unit and target conversion unit from the dropdown menus."
+      },
+      {
+        "title": "Get Results",
+        "description": "View instant, precise conversion results with high accuracy for automotive applications."
+      },
+      {
+        "title": "Apply to Projects",
+        "description": "Use the converted weights for automotive weight reduction, performance tuning, and parts comparison."
+      }
+    ],
+    "tips": [
+      "Use this tool for comparing aftermarket parts weights",
+      "Calculate total weight savings from multiple modifications",
+      "Convert manufacturer specifications to your preferred units"
+    ]
+  },
   "features": [
-    "Multiple weight unit support (lbs, kg, oz, g)",
-    "Pounds to kilograms conversion",
-    "Ounces to grams conversion",
-    "Automotive weight calculations",
-    "Performance optimization support",
-    "High precision conversions"
+    {
+      "title": "Multiple Weight Units",
+      "description": "Support for pounds (lbs), kilograms (kg), ounces (oz), and grams (g) with instant conversion between any units."
+    },
+    {
+      "title": "Automotive-Specific Accuracy",
+      "description": "High-precision conversions optimized for automotive weight calculations and performance modifications."
+    },
+    {
+      "title": "Performance Optimization",
+      "description": "Calculate weight savings for power-to-weight ratio improvements and racing applications."
+    },
+    {
+      "title": "Parts Comparison",
+      "description": "Compare weights of stock vs aftermarket parts to determine weight reduction benefits."
+    },
+    {
+      "title": "Professional Accuracy",
+      "description": "Uses standard international conversion factors for precise automotive engineering calculations."
+    },
+    {
+      "title": "Instant Results",
+      "description": "Real-time conversion with no delays, perfect for quick automotive weight calculations."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "Why is weight important in automotive performance?",
-      "answer": "Weight directly affects acceleration, braking, fuel economy, and handling. Reducing weight improves power-to-weight ratio and overall performance across all driving conditions."
+      "q": "Why is automotive weight conversion important for performance?",
+      "a": "Automotive weight conversion is crucial for performance tuning because weight directly affects acceleration, braking, fuel economy, and handling. Converting between pounds and kilograms helps calculate power-to-weight ratios and determine the impact of weight reduction modifications on overall vehicle performance."
     },
     {
-      "question": "How much weight reduction makes a noticeable difference?",
-      "answer": "Generally, every 100 pounds removed can improve acceleration by 0.1-0.2 seconds in quarter-mile times, depending on the vehicle's power and weight distribution."
+      "q": "How much weight reduction makes a noticeable difference in automotive performance?",
+      "a": "Generally, every 100 pounds (45.4 kg) of weight reduction can improve acceleration by 0.1-0.2 seconds in quarter-mile times. For racing applications, even 10-20 pounds of weight savings can provide measurable performance improvements in lap times and handling."
     },
     {
-      "question": "What automotive parts benefit most from weight conversion?",
-      "answer": "Wheels, exhaust systems, body panels, and engine components. Converting weights helps compare aftermarket parts and calculate overall weight savings."
+      "q": "What automotive parts benefit most from weight conversion calculations?",
+      "a": "Wheels, exhaust systems, body panels, engine components, and suspension parts benefit most from weight conversion. Converting weights helps compare stock vs aftermarket parts, calculate rotational weight savings, and determine overall vehicle weight reduction for performance modifications."
     },
     {
-      "question": "How accurate are the weight conversions?",
-      "answer": "Our converter provides precise conversions using standard international conversion factors, ensuring accuracy for professional automotive applications."
+      "q": "How accurate is the automotive weight converter for professional use?",
+      "a": "Our automotive weight converter provides professional-grade accuracy using standard international conversion factors (1 kg = 2.20462 lbs, 1 lb = 16 oz, 1 kg = 1000 g). This ensures precision for automotive engineering calculations, racing applications, and performance tuning projects."
+    },
+    {
+      "q": "Can I use this converter for racing weight calculations?",
+      "a": "Yes, this automotive weight converter is perfect for racing weight calculations. It helps determine weight distribution, calculate minimum racing weights, convert driver and fuel weights, and ensure compliance with racing class weight requirements."
+    },
+    {
+      "q": "What's the difference between pounds and kilograms in automotive applications?",
+      "a": "Pounds (lbs) are commonly used in the US automotive market, while kilograms (kg) are used internationally and in racing. 1 kilogram equals 2.20462 pounds. Many performance specifications and racing regulations use metric units, making conversion essential for global automotive applications."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Power to Weight Ratio Calculator",
+      "url": "/auto/power-to-weight-ratio"
+    },
+    {
+      "title": "Automotive Tools Category",
+      "url": "/auto"
+    },
+    {
+      "title": "Engine Displacement Calculator",
+      "url": "/auto/engine-displacement-calculator"
+    },
+    {
+      "title": "Tire Calculator",
+      "url": "/auto/tire-calculator"
     }
   ]
 }

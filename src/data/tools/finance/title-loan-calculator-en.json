@@ -1,31 +1,39 @@
 {
-  "about": [
-    "The Title Loan Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "Title Loan Calculator - Vehicle Title Cash Advance Cost & APR Estimator",
+    "description": "The Title Loan Calculator estimates monthly payment, total fees, and effective APR for short-term loans secured by your vehicle title. Compare payoff scenarios, understand rollover impact, and evaluate alternatives to avoid high-cost borrowing and potential repossession risk."
+  },
+  "howTo": {
+    "title": "How to Use the Title Loan Calculator",
+    "steps": [
+      { "title": "Enter Loan Amount", "description": "Input the amount you plan to borrow based on your car's title value." },
+      { "title": "Add Fees & Term", "description": "Include interest/fees and select the short repayment term (often 30 days)." },
+      { "title": "Model Rollovers", "description": "If you can't repay on time, add rollovers to see cost escalation." },
+      { "title": "Review Payment & APR", "description": "See total repayment, effective APR, and the portion going to fees." },
+      { "title": "Compare Alternatives", "description": "Test secured/unsecured personal loans or credit union options for lower cost." }
+    ],
+    "tips": [
+      "Borrow the minimum needed and avoid rollovers to limit fees.",
+      "Understand repossession risk—default may result in losing your vehicle.",
+      "Check for state caps and consumer protections in your area."
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
+    { "title": "Effective APR", "description": "Annualizes fees and short terms to show the true borrowing cost." },
+    { "title": "Rollover Impact", "description": "Estimates how renewals quickly increase total repayment." },
+    { "title": "Payment Breakdown", "description": "Visualize principal vs. fees/interest across the term." },
+    { "title": "Collateral Considerations", "description": "Highlights how vehicle value and state rules influence pricing and risk." }
   ],
-  "faqs": [
-    {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
-    },
-    {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
-    }
+  "faq": [
+    { "q": "What is a title loan?", "a": "A short-term loan secured by your vehicle title, typically with high fees and risk of repossession if you default." },
+    { "q": "Are rollovers expensive?", "a": "Yes. Rollovers add fees and drastically raise the effective APR and total repayment." },
+    { "q": "What are better alternatives?", "a": "Consider credit union small-dollar loans, personal installment loans, or negotiating payment plans with creditors." },
+    { "q": "Can my car be repossessed?", "a": "If you default on a title loan, the lender may repossess the vehicle to recover losses—review your contract carefully." }
+  ],
+  "relativeLinks": [
+    { "title": "Secured Loan Calculator", "url": "/finance/secured-loan-calculator" },
+    { "title": "Unsecured Loan Calculator", "url": "/finance/unsecured-loan-calculator" },
+    { "title": "Payday Loan Calculator", "url": "/finance/payday-loan-calculator" },
+    { "title": "Budget Calculator", "url": "/finance/budget-calculator" }
   ]
 }

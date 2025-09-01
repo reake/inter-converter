@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Moving Cost Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Moving Cost Calculator - Relocation Budget Planning Tool",
+    "description": "The Moving Cost Calculator is a comprehensive relocation planning tool designed to help you estimate and budget for all expenses associated with moving to a new home or location. This calculator analyzes moving services, packing supplies, travel costs, and setup expenses to provide accurate moving cost projections. Whether you're planning a local move or long-distance relocation, this tool helps you budget for all moving-related expenses."
+  },
+  "howTo": {
+    "title": "How to Use the Moving Cost Calculator",
+    "steps": [
+      {
+        "title": "Enter Moving Details",
+        "description": "Input your current location, destination, and moving date for accurate estimates."
+      },
+      {
+        "title": "Select Home Size",
+        "description": "Choose your home size (studio, 1-bedroom, 2-bedroom, etc.) for volume estimates."
+      },
+      {
+        "title": "Choose Moving Services",
+        "description": "Select full-service movers, truck rental, or hybrid moving options."
+      },
+      {
+        "title": "Add Packing Costs",
+        "description": "Include professional packing services or DIY packing supply costs."
+      },
+      {
+        "title": "Include Travel Expenses",
+        "description": "Add gas, hotels, meals, and other travel costs for long-distance moves."
+      },
+      {
+        "title": "Review Total Budget",
+        "description": "Analyze complete moving cost breakdown and budget for your relocation."
+      }
+    ],
+    "tips": [
+      "Get quotes from multiple moving companies for comparison",
+      "Book movers 4-8 weeks in advance for better rates",
+      "Consider moving during off-peak times to save money",
+      "Factor in setup costs like deposits and utility connections"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Distance-Based Pricing",
+      "description": "Calculate costs based on local, long-distance, or international moves."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Service Level Comparison",
+      "description": "Compare costs for full-service, partial, and DIY moving options."
+    },
+    {
+      "title": "Packing Cost Estimator",
+      "description": "Calculate costs for professional packing vs. DIY packing supplies."
+    },
+    {
+      "title": "Travel Expense Calculator",
+      "description": "Estimate gas, lodging, meals, and other travel costs for long moves."
+    },
+    {
+      "title": "Setup Cost Planner",
+      "description": "Budget for deposits, utility connections, and new home setup expenses."
+    },
+    {
+      "title": "Seasonal Price Adjustments",
+      "description": "Factor in peak season pricing and availability for accurate estimates."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How much does it cost to hire professional movers?",
+      "a": "Local moves typically cost $80-120/hour for 2-3 movers. Long-distance moves average $2,500-5,000 depending on distance and home size. Full-service moves cost more but include packing, loading, transport, and unpacking."
+    },
+    {
+      "q": "Is it cheaper to rent a truck or hire movers?",
+      "a": "DIY truck rental is usually cheaper ($20-40/day plus mileage) but requires your time and effort. Factor in gas, equipment rental, and potential injury/damage risks when comparing to professional movers."
+    },
+    {
+      "q": "What additional costs should I budget for?",
+      "a": "Beyond moving services, budget for packing supplies ($150-300), travel expenses, utility deposits ($100-500), address change fees, and potential storage costs if there are timing gaps."
+    },
+    {
+      "q": "When is the cheapest time to move?",
+      "a": "Fall and winter (October-April) typically offer lower rates. Avoid summer months, weekends, and month-end dates when demand and prices are highest. Mid-week moves often cost 10-20% less."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Cost of Living Calculator",
+      "url": "/finance/cost-of-living-calculator"
+    },
+    {
+      "title": "Budget Calculator",
+      "url": "/finance/budget-calculator"
+    },
+    {
+      "title": "Home Affordability Calculator",
+      "url": "/finance/home-affordability-calculator"
+    },
+    {
+      "title": "Rent vs Buy Calculator",
+      "url": "/finance/rent-vs-buy-calculator"
+    },
+    {
+      "title": "Savings Calculator",
+      "url": "/finance/savings-calculator"
     }
   ]
 }

@@ -1,31 +1,39 @@
 {
-  "about": [
-    "The Payday Loan Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "Payday Loan Calculator - Short-Term Cost, APR & Rollover Impact Estimator",
+    "description": "The Payday Loan Calculator estimates total repayment, finance charges, and effective APR for short-term payday loans. Model rollover scenarios, compare alternatives, and understand how fees compound over time to avoid debt traps and plan responsible borrowing."
+  },
+  "howTo": {
+    "title": "How to Use the Payday Loan Calculator",
+    "steps": [
+      { "title": "Enter Loan Amount", "description": "Input the cash advance amount you plan to borrow." },
+      { "title": "Add Fees & Term", "description": "Include flat fees or percentage-based charges and select the typical 14–30 day term." },
+      { "title": "Model Rollovers", "description": "Add the number of renewals/rollovers if you cannot repay on time." },
+      { "title": "Review Total Cost & APR", "description": "See total repayment, effective APR, and how charges escalate with rollovers." },
+      { "title": "Compare Alternatives", "description": "Test options like installment loans or paycheck advances to reduce cost." }
+    ],
+    "tips": [
+      "Avoid rollovers—fees can snowball and drastically raise effective APR.",
+      "Consider credit union small-dollar loans or employer advances as cheaper alternatives.",
+      "Repay early if allowed to minimize fees and interest."
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
+    { "title": "Effective APR Estimation", "description": "Converts fees and short terms into an annualized APR for apples-to-apples comparisons." },
+    { "title": "Rollover Cost Modeling", "description": "Estimate how multiple renewals increase total fees and repayment amount." },
+    { "title": "Repayment Breakdown", "description": "See principal vs. fees to understand true borrowing cost." },
+    { "title": "Alternative Comparison", "description": "Compare payday loans with installment or personal loans to lower costs." }
   ],
-  "faqs": [
-    {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
-    },
-    {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
-    }
+  "faq": [
+    { "q": "What is a payday loan?", "a": "A short-term, small-dollar loan typically due on your next payday, often with high fees and very high effective APR." },
+    { "q": "Why is the APR so high?", "a": "Short repayment periods combined with fixed fees produce very high annualized rates when converted to APR." },
+    { "q": "What are safer alternatives?", "a": "Consider credit union small-dollar loans, payment plans, employer paycheck advances, or negotiating with creditors." },
+    { "q": "Will rollovers hurt my finances?", "a": "Yes. Rollovers add fees and can quickly create a cycle of debt. Repay as soon as possible to limit costs." }
+  ],
+  "relativeLinks": [
+    { "title": "Personal Loan Calculator", "url": "/finance/loan-calculator" },
+    { "title": "Credit Card Payoff Calculator", "url": "/finance/credit-card-payoff-calculator" },
+    { "title": "Debt Consolidation Calculator", "url": "/finance/debt-consolidation-calculator" },
+    { "title": "Budget Calculator", "url": "/finance/budget-calculator" }
   ]
 }

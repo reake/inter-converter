@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The 15 Vs 30 Year Mortgage Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About 15 vs 30 Year Mortgage Calculator - Mortgage Term Comparison Tool",
+    "description": "The 15 vs 30 Year Mortgage Calculator is a comprehensive comparison tool designed to help homebuyers analyze the financial differences between 15-year and 30-year mortgage terms. This calculator provides side-by-side comparisons of monthly payments, total interest costs, and long-term savings to help you make informed decisions about mortgage term selection. Whether you're purchasing a home or refinancing, understanding the trade-offs between shorter and longer mortgage terms is crucial for optimizing your home financing strategy."
+  },
+  "howTo": {
+    "title": "How to Use the 15 vs 30 Year Mortgage Calculator",
+    "steps": [
+      {
+        "title": "Enter Loan Details",
+        "description": "Input your home loan amount, down payment, and current credit score for accurate rate estimates."
+      },
+      {
+        "title": "Set Interest Rates",
+        "description": "Enter current interest rates for both 15-year and 30-year mortgages, or use market averages."
+      },
+      {
+        "title": "Add Property Costs",
+        "description": "Include property taxes, homeowners insurance, and PMI for complete monthly payment calculations."
+      },
+      {
+        "title": "Compare Payments",
+        "description": "Review side-by-side monthly payment differences between 15-year and 30-year terms."
+      },
+      {
+        "title": "Analyze Total Costs",
+        "description": "Compare total interest paid over the life of each loan to understand long-term financial impact."
+      },
+      {
+        "title": "Evaluate Affordability",
+        "description": "Assess which option fits better with your budget, income, and financial goals."
+      }
+    ],
+    "tips": [
+      "15-year mortgages typically offer lower interest rates than 30-year loans",
+      "Consider your monthly budget capacity before choosing shorter terms",
+      "Factor in opportunity cost of higher payments vs investment potential",
+      "Evaluate job security and income stability for higher payment commitments"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Side-by-Side Comparison",
+      "description": "Direct comparison of monthly payments, total interest, and loan terms for 15-year vs 30-year mortgages."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Interest Savings Calculator",
+      "description": "Calculate total interest savings when choosing a 15-year mortgage over a 30-year term."
+    },
+    {
+      "title": "Payment Difference Analysis",
+      "description": "Show exact monthly payment differences and percentage increases for shorter-term mortgages."
+    },
+    {
+      "title": "Break-Even Timeline",
+      "description": "Calculate how long it takes for interest savings to offset higher monthly payments."
+    },
+    {
+      "title": "Affordability Assessment",
+      "description": "Evaluate debt-to-income ratios and budget impact for both mortgage term options."
+    },
+    {
+      "title": "Investment Opportunity Analysis",
+      "description": "Compare mortgage savings vs potential investment returns on payment differences."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What's the main difference between 15-year and 30-year mortgages?",
+      "a": "15-year mortgages have higher monthly payments but lower interest rates and total interest costs. 30-year mortgages offer lower monthly payments but higher total interest over the loan term. The choice depends on your budget and financial priorities."
+    },
+    {
+      "q": "How much can I save with a 15-year mortgage?",
+      "a": "15-year mortgages typically save $100,000-$200,000+ in total interest compared to 30-year loans. For example, a $300,000 loan might cost $150,000 in interest (15-year) vs $320,000 (30-year), saving $170,000."
+    },
+    {
+      "q": "Should I choose a 15-year or 30-year mortgage?",
+      "a": "Choose 15-year if you can afford higher payments and want to build equity faster. Choose 30-year if you need lower payments, want investment flexibility, or prefer more disposable income for other financial goals."
+    },
+    {
+      "q": "Can I pay off a 30-year mortgage early like a 15-year?",
+      "a": "Yes, you can make extra principal payments on a 30-year mortgage to pay it off faster. This provides flexibility to reduce payments during tight months while still achieving faster payoff when possible."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "15 Year Fixed Mortgage Calculator",
+      "url": "/finance/15-year-fixed-mortgage-calculator"
+    },
+    {
+      "title": "30 Year Fixed Mortgage Calculator",
+      "url": "/finance/30-year-fixed-mortgage-calculator"
+    },
+    {
+      "title": "Mortgage Payoff Calculator",
+      "url": "/finance/mortgage-payoff-calculator"
+    },
+    {
+      "title": "Home Affordability Calculator",
+      "url": "/finance/home-affordability-calculator"
+    },
+    {
+      "title": "Mortgage Refinance Calculator",
+      "url": "/finance/mortgage-refinance-calculator"
     }
   ]
 }

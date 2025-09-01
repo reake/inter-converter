@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Credit Card Interest Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Credit Card Interest Calculator - APR and Interest Cost Tool",
+    "description": "The Credit Card Interest Calculator is a comprehensive credit card debt analysis tool designed to help you understand how much interest you'll pay on credit card balances and how different payment strategies affect total costs. This calculator shows daily, monthly, and annual interest charges, helping you make informed decisions about credit card payments and debt management. Whether you're planning payments or comparing credit card offers, this tool provides accurate interest calculations."
+  },
+  "howTo": {
+    "title": "How to Use the Credit Card Interest Calculator",
+    "steps": [
+      {
+        "title": "Enter Card Balance",
+        "description": "Input your current credit card balance or planned purchase amount."
+      },
+      {
+        "title": "Set Interest Rate",
+        "description": "Enter your credit card's Annual Percentage Rate (APR) from your statement."
+      },
+      {
+        "title": "Choose Payment Amount",
+        "description": "Enter your planned monthly payment or minimum payment amount."
+      },
+      {
+        "title": "Select Calculation Period",
+        "description": "Choose whether to calculate interest for a specific period or until payoff."
+      },
+      {
+        "title": "Review Interest Costs",
+        "description": "Analyze daily, monthly, and total interest charges over time."
+      },
+      {
+        "title": "Compare Payment Strategies",
+        "description": "See how different payment amounts affect total interest costs."
+      }
+    ],
+    "tips": [
+      "Credit card interest compounds daily, not monthly",
+      "Paying more than the minimum dramatically reduces total interest",
+      "Interest is calculated on the average daily balance",
+      "New purchases may have different interest rates than existing balances"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Daily Interest Calculator",
+      "description": "Calculate exact daily interest charges based on your balance and APR."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Payment Impact Analysis",
+      "description": "See how different payment amounts affect total interest costs and payoff time."
+    },
+    {
+      "title": "APR Comparison Tool",
+      "description": "Compare interest costs across different credit cards and APR rates."
+    },
+    {
+      "title": "Minimum Payment Calculator",
+      "description": "Calculate how long it takes to pay off balances with minimum payments only."
+    },
+    {
+      "title": "Interest Savings Calculator",
+      "description": "Calculate interest savings from making extra payments or balance transfers."
+    },
+    {
+      "title": "Compound Interest Visualization",
+      "description": "Understand how daily compounding affects your total interest costs."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How is credit card interest calculated?",
+      "a": "Credit card interest is calculated daily by dividing your APR by 365, then multiplying by your daily balance. This daily interest is added to your balance, creating compound interest that grows over time."
+    },
+    {
+      "q": "Why is my actual interest different from the calculator?",
+      "a": "Actual interest may vary due to promotional rates, different APRs for purchases vs. cash advances, payment timing, and how your card company calculates average daily balance. This calculator provides estimates based on standard methods."
+    },
+    {
+      "q": "How much can I save by paying more than the minimum?",
+      "a": "Paying extra can save substantial interest. For example, on a $5,000 balance at 18% APR, paying $200/month instead of the $100 minimum saves over $2,000 in interest and pays off the debt 3+ years sooner."
+    },
+    {
+      "q": "When is credit card interest charged?",
+      "a": "Interest is typically charged on balances carried from month to month. If you pay your full statement balance by the due date, you usually avoid interest charges during the grace period (typically 21-25 days)."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Credit Card Payoff Calculator",
+      "url": "/finance/credit-card-payoff-calculator"
+    },
+    {
+      "title": "Balance Transfer Calculator",
+      "url": "/finance/balance-transfer-calculator"
+    },
+    {
+      "title": "Credit Utilization Calculator",
+      "url": "/finance/credit-utilization-calculator"
+    },
+    {
+      "title": "Debt Payoff Calculator",
+      "url": "/finance/debt-payoff-calculator"
+    },
+    {
+      "title": "Personal Loan Calculator",
+      "url": "/finance/personal-loan-calculator"
     }
   ]
 }

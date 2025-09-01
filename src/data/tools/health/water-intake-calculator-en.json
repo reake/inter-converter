@@ -1,39 +1,107 @@
 {
-  "about": [
-    "The Water Intake Calculator determines your daily hydration needs based on weight, activity level, and environmental factors. Proper hydration is essential for optimal body function, energy levels, and overall health.",
-    "Water requirements vary based on individual factors like body size, physical activity, climate, and health conditions. This calculator provides personalized recommendations to help maintain optimal hydration."
-  ],
-  "howToUse": [
-    "Enter your weight and select units",
-    "Choose your activity level",
-    "Select climate conditions",
-    "View your daily water intake goal",
-    "Track your consumption throughout the day"
-  ],
+  "about": {
+    "title": "About Water Intake Calculator - Daily Hydration Needs",
+    "description": "The Water Intake Calculator determines your daily hydration needs based on weight, activity level, and environmental factors. Proper hydration is essential for optimal body function, energy levels, and overall health. Water requirements vary based on individual factors like body size, physical activity, climate, and health conditions. This calculator provides personalized recommendations to help maintain optimal hydration throughout the day."
+  },
+  "howTo": {
+    "title": "How to Use the Water Intake Calculator",
+    "steps": [
+      {
+        "title": "Enter Your Weight",
+        "description": "Input your current body weight and select your preferred units (kg or lbs)."
+      },
+      {
+        "title": "Choose Activity Level",
+        "description": "Select your daily activity level from sedentary to very active based on exercise routine."
+      },
+      {
+        "title": "Select Climate Conditions",
+        "description": "Choose your climate environment: temperate, hot/humid, or cold conditions."
+      },
+      {
+        "title": "View Water Intake Goal",
+        "description": "See your personalized daily water intake recommendation in liters and ounces."
+      },
+      {
+        "title": "Track Daily Consumption",
+        "description": "Monitor your water intake throughout the day to meet your hydration target."
+      },
+      {
+        "title": "Adjust as Needed",
+        "description": "Modify intake based on illness, pregnancy, or other health conditions."
+      }
+    ],
+    "tips": [
+      "Start your day with a glass of water to kickstart hydration",
+      "Keep a water bottle nearby as a visual reminder to drink",
+      "Monitor urine color as a hydration indicator",
+      "Increase intake during illness, hot weather, or intense exercise"
+    ]
+  },
   "features": [
-    "Weight-based water calculations",
-    "Activity level adjustments",
-    "Climate factor considerations",
-    "Hourly intake recommendations",
-    "Hydration tracking guidance",
-    "Multiple unit options"
+    {
+      "title": "Weight-based Calculations",
+      "description": "Personalized water recommendations based on your body weight and size."
+    },
+    {
+      "title": "Activity Level Adjustments",
+      "description": "Hydration needs adjusted for your exercise routine and physical activity level."
+    },
+    {
+      "title": "Climate Considerations",
+      "description": "Factors in environmental conditions like temperature and humidity for accurate needs."
+    },
+    {
+      "title": "Hourly Intake Guidance",
+      "description": "Recommendations for distributing water intake throughout the day for optimal hydration."
+    },
+    {
+      "title": "Hydration Tracking Tips",
+      "description": "Practical guidance for monitoring and maintaining proper hydration levels."
+    },
+    {
+      "title": "Multiple Unit Support",
+      "description": "Flexible unit options for weight input and water intake display preferences."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "How much water should I drink daily?",
-      "answer": "Generally 8-10 cups (64-80 oz) for adults, but individual needs vary. The calculator provides personalized recommendations based on your specific factors."
+      "q": "How much water should I drink daily?",
+      "a": "Generally 8-10 glasses (2-2.5 liters) for adults, but this varies significantly based on weight, activity level, and climate. The calculator provides personalized recommendations ranging from 1.5-4+ liters depending on your individual factors."
     },
     {
-      "question": "Do other beverages count toward water intake?",
-      "answer": "Yes, most beverages contribute to hydration, but water is best. Limit caffeinated and alcoholic drinks as they can have mild diuretic effects."
+      "q": "Does coffee and tea count toward water intake?",
+      "a": "Yes, caffeinated beverages contribute to hydration, though pure water is most effective for optimal hydration. Limit high-caffeine drinks as they can have mild diuretic effects, especially in large quantities."
     },
     {
-      "question": "How do I know if I'm properly hydrated?",
-      "answer": "Check your urine color - pale yellow indicates good hydration. Dark yellow suggests dehydration. Also monitor energy levels and thirst."
+      "q": "How do I know if I'm properly hydrated?",
+      "a": "Check urine color - pale yellow indicates good hydration, while dark yellow suggests dehydration. Also monitor thirst levels, energy, skin elasticity, and overall well-being as hydration indicators."
     },
     {
-      "question": "Should I drink more water when exercising?",
-      "answer": "Yes, increase intake by 12-16 oz for every hour of exercise, plus additional amounts to replace sweat losses in hot conditions."
+      "q": "Should I drink more water when exercising?",
+      "a": "Yes, significantly increase intake before, during, and after exercise. Add 12-16 oz for every hour of activity, more in hot conditions or intense workouts. Pre-hydrate 2-3 hours before exercise and continue hydrating post-workout."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Calorie Calculator",
+      "url": "/health/calorie-calculator"
+    },
+    {
+      "title": "BMI Calculator",
+      "url": "/health/bmi-calculator"
+    },
+    {
+      "title": "Protein Calculator",
+      "url": "/health/protein-calculator"
+    },
+    {
+      "title": "Sleep Calculator",
+      "url": "/health/sleep-calculator"
+    },
+    {
+      "title": "Heart Rate Calculator",
+      "url": "/health/heart-rate-calculator"
     }
   ]
 }

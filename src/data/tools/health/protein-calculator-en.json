@@ -1,39 +1,107 @@
 {
-  "about": [
-    "The Protein Calculator determines your daily protein needs based on your weight, activity level, and fitness goals. Adequate protein intake is crucial for muscle maintenance, recovery, and overall health.",
-    "Protein requirements vary significantly based on age, gender, activity level, and specific goals like muscle building or weight loss. This calculator provides personalized recommendations using established nutritional guidelines."
-  ],
-  "howToUse": [
-    "Enter your weight and select units",
-    "Choose your activity level",
-    "Select your primary fitness goal",
-    "View your daily protein requirement",
-    "Plan meals to meet your protein target"
-  ],
+  "about": {
+    "title": "About Protein Calculator - Daily Protein Intake",
+    "description": "The Protein Calculator determines your daily protein needs based on your weight, activity level, and fitness goals. Adequate protein intake is crucial for muscle maintenance, recovery, and overall health. Protein requirements vary significantly based on age, gender, activity level, and specific goals like muscle building or weight loss. This calculator provides personalized recommendations using established nutritional guidelines and sports science research."
+  },
+  "howTo": {
+    "title": "How to Use the Protein Calculator",
+    "steps": [
+      {
+        "title": "Enter Your Weight",
+        "description": "Input your current body weight and select your preferred units (kg or lbs)."
+      },
+      {
+        "title": "Choose Activity Level",
+        "description": "Select your activity level from sedentary to very active based on your exercise routine."
+      },
+      {
+        "title": "Select Fitness Goal",
+        "description": "Choose your primary goal: maintenance, muscle building, weight loss, or athletic performance."
+      },
+      {
+        "title": "View Protein Requirement",
+        "description": "See your personalized daily protein requirement in grams and per body weight."
+      },
+      {
+        "title": "Plan Your Meals",
+        "description": "Use the recommendation to plan meals and distribute protein throughout the day."
+      },
+      {
+        "title": "Track Your Intake",
+        "description": "Monitor your daily protein consumption to meet your calculated target."
+      }
+    ],
+    "tips": [
+      "Distribute protein evenly across meals for optimal absorption",
+      "Include both complete and incomplete protein sources in your diet",
+      "Consider post-workout protein timing for muscle recovery",
+      "Adjust intake based on training intensity and recovery needs"
+    ]
+  },
   "features": [
-    "Activity-based protein calculations",
-    "Goal-specific recommendations",
-    "Multiple calculation methods",
-    "Protein timing suggestions",
-    "Food source recommendations",
-    "Metric and imperial units"
+    {
+      "title": "Activity-based Calculations",
+      "description": "Protein recommendations adjusted for your specific activity level and exercise routine."
+    },
+    {
+      "title": "Goal-specific Recommendations",
+      "description": "Tailored protein targets for muscle building, weight loss, or maintenance goals."
+    },
+    {
+      "title": "Multiple Calculation Methods",
+      "description": "Uses various established formulas and guidelines for accurate protein estimation."
+    },
+    {
+      "title": "Protein Timing Guidance",
+      "description": "Suggestions for optimal protein distribution and timing throughout the day."
+    },
+    {
+      "title": "Food Source Recommendations",
+      "description": "Information about high-quality protein sources and meal planning ideas."
+    },
+    {
+      "title": "Flexible Unit Options",
+      "description": "Support for both metric and imperial units for weight and protein measurements."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "How much protein do I need per day?",
-      "answer": "Sedentary adults need 0.8g per kg body weight. Active individuals need 1.2-2.0g per kg, and athletes may need up to 2.2g per kg for muscle building."
+      "q": "How much protein do I need per day?",
+      "a": "Generally 0.8-2.2g per kg of body weight, depending on activity level and goals. Sedentary adults need around 0.8g/kg, while athletes and those building muscle need 1.6-2.2g/kg. The calculator provides personalized recommendations based on your specific profile."
     },
     {
-      "question": "What are the best protein sources?",
-      "answer": "Complete proteins include meat, fish, eggs, dairy, and quinoa. Plant sources like beans, nuts, and seeds can be combined for complete amino acid profiles."
+      "q": "Can I get enough protein from plant sources?",
+      "a": "Yes, plant-based proteins like legumes, quinoa, nuts, seeds, and protein-rich grains can meet protein needs when consumed in adequate amounts and variety. Combining different plant proteins ensures complete amino acid profiles."
     },
     {
-      "question": "When should I consume protein?",
-      "answer": "Distribute protein throughout the day, with 20-30g per meal. Post-workout protein within 2 hours helps with muscle recovery and growth."
+      "q": "When should I consume protein for best results?",
+      "a": "Distribute protein throughout the day, with 20-30g per meal for optimal absorption. Post-workout protein within 2 hours helps with muscle recovery and growth. Morning protein intake can also help with satiety and metabolism."
     },
     {
-      "question": "Can I have too much protein?",
-      "answer": "Excessive protein (>2.5g per kg) may strain kidneys and isn't beneficial for muscle building. Stick to recommended amounts based on your goals."
+      "q": "What happens if I eat too much protein?",
+      "a": "Excess protein is typically converted to energy or stored as fat. Very high intake may strain kidneys in some individuals, but moderate excess is generally safe for healthy people. Focus on meeting your calculated needs rather than excessive intake."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Calorie Calculator",
+      "url": "/health/calorie-calculator"
+    },
+    {
+      "title": "BMI Calculator",
+      "url": "/health/bmi-calculator"
+    },
+    {
+      "title": "Macro Calculator",
+      "url": "/health/macro-calculator"
+    },
+    {
+      "title": "Water Intake Calculator",
+      "url": "/health/water-intake-calculator"
+    },
+    {
+      "title": "Ideal Weight Calculator",
+      "url": "/health/ideal-weight-calculator"
     }
   ]
 }

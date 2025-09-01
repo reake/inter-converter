@@ -1,38 +1,102 @@
 {
-  "about": [
-    "The Tire Speed Calculator determines vehicle speed based on tire size, gear ratios, and engine RPM. Essential for speedometer calibration, gear ratio selection, and performance analysis.",
-    "This tool helps understand how tire size changes affect actual vehicle speed, speedometer accuracy, and overall drivetrain performance across different driving conditions."
-  ],
-  "howToUse": [
-    "Enter tire size specifications",
-    "Input gear ratios and differential ratio",
-    "Specify engine RPM",
-    "View calculated vehicle speed and speedometer error"
-  ],
+  "about": {
+    "title": "About Tire Speed Calculator",
+    "description": "The Tire Speed Calculator determines vehicle speed based on tire size, gear ratios, and engine RPM. Essential for speedometer calibration, gear ratio selection, and performance analysis. This tool helps understand how tire size changes affect actual vehicle speed, speedometer accuracy, and overall drivetrain performance across different driving conditions."
+  },
+  "howTo": {
+    "title": "How to Use the Tire Speed Calculator",
+    "steps": [
+      {
+        "title": "Enter Tire Specifications",
+        "description": "Input tire size (width, aspect ratio, rim diameter) or overall tire diameter."
+      },
+      {
+        "title": "Input Gear Ratios",
+        "description": "Enter transmission gear ratio and differential (final drive) ratio."
+      },
+      {
+        "title": "Specify Engine RPM",
+        "description": "Input the engine RPM at which you want to calculate vehicle speed."
+      },
+      {
+        "title": "Analyze Results",
+        "description": "View calculated vehicle speed and speedometer error percentage."
+      }
+    ],
+    "tips": [
+      "Larger tires increase actual speed but make speedometer read low",
+      "Use overall tire diameter for most accurate calculations",
+      "Consider tire pressure effects on actual diameter"
+    ]
+  },
   "features": [
-    "Tire size impact analysis",
-    "Speedometer calibration",
-    "Gear ratio calculations",
-    "RPM to speed conversion",
-    "Performance optimization",
-    "Drivetrain analysis"
+    {
+      "title": "Tire Size Impact Analysis",
+      "description": "Calculate how different tire sizes affect vehicle speed and performance characteristics."
+    },
+    {
+      "title": "Speedometer Calibration",
+      "description": "Determine speedometer error and correction factors for tire size changes."
+    },
+    {
+      "title": "Gear Ratio Integration",
+      "description": "Factor in transmission and differential ratios for accurate speed calculations."
+    },
+    {
+      "title": "RPM to Speed Conversion",
+      "description": "Convert engine RPM to actual vehicle speed based on drivetrain configuration."
+    },
+    {
+      "title": "Performance Optimization",
+      "description": "Optimize tire and gear combinations for desired performance characteristics."
+    },
+    {
+      "title": "Drivetrain Analysis",
+      "description": "Comprehensive analysis of how tire changes affect overall drivetrain performance."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "How do larger tires affect speedometer readings?",
-      "answer": "Larger tires make the speedometer read slower than actual speed. A 3% tire diameter increase typically causes the speedometer to read 3% low."
+      "q": "How do larger tires affect speedometer readings?",
+      "a": "Larger tires make the speedometer read slower than actual speed because the vehicle travels farther per wheel revolution. A 3% tire diameter increase typically causes the speedometer to read 3% low. Our tire speed calculator helps determine exact speedometer error."
     },
     {
-      "question": "What gear ratios should I consider for tire changes?",
-      "answer": "When increasing tire size, consider numerically higher gear ratios to maintain acceleration. Conversely, smaller tires may benefit from numerically lower ratios."
+      "q": "What gear ratios should I consider for tire size changes?",
+      "a": "When increasing tire size, consider numerically higher gear ratios to maintain acceleration and engine RPM characteristics. Smaller tires may benefit from numerically lower ratios. Use our calculator to find the optimal balance for your application."
     },
     {
-      "question": "How accurate are tire speed calculations?",
-      "answer": "Calculations are highly accurate when using precise tire dimensions and gear ratios. Real-world factors like tire pressure and wear can cause minor variations."
+      "q": "How accurate are tire speed calculations?",
+      "a": "Our tire speed calculations are highly accurate when using precise tire dimensions and gear ratios. Real-world factors like tire pressure, wear, and load can cause minor variations of 1-3% from calculated values."
     },
     {
-      "question": "Can this help with transmission selection?",
-      "answer": "Yes, by showing how different gear ratios affect speed at various RPMs, helping choose optimal transmission ratios for your tire size and performance goals."
+      "q": "Can this calculator help with transmission selection?",
+      "a": "Yes, the tire speed calculator shows how different gear ratios affect speed at various RPMs, helping you choose optimal transmission ratios for your tire size, performance goals, and driving conditions."
+    },
+    {
+      "q": "How do I measure tire diameter for accurate calculations?",
+      "a": "Measure the overall tire diameter from ground to top when properly inflated and loaded. You can also calculate it using tire size markings: rim diameter + (2 × sidewall height). For example, 275/40R18 = 18 + (2 × 4.33) = 26.66 inches."
+    },
+    {
+      "q": "What's the legal speedometer tolerance for tire changes?",
+      "a": "Most jurisdictions allow speedometer errors within ±10%, but many require accuracy within ±5%. Check local regulations before making significant tire size changes that affect speedometer readings."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "RPM Calculator",
+      "url": "/auto/rpm-calculator"
+    },
+    {
+      "title": "Gear Ratio Calculator",
+      "url": "/auto/gear-ratio-calculator"
+    },
+    {
+      "title": "Speed Converter",
+      "url": "/auto/speed-converter"
+    },
+    {
+      "title": "Automotive Tools Category",
+      "url": "/auto"
     }
   ]
 }

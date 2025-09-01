@@ -1,38 +1,112 @@
 {
-  "about": [
-    "The Temperature Converter provides accurate conversions between Fahrenheit, Celsius, and Kelvin for automotive applications. Essential for engine tuning, cooling system analysis, and international specifications.",
-    "Temperature conversions are crucial for understanding engine operating conditions, coolant specifications, oil viscosity ratings, and ensuring proper thermal management in automotive systems."
-  ],
-  "howToUse": [
-    "Enter temperature value in any supported unit",
-    "Select source and target temperature units",
-    "View instant conversion results",
-    "Use for engine tuning and thermal analysis"
-  ],
+  "about": {
+    "title": "About Automotive Temperature Converter",
+    "description": "The Automotive Temperature Converter provides precise conversions between Fahrenheit, Celsius, and Kelvin specifically designed for automotive applications. This professional tool is essential for engine tuning, cooling system analysis, thermal management, and working with international automotive specifications. Temperature conversions are crucial for understanding engine operating conditions, coolant specifications, oil viscosity ratings, thermostat settings, and ensuring optimal thermal performance in automotive systems. Whether you're tuning performance engines, analyzing cooling efficiency, or working with global automotive standards, our converter delivers the accuracy needed for professional automotive work."
+  },
+  "howTo": {
+    "title": "How to Use the Automotive Temperature Converter",
+    "steps": [
+      {
+        "title": "Enter Temperature Value",
+        "description": "Input the temperature value you want to convert in any supported unit."
+      },
+      {
+        "title": "Select Units",
+        "description": "Choose source and target temperature units (Fahrenheit, Celsius, or Kelvin)."
+      },
+      {
+        "title": "View Results",
+        "description": "Get instant, accurate conversion results for automotive applications."
+      },
+      {
+        "title": "Apply to Automotive Projects",
+        "description": "Use converted temperatures for engine tuning, cooling system optimization, thermal management, and performance analysis."
+      }
+    ],
+    "tips": [
+      "Normal engine operating temperature ranges from 180-220°F (82-104°C) for optimal performance",
+      "Cooler intake air increases power - every 10°F decrease can add 1-2% horsepower",
+      "Use Kelvin for scientific calculations involving gas laws and thermodynamic analysis",
+      "Consider seasonal temperature variations when tuning for different climates",
+      "Oil viscosity changes significantly with temperature - use proper conversions for specifications"
+    ]
+  },
   "features": [
-    "Fahrenheit, Celsius, and Kelvin support",
-    "Bidirectional conversion capability",
-    "Automotive temperature applications",
-    "Engine tuning support",
-    "Cooling system analysis",
-    "Professional accuracy"
+    {
+      "title": "Professional Temperature Conversion",
+      "description": "Convert between Fahrenheit, Celsius, and Kelvin with automotive-grade precision and accuracy for all engine and cooling system applications."
+    },
+    {
+      "title": "Bidirectional Conversion Support",
+      "description": "Seamlessly convert from any temperature unit to any other unit with instant results and professional accuracy."
+    },
+    {
+      "title": "Engine Tuning Applications",
+      "description": "Essential for performance tuning, air density calculations, fuel mapping, and optimizing engine operating temperatures."
+    },
+    {
+      "title": "Cooling System Analysis",
+      "description": "Analyze coolant temperatures, thermostat ratings, radiator efficiency, and overall thermal management performance."
+    },
+    {
+      "title": "Thermal Management Tool",
+      "description": "Professional tool for automotive thermal analysis, heat dissipation calculations, and temperature differential studies."
+    },
+    {
+      "title": "International Standards Support",
+      "description": "Work with automotive specifications from different regions and manufacturers using various temperature measurement systems."
+    },
+    {
+      "title": "Performance Optimization",
+      "description": "Calculate temperature effects on air density, fuel vaporization, and engine efficiency for maximum performance gains."
+    },
+    {
+      "title": "Oil Viscosity Analysis",
+      "description": "Determine optimal oil viscosity ratings and lubrication performance across different operating temperature ranges."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What's the normal engine operating temperature?",
-      "answer": "Most engines operate between 180-220°F (82-104°C). Modern engines often run hotter for efficiency, while older engines typically ran cooler around 160-180°F."
+      "q": "What's the normal engine operating temperature range?",
+      "a": "Most engines operate between 180-220°F (82-104°C). Modern engines often run hotter for efficiency, while older engines typically ran cooler around 160-180°F. Our temperature converter helps you work with these specifications across different measurement systems."
     },
     {
-      "question": "Why is temperature conversion important in automotive work?",
-      "answer": "Different regions use different temperature scales. Converting helps with international parts compatibility, tuning specifications, and understanding manufacturer recommendations."
+      "q": "Why is temperature conversion important in automotive work?",
+      "a": "Different regions use different temperature scales for automotive specifications. Converting between Fahrenheit, Celsius, and Kelvin helps with international parts compatibility, tuning specifications, and understanding manufacturer recommendations from various countries."
     },
     {
-      "question": "How does temperature affect engine performance?",
-      "answer": "Cooler air is denser and provides more power. Every 10°F decrease in intake air temperature can increase power by 1-2%. Engine oil also performs differently at various temperatures."
+      "q": "How does temperature affect engine performance?",
+      "a": "Cooler air is denser and provides more power. Every 10°F decrease in intake air temperature can increase power by 1-2%. Engine oil viscosity also changes with temperature, affecting lubrication and performance. Use our converter to calculate these effects."
     },
     {
-      "question": "What temperature should I use for performance tuning?",
-      "answer": "Tuning should account for expected operating temperatures. Cold weather tuning differs from hot weather tuning due to air density and fuel vaporization changes."
+      "q": "What temperature should I consider for performance tuning?",
+      "a": "Performance tuning should account for expected operating temperatures. Cold weather tuning differs from hot weather tuning due to air density and fuel vaporization changes. Our temperature converter helps you plan for different seasonal conditions."
+    },
+    {
+      "q": "When should I use Kelvin instead of Fahrenheit or Celsius?",
+      "a": "Use Kelvin for scientific calculations involving absolute temperature, gas law calculations, and thermodynamic analysis. Kelvin is essential for precise engine efficiency calculations and advanced performance tuning mathematics."
+    },
+    {
+      "q": "How do I convert coolant temperature specifications?",
+      "a": "Use our automotive temperature converter to convert coolant specifications between different measurement systems. This is crucial when using international parts or following tuning guides from different regions with varying temperature standards."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Engine Size Converter",
+      "url": "/auto/engine-size-converter"
+    },
+    {
+      "title": "RPM Calculator",
+      "url": "/auto/rpm-calculator"
+    },
+    {
+      "title": "Torque Horsepower Calculator",
+      "url": "/auto/torque-horsepower-calculator"
+    },
+    {
+      "title": "Automotive Tools Category",
+      "url": "/auto"
     }
   ]
 }

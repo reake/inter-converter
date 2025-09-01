@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Home Insurance Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Home Insurance Calculator - Property Insurance Cost Estimator",
+    "description": "The Home Insurance Calculator is a comprehensive property insurance tool designed to help homeowners estimate home insurance costs and determine appropriate coverage levels. Whether you're a first-time homebuyer or existing homeowner, this calculator provides accurate insurance cost estimates based on home value, location, construction materials, and personal risk factors. Understanding home insurance calculations is essential for protecting your property investment and ensuring adequate insurance coverage."
+  },
+  "howTo": {
+    "title": "How to Use the Home Insurance Calculator",
+    "steps": [
+      {
+        "title": "Home Information",
+        "description": "Enter your home's replacement cost, square footage, year built, and construction materials."
+      },
+      {
+        "title": "Location Factors",
+        "description": "Provide home address and ZIP code to assess regional risk factors and insurance rates."
+      },
+      {
+        "title": "Coverage Types",
+        "description": "Select desired insurance coverage types including dwelling, personal property, and liability insurance."
+      },
+      {
+        "title": "Deductible Amount",
+        "description": "Set your preferred deductible amount, which will affect your insurance premium rates."
+      },
+      {
+        "title": "Risk Factors",
+        "description": "Input safety features, credit score, and claims history that affect insurance pricing."
+      },
+      {
+        "title": "Compare Quotes",
+        "description": "Review rate estimates and coverage options from different insurance companies."
+      }
+    ],
+    "tips": [
+      "Installing security systems and smoke detectors can reduce insurance premiums",
+      "Raising your deductible can significantly lower annual insurance costs",
+      "Regularly update home value assessments to ensure adequate coverage",
+      "Bundling home and auto insurance typically provides discounts"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Replacement Cost Calculator",
+      "description": "Calculate accurate replacement cost estimates based on current construction costs and home features."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Regional Risk Assessment",
+      "description": "Analyze natural disaster risks, crime rates, and other regional factors affecting insurance rates."
+    },
+    {
+      "title": "Coverage Optimization",
+      "description": "Help determine appropriate insurance coverage amounts to avoid underinsurance or overinsurance."
+    },
+    {
+      "title": "Discount Calculator",
+      "description": "Calculate potential insurance discounts from safety features, multi-policy bundles, and other factors."
+    },
+    {
+      "title": "Deductible Impact Analysis",
+      "description": "Analyze how different deductible levels affect annual premiums and out-of-pocket costs."
+    },
+    {
+      "title": "Insurance Company Comparison",
+      "description": "Compare rates, coverage options, and customer service ratings from different insurers."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What does home insurance typically cover?",
+      "a": "Standard home insurance typically covers dwelling structure, personal property, liability protection, and additional living expenses. It protects against losses from fire, theft, storms, and other named perils, but usually excludes floods and earthquakes."
+    },
+    {
+      "q": "How much home insurance coverage do I need?",
+      "a": "Home insurance should cover your home's full replacement cost, not market value. Personal property coverage is typically 50-70% of dwelling coverage, and liability insurance should be at least $300,000, preferably $500,000 or more."
+    },
+    {
+      "q": "What factors affect home insurance rates?",
+      "a": "Key factors include home value and age, location and regional risks, construction materials, safety features, credit score, claims history, and chosen deductible. Certain dog breeds and swimming pools may also affect rates."
+    },
+    {
+      "q": "How can I lower my home insurance costs?",
+      "a": "You can reduce costs by raising deductibles, installing security systems, bundling insurance policies, maintaining good credit, avoiding small claims, and regularly comparing insurance companies."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Home Value Calculator",
+      "url": "/finance/home-value-calculator"
+    },
+    {
+      "title": "Mortgage Calculator",
+      "url": "/finance/mortgage-calculator"
+    },
+    {
+      "title": "Auto Insurance Calculator",
+      "url": "/finance/auto-insurance-calculator"
+    },
+    {
+      "title": "Home Affordability Calculator",
+      "url": "/finance/home-affordability-calculator"
+    },
+    {
+      "title": "Property Tax Calculator",
+      "url": "/finance/property-tax-calculator"
     }
   ]
 }

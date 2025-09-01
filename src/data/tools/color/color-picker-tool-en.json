@@ -1,39 +1,102 @@
 {
-  "about": [
-    "The Color Picker Tool provides an intuitive interface for selecting, analyzing, and converting colors across multiple formats. This comprehensive tool supports HEX, RGB, HSL, and other color models for professional design work.",
-    "Perfect for web designers, graphic artists, and developers who need precise color selection and format conversion capabilities in a single, user-friendly interface."
-  ],
-  "howToUse": [
-    "Click on the color canvas to select your desired color",
-    "Use the hue slider to adjust the color spectrum",
-    "Fine-tune saturation and lightness with precision controls",
-    "View color values in multiple formats simultaneously",
-    "Copy any color format with one click"
-  ],
+  "about": {
+    "title": "About Color Picker Tool",
+    "description": "The Color Picker Tool provides an intuitive interface for selecting, analyzing, and converting colors across multiple formats. This comprehensive tool supports HEX, RGB, HSL, and other color models for professional design work. Perfect for web designers, graphic artists, and developers who need precise color selection and format conversion capabilities in a single, user-friendly interface."
+  },
+  "howTo": {
+    "title": "How to Use the Color Picker Tool",
+    "steps": [
+      {
+        "title": "Select Color",
+        "description": "Click on the color canvas to select your desired color from the spectrum."
+      },
+      {
+        "title": "Adjust Hue",
+        "description": "Use the hue slider to adjust the color spectrum and find the perfect base color."
+      },
+      {
+        "title": "Fine-tune Properties",
+        "description": "Adjust saturation and lightness with precision controls for exact color matching."
+      },
+      {
+        "title": "View Formats",
+        "description": "See color values in HEX, RGB, HSL, and other formats simultaneously."
+      }
+    ],
+    "tips": [
+      "Use HSL for intuitive color adjustments",
+      "HEX codes are perfect for web development",
+      "RGB values work best for digital design"
+    ]
+  },
   "features": [
-    "Interactive color canvas and sliders",
-    "Multiple color format support (HEX, RGB, HSL)",
-    "Real-time color preview",
-    "Precision color adjustment controls",
-    "One-click copy functionality",
-    "Color history and favorites"
+    {
+      "title": "Interactive Color Canvas",
+      "description": "Visual color selection with intuitive canvas and precision slider controls."
+    },
+    {
+      "title": "Multiple Color Formats",
+      "description": "Support for HEX, RGB, HSL, and CSS color names with simultaneous display."
+    },
+    {
+      "title": "Real-Time Preview",
+      "description": "Instant color preview with live updates as you adjust color properties."
+    },
+    {
+      "title": "Precision Controls",
+      "description": "Fine-tune colors with numerical inputs for exact color specifications."
+    },
+    {
+      "title": "One-Click Copy",
+      "description": "Copy color values in any format with a single click for easy workflow."
+    },
+    {
+      "title": "Color History",
+      "description": "Save and access your favorite colors and recent color selections."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What color formats are supported?",
-      "answer": "Our color picker supports HEX, RGB, HSL, and CSS color names. All formats are displayed simultaneously for easy comparison and copying."
+      "q": "What color formats does the color picker support?",
+      "a": "Our color picker tool supports HEX codes, RGB values, HSL color model, and CSS color names. All formats are displayed simultaneously for easy comparison and copying, making it perfect for web design and graphic design workflows."
     },
     {
-      "question": "How accurate is the color selection?",
-      "answer": "The color picker provides pixel-perfect accuracy with precise numerical controls for fine-tuning colors to exact specifications."
+      "q": "How accurate is the color selection in this tool?",
+      "a": "The color picker provides pixel-perfect accuracy with precise numerical controls for fine-tuning colors to exact specifications. You can input specific values or use the visual interface for professional-grade color selection."
     },
     {
-      "question": "Can I save my favorite colors?",
-      "answer": "Yes, the tool includes color history and favorites functionality to save and quickly access your most-used colors."
+      "q": "Can I save my favorite colors for later use?",
+      "a": "Yes, the color picker tool includes color history and favorites functionality. You can save your most-used colors and quickly access recent color selections for consistent design workflows."
     },
     {
-      "question": "Is this tool suitable for professional design work?",
-      "answer": "Absolutely! The color picker meets professional standards with accurate color representation and support for all major color formats used in design."
+      "q": "Is this color picker suitable for professional design work?",
+      "a": "Absolutely! Our color picker meets professional design standards with accurate color representation, support for all major color formats, and precision controls suitable for web design, graphic design, and digital art projects."
+    },
+    {
+      "q": "What's the difference between RGB and HSL color models?",
+      "a": "RGB uses Red, Green, Blue values (0-255), while HSL uses Hue (0-360°), Saturation (0-100%), and Lightness (0-100%). HSL is more intuitive for color adjustments, while RGB is standard for digital displays."
+    },
+    {
+      "q": "How do I use HEX color codes from the picker?",
+      "a": "HEX codes start with # followed by 6 characters (e.g., #FF5733). Copy the HEX value from our color picker and paste it directly into CSS, HTML, or design software for consistent color reproduction."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "RGB to HEX Converter",
+      "url": "/color/rgb-to-hex-converter"
+    },
+    {
+      "title": "HEX to RGB Converter",
+      "url": "/color/hex-to-rgb-converter"
+    },
+    {
+      "title": "Color Palette Generator",
+      "url": "/color/color-palette-generator"
+    },
+    {
+      "title": "Color Tools Category",
+      "url": "/color"
     }
   ]
 }

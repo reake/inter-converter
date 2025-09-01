@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Payroll Tax Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Payroll Tax Calculator - Employee Tax Withholding Tool",
+    "description": "The Payroll Tax Calculator is a comprehensive payroll management tool designed to help employers and employees calculate accurate federal and state tax withholdings from paychecks. This calculator computes federal income tax, Social Security, Medicare, state taxes, and other deductions to determine net take-home pay. Whether you're processing payroll or planning your budget, this tool provides precise tax calculations for all pay frequencies."
+  },
+  "howTo": {
+    "title": "How to Use the Payroll Tax Calculator",
+    "steps": [
+      {
+        "title": "Enter Gross Pay",
+        "description": "Input the employee's gross salary or hourly wage and hours worked."
+      },
+      {
+        "title": "Select Pay Frequency",
+        "description": "Choose weekly, bi-weekly, semi-monthly, or monthly pay periods."
+      },
+      {
+        "title": "Add Tax Information",
+        "description": "Enter filing status, allowances, and additional withholding amounts."
+      },
+      {
+        "title": "Choose State Location",
+        "description": "Select the state for accurate state income tax calculations."
+      },
+      {
+        "title": "Include Deductions",
+        "description": "Add pre-tax deductions like health insurance, 401k, and other benefits."
+      },
+      {
+        "title": "Review Tax Breakdown",
+        "description": "Analyze federal, state, Social Security, Medicare, and net pay calculations."
+      }
+    ],
+    "tips": [
+      "Update W-4 information annually or after major life changes",
+      "Consider increasing 401k contributions to reduce taxable income",
+      "Review state tax rates if working remotely in different states",
+      "Factor in pre-tax deductions to maximize take-home pay"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Federal Tax Calculation",
+      "description": "Calculate federal income tax withholding based on current IRS tax brackets."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "State Tax Support",
+      "description": "Compute state income taxes for all 50 states with accurate rates and brackets."
+    },
+    {
+      "title": "FICA Tax Calculator",
+      "description": "Calculate Social Security (6.2%) and Medicare (1.45%) tax withholdings."
+    },
+    {
+      "title": "Pre-Tax Deduction Analysis",
+      "description": "Factor in health insurance, 401k, FSA, and other pre-tax deductions."
+    },
+    {
+      "title": "Multiple Pay Frequencies",
+      "description": "Support for weekly, bi-weekly, semi-monthly, and monthly payroll cycles."
+    },
+    {
+      "title": "Year-to-Date Tracking",
+      "description": "Calculate cumulative taxes and track progress toward annual limits."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How accurate are payroll tax calculations?",
+      "a": "Our calculator uses current federal and state tax tables, but actual withholdings may vary based on employer payroll systems, rounding methods, and specific deduction timing. Results provide close estimates for planning purposes."
+    },
+    {
+      "q": "What's the difference between gross and net pay?",
+      "a": "Gross pay is your total earnings before any deductions. Net pay is your take-home amount after federal taxes, state taxes, Social Security, Medicare, and other deductions are subtracted from gross pay."
+    },
+    {
+      "q": "How do pre-tax deductions affect my taxes?",
+      "a": "Pre-tax deductions like 401k contributions, health insurance, and FSA reduce your taxable income, lowering federal and state income taxes. However, they don't reduce Social Security and Medicare taxes."
+    },
+    {
+      "q": "Why might my actual paycheck differ from the calculator?",
+      "a": "Differences can occur due to employer-specific deductions, different rounding methods, timing of deduction changes, supplemental income tax rates, or state-specific rules not captured in general calculations."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Tax Calculator",
+      "url": "/finance/tax-calculator"
+    },
+    {
+      "title": "Salary Calculator",
+      "url": "/finance/salary-calculator"
+    },
+    {
+      "title": "Budget Calculator",
+      "url": "/finance/budget-calculator"
+    },
+    {
+      "title": "Retirement Calculator",
+      "url": "/finance/retirement-calculator"
+    },
+    {
+      "title": "Property Tax Calculator",
+      "url": "/finance/property-tax-calculator"
     }
   ]
 }

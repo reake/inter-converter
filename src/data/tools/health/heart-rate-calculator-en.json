@@ -1,39 +1,107 @@
 {
-  "about": [
-    "The Heart Rate Calculator determines your target heart rate zones for different exercise intensities based on your age and fitness level. Understanding your heart rate zones helps optimize workout effectiveness and ensures safe exercise intensity.",
-    "Target heart rate zones are essential for cardiovascular training, fat burning, and improving overall fitness. The calculator uses established formulas to provide personalized heart rate ranges for various training goals."
-  ],
-  "howToUse": [
-    "Enter your age and resting heart rate",
-    "Select your fitness level (beginner to athlete)",
-    "Choose your training goal (fat burn, cardio, peak)",
-    "View your personalized heart rate zones",
-    "Use the zones during exercise for optimal results"
-  ],
+  "about": {
+    "title": "About Heart Rate Calculator - Training Zone Optimizer",
+    "description": "The Heart Rate Calculator determines your target heart rate zones for different exercise intensities based on your age and fitness level. Understanding your heart rate zones helps optimize workout effectiveness and ensures safe exercise intensity. Target heart rate zones are essential for cardiovascular training, fat burning, and improving overall fitness. The calculator uses established formulas to provide personalized heart rate ranges for various training goals."
+  },
+  "howTo": {
+    "title": "How to Use the Heart Rate Calculator",
+    "steps": [
+      {
+        "title": "Enter Age and Resting Heart Rate",
+        "description": "Input your age and resting heart rate measured first thing in the morning."
+      },
+      {
+        "title": "Select Fitness Level",
+        "description": "Choose your current fitness level from beginner to athlete for accurate calculations."
+      },
+      {
+        "title": "Choose Training Goal",
+        "description": "Select your primary goal: fat burning, cardio fitness, or peak performance training."
+      },
+      {
+        "title": "View Heart Rate Zones",
+        "description": "See your personalized heart rate zones with specific BPM ranges for each intensity."
+      },
+      {
+        "title": "Apply During Workouts",
+        "description": "Use the zones to guide your workout intensity and monitor your heart rate."
+      },
+      {
+        "title": "Track Progress",
+        "description": "Monitor improvements in resting heart rate and zone performance over time."
+      }
+    ],
+    "tips": [
+      "Measure resting heart rate consistently for several days for accuracy",
+      "Start with lower intensity zones if you're new to exercise",
+      "Use a heart rate monitor for real-time feedback during workouts",
+      "Allow adequate recovery time between high-intensity sessions"
+    ]
+  },
   "features": [
-    "Multiple heart rate zone calculations",
-    "Age-based maximum heart rate estimation",
-    "Fitness level adjustments",
-    "Training goal-specific zones",
-    "Karvonen and percentage methods",
-    "Real-time zone monitoring guidance"
+    {
+      "title": "Multiple Heart Rate Zone Calculations",
+      "description": "Comprehensive calculation of all five heart rate training zones for different intensities."
+    },
+    {
+      "title": "Age-based Maximum Heart Rate",
+      "description": "Accurate maximum heart rate estimation using age-based formulas and adjustments."
+    },
+    {
+      "title": "Fitness Level Adjustments",
+      "description": "Personalized calculations based on your current fitness and training experience."
+    },
+    {
+      "title": "Training Goal-specific Zones",
+      "description": "Targeted heart rate zones optimized for fat burning, cardio, and performance goals."
+    },
+    {
+      "title": "Karvonen and Percentage Methods",
+      "description": "Uses both Karvonen formula and percentage methods for accurate zone calculations."
+    },
+    {
+      "title": "Real-time Monitoring Guidance",
+      "description": "Tips and guidance for monitoring heart rate zones during exercise sessions."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What is target heart rate?",
-      "answer": "Target heart rate is the ideal heart rate range during exercise to achieve specific fitness goals. It's typically expressed as a percentage of your maximum heart rate."
+      "q": "What is target heart rate and why is it important?",
+      "a": "Target heart rate is the ideal heart rate range during exercise to achieve specific fitness goals. It's typically expressed as a percentage of your maximum heart rate and helps ensure you're training at the right intensity for optimal results and safety."
     },
     {
-      "question": "How do I measure my resting heart rate?",
-      "answer": "Measure your pulse for 60 seconds immediately after waking up, before getting out of bed. Take measurements for several days and use the average."
+      "q": "How do I accurately measure my resting heart rate?",
+      "a": "Measure your pulse for 60 seconds immediately after waking up, before getting out of bed or consuming caffeine. Take measurements for several consecutive days and use the average. Normal resting heart rate ranges from 60-100 BPM for adults."
     },
     {
-      "question": "What's the fat burning zone?",
-      "answer": "The fat burning zone is typically 60-70% of maximum heart rate, where your body primarily uses fat for energy. However, higher intensities burn more total calories."
+      "q": "What's the fat burning zone and how effective is it?",
+      "a": "The fat burning zone is typically 60-70% of maximum heart rate, where your body primarily uses fat for energy. While this zone uses a higher percentage of fat for fuel, higher intensities burn more total calories and can be more effective for weight loss."
     },
     {
-      "question": "Is it safe to exercise at maximum heart rate?",
-      "answer": "Exercising at maximum heart rate should only be done by well-trained athletes for short periods. Most people should stay within 50-85% of maximum heart rate."
+      "q": "Is it safe to exercise at maximum heart rate?",
+      "a": "Exercising at maximum heart rate should only be done by well-trained athletes for short periods during interval training. Most people should stay within 50-85% of maximum heart rate for safe and effective exercise. Consult healthcare providers before high-intensity training."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "BMI Calculator",
+      "url": "/health/bmi-calculator"
+    },
+    {
+      "title": "Calorie Calculator",
+      "url": "/health/calorie-calculator"
+    },
+    {
+      "title": "Water Intake Calculator",
+      "url": "/health/water-intake-calculator"
+    },
+    {
+      "title": "Sleep Calculator",
+      "url": "/health/sleep-calculator"
+    },
+    {
+      "title": "Protein Calculator",
+      "url": "/health/protein-calculator"
     }
   ]
 }

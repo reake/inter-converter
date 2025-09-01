@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Mortgage Amortization Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Mortgage Amortization Calculator - Payment Schedule Analysis Tool",
+    "description": "The Mortgage Amortization Calculator is a comprehensive mortgage analysis tool designed to help you understand how mortgage payments are applied to principal and interest over the life of your loan. This calculator generates detailed amortization schedules showing monthly payment breakdowns, remaining balances, and total interest costs. Whether you're comparing mortgage options or planning extra payments, this tool provides complete mortgage payment analysis."
+  },
+  "howTo": {
+    "title": "How to Use the Mortgage Amortization Calculator",
+    "steps": [
+      {
+        "title": "Enter Loan Amount",
+        "description": "Input the total mortgage loan amount or home purchase price minus down payment."
+      },
+      {
+        "title": "Set Interest Rate",
+        "description": "Enter the annual interest rate for your mortgage loan."
+      },
+      {
+        "title": "Choose Loan Term",
+        "description": "Select the mortgage term (typically 15, 20, or 30 years)."
+      },
+      {
+        "title": "Add Start Date",
+        "description": "Enter the loan start date to generate accurate payment schedule."
+      },
+      {
+        "title": "Include Extra Payments",
+        "description": "Add any additional principal payments to see payoff acceleration."
+      },
+      {
+        "title": "Review Amortization Schedule",
+        "description": "Analyze monthly payment breakdowns and remaining balance over time."
+      }
+    ],
+    "tips": [
+      "Early payments go mostly to interest, later payments to principal",
+      "Extra principal payments can save thousands in interest costs",
+      "Bi-weekly payments can cut 4-6 years off a 30-year mortgage",
+      "Review amortization schedules when considering refinancing"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Detailed Payment Schedule",
+      "description": "Generate complete month-by-month amortization schedules with payment breakdowns."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Principal vs Interest Analysis",
+      "description": "Track how much of each payment goes to principal versus interest over time."
+    },
+    {
+      "title": "Extra Payment Calculator",
+      "description": "Calculate interest savings and payoff acceleration from additional payments."
+    },
+    {
+      "title": "Remaining Balance Tracker",
+      "description": "Monitor outstanding loan balance and equity building over the loan term."
+    },
+    {
+      "title": "Total Interest Calculator",
+      "description": "Calculate total interest costs over the life of the mortgage loan."
+    },
+    {
+      "title": "Payment Frequency Options",
+      "description": "Compare monthly, bi-weekly, and weekly payment schedules and their benefits."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How is mortgage amortization calculated?",
+      "a": "Amortization uses a formula where each payment covers interest on the remaining balance plus principal reduction. Early payments are mostly interest because the balance is highest. As the balance decreases, more goes to principal."
+    },
+    {
+      "q": "Why do early mortgage payments go mostly to interest?",
+      "a": "Interest is calculated on the outstanding balance. With a large initial balance, interest charges are high. As you pay down principal, the balance decreases, so interest charges become smaller and more payment goes to principal."
+    },
+    {
+      "q": "How much can extra payments save?",
+      "a": "Extra payments can save substantial interest. For example, adding $100/month to a $300,000 30-year mortgage at 6% saves about $67,000 in interest and pays off the loan 5+ years early."
+    },
+    {
+      "q": "What's the difference between bi-weekly and monthly payments?",
+      "a": "Bi-weekly payments (half the monthly amount every two weeks) result in 26 payments yearly, equivalent to 13 monthly payments. This extra payment can reduce a 30-year mortgage to about 25 years."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Mortgage Calculator",
+      "url": "/finance/mortgage-calculator"
+    },
+    {
+      "title": "Mortgage Payoff Calculator",
+      "url": "/finance/mortgage-payoff-calculator"
+    },
+    {
+      "title": "Mortgage Refinance Calculator",
+      "url": "/finance/mortgage-refinance-calculator"
+    },
+    {
+      "title": "Home Affordability Calculator",
+      "url": "/finance/home-affordability-calculator"
+    },
+    {
+      "title": "Extra Payment Calculator",
+      "url": "/finance/extra-payment-calculator"
     }
   ]
 }

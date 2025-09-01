@@ -1,39 +1,107 @@
 {
-  "about": [
-    "The Sleep Calculator helps determine optimal bedtime and wake-up times based on sleep cycles. Quality sleep follows 90-minute cycles, and waking up at the end of a cycle helps you feel more refreshed and alert.",
-    "Understanding sleep cycles and timing can significantly improve sleep quality and daytime energy levels. The calculator considers natural circadian rhythms to optimize your sleep schedule."
-  ],
-  "howToUse": [
-    "Enter your desired wake-up time",
-    "Or enter when you want to go to bed",
-    "Select your age group for sleep recommendations",
-    "View optimal sleep and wake times",
-    "Follow the schedule for better sleep quality"
-  ],
+  "about": {
+    "title": "About Sleep Calculator - Sleep Cycle Optimization",
+    "description": "The Sleep Calculator helps determine optimal bedtime and wake-up times based on sleep cycles. Quality sleep follows 90-minute cycles, and waking up at the end of a cycle helps you feel more refreshed and alert. Understanding sleep cycles and timing can significantly improve sleep quality and daytime energy levels. The calculator considers natural circadian rhythms to optimize your sleep schedule for better rest and recovery."
+  },
+  "howTo": {
+    "title": "How to Use the Sleep Calculator",
+    "steps": [
+      {
+        "title": "Enter Wake-up Time",
+        "description": "Input your desired wake-up time to calculate optimal bedtime options."
+      },
+      {
+        "title": "Or Enter Bedtime",
+        "description": "Alternatively, enter when you want to go to bed to see ideal wake-up times."
+      },
+      {
+        "title": "Select Age Group",
+        "description": "Choose your age group for personalized sleep duration recommendations."
+      },
+      {
+        "title": "View Sleep Schedule",
+        "description": "Review optimal sleep and wake times based on 90-minute sleep cycles."
+      },
+      {
+        "title": "Follow Schedule",
+        "description": "Implement the recommended schedule consistently for better sleep quality."
+      },
+      {
+        "title": "Track Results",
+        "description": "Monitor how you feel with the new schedule and adjust as needed."
+      }
+    ],
+    "tips": [
+      "Maintain consistent sleep and wake times, even on weekends",
+      "Avoid screens 1 hour before bedtime for better sleep quality",
+      "Create a relaxing bedtime routine to signal sleep time",
+      "Keep your bedroom cool, dark, and quiet for optimal rest"
+    ]
+  },
   "features": [
-    "Sleep cycle-based calculations",
-    "Age-appropriate sleep duration recommendations",
-    "Optimal bedtime and wake-up suggestions",
-    "Sleep quality optimization tips",
-    "Circadian rhythm considerations",
-    "Multiple sleep duration options"
+    {
+      "title": "Sleep Cycle Calculations",
+      "description": "Calculate optimal sleep and wake times based on 90-minute sleep cycles."
+    },
+    {
+      "title": "Age-appropriate Recommendations",
+      "description": "Personalized sleep duration recommendations based on age groups and life stages."
+    },
+    {
+      "title": "Optimal Timing Suggestions",
+      "description": "Smart bedtime and wake-up suggestions for maximum sleep quality and energy."
+    },
+    {
+      "title": "Sleep Quality Tips",
+      "description": "Expert advice and tips for improving overall sleep quality and habits."
+    },
+    {
+      "title": "Circadian Rhythm Support",
+      "description": "Considerations for natural circadian rhythms and biological sleep patterns."
+    },
+    {
+      "title": "Multiple Duration Options",
+      "description": "Various sleep duration options to match individual needs and schedules."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "How much sleep do I need?",
-      "answer": "Adults typically need 7-9 hours, teenagers 8-10 hours, and children 9-11 hours. Individual needs may vary based on lifestyle and health factors."
+      "q": "How much sleep do I need based on my age?",
+      "a": "Adults typically need 7-9 hours, teenagers 8-10 hours, and children 9-11 hours. Older adults (65+) may need 7-8 hours. Individual needs may vary based on lifestyle, health factors, and activity levels."
     },
     {
-      "question": "What are sleep cycles?",
-      "answer": "Sleep cycles are 90-minute periods consisting of light sleep, deep sleep, and REM sleep. Completing full cycles helps you wake up feeling refreshed."
+      "q": "What are sleep cycles and why do they matter?",
+      "a": "Sleep cycles are 90-minute periods consisting of light sleep, deep sleep, and REM sleep. Completing full cycles helps you wake up feeling refreshed rather than groggy. The calculator times your sleep to end at the completion of a cycle."
     },
     {
-      "question": "Why do I feel groggy when I wake up?",
-      "answer": "Waking up in the middle of a deep sleep phase can cause grogginess. Try adjusting your bedtime to complete full 90-minute cycles."
+      "q": "Why do I feel groggy when I wake up?",
+      "a": "Waking up in the middle of a deep sleep phase can cause grogginess and sleep inertia. Try adjusting your bedtime to complete full 90-minute cycles, which allows you to wake up during lighter sleep phases."
     },
     {
-      "question": "Should I keep the same sleep schedule on weekends?",
-      "answer": "Yes, maintaining consistent sleep and wake times, even on weekends, helps regulate your circadian rhythm and improves overall sleep quality."
+      "q": "Should I keep the same sleep schedule on weekends?",
+      "a": "Yes, maintaining consistent sleep and wake times, even on weekends, helps regulate your circadian rhythm and improves overall sleep quality. 'Social jet lag' from irregular schedules can disrupt your natural sleep patterns."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "BMI Calculator",
+      "url": "/health/bmi-calculator"
+    },
+    {
+      "title": "Calorie Calculator",
+      "url": "/health/calorie-calculator"
+    },
+    {
+      "title": "Water Intake Calculator",
+      "url": "/health/water-intake-calculator"
+    },
+    {
+      "title": "Heart Rate Calculator",
+      "url": "/health/heart-rate-calculator"
+    },
+    {
+      "title": "Ideal Weight Calculator",
+      "url": "/health/ideal-weight-calculator"
     }
   ]
 }

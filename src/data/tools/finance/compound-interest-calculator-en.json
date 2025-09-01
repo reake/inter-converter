@@ -1,41 +1,107 @@
 {
-  "about": [
-    "The Compound Interest Calculator demonstrates the power of compound interest over time. This essential financial tool helps you understand how your investments and savings can grow exponentially when interest is reinvested and earns additional returns.",
-    "Whether you're planning for retirement, education savings, or long-term wealth building, this calculator shows the dramatic difference compound interest makes compared to simple interest calculations."
-  ],
-  "howToUse": [
-    "Enter your initial principal amount",
-    "Set the annual interest rate (APR)",
-    "Choose the compounding frequency (daily, monthly, quarterly, annually)",
-    "Enter the investment time period in years",
-    "Add any regular contributions (optional)",
-    "View the compound growth projection and final amount"
-  ],
+  "about": {
+    "title": "About Compound Interest Calculator",
+    "description": "The Compound Interest Calculator demonstrates the power of compound interest over time. This essential financial tool helps you understand how your investments and savings can grow exponentially when interest is reinvested and earns additional returns. Whether you're planning for retirement, education savings, or long-term wealth building, this calculator shows the dramatic difference compound interest makes compared to simple interest calculations."
+  },
+  "howTo": {
+    "title": "How to Use the Compound Interest Calculator",
+    "steps": [
+      {
+        "title": "Enter Principal Amount",
+        "description": "Input your initial investment or savings amount that will earn compound interest."
+      },
+      {
+        "title": "Set Interest Rate",
+        "description": "Enter the annual interest rate (APR) offered by your investment or savings account."
+      },
+      {
+        "title": "Choose Compounding Frequency",
+        "description": "Select how often interest compounds: daily, monthly, quarterly, or annually."
+      },
+      {
+        "title": "Set Time Period",
+        "description": "Enter the investment duration in years to see long-term compound growth."
+      },
+      {
+        "title": "Add Regular Contributions",
+        "description": "Optionally add regular monthly or annual contributions to boost growth."
+      },
+      {
+        "title": "Analyze Results",
+        "description": "Review compound growth projections, final amount, and total interest earned."
+      }
+    ],
+    "tips": [
+      "Start investing early to maximize compound interest benefits",
+      "Choose higher compounding frequencies when possible",
+      "Make regular contributions to accelerate wealth building",
+      "Compare compound vs simple interest to see the difference"
+    ]
+  },
   "features": [
-    "Multiple compounding frequencies supported",
-    "Regular contribution calculations",
-    "Compound vs simple interest comparison",
-    "Detailed growth timeline and charts",
-    "Future value projections",
-    "Interest earned breakdown",
-    "Investment growth visualization"
+    {
+      "title": "Multiple Compounding Frequencies",
+      "description": "Support for daily, monthly, quarterly, and annual compounding calculations."
+    },
+    {
+      "title": "Regular Contributions",
+      "description": "Calculate growth with additional monthly or annual contributions."
+    },
+    {
+      "title": "Compound vs Simple Interest",
+      "description": "Compare compound interest growth against simple interest calculations."
+    },
+    {
+      "title": "Growth Timeline Charts",
+      "description": "Visual representation of investment growth over time with detailed projections."
+    },
+    {
+      "title": "Future Value Projections",
+      "description": "Accurate calculations of future investment value based on compound growth."
+    },
+    {
+      "title": "Interest Breakdown",
+      "description": "Detailed analysis of total interest earned and principal growth."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What is compound interest and how does it work?",
-      "answer": "Compound interest is interest calculated on both the initial principal and previously earned interest. It creates exponential growth as your earnings generate their own earnings over time."
+      "q": "What is compound interest and how does it work?",
+      "a": "Compound interest is interest calculated on both the initial principal and previously earned interest. It creates exponential growth as your earnings generate their own earnings over time, often called 'interest on interest'."
     },
     {
-      "question": "How often should interest be compounded for maximum growth?",
-      "answer": "More frequent compounding (daily vs annually) results in slightly higher returns. However, the difference becomes less significant with higher interest rates and longer time periods."
+      "q": "How often should interest be compounded for maximum growth?",
+      "a": "More frequent compounding (daily vs annually) results in slightly higher returns. However, the difference becomes less significant with higher interest rates and longer time periods. Daily compounding typically provides the best growth."
     },
     {
-      "question": "What's the difference between compound and simple interest?",
-      "answer": "Simple interest is calculated only on the principal amount. Compound interest is calculated on principal plus accumulated interest, resulting in exponentially higher returns over time."
+      "q": "What's the difference between compound and simple interest?",
+      "a": "Simple interest is calculated only on the principal amount. Compound interest is calculated on principal plus accumulated interest, resulting in exponentially higher returns over time. The difference becomes dramatic over long periods."
     },
     {
-      "question": "How do regular contributions affect compound growth?",
-      "answer": "Regular contributions significantly boost compound growth by continuously adding new principal that also earns compound interest. Even small regular contributions can have dramatic long-term effects."
+      "q": "How do regular contributions affect compound growth?",
+      "a": "Regular contributions significantly boost compound growth by continuously adding new principal that also earns compound interest. Even small regular contributions can have dramatic long-term effects due to the power of compounding."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Investment Calculator",
+      "url": "/finance/investment-calculator"
+    },
+    {
+      "title": "Savings Calculator",
+      "url": "/finance/savings-calculator"
+    },
+    {
+      "title": "Retirement Calculator",
+      "url": "/finance/retirement-calculator"
+    },
+    {
+      "title": "Future Value Calculator",
+      "url": "/finance/future-value-calculator"
+    },
+    {
+      "title": "Annuity Calculator",
+      "url": "/finance/annuity-calculator"
     }
   ]
 }

@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Break Even Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Break Even Calculator",
+    "description": "The Break Even Calculator is an essential business analysis tool that helps you determine the point where your total revenues equal your total costs, resulting in neither profit nor loss. This calculator is crucial for business planning, pricing strategies, and financial decision-making. Whether you're launching a new product, evaluating business viability, or setting sales targets, this tool provides clear insights into the minimum performance required to cover all expenses and start generating profit."
+  },
+  "howTo": {
+    "title": "How to Use the Break Even Calculator",
+    "steps": [
+      {
+        "title": "Fixed Costs",
+        "description": "Enter your total fixed costs including rent, salaries, insurance, and other expenses that don't change with sales volume."
+      },
+      {
+        "title": "Variable Cost per Unit",
+        "description": "Input the variable cost to produce or deliver one unit of your product or service."
+      },
+      {
+        "title": "Selling Price per Unit",
+        "description": "Enter the price at which you sell each unit of your product or service to customers."
+      },
+      {
+        "title": "Calculate Break Even",
+        "description": "Review your break-even point in units and revenue, plus contribution margin analysis."
+      },
+      {
+        "title": "Scenario Analysis",
+        "description": "Test different pricing and cost scenarios to optimize your business model."
+      },
+      {
+        "title": "Set Sales Targets",
+        "description": "Use break-even results to set realistic sales goals and profit targets."
+      }
+    ],
+    "tips": [
+      "Accurately categorize costs as fixed or variable for precise calculations",
+      "Consider seasonal variations in fixed and variable costs",
+      "Use break-even analysis to evaluate new product launches",
+      "Regularly update calculations as costs and prices change"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Break Even Point Calculation",
+      "description": "Calculate the exact number of units and revenue needed to break even on your investment."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Contribution Margin Analysis",
+      "description": "Analyze contribution margin per unit and percentage to understand profitability dynamics."
+    },
+    {
+      "title": "Scenario Planning",
+      "description": "Test different pricing strategies and cost structures to optimize business performance."
+    },
+    {
+      "title": "Profit Target Analysis",
+      "description": "Calculate units needed to achieve specific profit targets beyond break-even point."
+    },
+    {
+      "title": "Cost Structure Optimization",
+      "description": "Analyze the impact of fixed vs. variable cost changes on break-even requirements."
+    },
+    {
+      "title": "Business Viability Assessment",
+      "description": "Evaluate whether business ideas are financially viable based on market conditions."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is a break-even point?",
+      "a": "The break-even point is where total revenue equals total costs, resulting in zero profit or loss. It's calculated as Fixed Costs ÷ (Selling Price per Unit - Variable Cost per Unit). This shows the minimum sales needed to cover all expenses."
+    },
+    {
+      "q": "What's the difference between fixed and variable costs?",
+      "a": "Fixed costs remain constant regardless of sales volume (rent, salaries, insurance), while variable costs change with production volume (materials, shipping, commissions). Proper categorization is crucial for accurate break-even analysis."
+    },
+    {
+      "q": "How can I use break-even analysis for pricing?",
+      "a": "Break-even analysis helps set minimum pricing by showing the lowest price that covers all costs. Test different price points to see how they affect break-even volume and choose prices that balance competitiveness with profitability."
+    },
+    {
+      "q": "What is contribution margin and why is it important?",
+      "a": "Contribution margin is the difference between selling price and variable cost per unit. It represents how much each sale contributes to covering fixed costs and generating profit. Higher contribution margins mean fewer units needed to break even."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "ROI Calculator",
+      "url": "/finance/roi-calculator"
+    },
+    {
+      "title": "Business Loan Calculator",
+      "url": "/finance/business-loan-calculator"
+    },
+    {
+      "title": "Budget Calculator",
+      "url": "/finance/budget-calculator"
+    },
+    {
+      "title": "Profit Margin Calculator",
+      "url": "/finance/profit-margin-calculator"
+    },
+    {
+      "title": "Investment Calculator",
+      "url": "/finance/investment-calculator"
     }
   ]
 }

@@ -1,39 +1,103 @@
 {
-  "about": [
-    "The Working Days Calculator computes the number of business days between two dates, excluding weekends and optionally holidays. Essential for project planning, payroll calculations, and business scheduling.",
-    "Supports custom holiday calendars and different working week configurations, making it adaptable to various business environments and international working patterns."
-  ],
-  "howToUse": [
-    "Enter the start date",
-    "Enter the end date",
-    "Select your country for holiday calendar",
-    "Choose working days configuration",
-    "View total working days and breakdown"
-  ],
+  "about": {
+    "title": "About Working Days Calculator",
+    "description": "The Working Days Calculator computes the number of business days between two dates, excluding weekends and optionally holidays. Essential for project planning, payroll calculations, and business scheduling. Supports custom holiday calendars and different working week configurations, making it adaptable to various business environments and international working patterns."
+  },
+  "howTo": {
+    "title": "How to Use the Working Days Calculator",
+    "steps": [
+      {
+        "title": "Enter Start Date",
+        "description": "Select the beginning date for your working days calculation period."
+      },
+      {
+        "title": "Enter End Date",
+        "description": "Choose the ending date to calculate business days between the two dates."
+      },
+      {
+        "title": "Select Country",
+        "description": "Choose your country or region to apply the appropriate holiday calendar."
+      },
+      {
+        "title": "Configure Working Week",
+        "description": "Set which days are considered working days based on your business schedule."
+      },
+      {
+        "title": "View Results",
+        "description": "See total working days with detailed breakdown of weekends and holidays excluded."
+      }
+    ],
+    "tips": [
+      "Consider local holidays when planning international projects",
+      "Use custom working week for businesses with non-standard schedules",
+      "Account for regional variations in holiday observances",
+      "Plan buffer time for critical business deadlines"
+    ]
+  },
   "features": [
-    "Business days calculation",
-    "Holiday calendar integration",
-    "Custom working week setup",
-    "Multiple country support",
-    "Weekend exclusion options",
-    "Detailed day breakdown"
+    {
+      "title": "Business Days Calculation",
+      "description": "Accurate calculation of working days excluding weekends and holidays."
+    },
+    {
+      "title": "Holiday Calendar Integration",
+      "description": "Built-in holiday calendars for major countries and regions worldwide."
+    },
+    {
+      "title": "Custom Working Week",
+      "description": "Configure which days are working days to match your business schedule."
+    },
+    {
+      "title": "Multiple Country Support",
+      "description": "Support for different national and regional holiday calendars."
+    },
+    {
+      "title": "Weekend Exclusion",
+      "description": "Flexible weekend configuration for different cultural working patterns."
+    },
+    {
+      "title": "Detailed Breakdown",
+      "description": "Complete analysis showing total days, working days, weekends, and holidays."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "Which holidays are included?",
-      "answer": "The calculator includes major national holidays for supported countries. You can also customize the holiday list for your specific needs."
+      "q": "Which holidays are included?",
+      "a": "The calculator includes major national holidays for supported countries including New Year's Day, Independence Day, Christmas, and other significant holidays. You can also customize the holiday list for your specific business needs."
     },
     {
-      "question": "Can I change the working week?",
-      "answer": "Yes, you can configure which days are considered working days, accommodating different business schedules and cultural practices."
+      "q": "Can I change the working week?",
+      "a": "Yes, you can configure which days are considered working days, accommodating different business schedules and cultural practices. For example, some businesses work Sunday-Thursday instead of Monday-Friday."
     },
     {
-      "question": "How are partial days handled?",
-      "answer": "The calculator counts complete working days only. If you need partial day calculations, use the date difference calculator instead."
+      "q": "How are partial days handled?",
+      "a": "The calculator counts complete working days only. If you need partial day calculations or hour-based calculations, use the date difference calculator or time duration calculator instead."
     },
     {
-      "question": "Does it support different countries?",
-      "answer": "Yes, the calculator includes holiday calendars for major countries and regions, with options to add custom holidays."
+      "q": "Does it support different countries?",
+      "a": "Yes, the calculator includes holiday calendars for major countries and regions worldwide, with options to add custom holidays for specific business requirements or local observances."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Date Calculator",
+      "url": "/time/date-calculator"
+    },
+    {
+      "title": "Date Difference Calculator",
+      "url": "/time/date-difference-calculator"
+    },
+    {
+      "title": "Business Hours Calculator",
+      "url": "/time/business-hours-calculator"
+    },
+    {
+      "title": "Project Timeline Calculator",
+      "url": "/time/project-timeline-calculator"
+    },
+    {
+      "title": "Holiday Calendar",
+      "url": "/time/holiday-calendar"
     }
   ]
 }

@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Student Loan Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Student Loan Calculator - Education Debt Planning Tool",
+    "description": "The Student Loan Calculator is a comprehensive education financing tool designed to help students and graduates calculate monthly payments, total costs, and repayment strategies for student loans. This calculator supports federal and private student loans, various repayment plans, and loan forgiveness scenarios. Whether you're planning for college costs or managing existing student debt, this tool provides accurate projections for education loan scenarios."
+  },
+  "howTo": {
+    "title": "How to Use the Student Loan Calculator",
+    "steps": [
+      {
+        "title": "Enter Loan Details",
+        "description": "Input your student loan balance, interest rate, and loan type (federal or private)."
+      },
+      {
+        "title": "Select Repayment Plan",
+        "description": "Choose from standard, graduated, extended, or income-driven repayment plans."
+      },
+      {
+        "title": "Add Income Information",
+        "description": "Enter your current income for income-driven repayment plan calculations."
+      },
+      {
+        "title": "Review Payment Options",
+        "description": "Compare monthly payments across different repayment plans."
+      },
+      {
+        "title": "Calculate Total Costs",
+        "description": "Analyze total interest costs and repayment timeline for each plan."
+      },
+      {
+        "title": "Explore Forgiveness Options",
+        "description": "Calculate potential savings from loan forgiveness programs."
+      }
+    ],
+    "tips": [
+      "Federal loans offer more flexible repayment options than private loans",
+      "Income-driven plans can lower monthly payments but increase total interest",
+      "Consider loan forgiveness programs for public service careers",
+      "Making extra payments reduces total interest and payoff time"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Monthly Payment Calculator",
+      "description": "Calculate exact monthly payments for different loan amounts, rates, and repayment terms."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Repayment Plan Comparison",
+      "description": "Compare standard, graduated, extended, and income-driven repayment options."
+    },
+    {
+      "title": "Interest Cost Analysis",
+      "description": "Analyze total interest costs over the life of the loan for different repayment strategies."
+    },
+    {
+      "title": "Federal vs Private Comparison",
+      "description": "Compare federal student loan benefits with private loan terms and rates."
+    },
+    {
+      "title": "Loan Forgiveness Calculator",
+      "description": "Calculate potential savings from Public Service Loan Forgiveness and other programs."
+    },
+    {
+      "title": "Debt-to-Income Analysis",
+      "description": "Evaluate student loan payments as a percentage of expected post-graduation income."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What's the difference between federal and private student loans?",
+      "a": "Federal loans offer fixed rates, income-driven repayment plans, deferment options, and potential loan forgiveness. Private loans may have variable rates, fewer repayment options, but sometimes lower rates for qualified borrowers."
+    },
+    {
+      "q": "What are current federal student loan interest rates?",
+      "a": "For 2023-24, federal undergraduate loan rates are 5.50% for direct subsidized and unsubsidized loans. Graduate student rates are 7.05%, and PLUS loan rates are 8.05%. Rates are set annually by Congress."
+    },
+    {
+      "q": "Should I choose income-driven repayment?",
+      "a": "Income-driven repayment can lower monthly payments based on income and family size, but may increase total interest paid. It's beneficial if you have high debt relative to income or qualify for loan forgiveness programs."
+    },
+    {
+      "q": "How much student debt is too much?",
+      "a": "A common guideline is to borrow no more than your expected first-year salary after graduation. Keep total monthly student loan payments under 10-15% of your gross monthly income for manageable debt levels."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Education Savings Calculator",
+      "url": "/finance/education-savings-calculator"
+    },
+    {
+      "title": "Loan Consolidation Calculator",
+      "url": "/finance/loan-consolidation-calculator"
+    },
+    {
+      "title": "Personal Loan Calculator",
+      "url": "/finance/personal-loan-calculator"
+    },
+    {
+      "title": "Debt Payoff Calculator",
+      "url": "/finance/debt-payoff-calculator"
+    },
+    {
+      "title": "Budget Calculator",
+      "url": "/finance/budget-calculator"
     }
   ]
 }

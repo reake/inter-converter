@@ -1,39 +1,102 @@
 {
-  "about": [
-    "The Celsius to Fahrenheit Converter provides instant temperature conversion between Celsius (°C) and Fahrenheit (°F) scales. Essential for weather interpretation, cooking, scientific calculations, and international communication.",
-    "Uses the precise conversion formula °F = (°C × 9/5) + 32 to ensure accurate results for all temperature ranges, from extreme cold to high heat applications."
-  ],
-  "howToUse": [
-    "Enter temperature in Celsius in the input field",
-    "View the instant Fahrenheit conversion result",
-    "Use the common temperatures tab for quick reference",
-    "Copy results or use the conversion formula",
-    "Switch to reverse conversion if needed"
-  ],
+  "about": {
+    "title": "About Celsius to Fahrenheit Converter",
+    "description": "The Celsius to Fahrenheit Converter provides instant temperature conversion between Celsius (°C) and Fahrenheit (°F) scales. Essential for weather interpretation, cooking, scientific calculations, and international communication. Uses the precise conversion formula °F = (°C × 9/5) + 32 to ensure accurate results for all temperature ranges, from extreme cold to high heat applications. Perfect for travelers, chefs, scientists, and anyone working with international temperature measurements."
+  },
+  "howTo": {
+    "title": "How to Convert Celsius to Fahrenheit",
+    "steps": [
+      {
+        "title": "Enter Celsius",
+        "description": "Input the temperature value in Celsius (°C) that you want to convert."
+      },
+      {
+        "title": "Instant Calculation",
+        "description": "The Fahrenheit equivalent will be calculated automatically using the formula (°C × 9/5) + 32."
+      },
+      {
+        "title": "View Results",
+        "description": "See the converted temperature displayed in Fahrenheit (°F) with high precision."
+      },
+      {
+        "title": "Copy Results",
+        "description": "Copy the converted temperature value for use in your applications."
+      }
+    ],
+    "tips": [
+      "Remember: 0°C = 32°F (water freezing point)",
+      "Quick estimate: multiply by 2 and add 30",
+      "100°C = 212°F (water boiling point)"
+    ]
+  },
   "features": [
-    "Bidirectional temperature conversion",
-    "Common temperature reference table",
-    "Precise conversion formulas",
-    "Weather and cooking applications",
-    "Scientific accuracy with decimal precision",
-    "Instant calculation as you type"
+    {
+      "title": "Instant C to F Conversion",
+      "description": "Convert Celsius to Fahrenheit instantly with real-time calculation as you type."
+    },
+    {
+      "title": "High Precision Formula",
+      "description": "Uses the exact conversion formula (°C × 9/5) + 32 for scientific accuracy."
+    },
+    {
+      "title": "Temperature Reference",
+      "description": "Common temperature reference points for weather, cooking, and scientific applications."
+    },
+    {
+      "title": "Decimal Precision",
+      "description": "Accurate results with full decimal place support for precise measurements."
+    },
+    {
+      "title": "Mobile Optimized",
+      "description": "Responsive design works perfectly on all devices and screen sizes."
+    },
+    {
+      "title": "Educational Information",
+      "description": "Learn about temperature scales and conversion methods."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What is the formula for Celsius to Fahrenheit?",
-      "answer": "The formula is °F = (°C × 9/5) + 32. For example, 0°C = 32°F and 100°C = 212°F."
+      "q": "What is the formula for converting Celsius to Fahrenheit?",
+      "a": "The formula is: °F = (°C × 9/5) + 32. For example, to convert 20°C: (20 × 9/5) + 32 = 36 + 32 = 68°F. Our Celsius to Fahrenheit converter applies this formula automatically for instant results."
     },
     {
-      "question": "Why are there two temperature scales?",
-      "answer": "Celsius is based on water's freezing (0°C) and boiling (100°C) points, while Fahrenheit uses different reference points, making it more granular for everyday temperatures."
+      "q": "Why are there different temperature scales?",
+      "a": "Celsius is based on water's freezing point (0°C) and boiling point (100°C), making it intuitive for scientific use. Fahrenheit uses 32°F for freezing and 212°F for boiling, providing more granular measurements for everyday weather temperatures."
     },
     {
-      "question": "Which countries use Fahrenheit?",
-      "answer": "Primarily the United States, Bahamas, Belize, and Cayman Islands use Fahrenheit. Most other countries use Celsius."
+      "q": "Which countries use Fahrenheit vs Celsius?",
+      "a": "Primarily the United States, Bahamas, Belize, and Cayman Islands use Fahrenheit for everyday temperatures. Most other countries worldwide use Celsius as their standard temperature scale, along with all scientific applications."
     },
     {
-      "question": "How accurate is the conversion?",
-      "answer": "The conversion is mathematically precise. Any rounding depends on the number of decimal places you choose to display."
+      "q": "How accurate is this Celsius to Fahrenheit converter?",
+      "a": "The conversion is mathematically precise using the exact formula. Our converter provides high decimal precision suitable for scientific research, cooking, weather analysis, and professional applications meeting international standards."
+    },
+    {
+      "q": "What are common Celsius to Fahrenheit conversions?",
+      "a": "Common temperature conversions include: 0°C = 32°F (freezing), 20°C = 68°F (room temperature), 37°C = 98.6°F (body temperature), 100°C = 212°F (boiling), and -40°C = -40°F (extreme cold)."
+    },
+    {
+      "q": "How do I convert 25 degrees Celsius to Fahrenheit?",
+      "a": "25°C converts to 77°F using the formula: (25 × 9/5) + 32 = 45 + 32 = 77°F. This is a comfortable room temperature often used in climate control settings."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Fahrenheit to Celsius Converter",
+      "url": "/unit/fahrenheit-to-celsius-converter"
+    },
+    {
+      "title": "Temperature Converter",
+      "url": "/unit/temperature-converter"
+    },
+    {
+      "title": "Unit Converter",
+      "url": "/unit/unit-converter"
+    },
+    {
+      "title": "Unit Tools Category",
+      "url": "/unit"
     }
   ]
 }

@@ -1,39 +1,107 @@
 {
-  "about": [
-    "The Online Stopwatch is a precise digital timer that measures elapsed time from start to stop. Perfect for sports timing, productivity tracking, cooking, workouts, or any activity requiring accurate time measurement.",
-    "Features lap timing, split times, and can run continuously in the background. The stopwatch maintains accuracy even when switching between browser tabs or applications."
-  ],
-  "howToUse": [
-    "Click start to begin timing",
-    "Use lap button to record split times",
-    "Click stop to pause the timer",
-    "Reset to clear and start over",
-    "View lap times and total elapsed time"
-  ],
+  "about": {
+    "title": "About Online Stopwatch - Precision Timing & Lap Timer",
+    "description": "The Online Stopwatch is a precise digital timer that measures elapsed time from start to stop with millisecond accuracy. Perfect for sports timing, productivity tracking, cooking, workouts, or any activity requiring accurate time measurement. Features lap timing, split times, and can run continuously in the background. The stopwatch maintains accuracy even when switching between browser tabs or applications, making it ideal for professional timing needs."
+  },
+  "howTo": {
+    "title": "How to Use the Online Stopwatch",
+    "steps": [
+      {
+        "title": "Start Timing",
+        "description": "Click the start button to begin precise time measurement with millisecond accuracy."
+      },
+      {
+        "title": "Record Lap Times",
+        "description": "Use the lap button to record split times without stopping the main timer."
+      },
+      {
+        "title": "Stop Timer",
+        "description": "Click stop to pause the timer while maintaining the current elapsed time."
+      },
+      {
+        "title": "Reset Stopwatch",
+        "description": "Use reset to clear all times and return to zero for a fresh timing session."
+      },
+      {
+        "title": "View Results",
+        "description": "Review lap times, split times, and total elapsed time in the results display."
+      },
+      {
+        "title": "Continue Timing",
+        "description": "Resume timing from where you stopped or start a new session as needed."
+      }
+    ],
+    "tips": [
+      "Keep the browser tab open for continuous timing accuracy",
+      "Use lap times to track intervals during long timing sessions",
+      "The stopwatch works in background tabs without losing precision",
+      "Record important lap times before closing the browser"
+    ]
+  },
   "features": [
-    "Precise millisecond timing",
-    "Lap and split time recording",
-    "Background operation support",
-    "Large, easy-to-read display",
-    "Start, stop, and reset controls",
-    "Lap time history tracking"
+    {
+      "title": "Millisecond Precision",
+      "description": "High-precision timing accurate to milliseconds using advanced browser timing APIs."
+    },
+    {
+      "title": "Lap Time Recording",
+      "description": "Record unlimited lap times with both split and cumulative time tracking."
+    },
+    {
+      "title": "Background Operation",
+      "description": "Continues running accurately even when switching browser tabs or applications."
+    },
+    {
+      "title": "Large Display",
+      "description": "Easy-to-read digital display with clear time formatting for quick reference."
+    },
+    {
+      "title": "Simple Controls",
+      "description": "Intuitive start, stop, lap, and reset controls for effortless operation."
+    },
+    {
+      "title": "Time History",
+      "description": "Complete lap time history tracking with detailed timing breakdown."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "How accurate is the stopwatch?",
-      "answer": "The stopwatch is accurate to milliseconds and uses high-precision browser timing APIs for reliable measurements."
+      "q": "How accurate is the online stopwatch?",
+      "a": "The stopwatch is accurate to milliseconds and uses high-precision browser timing APIs for reliable measurements. It maintains accuracy comparable to professional timing equipment for most applications."
     },
     {
-      "question": "Can I record multiple lap times?",
-      "answer": "Yes, you can record unlimited lap times during a timing session, with each lap showing both split and cumulative times."
+      "q": "Can I record multiple lap times during timing?",
+      "a": "Yes, you can record unlimited lap times during a timing session. Each lap shows both the split time (time for that specific lap) and cumulative time (total time elapsed), perfect for interval training or race timing."
     },
     {
-      "question": "Does it work in the background?",
-      "answer": "Yes, the stopwatch continues running accurately even when you switch to other browser tabs or minimize the window."
+      "q": "Does the stopwatch work in background tabs?",
+      "a": "Yes, the stopwatch continues running accurately even when you switch to other browser tabs or minimize the window. The precision timing continues uninterrupted in the background."
     },
     {
-      "question": "What happens if I accidentally close the browser?",
-      "answer": "The timing will be lost if you close the browser. For important timing sessions, keep the tab open or use the lap feature to record intermediate times."
+      "q": "What happens if I accidentally close the browser?",
+      "a": "The timing data will be lost if you close the browser completely. For important timing sessions, keep the tab open or regularly record lap times to capture intermediate measurements before any potential interruption."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Countdown Timer",
+      "url": "/time/countdown-timer"
+    },
+    {
+      "title": "World Clock",
+      "url": "/time/world-clock"
+    },
+    {
+      "title": "Unix Timestamp Converter",
+      "url": "/time/unix-timestamp-converter"
+    },
+    {
+      "title": "Time Zone Converter",
+      "url": "/time/timezone-converter"
+    },
+    {
+      "title": "Date Calculator",
+      "url": "/time/date-calculator"
     }
   ]
 }

@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Consolidation Loan Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Consolidation Loan Calculator - Multi-Debt Consolidation Tool",
+    "description": "The Consolidation Loan Calculator is a comprehensive debt management tool designed to help you evaluate the benefits of consolidating multiple debts into a single loan with potentially better terms. This calculator compares your current debt payments with consolidation loan scenarios, calculating monthly payment changes, interest savings, and total cost differences. Whether you're considering personal loans, balance transfers, or other consolidation options, this tool provides accurate projections for debt consolidation strategies."
+  },
+  "howTo": {
+    "title": "How to Use the Consolidation Loan Calculator",
+    "steps": [
+      {
+        "title": "List Current Debts",
+        "description": "Enter all your existing debts including balances, interest rates, and minimum payments."
+      },
+      {
+        "title": "Enter Consolidation Terms",
+        "description": "Input the proposed consolidation loan amount, interest rate, and repayment term."
+      },
+      {
+        "title": "Add Loan Fees",
+        "description": "Include any origination fees, closing costs, or other consolidation loan expenses."
+      },
+      {
+        "title": "Compare Monthly Payments",
+        "description": "Review how consolidation affects your total monthly debt payments."
+      },
+      {
+        "title": "Calculate Interest Savings",
+        "description": "Analyze total interest savings or additional costs over the loan term."
+      },
+      {
+        "title": "Evaluate Overall Benefits",
+        "description": "Assess whether consolidation improves your financial situation and cash flow."
+      }
+    ],
+    "tips": [
+      "Only consolidate if you can secure a lower average interest rate",
+      "Consider the total cost over time, not just monthly payment reduction",
+      "Avoid accumulating new debt after consolidation",
+      "Factor in all fees when calculating net savings"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Multi-Debt Analysis",
+      "description": "Analyze multiple existing debts with different balances, rates, and payment terms."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Payment Comparison",
+      "description": "Compare current total monthly payments with proposed consolidation loan payment."
+    },
+    {
+      "title": "Interest Savings Calculator",
+      "description": "Calculate total interest savings or additional costs from debt consolidation."
+    },
+    {
+      "title": "Payoff Timeline Analysis",
+      "description": "Compare time to become debt-free with current payments vs. consolidation loan."
+    },
+    {
+      "title": "Break-Even Analysis",
+      "description": "Calculate how long it takes to recover consolidation fees through interest savings."
+    },
+    {
+      "title": "Loan Type Comparison",
+      "description": "Compare different consolidation options including personal loans, balance transfers, and home equity."
+    }
+  ],
+  "faq": [
+    {
+      "q": "When does debt consolidation make sense?",
+      "a": "Debt consolidation makes sense when you can secure a lower interest rate than your current average rate, simplify multiple payments, or need lower monthly payments. It's most beneficial for high-interest credit card debt consolidated into lower-rate loans."
+    },
+    {
+      "q": "What types of loans can be used for debt consolidation?",
+      "a": "Common consolidation options include personal loans (6-36% APR), balance transfer credit cards (0-25% APR), home equity loans (5-10% APR), and 401k loans. Each has different qualification requirements, rates, and terms."
+    },
+    {
+      "q": "Will debt consolidation hurt my credit score?",
+      "a": "Initially, debt consolidation may temporarily lower your credit score due to hard inquiries and new accounts. However, it can improve your score long-term by reducing credit utilization and establishing a consistent payment history."
+    },
+    {
+      "q": "What are the risks of debt consolidation?",
+      "a": "Risks include potentially paying more interest over time if you extend repayment periods, accumulating new debt on cleared accounts, and possible fees. Some people lose motivation to pay off debt quickly with lower monthly payments."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Debt Consolidation Calculator",
+      "url": "/finance/debt-consolidation-calculator"
+    },
+    {
+      "title": "Personal Loan Calculator",
+      "url": "/finance/personal-loan-calculator"
+    },
+    {
+      "title": "Balance Transfer Calculator",
+      "url": "/finance/balance-transfer-calculator"
+    },
+    {
+      "title": "Credit Card Payoff Calculator",
+      "url": "/finance/credit-card-payoff-calculator"
+    },
+    {
+      "title": "Home Equity Loan Calculator",
+      "url": "/finance/home-equity-loan-calculator"
     }
   ]
 }

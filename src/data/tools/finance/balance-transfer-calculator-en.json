@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Balance Transfer Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Balance Transfer Calculator - Credit Card Debt Management Tool",
+    "description": "The Balance Transfer Calculator is a comprehensive debt management tool designed to help you evaluate the benefits of transferring credit card balances to lower-interest cards. Whether you're looking to consolidate multiple credit card debts or take advantage of promotional 0% APR offers, this calculator shows potential savings in interest costs and helps you create an effective debt payoff strategy. Understanding balance transfer calculations is essential for optimizing your debt management and potentially saving thousands in interest charges."
+  },
+  "howTo": {
+    "title": "How to Use the Balance Transfer Calculator",
+    "steps": [
+      {
+        "title": "Current Debt Details",
+        "description": "Enter your existing credit card balances, interest rates, and minimum payments."
+      },
+      {
+        "title": "Transfer Card Terms",
+        "description": "Input the balance transfer card's promotional APR, regular APR, and promotional period length."
+      },
+      {
+        "title": "Transfer Fees",
+        "description": "Include balance transfer fees (typically 3-5% of transferred amount) in your calculations."
+      },
+      {
+        "title": "Choose Payment Strategy",
+        "description": "Enter your planned monthly payment amount for the transferred balance."
+      },
+      {
+        "title": "Compare Scenarios",
+        "description": "Review interest savings and payoff timelines with and without balance transfer."
+      },
+      {
+        "title": "Calculate Break-Even Point",
+        "description": "Determine when transfer fees are recovered through interest savings."
+      }
+    ],
+    "tips": [
+      "Look for 0% promotional APR periods of 12-21 months for maximum savings",
+      "Factor in balance transfer fees (typically 3-5% of transferred amount)",
+      "Pay off the balance before promotional rate expires",
+      "Avoid using the new card for purchases during promotional period"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Interest Savings Calculator",
+      "description": "Calculate total interest savings from transferring balances to lower-rate cards."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Promotional Rate Analysis",
+      "description": "Analyze savings during 0% APR promotional periods and plan payoff strategies."
+    },
+    {
+      "title": "Transfer Fee Calculator",
+      "description": "Factor in balance transfer fees and calculate break-even points."
+    },
+    {
+      "title": "Payoff Timeline Comparison",
+      "description": "Compare debt payoff timelines with current cards vs balance transfer cards."
+    },
+    {
+      "title": "Multiple Card Analysis",
+      "description": "Evaluate transferring balances from multiple high-interest cards."
+    },
+    {
+      "title": "Post-Promotional Rate Planning",
+      "description": "Plan for rate increases after promotional periods end."
+    }
+  ],
+  "faq": [
+    {
+      "q": "When does a balance transfer make sense?",
+      "a": "Balance transfers make sense when you can secure a significantly lower interest rate, especially 0% promotional rates, and you have a plan to pay off the debt during the promotional period. The savings should outweigh transfer fees and you should avoid accumulating new debt."
+    },
+    {
+      "q": "What are typical balance transfer fees?",
+      "a": "Balance transfer fees typically range from 3-5% of the transferred amount, with a minimum fee of $5-10. Some cards offer promotional periods with no transfer fees, but these are less common. Factor these fees into your savings calculations."
+    },
+    {
+      "q": "How long do promotional 0% APR periods last?",
+      "a": "Promotional 0% APR periods typically last 12-21 months, with some extending to 24 months. After the promotional period ends, the rate increases to the card's regular APR, which can be 15-25% or higher."
+    },
+    {
+      "q": "Will a balance transfer affect my credit score?",
+      "a": "Balance transfers can temporarily lower your credit score due to hard inquiries and new account openings. However, they can improve your score long-term by reducing credit utilization ratios and helping you pay down debt faster."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Credit Card Payoff Calculator",
+      "url": "/finance/credit-card-payoff-calculator"
+    },
+    {
+      "title": "Debt Consolidation Calculator",
+      "url": "/finance/debt-consolidation-calculator"
+    },
+    {
+      "title": "Credit Utilization Calculator",
+      "url": "/finance/credit-utilization-calculator"
+    },
+    {
+      "title": "Debt Payoff Calculator",
+      "url": "/finance/debt-payoff-calculator"
+    },
+    {
+      "title": "Personal Loan Calculator",
+      "url": "/finance/personal-loan-calculator"
     }
   ]
 }

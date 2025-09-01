@@ -1,46 +1,102 @@
 {
-  "about": [
-    "The Fahrenheit to Celsius Converter is a specialized tool for converting temperatures from the Fahrenheit scale to the Celsius scale. This converter is essential for international communication, scientific work, and everyday temperature understanding.",
-    "Fahrenheit is primarily used in the United States, while Celsius is the standard in most other countries and scientific applications. This converter bridges that gap with precise mathematical conversion.",
-    "Whether you're traveling internationally, following international recipes, or working with scientific data, this tool provides instant and accurate Fahrenheit to Celsius conversions."
-  ],
-  "howToUse": [
-    "Enter the temperature in Fahrenheit (°F)",
-    "The Celsius equivalent will be calculated instantly",
-    "View the result in Celsius (°C)",
-    "Copy the converted temperature for your use",
-    "Use the reverse converter for Celsius to Fahrenheit"
-  ],
+  "about": {
+    "title": "About Fahrenheit to Celsius Converter",
+    "description": "The Fahrenheit to Celsius Converter is a specialized tool for converting temperatures from the Fahrenheit scale to the Celsius scale. This converter is essential for international communication, scientific work, and everyday temperature understanding. Fahrenheit is primarily used in the United States, while Celsius is the standard in most other countries and scientific applications. Whether you're traveling internationally, following international recipes, or working with scientific data, this tool provides instant and accurate Fahrenheit to Celsius conversions with professional precision."
+  },
+  "howTo": {
+    "title": "How to Convert Fahrenheit to Celsius",
+    "steps": [
+      {
+        "title": "Enter Fahrenheit",
+        "description": "Input the temperature value in Fahrenheit (°F) that you want to convert."
+      },
+      {
+        "title": "Instant Calculation",
+        "description": "The Celsius equivalent will be calculated automatically using the formula (°F - 32) × 5/9."
+      },
+      {
+        "title": "View Results",
+        "description": "See the converted temperature displayed in Celsius (°C) with high precision."
+      },
+      {
+        "title": "Copy Results",
+        "description": "Copy the converted temperature value for use in your applications."
+      }
+    ],
+    "tips": [
+      "Remember: 32°F = 0°C (water freezing point)",
+      "Quick estimate: subtract 30 and divide by 2",
+      "Use negative values for sub-zero temperatures"
+    ]
+  },
   "features": [
-    "Instant Fahrenheit to Celsius conversion",
-    "High precision mathematical calculation",
-    "Real-time conversion as you type",
-    "Support for negative temperatures",
-    "Decimal precision for accurate results",
-    "Mobile-optimized interface",
-    "One-click result copying",
-    "Educational temperature scale information"
+    {
+      "title": "Instant F to C Conversion",
+      "description": "Convert Fahrenheit to Celsius instantly with real-time calculation as you type."
+    },
+    {
+      "title": "High Precision Formula",
+      "description": "Uses the exact conversion formula (°F - 32) × 5/9 for scientific accuracy."
+    },
+    {
+      "title": "Negative Temperature Support",
+      "description": "Handle sub-zero temperatures accurately for all climate conditions."
+    },
+    {
+      "title": "Decimal Precision",
+      "description": "Accurate results with full decimal place support for precise measurements."
+    },
+    {
+      "title": "Mobile Optimized",
+      "description": "Responsive design works perfectly on all devices and screen sizes."
+    },
+    {
+      "title": "Educational Information",
+      "description": "Learn about temperature scales and conversion methods."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What is the formula for Fahrenheit to Celsius?",
-      "answer": "The formula is: °C = (°F - 32) × 5/9. For example, 68°F = (68-32) × 5/9 = 20°C."
+      "q": "What is the formula for converting Fahrenheit to Celsius?",
+      "a": "The formula is: °C = (°F - 32) × 5/9. For example, to convert 68°F: (68-32) × 5/9 = 36 × 5/9 = 20°C. Our Fahrenheit to Celsius converter applies this formula automatically for instant results."
     },
     {
-      "question": "At what temperature are Fahrenheit and Celsius equal?",
-      "answer": "Fahrenheit and Celsius are equal at -40 degrees (-40°F = -40°C)."
+      "q": "At what temperature are Fahrenheit and Celsius equal?",
+      "a": "Fahrenheit and Celsius scales intersect at -40 degrees (-40°F = -40°C). This is the only temperature where both scales show the same numerical value."
     },
     {
-      "question": "What are some common temperature conversions?",
-      "answer": "Common conversions: 32°F = 0°C (freezing), 68°F = 20°C (room temp), 98.6°F = 37°C (body temp), 212°F = 100°C (boiling)."
+      "q": "What are common Fahrenheit to Celsius conversions?",
+      "a": "Common temperature conversions include: 32°F = 0°C (water freezing), 68°F = 20°C (room temperature), 98.6°F = 37°C (body temperature), 212°F = 100°C (water boiling), and 451°F = 233°C (paper ignition)."
     },
     {
-      "question": "Why does the US use Fahrenheit?",
-      "answer": "The US adopted Fahrenheit before Celsius was widely accepted. Fahrenheit offers more precise whole numbers for everyday temperatures."
+      "q": "Why does the United States use Fahrenheit instead of Celsius?",
+      "a": "The US adopted the Fahrenheit scale before the metric system became internationally standardized. Fahrenheit provides more granular whole numbers for everyday weather temperatures, with 0-100°F covering most climate conditions."
     },
     {
-      "question": "How accurate is this converter?",
-      "answer": "The converter uses the exact mathematical formula with high decimal precision for professional and scientific accuracy."
+      "q": "How accurate is this Fahrenheit to Celsius converter?",
+      "a": "Our converter uses the exact mathematical formula with high decimal precision, making it suitable for scientific research, cooking, weather analysis, and professional applications. The accuracy meets all international standards."
+    },
+    {
+      "q": "How do I convert 100 degrees Fahrenheit to Celsius?",
+      "a": "100°F converts to 37.78°C using the formula: (100-32) × 5/9 = 68 × 5/9 = 37.78°C. This temperature is close to normal human body temperature."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Celsius to Fahrenheit Converter",
+      "url": "/unit/celsius-to-fahrenheit-converter"
+    },
+    {
+      "title": "Temperature Converter",
+      "url": "/unit/temperature-converter"
+    },
+    {
+      "title": "Unit Converter",
+      "url": "/unit/unit-converter"
+    },
+    {
+      "title": "Unit Tools Category",
+      "url": "/unit"
     }
   ]
 }

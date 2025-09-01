@@ -1,39 +1,102 @@
 {
-  "about": [
-    "The Timezone Converter helps you convert time between different time zones around the world. Perfect for scheduling international meetings, coordinating with global teams, or planning travel across time zones.",
-    "Features real-time conversion with daylight saving time awareness, making it essential for business communications, event planning, and managing relationships across different geographical locations."
-  ],
-  "howToUse": [
-    "Select your source time zone",
-    "Enter the time you want to convert",
-    "Choose the target time zone",
-    "View the converted time instantly",
-    "Add multiple time zones for comparison"
-  ],
+  "about": {
+    "title": "About Timezone Converter",
+    "description": "The Timezone Converter helps you convert time between different time zones around the world. Perfect for scheduling international meetings, coordinating with global teams, or planning travel across time zones. Features real-time conversion with daylight saving time awareness, making it essential for business communications, event planning, and managing relationships across different geographical locations."
+  },
+  "howTo": {
+    "title": "How to Use the Timezone Converter",
+    "steps": [
+      {
+        "title": "Select Source Timezone",
+        "description": "Choose your current time zone or the time zone you're converting from."
+      },
+      {
+        "title": "Enter Time",
+        "description": "Input the specific time you want to convert to other time zones."
+      },
+      {
+        "title": "Choose Target Timezone",
+        "description": "Select the destination time zone you want to convert to."
+      },
+      {
+        "title": "View Results",
+        "description": "See the converted time instantly with daylight saving time adjustments."
+      }
+    ],
+    "tips": [
+      "Use popular cities for quick time zone selection",
+      "Add multiple time zones for global meeting planning",
+      "Check UTC offset for precise time calculations"
+    ]
+  },
   "features": [
-    "Global time zone database",
-    "Daylight saving time handling",
-    "Multiple time zone comparison",
-    "Real-time conversion updates",
-    "Popular cities quick selection",
-    "UTC offset display"
+    {
+      "title": "Global Timezone Database",
+      "description": "Comprehensive database covering all major world time zones and regional variations."
+    },
+    {
+      "title": "Daylight Saving Time",
+      "description": "Automatic handling of daylight saving time changes throughout the year."
+    },
+    {
+      "title": "Multiple Zone Comparison",
+      "description": "Compare the same time across multiple time zones simultaneously."
+    },
+    {
+      "title": "Real-Time Updates",
+      "description": "Live time conversion with automatic updates as time progresses."
+    },
+    {
+      "title": "Popular Cities Selection",
+      "description": "Quick selection from major cities and business centers worldwide."
+    },
+    {
+      "title": "UTC Offset Display",
+      "description": "Clear UTC offset information for precise time zone understanding."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "Does it handle daylight saving time automatically?",
-      "answer": "Yes, the converter automatically accounts for daylight saving time changes in all supported time zones throughout the year."
+      "q": "Does the timezone converter handle daylight saving time automatically?",
+      "a": "Yes, our timezone converter automatically accounts for daylight saving time changes in all supported time zones throughout the year. The system updates automatically when DST begins and ends, ensuring accurate time conversions."
     },
     {
-      "question": "How many time zones are supported?",
-      "answer": "The converter supports all major world time zones, including regional variations and historical time zone changes."
+      "q": "How many time zones are supported by the converter?",
+      "a": "The timezone converter supports all major world time zones, including regional variations and historical time zone changes. This covers over 400 time zones worldwide with their specific UTC offsets and DST rules."
     },
     {
-      "question": "Can I compare multiple time zones at once?",
-      "answer": "Yes, you can add multiple time zones to see the same time across different regions simultaneously."
+      "q": "Can I compare multiple time zones simultaneously?",
+      "a": "Yes, you can add multiple time zones to see the same time across different regions simultaneously. This is perfect for scheduling international meetings or coordinating with global teams across various time zones."
     },
     {
-      "question": "What if a time zone changes its rules?",
-      "answer": "The converter uses an updated time zone database that reflects current and historical time zone rules and changes."
+      "q": "What happens if a time zone changes its rules?",
+      "a": "Our timezone converter uses an updated time zone database that reflects current and historical time zone rules and changes. The system is regularly updated to handle any governmental changes to time zone policies."
+    },
+    {
+      "q": "How accurate is the timezone conversion?",
+      "a": "The timezone converter is highly accurate, using the official IANA Time Zone Database. It accounts for all historical changes, current rules, and future scheduled changes to ensure precise time conversions."
+    },
+    {
+      "q": "Can I use the converter for scheduling meetings across time zones?",
+      "a": "Absolutely! The timezone converter is perfect for scheduling international meetings. You can compare multiple time zones to find suitable meeting times that work for participants in different geographical locations."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Timestamp Converter",
+      "url": "/time/timestamp-converter"
+    },
+    {
+      "title": "Date Difference Calculator",
+      "url": "/time/date-difference-calculator"
+    },
+    {
+      "title": "Countdown Timer",
+      "url": "/time/countdown-timer"
+    },
+    {
+      "title": "Time Tools Category",
+      "url": "/time"
     }
   ]
 }

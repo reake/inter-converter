@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Bond Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Bond Calculator - Fixed Income Investment Analysis Tool",
+    "description": "The Bond Calculator is a comprehensive fixed income analysis tool designed to help investors evaluate bond investments, calculate yields, and assess bond pricing. Whether you're analyzing government bonds, corporate bonds, or municipal bonds, this calculator provides accurate calculations for current yield, yield to maturity, duration, and bond valuation. Understanding bond calculations is essential for fixed income investing and portfolio management."
+  },
+  "howTo": {
+    "title": "How to Use the Bond Calculator",
+    "steps": [
+      {
+        "title": "Bond Details",
+        "description": "Enter the bond's face value, coupon rate, and payment frequency (annual or semi-annual)."
+      },
+      {
+        "title": "Market Information",
+        "description": "Input the current market price and required rate of return for yield calculations."
+      },
+      {
+        "title": "Maturity Date",
+        "description": "Specify the bond's maturity date or years to maturity for time-based calculations."
+      },
+      {
+        "title": "Yield Analysis",
+        "description": "Review current yield, yield to maturity, and yield to call calculations."
+      },
+      {
+        "title": "Duration & Risk",
+        "description": "Analyze Macaulay duration, modified duration, and interest rate sensitivity."
+      },
+      {
+        "title": "Investment Decision",
+        "description": "Compare calculated yields with market rates to make informed investment decisions."
+      }
+    ],
+    "tips": [
+      "Compare yields across different bond types and maturities",
+      "Consider credit ratings and default risk when evaluating bonds",
+      "Factor in inflation impact on real returns",
+      "Understand interest rate risk and duration for bond portfolios"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Yield to Maturity Calculation",
+      "description": "Calculate yield to maturity (YTM) for accurate bond return analysis and comparison."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Current Yield Analysis",
+      "description": "Determine current yield based on annual coupon payments and current market price."
+    },
+    {
+      "title": "Bond Price Valuation",
+      "description": "Calculate fair value bond pricing based on yield requirements and market conditions."
+    },
+    {
+      "title": "Accrued Interest Calculator",
+      "description": "Calculate accrued interest for bonds purchased between coupon payment dates."
+    },
+    {
+      "title": "Duration and Convexity",
+      "description": "Analyze bond price sensitivity to interest rate changes using duration and convexity measures."
+    },
+    {
+      "title": "Tax-Equivalent Yield",
+      "description": "Calculate taxable equivalent yields for municipal bonds and tax-free investments."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What's the difference between current yield and yield to maturity?",
+      "a": "Current yield is the annual coupon payment divided by current market price. Yield to maturity (YTM) considers all cash flows including capital gains/losses if held to maturity. YTM provides a more comprehensive return measure for bond investments."
+    },
+    {
+      "q": "How do interest rates affect bond prices?",
+      "a": "Bond prices move inversely to interest rates. When rates rise, existing bond prices fall because new bonds offer higher yields. When rates fall, existing bond prices rise. Duration measures this price sensitivity to interest rate changes."
+    },
+    {
+      "q": "Are municipal bonds better than corporate bonds?",
+      "a": "Municipal bonds offer tax-free income for federal taxes (and sometimes state taxes), making them attractive for high-income investors. Corporate bonds typically offer higher yields but are taxable. Compare after-tax yields to determine which is better for your situation."
+    },
+    {
+      "q": "What is bond duration and why does it matter?",
+      "a": "Duration measures a bond's price sensitivity to interest rate changes. Higher duration means greater price volatility. It helps investors understand interest rate risk and is crucial for bond portfolio management and hedging strategies."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Investment Calculator",
+      "url": "/finance/investment-calculator"
+    },
+    {
+      "title": "Dividend Calculator",
+      "url": "/finance/dividend-calculator"
+    },
+    {
+      "title": "CD Calculator",
+      "url": "/finance/cd-calculator"
+    },
+    {
+      "title": "High Yield Savings Calculator",
+      "url": "/finance/high-yield-savings-calculator"
+    },
+    {
+      "title": "Tax Calculator",
+      "url": "/finance/tax-calculator"
     }
   ]
 }

@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Etf Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About ETF Calculator - Exchange-Traded Fund Investment Analysis Tool",
+    "description": "The ETF Calculator is a comprehensive investment analysis tool designed to help investors evaluate Exchange-Traded Fund investments, calculate returns, and compare ETF performance. Whether you're analyzing index ETFs, sector ETFs, or international funds, this calculator provides accurate projections for investment growth, expense ratios impact, and portfolio allocation strategies. Understanding ETF calculations is essential for building diversified investment portfolios and optimizing long-term returns."
+  },
+  "howTo": {
+    "title": "How to Use the ETF Calculator",
+    "steps": [
+      {
+        "title": "ETF Selection",
+        "description": "Enter the ETF ticker symbol, current price, and number of shares you own or plan to purchase."
+      },
+      {
+        "title": "Investment Amount",
+        "description": "Input your initial investment amount and any planned regular contributions."
+      },
+      {
+        "title": "Expense Ratio",
+        "description": "Enter the ETF's annual expense ratio to calculate the impact of fees on returns."
+      },
+      {
+        "title": "Expected Returns",
+        "description": "Enter expected annual returns based on historical performance and market outlook."
+      },
+      {
+        "title": "Dividend Yield",
+        "description": "Include the ETF's dividend yield for comprehensive total return calculations."
+      },
+      {
+        "title": "Analyze Results",
+        "description": "Review projected returns, total costs, and net investment growth over your investment period."
+      }
+    ],
+    "tips": [
+      "Compare expense ratios across similar ETFs to minimize costs",
+      "Consider broad market ETFs for core portfolio holdings",
+      "Use dollar-cost averaging for regular ETF investments",
+      "Factor in tax efficiency of ETFs vs mutual funds"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Total Return Calculation",
+      "description": "Calculate comprehensive total returns including capital appreciation and dividend reinvestment."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Expense Ratio Impact",
+      "description": "Analyze how expense ratios affect long-term investment returns and portfolio growth."
+    },
+    {
+      "title": "Dollar-Cost Averaging",
+      "description": "Model the benefits of regular monthly investments and dollar-cost averaging strategies."
+    },
+    {
+      "title": "Dividend Yield Analysis",
+      "description": "Factor in dividend distributions and reinvestment for accurate return projections."
+    },
+    {
+      "title": "ETF Comparison Tool",
+      "description": "Compare multiple ETFs side-by-side for expense ratios, returns, and total costs."
+    },
+    {
+      "title": "Tax Efficiency Calculator",
+      "description": "Analyze tax advantages of ETFs including in-kind redemptions and lower turnover."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What's the difference between ETFs and mutual funds?",
+      "a": "ETFs trade like stocks throughout the day, typically have lower expense ratios, and are more tax-efficient due to in-kind redemptions. Mutual funds trade once daily at NAV and may have higher fees but offer automatic investing features."
+    },
+    {
+      "q": "How do ETF expense ratios affect my returns?",
+      "a": "Expense ratios are annual fees that reduce your returns. A 0.1% difference in expense ratios can cost thousands over decades. For example, 0.05% vs 0.75% expense ratios on $100,000 over 30 years could differ by over $50,000 in total returns."
+    },
+    {
+      "q": "Should I invest in broad market or sector-specific ETFs?",
+      "a": "Broad market ETFs (like total stock market or S&P 500) provide instant diversification and lower risk. Sector ETFs can enhance returns but add concentration risk. Most investors should use broad market ETFs as core holdings with sector ETFs as smaller allocations."
+    },
+    {
+      "q": "Are ETF dividends automatically reinvested?",
+      "a": "ETF dividends are typically paid in cash unless you enroll in a dividend reinvestment plan (DRIP) through your broker. Many brokers offer automatic dividend reinvestment for ETFs, which helps compound your returns over time."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Investment Calculator",
+      "url": "/finance/investment-calculator"
+    },
+    {
+      "title": "Dividend Calculator",
+      "url": "/finance/dividend-calculator"
+    },
+    {
+      "title": "Stock Calculator",
+      "url": "/finance/stock-calculator"
+    },
+    {
+      "title": "Retirement Calculator",
+      "url": "/finance/retirement-calculator"
+    },
+    {
+      "title": "Portfolio Calculator",
+      "url": "/finance/portfolio-calculator"
     }
   ]
 }

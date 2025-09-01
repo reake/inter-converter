@@ -1,39 +1,107 @@
 {
-  "about": [
-    "The Ovulation Calculator predicts your most fertile days based on your menstrual cycle length and last period date. Understanding your ovulation window is crucial for family planning, whether trying to conceive or avoid pregnancy.",
-    "Ovulation typically occurs 12-16 days before your next period. This calculator helps identify your fertile window, peak fertility days, and provides insights for reproductive health planning."
-  ],
-  "howToUse": [
-    "Enter the date of your last menstrual period",
-    "Input your average cycle length (21-35 days)",
-    "View your predicted ovulation date",
-    "See your fertile window (6-day period)",
-    "Track patterns over multiple cycles"
-  ],
+  "about": {
+    "title": "About Ovulation Calculator - Fertility Tracking Tool",
+    "description": "The Ovulation Calculator predicts your most fertile days based on your menstrual cycle length and last period date. Understanding your ovulation window is crucial for family planning, whether trying to conceive or avoid pregnancy. Ovulation typically occurs 12-16 days before your next period. This calculator helps identify your fertile window, peak fertility days, and provides insights for reproductive health planning."
+  },
+  "howTo": {
+    "title": "How to Use the Ovulation Calculator",
+    "steps": [
+      {
+        "title": "Enter Last Period Date",
+        "description": "Input the first day of your last menstrual period using the date picker."
+      },
+      {
+        "title": "Set Cycle Length",
+        "description": "Enter your average cycle length (typically 21-35 days, average 28 days)."
+      },
+      {
+        "title": "View Ovulation Date",
+        "description": "See your predicted ovulation date based on your cycle pattern."
+      },
+      {
+        "title": "Check Fertile Window",
+        "description": "Review your 6-day fertile window for optimal conception timing."
+      },
+      {
+        "title": "Track Multiple Cycles",
+        "description": "Monitor patterns over several cycles for better accuracy and planning."
+      },
+      {
+        "title": "Plan Accordingly",
+        "description": "Use the information for family planning or fertility awareness."
+      }
+    ],
+    "tips": [
+      "Track your cycles for 3-6 months to identify patterns",
+      "Consider using additional fertility signs like basal body temperature",
+      "Note that stress and illness can affect ovulation timing",
+      "Consult healthcare providers for personalized fertility guidance"
+    ]
+  },
   "features": [
-    "Ovulation date prediction",
-    "Fertile window calculation",
-    "Cycle length customization",
-    "Multiple cycle tracking",
-    "Conception probability indicators",
-    "Calendar view of fertile days"
+    {
+      "title": "Ovulation Date Prediction",
+      "description": "Accurate prediction of ovulation timing based on menstrual cycle patterns."
+    },
+    {
+      "title": "Fertile Window Calculation",
+      "description": "Identification of the 6-day fertile period for optimal conception timing."
+    },
+    {
+      "title": "Cycle Length Customization",
+      "description": "Flexible cycle length input to accommodate individual variations (21-35 days)."
+    },
+    {
+      "title": "Multiple Cycle Tracking",
+      "description": "Ability to track and analyze patterns across multiple menstrual cycles."
+    },
+    {
+      "title": "Conception Probability",
+      "description": "Visual indicators showing peak fertility days and conception likelihood."
+    },
+    {
+      "title": "Calendar View",
+      "description": "Clear calendar display of fertile days, ovulation, and next period dates."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "When am I most fertile?",
-      "answer": "You're most fertile 2-3 days before and on the day of ovulation. The fertile window spans about 6 days, including the 5 days before ovulation and ovulation day."
+      "q": "How accurate is ovulation prediction?",
+      "a": "Predictions are estimates based on average cycles and can be accurate within 1-2 days for regular cycles. Actual ovulation timing can vary due to stress, illness, or hormonal changes. Use additional methods like basal body temperature tracking for more precision."
     },
     {
-      "question": "How accurate is ovulation prediction?",
-      "answer": "Predictions are estimates based on average cycles. Individual variation is common. For more accuracy, combine with ovulation tests, basal body temperature, or cervical mucus tracking."
+      "q": "What is the fertile window and why is it 6 days?",
+      "a": "The fertile window is the 6-day period when pregnancy is possible - 5 days before ovulation plus ovulation day. Sperm can survive up to 5 days in the female reproductive tract, while the egg is viable for about 24 hours after ovulation."
     },
     {
-      "question": "What if my cycles are irregular?",
-      "answer": "Irregular cycles make prediction challenging. Track several cycles to find patterns, or consult a healthcare provider for personalized guidance."
+      "q": "Can I use this calculator for birth control?",
+      "a": "This calculator is for educational and awareness purposes only and should not be relied upon as a sole method of contraception. The fertility awareness method requires additional tracking. Consult healthcare providers for reliable birth control options."
     },
     {
-      "question": "Can I use this for birth control?",
-      "answer": "This calculator is not reliable for contraception. Sperm can survive up to 5 days, and ovulation timing varies. Use proven contraceptive methods for pregnancy prevention."
+      "q": "What if my cycles are irregular?",
+      "a": "Irregular cycles make prediction less accurate since ovulation timing varies significantly. Track multiple cycles, note any patterns, and consider consulting a healthcare provider for personalized guidance on fertility timing and potential underlying causes."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Pregnancy Calculator",
+      "url": "/health/pregnancy-calculator"
+    },
+    {
+      "title": "BMI Calculator",
+      "url": "/health/bmi-calculator"
+    },
+    {
+      "title": "Calorie Calculator",
+      "url": "/health/calorie-calculator"
+    },
+    {
+      "title": "Water Intake Calculator",
+      "url": "/health/water-intake-calculator"
+    },
+    {
+      "title": "Sleep Calculator",
+      "url": "/health/sleep-calculator"
     }
   ]
 }

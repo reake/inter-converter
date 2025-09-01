@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The High Yield Savings Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About High Yield Savings Calculator - Savings Account Interest Tool",
+    "description": "The High Yield Savings Calculator is a comprehensive savings tool designed to help you calculate interest earnings from high-yield savings accounts and compare rates across different banks. Whether you're building an emergency fund, saving for goals, or maximizing interest on cash reserves, this calculator provides accurate projections for compound interest growth and helps you find the best savings rates available."
+  },
+  "howTo": {
+    "title": "How to Use the High Yield Savings Calculator",
+    "steps": [
+      {
+        "title": "Initial Deposit",
+        "description": "Enter your starting balance or initial deposit amount for the savings account."
+      },
+      {
+        "title": "Interest Rate",
+        "description": "Input the annual percentage yield (APY) offered by the high-yield savings account."
+      },
+      {
+        "title": "Monthly Contributions",
+        "description": "Add any regular monthly deposits you plan to make to the account."
+      },
+      {
+        "title": "Time Period",
+        "description": "Specify how long you plan to save or let the money grow in the account."
+      },
+      {
+        "title": "Compounding Frequency",
+        "description": "Select how often interest compounds (daily, monthly, quarterly, or annually)."
+      },
+      {
+        "title": "Review Projections",
+        "description": "Analyze total interest earned, final balance, and savings growth over time."
+      }
+    ],
+    "tips": [
+      "Compare APY rates from multiple online banks and credit unions",
+      "Look for accounts with no monthly fees or minimum balance requirements",
+      "Consider FDIC insurance limits when choosing account amounts",
+      "Monitor rate changes as high-yield savings rates can fluctuate"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Interest Earnings Projection",
+      "description": "Calculate total interest earnings over time with accurate compound interest calculations."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "APY Comparison Tool",
+      "description": "Compare multiple high-yield savings accounts side-by-side for rates and features."
+    },
+    {
+      "title": "Monthly Growth Tracking",
+      "description": "Track month-by-month account balance growth with detailed breakdown of interest vs principal."
+    },
+    {
+      "title": "Regular Deposit Analysis",
+      "description": "Model the impact of consistent monthly deposits on long-term savings growth."
+    },
+    {
+      "title": "Rate Change Impact",
+      "description": "Analyze how interest rate changes affect your savings growth over time."
+    },
+    {
+      "title": "FDIC Insurance Calculator",
+      "description": "Ensure your deposits stay within FDIC insurance limits for maximum protection."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What's considered a good high-yield savings rate?",
+      "a": "High-yield savings accounts typically offer 4-5% APY or higher, significantly more than traditional savings accounts (0.01-0.5%). Online banks often offer the highest rates due to lower overhead costs. Compare current rates regularly as they fluctuate with Federal Reserve changes."
+    },
+    {
+      "q": "How often does interest compound in high-yield savings accounts?",
+      "a": "Most high-yield savings accounts compound interest daily, which maximizes your earnings compared to monthly or quarterly compounding. Daily compounding means you earn interest on your interest every day, resulting in higher overall returns."
+    },
+    {
+      "q": "Are high-yield savings accounts safe?",
+      "a": "Yes, high-yield savings accounts at FDIC-insured banks are safe up to $250,000 per depositor, per bank. Online banks offering high rates are typically FDIC-insured and follow the same regulations as traditional banks."
+    },
+    {
+      "q": "What's the difference between APY and interest rate?",
+      "a": "APY (Annual Percentage Yield) includes the effect of compounding and gives you the true annual return. Interest rate is the nominal rate before compounding. Always compare APY when shopping for high-yield savings accounts."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "CD Calculator",
+      "url": "/finance/cd-calculator"
+    },
+    {
+      "title": "Savings Calculator",
+      "url": "/finance/savings-calculator"
+    },
+    {
+      "title": "Compound Interest Calculator",
+      "url": "/finance/compound-interest-calculator"
+    },
+    {
+      "title": "Emergency Fund Calculator",
+      "url": "/finance/emergency-fund-calculator"
+    },
+    {
+      "title": "Money Market Calculator",
+      "url": "/finance/money-market-calculator"
     }
   ]
 }

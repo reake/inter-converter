@@ -1,43 +1,107 @@
 {
-  "about": [
-    "The Credit Card Payoff Calculator is a powerful debt management tool that helps you create a strategic plan to eliminate credit card debt. This calculator shows you exactly how long it will take to pay off your credit cards and how much interest you'll pay based on different payment strategies.",
-    "Credit card debt can be overwhelming, but with the right payoff strategy, you can become debt-free faster and save thousands in interest charges. This calculator compares minimum payments versus accelerated payment plans, helping you visualize the dramatic difference that extra payments can make.",
-    "Whether you're dealing with one credit card or multiple cards, this tool helps you prioritize payments, understand the true cost of carrying balances, and create a realistic timeline for achieving financial freedom from credit card debt."
-  ],
-  "howToUse": [
-    "Enter your current credit card balance",
-    "Input the annual percentage rate (APR)",
-    "Set your planned monthly payment amount",
-    "Compare minimum payment vs. fixed payment scenarios",
-    "Review payoff timeline and total interest calculations",
-    "Adjust payment amounts to optimize your debt elimination strategy"
-  ],
+  "about": {
+    "title": "About Credit Card Payoff Calculator - Debt Elimination Tool",
+    "description": "The Credit Card Payoff Calculator is a powerful debt management tool that helps you create a strategic plan to eliminate credit card debt. This calculator shows you exactly how long it will take to pay off your credit cards and how much interest you'll pay based on different payment strategies. Credit card debt can be overwhelming, but with the right payoff strategy, you can become debt-free faster and save thousands in interest charges."
+  },
+  "howTo": {
+    "title": "How to Use the Credit Card Payoff Calculator",
+    "steps": [
+      {
+        "title": "Enter Card Balance",
+        "description": "Input your current credit card balance amount."
+      },
+      {
+        "title": "Set Interest Rate",
+        "description": "Enter the annual percentage rate (APR) for your credit card."
+      },
+      {
+        "title": "Plan Monthly Payment",
+        "description": "Set your planned monthly payment amount above the minimum."
+      },
+      {
+        "title": "Compare Scenarios",
+        "description": "Compare minimum payment vs. fixed payment scenarios."
+      },
+      {
+        "title": "Review Timeline",
+        "description": "Analyze payoff timeline and total interest calculations."
+      },
+      {
+        "title": "Optimize Strategy",
+        "description": "Adjust payment amounts to optimize your debt elimination strategy."
+      }
+    ],
+    "tips": [
+      "Pay more than the minimum to save significantly on interest",
+      "Consider the debt avalanche method for multiple cards",
+      "Avoid making new purchases while paying off debt",
+      "Set up automatic payments to stay consistent"
+    ]
+  },
   "features": [
-    "Payoff timeline calculation with exact month and year",
-    "Total interest cost comparison for different payment amounts",
-    "Minimum payment vs. accelerated payment analysis",
-    "Monthly payment breakdown showing principal and interest",
-    "Interest savings calculation for extra payments",
-    "Multiple credit card debt consolidation planning",
-    "Payment schedule visualization and progress tracking",
-    "Debt avalanche vs. debt snowball strategy comparison"
+    {
+      "title": "Payoff Timeline Calculation",
+      "description": "Precise payoff timeline calculation with exact month and year projections."
+    },
+    {
+      "title": "Interest Cost Comparison",
+      "description": "Total interest cost comparison for different payment amounts and strategies."
+    },
+    {
+      "title": "Payment Strategy Analysis",
+      "description": "Minimum payment vs. accelerated payment analysis with detailed comparisons."
+    },
+    {
+      "title": "Payment Breakdown",
+      "description": "Monthly payment breakdown showing principal and interest allocation."
+    },
+    {
+      "title": "Interest Savings Calculator",
+      "description": "Interest savings calculation for extra payments and accelerated strategies."
+    },
+    {
+      "title": "Debt Consolidation Planning",
+      "description": "Multiple credit card debt consolidation planning and strategy optimization."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "Should I pay more than the minimum on my credit cards?",
-      "answer": "Yes, paying more than the minimum can save you thousands in interest and help you become debt-free years earlier. Even an extra $25-50 per month can make a significant difference in your payoff timeline."
+      "q": "Should I pay more than the minimum on my credit cards?",
+      "a": "Yes, paying more than the minimum can save you thousands in interest and help you become debt-free years earlier. Even an extra $25-50 per month can make a significant difference in your payoff timeline."
     },
     {
-      "question": "Which credit card should I pay off first?",
-      "answer": "The debt avalanche method suggests paying minimums on all cards while putting extra money toward the highest interest rate card. The debt snowball method focuses on the smallest balance first for psychological motivation."
+      "q": "Which credit card should I pay off first?",
+      "a": "The debt avalanche method suggests paying minimums on all cards while putting extra money toward the highest interest rate card. The debt snowball method focuses on the smallest balance first for psychological motivation."
     },
     {
-      "question": "How much should I pay toward credit card debt each month?",
-      "answer": "Aim to pay at least 2-3% of your balance monthly, but ideally pay as much as your budget allows. The faster you pay, the less interest you'll pay overall."
+      "q": "How much should I pay toward credit card debt each month?",
+      "a": "Aim to pay at least 2-3% of your balance monthly, but ideally pay as much as your budget allows. The faster you pay, the less interest you'll pay overall."
     },
     {
-      "question": "Is it worth transferring balances to a 0% APR card?",
-      "answer": "Balance transfers can be beneficial if you qualify for 0% APR promotions and can pay off the balance during the promotional period. Consider transfer fees (typically 3-5%) in your calculations."
+      "q": "Is it worth transferring balances to a 0% APR card?",
+      "a": "Balance transfers can be beneficial if you qualify for 0% APR promotions and can pay off the balance during the promotional period. Consider transfer fees (typically 3-5%) in your calculations."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Debt Payoff Calculator",
+      "url": "/finance/debt-payoff-calculator"
+    },
+    {
+      "title": "Budget Calculator",
+      "url": "/finance/budget-calculator"
+    },
+    {
+      "title": "Balance Transfer Calculator",
+      "url": "/finance/balance-transfer-calculator"
+    },
+    {
+      "title": "Debt Consolidation Calculator",
+      "url": "/finance/debt-consolidation-calculator"
+    },
+    {
+      "title": "Emergency Fund Calculator",
+      "url": "/finance/emergency-fund-calculator"
     }
   ]
 }

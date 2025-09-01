@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Rewards Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Rewards Calculator - Credit Card Points and Cashback Tool",
+    "description": "The Rewards Calculator is a comprehensive credit card optimization tool designed to help you maximize earnings from credit card rewards programs including cashback, points, and miles. This calculator analyzes spending patterns across different categories to determine optimal card usage and annual rewards potential. Whether you're comparing credit cards or optimizing existing rewards, this tool provides detailed analysis of rewards earnings and redemption values."
+  },
+  "howTo": {
+    "title": "How to Use the Rewards Calculator",
+    "steps": [
+      {
+        "title": "Enter Spending Categories",
+        "description": "Input your monthly spending amounts for groceries, gas, dining, travel, and other categories."
+      },
+      {
+        "title": "Add Credit Card Details",
+        "description": "Enter rewards rates for each spending category and any bonus multipliers."
+      },
+      {
+        "title": "Include Annual Fees",
+        "description": "Add annual fees and any welcome bonuses or sign-up offers."
+      },
+      {
+        "title": "Set Redemption Values",
+        "description": "Enter point/mile values for your preferred redemption methods (cash, travel, etc.)."
+      },
+      {
+        "title": "Calculate Annual Rewards",
+        "description": "Review total annual rewards earnings minus fees for net value."
+      },
+      {
+        "title": "Compare Multiple Cards",
+        "description": "Analyze different credit cards to find the most rewarding options."
+      }
+    ],
+    "tips": [
+      "Focus on categories where you spend the most money",
+      "Consider annual fees vs. rewards earned for net value",
+      "Factor in welcome bonuses when comparing new cards",
+      "Track rotating bonus categories for maximum earnings"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Category-Based Rewards",
+      "description": "Calculate rewards for different spending categories with varying rates."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Multi-Card Optimization",
+      "description": "Compare multiple credit cards to find the best rewards combination."
+    },
+    {
+      "title": "Annual Fee Analysis",
+      "description": "Factor in annual fees to determine net rewards value and break-even points."
+    },
+    {
+      "title": "Welcome Bonus Calculator",
+      "description": "Include sign-up bonuses and spending requirements in rewards calculations."
+    },
+    {
+      "title": "Redemption Value Optimizer",
+      "description": "Compare different redemption options to maximize point and mile values."
+    },
+    {
+      "title": "Rotating Category Tracker",
+      "description": "Track quarterly bonus categories and optimize spending timing."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How do I maximize credit card rewards?",
+      "a": "Maximize rewards by using cards with highest rates for your top spending categories, meeting welcome bonus requirements, taking advantage of rotating categories, and choosing optimal redemption methods for points and miles."
+    },
+    {
+      "q": "Are annual fee cards worth it?",
+      "a": "Annual fee cards can be worth it if the additional rewards, benefits, and welcome bonuses exceed the fee cost. Calculate your annual rewards potential minus the fee to determine net value."
+    },
+    {
+      "q": "What's the best way to redeem credit card points?",
+      "a": "Redemption value varies by program. Travel redemptions often provide 1.2-2+ cents per point, while cash back is typically 1 cent per point. Statement credits and gift cards usually offer lower values."
+    },
+    {
+      "q": "Should I use multiple rewards credit cards?",
+      "a": "Using multiple cards can maximize rewards if you can manage them responsibly. Use different cards for their strongest categories (e.g., one for dining, another for gas) while avoiding overspending or missing payments."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Credit Card Interest Calculator",
+      "url": "/finance/credit-card-interest-calculator"
+    },
+    {
+      "title": "Credit Utilization Calculator",
+      "url": "/finance/credit-utilization-calculator"
+    },
+    {
+      "title": "Budget Calculator",
+      "url": "/finance/budget-calculator"
+    },
+    {
+      "title": "Balance Transfer Calculator",
+      "url": "/finance/balance-transfer-calculator"
+    },
+    {
+      "title": "Investment Calculator",
+      "url": "/finance/investment-calculator"
     }
   ]
 }

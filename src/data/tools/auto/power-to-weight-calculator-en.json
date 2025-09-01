@@ -1,37 +1,102 @@
 {
-  "about": [
-    "The Power-to-Weight Calculator determines the power-to-weight ratio of a vehicle, a critical metric for acceleration performance and overall vehicle dynamics. This ratio is fundamental in automotive performance analysis.",
-    "Understanding power-to-weight ratios helps compare vehicles across different classes and predict acceleration performance regardless of absolute power or weight figures."
-  ],
-  "howToUse": [
-    "Enter vehicle power in HP or kW",
-    "Input vehicle weight in lbs or kg",
-    "View calculated power-to-weight ratio",
-    "Compare with other vehicles or performance targets"
-  ],
+  "about": {
+    "title": "About Power-to-Weight Calculator",
+    "description": "The Power-to-Weight Calculator determines the power-to-weight ratio of a vehicle, a critical metric for acceleration performance and overall vehicle dynamics. This ratio is fundamental in automotive performance analysis. Understanding power-to-weight ratios helps compare vehicles across different classes and predict acceleration performance regardless of absolute power or weight figures."
+  },
+  "howTo": {
+    "title": "How to Use the Power-to-Weight Calculator",
+    "steps": [
+      {
+        "title": "Enter Vehicle Power",
+        "description": "Input engine power in horsepower (HP) or kilowatts (kW)."
+      },
+      {
+        "title": "Input Vehicle Weight",
+        "description": "Enter total vehicle weight in pounds (lbs) or kilograms (kg)."
+      },
+      {
+        "title": "Calculate Ratio",
+        "description": "View the calculated power-to-weight ratio instantly."
+      },
+      {
+        "title": "Compare Performance",
+        "description": "Compare results with other vehicles or performance targets."
+      }
+    ],
+    "tips": [
+      "Lower ratios indicate better acceleration potential",
+      "Include driver weight for accurate real-world calculations",
+      "Consider both crank and wheel horsepower for different applications"
+    ]
+  },
   "features": [
-    "Power-to-weight ratio calculation",
-    "Multiple unit support",
-    "Performance comparison metrics",
-    "Acceleration prediction tools",
-    "Vehicle classification analysis"
+    {
+      "title": "Power-to-Weight Calculation",
+      "description": "Accurate calculation of vehicle power-to-weight ratio for performance analysis."
+    },
+    {
+      "title": "Multiple Unit Support",
+      "description": "Support for HP/kW power units and lbs/kg weight measurements."
+    },
+    {
+      "title": "Performance Benchmarking",
+      "description": "Compare results against sports cars, supercars, and racing vehicle standards."
+    },
+    {
+      "title": "Acceleration Prediction",
+      "description": "Predict acceleration performance based on power-to-weight ratio analysis."
+    },
+    {
+      "title": "Vehicle Classification",
+      "description": "Determine vehicle performance class and competitive potential."
+    },
+    {
+      "title": "Professional Accuracy",
+      "description": "Precise calculations suitable for automotive engineering and racing applications."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What's a good power-to-weight ratio?",
-      "answer": "Sports cars typically have 8-15 lb/hp, supercars 5-8 lb/hp, and hypercars under 5 lb/hp. Lower numbers indicate better acceleration potential."
+      "q": "What's considered a good power-to-weight ratio?",
+      "a": "Sports cars typically achieve 8-15 lb/hp, supercars reach 5-8 lb/hp, and hypercars achieve under 5 lb/hp. Lower numbers indicate better acceleration potential. Our power-to-weight calculator helps determine where your vehicle stands in these performance categories."
     },
     {
-      "question": "How does power-to-weight affect acceleration?",
-      "answer": "Lower power-to-weight ratios generally mean faster acceleration. A 10% improvement in ratio can reduce 0-60 times by roughly 8-10%."
+      "q": "How does power-to-weight ratio affect acceleration performance?",
+      "a": "Lower power-to-weight ratios generally mean faster acceleration. A 10% improvement in ratio can reduce 0-60 mph times by roughly 8-10%. This makes power-to-weight ratio one of the most important performance metrics for acceleration."
     },
     {
-      "question": "Should I focus on adding power or reducing weight?",
-      "answer": "Weight reduction affects handling, braking, and acceleration equally. Adding power only improves acceleration and top speed. Weight reduction is often more cost-effective."
+      "q": "Should I focus on adding power or reducing weight for better performance?",
+      "a": "Weight reduction affects handling, braking, and acceleration equally, while adding power primarily improves acceleration and top speed. Weight reduction is often more cost-effective and provides broader performance benefits than power increases."
     },
     {
-      "question": "How do I calculate curb weight vs race weight?",
-      "answer": "Curb weight includes all fluids and standard equipment. Race weight may exclude passenger seats, spare tire, and include safety equipment. Use the weight that matches your application."
+      "q": "How do I calculate curb weight versus race weight?",
+      "a": "Curb weight includes all fluids, standard equipment, and accessories. Race weight may exclude passenger seats, spare tire, and sound deadening while including safety equipment like roll cages. Use the weight configuration that matches your specific application."
+    },
+    {
+      "q": "What's the difference between crank horsepower and wheel horsepower for calculations?",
+      "a": "Crank horsepower is measured at the engine, while wheel horsepower accounts for drivetrain losses (typically 10-20%). Wheel horsepower provides more accurate real-world performance predictions for power-to-weight calculations."
+    },
+    {
+      "q": "How do motorcycles compare to cars in power-to-weight ratio?",
+      "a": "Motorcycles typically achieve superior power-to-weight ratios of 2-4 lb/hp for sport bikes, compared to 8-15 lb/hp for sports cars. This explains motorcycles' exceptional acceleration despite lower absolute horsepower numbers."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Power to Weight Ratio",
+      "url": "/auto/power-to-weight-ratio"
+    },
+    {
+      "title": "Torque Horsepower Calculator",
+      "url": "/auto/torque-horsepower-calculator"
+    },
+    {
+      "title": "Auto Weight Converter",
+      "url": "/auto/auto-weight-converter"
+    },
+    {
+      "title": "Automotive Tools Category",
+      "url": "/auto"
     }
   ]
 }

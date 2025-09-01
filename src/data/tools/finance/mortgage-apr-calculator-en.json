@@ -1,31 +1,84 @@
 {
-  "about": [
-    "The Mortgage Apr Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Mortgage APR Calculator - Annual Percentage Rate (APR) Analysis Tool",
+    "description": "The Mortgage APR Calculator helps you determine the true annual cost of a home loan by calculating APR, which includes interest rate plus lender fees, discount points, and other financing charges. Use this tool to compare loan offers, understand the impact of fees, and see how points change your APR and total borrowing cost."
+  },
+  "howTo": {
+    "title": "How to Use the Mortgage APR Calculator",
+    "steps": [
+      {
+        "title": "Enter Loan Amount",
+        "description": "Input the mortgage principal you plan to borrow (after down payment)."
+      },
+      {
+        "title": "Set Interest Rate and Term",
+        "description": "Provide the nominal interest rate and loan term (e.g., 15 or 30 years)."
+      },
+      {
+        "title": "Add Fees and Points",
+        "description": "Include origination fees, discount points, underwriting, and other prepaid finance charges."
+      },
+      {
+        "title": "Select Payment Schedule",
+        "description": "Most mortgages use monthly payments; confirm any special schedules if applicable."
+      },
+      {
+        "title": "Calculate APR",
+        "description": "Review computed APR, monthly payment, and total cost over the life of the loan."
+      }
+    ],
+    "tips": [
+      "APR includes finance charges; interest rate alone does not",
+      "Points lower the rate but raise upfront costs—use APR to compare fairly",
+      "Compare identical terms (fixed vs ARM, same term length) when using APR",
+      "Exclude escrow deposits (taxes/insurance) since they are not finance charges"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "APR vs Interest Rate",
+      "description": "Side-by-side comparison shows how fees make APR higher than the nominal rate."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Fees and Points Breakdown",
+      "description": "Itemize origination, underwriting, discount points, and other prepaid finance charges."
+    },
+    {
+      "title": "Effective Cost Over Time",
+      "description": "See total interest and financed fees across the full loan term."
+    },
+    {
+      "title": "Points Break-Even",
+      "description": "Find the time needed to recoup discount points through reduced monthly payments."
+    },
+    {
+      "title": "Offer Comparison",
+      "description": "Compare multiple lender offers using consistent APR methodology."
     }
+  ],
+  "faq": [
+    {
+      "q": "What is APR on a mortgage?",
+      "a": "APR is the annualized cost of borrowing including the interest rate plus certain lender fees and prepaid finance charges. It helps compare loans with different fee structures."
+    },
+    {
+      "q": "How is APR different from the interest rate?",
+      "a": "The interest rate reflects the cost of borrowing principal only. APR adds eligible fees (like points and origination) to reflect the loan’s true annual cost."
+    },
+    {
+      "q": "Which fees are included in APR?",
+      "a": "Typically origination fees, discount points, underwriting, and some closing costs directly tied to securing credit. Taxes, insurance, escrow deposits, and title fees are usually excluded."
+    },
+    {
+      "q": "Is APR always higher than the interest rate?",
+      "a": "Generally yes, because APR includes fees. In rare cases with lender credits, APR could be close to or slightly below the nominal rate."
+    }
+  ],
+  "relativeLinks": [
+    { "title": "Mortgage Calculator", "url": "/finance/mortgage-calculator" },
+    { "title": "Mortgage Refinance Calculator", "url": "/finance/mortgage-refinance-calculator" },
+    { "title": "Interest-Only Mortgage Calculator", "url": "/finance/interest-only-mortgage-calculator" },
+    { "title": "Closing Cost Calculator", "url": "/finance/closing-cost-calculator" },
+    { "title": "Loan Refinance Calculator", "url": "/finance/loan-refinance-calculator" }
   ]
 }

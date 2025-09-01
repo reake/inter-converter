@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Mutual Fund Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Mutual Fund Calculator - Investment Growth Analysis Tool",
+    "description": "The Mutual Fund Calculator is a comprehensive investment analysis tool designed to help you calculate potential returns, growth projections, and costs associated with mutual fund investments. This calculator analyzes initial investments, monthly contributions, expected returns, and fees to project long-term wealth building through mutual funds. Whether you're planning retirement savings or building investment portfolios, this tool provides accurate mutual fund growth calculations."
+  },
+  "howTo": {
+    "title": "How to Use the Mutual Fund Calculator",
+    "steps": [
+      {
+        "title": "Enter Initial Investment",
+        "description": "Input the amount you plan to invest initially in the mutual fund."
+      },
+      {
+        "title": "Set Monthly Contributions",
+        "description": "Enter regular monthly investment amounts for systematic investing."
+      },
+      {
+        "title": "Choose Expected Return",
+        "description": "Input expected annual return rate based on fund type and historical performance."
+      },
+      {
+        "title": "Add Investment Timeline",
+        "description": "Select your investment time horizon (years until you need the money)."
+      },
+      {
+        "title": "Include Fund Expenses",
+        "description": "Add expense ratios, load fees, and other mutual fund costs."
+      },
+      {
+        "title": "Review Growth Projections",
+        "description": "Analyze total returns, compound growth, and net investment value."
+      }
+    ],
+    "tips": [
+      "Diversified mutual funds typically return 7-10% annually long-term",
+      "Lower expense ratios significantly impact long-term returns",
+      "Regular monthly investing helps average out market volatility",
+      "Consider tax-advantaged accounts like 401k and IRA for mutual funds"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Compound Growth Calculator",
+      "description": "Calculate compound returns on initial investments and regular contributions."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Systematic Investment Planning",
+      "description": "Project growth from regular monthly or quarterly mutual fund investments."
+    },
+    {
+      "title": "Fee Impact Analysis",
+      "description": "Analyze how expense ratios and fees affect long-term investment returns."
+    },
+    {
+      "title": "Return Scenario Modeling",
+      "description": "Model different return scenarios from conservative to aggressive growth."
+    },
+    {
+      "title": "Investment Timeline Optimizer",
+      "description": "Determine optimal investment periods for different financial goals."
+    },
+    {
+      "title": "Tax-Adjusted Returns",
+      "description": "Calculate after-tax returns for taxable vs. tax-advantaged accounts."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What's a reasonable expected return for mutual funds?",
+      "a": "Historically, diversified stock mutual funds have averaged 7-10% annually over long periods. Bond funds typically return 3-6%. Conservative balanced funds might return 5-8%. Use historical averages but remember past performance doesn't guarantee future results."
+    },
+    {
+      "q": "How do mutual fund fees affect my returns?",
+      "a": "Expense ratios significantly impact long-term returns. A 1% difference in fees can cost tens of thousands over decades. For example, 0.5% vs. 1.5% expense ratios on a $100,000 investment can differ by $50,000+ over 30 years."
+    },
+    {
+      "q": "Should I invest a lump sum or monthly amounts?",
+      "a": "Both strategies work well. Lump sum investing historically performs better due to more time in market, but dollar-cost averaging through monthly investments reduces timing risk and helps build consistent investing habits."
+    },
+    {
+      "q": "What types of mutual funds should I consider?",
+      "a": "Consider your risk tolerance and timeline. Stock funds for long-term growth, bond funds for stability, balanced funds for moderate risk, and target-date funds for automatic diversification. International funds add geographic diversification."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Investment Calculator",
+      "url": "/finance/investment-calculator"
+    },
+    {
+      "title": "Retirement Calculator",
+      "url": "/finance/retirement-calculator"
+    },
+    {
+      "title": "Compound Interest Calculator",
+      "url": "/finance/compound-interest-calculator"
+    },
+    {
+      "title": "Stock Calculator",
+      "url": "/finance/stock-calculator"
+    },
+    {
+      "title": "Savings Calculator",
+      "url": "/finance/savings-calculator"
     }
   ]
 }

@@ -1,37 +1,102 @@
 {
-  "about": [
-    "The Compression Ratio Calculator determines the compression ratio of an engine based on cylinder volume, combustion chamber volume, and piston displacement. This tool is essential for engine building, performance tuning, and fuel octane requirements.",
-    "Understanding compression ratio helps optimize engine performance, determine fuel requirements, and ensure proper engine operation across different applications from street driving to racing."
-  ],
-  "howToUse": [
-    "Enter cylinder bore diameter in inches",
-    "Input stroke length in inches", 
-    "Enter combustion chamber volume in cc",
-    "View calculated compression ratio instantly"
-  ],
+  "about": {
+    "title": "About Compression Ratio Calculator",
+    "description": "The Compression Ratio Calculator determines your engine's compression ratio for horsepower and performance analysis. This professional tool calculates compression ratios from cylinder volume, combustion chamber volume, and piston displacement. Essential for engine building, performance tuning, and determining fuel octane requirements. Understanding compression ratio helps optimize engine performance, determine fuel requirements, and ensure proper engine operation across different applications from street driving to racing."
+  },
+  "howTo": {
+    "title": "How to Use the Compression Ratio Calculator",
+    "steps": [
+      {
+        "title": "Enter Bore Diameter",
+        "description": "Input your engine's cylinder bore diameter in inches for accurate volume calculations."
+      },
+      {
+        "title": "Input Stroke Length",
+        "description": "Enter the piston stroke length in inches to determine cylinder displacement."
+      },
+      {
+        "title": "Add Chamber Volume",
+        "description": "Enter combustion chamber volume in cubic centimeters (cc) from head specifications."
+      },
+      {
+        "title": "Get Compression Ratio",
+        "description": "View calculated compression ratio with performance and fuel octane recommendations."
+      }
+    ],
+    "tips": [
+      "Use manufacturer specifications for accurate measurements",
+      "Consider deck height and gasket thickness for precision",
+      "Higher compression requires higher octane fuel"
+    ]
+  },
   "features": [
-    "Accurate compression ratio calculation",
-    "Cylinder volume computation",
-    "Combustion chamber analysis",
-    "Performance optimization guidance",
-    "Fuel octane requirement estimation"
+    {
+      "title": "Precise Compression Calculation",
+      "description": "Calculate exact compression ratios using bore, stroke, and combustion chamber volume measurements."
+    },
+    {
+      "title": "Cylinder Volume Analysis",
+      "description": "Compute total cylinder volume including swept volume and combustion chamber space."
+    },
+    {
+      "title": "Performance Optimization",
+      "description": "Get recommendations for optimal compression ratios based on intended use and fuel type."
+    },
+    {
+      "title": "Fuel Octane Guidance",
+      "description": "Determine minimum octane requirements based on calculated compression ratio."
+    },
+    {
+      "title": "Engine Building Support",
+      "description": "Essential tool for engine builders to achieve target compression ratios."
+    },
+    {
+      "title": "Multiple Unit Support",
+      "description": "Works with inches, millimeters, and cubic centimeters for international compatibility."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What's the ideal compression ratio for pump gas?",
-      "answer": "For 91-93 octane pump gas, compression ratios of 9.5:1 to 10.5:1 are typically safe. Higher ratios may require race fuel or careful tuning to avoid detonation."
+      "q": "What's the ideal compression ratio for pump gas engines?",
+      "a": "For 91-93 octane pump gas, compression ratios of 9.5:1 to 10.5:1 are typically safe for most engines. Higher compression ratios may require race fuel or careful tuning to avoid detonation. Our compression ratio calculator helps determine the optimal ratio for your fuel type."
     },
     {
-      "question": "How does compression ratio affect power?",
-      "answer": "Higher compression ratios generally increase power and efficiency by extracting more energy from the fuel. However, they also increase heat and pressure, requiring higher octane fuel."
+      "q": "How does compression ratio affect horsepower and performance?",
+      "a": "Higher compression ratios generally increase horsepower and thermal efficiency by extracting more energy from the air-fuel mixture. Each point of compression ratio can add 3-4% more power. However, higher ratios also increase combustion pressure and temperature, requiring higher octane fuel."
     },
     {
-      "question": "Can I calculate compression ratio without removing the head?",
-      "answer": "Yes, if you know the engine specifications. Use manufacturer data for bore, stroke, and combustion chamber volume, or measure with a burette through the spark plug hole."
+      "q": "Can I calculate compression ratio without removing the cylinder head?",
+      "a": "Yes, if you have the engine specifications. Use manufacturer data for bore, stroke, and combustion chamber volume. You can also measure combustion chamber volume with a burette through the spark plug hole using our compression ratio calculator."
     },
     {
-      "question": "What happens if compression ratio is too high?",
-      "answer": "Excessive compression can cause detonation (knock), which damages pistons, rings, and bearings. Use higher octane fuel or reduce compression through head work or thicker gaskets."
+      "q": "What happens if my engine's compression ratio is too high?",
+      "a": "Excessive compression can cause detonation (engine knock), which damages pistons, rings, and bearings. Solutions include using higher octane fuel, reducing compression through cylinder head work, or using thicker head gaskets to lower the compression ratio."
+    },
+    {
+      "q": "How do I calculate compression ratio from engine specifications?",
+      "a": "Compression ratio = (Swept Volume + Combustion Chamber Volume) ÷ Combustion Chamber Volume. Swept volume = π × (bore/2)² × stroke. Our calculator automates this process using bore, stroke, and chamber volume inputs."
+    },
+    {
+      "q": "What compression ratio is best for racing applications?",
+      "a": "Racing engines often run 12:1 to 15:1 compression ratios with race fuel (100+ octane). The optimal ratio depends on fuel octane, engine design, and intended use. Always match compression ratio to available fuel octane rating."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Engine Displacement Calculator",
+      "url": "/auto/engine-displacement-calculator"
+    },
+    {
+      "title": "Engine Volume Calculator",
+      "url": "/auto/engine-volume-calculator"
+    },
+    {
+      "title": "Carburetor CFM Calculator",
+      "url": "/auto/carburetor-cfm-calculator"
+    },
+    {
+      "title": "Automotive Tools Category",
+      "url": "/auto"
     }
   ]
 }

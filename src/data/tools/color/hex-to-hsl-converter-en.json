@@ -1,39 +1,107 @@
 {
-  "about": [
-    "The HEX to HSL converter transforms hexadecimal color codes into HSL (Hue, Saturation, Lightness) values and vice versa. HSL provides an intuitive way to work with colors by separating hue from saturation and lightness.",
-    "HSL color model is particularly useful for creating color variations, adjusting brightness, and building harmonious color schemes in design and web development projects."
-  ],
-  "howToUse": [
-    "Enter a HEX color code (e.g., #3498DB)",
-    "Or input HSL values (Hue: 0-360°, Saturation: 0-100%, Lightness: 0-100%)",
-    "Use the color picker for visual color selection",
-    "Adjust HSL sliders to modify colors intuitively",
-    "Copy the converted values for your project"
-  ],
+  "about": {
+    "title": "About HEX to HSL Converter - HSL Color Space",
+    "description": "The HEX to HSL Converter transforms hexadecimal color codes into HSL (Hue, Saturation, Lightness) values and vice versa. HSL provides an intuitive way to work with colors by separating hue from saturation and lightness. The HSL color model is particularly useful for creating color variations, adjusting brightness, and building harmonious color schemes in design and web development projects."
+  },
+  "howTo": {
+    "title": "How to Use the HEX to HSL Converter",
+    "steps": [
+      {
+        "title": "Enter HEX Code",
+        "description": "Input a HEX color code (e.g., #3498DB) in the designated field for conversion."
+      },
+      {
+        "title": "Or Input HSL Values",
+        "description": "Alternatively, enter HSL values (Hue: 0-360°, Saturation: 0-100%, Lightness: 0-100%)."
+      },
+      {
+        "title": "Use Color Picker",
+        "description": "Select colors visually using the integrated color picker for intuitive selection."
+      },
+      {
+        "title": "Adjust HSL Sliders",
+        "description": "Fine-tune colors using HSL sliders to modify hue, saturation, and lightness independently."
+      },
+      {
+        "title": "Preview Changes",
+        "description": "View real-time color preview as you make adjustments to see immediate results."
+      },
+      {
+        "title": "Copy Values",
+        "description": "Copy the converted HEX or HSL values for use in your design projects."
+      }
+    ],
+    "tips": [
+      "Use HSL for intuitive color adjustments and variations",
+      "Adjust lightness to create color tints and shades",
+      "Modify saturation to control color intensity",
+      "Keep hue constant while varying saturation and lightness for harmonious palettes"
+    ]
+  },
   "features": [
-    "HEX to HSL and HSL to HEX conversion",
-    "Interactive HSL color sliders",
-    "Real-time color preview",
-    "Visual color picker interface",
-    "CSS-compatible output formats",
-    "Instant copy to clipboard"
+    {
+      "title": "Bidirectional Conversion",
+      "description": "Convert HEX to HSL and HSL to HEX with accurate color space transformation."
+    },
+    {
+      "title": "Interactive HSL Sliders",
+      "description": "Intuitive sliders for adjusting hue, saturation, and lightness values independently."
+    },
+    {
+      "title": "Real-time Color Preview",
+      "description": "Live color preview that updates instantly as you modify values or use sliders."
+    },
+    {
+      "title": "Color Picker Integration",
+      "description": "Visual color selection tool integrated with automatic HSL and HEX value updates."
+    },
+    {
+      "title": "Precise Value Display",
+      "description": "Accurate display of color values in both HEX and HSL formats with decimal precision."
+    },
+    {
+      "title": "Copy-to-Clipboard",
+      "description": "One-click copying of color values for immediate use in design and development projects."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What is HSL color model?",
-      "answer": "HSL stands for Hue (color type 0-360°), Saturation (color intensity 0-100%), and Lightness (brightness 0-100%). It's more intuitive than RGB for color manipulation."
+      "q": "What does HSL stand for and how does it work?",
+      "a": "HSL stands for Hue, Saturation, and Lightness. Hue represents the color type (0-360°), Saturation controls color intensity (0-100%), and Lightness adjusts brightness (0-100%). This model is more intuitive than RGB for color manipulation."
     },
     {
-      "question": "Why use HSL instead of HEX or RGB?",
-      "answer": "HSL makes it easier to create color variations, adjust brightness, and maintain color harmony. You can easily make colors lighter, darker, or more/less vibrant."
+      "q": "Why use HSL instead of HEX or RGB?",
+      "a": "HSL is more intuitive for color adjustments. You can easily modify brightness (lightness) or color intensity (saturation) without affecting the base color (hue). This makes it ideal for creating color variations and harmonious palettes."
     },
     {
-      "question": "How do I create color variations with HSL?",
-      "answer": "Keep the hue constant and adjust saturation for intensity or lightness for brightness. This creates natural color variations while maintaining the base color."
+      "q": "What are the HSL value ranges?",
+      "a": "Hue ranges from 0-360 degrees representing position on the color wheel, Saturation from 0-100% controlling color intensity (0% = grayscale, 100% = full color), and Lightness from 0-100% controlling brightness (0% = black, 50% = normal, 100% = white)."
     },
     {
-      "question": "Is HSL supported in CSS?",
-      "answer": "Yes, modern browsers fully support HSL in CSS. You can use hsl(hue, saturation%, lightness%) directly in your stylesheets."
+      "q": "Can I use HSL values directly in CSS?",
+      "a": "Yes! Modern browsers fully support HSL values in CSS. Use hsl(hue, saturation%, lightness%) syntax or hsla(hue, saturation%, lightness%, alpha) for colors with transparency. HSL is often preferred for CSS custom properties and color manipulation."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "HEX to RGB Converter",
+      "url": "/color/hex-to-rgb-converter"
+    },
+    {
+      "title": "RGB to HEX Converter",
+      "url": "/color/rgb-to-hex-converter"
+    },
+    {
+      "title": "Color Picker Tool",
+      "url": "/color/color-picker-tool"
+    },
+    {
+      "title": "Color Palette Generator",
+      "url": "/color/color-palette-generator"
+    },
+    {
+      "title": "Color Contrast Checker",
+      "url": "/color/contrast-checker"
     }
   ]
 }

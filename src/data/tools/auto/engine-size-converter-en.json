@@ -1,38 +1,102 @@
 {
-  "about": [
-    "The Engine Size Converter provides accurate conversions between cubic inches (CI) and liters for engine displacement measurements. Essential for engine identification, comparison, and automotive applications worldwide.",
-    "Understanding engine displacement in both metric and imperial units helps with parts compatibility, performance comparisons, and international automotive specifications."
-  ],
-  "howToUse": [
-    "Enter engine size in cubic inches or liters",
-    "View instant conversion to other unit",
-    "Use for engine identification and comparison",
-    "Reference common engine sizes and specifications"
-  ],
+  "about": {
+    "title": "About Engine Size Converter",
+    "description": "The Engine Size Converter provides accurate conversions between cubic inches (CI) and liters for engine displacement measurements. Essential for engine identification, comparison, and automotive applications worldwide. Understanding engine displacement in both metric and imperial units helps with parts compatibility, performance comparisons, and international automotive specifications."
+  },
+  "howTo": {
+    "title": "How to Use the Engine Size Converter",
+    "steps": [
+      {
+        "title": "Enter Engine Displacement",
+        "description": "Input engine size in cubic inches (CI) or liters (L) that you want to convert."
+      },
+      {
+        "title": "Get Instant Conversion",
+        "description": "View the accurate conversion to the other unit immediately."
+      },
+      {
+        "title": "Identify Engine Specs",
+        "description": "Use for engine identification, parts compatibility, and performance comparison."
+      },
+      {
+        "title": "Reference Common Sizes",
+        "description": "Compare with common engine displacement specifications and standards."
+      }
+    ],
+    "tips": [
+      "1 cubic inch = 0.016387 liters (precise conversion factor)",
+      "Popular muscle car engines: 350 CI = 5.7L, 454 CI = 7.4L",
+      "Use for international parts compatibility and specifications"
+    ]
+  },
   "features": [
-    "Cubic inch to liter conversion",
-    "Bidirectional conversion support",
-    "Common engine size references",
-    "Automotive applications",
-    "Professional accuracy",
-    "International compatibility"
+    {
+      "title": "Cubic Inch to Liter Conversion",
+      "description": "Accurate conversion between CI and liters using precise automotive standards."
+    },
+    {
+      "title": "Bidirectional Conversion",
+      "description": "Convert from cubic inches to liters or liters to cubic inches seamlessly."
+    },
+    {
+      "title": "Engine Identification",
+      "description": "Help identify engines by displacement across different measurement systems."
+    },
+    {
+      "title": "Parts Compatibility",
+      "description": "Ensure proper parts compatibility when working with international specifications."
+    },
+    {
+      "title": "Professional Accuracy",
+      "description": "Uses the precise conversion factor (1 CI = 0.016387064 L) for professional applications."
+    },
+    {
+      "title": "International Standards",
+      "description": "Support for both metric and imperial engine displacement measurements."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "Why do some countries use liters while others use cubic inches?",
-      "answer": "Metric countries typically use liters, while the US automotive industry traditionally uses cubic inches. Both measure the same displacement volume."
+      "q": "Why do some countries use liters while others use cubic inches?",
+      "a": "Metric countries typically use liters for engine displacement, while the US automotive industry traditionally uses cubic inches. Both units measure the same displacement volume, just in different measurement systems. Our engine size converter helps bridge this gap for international compatibility."
     },
     {
-      "question": "How accurate is the conversion between CI and liters?",
-      "answer": "The conversion uses the precise factor: 1 cubic inch = 0.016387064 liters, providing professional-grade accuracy for all automotive applications."
+      "q": "How accurate is the conversion between CI and liters?",
+      "a": "Our engine size converter uses the precise conversion factor: 1 cubic inch = 0.016387064 liters. This provides professional-grade accuracy suitable for all automotive applications, engine identification, and parts compatibility verification."
     },
     {
-      "question": "What are some common engine size conversions?",
-      "answer": "Popular conversions include 350 CI = 5.7L, 454 CI = 7.4L, 302 CI = 5.0L, and 427 CI = 7.0L. These are common in American muscle cars."
+      "q": "What are some common engine size conversions?",
+      "a": "Popular muscle car conversions include: 350 CI = 5.7L, 454 CI = 7.4L, 302 CI = 5.0L, 427 CI = 7.0L, 396 CI = 6.5L, and 283 CI = 4.6L. These are frequently referenced in American automotive applications."
     },
     {
-      "question": "Does engine displacement affect performance?",
-      "answer": "Generally, larger displacement engines produce more torque and power, but efficiency, design, and technology also play crucial roles in overall performance."
+      "q": "Does engine displacement affect performance?",
+      "a": "Generally, larger displacement engines produce more torque and power due to increased air and fuel capacity. However, modern engine efficiency, design technology, forced induction, and tuning also significantly impact overall performance characteristics."
+    },
+    {
+      "q": "How do I identify an engine by its displacement?",
+      "a": "Engine displacement is often stamped on the block or listed in vehicle documentation. Use our converter to translate between measurement systems when researching engines, ordering parts, or comparing specifications from different regions."
+    },
+    {
+      "q": "What's the difference between engine displacement and engine size?",
+      "a": "Engine displacement and engine size refer to the same measurement - the total volume of all cylinders in an engine. This is measured in cubic inches (CI) in the US or liters (L) in metric countries, representing the engine's capacity to move air and fuel."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Engine Displacement Calculator",
+      "url": "/auto/engine-displacement-calculator"
+    },
+    {
+      "title": "Torque Horsepower Calculator",
+      "url": "/auto/torque-horsepower-calculator"
+    },
+    {
+      "title": "Compression Ratio Calculator",
+      "url": "/auto/compression-ratio-calculator"
+    },
+    {
+      "title": "Automotive Tools Category",
+      "url": "/auto"
     }
   ]
 }

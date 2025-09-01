@@ -1,31 +1,40 @@
 {
-  "about": [
-    "The Unsecured Loan Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "Unsecured Loan Calculator - Personal Loan Payment, APR & Total Cost Estimator",
+    "description": "The Unsecured Loan Calculator estimates monthly payments, total interest, and overall borrowing cost for personal loans that do not require collateral. Compare APRs, terms, and fees, and evaluate how credit score and debt-to-income (DTI) influence affordability and approval odds."
+  },
+  "howTo": {
+    "title": "How to Use the Unsecured Loan Calculator",
+    "steps": [
+      { "title": "Enter Loan Amount", "description": "Input the principal you want to borrow for debt consolidation, emergencies, or major purchases." },
+      { "title": "Select APR & Term", "description": "Choose the annual percentage rate and repayment term (e.g., 24–60 months)." },
+      { "title": "Add Fees", "description": "Include origination or underwriting fees to estimate true cost." },
+      { "title": "Review Monthly Payment", "description": "See amortized payments and interest across the schedule." },
+      { "title": "Compare Scenarios", "description": "Adjust APR, term, or amount to find a comfortable payment and lower total interest." }
+    ],
+    "tips": [
+      "Higher credit scores generally qualify for lower APRs.",
+      "Shorter terms increase payment but save on total interest.",
+      "Prequalify with a soft credit check to compare offers without impacting score."
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
+    { "title": "Payment & Interest Breakdown", "description": "Amortization schedule shows principal vs. interest over time." },
+    { "title": "Fee-Adjusted APR", "description": "Model origination fees to better reflect true borrowing cost." },
+    { "title": "DTI Awareness", "description": "Estimate how the new payment affects your debt-to-income ratio." },
+    { "title": "Offer Comparison", "description": "Test multiple APR and term combinations to choose the best fit." }
   ],
-  "faqs": [
-    {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
-    },
-    {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
-    }
+  "faq": [
+    { "q": "What is an unsecured loan?", "a": "A personal loan that does not require collateral; approval is based on creditworthiness, income, and DTI." },
+    { "q": "How can I lower my APR?", "a": "Improve your credit score, reduce existing debt, add a co-borrower, or shop multiple lenders for better terms." },
+    { "q": "Is there a prepayment penalty?", "a": "Many personal loans have no prepayment penalty; review your contract before making extra payments." },
+    { "q": "Unsecured vs. secured loans?", "a": "Unsecured loans avoid collateral risk but may have higher APRs; secured loans can be cheaper but put assets at risk." },
+    { "q": "Will applying hurt my credit score?", "a": "Rate checks with prequalification are usually soft pulls; a formal application often triggers a hard inquiry that may temporarily lower your score." }
+  ],
+  "relativeLinks": [
+    { "title": "Personal Loan Calculator", "url": "/finance/loan-calculator" },
+    { "title": "Secured Loan Calculator", "url": "/finance/secured-loan-calculator" },
+    { "title": "Debt Consolidation Calculator", "url": "/finance/debt-consolidation-calculator" },
+    { "title": "Credit Utilization Calculator", "url": "/finance/credit-utilization-calculator" }
   ]
 }

@@ -1,39 +1,107 @@
 {
-  "about": [
-    "The World Clock displays current time across multiple time zones simultaneously, making it perfect for tracking time in different cities around the world. Essential for international business, travel planning, and staying connected with global contacts.",
-    "Features real-time updates with automatic daylight saving time adjustments, customizable city selection, and clean visual display for easy time comparison across regions."
-  ],
-  "howToUse": [
-    "Select cities or time zones to display",
-    "View current time for all selected locations",
-    "Add or remove cities as needed",
-    "Use search to find specific locations",
-    "Monitor time differences at a glance"
-  ],
+  "about": {
+    "title": "About World Clock - Global Time Display",
+    "description": "The World Clock displays current time across multiple time zones simultaneously, making it perfect for tracking time in different cities around the world. Essential for international business, travel planning, and staying connected with global contacts. Features real-time updates with automatic daylight saving time adjustments, customizable city selection, and clean visual display for easy time comparison across regions."
+  },
+  "howTo": {
+    "title": "How to Use the World Clock",
+    "steps": [
+      {
+        "title": "Select Cities",
+        "description": "Choose cities or time zones you want to display from the comprehensive global database."
+      },
+      {
+        "title": "View Current Times",
+        "description": "See real-time current time for all selected locations with automatic updates."
+      },
+      {
+        "title": "Add or Remove Cities",
+        "description": "Customize your display by adding new cities or removing ones you no longer need."
+      },
+      {
+        "title": "Search Locations",
+        "description": "Use the search function to quickly find specific cities or time zones worldwide."
+      },
+      {
+        "title": "Compare Time Zones",
+        "description": "Monitor time differences between locations at a glance for scheduling purposes."
+      },
+      {
+        "title": "Choose Time Format",
+        "description": "Switch between 12-hour and 24-hour time formats based on your preference."
+      }
+    ],
+    "tips": [
+      "Add your most frequently used cities for quick access",
+      "Use the world clock for scheduling international meetings",
+      "Check daylight saving time transitions for accurate planning",
+      "Bookmark the page with your preferred city selection"
+    ]
+  },
   "features": [
-    "Real-time multi-city display",
-    "Automatic DST adjustments",
-    "Searchable city database",
-    "Customizable location list",
-    "Time difference indicators",
-    "24-hour and 12-hour formats"
+    {
+      "title": "Real-time Multi-city Display",
+      "description": "Simultaneous display of current time across multiple cities with live updates."
+    },
+    {
+      "title": "Automatic DST Adjustments",
+      "description": "Automatic daylight saving time adjustments for all supported locations year-round."
+    },
+    {
+      "title": "Searchable City Database",
+      "description": "Comprehensive database of world cities and time zones with easy search functionality."
+    },
+    {
+      "title": "Customizable Location List",
+      "description": "Add, remove, and organize cities according to your personal or business needs."
+    },
+    {
+      "title": "Time Difference Indicators",
+      "description": "Clear visual indicators showing time differences between your local time and other zones."
+    },
+    {
+      "title": "Multiple Time Formats",
+      "description": "Support for both 24-hour and 12-hour time formats with AM/PM indicators."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "How often does the time update?",
-      "answer": "The world clock updates in real-time, typically every second, ensuring you always see the current time for all displayed locations."
+      "q": "How often does the world clock update?",
+      "a": "The world clock updates in real-time, typically every second, ensuring you always see the current accurate time for all displayed locations. The updates are synchronized with atomic time servers for maximum precision."
     },
     {
-      "question": "Can I add custom time zones?",
-      "answer": "Yes, you can search for and add any city or time zone from our comprehensive database of world locations."
+      "q": "Can I add custom time zones and cities?",
+      "a": "Yes, you can search for and add any city or time zone from our comprehensive database of world locations. The database includes major cities, capitals, and important business centers from every time zone globally."
     },
     {
-      "question": "Does it handle daylight saving time?",
-      "answer": "Yes, the clock automatically adjusts for daylight saving time changes in all supported locations throughout the year."
+      "q": "Does it automatically handle daylight saving time?",
+      "a": "Yes, the clock automatically adjusts for daylight saving time changes in all supported locations throughout the year. It accounts for different DST schedules across countries and regions, ensuring accuracy during transitions."
     },
     {
-      "question": "How many cities can I display at once?",
-      "answer": "You can display multiple cities simultaneously, with the interface optimized for easy comparison of times across different zones."
+      "q": "How many cities can I display simultaneously?",
+      "a": "You can display multiple cities simultaneously, with the interface optimized for easy comparison of times across different zones. The layout adapts to show your selected cities clearly without cluttering the display."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Time Zone Converter",
+      "url": "/time/timezone-converter"
+    },
+    {
+      "title": "Unix Timestamp Converter",
+      "url": "/time/unix-timestamp-converter"
+    },
+    {
+      "title": "Date Calculator",
+      "url": "/time/date-calculator"
+    },
+    {
+      "title": "Online Stopwatch",
+      "url": "/time/online-stopwatch"
+    },
+    {
+      "title": "Countdown Timer",
+      "url": "/time/countdown-timer"
     }
   ]
 }

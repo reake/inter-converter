@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Minimum Payment Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Minimum Payment Calculator - Credit Card Payoff Timeline Tool",
+    "description": "The Minimum Payment Calculator is a comprehensive debt analysis tool designed to help you understand how long it takes to pay off credit card debt using only minimum payments and the total interest costs involved. This calculator shows the true cost of making minimum payments, helping you make informed decisions about debt repayment strategies. Whether you're managing existing debt or planning payment strategies, this tool provides eye-opening analysis of minimum payment consequences."
+  },
+  "howTo": {
+    "title": "How to Use the Minimum Payment Calculator",
+    "steps": [
+      {
+        "title": "Enter Credit Card Balance",
+        "description": "Input your current credit card balance or debt amount."
+      },
+      {
+        "title": "Set Interest Rate",
+        "description": "Enter your credit card's Annual Percentage Rate (APR)."
+      },
+      {
+        "title": "Choose Minimum Payment Method",
+        "description": "Select percentage-based (2-3%) or fixed dollar amount minimum payment."
+      },
+      {
+        "title": "Review Payoff Timeline",
+        "description": "See how many years it takes to pay off debt with minimum payments only."
+      },
+      {
+        "title": "Calculate Total Interest",
+        "description": "Understand the total interest costs over the payoff period."
+      },
+      {
+        "title": "Compare Payment Strategies",
+        "description": "Analyze how extra payments dramatically reduce payoff time and interest."
+      }
+    ],
+    "tips": [
+      "Minimum payments can take 20-30+ years to pay off credit card debt",
+      "Total interest often exceeds the original balance with minimum payments",
+      "Even small extra payments can cut years off payoff time",
+      "Focus on highest interest rate cards first for debt elimination"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Payoff Timeline Calculator",
+      "description": "Calculate exactly how long minimum payments take to eliminate debt."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Total Interest Analysis",
+      "description": "Show total interest costs when paying only minimum amounts."
+    },
+    {
+      "title": "Payment Strategy Comparison",
+      "description": "Compare minimum payments vs. fixed payments vs. extra payment strategies."
+    },
+    {
+      "title": "Interest Savings Calculator",
+      "description": "Calculate interest savings from making payments above the minimum."
+    },
+    {
+      "title": "Multiple Card Analysis",
+      "description": "Analyze minimum payment strategies across multiple credit cards."
+    },
+    {
+      "title": "Debt Avalanche Optimizer",
+      "description": "Optimize payment allocation to minimize total interest across all debts."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Why do minimum payments take so long to pay off debt?",
+      "a": "Minimum payments are typically 2-3% of the balance, with most going toward interest rather than principal. As the balance decreases, so does the minimum payment, extending payoff time significantly."
+    },
+    {
+      "q": "How much interest will I pay with minimum payments?",
+      "a": "With minimum payments, total interest often equals or exceeds the original balance. For example, a $5,000 balance at 18% APR with 2% minimum payments takes 30+ years and costs over $6,000 in interest."
+    },
+    {
+      "q": "What's better than making minimum payments?",
+      "a": "Pay a fixed amount above the minimum, focus extra payments on highest-rate cards first (debt avalanche), or consider debt consolidation at lower rates. Even $25-50 extra monthly can cut years off payoff time."
+    },
+    {
+      "q": "Should I pay more than the minimum on all cards?",
+      "a": "Pay minimums on all cards to avoid late fees, then put any extra money toward the highest interest rate card first. This 'debt avalanche' method minimizes total interest costs."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Credit Card Payoff Calculator",
+      "url": "/finance/credit-card-payoff-calculator"
+    },
+    {
+      "title": "Credit Card Interest Calculator",
+      "url": "/finance/credit-card-interest-calculator"
+    },
+    {
+      "title": "Debt Payoff Calculator",
+      "url": "/finance/debt-payoff-calculator"
+    },
+    {
+      "title": "Balance Transfer Calculator",
+      "url": "/finance/balance-transfer-calculator"
+    },
+    {
+      "title": "Debt Consolidation Calculator",
+      "url": "/finance/debt-consolidation-calculator"
     }
   ]
 }

@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Dividend Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Dividend Calculator - Stock Dividend Income Analysis Tool",
+    "description": "The Dividend Calculator is a comprehensive investment analysis tool designed to help investors calculate dividend income, yields, and growth projections from dividend-paying stocks. Whether you're evaluating individual stocks, building a dividend portfolio, or planning retirement income, this calculator provides accurate projections for dividend payments, reinvestment scenarios, and total returns. Understanding dividend calculations is essential for income-focused investing and long-term wealth building."
+  },
+  "howTo": {
+    "title": "How to Use the Dividend Calculator",
+    "steps": [
+      {
+        "title": "Stock Information",
+        "description": "Enter the stock symbol, current price, and number of shares you own or plan to purchase."
+      },
+      {
+        "title": "Dividend Details",
+        "description": "Input the annual dividend per share and dividend payment frequency (quarterly, monthly, etc.)."
+      },
+      {
+        "title": "Dividend Growth Rate",
+        "description": "Enter the expected annual dividend growth rate based on company history and projections."
+      },
+      {
+        "title": "Investment Timeline",
+        "description": "Specify your investment holding period for long-term dividend growth calculations."
+      },
+      {
+        "title": "Reinvestment Options",
+        "description": "Choose whether to reinvest dividends (DRIP) or receive cash payments."
+      },
+      {
+        "title": "Analyze Returns",
+        "description": "Review dividend yield, annual income, total return projections, and compound growth scenarios."
+      }
+    ],
+    "tips": [
+      "Focus on dividend sustainability rather than just high yields",
+      "Consider dividend growth history and payout ratios",
+      "Diversify across sectors for stable dividend income",
+      "Understand tax implications of dividend payments"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Dividend Yield Calculation",
+      "description": "Calculate current dividend yield and compare with historical yields and market averages."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Annual Income Projection",
+      "description": "Project total annual dividend income from your portfolio or individual stock positions."
+    },
+    {
+      "title": "DRIP Analysis",
+      "description": "Analyze the compound growth effect of dividend reinvestment plans (DRIP) over time."
+    },
+    {
+      "title": "Dividend Growth Modeling",
+      "description": "Model future dividend payments based on historical growth rates and company projections."
+    },
+    {
+      "title": "Payout Ratio Analysis",
+      "description": "Evaluate dividend sustainability by analyzing payout ratios and earnings coverage."
+    },
+    {
+      "title": "Tax Impact Calculator",
+      "description": "Calculate after-tax dividend income considering qualified vs. ordinary dividend tax rates."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What's a good dividend yield for stocks?",
+      "a": "Dividend yields typically range from 1-6%. High-quality dividend stocks often yield 2-4%, while REITs and utilities may yield 4-8%. Be cautious of yields above 8% as they may indicate financial distress or unsustainable payouts."
+    },
+    {
+      "q": "Should I reinvest dividends or take cash?",
+      "a": "Dividend reinvestment (DRIP) compounds your returns over time and is ideal for long-term growth. Taking cash is better if you need current income or want to rebalance your portfolio. Consider your investment timeline and income needs."
+    },
+    {
+      "q": "How are dividends taxed?",
+      "a": "Qualified dividends from US companies are taxed at capital gains rates (0%, 15%, or 20%). Non-qualified dividends are taxed as ordinary income. Hold stocks for 60+ days around ex-dividend date to qualify for preferential tax treatment."
+    },
+    {
+      "q": "What's the difference between dividend yield and total return?",
+      "a": "Dividend yield is annual dividends divided by stock price. Total return includes both dividend income and capital appreciation (or depreciation). Focus on total return for complete investment performance analysis."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Investment Calculator",
+      "url": "/finance/investment-calculator"
+    },
+    {
+      "title": "Stock Calculator",
+      "url": "/finance/stock-calculator"
+    },
+    {
+      "title": "Bond Calculator",
+      "url": "/finance/bond-calculator"
+    },
+    {
+      "title": "Retirement Calculator",
+      "url": "/finance/retirement-calculator"
+    },
+    {
+      "title": "Tax Calculator",
+      "url": "/finance/tax-calculator"
     }
   ]
 }

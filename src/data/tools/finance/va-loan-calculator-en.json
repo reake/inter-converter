@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Va Loan Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About VA Loan Calculator - Veterans Home Financing Tool",
+    "description": "The VA Loan Calculator is a specialized home financing tool designed to help eligible veterans, active-duty service members, and surviving spouses calculate monthly payments and benefits for VA-backed home loans. VA loans offer unique advantages including no down payment requirements, no private mortgage insurance (PMI), and competitive interest rates. This calculator helps you understand your VA loan benefits, calculate monthly payments, and compare VA loans with conventional financing options."
+  },
+  "howTo": {
+    "title": "How to Use the VA Loan Calculator",
+    "steps": [
+      {
+        "title": "Home Price",
+        "description": "Enter the purchase price of the home you're considering buying."
+      },
+      {
+        "title": "Down Payment",
+        "description": "Input your down payment amount (VA loans allow 0% down payment for eligible borrowers)."
+      },
+      {
+        "title": "Interest Rate",
+        "description": "Enter the VA loan interest rate offered by your lender."
+      },
+      {
+        "title": "Loan Term",
+        "description": "Select the loan term (typically 15 or 30 years for VA loans)."
+      },
+      {
+        "title": "VA Funding Fee",
+        "description": "Include the VA funding fee (varies by service type, down payment, and first-time use)."
+      },
+      {
+        "title": "Review Benefits",
+        "description": "Compare VA loan advantages with conventional loan requirements and costs."
+      }
+    ],
+    "tips": [
+      "VA loans don't require PMI, saving hundreds monthly compared to conventional loans",
+      "First-time VA loan users typically pay lower funding fees",
+      "VA loans can be used multiple times throughout your lifetime",
+      "Consider energy-efficient improvements for additional VA loan benefits"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "No PMI Savings Calculator",
+      "description": "Calculate monthly and lifetime savings from not paying private mortgage insurance."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "VA Funding Fee Calculator",
+      "description": "Calculate the one-time VA funding fee based on service type, down payment, and loan usage."
+    },
+    {
+      "title": "Zero Down Payment Analysis",
+      "description": "Analyze the benefits and considerations of purchasing with no down payment."
+    },
+    {
+      "title": "VA vs Conventional Comparison",
+      "description": "Compare VA loan benefits with conventional loan requirements and total costs."
+    },
+    {
+      "title": "Entitlement Calculator",
+      "description": "Calculate available VA loan entitlement and maximum loan amounts for your area."
+    },
+    {
+      "title": "Cash-Out Refinance Analysis",
+      "description": "Evaluate VA cash-out refinance options for home improvements or debt consolidation."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Who is eligible for VA loans?",
+      "a": "VA loans are available to veterans who served 90+ days during wartime or 181+ days during peacetime, current active-duty members after 90 days of service, National Guard/Reserve members with 6+ years of service, and surviving spouses of service members who died in service or from service-connected disabilities."
+    },
+    {
+      "q": "What is the VA funding fee and can it be waived?",
+      "a": "The VA funding fee ranges from 1.4% to 3.6% of the loan amount, depending on service type, down payment, and first-time use. Veterans with service-connected disabilities rated at 10% or higher are exempt from the funding fee."
+    },
+    {
+      "q": "Can I use a VA loan more than once?",
+      "a": "Yes, VA loan benefits can be used multiple times. You can reuse your entitlement after paying off a previous VA loan, or use remaining entitlement for additional properties if you have sufficient entitlement available."
+    },
+    {
+      "q": "What are VA loan limits?",
+      "a": "As of 2020, there are no VA loan limits for eligible veterans with full entitlement. However, if you've used your entitlement before or have reduced entitlement, limits may apply based on conforming loan limits in your county."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Mortgage Calculator",
+      "url": "/finance/mortgage-calculator"
+    },
+    {
+      "title": "FHA Loan Calculator",
+      "url": "/finance/fha-loan-calculator"
+    },
+    {
+      "title": "Refinance Calculator",
+      "url": "/finance/refinance-calculator"
+    },
+    {
+      "title": "Home Affordability Calculator",
+      "url": "/finance/home-affordability-calculator"
+    },
+    {
+      "title": "Military Pay Calculator",
+      "url": "/finance/military-pay-calculator"
     }
   ]
 }

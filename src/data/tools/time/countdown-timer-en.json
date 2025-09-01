@@ -1,39 +1,102 @@
 {
-  "about": [
-    "The Countdown Timer is a versatile online timer that counts down from a specified time to zero. Perfect for productivity sessions, cooking, workouts, presentations, or any activity that requires precise time tracking.",
-    "Features customizable time settings, visual and audio alerts, and can run in the background while you work on other tasks. The timer continues running even if you switch browser tabs."
-  ],
-  "howToUse": [
-    "Set your desired countdown time (hours, minutes, seconds)",
-    "Click start to begin the countdown",
-    "Monitor progress with the visual display",
-    "Receive alerts when time expires",
-    "Use pause/resume controls as needed"
-  ],
+  "about": {
+    "title": "About Countdown Timer",
+    "description": "The Countdown Timer is a versatile online timer that counts down from a specified time to zero. Perfect for productivity sessions, cooking, workouts, presentations, or any activity that requires precise time tracking. Features customizable time settings, visual and audio alerts, and can run in the background while you work on other tasks. The timer continues running even if you switch browser tabs."
+  },
+  "howTo": {
+    "title": "How to Use the Countdown Timer",
+    "steps": [
+      {
+        "title": "Set Time Duration",
+        "description": "Enter your desired countdown time in hours, minutes, and seconds."
+      },
+      {
+        "title": "Start Timer",
+        "description": "Click the start button to begin the countdown sequence."
+      },
+      {
+        "title": "Monitor Progress",
+        "description": "Watch the visual countdown display and progress indicator."
+      },
+      {
+        "title": "Receive Alerts",
+        "description": "Get visual and audio notifications when the timer reaches zero."
+      }
+    ],
+    "tips": [
+      "Timer continues running in background tabs",
+      "Use pause/resume controls for flexible timing",
+      "Enable audio alerts for better notifications"
+    ]
+  },
   "features": [
-    "Customizable countdown duration",
-    "Visual progress indicator",
-    "Audio notification alerts",
-    "Pause and resume functionality",
-    "Background operation support",
-    "Full-screen timer mode"
+    {
+      "title": "Customizable Duration",
+      "description": "Set countdown times up to 24 hours with precise hours, minutes, and seconds."
+    },
+    {
+      "title": "Visual Progress Display",
+      "description": "Clear countdown display with progress indicator for easy time monitoring."
+    },
+    {
+      "title": "Audio Alerts",
+      "description": "Customizable audio notification alerts when the countdown reaches zero."
+    },
+    {
+      "title": "Pause and Resume",
+      "description": "Full control with pause, resume, and reset functionality for flexible timing."
+    },
+    {
+      "title": "Background Operation",
+      "description": "Timer continues running even when switching browser tabs or windows."
+    },
+    {
+      "title": "Full-Screen Mode",
+      "description": "Expand to full-screen for presentations or prominent time display."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "Does the timer work in the background?",
-      "answer": "Yes, the countdown timer continues running even when you switch to other browser tabs or minimize the window."
+      "q": "Does the countdown timer work in the background?",
+      "a": "Yes, our countdown timer continues running even when you switch to other browser tabs or minimize the window. This makes it perfect for productivity sessions and multitasking while keeping track of time."
     },
     {
-      "question": "Can I customize the alert sound?",
-      "answer": "The timer includes built-in alert sounds. You can enable or disable audio notifications based on your preference."
+      "q": "Can I customize the alert sound on the timer?",
+      "a": "The countdown timer includes built-in alert sounds that activate when time expires. You can enable or disable audio notifications based on your preference, making it suitable for quiet environments or when you need audible alerts."
     },
     {
-      "question": "What's the maximum countdown time?",
-      "answer": "You can set countdowns up to 24 hours, making it suitable for long-duration activities and events."
+      "q": "What's the maximum countdown time I can set?",
+      "a": "You can set countdown timers up to 24 hours, making it suitable for long-duration activities, events, cooking, workouts, or extended productivity sessions. Perfect for any timing need from seconds to full days."
     },
     {
-      "question": "Will the timer reset if I refresh the page?",
-      "answer": "Yes, refreshing the page will reset the timer. Make sure to complete your countdown session before closing or refreshing."
+      "q": "Will the timer reset if I refresh the browser page?",
+      "a": "Yes, refreshing the page will reset the countdown timer. Make sure to complete your countdown session before closing or refreshing the browser to avoid losing your timing progress."
+    },
+    {
+      "q": "Can I pause and resume the countdown timer?",
+      "a": "Yes, the countdown timer includes full pause and resume functionality. You can pause the timer at any point and resume from where you left off, giving you complete control over your timing sessions."
+    },
+    {
+      "q": "Is the countdown timer good for productivity techniques?",
+      "a": "Absolutely! The countdown timer is perfect for productivity techniques like the Pomodoro Technique, time-boxing, or any focused work sessions. Set 25-minute work intervals or custom durations for optimal productivity management."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Timezone Converter",
+      "url": "/time/timezone-converter"
+    },
+    {
+      "title": "Date Difference Calculator",
+      "url": "/time/date-difference-calculator"
+    },
+    {
+      "title": "Timestamp Converter",
+      "url": "/time/timestamp-converter"
+    },
+    {
+      "title": "Time Tools Category",
+      "url": "/time"
     }
   ]
 }

@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Interest Only Mortgage Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Interest Only Mortgage Calculator - Payment Analysis Tool",
+    "description": "The Interest Only Mortgage Calculator is a comprehensive loan analysis tool designed to help you understand the costs and implications of interest-only mortgage payments. This calculator shows monthly payments during the interest-only period, total interest costs, and payment changes when principal payments begin. Whether you're considering an interest-only loan or comparing mortgage options, this tool provides detailed analysis of payment structures and long-term costs."
+  },
+  "howTo": {
+    "title": "How to Use the Interest Only Mortgage Calculator",
+    "steps": [
+      {
+        "title": "Enter Loan Amount",
+        "description": "Input the total mortgage loan amount you're considering."
+      },
+      {
+        "title": "Set Interest Rate",
+        "description": "Enter the annual interest rate for the mortgage loan."
+      },
+      {
+        "title": "Choose Interest-Only Period",
+        "description": "Select how long you'll make interest-only payments (typically 5-10 years)."
+      },
+      {
+        "title": "Set Total Loan Term",
+        "description": "Enter the total mortgage term (usually 30 years total)."
+      },
+      {
+        "title": "Review Payment Structure",
+        "description": "Analyze interest-only payments vs. full principal and interest payments."
+      },
+      {
+        "title": "Compare Total Costs",
+        "description": "Evaluate total interest costs compared to traditional mortgage payments."
+      }
+    ],
+    "tips": [
+      "Interest-only loans typically have higher rates than traditional mortgages",
+      "Payments increase significantly when the interest-only period ends",
+      "Consider your ability to handle payment increases or refinance",
+      "Build equity through property appreciation, not principal payments"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Payment Period Analysis",
+      "description": "Compare payments during interest-only period vs. principal and interest period."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Payment Shock Calculator",
+      "description": "Calculate payment increase when interest-only period ends."
+    },
+    {
+      "title": "Total Interest Comparison",
+      "description": "Compare total interest costs vs. traditional mortgage payments."
+    },
+    {
+      "title": "Equity Building Analysis",
+      "description": "Understand how equity builds through appreciation vs. principal payments."
+    },
+    {
+      "title": "Refinancing Scenarios",
+      "description": "Analyze options for refinancing before interest-only period ends."
+    },
+    {
+      "title": "Cash Flow Impact",
+      "description": "Calculate monthly cash flow benefits during interest-only period."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Who should consider an interest-only mortgage?",
+      "a": "Interest-only mortgages may benefit borrowers with irregular income, those expecting income increases, real estate investors, or buyers in appreciating markets who plan to sell before the interest-only period ends."
+    },
+    {
+      "q": "What happens when the interest-only period ends?",
+      "a": "Payments increase significantly as you begin paying principal and interest on the remaining loan balance. For example, a $400,000 loan might jump from $2,000/month to $2,800/month when the interest-only period ends."
+    },
+    {
+      "q": "Are interest-only mortgages risky?",
+      "a": "Yes, they carry risks including payment shock, no equity building through payments, potential negative equity if property values decline, and refinancing challenges if credit or income situations change."
+    },
+    {
+      "q": "Can I make principal payments during the interest-only period?",
+      "a": "Most interest-only loans allow voluntary principal payments without penalty. Making extra principal payments can reduce the payment shock when the interest-only period ends and build equity faster."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Mortgage Calculator",
+      "url": "/finance/mortgage-calculator"
+    },
+    {
+      "title": "Mortgage Refinance Calculator",
+      "url": "/finance/mortgage-refinance-calculator"
+    },
+    {
+      "title": "Home Affordability Calculator",
+      "url": "/finance/home-affordability-calculator"
+    },
+    {
+      "title": "Mortgage Payoff Calculator",
+      "url": "/finance/mortgage-payoff-calculator"
+    },
+    {
+      "title": "ARM Calculator",
+      "url": "/finance/arm-calculator"
     }
   ]
 }

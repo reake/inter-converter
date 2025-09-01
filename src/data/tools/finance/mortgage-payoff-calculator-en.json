@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Mortgage Payoff Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Mortgage Payoff Calculator - Early Payment Planning Tool",
+    "description": "The Mortgage Payoff Calculator is a comprehensive mortgage acceleration tool designed to help homeowners calculate the benefits of making extra principal payments to pay off their mortgage early. This calculator shows how additional payments can save thousands in interest costs and reduce loan terms by years. Whether you're considering bi-weekly payments, annual lump sums, or monthly extra payments, this tool provides accurate projections for mortgage payoff strategies."
+  },
+  "howTo": {
+    "title": "How to Use the Mortgage Payoff Calculator",
+    "steps": [
+      {
+        "title": "Enter Current Mortgage Details",
+        "description": "Input your current mortgage balance, interest rate, and remaining loan term."
+      },
+      {
+        "title": "Set Extra Payment Amount",
+        "description": "Enter the additional principal payment you want to make monthly, annually, or one-time."
+      },
+      {
+        "title": "Choose Payment Frequency",
+        "description": "Select whether to make extra payments monthly, bi-weekly, annually, or as lump sums."
+      },
+      {
+        "title": "Review Savings Analysis",
+        "description": "Analyze total interest savings and time reduction from extra payments."
+      },
+      {
+        "title": "Compare Scenarios",
+        "description": "Compare different extra payment strategies to find the most effective approach."
+      },
+      {
+        "title": "Plan Payment Strategy",
+        "description": "Develop a sustainable extra payment plan that fits your budget and goals."
+      }
+    ],
+    "tips": [
+      "Even small extra payments can save thousands in interest over time",
+      "Bi-weekly payments result in 26 payments per year (equivalent to 13 monthly payments)",
+      "Consider opportunity cost - compare mortgage savings to investment returns",
+      "Ensure you have emergency savings before accelerating mortgage payments"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Extra Payment Calculator",
+      "description": "Calculate interest savings and time reduction from various extra payment strategies."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Bi-Weekly Payment Analysis",
+      "description": "Analyze the benefits of switching from monthly to bi-weekly mortgage payments."
+    },
+    {
+      "title": "Lump Sum Payment Impact",
+      "description": "Calculate the effect of one-time lump sum payments on mortgage payoff timeline."
+    },
+    {
+      "title": "Payment Schedule Comparison",
+      "description": "Compare amortization schedules with and without extra payments."
+    },
+    {
+      "title": "Interest Savings Calculator",
+      "description": "Calculate total interest savings from accelerated mortgage payment strategies."
+    },
+    {
+      "title": "Payoff Timeline Tracker",
+      "description": "Track how different payment strategies affect your mortgage-free date."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How much can I save by paying extra on my mortgage?",
+      "a": "Extra payments can save substantial interest. For example, paying an extra $100/month on a $300,000, 30-year mortgage at 6% can save over $60,000 in interest and reduce the loan term by 6 years."
+    },
+    {
+      "q": "Should I pay extra on my mortgage or invest the money?",
+      "a": "This depends on your mortgage rate vs potential investment returns. If you can earn more investing than your mortgage rate (after taxes), investing may be better. However, mortgage payoff provides guaranteed savings and peace of mind."
+    },
+    {
+      "q": "What's the best extra payment strategy?",
+      "a": "Bi-weekly payments are effective and automatic, while extra monthly principal payments offer flexibility. The best strategy depends on your cash flow, discipline, and financial goals."
+    },
+    {
+      "q": "When should I avoid paying extra on my mortgage?",
+      "a": "Avoid extra payments if you have high-interest debt, lack emergency savings, or can earn significantly higher returns through investments. Also consider if you plan to move soon or need liquidity."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Mortgage Calculator",
+      "url": "/finance/mortgage-calculator"
+    },
+    {
+      "title": "Refinance Calculator",
+      "url": "/finance/mortgage-refinance-calculator"
+    },
+    {
+      "title": "15 vs 30 Year Mortgage Calculator",
+      "url": "/finance/15-vs-30-year-mortgage-calculator"
+    },
+    {
+      "title": "Investment Calculator",
+      "url": "/finance/investment-calculator"
+    },
+    {
+      "title": "Debt Payoff Calculator",
+      "url": "/finance/debt-payoff-calculator"
     }
   ]
 }

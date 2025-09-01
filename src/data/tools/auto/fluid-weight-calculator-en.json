@@ -1,38 +1,102 @@
 {
-  "about": [
-    "The Fluid Weight Calculator determines the weight of automotive fluids based on volume and fluid type. Essential for calculating total vehicle weight, fluid capacity planning, and performance modifications.",
-    "Accurate fluid weight calculations help with weight distribution, performance tuning, and ensuring proper fluid levels for optimal vehicle operation and safety."
-  ],
-  "howToUse": [
-    "Select fluid type (oil, coolant, fuel, etc.)",
-    "Enter fluid volume in gallons or liters",
-    "View calculated weight in pounds and kilograms",
-    "Use for weight distribution and capacity planning"
-  ],
+  "about": {
+    "title": "About Fluid Weight Calculator",
+    "description": "The Fluid Weight Calculator determines the weight of automotive fluids based on volume and fluid type. Essential for calculating total vehicle weight, fluid capacity planning, and performance modifications. Accurate fluid weight calculations help with weight distribution, performance tuning, and ensuring proper fluid levels for optimal vehicle operation and safety."
+  },
+  "howTo": {
+    "title": "How to Use the Fluid Weight Calculator",
+    "steps": [
+      {
+        "title": "Select Fluid Type",
+        "description": "Choose the automotive fluid type (engine oil, coolant, gasoline, diesel, etc.)."
+      },
+      {
+        "title": "Enter Volume",
+        "description": "Input fluid volume in gallons, liters, or quarts."
+      },
+      {
+        "title": "Calculate Weight",
+        "description": "View calculated weight in pounds and kilograms instantly."
+      },
+      {
+        "title": "Apply Results",
+        "description": "Use for weight distribution, capacity planning, and performance calculations."
+      }
+    ],
+    "tips": [
+      "Gasoline weighs approximately 6.0-6.3 lbs per gallon",
+      "Engine oil typically weighs 7.0-7.5 lbs per gallon",
+      "Temperature affects fluid density and weight calculations"
+    ]
+  },
   "features": [
-    "Multiple automotive fluid types",
-    "Volume to weight conversion",
-    "Metric and imperial units",
-    "Weight distribution calculations",
-    "Performance tuning support",
-    "Professional accuracy"
+    {
+      "title": "Multiple Fluid Types",
+      "description": "Support for engine oil, coolant, gasoline, diesel, transmission fluid, and other automotive fluids."
+    },
+    {
+      "title": "Volume to Weight Conversion",
+      "description": "Accurate conversion from fluid volume to weight using specific gravity data."
+    },
+    {
+      "title": "Multiple Units",
+      "description": "Calculate using gallons, liters, quarts with results in pounds and kilograms."
+    },
+    {
+      "title": "Weight Distribution Analysis",
+      "description": "Help calculate total vehicle weight and fluid distribution effects."
+    },
+    {
+      "title": "Performance Applications",
+      "description": "Essential for racing, towing capacity, and fuel economy calculations."
+    },
+    {
+      "title": "Temperature Considerations",
+      "description": "Account for temperature effects on fluid density and weight."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "Why is fluid weight important in automotive applications?",
-      "answer": "Fluid weight affects overall vehicle weight, weight distribution, and performance. It's crucial for racing, towing capacity calculations, and fuel economy considerations."
+      "q": "Why is fluid weight important in automotive applications?",
+      "a": "Fluid weight affects overall vehicle weight, weight distribution, and performance characteristics. It's crucial for racing weight calculations, towing capacity determinations, fuel economy considerations, and proper vehicle balance. Our fluid weight calculator helps ensure accurate calculations."
     },
     {
-      "question": "How much does a gallon of gasoline weigh?",
-      "answer": "Gasoline weighs approximately 6.0-6.3 pounds per gallon, depending on temperature and specific gravity. This varies slightly with fuel additives and seasonal blends."
+      "q": "How much does a gallon of gasoline weigh?",
+      "a": "Gasoline weighs approximately 6.0-6.3 pounds per gallon, depending on temperature, specific gravity, and fuel additives. Summer and winter fuel blends have slightly different weights due to varying compositions and volatility requirements."
     },
     {
-      "question": "What's the heaviest automotive fluid?",
-      "answer": "Gear oil and differential fluid are among the heaviest, weighing around 7.5-8.0 pounds per gallon due to their high viscosity and additives."
+      "q": "What's the heaviest automotive fluid?",
+      "a": "Gear oil and differential fluid are among the heaviest automotive fluids, weighing around 7.5-8.0 pounds per gallon due to their high viscosity, density, and heavy-duty additives. Brake fluid and power steering fluid are also relatively heavy."
     },
     {
-      "question": "How does temperature affect fluid weight?",
-      "answer": "Higher temperatures reduce fluid density, making fluids lighter per unit volume. Cold fluids are denser and heavier than the same volume when warm."
+      "q": "How does temperature affect fluid weight calculations?",
+      "a": "Higher temperatures reduce fluid density, making fluids lighter per unit volume. Cold fluids are denser and heavier than the same volume when warm. Our calculator accounts for standard temperature conditions for accurate automotive applications."
+    },
+    {
+      "q": "What's the difference between engine oil and transmission fluid weight?",
+      "a": "Engine oil typically weighs 7.0-7.5 lbs per gallon, while automatic transmission fluid weighs about 6.8-7.2 lbs per gallon. The difference comes from viscosity, additives, and base oil composition. Use our calculator for precise measurements."
+    },
+    {
+      "q": "How do I calculate total vehicle fluid weight?",
+      "a": "Add the weight of all fluids: engine oil, coolant, fuel, transmission fluid, brake fluid, power steering fluid, and differential oil. Our fluid weight calculator helps determine individual fluid weights for accurate total calculations."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Auto Weight Converter",
+      "url": "/auto/auto-weight-converter"
+    },
+    {
+      "title": "Power to Weight Calculator",
+      "url": "/auto/power-to-weight-calculator"
+    },
+    {
+      "title": "Engine Size Converter",
+      "url": "/auto/engine-size-converter"
+    },
+    {
+      "title": "Automotive Tools Category",
+      "url": "/auto"
     }
   ]
 }

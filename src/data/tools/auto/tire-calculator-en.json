@@ -1,37 +1,102 @@
 {
-  "about": [
-    "The Tire Calculator analyzes how tire diameter changes affect vehicle speed, RPM, and overall performance. This tool is essential for tire upgrades, performance tuning, and ensuring accurate speedometer readings.",
-    "Understanding tire size impact helps optimize vehicle performance, fuel economy, and ensures proper clearance and handling characteristics when upgrading to different tire sizes."
-  ],
-  "howToUse": [
-    "Enter original tire size (width/aspect/rim)",
-    "Input new tire size for comparison", 
-    "View speed and RPM differences",
-    "Analyze performance impact and make informed decisions"
-  ],
+  "about": {
+    "title": "About Tire Calculator",
+    "description": "The Tire Calculator analyzes how tire diameter changes affect vehicle speed, RPM, and overall performance. This tool is essential for tire upgrades, performance tuning, and ensuring accurate speedometer readings. Understanding tire size impact helps optimize vehicle performance, fuel economy, and ensures proper clearance and handling characteristics when upgrading to different tire sizes."
+  },
+  "howTo": {
+    "title": "How to Use the Tire Calculator",
+    "steps": [
+      {
+        "title": "Enter Original Tire Size",
+        "description": "Input your current tire size in format: width/aspect ratio/rim diameter (e.g., 225/60R16)."
+      },
+      {
+        "title": "Input New Tire Size",
+        "description": "Enter the new tire size you're considering for comparison analysis."
+      },
+      {
+        "title": "View Differences",
+        "description": "Review calculated speed and RPM differences between tire sizes."
+      },
+      {
+        "title": "Analyze Impact",
+        "description": "Evaluate performance impact and make informed tire upgrade decisions."
+      }
+    ],
+    "tips": [
+      "Stay within 3% of original diameter to maintain accuracy",
+      "Larger tires reduce acceleration but may improve top speed",
+      "Check wheel well clearance before upgrading tire size"
+    ]
+  },
   "features": [
-    "Tire size comparison",
-    "Speed difference calculation",
-    "RPM change analysis", 
-    "Performance impact assessment",
-    "Professional tire upgrade guidance"
+    {
+      "title": "Tire Size Comparison",
+      "description": "Compare original and new tire sizes with detailed dimensional analysis."
+    },
+    {
+      "title": "Speed Difference Calculation",
+      "description": "Calculate how tire size changes affect actual vehicle speed vs speedometer reading."
+    },
+    {
+      "title": "RPM Change Analysis",
+      "description": "Analyze how different tire sizes affect engine RPM at various speeds."
+    },
+    {
+      "title": "Performance Impact Assessment",
+      "description": "Evaluate effects on acceleration, fuel economy, and handling characteristics."
+    },
+    {
+      "title": "Speedometer Accuracy",
+      "description": "Determine speedometer error percentage with different tire sizes."
+    },
+    {
+      "title": "Professional Guidance",
+      "description": "Expert recommendations for safe and effective tire upgrades."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "How does tire diameter affect speedometer accuracy?",
-      "answer": "Larger tires make the speedometer read slower than actual speed, while smaller tires make it read faster. A 3% diameter increase typically causes 3% speedometer error."
+      "q": "How does tire diameter affect speedometer accuracy?",
+      "a": "Larger tires make the speedometer read slower than actual speed, while smaller tires make it read faster. A 3% tire diameter increase typically causes 3% speedometer error. Our tire calculator helps determine exact speedometer error for any tire size change."
     },
     {
-      "question": "What's the maximum safe tire size increase?",
-      "answer": "Generally, stay within 3% of original diameter to maintain accuracy and avoid clearance issues. Check wheel well clearance and suspension travel before upgrading."
+      "q": "What's the maximum safe tire size increase?",
+      "a": "Generally, stay within 3% of original tire diameter to maintain speedometer accuracy and avoid clearance issues. Always check wheel well clearance, suspension travel, and brake line clearance before upgrading to larger tire sizes."
     },
     {
-      "question": "How do larger tires affect fuel economy?",
-      "answer": "Larger, heavier tires typically reduce fuel economy due to increased rolling resistance and rotational mass. The effect varies by tire weight and vehicle."
+      "q": "How do larger tires affect fuel economy?",
+      "a": "Larger, heavier tires typically reduce fuel economy due to increased rolling resistance and rotational mass. The effect varies by tire weight, tread pattern, and vehicle type. Use our tire calculator to understand performance trade-offs."
     },
     {
-      "question": "Will changing tire size affect my vehicle's performance?",
-      "answer": "Yes. Larger tires reduce acceleration but may improve top speed. Smaller tires improve acceleration but may limit top speed. Consider your driving priorities."
+      "q": "Will changing tire size affect my vehicle's performance?",
+      "a": "Yes, tire size changes significantly affect performance. Larger tires reduce acceleration but may improve top speed and handling. Smaller tires improve acceleration but may limit top speed. Our calculator helps you understand these trade-offs."
+    },
+    {
+      "q": "How do I read tire size markings for the calculator?",
+      "a": "Tire size format is width/aspect ratio/rim diameter. For example, 225/60R16 means 225mm width, 60% aspect ratio (sidewall height), and 16-inch rim diameter. Enter these values in our tire calculator for accurate comparisons."
+    },
+    {
+      "q": "Can tire size changes affect my vehicle's warranty?",
+      "a": "Significant tire size changes may affect warranty coverage, especially for drivetrain components. Consult your vehicle manufacturer and stay within recommended tire size ranges to maintain warranty protection."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Tire Speed Calculator",
+      "url": "/auto/tire-speed-calculator"
+    },
+    {
+      "title": "RPM Calculator",
+      "url": "/auto/rpm-calculator"
+    },
+    {
+      "title": "Speed Converter",
+      "url": "/auto/speed-converter"
+    },
+    {
+      "title": "Automotive Tools Category",
+      "url": "/auto"
     }
   ]
 }

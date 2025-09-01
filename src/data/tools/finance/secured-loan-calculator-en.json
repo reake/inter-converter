@@ -1,31 +1,52 @@
 {
-  "about": [
-    "The Secured Loan Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "Secured Loan Calculator - Collateral-Based Borrowing Cost & Payment Estimator",
+    "description": "The Secured Loan Calculator helps you estimate monthly payments, total interest, and overall borrowing costs for loans backed by collateral (such as vehicles, savings, or property). Analyze interest rate scenarios, loan-to-value (LTV) ratios, and repayment terms to understand how collateral and fees impact affordability and risk."
+  },
+  "howTo": {
+    "title": "How to Use the Secured Loan Calculator",
+    "steps": [
+      { "title": "Enter Loan Amount", "description": "Input the principal you plan to borrow based on the collateral value and required funding." },
+      { "title": "Select Interest Rate & Term", "description": "Choose the annual percentage rate (APR) and repayment term (months or years)." },
+      { "title": "Add Fees & Collateral Details", "description": "Include origination fees, appraisal fees, and select the collateral type to reflect lender pricing." },
+      { "title": "Review Monthly Payment", "description": "See amortized payments and interest breakdown for each period." },
+      { "title": "Compare Scenarios", "description": "Adjust APR, term, or down payment to compare total cost and payoff speed." }
+    ],
+    "tips": [
+      "Lower LTV and stronger collateral often qualify for better rates.",
+      "Longer terms reduce monthly payments but increase total interest.",
+      "Check for prepayment penalties before making extra payments."
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
+    { "title": "LTV & Collateral Impact", "description": "Understand how collateral value and LTV thresholds affect interest rates and approval odds." },
+    { "title": "Amortization Schedule", "description": "View principal vs. interest over time to see payoff progress and total interest paid." },
+    { "title": "Fee-Inclusive APR", "description": "Model origination and documentation fees to estimate true borrowing cost." },
+    { "title": "Scenario Comparison", "description": "Compare term lengths, APRs, and down payments to find a comfortable payment." },
+    { "title": "Prepayment Analysis", "description": "Estimate interest savings when making extra or lump-sum payments." }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "q": "What is a secured loan?",
+      "a": "A secured loan is backed by collateral (e.g., car, savings, or property). If you default, the lender may claim the collateral to recover losses."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "q": "How does collateral affect my rate?",
+      "a": "Stronger, liquid collateral and lower LTV can reduce lender risk and generally qualify you for lower interest rates."
+    },
+    {
+      "q": "Is it better to choose a shorter term?",
+      "a": "Shorter terms raise monthly payments but reduce total interest. Choose a term that balances affordability with cost savings."
+    },
+    {
+      "q": "Can I pay off early?",
+      "a": "Many lenders allow prepayment without penalty, but some charge fees. Check your loan agreement before making extra payments."
     }
+  ],
+  "relativeLinks": [
+    { "title": "Loan Calculator", "url": "/finance/loan-calculator" },
+    { "title": "Loan Refinance Calculator", "url": "/finance/loan-refinance-calculator" },
+    { "title": "Debt Consolidation Calculator", "url": "/finance/debt-consolidation-calculator" },
+    { "title": "Credit Card Payoff Calculator", "url": "/finance/credit-card-payoff-calculator" }
   ]
 }

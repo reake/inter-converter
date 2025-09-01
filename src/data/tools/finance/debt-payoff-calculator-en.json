@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Debt Payoff Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Debt Payoff Calculator",
+    "description": "The Debt Payoff Calculator helps you create an effective strategy to eliminate your debts faster and save money on interest payments. This comprehensive tool analyzes your current debts, calculates payoff timelines, and compares different repayment strategies including debt snowball and debt avalanche methods. Whether you're dealing with credit card debt, student loans, or multiple debts, this calculator provides personalized recommendations to accelerate your path to financial freedom."
+  },
+  "howTo": {
+    "title": "How to Use the Debt Payoff Calculator",
+    "steps": [
+      {
+        "title": "List Your Debts",
+        "description": "Enter each debt with current balance, minimum payment, and interest rate."
+      },
+      {
+        "title": "Set Extra Payment",
+        "description": "Specify any additional amount you can allocate toward debt repayment each month."
+      },
+      {
+        "title": "Choose Strategy",
+        "description": "Select between debt snowball (lowest balance first) or debt avalanche (highest interest first)."
+      },
+      {
+        "title": "Review Timeline",
+        "description": "Analyze your debt-free date and total interest savings with different strategies."
+      },
+      {
+        "title": "Track Progress",
+        "description": "Use the payment schedule to monitor your progress and stay motivated."
+      },
+      {
+        "title": "Adjust as Needed",
+        "description": "Update your plan when circumstances change or you have extra funds available."
+      }
+    ],
+    "tips": [
+      "Pay more than minimum payments to save significantly on interest",
+      "Consider debt consolidation for multiple high-interest debts",
+      "Stop using credit cards while paying off existing debt",
+      "Celebrate milestones to stay motivated throughout the process"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Multiple Debt Management",
+      "description": "Track and manage multiple debts with different balances, rates, and payment terms."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Strategy Comparison",
+      "description": "Compare debt snowball vs. debt avalanche methods to find the best approach."
+    },
+    {
+      "title": "Interest Savings Calculator",
+      "description": "Calculate total interest savings from extra payments and accelerated payoff strategies."
+    },
+    {
+      "title": "Payment Schedule",
+      "description": "Generate detailed month-by-month payment schedules for each debt."
+    },
+    {
+      "title": "Progress Tracking",
+      "description": "Visual progress indicators to track your journey to becoming debt-free."
+    },
+    {
+      "title": "Scenario Analysis",
+      "description": "Test different extra payment amounts to optimize your debt elimination strategy."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What's the difference between debt snowball and debt avalanche?",
+      "a": "Debt snowball focuses on paying off the smallest balance first for psychological motivation, while debt avalanche targets the highest interest rate first to save more money. Avalanche saves more on interest, but snowball provides quicker wins."
+    },
+    {
+      "q": "How much extra should I pay toward my debts?",
+      "a": "Pay as much extra as your budget allows after covering essential expenses and emergency savings. Even an extra $25-50 per month can significantly reduce payoff time and interest costs."
+    },
+    {
+      "q": "Should I pay off debt or save money first?",
+      "a": "Build a small emergency fund ($500-1000) first, then focus on high-interest debt. Once debt is paid off, build a full 3-6 month emergency fund while continuing to save and invest."
+    },
+    {
+      "q": "Is debt consolidation a good option?",
+      "a": "Debt consolidation can be beneficial if you qualify for a lower interest rate than your current debts. However, it requires discipline to avoid accumulating new debt on the paid-off accounts."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Credit Card Payoff Calculator",
+      "url": "/finance/credit-card-payoff-calculator"
+    },
+    {
+      "title": "Debt Consolidation Calculator",
+      "url": "/finance/debt-consolidation-calculator"
+    },
+    {
+      "title": "Budget Calculator",
+      "url": "/finance/budget-calculator"
+    },
+    {
+      "title": "Interest Calculator",
+      "url": "/finance/interest-calculator"
+    },
+    {
+      "title": "Emergency Fund Calculator",
+      "url": "/finance/emergency-fund-calculator"
     }
   ]
 }

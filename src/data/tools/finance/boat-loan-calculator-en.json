@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Boat Loan Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Boat Loan Calculator - Marine Financing Planning Tool",
+    "description": "The Boat Loan Calculator is a specialized marine financing tool designed to help you calculate monthly payments, interest costs, and loan terms for boat purchases. Whether you're buying a new yacht, fishing boat, or recreational watercraft, this calculator provides accurate payment estimates and helps you evaluate different financing options. Understanding boat loan calculations is essential for making informed decisions about marine financing and ensuring you can comfortably afford your dream boat."
+  },
+  "howTo": {
+    "title": "How to Use the Boat Loan Calculator",
+    "steps": [
+      {
+        "title": "Boat Price",
+        "description": "Enter the total purchase price of the boat including any additional equipment or accessories."
+      },
+      {
+        "title": "Down Payment",
+        "description": "Input your down payment amount (typically 10-20% for boat loans)."
+      },
+      {
+        "title": "Interest Rate",
+        "description": "Enter the annual interest rate offered by your marine lender or bank."
+      },
+      {
+        "title": "Loan Term",
+        "description": "Select the loan term in years (typically 10-20 years for boat loans depending on boat value)."
+      },
+      {
+        "title": "Boat Details",
+        "description": "Specify boat type, age, and condition as these factors affect loan terms and rates."
+      },
+      {
+        "title": "Review Results",
+        "description": "Analyze monthly payments, total interest costs, and overall loan affordability."
+      }
+    ],
+    "tips": [
+      "Newer boats typically qualify for better rates and longer terms",
+      "Consider marine insurance costs when budgeting for boat ownership",
+      "Shop around with banks, credit unions, and marine lenders for best rates",
+      "Factor in maintenance, storage, and fuel costs beyond the loan payment"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Marine Loan Calculator",
+      "description": "Calculate exact monthly payments for different boat loan amounts, rates, and terms."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Boat Value Assessment",
+      "description": "Evaluate how boat age, condition, and type affect loan qualification and terms."
+    },
+    {
+      "title": "Down Payment Analysis",
+      "description": "Analyze how different down payment amounts affect monthly payments and loan terms."
+    },
+    {
+      "title": "Total Cost Calculation",
+      "description": "Calculate total financing costs including interest and fees over the loan term."
+    },
+    {
+      "title": "Affordability Assessment",
+      "description": "Evaluate boat loan affordability based on income and existing debt obligations."
+    },
+    {
+      "title": "Loan Term Comparison",
+      "description": "Compare different loan terms to find the best balance of payment and total cost."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What are typical boat loan terms and rates?",
+      "a": "Boat loan terms typically range from 10-20 years depending on the boat's value and age. Interest rates usually range from 4-15% based on creditworthiness, boat age, and loan amount. Newer, more expensive boats often qualify for longer terms and better rates."
+    },
+    {
+      "q": "How much should I put down on a boat loan?",
+      "a": "Most boat loans require 10-20% down payment, though some lenders may accept as little as 5% for qualified buyers. A larger down payment reduces monthly payments, total interest costs, and may help you qualify for better rates."
+    },
+    {
+      "q": "Can I get a loan for a used boat?",
+      "a": "Yes, you can finance used boats, but terms may be shorter and rates slightly higher than new boat loans. Most lenders finance boats up to 20-30 years old, depending on condition and value. Older boats may require shorter loan terms."
+    },
+    {
+      "q": "What additional costs should I consider with boat ownership?",
+      "a": "Beyond the loan payment, budget for marine insurance, registration and taxes, storage or marina fees, maintenance and repairs, fuel costs, and winterization. These costs can add $3,000-$10,000+ annually depending on boat size and usage."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Auto Loan Calculator",
+      "url": "/finance/auto-loan-calculator"
+    },
+    {
+      "title": "RV Loan Calculator",
+      "url": "/finance/rv-loan-calculator"
+    },
+    {
+      "title": "Personal Loan Calculator",
+      "url": "/finance/personal-loan-calculator"
+    },
+    {
+      "title": "Marine Insurance Calculator",
+      "url": "/finance/marine-insurance-calculator"
+    },
+    {
+      "title": "Recreation Vehicle Calculator",
+      "url": "/finance/recreation-vehicle-calculator"
     }
   ]
 }

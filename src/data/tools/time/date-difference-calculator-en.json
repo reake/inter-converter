@@ -1,39 +1,102 @@
 {
-  "about": [
-    "The Date Difference Calculator computes the exact time span between two dates, showing results in years, months, weeks, days, hours, minutes, and seconds. Perfect for calculating age differences, project durations, relationship anniversaries, or any time period analysis.",
-    "This tool provides comprehensive date difference analysis with multiple output formats, making it invaluable for legal documentation, project management, and personal milestone tracking."
-  ],
-  "howToUse": [
-    "Enter the start date",
-    "Enter the end date",
-    "View the difference in multiple formats",
-    "Choose specific units for detailed breakdown",
-    "Copy results for documentation"
-  ],
+  "about": {
+    "title": "About Date Difference Calculator",
+    "description": "The Date Difference Calculator computes the exact time span between two dates, showing results in years, months, weeks, days, hours, minutes, and seconds. Perfect for calculating age differences, project durations, relationship anniversaries, or any time period analysis. This tool provides comprehensive date difference analysis with multiple output formats, making it invaluable for legal documentation, project management, and personal milestone tracking."
+  },
+  "howTo": {
+    "title": "How to Use the Date Difference Calculator",
+    "steps": [
+      {
+        "title": "Enter Start Date",
+        "description": "Input the beginning date for your calculation period."
+      },
+      {
+        "title": "Enter End Date",
+        "description": "Input the ending date to calculate the time difference."
+      },
+      {
+        "title": "View Results",
+        "description": "See the difference displayed in years, months, weeks, days, hours, and minutes."
+      },
+      {
+        "title": "Choose Format",
+        "description": "Select specific time units or business days for detailed breakdown."
+      }
+    ],
+    "tips": [
+      "Calculator works with past, present, or future dates",
+      "Results account for leap years and varying month lengths",
+      "Use business days option to exclude weekends"
+    ]
+  },
   "features": [
-    "Precise date difference calculation",
-    "Multiple time unit displays",
-    "Business days calculation",
-    "Leap year consideration",
-    "Historical date support",
-    "Detailed breakdown options"
+    {
+      "title": "Precise Calculations",
+      "description": "Accurate date difference calculations down to seconds with leap year consideration."
+    },
+    {
+      "title": "Multiple Time Units",
+      "description": "Display results in years, months, weeks, days, hours, minutes, and seconds."
+    },
+    {
+      "title": "Business Days Mode",
+      "description": "Calculate differences in business days, excluding weekends and holidays."
+    },
+    {
+      "title": "Historical Date Support",
+      "description": "Works with any date combination - past, present, or future dates."
+    },
+    {
+      "title": "Detailed Breakdown",
+      "description": "Choose specific time units for customized difference analysis."
+    },
+    {
+      "title": "Automatic Date Handling",
+      "description": "Handles date order automatically and shows absolute differences."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "Can I calculate differences for past dates?",
-      "answer": "Yes, the calculator works with any date combination - past, present, or future dates for comprehensive time span analysis."
+      "q": "Can I calculate date differences for past dates?",
+      "a": "Yes, our date difference calculator works with any date combination - past, present, or future dates for comprehensive time span analysis. Perfect for calculating historical periods, ages, or project durations."
     },
     {
-      "question": "How accurate are the calculations?",
-      "answer": "The calculator is extremely precise, accounting for leap years, varying month lengths, and exact time differences down to the second."
+      "q": "How accurate are the date difference calculations?",
+      "a": "The date difference calculator is extremely precise, accounting for leap years, varying month lengths, and exact time differences down to the second. It handles all calendar complexities automatically for accurate results."
     },
     {
-      "question": "Does it show business days only?",
-      "answer": "Yes, you can view the difference in business days, excluding weekends and optionally holidays from the calculation."
+      "q": "Does the calculator show business days only?",
+      "a": "Yes, you can view the difference in business days, excluding weekends and optionally holidays from the calculation. This is perfect for project management and work-related time calculations."
     },
     {
-      "question": "What if I enter dates in wrong order?",
-      "answer": "The calculator automatically handles date order and will show the absolute difference between the two dates regardless of input order."
+      "q": "What if I enter the dates in wrong order?",
+      "a": "The date difference calculator automatically handles date order and will show the absolute difference between the two dates regardless of input order. No need to worry about which date comes first."
+    },
+    {
+      "q": "Can I calculate someone's exact age with this tool?",
+      "a": "Absolutely! The date difference calculator is perfect for calculating exact ages in years, months, and days. Simply enter the birth date and current date to get precise age calculations."
+    },
+    {
+      "q": "Does the calculator work for project duration planning?",
+      "a": "Yes, the date difference calculator is excellent for project management. Calculate project durations, milestone gaps, and timeline analysis with options for business days to exclude weekends from your planning."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Timezone Converter",
+      "url": "/time/timezone-converter"
+    },
+    {
+      "title": "Timestamp Converter",
+      "url": "/time/timestamp-converter"
+    },
+    {
+      "title": "Countdown Timer",
+      "url": "/time/countdown-timer"
+    },
+    {
+      "title": "Time Tools Category",
+      "url": "/time"
     }
   ]
 }

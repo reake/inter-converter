@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Inflation Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Inflation Calculator - Purchasing Power and Price Change Tool",
+    "description": "The Inflation Calculator is a comprehensive economic analysis tool designed to help you understand how inflation affects purchasing power and money value over time. This calculator shows how much goods and services that cost a certain amount in the past would cost today, or how much today's money will be worth in the future. Whether you're planning retirement, analyzing investments, or understanding economic trends, this tool provides accurate inflation-adjusted calculations."
+  },
+  "howTo": {
+    "title": "How to Use the Inflation Calculator",
+    "steps": [
+      {
+        "title": "Enter Starting Amount",
+        "description": "Input the dollar amount from a past year or current amount for future calculations."
+      },
+      {
+        "title": "Select Starting Year",
+        "description": "Choose the year for your starting amount (historical data available from 1913)."
+      },
+      {
+        "title": "Choose Target Year",
+        "description": "Select the year you want to compare to (current year or future projection)."
+      },
+      {
+        "title": "Review Inflation Rate",
+        "description": "See the average annual inflation rate between your selected years."
+      },
+      {
+        "title": "Analyze Purchasing Power",
+        "description": "Understand how much purchasing power has changed over the time period."
+      },
+      {
+        "title": "Compare Multiple Scenarios",
+        "description": "Calculate inflation effects for different amounts and time periods."
+      }
+    ],
+    "tips": [
+      "US average inflation rate is approximately 3.2% annually since 1913",
+      "Inflation varies significantly by category (housing, food, energy)",
+      "Consider inflation when planning long-term financial goals",
+      "Real returns on investments should exceed inflation rates"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Historical Inflation Data",
+      "description": "Access comprehensive US inflation data from 1913 to present day."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Future Value Projections",
+      "description": "Calculate future purchasing power based on expected inflation rates."
+    },
+    {
+      "title": "Purchasing Power Analysis",
+      "description": "Understand how inflation erodes or enhances money value over time."
+    },
+    {
+      "title": "Average Inflation Calculator",
+      "description": "Calculate average annual inflation rates between any two years."
+    },
+    {
+      "title": "Real vs Nominal Returns",
+      "description": "Compare investment returns before and after inflation adjustments."
+    },
+    {
+      "title": "Category-Specific Inflation",
+      "description": "Analyze inflation rates for specific categories like housing, food, or energy."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is inflation and how is it measured?",
+      "a": "Inflation is the rate at which prices for goods and services rise over time, reducing purchasing power. It's measured using the Consumer Price Index (CPI), which tracks price changes in a basket of common goods and services."
+    },
+    {
+      "q": "How accurate are inflation calculations?",
+      "a": "Historical inflation calculations are very accurate using official CPI data. Future projections use average rates or Federal Reserve targets (typically 2%) but actual future inflation may vary significantly from projections."
+    },
+    {
+      "q": "Why is understanding inflation important for investing?",
+      "a": "Inflation erodes purchasing power, so investments must earn returns above the inflation rate to maintain real value. A 5% return with 3% inflation only provides 2% real growth in purchasing power."
+    },
+    {
+      "q": "What causes inflation to change?",
+      "a": "Inflation is influenced by monetary policy, supply and demand imbalances, energy prices, wage growth, government spending, and global economic conditions. Central banks use interest rates to manage inflation levels."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Investment Calculator",
+      "url": "/finance/investment-calculator"
+    },
+    {
+      "title": "Retirement Calculator",
+      "url": "/finance/retirement-calculator"
+    },
+    {
+      "title": "Compound Interest Calculator",
+      "url": "/finance/compound-interest-calculator"
+    },
+    {
+      "title": "Cost of Living Calculator",
+      "url": "/finance/cost-of-living-calculator"
+    },
+    {
+      "title": "Savings Calculator",
+      "url": "/finance/savings-calculator"
     }
   ]
 }

@@ -1,37 +1,102 @@
 {
-  "about": [
-    "The RPM Calculator determines engine speed based on vehicle speed, gear ratio, and tire diameter. This tool is essential for performance tuning, transmission selection, and drivetrain optimization.",
-    "Understanding the relationship between vehicle speed and engine RPM helps optimize fuel economy, reduce engine wear, and ensure proper power band utilization across different driving conditions."
-  ],
-  "howToUse": [
-    "Enter vehicle speed in MPH or KPH",
-    "Input tire diameter in inches",
-    "Enter gear ratio for current gear",
-    "View calculated engine RPM instantly"
-  ],
+  "about": {
+    "title": "About RPM Calculator",
+    "description": "The RPM Calculator determines engine speed based on vehicle speed, gear ratio, and tire diameter. This tool is essential for performance tuning, transmission selection, and drivetrain optimization. Understanding the relationship between vehicle speed and engine RPM helps optimize fuel economy, reduce engine wear, and ensure proper power band utilization across different driving conditions."
+  },
+  "howTo": {
+    "title": "How to Use the RPM Calculator",
+    "steps": [
+      {
+        "title": "Enter Vehicle Speed",
+        "description": "Input the vehicle speed in MPH or KPH that you want to analyze."
+      },
+      {
+        "title": "Input Tire Diameter",
+        "description": "Enter the tire diameter in inches (overall diameter including sidewall)."
+      },
+      {
+        "title": "Enter Gear Ratio",
+        "description": "Input the overall gear ratio (transmission ratio × final drive ratio)."
+      },
+      {
+        "title": "View RPM Results",
+        "description": "See the calculated engine RPM for the given parameters instantly."
+      }
+    ],
+    "tips": [
+      "Use overall tire diameter, not rim size",
+      "Calculate overall ratio: transmission × differential",
+      "Optimal cruising RPM is typically 1,500-2,500 RPM"
+    ]
+  },
   "features": [
-    "Speed to RPM conversion",
-    "Gear ratio calculations", 
-    "Tire size considerations",
-    "Multiple unit support",
-    "Performance tuning analysis"
+    {
+      "title": "Speed to RPM Conversion",
+      "description": "Calculate engine RPM based on vehicle speed, gear ratios, and tire diameter."
+    },
+    {
+      "title": "Gear Ratio Analysis",
+      "description": "Factor in transmission and differential ratios for accurate RPM calculations."
+    },
+    {
+      "title": "Tire Size Impact",
+      "description": "Account for tire diameter effects on final drive ratio and RPM calculations."
+    },
+    {
+      "title": "Multiple Unit Support",
+      "description": "Support for MPH, KPH, and various tire measurement units."
+    },
+    {
+      "title": "Performance Tuning",
+      "description": "Optimize gear ratios for fuel economy, performance, and engine longevity."
+    },
+    {
+      "title": "Professional Accuracy",
+      "description": "Precise calculations for automotive professionals and enthusiasts."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "How does tire diameter affect RPM calculations?",
-      "answer": "Larger tires reduce engine RPM at a given speed because they cover more ground per revolution. A 10% increase in tire diameter typically reduces RPM by about 10%."
+      "q": "How does tire diameter affect RPM calculations?",
+      "a": "Larger tires reduce engine RPM at a given speed because they cover more ground per revolution. A 10% increase in tire diameter typically reduces RPM by about 10%. This affects speedometer accuracy, fuel economy, and performance characteristics."
     },
     {
-      "question": "What's the ideal cruising RPM for fuel economy?",
-      "answer": "Most engines achieve best fuel economy between 1,500-2,500 RPM during steady cruising. Higher RPM increases fuel consumption and engine wear."
+      "q": "What's the ideal cruising RPM for fuel economy?",
+      "a": "Most engines achieve optimal fuel economy between 1,500-2,500 RPM during steady cruising. Higher RPM increases fuel consumption and engine wear, while too low RPM can cause engine lugging and reduced efficiency."
     },
     {
-      "question": "How do I calculate overall gear ratio?",
-      "answer": "Multiply transmission gear ratio by final drive (differential) ratio. For example: 3rd gear (1.30) × final drive (3.73) = 4.85 overall ratio."
+      "q": "How do I calculate overall gear ratio?",
+      "a": "Multiply transmission gear ratio by final drive (differential) ratio. For example: 3rd gear (1.30) × final drive (3.73) = 4.85 overall ratio. This overall ratio determines the relationship between engine RPM and wheel speed."
     },
     {
-      "question": "Why is RPM calculation important for performance?",
-      "answer": "Proper RPM matching ensures the engine operates in its power band, optimizes acceleration, and prevents over-revving or lugging the engine."
+      "q": "Why is RPM calculation important for performance tuning?",
+      "a": "Proper RPM matching ensures the engine operates in its optimal power band, maximizes acceleration, prevents over-revving damage, and avoids engine lugging. It's essential for gear selection and transmission tuning."
+    },
+    {
+      "q": "How do I measure tire diameter for RPM calculations?",
+      "a": "Measure the overall tire diameter from ground to top, including the sidewall. You can also calculate it: (rim diameter + 2 × sidewall height). For example, a 275/40R18 tire has approximately 25.7 inch diameter."
+    },
+    {
+      "q": "What RPM should I target for highway driving?",
+      "a": "For highway cruising, target 2,000-2,500 RPM for most engines. This balances fuel economy with adequate power reserve for passing. Sports cars may run higher, while diesel engines often cruise lower."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Speed Converter",
+      "url": "/auto/speed-converter"
+    },
+    {
+      "title": "Tire Speed Calculator",
+      "url": "/auto/tire-speed-calculator"
+    },
+    {
+      "title": "Gear Ratio Calculator",
+      "url": "/auto/gear-ratio-calculator"
+    },
+    {
+      "title": "Automotive Tools",
+      "url": "/auto"
     }
   ]
 }

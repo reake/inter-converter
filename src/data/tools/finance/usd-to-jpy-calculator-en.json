@@ -1,31 +1,39 @@
 {
-  "about": [
-    "The Usd To Jpy Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "USD to JPY Calculator - Live Dollar to Yen Exchange & Conversion",
+    "description": "Convert US Dollars (USD) to Japanese Yen (JPY) using live exchange rates. Add bank/card fees and spreads to estimate the real amount you’ll receive—great for travel budgeting, e‑commerce, and money transfers."
+  },
+  "howTo": {
+    "title": "How to Use the USD to JPY Calculator",
+    "steps": [
+      { "title": "Enter USD Amount", "description": "Input the dollar amount to convert into yen." },
+      { "title": "Choose Rate", "description": "Use the mid‑market rate or your bank/provider's quoted rate." },
+      { "title": "Add Fees (Optional)", "description": "Include fixed/percentage fees to model the actual outcome." },
+      { "title": "View Result", "description": "See the converted JPY and the breakdown of rate and fees." }
+    ],
+    "tips": [
+      "JPY typically has no minor unit in cash—rounding may apply at ATMs/merchants.",
+      "Rates can move quickly around economic announcements.",
+      "Avoid weekend markups and DCC at ATMs when possible."
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
+    { "title": "Live USD→JPY Rates", "description": "Calculate with up‑to‑date market data." },
+    { "title": "Fee & Spread Modeling", "description": "Estimate real costs by adding provider markups and fees." },
+    { "title": "Reverse Conversion", "description": "Convert JPY back to USD under the same assumptions." },
+    { "title": "Rounding Awareness", "description": "Account for cash rounding conventions common in JPY transactions." }
   ],
-  "faqs": [
-    {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
-    },
-    {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
-    }
+  "faq": [
+    { "q": "Why is my JPY amount lower than the mid‑market rate suggests?", "a": "Banks and cards add spreads and fees on top of the base rate." },
+    { "q": "Does JPY use decimals?", "a": "JPY cash transactions usually have no decimals; rounding may apply." },
+    { "q": "What is the cheapest way to get yen?", "a": "Compare low‑fee providers and decline Dynamic Currency Conversion when prompted." },
+    { "q": "Do rates change intraday?", "a": "Yes, FX rates fluctuate continuously based on market conditions." },
+    { "q": "Is the ATM rate the same as my bank's?", "a": "Not always. ATMs/merchants may offer DCC with worse rates than your bank." }
+  ],
+  "relativeLinks": [
+    { "title": "Currency Converter", "url": "/finance/currency-converter" },
+    { "title": "USD to EUR Calculator", "url": "/finance/usd-to-eur-calculator" },
+    { "title": "USD to GBP Calculator", "url": "/finance/usd-to-gbp-calculator" },
+    { "title": "Exchange Rate Calculator", "url": "/finance/exchange-rate-calculator" }
   ]
 }

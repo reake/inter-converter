@@ -1,39 +1,103 @@
 {
-  "about": [
-    "The Date Calculator performs various date calculations including adding or subtracting days, weeks, months, or years from any given date. It's essential for project planning, scheduling, legal deadlines, and personal milestone tracking.",
-    "This tool handles complex date arithmetic while accounting for leap years, varying month lengths, and calendar irregularities to provide accurate results for any date calculation need."
-  ],
-  "howToUse": [
-    "Enter your starting date",
-    "Choose to add or subtract time",
-    "Select the time unit (days, weeks, months, years)",
-    "Enter the amount to add or subtract",
-    "View the calculated result date"
-  ],
+  "about": {
+    "title": "About Date Calculator",
+    "description": "The Date Calculator performs various date calculations including adding or subtracting days, weeks, months, or years from any given date. It's essential for project planning, scheduling, legal deadlines, and personal milestone tracking. This tool handles complex date arithmetic while accounting for leap years, varying month lengths, and calendar irregularities to provide accurate results for any date calculation need."
+  },
+  "howTo": {
+    "title": "How to Use the Date Calculator",
+    "steps": [
+      {
+        "title": "Enter Starting Date",
+        "description": "Select your starting date using the date picker or enter it manually in the correct format."
+      },
+      {
+        "title": "Choose Operation",
+        "description": "Select whether you want to add time to or subtract time from your starting date."
+      },
+      {
+        "title": "Select Time Unit",
+        "description": "Choose the time unit: days, weeks, months, or years for your calculation."
+      },
+      {
+        "title": "Enter Amount",
+        "description": "Input the number of time units you want to add or subtract from the starting date."
+      },
+      {
+        "title": "View Result",
+        "description": "See the calculated result date with detailed information about the calculation."
+      }
+    ],
+    "tips": [
+      "Use business day calculations for work-related scheduling",
+      "Consider leap years when planning long-term projects",
+      "Check month-end handling for financial calculations",
+      "Use multiple date formats for international compatibility"
+    ]
+  },
   "features": [
-    "Add or subtract days, weeks, months, years",
-    "Leap year and month-end handling",
-    "Business day calculations",
-    "Multiple date format support",
-    "Historical and future date calculations",
-    "Calendar-aware computations"
+    {
+      "title": "Flexible Date Arithmetic",
+      "description": "Add or subtract days, weeks, months, or years with precise calendar calculations."
+    },
+    {
+      "title": "Leap Year Handling",
+      "description": "Automatic leap year detection and handling for accurate long-term calculations."
+    },
+    {
+      "title": "Business Day Calculator",
+      "description": "Exclude weekends and holidays for business-focused date calculations."
+    },
+    {
+      "title": "Multiple Date Formats",
+      "description": "Support for various international date formats and display options."
+    },
+    {
+      "title": "Historical Range",
+      "description": "Calculate dates from year 1 to 9999 for historical research and future planning."
+    },
+    {
+      "title": "Smart Month Handling",
+      "description": "Intelligent handling of month-end dates and varying month lengths."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "How does it handle leap years?",
-      "answer": "The calculator automatically accounts for leap years when adding or subtracting months and years, ensuring accurate date calculations."
+      "q": "How does it handle leap years?",
+      "a": "The calculator automatically accounts for leap years when adding or subtracting months and years, ensuring accurate date calculations. February 29th is properly handled in leap year calculations."
     },
     {
-      "question": "Can I calculate business days only?",
-      "answer": "Yes, the calculator can exclude weekends and optionally holidays when performing day-based calculations."
+      "q": "Can I calculate business days only?",
+      "a": "Yes, the calculator can exclude weekends and optionally holidays when performing day-based calculations. This is useful for project planning and business scheduling."
     },
     {
-      "question": "What date range is supported?",
-      "answer": "The calculator supports dates from year 1 to 9999, covering historical dates and far future planning needs."
+      "q": "What date range is supported?",
+      "a": "The calculator supports dates from year 1 to 9999, covering historical dates and far future planning needs. This wide range accommodates research, genealogy, and long-term planning."
     },
     {
-      "question": "How are month-end dates handled?",
-      "answer": "When adding months to dates like January 31st, the calculator intelligently handles cases where the target month has fewer days."
+      "q": "How are month-end dates handled?",
+      "a": "When adding months to dates like January 31st, the calculator intelligently handles cases where the target month has fewer days, typically moving to the last day of the target month."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Age Calculator",
+      "url": "/time/age-calculator"
+    },
+    {
+      "title": "Date Difference Calculator",
+      "url": "/time/date-difference-calculator"
+    },
+    {
+      "title": "Working Days Calculator",
+      "url": "/time/working-days-calculator"
+    },
+    {
+      "title": "Countdown Timer",
+      "url": "/time/countdown-timer"
+    },
+    {
+      "title": "World Clock",
+      "url": "/time/world-clock"
     }
   ]
 }

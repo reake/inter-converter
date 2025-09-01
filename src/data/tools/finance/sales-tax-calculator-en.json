@@ -1,31 +1,41 @@
 {
-  "about": [
-    "The Sales Tax Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
+  "about": {
+    "title": "Sales Tax Calculator - Tax Amount, Total Price & Reverse Sales Tax",
+    "description": "The Sales Tax Calculator helps you compute the tax amount and final total from a pre-tax price, or work backward from a total price to find the pre-tax amount. Perfect for shoppers, small business owners, and online sellers needing quick, accurate tax calculations."
+  },
+  "howTo": {
+    "title": "How to Use the Sales Tax Calculator",
+    "steps": [
+      { "title": "Enter Price", "description": "Input the item price (either pre-tax or total, depending on your goal)." },
+      { "title": "Set Tax Rate", "description": "Enter the sales tax rate for your location (e.g., 7.5%)." },
+      { "title": "Choose Mode", "description": "Select Add Tax (price → total) or Reverse Tax (total → pre-tax)." },
+      { "title": "Optional Adjustments", "description": "Include discounts or shipping if they are taxable in your area." },
+      { "title": "View Results", "description": "See tax amount, pre-tax price, and final total broken down clearly." }
+    ],
+    "tips": [
+      "Local rates vary by state/city/county—confirm your jurisdiction's rate.",
+      "Some regions tax shipping or certain product categories—check local rules.",
+      "If you have a tax-exempt certificate, ensure the correct rate is applied (often 0%)."
+    ]
+  },
+  
+"features": [
+    { "title": "Add or Remove Tax", "description": "Compute total from pre-tax price or reverse-calculate pre-tax from total." },
+    { "title": "Flexible Rate Entry", "description": "Enter exact tax percentages for accurate results across locations." },
+    { "title": "Clear Breakdown", "description": "See item subtotal, tax amount, and final total in one view." },
+    { "title": "Discount & Shipping Options", "description": "Model common checkout scenarios and their taxability." }
   ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
+  "faq": [
+    { "q": "What is reverse sales tax?", "a": "It's the process of deriving the pre-tax price from a final total that already includes tax." },
+    { "q": "Do all states tax shipping?", "a": "No. Tax rules vary widely; some states tax shipping, others don't. Check your local regulations." },
+    { "q": "Can I use this for online sales?", "a": "Yes. Enter the correct rate for the buyer's location to estimate checkout totals and tax amounts." },
+    { "q": "Is this the same as income tax?", "a": "No. Sales tax applies to purchases; income tax applies to earnings." },
+    { "q": "Why don't my results match the store receipt exactly?", "a": "Rounding rules, taxable item differences, and local surtaxes can cause small discrepancies. Use your local jurisdiction's rules for the most precise outcome." }
   ],
-  "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
-    {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
-    },
-    {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
-    }
+  "relativeLinks": [
+    { "title": "Tax Calculator", "url": "/finance/tax-calculator" },
+    { "title": "Income Tax Calculator", "url": "/finance/income-tax-calculator" },
+    { "title": "Budget Calculator", "url": "/finance/budget-calculator" },
+    { "title": "Tip Calculator", "url": "/finance/tip-calculator" }
   ]
 }

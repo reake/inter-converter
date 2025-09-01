@@ -1,39 +1,107 @@
 {
-  "about": [
-    "The Contrast Checker evaluates color combinations for accessibility compliance and readability. This tool ensures your color choices meet WCAG guidelines for web accessibility and inclusive design.",
-    "Essential for designers and developers who need to create accessible interfaces that work for users with visual impairments, ensuring compliance with accessibility standards and regulations."
-  ],
-  "howToUse": [
-    "Select your foreground (text) color",
-    "Choose your background color",
-    "View the contrast ratio calculation",
-    "Check WCAG AA and AAA compliance levels",
-    "Adjust colors to improve accessibility if needed"
-  ],
+  "about": {
+    "title": "About Color Contrast Checker - WCAG AA/AAA Standards",
+    "description": "The Color Contrast Checker evaluates color combinations for accessibility compliance and readability according to WCAG AA/AAA standards. This essential tool ensures your color choices meet web accessibility guidelines for inclusive design, helping designers and developers create accessible interfaces that work for users with visual impairments while ensuring compliance with accessibility standards and legal regulations."
+  },
+  "howTo": {
+    "title": "How to Use the Color Contrast Checker",
+    "steps": [
+      {
+        "title": "Select Foreground Color",
+        "description": "Choose your text or foreground color using the color picker or enter HEX/RGB values."
+      },
+      {
+        "title": "Choose Background Color",
+        "description": "Select the background color that will be behind your text or foreground element."
+      },
+      {
+        "title": "View Contrast Ratio",
+        "description": "See the calculated contrast ratio and immediate WCAG compliance status."
+      },
+      {
+        "title": "Check WCAG Levels",
+        "description": "Review AA and AAA compliance levels for both normal and large text sizes."
+      },
+      {
+        "title": "Adjust Colors",
+        "description": "Use suggested improvements to achieve better accessibility if needed."
+      },
+      {
+        "title": "Test Different Scenarios",
+        "description": "Test various color combinations to ensure optimal accessibility across your design."
+      }
+    ],
+    "tips": [
+      "Aim for at least 4.5:1 contrast ratio for normal text (WCAG AA)",
+      "Use 7:1 contrast ratio for enhanced accessibility (WCAG AAA)",
+      "Large text (18pt+ or 14pt+ bold) requires lower contrast ratios",
+      "Test your colors in different lighting conditions and devices"
+    ]
+  },
   "features": [
-    "WCAG 2.1 compliance checking",
-    "Real-time contrast ratio calculation",
-    "AA and AAA level indicators",
-    "Color suggestion improvements",
-    "Accessibility score display",
-    "Multiple color format support"
+    {
+      "title": "WCAG 2.1 Compliance Checking",
+      "description": "Comprehensive evaluation against current Web Content Accessibility Guidelines standards."
+    },
+    {
+      "title": "Real-time Contrast Calculation",
+      "description": "Instant contrast ratio calculation as you adjust colors with live preview."
+    },
+    {
+      "title": "AA and AAA Level Indicators",
+      "description": "Clear visual indicators showing compliance levels for different text sizes."
+    },
+    {
+      "title": "Color Improvement Suggestions",
+      "description": "Automated suggestions to achieve better contrast ratios while maintaining design aesthetics."
+    },
+    {
+      "title": "Accessibility Score Display",
+      "description": "Detailed accessibility scoring with explanations for compliance levels."
+    },
+    {
+      "title": "Multiple Color Format Support",
+      "description": "Support for HEX, RGB, HSL, and named color formats for maximum flexibility."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What is a good contrast ratio?",
-      "answer": "WCAG guidelines recommend a minimum contrast ratio of 4.5:1 for normal text (AA level) and 7:1 for enhanced accessibility (AAA level). Large text requires lower ratios."
+      "q": "What is a good contrast ratio for accessibility?",
+      "a": "WCAG guidelines recommend a minimum contrast ratio of 4.5:1 for normal text (AA level) and 7:1 for enhanced accessibility (AAA level). Large text (18pt+ or 14pt+ bold) requires 3:1 for AA and 4.5:1 for AAA compliance."
     },
     {
-      "question": "Why is color contrast important?",
-      "answer": "Good contrast ensures text is readable for people with visual impairments, color blindness, or when viewing in bright sunlight. It's also legally required in many jurisdictions."
+      "q": "Why is color contrast important for web accessibility?",
+      "a": "Good contrast ensures text is readable for people with visual impairments, color blindness, or when viewing in bright sunlight. It's also legally required in many jurisdictions under accessibility laws like ADA and Section 508."
     },
     {
-      "question": "What's the difference between AA and AAA levels?",
-      "answer": "AA is the standard level for web accessibility compliance. AAA is the highest level, providing enhanced accessibility for users with more severe visual impairments."
+      "q": "What's the difference between WCAG AA and AAA levels?",
+      "a": "WCAG AA is the standard level for web accessibility compliance and legal requirements. WCAG AAA is the highest level, providing enhanced accessibility for users with more severe visual impairments, though it's not always practical for all content."
     },
     {
-      "question": "How can I improve poor contrast?",
-      "answer": "Make colors darker or lighter to increase the difference between foreground and background. Our tool provides suggestions for achieving better contrast ratios."
+      "q": "How can I improve poor contrast ratios?",
+      "a": "Make colors darker or lighter to increase the difference between foreground and background. You can darken text colors, lighten background colors, or use our tool's suggestions for achieving better contrast ratios while maintaining your design aesthetic."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Color Picker Tool",
+      "url": "/color/color-picker-tool"
+    },
+    {
+      "title": "HEX to RGB Converter",
+      "url": "/color/hex-to-rgb-converter"
+    },
+    {
+      "title": "RGB to HEX Converter",
+      "url": "/color/rgb-to-hex-converter"
+    },
+    {
+      "title": "Color Palette Generator",
+      "url": "/color/color-palette-generator"
+    },
+    {
+      "title": "HEX to HSL Converter",
+      "url": "/color/hex-to-hsl-converter"
     }
   ]
 }

@@ -1,43 +1,107 @@
 {
-  "about": [
-    "The Auto Loan Calculator is a comprehensive tool designed to help you calculate monthly payments, total interest costs, and loan terms for vehicle financing. Whether you're buying a new or used car, this calculator provides accurate payment estimates and helps you compare different loan scenarios to find the best financing option.",
-    "Understanding your auto loan payments is crucial for budgeting and making informed purchasing decisions. This calculator takes into account the vehicle price, down payment, trade-in value, loan term, and interest rate to provide detailed payment breakdowns and total cost analysis.",
-    "Use this tool to explore different financing scenarios, compare loan offers from multiple lenders, and determine how factors like down payment size and loan term affect your monthly payments and total interest costs."
-  ],
-  "howToUse": [
-    "Enter the vehicle purchase price or MSRP",
-    "Input your down payment amount",
-    "Add trade-in value if applicable",
-    "Set the loan term (typically 36-72 months)",
-    "Enter the annual interest rate (APR)",
-    "Review monthly payment and total loan cost calculations"
-  ],
+  "about": {
+    "title": "About Auto Loan Calculator",
+    "description": "The Auto Loan Calculator is a comprehensive tool designed to help you calculate monthly payments, total interest costs, and loan terms for vehicle financing. Whether you're buying a new or used car, this calculator provides accurate payment estimates and helps you compare different loan scenarios to find the best financing option. Understanding your auto loan payments is crucial for budgeting and making informed purchasing decisions, taking into account vehicle price, down payment, trade-in value, loan term, and interest rate for detailed payment analysis."
+  },
+  "howTo": {
+    "title": "How to Use the Auto Loan Calculator",
+    "steps": [
+      {
+        "title": "Vehicle Price",
+        "description": "Enter the vehicle purchase price or MSRP including any additional options or packages."
+      },
+      {
+        "title": "Down Payment",
+        "description": "Input your down payment amount to reduce the loan principal and monthly payments."
+      },
+      {
+        "title": "Trade-in Value",
+        "description": "Add your current vehicle's trade-in value if applicable to offset the purchase price."
+      },
+      {
+        "title": "Loan Term",
+        "description": "Set the loan term in months (typically 36-72 months) based on your payment preference."
+      },
+      {
+        "title": "Interest Rate",
+        "description": "Enter the annual interest rate (APR) offered by your lender or estimated rate."
+      },
+      {
+        "title": "Review Results",
+        "description": "Analyze monthly payment, total interest cost, and complete loan summary."
+      }
+    ],
+    "tips": [
+      "Compare rates from multiple lenders before finalizing",
+      "Consider shorter loan terms to save on total interest",
+      "Factor in insurance, maintenance, and fuel costs",
+      "Get pre-approved to understand your actual rate and terms"
+    ]
+  },
   "features": [
-    "Monthly payment calculation with taxes and fees",
-    "Total interest cost and loan summary analysis",
-    "Amortization schedule showing payment breakdown",
-    "Trade-in value integration for accurate calculations",
-    "Multiple loan term comparison (24-84 months)",
-    "Down payment impact analysis on monthly payments",
-    "Sales tax and additional fees calculation",
-    "Loan affordability assessment and recommendations"
+    {
+      "title": "Monthly Payment Calculation",
+      "description": "Calculate exact monthly payments including principal, interest, taxes, and additional fees."
+    },
+    {
+      "title": "Total Cost Analysis",
+      "description": "Complete breakdown of total interest costs and overall loan expenses over the term."
+    },
+    {
+      "title": "Amortization Schedule",
+      "description": "Detailed payment schedule showing principal and interest breakdown for each payment."
+    },
+    {
+      "title": "Trade-in Integration",
+      "description": "Factor in current vehicle trade-in value for accurate net financing calculations."
+    },
+    {
+      "title": "Multiple Term Comparison",
+      "description": "Compare different loan terms (24-84 months) to find the optimal payment structure."
+    },
+    {
+      "title": "Tax and Fee Calculator",
+      "description": "Include sales tax, title fees, and dealer charges for comprehensive cost analysis."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What's a good interest rate for an auto loan?",
-      "answer": "Auto loan rates vary based on credit score, loan term, and vehicle age. Excellent credit (750+) may qualify for rates as low as 3-5%, while fair credit (600-699) might see rates of 8-12%. New cars typically have lower rates than used cars."
+      "q": "What's a good interest rate for an auto loan?",
+      "a": "Auto loan rates vary based on credit score, loan term, and vehicle age. Excellent credit (750+) may qualify for rates as low as 3-5%, while fair credit (600-699) might see rates of 8-12%. New cars typically have lower rates than used cars."
     },
     {
-      "question": "How much should I put down on a car loan?",
-      "answer": "A down payment of 10-20% is recommended for new cars and 10% for used cars. Larger down payments reduce monthly payments, total interest costs, and help avoid being underwater on the loan."
+      "q": "How much should I put down on a car loan?",
+      "a": "A down payment of 10-20% is recommended for new cars and 10% for used cars. Larger down payments reduce monthly payments, total interest costs, and help avoid being underwater on the loan."
     },
     {
-      "question": "What loan term should I choose?",
-      "answer": "Shorter terms (36-48 months) have higher monthly payments but lower total interest costs. Longer terms (60-72 months) have lower monthly payments but higher total costs. Choose based on your budget and total cost preference."
+      "q": "What loan term should I choose?",
+      "a": "Shorter terms (36-48 months) have higher monthly payments but lower total interest costs. Longer terms (60-72 months) have lower monthly payments but higher total costs. Choose based on your budget and total cost preference."
     },
     {
-      "question": "Should I include taxes and fees in my loan?",
-      "answer": "You can finance taxes, title, and dealer fees, but it increases your loan amount and total interest paid. If possible, pay these costs upfront to reduce your loan balance and monthly payments."
+      "q": "Should I include taxes and fees in my loan?",
+      "a": "You can finance taxes, title, and dealer fees, but it increases your loan amount and total interest paid. If possible, pay these costs upfront to reduce your loan balance and monthly payments."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Loan Calculator",
+      "url": "/finance/loan-calculator"
+    },
+    {
+      "title": "Car Insurance Calculator",
+      "url": "/finance/auto-insurance-calculator"
+    },
+    {
+      "title": "Budget Calculator",
+      "url": "/finance/budget-calculator"
+    },
+    {
+      "title": "Lease vs Buy Calculator",
+      "url": "/finance/lease-vs-buy-calculator"
+    },
+    {
+      "title": "Trade-in Value Calculator",
+      "url": "/finance/trade-in-value-calculator"
     }
   ]
 }

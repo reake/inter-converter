@@ -1,39 +1,102 @@
 {
-  "about": [
-    "The Color Palette Generator creates harmonious color schemes based on color theory principles. Generate complementary, triadic, analogous, and other professional color combinations for your design projects.",
-    "This tool helps designers and artists create cohesive color palettes that work well together, ensuring visual harmony and professional aesthetics in web design, branding, and digital art."
-  ],
-  "howToUse": [
-    "Select a base color using the color picker",
-    "Choose a color harmony type (complementary, triadic, etc.)",
-    "Adjust the number of colors in your palette",
-    "Fine-tune individual colors as needed",
-    "Export or copy the complete color palette"
-  ],
+  "about": {
+    "title": "About Color Palette Generator",
+    "description": "The Color Palette Generator creates harmonious color schemes based on color theory principles. Generate complementary, triadic, analogous, and other professional color combinations for your design projects. This tool helps designers and artists create cohesive color palettes that work well together, ensuring visual harmony and professional aesthetics in web design, branding, and digital art."
+  },
+  "howTo": {
+    "title": "How to Use the Color Palette Generator",
+    "steps": [
+      {
+        "title": "Select Base Color",
+        "description": "Choose a base color using the color picker or enter a specific color value."
+      },
+      {
+        "title": "Choose Harmony Type",
+        "description": "Select a color harmony: complementary, triadic, analogous, or monochromatic."
+      },
+      {
+        "title": "Adjust Palette Size",
+        "description": "Set the number of colors in your palette (typically 3-5 colors)."
+      },
+      {
+        "title": "Fine-tune Colors",
+        "description": "Adjust individual colors to perfect your color scheme."
+      }
+    ],
+    "tips": [
+      "Start with complementary colors for high contrast",
+      "Use analogous colors for harmonious designs",
+      "Test accessibility with contrast checking"
+    ]
+  },
   "features": [
-    "Multiple color harmony algorithms",
-    "Customizable palette size",
-    "Real-time palette preview",
-    "Export in various formats",
-    "Color accessibility checking",
-    "Palette sharing and saving"
+    {
+      "title": "Color Harmony Algorithms",
+      "description": "Generate palettes using complementary, triadic, analogous, and monochromatic color theories."
+    },
+    {
+      "title": "Customizable Palette Size",
+      "description": "Create palettes with 2-10 colors based on your project requirements."
+    },
+    {
+      "title": "Real-Time Preview",
+      "description": "See your color palette instantly with live preview and color relationships."
+    },
+    {
+      "title": "Multiple Export Formats",
+      "description": "Export as CSS, JSON, ASE, or text in HEX, RGB, HSL formats."
+    },
+    {
+      "title": "Accessibility Checking",
+      "description": "Verify color combinations meet WCAG contrast guidelines for accessibility."
+    },
+    {
+      "title": "Palette Management",
+      "description": "Save, share, and organize your color palettes for future projects."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What are color harmonies?",
-      "answer": "Color harmonies are combinations of colors that are pleasing to the eye based on their relationships on the color wheel, such as complementary (opposite colors) or analogous (adjacent colors)."
+      "q": "What are color harmonies and how do they work?",
+      "a": "Color harmonies are combinations of colors that are visually pleasing based on their relationships on the color wheel. Complementary colors are opposite each other, triadic uses three evenly spaced colors, analogous uses adjacent colors, and monochromatic uses variations of one color."
     },
     {
-      "question": "How many colors should be in a palette?",
-      "answer": "Most effective palettes contain 3-5 colors. Too few colors may be limiting, while too many can create visual chaos. The optimal number depends on your specific project needs."
+      "q": "How many colors should be in a design palette?",
+      "a": "Most effective color palettes contain 3-5 colors. This provides enough variety for visual interest while maintaining cohesion. Too few colors may be limiting, while too many can create visual chaos and reduce brand recognition."
     },
     {
-      "question": "Can I check color accessibility?",
-      "answer": "Yes, our tool includes accessibility checking to ensure your color combinations meet WCAG guidelines for contrast ratios and readability."
+      "q": "Can I check if my color palette is accessible?",
+      "a": "Yes, our color palette generator includes accessibility checking to ensure your color combinations meet WCAG guidelines for contrast ratios. This helps ensure your designs are readable for users with visual impairments."
     },
     {
-      "question": "What export formats are available?",
-      "answer": "You can export palettes as CSS variables, JSON, Adobe Swatch Exchange (ASE), or simple text lists in HEX, RGB, or HSL formats."
+      "q": "What export formats are available for color palettes?",
+      "a": "You can export color palettes as CSS variables, JSON data, Adobe Swatch Exchange (ASE) files, or simple text lists in HEX, RGB, or HSL formats. This makes it easy to use your palettes in any design software or development environment."
+    },
+    {
+      "q": "What's the difference between complementary and analogous color schemes?",
+      "a": "Complementary colors are opposite on the color wheel (like red and green) creating high contrast and vibrant designs. Analogous colors are adjacent on the wheel (like blue, blue-green, green) creating harmonious, calming designs with less contrast."
+    },
+    {
+      "q": "How do I create a professional brand color palette?",
+      "a": "Start with your primary brand color, then use our generator to create complementary or triadic harmonies. Include neutral colors for balance, ensure accessibility compliance, and test the palette across different media and backgrounds."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Color Picker Tool",
+      "url": "/color/color-picker-tool"
+    },
+    {
+      "title": "RGB to HEX Converter",
+      "url": "/color/rgb-to-hex-converter"
+    },
+    {
+      "title": "HEX to RGB Converter",
+      "url": "/color/hex-to-rgb-converter"
+    },
+    {
+      "title": "Color Tools Category",
+      "url": "/color"
     }
   ]
 }

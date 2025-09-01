@@ -1,40 +1,102 @@
 {
-  "about": [
-    "The Currency Converter provides real-time exchange rates for over 150 currencies worldwide. Whether you're traveling, conducting international business, or trading forex, this tool delivers accurate and up-to-date conversion rates.",
-    "Our converter supports major currencies like USD, EUR, GBP, JPY, CNY, and many others, plus popular cryptocurrencies. Get instant conversions with professional-grade accuracy for all your financial needs."
-  ],
-  "howToUse": [
-    "Enter the amount you want to convert",
-    "Select the source currency (what you have)",
-    "Select the target currency (what you want)",
-    "View the converted amount instantly with current exchange rates",
-    "Check historical rates and trends for better timing"
-  ],
+  "about": {
+    "title": "About Currency Converter",
+    "description": "The Currency Converter provides real-time exchange rates for over 150 currencies worldwide with professional accuracy. Whether you're traveling, conducting international business, or trading forex, this tool delivers accurate and up-to-date conversion rates. Our converter supports major currencies like USD, EUR, GBP, JPY, CNY, and many others, plus popular cryptocurrencies. Get instant conversions with professional-grade accuracy for all your financial and trading needs."
+  },
+  "howTo": {
+    "title": "How to Use the Currency Converter",
+    "steps": [
+      {
+        "title": "Enter Amount",
+        "description": "Input the amount you want to convert in the source currency field."
+      },
+      {
+        "title": "Select Source Currency",
+        "description": "Choose the currency you're converting from (e.g., USD, EUR, GBP)."
+      },
+      {
+        "title": "Select Target Currency",
+        "description": "Pick the currency you want to convert to from our 150+ supported currencies."
+      },
+      {
+        "title": "Get Real-Time Results",
+        "description": "View the converted amount instantly with current live exchange rates."
+      }
+    ],
+    "tips": [
+      "Check historical rates for better exchange timing",
+      "Use for travel planning and international business",
+      "Rates update automatically during market hours"
+    ]
+  },
   "features": [
-    "Real-time exchange rates for 150+ currencies",
-    "Support for major cryptocurrencies",
-    "Historical exchange rate data and charts",
-    "Popular currency pairs and trends",
-    "Professional trading accuracy",
-    "No registration required",
-    "Mobile-friendly responsive design"
+    {
+      "title": "150+ Currencies Supported",
+      "description": "Real-time exchange rates for major world currencies including USD, EUR, GBP, JPY, CNY, and 150+ others."
+    },
+    {
+      "title": "Live Exchange Rates",
+      "description": "Real-time currency conversion with rates updated every few minutes during market hours."
+    },
+    {
+      "title": "Cryptocurrency Support",
+      "description": "Convert major cryptocurrencies including Bitcoin, Ethereum, and other popular digital currencies."
+    },
+    {
+      "title": "Historical Rate Data",
+      "description": "Access historical exchange rate charts and trends for informed currency exchange decisions."
+    },
+    {
+      "title": "Professional Accuracy",
+      "description": "Bank-grade conversion accuracy suitable for personal, business, and trading applications."
+    },
+    {
+      "title": "No Registration Required",
+      "description": "Free currency conversion tool with no signup required - instant access to live rates."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "How often are exchange rates updated?",
-      "answer": "Our exchange rates are updated in real-time from multiple financial data providers to ensure accuracy. Rates refresh automatically every few minutes during market hours."
+      "q": "How often are currency exchange rates updated?",
+      "a": "Our currency exchange rates are updated in real-time from multiple financial data providers to ensure maximum accuracy. Rates refresh automatically every few minutes during market hours, providing you with the most current exchange rates for over 150 currencies worldwide."
     },
     {
-      "question": "Are the conversion rates accurate for large amounts?",
-      "answer": "Yes, our rates are suitable for both small personal transactions and large business conversions. However, for very large transactions, banks may offer different rates due to spreads and fees."
+      "q": "Are the currency conversion rates accurate for large amounts?",
+      "a": "Yes, our currency converter provides accurate rates suitable for both small personal transactions and large business conversions. The rates are sourced from professional financial data providers. However, for very large transactions, banks may offer different rates due to spreads and fees."
     },
     {
-      "question": "Can I see historical exchange rates?",
-      "answer": "Yes, you can view historical exchange rate data and charts to analyze trends and make informed decisions about when to exchange currencies."
+      "q": "Can I see historical currency exchange rates?",
+      "a": "Yes, our currency converter includes historical exchange rate data and charts. You can analyze currency trends over time to make informed decisions about when to exchange currencies for travel, business, or investment purposes."
     },
     {
-      "question": "Do you support cryptocurrency conversions?",
-      "answer": "Yes, we support major cryptocurrencies including Bitcoin, Ethereum, and others. Crypto rates are updated frequently due to their volatile nature."
+      "q": "Do you support cryptocurrency to currency conversions?",
+      "a": "Yes, we support major cryptocurrencies including Bitcoin (BTC), Ethereum (ETH), and other popular digital currencies. Cryptocurrency rates are updated frequently due to their volatile nature, ensuring accurate crypto-to-fiat currency conversions."
+    },
+    {
+      "q": "Which currencies does the converter support?",
+      "a": "Our currency converter supports over 150 world currencies including major ones like USD (US Dollar), EUR (Euro), GBP (British Pound), JPY (Japanese Yen), CNY (Chinese Yuan), CAD (Canadian Dollar), AUD (Australian Dollar), and many others from around the globe."
+    },
+    {
+      "q": "Is the currency converter free to use?",
+      "a": "Yes, our currency converter is completely free to use with no registration required. You get instant access to real-time exchange rates, historical data, and professional-grade currency conversion tools without any fees or limitations."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "EUR to USD Calculator",
+      "url": "/finance/eur-to-usd-calculator"
+    },
+    {
+      "title": "Exchange Rate Calculator",
+      "url": "/finance/exchange-rate-calculator"
+    },
+    {
+      "title": "Bitcoin Calculator",
+      "url": "/finance/bitcoin-calculator"
+    },
+    {
+      "title": "Finance Tools Category",
+      "url": "/finance"
     }
   ]
 }

@@ -1,43 +1,107 @@
 {
-  "about": [
-    "The Investment Calculator is a powerful financial planning tool that helps you project the future value of your investments based on various parameters including initial investment, regular contributions, time horizon, and expected returns. This calculator uses compound interest calculations to show how your money can grow over time.",
-    "Whether you're planning for retirement, saving for a major purchase, or building wealth for the future, this calculator provides valuable insights into investment growth potential. It demonstrates the power of compound interest and helps you understand how different variables affect your investment outcomes.",
-    "The calculator supports various investment scenarios including lump sum investments, regular monthly contributions, or a combination of both. Use this tool to compare different investment strategies and make informed decisions about your financial future."
-  ],
-  "howToUse": [
-    "Enter your initial investment amount (starting capital)",
-    "Set your monthly contribution amount (if applicable)",
-    "Specify the investment time period in years",
-    "Input your expected annual rate of return",
-    "Choose compound frequency (monthly, quarterly, annually)",
-    "Review the projected investment growth and total returns"
-  ],
+  "about": {
+    "title": "About Investment Calculator",
+    "description": "The Investment Calculator is a powerful financial planning tool that helps you project the future value of your investments based on various parameters including initial investment, regular contributions, time horizon, and expected returns. This calculator uses compound interest calculations to show how your money can grow over time. Whether you're planning for retirement, saving for a major purchase, or building wealth for the future, this calculator provides valuable insights into investment growth potential and helps you understand how different variables affect your investment outcomes."
+  },
+  "howTo": {
+    "title": "How to Use the Investment Calculator",
+    "steps": [
+      {
+        "title": "Initial Investment",
+        "description": "Enter your initial investment amount (starting capital) that you plan to invest upfront."
+      },
+      {
+        "title": "Monthly Contributions",
+        "description": "Set your monthly contribution amount if you plan to make regular additional investments."
+      },
+      {
+        "title": "Time Period",
+        "description": "Specify the investment time period in years for your investment horizon."
+      },
+      {
+        "title": "Expected Returns",
+        "description": "Input your expected annual rate of return based on your investment strategy and risk tolerance."
+      },
+      {
+        "title": "Compound Frequency",
+        "description": "Choose how often your returns compound (monthly, quarterly, or annually)."
+      },
+      {
+        "title": "Review Results",
+        "description": "Analyze the projected investment growth, total returns, and compound interest effects."
+      }
+    ],
+    "tips": [
+      "Use conservative return estimates for more realistic projections",
+      "Consider inflation when planning long-term investments",
+      "Regular contributions can significantly boost investment growth",
+      "Diversify your portfolio to manage risk effectively"
+    ]
+  },
   "features": [
-    "Compound interest calculation with flexible compounding periods",
-    "Support for both lump sum and regular contribution investments",
-    "Interactive growth chart showing investment progression over time",
-    "Detailed breakdown of principal vs. interest earned",
-    "Multiple scenario comparison for investment planning",
-    "Inflation adjustment calculations for real returns",
-    "Tax consideration options for after-tax projections",
-    "Export results for financial planning documentation"
+    {
+      "title": "Compound Interest Calculation",
+      "description": "Advanced compound interest calculations with flexible compounding periods for accurate projections."
+    },
+    {
+      "title": "Multiple Investment Types",
+      "description": "Support for both lump sum investments and regular contribution strategies."
+    },
+    {
+      "title": "Growth Visualization",
+      "description": "Interactive growth charts showing investment progression and compound effects over time."
+    },
+    {
+      "title": "Principal vs Interest Breakdown",
+      "description": "Detailed analysis showing the breakdown between principal contributions and interest earned."
+    },
+    {
+      "title": "Scenario Comparison",
+      "description": "Compare multiple investment scenarios to optimize your investment strategy."
+    },
+    {
+      "title": "Inflation Adjustment",
+      "description": "Calculate real returns by adjusting for inflation effects on purchasing power."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What's a realistic rate of return for investments?",
-      "answer": "Historical stock market returns average around 10% annually over long periods, but conservative estimates of 6-8% are often used for planning. Bond returns are typically lower at 3-5%. Diversified portfolios might expect 7-9% long-term returns."
+      "q": "What's a realistic rate of return for investments?",
+      "a": "Historical stock market returns average around 10% annually over long periods, but conservative estimates of 6-8% are often used for planning. Bond returns are typically lower at 3-5%. Diversified portfolios might expect 7-9% long-term returns."
     },
     {
-      "question": "How often should investments compound?",
-      "answer": "Most investment accounts compound daily or monthly. For planning purposes, monthly compounding is commonly used. More frequent compounding results in slightly higher returns due to the compound effect."
+      "q": "How often should investments compound?",
+      "a": "Most investment accounts compound daily or monthly. For planning purposes, monthly compounding is commonly used. More frequent compounding results in slightly higher returns due to the compound effect."
     },
     {
-      "question": "Should I consider inflation in my calculations?",
-      "answer": "Yes, inflation typically runs 2-3% annually, which reduces your purchasing power. Consider using real (inflation-adjusted) returns for more accurate long-term planning. A 7% nominal return with 3% inflation equals a 4% real return."
+      "q": "Should I consider inflation in my calculations?",
+      "a": "Yes, inflation typically runs 2-3% annually, which reduces your purchasing power. Consider using real (inflation-adjusted) returns for more accurate long-term planning. A 7% nominal return with 3% inflation equals a 4% real return."
     },
     {
-      "question": "What's better: lump sum or regular contributions?",
-      "answer": "Both strategies have benefits. Lump sum investing can benefit from more time in the market, while dollar-cost averaging through regular contributions can reduce timing risk and make investing more manageable for most people."
+      "q": "What's better: lump sum or regular contributions?",
+      "a": "Both strategies have benefits. Lump sum investing can benefit from more time in the market, while dollar-cost averaging through regular contributions can reduce timing risk and make investing more manageable for most people."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Retirement Calculator",
+      "url": "/finance/retirement-calculator"
+    },
+    {
+      "title": "Compound Interest Calculator",
+      "url": "/finance/compound-interest-calculator"
+    },
+    {
+      "title": "401(k) Calculator",
+      "url": "/finance/401k-calculator"
+    },
+    {
+      "title": "Savings Calculator",
+      "url": "/finance/savings-calculator"
+    },
+    {
+      "title": "ROI Calculator",
+      "url": "/finance/roi-calculator"
     }
   ]
 }

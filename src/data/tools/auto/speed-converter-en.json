@@ -1,38 +1,102 @@
 {
-  "about": [
-    "The Speed Converter provides accurate conversions between MPH, KPH, knots, and other speed units for automotive applications. Essential for international travel, racing, and performance comparisons.",
-    "Understanding speed in different units helps with speedometer calibration, international driving, racing regulations, and comparing vehicle performance across different measurement systems."
-  ],
-  "howToUse": [
-    "Enter speed value in any supported unit",
-    "Select source and target speed units",
-    "View instant conversion results",
-    "Use for international travel and racing applications"
-  ],
+  "about": {
+    "title": "About Speed Converter",
+    "description": "The Speed Converter provides accurate conversions between MPH, KPH, knots, and other speed units for automotive applications. Essential for international travel, racing, and performance comparisons. Understanding speed in different units helps with speedometer calibration, international driving, racing regulations, and comparing vehicle performance across different measurement systems."
+  },
+  "howTo": {
+    "title": "How to Use the Speed Converter",
+    "steps": [
+      {
+        "title": "Enter Speed Value",
+        "description": "Input the speed value you want to convert in any supported unit."
+      },
+      {
+        "title": "Select Units",
+        "description": "Choose source and target speed units (MPH, KPH, knots, m/s)."
+      },
+      {
+        "title": "Get Results",
+        "description": "View instant conversion results with high precision."
+      },
+      {
+        "title": "Apply Results",
+        "description": "Use for international travel, racing, and automotive applications."
+      }
+    ],
+    "tips": [
+      "1 MPH = 1.609 KPH for quick reference",
+      "Use knots for marine and aviation applications",
+      "Check local speed limit units when traveling"
+    ]
+  },
   "features": [
-    "Multiple speed units (MPH, KPH, knots, m/s)",
-    "Bidirectional conversion support",
-    "Automotive and marine applications",
-    "Racing regulation compliance",
-    "International compatibility",
-    "Professional accuracy"
+    {
+      "title": "Multiple Speed Units",
+      "description": "Convert between MPH, KPH, knots, meters per second, and other speed measurements."
+    },
+    {
+      "title": "Bidirectional Conversion",
+      "description": "Convert from any speed unit to any other with equal accuracy."
+    },
+    {
+      "title": "Automotive Applications",
+      "description": "Perfect for speedometer calibration, performance testing, and international driving."
+    },
+    {
+      "title": "Racing Compliance",
+      "description": "Meet racing regulation requirements with accurate speed unit conversions."
+    },
+    {
+      "title": "Professional Accuracy",
+      "description": "High precision calculations suitable for automotive and professional use."
+    },
+    {
+      "title": "International Compatibility",
+      "description": "Support for speed units used worldwide for global automotive applications."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What's the difference between MPH and KPH?",
-      "answer": "MPH (miles per hour) is used primarily in the US, while KPH (kilometers per hour) is used globally. 1 MPH equals approximately 1.609 KPH."
+      "q": "What's the difference between MPH and KPH?",
+      "a": "MPH (miles per hour) is used primarily in the United States, while KPH (kilometers per hour) is the standard in most countries worldwide. 1 MPH equals exactly 1.609344 KPH. Our speed converter handles this conversion automatically with precision."
     },
     {
-      "question": "Why do some countries use different speed units?",
-      "answer": "Speed units follow the measurement system used in each country. Metric countries use KPH, while countries using imperial measurements typically use MPH."
+      "q": "Why do different countries use different speed units?",
+      "a": "Speed units follow the measurement system adopted by each country. Metric countries use KPH as part of the International System of Units, while countries using imperial measurements (like the US) typically use MPH for automotive applications."
     },
     {
-      "question": "How accurate is GPS speed compared to speedometer?",
-      "answer": "GPS speed is typically more accurate than speedometers, which often read 2-10% higher than actual speed due to tire wear, pressure, and calibration factors."
+      "q": "How accurate is GPS speed compared to speedometer readings?",
+      "a": "GPS speed is typically more accurate than vehicle speedometers, which often read 2-10% higher than actual speed. This difference occurs due to tire wear, tire pressure changes, speedometer calibration, and manufacturing tolerances."
     },
     {
-      "question": "What speed unit do racing series use?",
-      "answer": "It varies by series and location. Formula 1 uses KPH, NASCAR uses MPH, while marine racing often uses knots. Always check specific series regulations."
+      "q": "What speed units do different racing series use?",
+      "a": "Racing series use various speed units: Formula 1 and most international racing use KPH, NASCAR and American racing use MPH, marine racing uses knots, and aviation uses knots or Mach numbers. Always verify specific series regulations."
+    },
+    {
+      "q": "How do I convert 60 MPH to KPH?",
+      "a": "60 MPH equals 96.56 KPH (60 × 1.609344 = 96.56). This is a common highway speed conversion. Our speed converter provides instant results for any speed value with professional accuracy."
+    },
+    {
+      "q": "What is the conversion factor for knots to MPH?",
+      "a": "1 knot equals 1.15078 MPH. Knots are used in marine and aviation applications because they're based on nautical miles. Our converter handles knots conversions for automotive, marine, and aviation speed calculations."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "RPM Calculator",
+      "url": "/auto/rpm-calculator"
+    },
+    {
+      "title": "Tire Speed Calculator",
+      "url": "/auto/tire-speed-calculator"
+    },
+    {
+      "title": "Automotive Tools",
+      "url": "/auto"
+    },
+    {
+      "title": "Unit Converter",
+      "url": "/unit/unit-converter"
     }
   ]
 }

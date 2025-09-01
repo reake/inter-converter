@@ -1,31 +1,39 @@
 {
-  "about": [
-    "The Usd To Eur Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "USD to EUR Calculator - Live Exchange Rate & Currency Conversion",
+    "description": "Quickly convert US Dollars (USD) to Euros (EUR) using live market exchange rates. Enter any amount, apply fees or margins, and see the converted value instantly—ideal for travelers, shoppers, and international transfers."
+  },
+  "howTo": {
+    "title": "How to Use the USD to EUR Calculator",
+    "steps": [
+      { "title": "Enter Amount in USD", "description": "Type the dollar amount you want to convert to euros." },
+      { "title": "Use Live Rate or Custom Rate", "description": "Choose the real-time rate or input a bank/FX provider's quoted rate." },
+      { "title": "Add Fees (Optional)", "description": "Include card/transfer fees or FX margins to estimate the final received amount." },
+      { "title": "View EUR Result", "description": "See the converted EUR amount with a clear breakdown of rate and fees." }
+    ],
+    "tips": [
+      "Banks and cards often add a markup above the mid-market rate.",
+      "Compare providers (banks, Wise, Revolut, PayPal) for lower FX costs.",
+      "Check weekend/holiday rates—some services add extra markups."
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
+    { "title": "Live Exchange Rates", "description": "Use current USD→EUR rates for accurate conversions." },
+    { "title": "Fee & Margin Modeling", "description": "Add fixed fees or percentage markups to estimate real outcomes." },
+    { "title": "Reverse Conversion", "description": "Convert EUR back to USD with the same assumptions." },
+    { "title": "Quick Amount Presets", "description": "One-tap conversions for common amounts (e.g., $50, $100, $500)." }
   ],
-  "faqs": [
-    {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
-    },
-    {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
-    }
+  "faq": [
+    { "q": "Why is my bank's rate different?", "a": "Banks and card networks often add a spread on top of the mid-market rate plus fees." },
+    { "q": "Is the exchange rate constant?", "a": "No. FX rates fluctuate throughout the day based on global markets." },
+    { "q": "How can I get a better rate?", "a": "Compare multiple providers and avoid unnecessary markups or weekend conversions." },
+    { "q": "Does this include card fees?", "a": "You can add fees manually to model what your bank/card will charge." },
+    { "q": "Why doesn't the result match my card statement exactly?", "a": "Merchants may use Dynamic Currency Conversion and providers may apply different markups, weekend pricing, or rounding, causing small differences from mid‑market estimates." }
+  ],
+  "relativeLinks": [
+    { "title": "Currency Converter", "url": "/finance/currency-converter" },
+    { "title": "USD to GBP Calculator", "url": "/finance/usd-to-gbp-calculator" },
+    { "title": "USD to JPY Calculator", "url": "/finance/usd-to-jpy-calculator" },
+    { "title": "Exchange Rate Calculator", "url": "/finance/exchange-rate-calculator" }
   ]
 }

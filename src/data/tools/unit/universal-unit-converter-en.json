@@ -1,0 +1,106 @@
+{
+  "about": {
+    "title": "About Universal Unit Converter",
+    "description": "The Universal Unit Converter is a comprehensive all-in-one measurement tool that handles conversions across all major unit categories including length, weight, temperature, volume, area, speed, energy, pressure, power, and data storage. This professional-grade converter supports metric, imperial, and specialized units with precision calculations for engineering, scientific, and everyday applications."
+  },
+  "howTo": {
+    "title": "How to Use the Universal Unit Converter",
+    "steps": [
+      {
+        "title": "Select Unit Category",
+        "description": "Choose from length, weight, temperature, volume, area, speed, energy, pressure, power, or data categories."
+      },
+      {
+        "title": "Pick Source Unit",
+        "description": "Select the unit you want to convert from using the dropdown menu."
+      },
+      {
+        "title": "Choose Target Unit",
+        "description": "Select the unit you want to convert to from the available options."
+      },
+      {
+        "title": "Enter Value",
+        "description": "Input the numerical value you want to convert in the source unit field."
+      },
+      {
+        "title": "Get Results",
+        "description": "View the converted result instantly with high precision calculations."
+      }
+    ],
+    "tips": [
+      "Use the search function to quickly find specific units",
+      "Bookmark frequently used unit pairs for faster access",
+      "Check unit abbreviations for clarity in technical work"
+    ]
+  },
+  "features": [
+    {
+      "title": "All-in-One Converter",
+      "description": "Convert between all major unit categories in a single comprehensive tool."
+    },
+    {
+      "title": "High Precision Calculations",
+      "description": "Accurate conversions with up to 15 decimal places for scientific applications."
+    },
+    {
+      "title": "Metric & Imperial Support",
+      "description": "Complete support for both metric and imperial measurement systems."
+    },
+    {
+      "title": "Scientific Units",
+      "description": "Includes specialized units for engineering, physics, and scientific calculations."
+    },
+    {
+      "title": "Instant Conversion",
+      "description": "Real-time conversion results as you type with no delays."
+    },
+    {
+      "title": "Unit Categories",
+      "description": "Organized by category for easy navigation and unit selection."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What unit categories does the universal converter support?",
+      "a": "Our universal unit converter supports length, weight/mass, temperature, volume, area, speed/velocity, energy, pressure, power, and data storage units. Each category includes metric, imperial, and specialized scientific units for comprehensive coverage."
+    },
+    {
+      "q": "How accurate are the conversion calculations?",
+      "a": "The universal unit converter provides high-precision calculations with up to 15 decimal places accuracy. All conversion factors are based on internationally recognized standards and are regularly updated for maximum precision."
+    },
+    {
+      "q": "Can I convert between different unit categories?",
+      "a": "No, conversions are only possible within the same unit category (e.g., length to length, weight to weight). Different categories measure different physical quantities and cannot be directly converted without additional context."
+    },
+    {
+      "q": "Does the converter work with scientific notation?",
+      "a": "Yes, the universal unit converter accepts and displays results in scientific notation for very large or very small numbers, making it suitable for scientific and engineering applications."
+    },
+    {
+      "q": "Are imperial and metric units both supported?",
+      "a": "Absolutely! The converter includes comprehensive support for both metric (SI) and imperial (US/UK) measurement systems, plus specialized units used in various industries and scientific fields."
+    },
+    {
+      "q": "Can I use this for professional engineering work?",
+      "a": "Yes, the universal unit converter meets professional standards with precise calculations, extensive unit coverage, and scientific notation support suitable for engineering, research, and technical applications."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Temperature Converter",
+      "url": "/unit/temperature-converter"
+    },
+    {
+      "title": "Length Converter",
+      "url": "/unit/length-converter"
+    },
+    {
+      "title": "Weight Converter",
+      "url": "/unit/weight-converter"
+    },
+    {
+      "title": "Unit Conversion Tools",
+      "url": "/unit"
+    }
+  ]
+}

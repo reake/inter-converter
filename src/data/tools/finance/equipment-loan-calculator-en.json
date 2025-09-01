@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Equipment Loan Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Equipment Loan Calculator - Business Equipment Financing Tool",
+    "description": "The Equipment Loan Calculator is a specialized business financing tool designed to help you calculate monthly payments, interest costs, and loan terms for equipment purchases. Whether you're financing machinery, vehicles, technology, or other business equipment, this calculator provides accurate payment estimates and helps you evaluate different financing options. Understanding equipment loan calculations is essential for business cash flow planning and making informed equipment purchase decisions."
+  },
+  "howTo": {
+    "title": "How to Use the Equipment Loan Calculator",
+    "steps": [
+      {
+        "title": "Equipment Cost",
+        "description": "Enter the total cost of the equipment you plan to purchase or finance."
+      },
+      {
+        "title": "Down Payment",
+        "description": "Input your down payment amount to reduce the loan principal and monthly payments."
+      },
+      {
+        "title": "Loan Term",
+        "description": "Select the loan term in years (typically 2-7 years for equipment loans) based on equipment life."
+      },
+      {
+        "title": "Interest Rate",
+        "description": "Enter the annual interest rate offered by your lender for equipment financing."
+      },
+      {
+        "title": "Equipment Type",
+        "description": "Specify equipment type as different categories may have different rates and terms."
+      },
+      {
+        "title": "Review Results",
+        "description": "Analyze monthly payments, total cost, and cash flow impact on your business."
+      }
+    ],
+    "tips": [
+      "Compare rates from banks, credit unions, and equipment dealers",
+      "Consider equipment depreciation when planning loan terms",
+      "Factor in tax benefits like Section 179 deductions",
+      "Ensure loan term doesn't exceed equipment useful life"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Monthly Payment Calculation",
+      "description": "Calculate exact monthly payments for equipment loans with various terms and rates."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Total Cost Analysis",
+      "description": "Analyze total financing costs including interest and fees over the loan term."
+    },
+    {
+      "title": "Cash Flow Impact",
+      "description": "Evaluate how equipment loan payments affect your business cash flow and budget."
+    },
+    {
+      "title": "Equipment Depreciation",
+      "description": "Factor in equipment depreciation schedules and tax implications for financing decisions."
+    },
+    {
+      "title": "Lease vs Buy Comparison",
+      "description": "Compare equipment loan financing with leasing options to find the best solution."
+    },
+    {
+      "title": "Tax Benefit Calculator",
+      "description": "Calculate potential tax benefits from equipment purchases and financing interest deductions."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What types of equipment can be financed with equipment loans?",
+      "a": "Equipment loans can finance machinery, vehicles, technology, medical equipment, construction equipment, manufacturing tools, and other business assets. Most lenders require the equipment to serve as collateral for the loan."
+    },
+    {
+      "q": "How do equipment loan rates compare to other business loans?",
+      "a": "Equipment loans typically offer lower rates than unsecured business loans because the equipment serves as collateral. Rates usually range from 6-20% depending on creditworthiness, equipment type, and loan terms."
+    },
+    {
+      "q": "Should I choose a shorter or longer equipment loan term?",
+      "a": "Choose terms that don't exceed the equipment's useful life. Shorter terms mean higher payments but less total interest. Longer terms reduce monthly payments but increase total cost. Consider equipment depreciation and cash flow needs."
+    },
+    {
+      "q": "Can I deduct equipment loan interest on my taxes?",
+      "a": "Yes, equipment loan interest is typically tax-deductible as a business expense. You may also qualify for Section 179 deductions or bonus depreciation on equipment purchases, providing additional tax benefits."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Business Loan Calculator",
+      "url": "/finance/business-loan-calculator"
+    },
+    {
+      "title": "Auto Loan Calculator",
+      "url": "/finance/auto-loan-calculator"
+    },
+    {
+      "title": "Lease Calculator",
+      "url": "/finance/lease-calculator"
+    },
+    {
+      "title": "SBA Loan Calculator",
+      "url": "/finance/sba-loan-calculator"
+    },
+    {
+      "title": "Cash Flow Calculator",
+      "url": "/finance/cash-flow-calculator"
     }
   ]
 }

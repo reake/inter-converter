@@ -1,37 +1,102 @@
 {
-  "about": [
-    "The Power Converter provides comprehensive conversion between different power units including watts, kilowatts, horsepower, BTU/hour, and more. This tool is essential for engineers, electricians, and professionals working with power calculations.",
-    "Understanding power unit conversions helps in electrical system design, motor specifications, and energy efficiency analysis across various applications."
-  ],
-  "howToUse": [
-    "Select the source power unit from the dropdown",
-    "Enter the power value you want to convert",
-    "Choose the target unit for conversion",
-    "View the instant conversion result"
-  ],
+  "about": {
+    "title": "About Power Converter",
+    "description": "The Power Converter provides comprehensive conversion between different power units including watts, kilowatts, horsepower, BTU/hour, and more specialized power measurements. This professional power conversion tool is essential for engineers, electricians, HVAC professionals, and anyone working with electrical, mechanical, and thermal power calculations. Understanding power unit conversions helps in electrical system design, motor specifications, generator sizing, and energy efficiency analysis across industrial, automotive, and residential applications. Whether you're sizing electrical equipment, comparing motor ratings, or calculating heating system capacity, our converter ensures accurate conversions between all major power units."
+  },
+  "howTo": {
+    "title": "How to Use the Power Converter",
+    "steps": [
+      {
+        "title": "Enter Power Value",
+        "description": "Input the power value you want to convert in the designated field. You can enter whole numbers or decimals for precise calculations."
+      },
+      {
+        "title": "Select Source Unit",
+        "description": "Choose the current power unit from the dropdown menu (watts, kilowatts, horsepower, BTU/hr, etc.)."
+      },
+      {
+        "title": "Choose Target Unit",
+        "description": "Select the power unit you want to convert to from the available power measurement options."
+      },
+      {
+        "title": "View Conversion Results",
+        "description": "The converted power value will appear instantly with high precision calculations suitable for engineering and technical applications."
+      }
+    ],
+    "tips": [
+      "Use watts for electrical power calculations and specifications",
+      "Use horsepower for mechanical power and motor ratings",
+      "Use BTU/hr for heating and cooling system capacity"
+    ]
+  },
   "features": [
-    "Multiple power unit conversions",
-    "Electrical and mechanical power units",
-    "High precision calculations",
-    "Support for metric and imperial units",
-    "Professional accuracy for technical use"
+    {
+      "title": "Comprehensive Power Units",
+      "description": "Convert between watts, kilowatts, horsepower, BTU/hr, and other power units covering electrical, mechanical, and thermal power applications."
+    },
+    {
+      "title": "Engineering Precision",
+      "description": "High-precision calculations using exact conversion factors suitable for electrical system design, motor sizing, and power equipment specifications."
+    },
+    {
+      "title": "Real-time Conversion",
+      "description": "Instant power conversion as you type with immediate results display for efficient engineering workflow and equipment selection."
+    },
+    {
+      "title": "Electrical and Mechanical Power",
+      "description": "Accurate conversions between electrical power (watts, kW) and mechanical power (horsepower) for motor and generator applications."
+    },
+    {
+      "title": "HVAC and Thermal Applications",
+      "description": "Specialized support for BTU/hr conversions commonly used in heating, cooling, and thermal system capacity calculations."
+    },
+    {
+      "title": "Professional Standards",
+      "description": "Compliant with international power measurement standards for industrial, automotive, and electrical engineering applications."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What's the difference between watts and horsepower?",
-      "answer": "Watts are the SI unit for power, while horsepower is a traditional unit. 1 horsepower equals approximately 745.7 watts."
+      "q": "What's the difference between watts and horsepower for power measurement?",
+      "a": "Watts are the SI (International System) unit for power used in electrical and scientific applications, while horsepower is a traditional unit commonly used for mechanical power, especially in automotive and industrial motors. 1 horsepower equals exactly 745.7 watts. Our power converter handles both units with precise calculations for all applications."
     },
     {
-      "question": "How do I convert kilowatts to horsepower?",
-      "answer": "1 kilowatt equals approximately 1.341 horsepower. Multiply kW by 1.341 to get horsepower."
+      "q": "How do I convert kilowatts to horsepower?",
+      "a": "1 kilowatt equals approximately 1.341 horsepower. To convert kilowatts to horsepower, multiply the kW value by 1.341. For example, 10 kW = 13.41 horsepower. Our power converter performs this calculation automatically with full precision."
     },
     {
-      "question": "What are BTU/hour used for?",
-      "answer": "BTU/hour measures thermal power, commonly used in heating and cooling system specifications."
+      "q": "What are BTU/hour units used for in power calculations?",
+      "a": "BTU/hour (British Thermal Units per hour) measures thermal power output, commonly used in heating and cooling system specifications, furnace capacity ratings, and air conditioning unit sizing. 1 BTU/hr equals approximately 0.293 watts."
     },
     {
-      "question": "Which power unit should I use?",
-      "answer": "Use watts for electrical power, horsepower for mechanical power, and BTU/hour for thermal power applications."
+      "q": "Which power unit should I use for different applications?",
+      "a": "Use watts and kilowatts for electrical power calculations and equipment specifications, horsepower for mechanical power and motor ratings, BTU/hr for heating and cooling system capacity, and foot-pounds per second for mechanical power in imperial systems."
+    },
+    {
+      "q": "How accurate is the power converter for engineering use?",
+      "a": "Our power converter uses exact international conversion factors and maintains high decimal precision, making it suitable for electrical system design, motor sizing, generator specifications, and professional engineering calculations."
+    },
+    {
+      "q": "Can I convert between electrical and mechanical power units?",
+      "a": "Yes, our power converter accurately converts between electrical power (watts, kW) and mechanical power (horsepower) using precise conversion factors. This is essential for motor selection, generator sizing, and power system analysis."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Energy Converter",
+      "url": "/unit/energy-converter"
+    },
+    {
+      "title": "Pressure Converter",
+      "url": "/unit/pressure-converter"
+    },
+    {
+      "title": "Unit Converter",
+      "url": "/unit/unit-converter"
+    },
+    {
+      "title": "Unit Tools Category",
+      "url": "/unit"
     }
   ]
 }

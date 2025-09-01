@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Gift Tax Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Gift Tax Calculator - Estate Planning Tax Tool",
+    "description": "The Gift Tax Calculator is a comprehensive estate planning tool designed to help you calculate federal gift taxes and understand gift tax implications for wealth transfer strategies. Whether you're planning annual gifts, lifetime transfers, or estate planning strategies, this calculator provides accurate tax calculations based on current IRS gift tax rates and exemptions. Understanding gift tax calculations is essential for effective estate planning and minimizing tax liabilities on wealth transfers."
+  },
+  "howTo": {
+    "title": "How to Use the Gift Tax Calculator",
+    "steps": [
+      {
+        "title": "Gift Amount",
+        "description": "Enter the total value of gifts you plan to give to each recipient during the tax year."
+      },
+      {
+        "title": "Annual Exclusion",
+        "description": "The calculator applies the current annual gift tax exclusion ($17,000 for 2023, $18,000 for 2024)."
+      },
+      {
+        "title": "Recipient Information",
+        "description": "Specify the number of recipients and relationship (spouse, children, etc.) for accurate calculations."
+      },
+      {
+        "title": "Lifetime Exemption",
+        "description": "Factor in your remaining lifetime gift and estate tax exemption amount."
+      },
+      {
+        "title": "Previous Gifts",
+        "description": "Include any previous taxable gifts made to the same recipients in prior years."
+      },
+      {
+        "title": "Calculate Tax Liability",
+        "description": "Review gift tax owed, exemption usage, and optimal gift timing strategies."
+      }
+    ],
+    "tips": [
+      "Use annual exclusion amounts to gift tax-free each year",
+      "Consider gift splitting with spouse to double annual exclusions",
+      "Time gifts strategically around year-end for tax optimization",
+      "Consult estate planning professionals for complex gift strategies"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Annual Exclusion Tracking",
+      "description": "Track annual gift tax exclusions per recipient and optimize gift timing for maximum tax benefits."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Lifetime Exemption Calculator",
+      "description": "Monitor usage of lifetime gift and estate tax exemption to preserve wealth transfer capacity."
+    },
+    {
+      "title": "Gift Splitting Analysis",
+      "description": "Calculate benefits of gift splitting between spouses to maximize annual exclusions."
+    },
+    {
+      "title": "Generation-Skipping Tax",
+      "description": "Calculate generation-skipping transfer tax for gifts to grandchildren and beyond."
+    },
+    {
+      "title": "Tax Rate Calculator",
+      "description": "Apply current federal gift tax rates to determine exact tax liability on taxable gifts."
+    },
+    {
+      "title": "Multi-Year Planning",
+      "description": "Plan gift strategies across multiple years to optimize tax efficiency and wealth transfer."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the annual gift tax exclusion for 2024?",
+      "a": "The annual gift tax exclusion for 2024 is $18,000 per recipient ($36,000 for married couples using gift splitting). You can give this amount to unlimited recipients without using your lifetime exemption or paying gift tax."
+    },
+    {
+      "q": "Do I need to file a gift tax return?",
+      "a": "You must file Form 709 if you give more than the annual exclusion to any person, make a gift of future interest, or elect gift splitting with your spouse. Filing is required even if no tax is owed due to lifetime exemption usage."
+    },
+    {
+      "q": "What is the lifetime gift tax exemption?",
+      "a": "The lifetime gift and estate tax exemption for 2024 is $13.61 million per person ($27.22 million for married couples). Gifts exceeding annual exclusions reduce this lifetime exemption before triggering gift tax."
+    },
+    {
+      "q": "Can I give unlimited gifts to my spouse?",
+      "a": "US citizens can make unlimited gifts to US citizen spouses without gift tax. For non-citizen spouses, the annual exclusion is higher ($185,000 in 2024) but unlimited marital deduction doesn't apply."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Estate Tax Calculator",
+      "url": "/finance/estate-tax-calculator"
+    },
+    {
+      "title": "Tax Calculator",
+      "url": "/finance/tax-calculator"
+    },
+    {
+      "title": "Trust Calculator",
+      "url": "/finance/trust-calculator"
+    },
+    {
+      "title": "Inheritance Calculator",
+      "url": "/finance/inheritance-calculator"
+    },
+    {
+      "title": "Capital Gains Tax Calculator",
+      "url": "/finance/capital-gains-tax-calculator"
     }
   ]
 }

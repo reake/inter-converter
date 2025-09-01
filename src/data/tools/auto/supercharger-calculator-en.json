@@ -1,38 +1,102 @@
 {
-  "about": [
-    "The Supercharger Calculator determines boost pressure, power gains, and pulley ratios for supercharged engines. Essential for supercharger sizing, tuning, and performance optimization.",
-    "Proper supercharger calculations ensure optimal boost levels, prevent engine damage from excessive pressure, and maximize power gains while maintaining reliability and drivability."
-  ],
-  "howToUse": [
-    "Enter engine displacement and target boost pressure",
-    "Select supercharger type and efficiency",
-    "Input pulley ratios for drive calculations",
-    "View calculated power gains and CFM requirements"
-  ],
+  "about": {
+    "title": "About Supercharger Calculator",
+    "description": "The Supercharger Calculator determines boost pressure, power gains, and pulley ratios for supercharged engines. Essential for supercharger sizing, tuning, and performance optimization. Proper supercharger calculations ensure optimal boost levels, prevent engine damage from excessive pressure, and maximize power gains while maintaining reliability and drivability."
+  },
+  "howTo": {
+    "title": "How to Use the Supercharger Calculator",
+    "steps": [
+      {
+        "title": "Enter Engine Specs",
+        "description": "Input engine displacement and target boost pressure for your application."
+      },
+      {
+        "title": "Select Supercharger Type",
+        "description": "Choose supercharger type (roots, centrifugal, screw) and efficiency rating."
+      },
+      {
+        "title": "Input Pulley Ratios",
+        "description": "Enter crank and supercharger pulley sizes for drive ratio calculations."
+      },
+      {
+        "title": "Analyze Results",
+        "description": "Review calculated power gains, CFM requirements, and boost characteristics."
+      }
+    ],
+    "tips": [
+      "Start with conservative boost levels for stock engines (6-8 PSI)",
+      "Smaller supercharger pulleys increase boost but reduce belt life",
+      "Consider intercooling for boost levels above 10 PSI"
+    ]
+  },
   "features": [
-    "Boost pressure calculations",
-    "Power gain estimation",
-    "Pulley ratio optimization",
-    "CFM requirement analysis",
-    "Multiple supercharger types",
-    "Professional tuning support"
+    {
+      "title": "Boost Pressure Calculations",
+      "description": "Calculate boost pressure based on supercharger specifications and pulley ratios."
+    },
+    {
+      "title": "Power Gain Estimation",
+      "description": "Estimate horsepower gains from supercharger installation and tuning."
+    },
+    {
+      "title": "Pulley Ratio Optimization",
+      "description": "Optimize pulley combinations for target boost levels and RPM characteristics."
+    },
+    {
+      "title": "CFM Analysis",
+      "description": "Calculate airflow requirements and supercharger sizing needs."
+    },
+    {
+      "title": "Multiple Supercharger Types",
+      "description": "Support for roots, centrifugal, and screw-type supercharger calculations."
+    },
+    {
+      "title": "Professional Tuning Support",
+      "description": "Advanced calculations for professional tuners and engine builders."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What's the difference between superchargers and turbochargers?",
-      "answer": "Superchargers are belt-driven and provide immediate boost, while turbochargers use exhaust gases and have some lag. Superchargers consume engine power but offer linear power delivery."
+      "q": "What's the difference between superchargers and turbochargers?",
+      "a": "Superchargers are belt-driven from the crankshaft and provide immediate boost with no lag, while turbochargers use exhaust gases and have some turbo lag. Superchargers consume engine power (parasitic loss) but offer linear, predictable power delivery. Our supercharger calculator helps optimize these systems."
     },
     {
-      "question": "How much boost pressure is safe?",
-      "answer": "Safe boost levels depend on engine internals, fuel quality, and tuning. Stock engines typically handle 6-8 PSI, while built engines can handle 15+ PSI with proper tuning."
+      "q": "How much boost pressure is safe for my engine?",
+      "a": "Safe boost levels depend on engine internals, fuel quality, and tuning expertise. Stock engines typically handle 6-8 PSI safely, while built engines with forged internals can handle 15+ PSI with proper tuning, fuel system upgrades, and engine management."
     },
     {
-      "question": "How do pulley ratios affect boost pressure?",
-      "answer": "Smaller supercharger pulleys or larger crank pulleys increase boost by spinning the supercharger faster. The ratio determines supercharger speed relative to engine RPM."
+      "q": "How do pulley ratios affect boost pressure?",
+      "a": "Smaller supercharger pulleys or larger crank pulleys increase boost by spinning the supercharger faster relative to engine RPM. The pulley ratio determines supercharger speed multiplication - a 3:1 ratio means the supercharger spins 3 times faster than the crankshaft."
     },
     {
-      "question": "What's volumetric efficiency in supercharger calculations?",
-      "answer": "Volumetric efficiency measures how effectively the supercharger fills the cylinders. Higher efficiency means more power per PSI of boost and better fuel economy."
+      "q": "What's volumetric efficiency in supercharger calculations?",
+      "a": "Volumetric efficiency measures how effectively the supercharger fills the cylinders with air. Higher efficiency (85-95% for good superchargers) means more power per PSI of boost, better fuel economy, and less heat generation. Our calculator factors this into power estimates."
+    },
+    {
+      "q": "What are the different types of superchargers?",
+      "a": "Main types include: Roots (immediate boost, lower efficiency), Centrifugal (higher efficiency, boost increases with RPM), and Screw/Twin-screw (best efficiency, consistent boost). Each type has different characteristics that our calculator accounts for."
+    },
+    {
+      "q": "Do I need an intercooler with my supercharger?",
+      "a": "Intercoolers are recommended for boost levels above 8-10 PSI to reduce intake air temperature. Cooler air is denser, allowing more aggressive timing and higher compression ratios. This improves power and reduces knock potential."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Ram Air Calculator",
+      "url": "/auto/ram-air-calculator"
+    },
+    {
+      "title": "Volumetric Efficiency Calculator",
+      "url": "/auto/volumetric-efficiency-calculator"
+    },
+    {
+      "title": "Torque Horsepower Calculator",
+      "url": "/auto/torque-horsepower-calculator"
+    },
+    {
+      "title": "Automotive Tools Category",
+      "url": "/auto"
     }
   ]
 }

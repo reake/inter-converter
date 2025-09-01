@@ -1,40 +1,102 @@
 {
-  "about": [
-    "The Tax Calculator helps you estimate your federal and state income tax liability, plan for tax payments, and optimize your tax strategy. Calculate your expected tax refund or amount owed based on your income, deductions, and filing status.",
-    "Stay ahead of tax season by understanding your tax obligations throughout the year. This tool helps with tax planning, withholding adjustments, and estimated quarterly payments for self-employed individuals."
-  ],
-  "howToUse": [
-    "Select your filing status (Single, Married Filing Jointly, etc.)",
-    "Enter your annual income from all sources",
-    "Input your deductions (standard or itemized)",
-    "Add any tax credits you qualify for",
-    "Review your estimated tax liability and refund"
-  ],
+  "about": {
+    "title": "About Tax Calculator",
+    "description": "The Tax Calculator helps you estimate your federal and state income tax liability, plan for tax payments, and optimize your tax strategy. Calculate your expected tax refund or amount owed based on your income, deductions, and filing status. Stay ahead of tax season by understanding your tax obligations throughout the year. This tool helps with tax planning, withholding adjustments, and estimated quarterly payments for self-employed individuals."
+  },
+  "howTo": {
+    "title": "How to Use the Tax Calculator",
+    "steps": [
+      {
+        "title": "Select Filing Status",
+        "description": "Choose your filing status: Single, Married Filing Jointly, Married Filing Separately, or Head of Household."
+      },
+      {
+        "title": "Enter Annual Income",
+        "description": "Input your total annual income from wages, self-employment, investments, and other sources."
+      },
+      {
+        "title": "Choose Deductions",
+        "description": "Select standard deduction or enter itemized deductions (mortgage interest, state taxes, charitable donations)."
+      },
+      {
+        "title": "Add Tax Credits",
+        "description": "Include applicable tax credits like Child Tax Credit, Earned Income Credit, or education credits."
+      }
+    ],
+    "tips": [
+      "Use current year tax brackets and rates",
+      "Include all income sources for accuracy",
+      "Compare standard vs itemized deductions"
+    ]
+  },
   "features": [
-    "Federal and state tax calculation",
-    "Multiple filing status options",
-    "Standard and itemized deduction support",
-    "Tax credit calculations",
-    "Marginal tax rate analysis",
-    "Quarterly payment estimates",
-    "Tax planning scenarios"
+    {
+      "title": "Federal and State Tax Calculation",
+      "description": "Calculate both federal income tax and state tax liability based on current tax brackets."
+    },
+    {
+      "title": "Multiple Filing Status Support",
+      "description": "Support for Single, Married Filing Jointly, Married Filing Separately, and Head of Household."
+    },
+    {
+      "title": "Deduction Optimization",
+      "description": "Compare standard deduction vs itemized deductions to maximize tax savings."
+    },
+    {
+      "title": "Tax Credit Integration",
+      "description": "Include major tax credits like Child Tax Credit, EITC, and education credits."
+    },
+    {
+      "title": "Marginal Tax Rate Analysis",
+      "description": "Show your marginal tax bracket and effective tax rate for tax planning."
+    },
+    {
+      "title": "Quarterly Payment Estimates",
+      "description": "Calculate estimated quarterly tax payments for self-employed individuals."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "Should I take the standard deduction or itemize?",
-      "answer": "Take the standard deduction if it's larger than your itemized deductions. For 2023, the standard deduction is $13,850 for single filers and $27,700 for married filing jointly."
+      "q": "Should I take the standard deduction or itemize my deductions?",
+      "a": "Take the standard deduction if it's larger than your itemized deductions. For 2024, the standard deduction is $14,600 for single filers and $29,200 for married filing jointly. Our tax calculator helps you compare both options to maximize your tax savings."
     },
     {
-      "question": "What's the difference between marginal and effective tax rates?",
-      "answer": "Your marginal tax rate is the rate on your last dollar of income. Your effective tax rate is your total tax divided by total income - this is your average tax rate."
+      "q": "What's the difference between marginal and effective tax rates?",
+      "a": "Your marginal tax rate is the tax rate on your last dollar of income - your highest tax bracket. Your effective tax rate is your total tax divided by total income, representing your average tax rate. Our tax calculator shows both rates for comprehensive tax planning."
     },
     {
-      "question": "How accurate are these tax estimates?",
-      "answer": "Our calculator provides good estimates for planning purposes, but your actual tax liability may vary based on specific circumstances. Consult a tax professional for complex situations."
+      "q": "How accurate are these tax calculator estimates?",
+      "a": "Our tax calculator provides reliable estimates for planning purposes using current IRS tax brackets and standard deductions. However, your actual tax liability may vary based on specific circumstances, complex deductions, or tax law changes. Consult a tax professional for complex situations."
     },
     {
-      "question": "When should I make quarterly estimated payments?",
-      "answer": "If you expect to owe $1,000 or more in taxes and your withholding/credits don't cover 90% of this year's tax or 100% of last year's tax, you should make quarterly payments."
+      "q": "When should I make quarterly estimated tax payments?",
+      "a": "Make quarterly estimated payments if you expect to owe $1,000 or more in taxes and your withholding plus credits don't cover 90% of this year's tax liability or 100% of last year's tax. Our calculator helps estimate these quarterly payment amounts."
+    },
+    {
+      "q": "What income sources should I include in the tax calculator?",
+      "a": "Include all taxable income: wages, salary, tips, self-employment income, investment gains, rental income, retirement distributions, unemployment benefits, and other taxable sources. Our tax calculator accounts for various income types."
+    },
+    {
+      "q": "How do tax brackets work in the United States?",
+      "a": "The US uses a progressive tax system with multiple tax brackets. You pay the bracket rate only on income within that bracket range, not your entire income. Our tax calculator automatically applies the correct bracket rates to calculate your total tax liability."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Mortgage Calculator",
+      "url": "/finance/mortgage-calculator"
+    },
+    {
+      "title": "Loan Calculator",
+      "url": "/finance/loan-calculator"
+    },
+    {
+      "title": "Currency Converter",
+      "url": "/finance/currency-converter"
+    },
+    {
+      "title": "Finance Tools Category",
+      "url": "/finance"
     }
   ]
 }

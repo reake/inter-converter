@@ -1,43 +1,107 @@
 {
-  "about": [
-    "The Personal Loan Calculator is a comprehensive financial tool that helps you calculate monthly payments, total interest costs, and repayment schedules for personal loans. Whether you're considering a loan for debt consolidation, home improvements, or major purchases, this calculator provides accurate payment estimates and helps you compare different loan options.",
-    "Personal loans offer fixed interest rates and predictable monthly payments, making them an attractive option for many borrowers. This calculator takes into account the loan amount, interest rate, and repayment term to show you exactly what your monthly payments will be and how much you'll pay in total interest over the life of the loan.",
-    "Use this tool to explore different loan scenarios, compare offers from multiple lenders, and determine the optimal loan terms that fit your budget and financial goals. Understanding your loan payments upfront helps you make informed borrowing decisions and avoid financial strain."
-  ],
-  "howToUse": [
-    "Enter the desired loan amount you want to borrow",
-    "Input the annual interest rate (APR) offered by the lender",
-    "Set the loan term in months or years",
-    "Review the calculated monthly payment amount",
-    "Examine the total interest cost over the loan term",
-    "Compare different scenarios by adjusting loan parameters"
-  ],
+  "about": {
+    "title": "About Personal Loan Calculator - Unsecured Loan Planning Tool",
+    "description": "The Personal Loan Calculator is a comprehensive borrowing tool designed to help you calculate monthly payments, total costs, and affordability for personal loans. This calculator helps you compare loan offers, determine optimal loan terms, and understand the total cost of borrowing for debt consolidation, home improvements, or major purchases. Whether you're considering fixed-rate personal loans or comparing lenders, this tool provides accurate loan projections."
+  },
+  "howTo": {
+    "title": "How to Use the Personal Loan Calculator",
+    "steps": [
+      {
+        "title": "Enter Loan Amount",
+        "description": "Input the personal loan amount you want to borrow."
+      },
+      {
+        "title": "Set Interest Rate",
+        "description": "Enter the annual percentage rate (APR) offered by the lender."
+      },
+      {
+        "title": "Choose Loan Term",
+        "description": "Select the repayment period (typically 2-7 years for personal loans)."
+      },
+      {
+        "title": "Add Fees",
+        "description": "Include any origination fees or other loan costs in your calculation."
+      },
+      {
+        "title": "Review Payment Details",
+        "description": "Analyze monthly payment amount and total interest costs."
+      },
+      {
+        "title": "Compare Loan Options",
+        "description": "Compare different loan amounts, terms, and rates to find the best option."
+      }
+    ],
+    "tips": [
+      "Personal loan rates typically range from 6-36% APR depending on credit score",
+      "Shorter loan terms mean higher monthly payments but lower total interest",
+      "Shop around with multiple lenders to find the best rates and terms",
+      "Consider origination fees when comparing total loan costs"
+    ]
+  },
   "features": [
-    "Monthly payment calculation with principal and interest breakdown",
-    "Total loan cost analysis including all interest charges",
-    "Amortization schedule showing payment progression",
-    "Multiple loan term comparison (12-84 months typically)",
-    "Interest rate impact analysis on monthly payments",
-    "Loan affordability assessment based on income ratios",
-    "Early payoff scenarios and interest savings calculations",
-    "Side-by-side loan offer comparison tools"
+    {
+      "title": "Monthly Payment Calculator",
+      "description": "Calculate exact monthly payments with principal and interest breakdown for any loan amount and term."
+    },
+    {
+      "title": "Total Cost Analysis",
+      "description": "Analyze total loan cost including all interest charges over the complete loan term."
+    },
+    {
+      "title": "Amortization Schedule",
+      "description": "View detailed payment progression showing how much goes to principal vs interest each month."
+    },
+    {
+      "title": "Loan Term Comparison",
+      "description": "Compare multiple loan terms (12-84 months) to find the best balance of payment and cost."
+    },
+    {
+      "title": "Interest Rate Impact",
+      "description": "Analyze how different interest rates affect monthly payments and total loan costs."
+    },
+    {
+      "title": "Affordability Assessment",
+      "description": "Evaluate loan affordability based on income ratios and debt-to-income guidelines."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What's a good interest rate for a personal loan?",
-      "answer": "Personal loan rates typically range from 6% to 36% depending on your credit score, income, and lender. Excellent credit (720+) may qualify for rates as low as 6-10%, while fair credit (580-669) might see rates of 18-25%."
+      "q": "What's a good interest rate for a personal loan?",
+      "a": "Personal loan rates typically range from 6% to 36% depending on your credit score, income, and lender. Excellent credit (720+) may qualify for rates as low as 6-10%, while fair credit (580-669) might see rates of 18-25%."
     },
     {
-      "question": "How much can I borrow with a personal loan?",
-      "answer": "Personal loan amounts typically range from $1,000 to $100,000, depending on the lender and your creditworthiness. Most lenders consider your debt-to-income ratio and require it to be below 40-50% including the new loan payment."
+      "q": "How much can I borrow with a personal loan?",
+      "a": "Personal loan amounts typically range from $1,000 to $100,000, depending on the lender and your creditworthiness. Most lenders consider your debt-to-income ratio and require it to be below 40-50% including the new loan payment."
     },
     {
-      "question": "What loan term should I choose?",
-      "answer": "Shorter terms (2-3 years) have higher monthly payments but lower total interest costs. Longer terms (5-7 years) have lower monthly payments but higher total costs. Choose based on your monthly budget and total cost preference."
+      "q": "What loan term should I choose?",
+      "a": "Shorter terms (2-3 years) have higher monthly payments but lower total interest costs. Longer terms (5-7 years) have lower monthly payments but higher total costs. Choose based on your monthly budget and total cost preference."
     },
     {
-      "question": "Should I use a personal loan for debt consolidation?",
-      "answer": "Personal loans can be effective for debt consolidation if you qualify for a lower interest rate than your current debts. This simplifies payments and can save money, but requires discipline to avoid accumulating new debt."
+      "q": "Should I use a personal loan for debt consolidation?",
+      "a": "Personal loans can be effective for debt consolidation if you qualify for a lower interest rate than your current debts. This simplifies payments and can save money, but requires discipline to avoid accumulating new debt."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Debt Consolidation Calculator",
+      "url": "/finance/debt-consolidation-calculator"
+    },
+    {
+      "title": "Credit Card Payoff Calculator",
+      "url": "/finance/credit-card-payoff-calculator"
+    },
+    {
+      "title": "Auto Loan Calculator",
+      "url": "/finance/auto-loan-calculator"
+    },
+    {
+      "title": "Home Improvement Loan Calculator",
+      "url": "/finance/home-improvement-loan-calculator"
+    },
+    {
+      "title": "Loan Comparison Calculator",
+      "url": "/finance/loan-comparison-calculator"
     }
   ]
 }

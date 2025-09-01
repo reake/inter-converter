@@ -1,39 +1,107 @@
 {
-  "about": [
-    "The Unix Timestamp Converter specializes in converting Unix timestamps to human-readable dates and vice versa. Essential for developers working with Unix systems, databases, and APIs that store time as epoch values.",
-    "Provides precise conversion with support for both 32-bit and 64-bit timestamps, handling the full range from 1970 to beyond 2038, making it future-proof for modern applications."
-  ],
-  "howToUse": [
-    "Enter a Unix timestamp (seconds since epoch)",
-    "View the converted human-readable date",
-    "Or enter a date to get Unix timestamp",
-    "Choose your preferred time zone",
-    "Copy the result for development use"
-  ],
+  "about": {
+    "title": "About Unix Timestamp Converter - Epoch Date Time Tool",
+    "description": "The Unix Timestamp Converter specializes in converting Unix timestamps to human-readable dates and vice versa. Essential for developers working with Unix systems, databases, and APIs that store time as epoch values. Provides precise conversion with support for both 32-bit and 64-bit timestamps, handling the full range from 1970 to beyond 2038, making it future-proof for modern applications and development workflows."
+  },
+  "howTo": {
+    "title": "How to Use the Unix Timestamp Converter",
+    "steps": [
+      {
+        "title": "Enter Unix Timestamp",
+        "description": "Input a Unix timestamp (seconds since epoch) in the designated field for conversion."
+      },
+      {
+        "title": "View Converted Date",
+        "description": "See the converted human-readable date and time in multiple formats."
+      },
+      {
+        "title": "Or Enter Date",
+        "description": "Alternatively, enter a human-readable date to get the corresponding Unix timestamp."
+      },
+      {
+        "title": "Select Time Zone",
+        "description": "Choose your preferred time zone for accurate local time conversion."
+      },
+      {
+        "title": "Copy Results",
+        "description": "Copy the converted timestamp or date for use in your development projects."
+      },
+      {
+        "title": "Use Current Time",
+        "description": "Get the current Unix timestamp with one click for immediate use."
+      }
+    ],
+    "tips": [
+      "Use current timestamp feature for real-time epoch values",
+      "Remember Unix timestamps are in UTC by default",
+      "Check if your system uses seconds or milliseconds",
+      "Negative timestamps represent dates before 1970"
+    ]
+  },
   "features": [
-    "Unix epoch time conversion",
-    "32-bit and 64-bit timestamp support",
-    "Multiple date format outputs",
-    "Time zone conversion options",
-    "Current timestamp display",
-    "Batch conversion support"
+    {
+      "title": "Bidirectional Conversion",
+      "description": "Convert Unix timestamps to dates and dates to Unix timestamps seamlessly."
+    },
+    {
+      "title": "32-bit and 64-bit Support",
+      "description": "Full support for both 32-bit and 64-bit timestamp formats with extended range."
+    },
+    {
+      "title": "Multiple Date Formats",
+      "description": "Output dates in various formats including ISO, RFC, and custom formatting options."
+    },
+    {
+      "title": "Time Zone Support",
+      "description": "Convert timestamps with proper time zone handling and daylight saving awareness."
+    },
+    {
+      "title": "Current Timestamp",
+      "description": "Display current Unix timestamp in real-time for immediate development use."
+    },
+    {
+      "title": "Batch Conversion",
+      "description": "Support for converting multiple timestamps or dates in batch operations."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What is the Unix epoch?",
-      "answer": "The Unix epoch is January 1, 1970, 00:00:00 UTC. Unix timestamps count seconds (or milliseconds) from this point in time."
+      "q": "What is the Unix epoch and how does it work?",
+      "a": "The Unix epoch is January 1, 1970, 00:00:00 UTC. Unix timestamps count seconds (or milliseconds) from this point in time. This standardized reference point allows consistent time representation across different systems and programming languages."
     },
     {
-      "question": "What happens after 2038?",
-      "answer": "The 2038 problem affects 32-bit systems, but modern 64-bit systems and this converter support timestamps well beyond 2038."
+      "q": "What happens after the year 2038?",
+      "a": "The 2038 problem affects 32-bit systems where timestamps overflow. However, modern 64-bit systems and this converter support timestamps well beyond 2038, extending usability for centuries into the future."
     },
     {
-      "question": "Can I convert negative timestamps?",
-      "answer": "Yes, negative timestamps represent dates before 1970 and are supported for historical date conversions."
+      "q": "Can I convert negative timestamps?",
+      "a": "Yes, negative timestamps represent dates before January 1, 1970, and are fully supported for historical date conversions. This allows working with dates from any point in history."
     },
     {
-      "question": "How precise are the conversions?",
-      "answer": "Conversions are precise to the second for standard Unix timestamps, with millisecond precision available for extended formats."
+      "q": "How precise are the timestamp conversions?",
+      "a": "Conversions are precise to the second for standard Unix timestamps. Millisecond precision is available for extended formats, ensuring accuracy for high-precision timing applications and database operations."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Time Zone Converter",
+      "url": "/time/timezone-converter"
+    },
+    {
+      "title": "Date Calculator",
+      "url": "/time/date-calculator"
+    },
+    {
+      "title": "Date Difference Calculator",
+      "url": "/time/date-difference-calculator"
+    },
+    {
+      "title": "World Clock",
+      "url": "/time/world-clock"
+    },
+    {
+      "title": "Online Stopwatch",
+      "url": "/time/online-stopwatch"
     }
   ]
 }

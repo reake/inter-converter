@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Money Market Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Money Market Calculator - High-Yield Savings Analysis Tool",
+    "description": "The Money Market Calculator is a comprehensive savings analysis tool designed to help you calculate returns on money market accounts and compare them with other savings options. This calculator analyzes interest rates, compounding frequency, minimum balances, and fees to determine actual returns on money market investments. Whether you're comparing savings accounts or planning short-term investments, this tool provides accurate calculations for money market account growth."
+  },
+  "howTo": {
+    "title": "How to Use the Money Market Calculator",
+    "steps": [
+      {
+        "title": "Enter Initial Deposit",
+        "description": "Input the amount you plan to deposit in the money market account."
+      },
+      {
+        "title": "Set Interest Rate",
+        "description": "Enter the annual percentage yield (APY) offered by the money market account."
+      },
+      {
+        "title": "Choose Time Period",
+        "description": "Select how long you plan to keep money in the account."
+      },
+      {
+        "title": "Add Monthly Contributions",
+        "description": "Include any regular monthly deposits you plan to make."
+      },
+      {
+        "title": "Include Account Fees",
+        "description": "Add monthly maintenance fees or other account charges."
+      },
+      {
+        "title": "Review Growth Projections",
+        "description": "Analyze total returns, interest earned, and account balance growth."
+      }
+    ],
+    "tips": [
+      "Money market accounts typically offer higher rates than regular savings",
+      "Consider minimum balance requirements to avoid fees",
+      "Compare APY rates across different financial institutions",
+      "Factor in FDIC insurance limits for large deposits"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "APY Calculation",
+      "description": "Calculate actual returns based on annual percentage yield and compounding."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Monthly Contribution Analysis",
+      "description": "Project growth with regular monthly deposits and compound interest."
+    },
+    {
+      "title": "Fee Impact Calculator",
+      "description": "Analyze how account fees affect overall returns and net growth."
+    },
+    {
+      "title": "Minimum Balance Tracker",
+      "description": "Calculate returns while maintaining required minimum balances."
+    },
+    {
+      "title": "Savings Comparison Tool",
+      "description": "Compare money market accounts with CDs, savings accounts, and other options."
+    },
+    {
+      "title": "Interest Rate Scenarios",
+      "description": "Model different interest rate environments and their impact on returns."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is a money market account?",
+      "a": "A money market account is a type of savings account that typically offers higher interest rates than regular savings accounts in exchange for higher minimum balances and limited transactions. They're FDIC insured and provide liquidity."
+    },
+    {
+      "q": "How do money market accounts compare to CDs?",
+      "a": "Money market accounts offer more liquidity and flexibility than CDs but typically lower interest rates. CDs lock in rates for fixed terms, while money market rates can fluctuate. Choose based on your liquidity needs."
+    },
+    {
+      "q": "Are there restrictions on money market accounts?",
+      "a": "Yes, federal regulations limit certain withdrawals and transfers to 6 per month. Many accounts also require minimum balances ($1,000-$10,000+) and may charge fees if balances fall below minimums."
+    },
+    {
+      "q": "How often do money market rates change?",
+      "a": "Money market rates can change frequently based on Federal Reserve policy and market conditions. Unlike CDs, rates aren't locked in, so they can increase or decrease during the time you hold the account."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Savings Calculator",
+      "url": "/finance/savings-calculator"
+    },
+    {
+      "title": "CD Calculator",
+      "url": "/finance/cd-calculator"
+    },
+    {
+      "title": "Compound Interest Calculator",
+      "url": "/finance/compound-interest-calculator"
+    },
+    {
+      "title": "Investment Calculator",
+      "url": "/finance/investment-calculator"
+    },
+    {
+      "title": "Interest Calculator",
+      "url": "/finance/interest-calculator"
     }
   ]
 }

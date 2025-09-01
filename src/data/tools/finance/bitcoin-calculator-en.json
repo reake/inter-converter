@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Bitcoin Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Bitcoin Calculator",
+    "description": "The Bitcoin Calculator is a comprehensive cryptocurrency investment analysis tool that helps you calculate Bitcoin investment returns, track portfolio performance, and analyze crypto investment scenarios. This calculator provides real-time Bitcoin price data, historical performance analysis, and investment projections to help you make informed decisions about Bitcoin investments. Whether you're a beginner exploring cryptocurrency or an experienced investor optimizing your portfolio, this tool offers valuable insights into Bitcoin investment potential."
+  },
+  "howTo": {
+    "title": "How to Use the Bitcoin Calculator",
+    "steps": [
+      {
+        "title": "Investment Amount",
+        "description": "Enter your initial Bitcoin investment amount in USD or specify the number of Bitcoin you own."
+      },
+      {
+        "title": "Purchase Date",
+        "description": "Select the date when you bought Bitcoin or plan to buy to calculate returns based on historical prices."
+      },
+      {
+        "title": "Current Holdings",
+        "description": "Input your current Bitcoin holdings if you want to track existing investment performance."
+      },
+      {
+        "title": "Target Price",
+        "description": "Set a target Bitcoin price to calculate potential future returns and profit scenarios."
+      },
+      {
+        "title": "DCA Analysis",
+        "description": "Configure dollar-cost averaging parameters for regular investment strategy analysis."
+      },
+      {
+        "title": "Review Results",
+        "description": "Analyze your investment returns, profit/loss, and portfolio performance metrics."
+      }
+    ],
+    "tips": [
+      "Consider dollar-cost averaging to reduce volatility impact",
+      "Only invest what you can afford to lose in cryptocurrency",
+      "Track your cost basis for accurate tax reporting",
+      "Stay informed about Bitcoin market trends and regulations"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Real-Time Bitcoin Prices",
+      "description": "Access current Bitcoin prices and market data for accurate investment calculations."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Historical Performance",
+      "description": "Analyze Bitcoin price history and calculate returns from any past purchase date."
+    },
+    {
+      "title": "Investment Scenarios",
+      "description": "Model different investment amounts and timeframes to optimize your Bitcoin strategy."
+    },
+    {
+      "title": "Dollar-Cost Averaging",
+      "description": "Calculate the benefits of regular Bitcoin purchases using DCA investment strategy."
+    },
+    {
+      "title": "Profit/Loss Analysis",
+      "description": "Track your Bitcoin investment performance with detailed profit and loss calculations."
+    },
+    {
+      "title": "Portfolio Tracking",
+      "description": "Monitor your Bitcoin holdings value and percentage allocation in your investment portfolio."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How is Bitcoin investment return calculated?",
+      "a": "Bitcoin returns are calculated based on the difference between your purchase price and current/target price, divided by your initial investment. The calculator uses real-time Bitcoin prices and historical data for accurate return calculations."
+    },
+    {
+      "q": "What is dollar-cost averaging for Bitcoin?",
+      "a": "Dollar-cost averaging (DCA) involves making regular Bitcoin purchases regardless of price. This strategy helps reduce the impact of volatility by spreading purchases over time, potentially lowering your average cost per Bitcoin."
+    },
+    {
+      "q": "Should I invest in Bitcoin?",
+      "a": "Bitcoin is a highly volatile and speculative investment. Only invest money you can afford to lose, do thorough research, and consider it as part of a diversified portfolio. Consult with financial advisors for personalized advice."
+    },
+    {
+      "q": "How do I track Bitcoin for taxes?",
+      "a": "Keep detailed records of all Bitcoin transactions including purchase dates, amounts, and prices. Bitcoin is treated as property by the IRS, so you'll need to report capital gains/losses when you sell or exchange Bitcoin."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Investment Calculator",
+      "url": "/finance/investment-calculator"
+    },
+    {
+      "title": "ROI Calculator",
+      "url": "/finance/roi-calculator"
+    },
+    {
+      "title": "Capital Gains Tax Calculator",
+      "url": "/finance/capital-gains-tax-calculator"
+    },
+    {
+      "title": "Portfolio Calculator",
+      "url": "/finance/portfolio-calculator"
+    },
+    {
+      "title": "Currency Converter",
+      "url": "/finance/currency-converter"
     }
   ]
 }

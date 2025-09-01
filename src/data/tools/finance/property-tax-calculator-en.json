@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Property Tax Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Property Tax Calculator - Real Estate Tax Assessment Tool",
+    "description": "The Property Tax Calculator is a comprehensive real estate planning tool designed to help homeowners and buyers estimate annual property tax obligations based on assessed home values and local tax rates. This calculator analyzes property values, assessment ratios, tax rates, and exemptions to determine accurate property tax estimates. Whether you're buying a home, budgeting for ownership costs, or comparing properties, this tool provides precise property tax calculations."
+  },
+  "howTo": {
+    "title": "How to Use the Property Tax Calculator",
+    "steps": [
+      {
+        "title": "Enter Property Value",
+        "description": "Input the current market value or purchase price of the property."
+      },
+      {
+        "title": "Set Assessment Ratio",
+        "description": "Enter the local assessment ratio (percentage of market value used for taxes)."
+      },
+      {
+        "title": "Add Tax Rates",
+        "description": "Include local property tax rates (mills or percentage) for your area."
+      },
+      {
+        "title": "Include Exemptions",
+        "description": "Add homestead exemptions, senior discounts, or other applicable reductions."
+      },
+      {
+        "title": "Calculate Annual Tax",
+        "description": "Review total annual property tax and monthly escrow amounts."
+      },
+      {
+        "title": "Compare Scenarios",
+        "description": "Analyze tax implications for different property values or locations."
+      }
+    ],
+    "tips": [
+      "Property taxes vary significantly by state, county, and municipality",
+      "Assessment ratios typically range from 10% to 100% of market value",
+      "Check for homestead exemptions and other tax reduction programs",
+      "Property taxes are usually paid through mortgage escrow accounts"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Assessment Value Calculator",
+      "description": "Calculate assessed value based on market value and local assessment ratios."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Multi-Rate Tax Calculation",
+      "description": "Support for multiple tax rates including county, city, school, and special districts."
+    },
+    {
+      "title": "Exemption Analysis",
+      "description": "Factor in homestead exemptions, senior discounts, and disability reductions."
+    },
+    {
+      "title": "Monthly Escrow Calculator",
+      "description": "Calculate monthly escrow payments for mortgage planning purposes."
+    },
+    {
+      "title": "Tax Rate Comparison",
+      "description": "Compare property taxes across different locations and property values."
+    },
+    {
+      "title": "Historical Tax Tracking",
+      "description": "Track property tax changes over time and project future increases."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How are property taxes calculated?",
+      "a": "Property taxes are calculated by multiplying the assessed value (market value × assessment ratio) by the local tax rate. For example, a $300,000 home with 80% assessment ratio and 1.2% tax rate would pay $2,880 annually."
+    },
+    {
+      "q": "What factors affect property tax amounts?",
+      "a": "Property taxes depend on market value, local assessment ratios, tax rates set by various jurisdictions (county, city, school district), available exemptions, and special assessments for improvements or services."
+    },
+    {
+      "q": "Can I appeal my property tax assessment?",
+      "a": "Yes, most jurisdictions allow appeals if you believe your property is overassessed. You'll need comparable sales data, property condition evidence, or professional appraisals to support your case."
+    },
+    {
+      "q": "How often do property taxes change?",
+      "a": "Property values are typically reassessed every 1-3 years, while tax rates can change annually based on local budget needs. Homestead exemptions and other factors may also change periodically."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Mortgage Calculator",
+      "url": "/finance/mortgage-calculator"
+    },
+    {
+      "title": "Home Affordability Calculator",
+      "url": "/finance/home-affordability-calculator"
+    },
+    {
+      "title": "Rent vs Buy Calculator",
+      "url": "/finance/rent-vs-buy-calculator"
+    },
+    {
+      "title": "Tax Calculator",
+      "url": "/finance/tax-calculator"
+    },
+    {
+      "title": "Budget Calculator",
+      "url": "/finance/budget-calculator"
     }
   ]
 }

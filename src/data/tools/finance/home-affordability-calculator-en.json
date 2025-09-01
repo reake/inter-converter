@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Home Affordability Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Home Affordability Calculator",
+    "description": "The Home Affordability Calculator helps you determine how much house you can afford based on your income, expenses, and financial situation. This comprehensive tool considers your monthly income, existing debts, down payment, interest rates, and other factors to calculate your maximum home purchase price and monthly payment capacity. Whether you're a first-time homebuyer or looking to upgrade, this calculator provides realistic affordability estimates to guide your home buying decisions."
+  },
+  "howTo": {
+    "title": "How to Use the Home Affordability Calculator",
+    "steps": [
+      {
+        "title": "Enter Income Information",
+        "description": "Input your gross monthly income from all sources including salary, bonuses, and other regular income."
+      },
+      {
+        "title": "Add Monthly Debts",
+        "description": "Enter your existing monthly debt payments including credit cards, car loans, and student loans."
+      },
+      {
+        "title": "Set Down Payment",
+        "description": "Specify your available down payment amount and preferred down payment percentage."
+      },
+      {
+        "title": "Interest Rate",
+        "description": "Enter the current mortgage interest rate or use the default market rate."
+      },
+      {
+        "title": "Additional Costs",
+        "description": "Include property taxes, insurance, and HOA fees for comprehensive affordability analysis."
+      },
+      {
+        "title": "Review Affordability Results",
+        "description": "Analyze your maximum home price, monthly payment, and debt-to-income ratios."
+      }
+    ],
+    "tips": [
+      "Keep total housing costs under 28% of gross monthly income",
+      "Maintain total debt payments under 36% of gross monthly income",
+      "Save for closing costs (2-5% of home price) beyond down payment",
+      "Consider future income changes and job stability when setting budget"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Income-Based Affordability",
+      "description": "Calculate maximum home price based on your income and debt-to-income ratio guidelines."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Debt-to-Income Analysis",
+      "description": "Analyze front-end and back-end debt ratios to ensure lending qualification."
+    },
+    {
+      "title": "Monthly Payment Breakdown",
+      "description": "Detailed breakdown of principal, interest, taxes, insurance, and PMI costs."
+    },
+    {
+      "title": "Down Payment Impact",
+      "description": "See how different down payment amounts affect affordability and monthly payments."
+    },
+    {
+      "title": "Multiple Loan Terms",
+      "description": "Compare affordability across 15-year, 20-year, and 30-year mortgage terms."
+    },
+    {
+      "title": "Regional Cost Factors",
+      "description": "Adjust for local property taxes, insurance rates, and housing market conditions."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How much house can I afford with my income?",
+      "a": "Generally, you can afford a home that costs 2.5-3 times your annual income, with monthly housing costs not exceeding 28% of gross monthly income. For example, with a $75,000 annual income, you might afford a $200,000-$225,000 home."
+    },
+    {
+      "q": "What is the 28/36 rule for home affordability?",
+      "a": "The 28/36 rule states that housing costs shouldn't exceed 28% of gross monthly income, and total debt payments shouldn't exceed 36%. This helps ensure you can comfortably afford mortgage payments while maintaining financial stability."
+    },
+    {
+      "q": "How does my down payment affect affordability?",
+      "a": "Larger down payments increase affordability by reducing loan amount and eliminating PMI (if 20% or more). A 20% down payment on a $300,000 home saves about $200-300 monthly compared to 5% down."
+    },
+    {
+      "q": "Should I get pre-approved before house hunting?",
+      "a": "Yes, pre-approval gives you a realistic budget, shows sellers you're serious, and can speed up the buying process. However, don't feel obligated to spend the maximum amount you're approved for."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Mortgage Calculator",
+      "url": "/finance/mortgage-calculator"
+    },
+    {
+      "title": "Down Payment Calculator",
+      "url": "/finance/down-payment-calculator"
+    },
+    {
+      "title": "Rent vs Buy Calculator",
+      "url": "/finance/rent-vs-buy-calculator"
+    },
+    {
+      "title": "Closing Cost Calculator",
+      "url": "/finance/closing-cost-calculator"
+    },
+    {
+      "title": "First Time Home Buyer Calculator",
+      "url": "/finance/first-time-home-buyer-calculator"
     }
   ]
 }

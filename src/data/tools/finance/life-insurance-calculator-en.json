@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Life Insurance Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Life Insurance Calculator - Coverage Needs Assessment Tool",
+    "description": "The Life Insurance Calculator is a comprehensive financial planning tool designed to help you determine the appropriate amount of life insurance coverage needed to protect your family's financial future. This calculator analyzes your income, debts, expenses, and financial goals to recommend optimal coverage amounts. Whether you're buying your first policy or reviewing existing coverage, this tool provides personalized life insurance needs analysis."
+  },
+  "howTo": {
+    "title": "How to Use the Life Insurance Calculator",
+    "steps": [
+      {
+        "title": "Enter Personal Information",
+        "description": "Input your age, gender, health status, and smoking status for accurate calculations."
+      },
+      {
+        "title": "Add Income Details",
+        "description": "Enter your annual income and number of years your family would need income replacement."
+      },
+      {
+        "title": "List Outstanding Debts",
+        "description": "Include mortgage balance, credit cards, loans, and other debts to be covered."
+      },
+      {
+        "title": "Calculate Future Expenses",
+        "description": "Add children's education costs, funeral expenses, and other future financial needs."
+      },
+      {
+        "title": "Consider Existing Assets",
+        "description": "Subtract current savings, investments, and existing life insurance coverage."
+      },
+      {
+        "title": "Review Coverage Recommendation",
+        "description": "Analyze the recommended coverage amount and compare policy types."
+      }
+    ],
+    "tips": [
+      "Review life insurance needs every 3-5 years or after major life events",
+      "Term life insurance is typically most cost-effective for temporary needs",
+      "Consider both immediate and long-term financial obligations",
+      "Factor in inflation when calculating future education costs"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Income Replacement Analysis",
+      "description": "Calculate coverage needed to replace income for specified number of years."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Debt Coverage Calculator",
+      "description": "Determine coverage needed to pay off mortgages, loans, and other debts."
+    },
+    {
+      "title": "Education Cost Planning",
+      "description": "Estimate future education expenses and required coverage for children."
+    },
+    {
+      "title": "Policy Type Comparison",
+      "description": "Compare term life, whole life, and universal life insurance options."
+    },
+    {
+      "title": "Premium Estimation",
+      "description": "Estimate monthly and annual premiums based on coverage amount and type."
+    },
+    {
+      "title": "Beneficiary Planning",
+      "description": "Calculate how coverage should be distributed among beneficiaries."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How much life insurance do I need?",
+      "a": "A common rule is 10-12 times your annual income, but actual needs depend on debts, dependents, income replacement years, and financial goals. Our calculator provides personalized recommendations based on your specific situation."
+    },
+    {
+      "q": "What's the difference between term and whole life insurance?",
+      "a": "Term life provides coverage for a specific period (10-30 years) at lower cost. Whole life provides permanent coverage with cash value but costs significantly more. Term is often better for temporary needs like mortgage protection."
+    },
+    {
+      "q": "When should I review my life insurance coverage?",
+      "a": "Review coverage after major life events: marriage, divorce, birth of children, home purchase, job changes, or every 3-5 years. Your insurance needs change as your financial situation evolves."
+    },
+    {
+      "q": "Can I have too much life insurance?",
+      "a": "While there's no legal limit, having excessive coverage means paying unnecessary premiums. Focus on covering actual financial needs: income replacement, debt payoff, and future expenses like education costs."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Retirement Calculator",
+      "url": "/finance/retirement-calculator"
+    },
+    {
+      "title": "Mortgage Calculator",
+      "url": "/finance/mortgage-calculator"
+    },
+    {
+      "title": "Investment Calculator",
+      "url": "/finance/investment-calculator"
+    },
+    {
+      "title": "Budget Calculator",
+      "url": "/finance/budget-calculator"
+    },
+    {
+      "title": "Savings Calculator",
+      "url": "/finance/savings-calculator"
     }
   ]
 }

@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Fha Loan Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About FHA Loan Calculator - Government-Backed Home Financing Tool",
+    "description": "The FHA Loan Calculator is a specialized home financing tool designed to help homebuyers calculate monthly payments and benefits for FHA-insured mortgages. FHA loans are government-backed mortgages that offer lower down payment requirements (as low as 3.5%), more flexible credit requirements, and competitive interest rates. This calculator helps you understand FHA loan benefits, calculate monthly payments including mortgage insurance premiums, and compare FHA loans with conventional financing options."
+  },
+  "howTo": {
+    "title": "How to Use the FHA Loan Calculator",
+    "steps": [
+      {
+        "title": "Home Price",
+        "description": "Enter the purchase price of the home you're considering buying."
+      },
+      {
+        "title": "Down Payment",
+        "description": "Input your down payment amount (minimum 3.5% for FHA loans with credit scores 580+)."
+      },
+      {
+        "title": "Interest Rate",
+        "description": "Enter the FHA loan interest rate offered by your FHA-approved lender."
+      },
+      {
+        "title": "Loan Term",
+        "description": "Select the loan term (typically 15 or 30 years for FHA loans)."
+      },
+      {
+        "title": "Credit Score",
+        "description": "Input your credit score to determine down payment requirements and rates."
+      },
+      {
+        "title": "MIP Calculation",
+        "description": "Review mortgage insurance premium costs (both upfront and annual MIP)."
+      }
+    ],
+    "tips": [
+      "FHA loans require mortgage insurance for the life of the loan if down payment is less than 10%",
+      "Credit scores as low as 500 may qualify with 10% down payment",
+      "FHA loan limits vary by county - check local limits",
+      "Consider gift funds from family members for down payment assistance"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Low Down Payment Calculator",
+      "description": "Calculate payments with down payments as low as 3.5% for qualified borrowers."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Mortgage Insurance Premium",
+      "description": "Calculate both upfront MIP (1.75%) and annual MIP costs for FHA loans."
+    },
+    {
+      "title": "Credit Score Impact",
+      "description": "Analyze how different credit scores affect down payment requirements and rates."
+    },
+    {
+      "title": "FHA vs Conventional Comparison",
+      "description": "Compare FHA loan benefits with conventional loan requirements and costs."
+    },
+    {
+      "title": "Loan Limit Calculator",
+      "description": "Check FHA loan limits for your county and property type."
+    },
+    {
+      "title": "Gift Fund Analysis",
+      "description": "Calculate how gift funds from family can help with down payment and closing costs."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What are FHA loan requirements?",
+      "a": "FHA loans require a minimum credit score of 580 for 3.5% down payment, or 500-579 for 10% down. You need steady employment history, debt-to-income ratio under 43%, and the property must be your primary residence and meet FHA standards."
+    },
+    {
+      "q": "How much is FHA mortgage insurance?",
+      "a": "FHA loans require upfront MIP of 1.75% of the loan amount, plus annual MIP ranging from 0.45% to 1.05% depending on loan term, loan-to-value ratio, and loan amount. Annual MIP is paid monthly as part of your mortgage payment."
+    },
+    {
+      "q": "Can FHA mortgage insurance be removed?",
+      "a": "For loans with down payments of 10% or more, MIP is removed after 11 years. For down payments less than 10%, MIP remains for the life of the loan and can only be removed by refinancing to a conventional loan."
+    },
+    {
+      "q": "What are FHA loan limits?",
+      "a": "FHA loan limits vary by county and are set annually. For 2024, the baseline limit is $498,257 for most areas, with higher limits up to $1,149,825 in expensive markets. Limits are higher for multi-unit properties."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "VA Loan Calculator",
+      "url": "/finance/va-loan-calculator"
+    },
+    {
+      "title": "Conventional Mortgage Calculator",
+      "url": "/finance/mortgage-calculator"
+    },
+    {
+      "title": "USDA Loan Calculator",
+      "url": "/finance/usda-loan-calculator"
+    },
+    {
+      "title": "Home Affordability Calculator",
+      "url": "/finance/home-affordability-calculator"
+    },
+    {
+      "title": "Mortgage Insurance Calculator",
+      "url": "/finance/mortgage-insurance-calculator"
     }
   ]
 }

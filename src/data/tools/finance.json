@@ -2,7 +2,7 @@
   {
     "id": "currency-converter",
     "name": "Currency Converter",
-    "description": "Convert between different currencies with real-time exchange rates. Free, accurate, and up-to-date converter for 150+ currencies.",
+    "description": "Currency Converter - Real-Time Exchange Rates",
     "titleSuffix": "Real-Time Exchange Rates",
     "category": "finance",
     "keywords": [
@@ -19,6 +19,7 @@
     ],
     "path": "/finance/currency-converter",
     "isActive": true,
+    "seoflag": true,
     "searchVolume": 165000,
     "difficulty": 3,
     "icon": "💱"
@@ -26,12 +27,13 @@
   {
     "id": "loan-calculator",
     "name": "Loan Calculator",
-    "description": "Calculate monthly payments, interest, and amortization schedules. Professional loan payment calculator with detailed breakdowns.",
+    "description": "Loan Calculator - Payment Schedule Analysis",
     "titleSuffix": "Payment Schedule Analysis",
     "category": "finance",
     "keywords": ["loan", "mortgage", "payment", "interest", "calculator", "finance"],
     "path": "/finance/loan-calculator",
     "isActive": true,
+    "seoflag": true,
     "searchVolume": 74000,
     "difficulty": 2,
     "icon": "🏦"
@@ -39,12 +41,13 @@
   {
     "id": "tax-calculator",
     "name": "Tax Calculator",
-    "description": "Calculate income tax and estimate tax liability. Accurate tax calculator for federal and state income tax planning.",
+    "description": "Tax Calculator - Income Tax Planning",
     "titleSuffix": "Income Tax Planning",
     "category": "finance",
     "keywords": ["tax", "income", "calculator", "irs", "refund", "liability"],
     "path": "/finance/tax-calculator",
     "isActive": true,
+    "seoflag": true,
     "searchVolume": 156000,
     "difficulty": 3,
     "icon": "🧾"
@@ -52,12 +55,13 @@
   {
     "id": "mortgage-calculator",
     "name": "Mortgage Calculator",
-    "description": "Calculate mortgage payments, taxes, insurance, and total costs. Complete home loan calculator with PMI and property tax.",
+    "description": "Mortgage Calculator - PMI & Property Tax Analysis",
     "titleSuffix": "PMI & Property Tax Analysis",
     "category": "finance",
     "keywords": ["mortgage", "home loan", "payment", "interest", "calculator", "real estate"],
     "path": "/finance/mortgage-calculator",
     "isActive": true,
+    "seoflag": true,
     "searchVolume": 380000,
     "difficulty": 2,
     "icon": "🏠"
@@ -65,12 +69,13 @@
   {
     "id": "auto-loan-calculator",
     "name": "Auto Loan Calculator",
-    "description": "Calculate car loan payments, interest costs, and financing options. Auto financing calculator with trade-in value.",
+    "description": "Auto Loan Calculator - Vehicle Payment Analysis",
     "titleSuffix": "Vehicle Payment Analysis",
     "category": "finance",
     "keywords": ["auto loan", "car loan", "vehicle financing", "payment calculator"],
     "path": "/finance/auto-loan-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 180000,
     "difficulty": 1,
     "icon": "🚗"
@@ -78,12 +83,13 @@
   {
     "id": "credit-card-payoff-calculator",
     "name": "Credit Card Payoff Calculator",
-    "description": "Calculate time and cost to pay off credit card debt. Credit card payoff calculator with minimum payment analysis.",
+    "description": "Credit Card Payoff Calculator - Debt Payoff Strategy",
     "titleSuffix": "Debt Payoff Strategy",
     "category": "finance",
     "keywords": ["credit card", "debt payoff", "payment calculator", "interest"],
     "path": "/finance/credit-card-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 134000,
     "difficulty": 1,
     "icon": "💳"
@@ -91,12 +97,13 @@
   {
     "id": "savings-calculator",
     "name": "Savings Calculator",
-    "description": "Calculate savings growth with compound interest and regular deposits. Savings account calculator with goal planning.",
+    "description": "Savings Calculator - Compound Interest Growth",
     "titleSuffix": "Compound Interest Growth",
     "category": "finance",
     "keywords": ["savings", "compound interest", "deposit", "growth calculator"],
     "path": "/finance/savings-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 220000,
     "difficulty": 1,
     "icon": "💰"
@@ -104,12 +111,13 @@
   {
     "id": "401k-calculator",
     "name": "401(k) Calculator",
-    "description": "Calculate 401(k) contributions and retirement savings. 401k calculator with employer matching and tax benefits.",
+    "description": "401(k) Calculator - Retirement Savings Planning",
     "titleSuffix": "Retirement Savings Planning",
     "category": "finance",
     "keywords": ["401k", "retirement", "savings", "contribution calculator"],
     "path": "/finance/401k-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 85000,
     "difficulty": 2,
     "icon": "🏛️"
@@ -117,12 +125,13 @@
   {
     "id": "compound-interest-calculator",
     "name": "Compound Interest Calculator",
-    "description": "Calculate the power of compound interest over time. Investment growth calculator with compounding frequency options.",
+    "description": "Compound Interest Calculator - Investment Growth Analysis",
     "titleSuffix": "Investment Growth Analysis",
     "category": "finance",
     "keywords": ["compound interest", "investment", "growth", "calculator"],
     "path": "/finance/compound-interest-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 135000,
     "difficulty": 1,
     "icon": "📈"
@@ -130,12 +139,13 @@
   {
     "id": "retirement-calculator",
     "name": "Retirement Calculator",
-    "description": "Calculate retirement savings needs and timeline. Retirement planning calculator with inflation adjustment.",
+    "description": "Retirement Calculator - Retirement Planning Analysis",
     "titleSuffix": "Retirement Planning Analysis",
     "category": "finance",
     "keywords": ["retirement", "savings", "planning", "calculator"],
     "path": "/finance/retirement-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 185000,
     "difficulty": 3,
     "icon": "🌅"
@@ -143,12 +153,13 @@
   {
     "id": "investment-calculator",
     "name": "Investment Calculator",
-    "description": "Calculate investment returns and portfolio growth. Investment calculator with compound returns and risk analysis.",
+    "description": "Investment Calculator - Portfolio Growth & Returns",
     "titleSuffix": "Portfolio Growth & Returns",
     "category": "finance",
     "keywords": ["investment", "returns", "portfolio", "calculator"],
     "path": "/finance/investment-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 145000,
     "difficulty": 2,
     "icon": "📊"
@@ -156,12 +167,13 @@
   {
     "id": "home-affordability-calculator",
     "name": "Home Affordability Calculator",
-    "description": "Calculate how much house you can afford based on income and debts. Home affordability calculator with DTI ratio analysis.",
+    "description": "Home Affordability Calculator - Home Buying Budget Analysis",
     "titleSuffix": "Home Buying Budget Analysis",
     "category": "finance",
     "keywords": ["home affordability", "house price", "income", "calculator"],
     "path": "/finance/home-affordability-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 125000,
     "difficulty": 2,
     "icon": "🏡"
@@ -169,12 +181,13 @@
   {
     "id": "debt-payoff-calculator",
     "name": "Debt Payoff Calculator",
-    "description": "Calculate debt payoff strategies using snowball or avalanche methods. Debt elimination calculator with payment schedules.",
+    "description": "Debt Payoff Calculator - Debt Elimination Strategy",
     "titleSuffix": "Debt Elimination Strategy",
     "category": "finance",
     "keywords": ["debt payoff", "snowball", "avalanche", "calculator"],
     "path": "/finance/debt-payoff-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 85000,
     "difficulty": 2,
     "icon": "❄️"
@@ -182,12 +195,13 @@
   {
     "id": "income-tax-calculator",
     "name": "Income Tax Calculator",
-    "description": "Calculate federal and state income tax liability",
+    "description": "Income Tax Calculator - Federal & State Tax Analysis",
     "titleSuffix": "Federal & State Tax Analysis",
     "category": "finance",
     "keywords": ["income tax", "federal tax", "state tax", "calculator"],
     "path": "/finance/income-tax-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 150000,
     "difficulty": 2,
     "icon": "💼"
@@ -195,12 +209,13 @@
   {
     "id": "cost-of-living-calculator",
     "name": "Cost of Living Calculator",
-    "description": "Compare cost of living between cities and states",
+    "description": "Cost of Living Calculator - City & State Comparison",
     "titleSuffix": "City & State Comparison",
     "category": "finance",
     "keywords": ["cost of living", "city comparison", "expenses", "calculator"],
     "path": "/finance/cost-of-living-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 165000,
     "difficulty": 2,
     "icon": "🏙️"
@@ -208,12 +223,13 @@
   {
     "id": "bitcoin-calculator",
     "name": "Bitcoin Calculator",
-    "description": "Calculate Bitcoin investment returns and analyze crypto strategies",
+    "description": "Bitcoin Calculator - Crypto Investment Analysis",
     "titleSuffix": "Crypto Investment Analysis",
     "category": "finance",
     "keywords": ["bitcoin", "cryptocurrency", "investment", "calculator"],
     "path": "/finance/bitcoin-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 125000,
     "difficulty": 3,
     "icon": "₿"
@@ -221,12 +237,13 @@
   {
     "id": "roi-calculator",
     "name": "ROI Calculator",
-    "description": "Calculate return on investment for business and personal investments",
+    "description": "ROI Calculator - Return on Investment Analysis",
     "titleSuffix": "Return on Investment Analysis",
     "category": "finance",
     "keywords": ["roi", "return on investment", "profit", "calculator", "business"],
     "path": "/finance/roi-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 78000,
     "difficulty": 1,
     "icon": "📈"
@@ -234,12 +251,13 @@
   {
     "id": "break-even-calculator",
     "name": "Break Even Calculator",
-    "description": "Calculate break-even point for business and investment decisions",
+    "description": "Break Even Calculator - Business Profitability Analysis",
     "titleSuffix": "Business Profitability Analysis",
     "category": "finance",
     "keywords": ["break even", "business", "profit", "calculator", "analysis"],
     "path": "/finance/break-even-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 67000,
     "difficulty": 2,
     "icon": "⚖️"
@@ -247,12 +265,13 @@
   {
     "id": "net-worth-calculator",
     "name": "Net Worth Calculator",
-    "description": "Calculate your total net worth including assets and liabilities",
+    "description": "Net Worth Calculator - Assets & Liabilities Analysis",
     "titleSuffix": "Assets & Liabilities Analysis",
     "category": "finance",
     "keywords": ["net worth", "assets", "liabilities", "wealth", "calculator"],
     "path": "/finance/net-worth-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 78000,
     "difficulty": 1,
     "icon": "💎"
@@ -260,12 +279,13 @@
   {
     "id": "budget-calculator",
     "name": "Budget Calculator",
-    "description": "Create and manage personal budgets with income and expense tracking",
+    "description": "Budget Calculator - Income & Expense Planning",
     "titleSuffix": "Income & Expense Planning",
     "category": "finance",
     "keywords": ["budget", "expenses", "income", "planning", "calculator"],
     "path": "/finance/budget-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 156000,
     "difficulty": 1,
     "icon": "📊"
@@ -273,12 +293,13 @@
   {
     "id": "tip-calculator",
     "name": "Tip Calculator",
-    "description": "Calculate tips and split bills for restaurants and services. Tip calculator with bill splitting and tax calculation.",
+    "description": "Tip Calculator - Bill Split & Gratuity Analysis",
     "titleSuffix": "Bill Split & Gratuity Analysis",
     "category": "finance",
     "keywords": ["tip", "gratuity", "bill split", "restaurant", "calculator"],
     "path": "/finance/tip-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 234000,
     "difficulty": 1,
     "icon": "🧾"
@@ -286,12 +307,13 @@
   {
     "id": "sales-tax-calculator",
     "name": "Sales Tax Calculator",
-    "description": "Calculate sales tax for purchases across different states and countries",
+    "description": "Sales Tax Calculator - State & VAT Analysis",
     "titleSuffix": "State & VAT Analysis",
     "category": "finance",
     "keywords": ["sales tax", "vat", "tax calculator", "purchase", "state tax"],
     "path": "/finance/sales-tax-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 145000,
     "difficulty": 1,
     "icon": "🏪"
@@ -299,12 +321,13 @@
   {
     "id": "inflation-calculator",
     "name": "Inflation Calculator",
-    "description": "Calculate the impact of inflation on money value over time",
+    "description": "Inflation Calculator - Purchasing Power Analysis",
     "titleSuffix": "Purchasing Power Analysis",
     "category": "finance",
     "keywords": ["inflation", "purchasing power", "money value", "calculator", "cpi"],
     "path": "/finance/inflation-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 98000,
     "difficulty": 2,
     "icon": "📉"
@@ -312,12 +335,13 @@
   {
     "id": "present-value-calculator",
     "name": "Present Value Calculator",
-    "description": "Calculate present value of future cash flows and investments",
+    "description": "Present Value Calculator - NPV & Cash Flow Analysis",
     "titleSuffix": "NPV & Cash Flow Analysis",
     "category": "finance",
     "keywords": ["present value", "npv", "discount rate", "cash flow", "calculator"],
     "path": "/finance/present-value-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 56000,
     "difficulty": 3,
     "icon": "💰"
@@ -325,12 +349,13 @@
   {
     "id": "future-value-calculator",
     "name": "Future Value Calculator",
-    "description": "Calculate future value of investments with compound interest",
+    "description": "Future Value Calculator - Investment Growth Projection",
     "titleSuffix": "Investment Growth Projection",
     "category": "finance",
     "keywords": ["future value", "investment", "compound interest", "growth", "calculator"],
     "path": "/finance/future-value-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 67000,
     "difficulty": 2,
     "icon": "🔮"
@@ -338,12 +363,13 @@
   {
     "id": "annuity-calculator",
     "name": "Annuity Calculator",
-    "description": "Calculate annuity payments and present value of annuities",
+    "description": "Annuity Calculator - Retirement Payment Analysis",
     "titleSuffix": "Retirement Payment Analysis",
     "category": "finance",
     "keywords": ["annuity", "payments", "present value", "retirement", "calculator"],
     "path": "/finance/annuity-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 45000,
     "difficulty": 3,
     "icon": "📅"
@@ -351,12 +377,13 @@
   {
     "id": "bond-calculator",
     "name": "Bond Calculator",
-    "description": "Calculate bond yield, price, and duration for fixed income investments",
+    "description": "Bond Calculator - Fixed Income Analysis",
     "titleSuffix": "Fixed Income Analysis",
     "category": "finance",
     "keywords": ["bond", "yield", "price", "duration", "fixed income", "calculator"],
     "path": "/finance/bond-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 38000,
     "difficulty": 3,
     "icon": "📜"
@@ -364,12 +391,13 @@
   {
     "id": "dividend-calculator",
     "name": "Dividend Calculator",
-    "description": "Calculate dividend yield, growth, and total returns from dividend stocks",
+    "description": "Dividend Calculator - Stock Dividend Analysis",
     "titleSuffix": "Stock Dividend Analysis",
     "category": "finance",
     "keywords": ["dividend", "yield", "growth", "stocks", "returns", "calculator"],
     "path": "/finance/dividend-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 52000,
     "difficulty": 2,
     "icon": "💰"
@@ -377,12 +405,13 @@
   {
     "id": "stock-calculator",
     "name": "Stock Calculator",
-    "description": "Calculate stock returns, profit/loss, and investment performance",
+    "description": "Stock Calculator - Equity Performance Analysis",
     "titleSuffix": "Equity Performance Analysis",
     "category": "finance",
     "keywords": ["stock", "returns", "profit", "loss", "investment", "calculator"],
     "path": "/finance/stock-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 89000,
     "difficulty": 2,
     "icon": "📈"
@@ -390,12 +419,13 @@
   {
     "id": "options-calculator",
     "name": "Options Calculator",
-    "description": "Calculate options pricing, Greeks, and profit/loss scenarios",
+    "description": "Options Calculator - Options Pricing & Greeks",
     "titleSuffix": "Options Pricing & Greeks",
     "category": "finance",
     "keywords": ["options", "pricing", "greeks", "profit", "loss", "calculator"],
     "path": "/finance/options-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 34000,
     "difficulty": 4,
     "icon": "📊"
@@ -403,12 +433,13 @@
   {
     "id": "forex-calculator",
     "name": "Forex Calculator",
-    "description": "Calculate forex pip values, position sizes, and profit/loss",
+    "description": "Forex Calculator - Pip Value & Position Sizing",
     "titleSuffix": "Pip Value & Position Sizing",
     "category": "finance",
     "keywords": ["forex", "pip", "position size", "profit", "loss", "calculator"],
     "path": "/finance/forex-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 67000,
     "difficulty": 3,
     "icon": "💱"
@@ -416,12 +447,13 @@
   {
     "id": "crypto-calculator",
     "name": "Crypto Calculator",
-    "description": "Calculate cryptocurrency returns, DCA, and portfolio performance",
+    "description": "Crypto Calculator - DCA & Portfolio Analysis",
     "titleSuffix": "DCA & Portfolio Analysis",
     "category": "finance",
     "keywords": ["crypto", "cryptocurrency", "returns", "dca", "portfolio", "calculator"],
     "path": "/finance/crypto-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 145000,
     "difficulty": 2,
     "icon": "₿"
@@ -429,12 +461,13 @@
   {
     "id": "ethereum-calculator",
     "name": "Ethereum Calculator",
-    "description": "Calculate Ethereum investment returns and staking rewards",
+    "description": "Ethereum Calculator - ETH Staking & Returns",
     "titleSuffix": "ETH Staking & Returns",
     "category": "finance",
     "keywords": ["ethereum", "eth", "investment", "staking", "rewards", "calculator"],
     "path": "/finance/ethereum-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 78000,
     "difficulty": 2,
     "icon": "⟠"
@@ -442,12 +475,13 @@
   {
     "id": "refinance-calculator",
     "name": "Refinance Calculator",
-    "description": "Calculate refinancing savings and break-even analysis",
+    "description": "Refinance Calculator - Mortgage Refinancing Analysis",
     "titleSuffix": "Mortgage Refinancing Analysis",
     "category": "finance",
     "keywords": ["refinance", "savings", "break even", "mortgage", "calculator"],
     "path": "/finance/refinance-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 125000,
     "difficulty": 2,
     "icon": "🏠"
@@ -455,12 +489,13 @@
   {
     "id": "rent-vs-buy-calculator",
     "name": "Rent vs Buy Calculator",
-    "description": "Compare the costs of renting versus buying a home",
+    "description": "Rent vs Buy Calculator - Home Cost Comparison",
     "titleSuffix": "Home Cost Comparison",
     "category": "finance",
     "keywords": ["rent", "buy", "home", "comparison", "real estate", "calculator"],
     "path": "/finance/rent-vs-buy-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 89000,
     "difficulty": 2,
     "icon": "🏘️"
@@ -468,12 +503,13 @@
   {
     "id": "property-tax-calculator",
     "name": "Property Tax Calculator",
-    "description": "Calculate property taxes based on assessed value and tax rates",
+    "description": "Property Tax Calculator - Real Estate Tax Analysis",
     "titleSuffix": "Real Estate Tax Analysis",
     "category": "finance",
     "keywords": ["property tax", "real estate", "assessed value", "tax rate", "calculator"],
     "path": "/finance/property-tax-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 156000,
     "difficulty": 2,
     "icon": "🏛️"
@@ -481,12 +517,13 @@
   {
     "id": "capital-gains-calculator",
     "name": "Capital Gains Calculator",
-    "description": "Calculate capital gains tax on investment and property sales",
+    "description": "Capital Gains Calculator - Investment Tax Analysis",
     "titleSuffix": "Investment Tax Analysis",
     "category": "finance",
     "keywords": ["capital gains", "tax", "investment", "property", "sales", "calculator"],
     "path": "/finance/capital-gains-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 134000,
     "difficulty": 3,
     "icon": "📈"
@@ -494,12 +531,13 @@
   {
     "id": "business-loan-calculator",
     "name": "Business Loan Calculator",
-    "description": "Calculate business loan payments and total costs",
+    "description": "Business Loan Calculator - Small Business Financing",
     "titleSuffix": "Small Business Financing",
     "category": "finance",
     "keywords": ["business loan", "payments", "interest", "small business", "calculator"],
     "path": "/finance/business-loan-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 67000,
     "difficulty": 2,
     "icon": "🏢"
@@ -507,12 +545,13 @@
   {
     "id": "sba-loan-calculator",
     "name": "SBA Loan Calculator",
-    "description": "Calculate SBA loan payments and qualification requirements",
+    "description": "SBA Loan Calculator - SBA Financing Analysis",
     "titleSuffix": "SBA Financing Analysis",
     "category": "finance",
     "keywords": ["sba loan", "small business", "payments", "qualification", "calculator"],
     "path": "/finance/sba-loan-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 34000,
     "difficulty": 3,
     "icon": "🏛️"
@@ -520,12 +559,13 @@
   {
     "id": "personal-loan-calculator",
     "name": "Personal Loan Calculator",
-    "description": "Calculate personal loan payments and compare offers",
+    "description": "Personal Loan Calculator - Personal Financing Analysis",
     "titleSuffix": "Personal Financing Analysis",
     "category": "finance",
     "keywords": ["personal loan", "payments", "interest rate", "comparison", "calculator"],
     "path": "/finance/personal-loan-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 189000,
     "difficulty": 1,
     "icon": "💳"
@@ -533,12 +573,13 @@
   {
     "id": "student-loan-calculator",
     "name": "Student Loan Calculator",
-    "description": "Calculate student loan payments and repayment options",
+    "description": "Student Loan Calculator - Education Loan Analysis",
     "titleSuffix": "Education Loan Analysis",
     "category": "finance",
     "keywords": ["student loan", "payments", "repayment", "education", "calculator"],
     "path": "/finance/student-loan-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 167000,
     "difficulty": 2,
     "icon": "🎓"
@@ -546,12 +587,13 @@
   {
     "id": "heloc-calculator",
     "name": "HELOC Calculator",
-    "description": "Calculate home equity line of credit payments and available credit",
+    "description": "HELOC Calculator - Home Equity Credit Line",
     "titleSuffix": "Home Equity Credit Line",
     "category": "finance",
     "keywords": ["heloc", "home equity", "line of credit", "payments", "calculator"],
     "path": "/finance/heloc-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 78000,
     "difficulty": 2,
     "icon": "🏠"
@@ -559,12 +601,13 @@
   {
     "id": "home-equity-calculator",
     "name": "Home Equity Calculator",
-    "description": "Calculate available home equity and loan amounts",
+    "description": "Home Equity Calculator - Available Equity Analysis",
     "titleSuffix": "Available Equity Analysis",
     "category": "finance",
     "keywords": ["home equity", "loan", "available equity", "ltv", "calculator"],
     "path": "/finance/home-equity-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 95000,
     "difficulty": 2,
     "icon": "🏡"
@@ -572,12 +615,13 @@
   {
     "id": "cd-calculator",
     "name": "CD Calculator",
-    "description": "Calculate certificate of deposit returns and maturity values",
+    "description": "CD Calculator - Certificate of Deposit Returns",
     "titleSuffix": "Certificate of Deposit Returns",
     "category": "finance",
     "keywords": ["cd", "certificate of deposit", "returns", "maturity", "calculator"],
     "path": "/finance/cd-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 67000,
     "difficulty": 1,
     "icon": "💿"
@@ -585,12 +629,13 @@
   {
     "id": "ira-calculator",
     "name": "IRA Calculator",
-    "description": "Calculate IRA contributions and retirement savings growth",
+    "description": "IRA Calculator - Traditional IRA Planning",
     "titleSuffix": "Traditional IRA Planning",
     "category": "finance",
     "keywords": ["ira", "retirement", "contributions", "savings", "growth", "calculator"],
     "path": "/finance/ira-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 89000,
     "difficulty": 2,
     "icon": "🏛️"
@@ -598,12 +643,13 @@
   {
     "id": "roth-ira-calculator",
     "name": "Roth IRA Calculator",
-    "description": "Calculate Roth IRA contributions and tax-free growth",
+    "description": "Roth IRA Calculator - Tax-Free Retirement Planning",
     "titleSuffix": "Tax-Free Retirement Planning",
     "category": "finance",
     "keywords": ["roth ira", "retirement", "tax free", "contributions", "calculator"],
     "path": "/finance/roth-ira-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 78000,
     "difficulty": 2,
     "icon": "🏛️"
@@ -611,12 +657,13 @@
   {
     "id": "pension-calculator",
     "name": "Pension Calculator",
-    "description": "Calculate pension benefits and retirement income",
+    "description": "Pension Calculator - Pension Benefits Analysis",
     "titleSuffix": "Pension Benefits Analysis",
     "category": "finance",
     "keywords": ["pension", "benefits", "retirement income", "annuity", "calculator"],
     "path": "/finance/pension-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 56000,
     "difficulty": 3,
     "icon": "👴"
@@ -624,12 +671,13 @@
   {
     "id": "social-security-calculator",
     "name": "Social Security Calculator",
-    "description": "Calculate Social Security benefits and optimal claiming strategy",
+    "description": "Social Security Calculator - Benefits & Claiming Strategy",
     "titleSuffix": "Benefits & Claiming Strategy",
     "category": "finance",
     "keywords": ["social security", "benefits", "claiming strategy", "retirement", "calculator"],
     "path": "/finance/social-security-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 145000,
     "difficulty": 3,
     "icon": "🏛️"
@@ -637,12 +685,13 @@
   {
     "id": "fire-calculator",
     "name": "FIRE Calculator",
-    "description": "Calculate Financial Independence Retire Early timeline and savings needed",
+    "description": "FIRE Calculator - Financial Independence Analysis",
     "titleSuffix": "Financial Independence Analysis",
     "category": "finance",
     "keywords": ["fire", "financial independence", "retire early", "savings", "calculator"],
     "path": "/finance/fire-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 67000,
     "difficulty": 2,
     "icon": "🔥"
@@ -650,12 +699,13 @@
   {
     "id": "emergency-fund-calculator",
     "name": "Emergency Fund Calculator",
-    "description": "Calculate recommended emergency fund size based on expenses",
+    "description": "Emergency Fund Calculator - Financial Security Planning",
     "titleSuffix": "Financial Security Planning",
     "category": "finance",
     "keywords": ["emergency fund", "expenses", "savings", "financial security", "calculator"],
     "path": "/finance/emergency-fund-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 45000,
     "difficulty": 1,
     "icon": "🚨"
@@ -663,12 +713,13 @@
   {
     "id": "debt-to-income-calculator",
     "name": "Debt-to-Income Calculator",
-    "description": "Calculate debt-to-income ratio for loan qualification",
+    "description": "Debt-to-Income Calculator - DTI Ratio Analysis",
     "titleSuffix": "DTI Ratio Analysis",
     "category": "finance",
     "keywords": ["debt to income", "dti", "ratio", "loan qualification", "calculator"],
     "path": "/finance/debt-to-income-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 89000,
     "difficulty": 1,
     "icon": "📉"
@@ -676,12 +727,13 @@
   {
     "id": "loan-to-value-calculator",
     "name": "Loan-to-Value Calculator",
-    "description": "Calculate loan-to-value ratio for mortgage and refinancing",
+    "description": "Loan-to-Value Calculator - LTV Ratio Analysis",
     "titleSuffix": "LTV Ratio Analysis",
     "category": "finance",
     "keywords": ["loan to value", "ltv", "ratio", "mortgage", "refinancing", "calculator"],
     "path": "/finance/loan-to-value-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 67000,
     "difficulty": 2,
     "icon": "🏠"
@@ -689,12 +741,13 @@
   {
     "id": "apr-calculator",
     "name": "APR Calculator",
-    "description": "Calculate Annual Percentage Rate including fees and costs",
+    "description": "APR Calculator - Annual Percentage Rate Analysis",
     "titleSuffix": "Annual Percentage Rate Analysis",
     "category": "finance",
     "keywords": ["apr", "annual percentage rate", "fees", "costs", "calculator"],
     "path": "/finance/apr-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 56000,
     "difficulty": 2,
     "icon": "📈"
@@ -702,12 +755,13 @@
   {
     "id": "effective-interest-rate-calculator",
     "name": "Effective Interest Rate Calculator",
-    "description": "Calculate effective annual interest rate with compounding",
+    "description": "Effective Interest Rate Calculator - Effective Rate Analysis",
     "titleSuffix": "Effective Rate Analysis",
     "category": "finance",
     "keywords": ["effective interest rate", "annual rate", "compounding", "calculator"],
     "path": "/finance/effective-interest-rate-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 34000,
     "difficulty": 3,
     "icon": "📊"
@@ -715,12 +769,13 @@
   {
     "id": "amortization-calculator",
     "name": "Amortization Calculator",
-    "description": "Calculate loan amortization schedule with principal and interest breakdown",
+    "description": "Amortization Calculator - Payment Schedule Analysis",
     "titleSuffix": "Payment Schedule Analysis",
     "category": "finance",
     "keywords": ["amortization", "schedule", "principal", "interest", "loan", "calculator"],
     "path": "/finance/amortization-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 95000,
     "difficulty": 2,
     "icon": "📋"
@@ -728,12 +783,13 @@
   {
     "id": "balloon-payment-calculator",
     "name": "Balloon Payment Calculator",
-    "description": "Calculate balloon loan payments and final balloon amount",
+    "description": "Balloon Payment Calculator - Balloon Loan Analysis",
     "titleSuffix": "Balloon Loan Analysis",
     "category": "finance",
     "keywords": ["balloon payment", "loan", "final payment", "calculator"],
     "path": "/finance/balloon-payment-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 23000,
     "difficulty": 3,
     "icon": "🎈"
@@ -741,12 +797,13 @@
   {
     "id": "lease-calculator",
     "name": "Lease Calculator",
-    "description": "Calculate car lease payments and compare lease vs buy options",
+    "description": "Lease Calculator - Car Lease Payment Analysis",
     "titleSuffix": "Car Lease Payment Analysis",
     "category": "finance",
     "keywords": ["lease", "car lease", "payments", "lease vs buy", "calculator"],
     "path": "/finance/lease-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 134000,
     "difficulty": 2,
     "icon": "🚗"
@@ -754,12 +811,13 @@
   {
     "id": "lease-vs-buy-calculator",
     "name": "Lease vs Buy Calculator",
-    "description": "Compare the costs of leasing versus buying a car",
+    "description": "Lease vs Buy Calculator - Vehicle Cost Comparison",
     "titleSuffix": "Vehicle Cost Comparison",
     "category": "finance",
     "keywords": ["lease vs buy", "car", "comparison", "costs", "calculator"],
     "path": "/finance/lease-vs-buy-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 67000,
     "difficulty": 2,
     "icon": "🚙"
@@ -767,12 +825,13 @@
   {
     "id": "car-depreciation-calculator",
     "name": "Car Depreciation Calculator",
-    "description": "Calculate vehicle depreciation and future value",
+    "description": "Car Depreciation Calculator - Vehicle Value Analysis",
     "titleSuffix": "Vehicle Value Analysis",
     "category": "finance",
     "keywords": ["car depreciation", "vehicle", "future value", "resale", "calculator"],
     "path": "/finance/car-depreciation-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 45000,
     "difficulty": 2,
     "icon": "📉"
@@ -780,12 +839,13 @@
   {
     "id": "insurance-calculator",
     "name": "Insurance Calculator",
-    "description": "Calculate insurance needs and coverage amounts",
+    "description": "Insurance Calculator - Coverage Needs Analysis",
     "titleSuffix": "Coverage Needs Analysis",
     "category": "finance",
     "keywords": ["insurance", "coverage", "needs", "life insurance", "calculator"],
     "path": "/finance/insurance-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 89000,
     "difficulty": 2,
     "icon": "🛡️"
@@ -793,12 +853,13 @@
   {
     "id": "life-insurance-calculator",
     "name": "Life Insurance Calculator",
-    "description": "Calculate life insurance coverage needs and premiums",
+    "description": "Life Insurance Calculator - Life Coverage Planning",
     "titleSuffix": "Life Coverage Planning",
     "category": "finance",
     "keywords": ["life insurance", "coverage", "needs", "premiums", "calculator"],
     "path": "/finance/life-insurance-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 123000,
     "difficulty": 2,
     "icon": "👨‍👩‍👧‍👦"
@@ -806,12 +867,13 @@
   {
     "id": "disability-insurance-calculator",
     "name": "Disability Insurance Calculator",
-    "description": "Calculate disability insurance needs and benefit amounts",
+    "description": "Disability Insurance Calculator - Income Protection Planning",
     "titleSuffix": "Income Protection Planning",
     "category": "finance",
     "keywords": ["disability insurance", "benefits", "needs", "income protection", "calculator"],
     "path": "/finance/disability-insurance-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 34000,
     "difficulty": 2,
     "icon": "♿"
@@ -819,12 +881,13 @@
   {
     "id": "health-insurance-calculator",
     "name": "Health Insurance Calculator",
-    "description": "Calculate health insurance costs and compare plans",
+    "description": "Health Insurance Calculator - Health Plan Comparison",
     "titleSuffix": "Health Plan Comparison",
     "category": "finance",
     "keywords": ["health insurance", "costs", "plans", "comparison", "calculator"],
     "path": "/finance/health-insurance-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 167000,
     "difficulty": 2,
     "icon": "🏥"
@@ -832,12 +895,13 @@
   {
     "id": "auto-insurance-calculator",
     "name": "Auto Insurance Calculator",
-    "description": "Calculate auto insurance premiums and coverage options",
+    "description": "Auto Insurance Calculator - Car Insurance Analysis",
     "titleSuffix": "Car Insurance Analysis",
     "category": "finance",
     "keywords": ["auto insurance", "premiums", "coverage", "car insurance", "calculator"],
     "path": "/finance/auto-insurance-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 145000,
     "difficulty": 2,
     "icon": "🚗"
@@ -845,12 +909,13 @@
   {
     "id": "home-insurance-calculator",
     "name": "Home Insurance Calculator",
-    "description": "Calculate homeowners insurance coverage and premiums",
+    "description": "Home Insurance Calculator - Homeowners Coverage Analysis",
     "titleSuffix": "Homeowners Coverage Analysis",
     "category": "finance",
     "keywords": ["home insurance", "homeowners", "coverage", "premiums", "calculator"],
     "path": "/finance/home-insurance-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 89000,
     "difficulty": 2,
     "icon": "🏠"
@@ -858,12 +923,13 @@
   {
     "id": "umbrella-insurance-calculator",
     "name": "Umbrella Insurance Calculator",
-    "description": "Calculate umbrella insurance needs and coverage amounts",
+    "description": "Umbrella Insurance Calculator - Liability Protection Analysis",
     "titleSuffix": "Liability Protection Analysis",
     "category": "finance",
     "keywords": ["umbrella insurance", "liability", "coverage", "protection", "calculator"],
     "path": "/finance/umbrella-insurance-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 23000,
     "difficulty": 3,
     "icon": "☂️"
@@ -871,12 +937,13 @@
   {
     "id": "college-savings-calculator",
     "name": "College Savings Calculator",
-    "description": "Calculate college savings needs and 529 plan contributions",
+    "description": "College Savings Calculator - Education Savings Planning",
     "titleSuffix": "Education Savings Planning",
     "category": "finance",
     "keywords": ["college savings", "529 plan", "education", "tuition", "calculator"],
     "path": "/finance/college-savings-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 78000,
     "difficulty": 2,
     "icon": "🎓"
@@ -884,12 +951,13 @@
   {
     "id": "529-plan-calculator",
     "name": "529 Plan Calculator",
-    "description": "Calculate 529 education savings plan growth and tax benefits",
+    "description": "529 Plan Calculator - Education Tax Benefits",
     "titleSuffix": "Education Tax Benefits",
     "category": "finance",
     "keywords": ["529 plan", "education savings", "tax benefits", "college", "calculator"],
     "path": "/finance/529-plan-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 45000,
     "difficulty": 2,
     "icon": "📚"
@@ -897,12 +965,13 @@
   {
     "id": "child-support-calculator",
     "name": "Child Support Calculator",
-    "description": "Calculate child support payments based on state guidelines",
+    "description": "Child Support Calculator - State Guidelines Analysis",
     "titleSuffix": "State Guidelines Analysis",
     "category": "finance",
     "keywords": ["child support", "payments", "guidelines", "custody", "calculator"],
     "path": "/finance/child-support-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 134000,
     "difficulty": 3,
     "icon": "👶"
@@ -910,12 +979,13 @@
   {
     "id": "alimony-calculator",
     "name": "Alimony Calculator",
-    "description": "Calculate spousal support and alimony payments",
+    "description": "Alimony Calculator - Spousal Support Analysis",
     "titleSuffix": "Spousal Support Analysis",
     "category": "finance",
     "keywords": ["alimony", "spousal support", "payments", "divorce", "calculator"],
     "path": "/finance/alimony-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 67000,
     "difficulty": 3,
     "icon": "💔"
@@ -923,12 +993,13 @@
   {
     "id": "divorce-settlement-calculator",
     "name": "Divorce Settlement Calculator",
-    "description": "Calculate asset division and financial settlement in divorce",
+    "description": "Divorce Settlement Calculator - Asset Division Analysis",
     "titleSuffix": "Asset Division Analysis",
     "category": "finance",
     "keywords": ["divorce settlement", "asset division", "financial", "property", "calculator"],
     "path": "/finance/divorce-settlement-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 45000,
     "difficulty": 3,
     "icon": "⚖️"
@@ -936,12 +1007,13 @@
   {
     "id": "estate-tax-calculator",
     "name": "Estate Tax Calculator",
-    "description": "Calculate estate tax liability and exemptions",
+    "description": "Estate Tax Calculator - Inheritance Tax Analysis",
     "titleSuffix": "Inheritance Tax Analysis",
     "category": "finance",
     "keywords": ["estate tax", "liability", "exemptions", "inheritance", "calculator"],
     "path": "/finance/estate-tax-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 34000,
     "difficulty": 3,
     "icon": "🏛️"
@@ -949,12 +1021,13 @@
   {
     "id": "gift-tax-calculator",
     "name": "Gift Tax Calculator",
-    "description": "Calculate gift tax liability and annual exclusions",
+    "description": "Gift Tax Calculator - Gift Tax Exemptions",
     "titleSuffix": "Gift Tax Exemptions",
     "category": "finance",
     "keywords": ["gift tax", "liability", "annual exclusion", "gifts", "calculator"],
     "path": "/finance/gift-tax-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 23000,
     "difficulty": 3,
     "icon": "🎁"
@@ -962,12 +1035,13 @@
   {
     "id": "inheritance-calculator",
     "name": "Inheritance Calculator",
-    "description": "Calculate inheritance distribution and tax implications",
+    "description": "Inheritance Calculator - Estate Distribution Analysis",
     "titleSuffix": "Estate Distribution Analysis",
     "category": "finance",
     "keywords": ["inheritance", "distribution", "tax implications", "estate", "calculator"],
     "path": "/finance/inheritance-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 56000,
     "difficulty": 3,
     "icon": "👴"
@@ -975,12 +1049,13 @@
   {
     "id": "trust-calculator",
     "name": "Trust Calculator",
-    "description": "Calculate trust distributions and tax benefits",
+    "description": "Trust Calculator - Trust Planning Analysis",
     "titleSuffix": "Trust Planning Analysis",
     "category": "finance",
     "keywords": ["trust", "distributions", "tax benefits", "estate planning", "calculator"],
     "path": "/finance/trust-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 28000,
     "difficulty": 4,
     "icon": "🏛️"
@@ -988,12 +1063,13 @@
   {
     "id": "paycheck-calculator",
     "name": "Paycheck Calculator",
-    "description": "Calculate take-home pay after taxes and deductions. Paycheck calculator with federal, state, and local tax withholdings.",
+    "description": "Paycheck Calculator - Take-Home Pay Analysis",
     "titleSuffix": "Take-Home Pay Analysis",
     "category": "finance",
     "keywords": ["paycheck", "take home pay", "taxes", "deductions", "calculator"],
     "path": "/finance/paycheck-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 234000,
     "difficulty": 2,
     "icon": "💰"
@@ -1001,12 +1077,13 @@
   {
     "id": "hourly-to-salary-calculator",
     "name": "Hourly to Salary Calculator",
-    "description": "Convert hourly wage to annual salary and vice versa",
+    "description": "Hourly to Salary Calculator - Wage Conversion Analysis",
     "titleSuffix": "Wage Conversion Analysis",
     "category": "finance",
     "keywords": ["hourly", "salary", "wage", "annual", "conversion", "calculator"],
     "path": "/finance/hourly-to-salary-calculator",
     "isActive": false,
+     "seoflag": true,
     "searchVolume": 167000,
     "difficulty": 1,
     "icon": "⏰"

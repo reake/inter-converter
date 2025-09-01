@@ -1,38 +1,102 @@
 {
-  "about": [
-    "The Ram Air Calculator determines the pressure increase and power gain from ram air intake systems based on vehicle speed. Essential for understanding cold air intake benefits and forced induction effects.",
-    "Ram air effect occurs when vehicle motion forces air into the intake system, creating positive pressure that increases air density and potential power output, especially at higher speeds."
-  ],
-  "howToUse": [
-    "Enter vehicle speed in MPH or KPH",
-    "Select intake efficiency percentage",
-    "View calculated pressure increase",
-    "Estimate potential power gains"
-  ],
+  "about": {
+    "title": "About Ram Air Calculator",
+    "description": "The Ram Air Calculator determines the pressure increase and power gain from ram air intake systems based on vehicle speed. Essential for understanding cold air intake benefits and forced induction effects. Ram air effect occurs when vehicle motion forces air into the intake system, creating positive pressure that increases air density and potential power output, especially at higher speeds."
+  },
+  "howTo": {
+    "title": "How to Use the Ram Air Calculator",
+    "steps": [
+      {
+        "title": "Enter Vehicle Speed",
+        "description": "Input current vehicle speed in MPH or KPH."
+      },
+      {
+        "title": "Set Intake Efficiency",
+        "description": "Select intake system efficiency percentage (typically 60-90% for most designs)."
+      },
+      {
+        "title": "Calculate Pressure",
+        "description": "View calculated ram air pressure increase and dynamic pressure."
+      },
+      {
+        "title": "Estimate Power Gains",
+        "description": "Review potential power increase from ram air effect."
+      }
+    ],
+    "tips": [
+      "Ram air effects become significant above 60-80 MPH",
+      "True ram air requires proper intake ducting and positioning",
+      "Higher speeds produce exponentially greater ram air pressure"
+    ]
+  },
   "features": [
-    "Speed-based pressure calculations",
-    "Power gain estimation",
-    "Multiple speed units",
-    "Intake efficiency factors",
-    "Performance optimization",
-    "Professional accuracy"
+    {
+      "title": "Speed-Based Calculations",
+      "description": "Calculate ram air pressure increase based on vehicle speed and aerodynamics."
+    },
+    {
+      "title": "Power Gain Estimation",
+      "description": "Estimate potential horsepower gains from ram air intake systems."
+    },
+    {
+      "title": "Multiple Speed Units",
+      "description": "Support for MPH, KPH, and other speed measurements."
+    },
+    {
+      "title": "Intake Efficiency Analysis",
+      "description": "Factor in intake system efficiency and design characteristics."
+    },
+    {
+      "title": "Performance Optimization",
+      "description": "Optimize intake design for maximum ram air effect at target speeds."
+    },
+    {
+      "title": "Professional Accuracy",
+      "description": "Precise calculations using aerodynamic principles and fluid dynamics."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "At what speed does ram air effect become significant?",
-      "answer": "Ram air effects become noticeable around 60-80 MPH, with meaningful gains typically starting above 100 MPH. The effect increases exponentially with speed."
+      "q": "At what speed does ram air effect become significant?",
+      "a": "Ram air effects become noticeable around 60-80 MPH, with meaningful gains typically starting above 100 MPH. The effect increases exponentially with speed due to dynamic pressure relationship (pressure = 0.5 × density × velocity²). Our ram air calculator shows these speed-dependent effects."
     },
     {
-      "question": "How much power can ram air add?",
-      "answer": "At highway speeds, ram air might add 1-3% power increase. At racing speeds (150+ MPH), gains can reach 5-10% depending on intake design and efficiency."
+      "q": "How much power can ram air realistically add?",
+      "a": "At highway speeds (70-80 MPH), ram air might add 1-3% power increase. At racing speeds (150+ MPH), gains can reach 5-10% depending on intake design efficiency and ducting effectiveness. Our calculator estimates these gains based on speed and system efficiency."
     },
     {
-      "question": "Do cold air intakes provide ram air effect?",
-      "answer": "Most aftermarket cold air intakes provide minimal ram air effect as they're not positioned to capture forward-moving air efficiently. True ram air requires specific ducting design."
+      "q": "Do aftermarket cold air intakes provide true ram air effect?",
+      "a": "Most aftermarket cold air intakes provide minimal ram air effect because they're not positioned to capture forward-moving air efficiently. True ram air requires specific ducting design, proper intake positioning, and sealed air boxes to maximize pressure recovery."
     },
     {
-      "question": "How does altitude affect ram air calculations?",
-      "answer": "Higher altitude reduces air density, diminishing ram air effectiveness. The pressure differential becomes less significant as ambient air pressure decreases."
+      "q": "How does altitude affect ram air calculations?",
+      "a": "Higher altitude reduces air density, diminishing ram air effectiveness. The pressure differential becomes less significant as ambient air pressure decreases. At 5,000 feet elevation, ram air effects are reduced by approximately 15% compared to sea level."
+    },
+    {
+      "q": "What makes an effective ram air intake design?",
+      "a": "Effective ram air systems require: forward-facing intake opening, smooth ducting with minimal bends, sealed air box, proper sizing for airflow requirements, and positioning in high-pressure zones. Our calculator helps evaluate different design efficiencies."
+    },
+    {
+      "q": "Is ram air effect the same as forced induction?",
+      "a": "No, ram air creates modest pressure increases (typically under 1 PSI even at high speeds), while forced induction (turbochargers/superchargers) can create 5-20+ PSI. Ram air is a natural effect from vehicle motion, not mechanical compression."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Supercharger Calculator",
+      "url": "/auto/supercharger-calculator"
+    },
+    {
+      "title": "Volumetric Efficiency Calculator",
+      "url": "/auto/volumetric-efficiency-calculator"
+    },
+    {
+      "title": "Speed Converter",
+      "url": "/auto/speed-converter"
+    },
+    {
+      "title": "Automotive Tools Category",
+      "url": "/auto"
     }
   ]
 }

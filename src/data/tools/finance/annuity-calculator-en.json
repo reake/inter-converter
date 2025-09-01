@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Annuity Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Annuity Calculator - Retirement Income Planning Tool",
+    "description": "The Annuity Calculator is a comprehensive financial planning tool designed to help you calculate annuity payments, future values, and retirement income streams. Whether you're planning for retirement, evaluating annuity products, or calculating periodic payments, this calculator provides accurate projections for both immediate and deferred annuities. Understanding annuity calculations is essential for retirement planning, as annuities provide guaranteed income streams and can be a crucial component of your retirement portfolio."
+  },
+  "howTo": {
+    "title": "How to Use the Annuity Calculator",
+    "steps": [
+      {
+        "title": "Choose Annuity Type",
+        "description": "Select between immediate annuity (starts paying immediately) or deferred annuity (starts paying at a future date)."
+      },
+      {
+        "title": "Enter Principal Amount",
+        "description": "Input the initial investment amount or lump sum you plan to invest in the annuity."
+      },
+      {
+        "title": "Set Interest Rate",
+        "description": "Enter the annual interest rate or guaranteed rate offered by the annuity provider."
+      },
+      {
+        "title": "Payment Period",
+        "description": "Specify the payment frequency (monthly, quarterly, annually) and total payment period."
+      },
+      {
+        "title": "Payment Options",
+        "description": "Choose between fixed payments for a set period or lifetime payments with survivor benefits."
+      },
+      {
+        "title": "Review Results",
+        "description": "Analyze the payment amounts, total returns, and income projections for your retirement planning."
+      }
+    ],
+    "tips": [
+      "Compare annuity rates from multiple insurance companies",
+      "Consider inflation protection riders for long-term annuities",
+      "Understand surrender charges and withdrawal penalties",
+      "Factor annuities into your overall retirement income strategy"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Immediate vs Deferred Annuity Calculations",
+      "description": "Calculate payments for both immediate annuities and deferred annuities with accumulation phases."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Multiple Payment Options",
+      "description": "Support for various payment structures including life annuities, term certain, and joint survivor options."
+    },
+    {
+      "title": "Present Value Analysis",
+      "description": "Calculate the present value of future annuity payments for comparison and decision-making."
+    },
+    {
+      "title": "Tax-Deferred Growth",
+      "description": "Factor in tax-deferred growth benefits and tax implications of annuity withdrawals."
+    },
+    {
+      "title": "Inflation Adjustment",
+      "description": "Calculate real purchasing power with inflation-adjusted payment projections."
+    },
+    {
+      "title": "Surrender Value Calculator",
+      "description": "Estimate surrender values and penalties for early withdrawal scenarios."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What's the difference between immediate and deferred annuities?",
+      "a": "Immediate annuities start paying income within one year of purchase, while deferred annuities accumulate value for a period before payments begin. Immediate annuities are ideal for current income needs, while deferred annuities are better for future retirement planning."
+    },
+    {
+      "q": "How are annuity payments calculated?",
+      "a": "Annuity payments are calculated based on the principal amount, interest rate, payment period, and your life expectancy (for lifetime annuities). The calculator uses actuarial tables and compound interest formulas to determine payment amounts."
+    },
+    {
+      "q": "Are annuities a good investment for retirement?",
+      "a": "Annuities can provide guaranteed income and tax-deferred growth, making them valuable for retirement planning. However, they often have higher fees than other investments. Consider your risk tolerance, income needs, and other retirement assets when evaluating annuities."
+    },
+    {
+      "q": "What happens to my annuity when I die?",
+      "a": "This depends on the annuity type and options you choose. Some annuities end at death, while others provide survivor benefits to beneficiaries. Joint and survivor annuities continue payments to a surviving spouse, though typically at a reduced amount."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Retirement Calculator",
+      "url": "/finance/retirement-calculator"
+    },
+    {
+      "title": "401(k) Calculator",
+      "url": "/finance/401k-calculator"
+    },
+    {
+      "title": "Social Security Calculator",
+      "url": "/finance/social-security-calculator"
+    },
+    {
+      "title": "Investment Calculator",
+      "url": "/finance/investment-calculator"
+    },
+    {
+      "title": "Pension Calculator",
+      "url": "/finance/pension-calculator"
     }
   ]
 }

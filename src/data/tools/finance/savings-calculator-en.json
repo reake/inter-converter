@@ -1,41 +1,107 @@
 {
-  "about": [
-    "The Savings Calculator helps you plan and track your savings goals with compound interest calculations. Whether you're saving for a house, vacation, emergency fund, or retirement, this tool shows how regular deposits and interest can help you reach your financial targets.",
-    "Plan your savings strategy by adjusting deposit amounts, frequency, and interest rates to see how different approaches affect your timeline and final savings amount."
-  ],
-  "howToUse": [
-    "Set your savings goal amount",
-    "Enter your current savings balance",
-    "Input the interest rate on your savings account",
-    "Choose your deposit frequency (weekly, monthly, quarterly)",
-    "Enter your regular deposit amount",
-    "View timeline to reach your goal and total interest earned"
-  ],
+  "about": {
+    "title": "About Savings Calculator",
+    "description": "The Savings Calculator helps you plan and track your savings goals with compound interest calculations. Whether you're saving for a house, vacation, emergency fund, or retirement, this tool shows how regular deposits and interest can help you reach your financial targets. Plan your savings strategy by adjusting deposit amounts, frequency, and interest rates to see how different approaches affect your timeline and final savings amount."
+  },
+  "howTo": {
+    "title": "How to Use the Savings Calculator",
+    "steps": [
+      {
+        "title": "Set Savings Goal",
+        "description": "Enter your target savings amount for your specific financial goal."
+      },
+      {
+        "title": "Current Balance",
+        "description": "Input your existing savings balance as the starting point."
+      },
+      {
+        "title": "Interest Rate",
+        "description": "Enter the annual interest rate (APY) offered by your savings account."
+      },
+      {
+        "title": "Deposit Frequency",
+        "description": "Choose how often you'll make deposits: weekly, monthly, or quarterly."
+      },
+      {
+        "title": "Deposit Amount",
+        "description": "Enter the amount you plan to save with each regular deposit."
+      },
+      {
+        "title": "Review Timeline",
+        "description": "See how long it will take to reach your goal and total interest earned."
+      }
+    ],
+    "tips": [
+      "Start with the 50/30/20 rule: 20% of income for savings",
+      "Use high-yield savings accounts for better interest rates",
+      "Automate deposits to maintain consistent saving habits",
+      "Review and adjust your savings plan regularly"
+    ]
+  },
   "features": [
-    "Savings goal timeline calculation",
-    "Regular deposit planning",
-    "Compound interest growth tracking",
-    "Multiple deposit frequency options",
-    "Goal achievement projections",
-    "Interest earnings breakdown",
-    "Savings strategy optimization"
+    {
+      "title": "Goal Timeline Calculation",
+      "description": "Calculate exactly when you'll reach your savings goal based on deposits and interest."
+    },
+    {
+      "title": "Regular Deposit Planning",
+      "description": "Plan optimal deposit amounts and frequencies to meet your timeline."
+    },
+    {
+      "title": "Compound Interest Tracking",
+      "description": "See how compound interest accelerates your savings growth over time."
+    },
+    {
+      "title": "Multiple Deposit Frequencies",
+      "description": "Support for weekly, monthly, and quarterly deposit schedules."
+    },
+    {
+      "title": "Goal Achievement Projections",
+      "description": "Visual projections showing your progress toward financial goals."
+    },
+    {
+      "title": "Interest Earnings Breakdown",
+      "description": "Detailed analysis of total interest earned versus principal deposits."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "How much should I save each month?",
-      "answer": "A common rule is to save 20% of your income, but this varies by individual circumstances. Start with what you can afford and gradually increase as your income grows."
+      "q": "How much should I save each month?",
+      "a": "A common rule is to save 20% of your income, but this varies by individual circumstances. Start with what you can afford and gradually increase as your income grows. The key is consistency and building the habit."
     },
     {
-      "question": "What's a good interest rate for savings?",
-      "answer": "High-yield savings accounts typically offer 0.5% to 5% APY, depending on market conditions. Online banks often offer higher rates than traditional banks."
+      "q": "What's a good interest rate for savings?",
+      "a": "High-yield savings accounts typically offer 0.5% to 5% APY, depending on market conditions. Online banks often offer higher rates than traditional banks. Shop around for the best rates while ensuring FDIC insurance."
     },
     {
-      "question": "Should I save daily, weekly, or monthly?",
-      "answer": "More frequent deposits can slightly increase compound interest earnings, but the convenience of monthly deposits often outweighs the small difference in returns."
+      "q": "Should I save daily, weekly, or monthly?",
+      "a": "More frequent deposits can slightly increase compound interest earnings, but the convenience of monthly deposits often outweighs the small difference in returns. Choose a frequency that matches your income schedule."
     },
     {
-      "question": "How long will it take to reach my savings goal?",
-      "answer": "This depends on your goal amount, current savings, deposit frequency, and interest rate. Our calculator shows exactly how long based on your specific inputs."
+      "q": "How long will it take to reach my savings goal?",
+      "a": "This depends on your goal amount, current savings, deposit frequency, and interest rate. Our calculator shows exactly how long based on your specific inputs, helping you adjust your strategy as needed."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Compound Interest Calculator",
+      "url": "/finance/compound-interest-calculator"
+    },
+    {
+      "title": "Emergency Fund Calculator",
+      "url": "/finance/emergency-fund-calculator"
+    },
+    {
+      "title": "Budget Calculator",
+      "url": "/finance/budget-calculator"
+    },
+    {
+      "title": "High Yield Savings Calculator",
+      "url": "/finance/high-yield-savings-calculator"
+    },
+    {
+      "title": "Investment Calculator",
+      "url": "/finance/investment-calculator"
     }
   ]
 }

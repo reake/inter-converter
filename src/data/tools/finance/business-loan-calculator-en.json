@@ -1,31 +1,103 @@
 {
-  "about": [
-    "The Business Loan Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Business Loan Calculator - Commercial Financing Tool",
+    "description": "The Business Loan Calculator is a professional financial tool designed to help entrepreneurs and business owners calculate monthly payments, total interest costs, and loan terms for commercial financing. Whether you're seeking working capital, equipment financing, or expansion funding, this calculator provides accurate payment estimates and helps you compare different loan scenarios to find the best financing option for your business needs."
+  },
+  "howTo": {
+    "title": "How to Use the Business Loan Calculator",
+    "steps": [
+      {
+        "title": "Enter Loan Amount",
+        "description": "Input the total amount you need to borrow for your business financing needs."
+      },
+      {
+        "title": "Set Interest Rate",
+        "description": "Enter the annual interest rate offered by your lender or estimated market rate."
+      },
+      {
+        "title": "Choose Loan Term",
+        "description": "Select the loan repayment period in months or years that fits your business plan."
+      },
+      {
+        "title": "Review Payment Schedule",
+        "description": "Analyze the monthly payment amount and total interest over the loan term."
+      },
+      {
+        "title": "Compare Options",
+        "description": "Compare different loan amounts, rates, and terms to find optimal financing."
+      },
+      {
+        "title": "Plan Cash Flow",
+        "description": "Use the results to plan your business cash flow and repayment strategy."
+      }
+    ],
+    "tips": [
+      "Shop around with multiple lenders for the best rates and terms",
+      "Consider shorter terms to save on total interest costs",
+      "Factor loan payments into your business cash flow projections",
+      "Maintain good business credit to qualify for better rates"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Monthly Payment Calculation",
+      "description": "Accurate monthly payment calculations for various business loan scenarios."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Total Interest Analysis",
+      "description": "Complete analysis of total interest costs over the entire loan term."
+    },
+    {
+      "title": "Amortization Schedule",
+      "description": "Detailed payment breakdown showing principal and interest for each payment."
+    },
+    {
+      "title": "Loan Comparison Tool",
+      "description": "Compare multiple loan options side-by-side to find the best terms."
+    },
+    {
+      "title": "Cash Flow Planning",
+      "description": "Tools to help integrate loan payments into your business financial planning."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What types of business loans can I calculate?",
+      "a": "This calculator works for various business loans including term loans, SBA loans, equipment financing, working capital loans, and commercial real estate loans. Simply input the loan amount, interest rate, and term."
+    },
+    {
+      "q": "How do I qualify for better business loan rates?",
+      "a": "Improve your business credit score, maintain strong cash flow, provide detailed financial statements, and consider offering collateral. Established businesses with 2+ years of operation typically qualify for better rates."
+    },
+    {
+      "q": "Should I choose a shorter or longer loan term?",
+      "a": "Shorter terms mean higher monthly payments but less total interest paid. Longer terms reduce monthly payments but increase total cost. Choose based on your cash flow needs and growth projections."
+    },
+    {
+      "q": "What's the difference between SBA and conventional business loans?",
+      "a": "SBA loans typically offer lower rates and longer terms but have stricter qualification requirements and longer approval processes. Conventional loans offer faster approval but may have higher rates and shorter terms."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Equipment Loan Calculator",
+      "url": "/finance/equipment-loan-calculator"
+    },
+    {
+      "title": "Auto Loan Calculator",
+      "url": "/finance/auto-loan-calculator"
+    },
+    {
+      "title": "Loan Calculator",
+      "url": "/finance/loan-calculator"
+    },
+    {
+      "title": "Budget Calculator",
+      "url": "/finance/budget-calculator"
+    },
+    {
+      "title": "Break Even Calculator",
+      "url": "/finance/break-even-calculator"
     }
   ]
 }

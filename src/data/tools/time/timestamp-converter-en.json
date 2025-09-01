@@ -1,39 +1,102 @@
 {
-  "about": [
-    "The Timestamp Converter converts between human-readable dates and Unix timestamps (epoch time). Essential for developers, system administrators, and anyone working with databases, APIs, or log files that use timestamp formats.",
-    "Supports bidirectional conversion with multiple timestamp formats including seconds and milliseconds since epoch, making it invaluable for debugging, data analysis, and system integration tasks."
-  ],
-  "howToUse": [
-    "Enter a Unix timestamp or select current time",
-    "View the converted human-readable date",
-    "Or enter a date to get the timestamp",
-    "Choose between seconds or milliseconds format",
-    "Copy the result for use in your applications"
-  ],
+  "about": {
+    "title": "About Timestamp Converter",
+    "description": "The Timestamp Converter converts between human-readable dates and Unix timestamps (epoch time). Essential for developers, system administrators, and anyone working with databases, APIs, or log files that use timestamp formats. Supports bidirectional conversion with multiple timestamp formats including seconds and milliseconds since epoch, making it invaluable for debugging, data analysis, and system integration tasks."
+  },
+  "howTo": {
+    "title": "How to Use the Timestamp Converter",
+    "steps": [
+      {
+        "title": "Enter Timestamp or Date",
+        "description": "Input a Unix timestamp or select current time, or enter a human-readable date."
+      },
+      {
+        "title": "Choose Format",
+        "description": "Select between seconds or milliseconds timestamp format."
+      },
+      {
+        "title": "View Conversion",
+        "description": "See the bidirectional conversion between timestamp and readable date."
+      },
+      {
+        "title": "Copy Results",
+        "description": "Copy the converted result for use in your applications or systems."
+      }
+    ],
+    "tips": [
+      "10-digit timestamps are in seconds, 13-digit are in milliseconds",
+      "Use current timestamp for real-time applications",
+      "Consider time zone differences for accurate conversions"
+    ]
+  },
   "features": [
-    "Bidirectional timestamp conversion",
-    "Seconds and milliseconds support",
-    "Current timestamp generation",
-    "Multiple date format display",
-    "Time zone awareness",
-    "Batch conversion capabilities"
+    {
+      "title": "Bidirectional Conversion",
+      "description": "Convert from Unix timestamp to date and from date to Unix timestamp seamlessly."
+    },
+    {
+      "title": "Multiple Formats",
+      "description": "Support for both seconds and milliseconds timestamp formats with automatic detection."
+    },
+    {
+      "title": "Current Timestamp",
+      "description": "Generate current Unix timestamp for real-time applications and testing."
+    },
+    {
+      "title": "Date Format Options",
+      "description": "Display converted dates in multiple human-readable formats for flexibility."
+    },
+    {
+      "title": "Timezone Support",
+      "description": "Handle different time zones and daylight saving time adjustments accurately."
+    },
+    {
+      "title": "Batch Processing",
+      "description": "Convert multiple timestamps or dates simultaneously for efficiency."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What is a Unix timestamp?",
-      "answer": "A Unix timestamp is the number of seconds (or milliseconds) that have elapsed since January 1, 1970, 00:00:00 UTC, also known as the Unix epoch."
+      "q": "What is a Unix timestamp and how does it work?",
+      "a": "A Unix timestamp is the number of seconds (or milliseconds) that have elapsed since January 1, 1970, 00:00:00 UTC, also known as the Unix epoch. Our timestamp converter handles both formats for accurate date-time conversions."
     },
     {
-      "question": "How do I know if my timestamp is in seconds or milliseconds?",
-      "answer": "Timestamps with 10 digits are typically in seconds, while 13-digit timestamps are in milliseconds. The converter automatically detects the format."
+      "q": "How do I know if my timestamp is in seconds or milliseconds?",
+      "a": "Timestamps with 10 digits are typically in seconds, while 13-digit timestamps are in milliseconds. Our timestamp converter automatically detects the format and converts accordingly for accurate results."
     },
     {
-      "question": "Does it handle time zones?",
-      "answer": "Yes, the converter can display results in different time zones and accounts for daylight saving time changes."
+      "q": "Does the timestamp converter handle different time zones?",
+      "a": "Yes, our timestamp converter can display results in different time zones and accounts for daylight saving time changes. This ensures accurate conversions regardless of your geographic location."
     },
     {
-      "question": "What's the valid timestamp range?",
-      "answer": "The converter supports timestamps from 1970 to 2038 for 32-bit systems, and much further for 64-bit timestamps."
+      "q": "What's the valid range for timestamp conversion?",
+      "a": "The timestamp converter supports timestamps from 1970 to 2038 for 32-bit systems, and extends much further for 64-bit timestamps. This covers virtually all practical use cases for modern applications."
+    },
+    {
+      "q": "Can I convert current time to timestamp?",
+      "a": "Yes, our timestamp converter includes a current timestamp generator that provides the current Unix timestamp in both seconds and milliseconds formats. Perfect for real-time applications and testing."
+    },
+    {
+      "q": "Is the timestamp converter useful for developers?",
+      "a": "Absolutely! The timestamp converter is essential for developers working with databases, APIs, log files, and any system that uses Unix timestamps. It simplifies debugging and data analysis tasks significantly."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Timezone Converter",
+      "url": "/time/timezone-converter"
+    },
+    {
+      "title": "Date Difference Calculator",
+      "url": "/time/date-difference-calculator"
+    },
+    {
+      "title": "Countdown Timer",
+      "url": "/time/countdown-timer"
+    },
+    {
+      "title": "Time Tools Category",
+      "url": "/time"
     }
   ]
 }

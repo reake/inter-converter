@@ -1,31 +1,40 @@
 {
-  "about": [
-    "The Usd To Gbp Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "USD to GBP Calculator - Live Exchange Rate & Currency Converter",
+    "description": "Convert US Dollars (USD) to British Pounds (GBP) with live exchange rates. Add card or transfer fees, compare provider markups, and see the exact converted amount—ideal for travel, online shopping, and international payments."
+  },
+  "howTo": {
+    "title": "How to Use the USD to GBP Calculator",
+    "steps": [
+      { "title": "Enter USD Amount", "description": "Type the dollar amount you want to convert to pounds." },
+      { "title": "Choose Rate", "description": "Use the live mid-market rate or input your bank/provider's quoted rate." },
+      { "title": "Add Fees (Optional)", "description": "Include fixed fees and percentage markups to estimate your final GBP." },
+      { "title": "Get Result", "description": "View the converted GBP amount with a clear breakdown of rate and fees." },
+      { "title": "Compare Scenarios", "description": "Try different providers or fee assumptions to minimize conversion costs." }
+    ],
+    "tips": [
+      "Beware of DCC (Dynamic Currency Conversion) at ATMs/merchants—it's often more expensive.",
+      "Weekend and holiday rates may include extra markups.",
+      "Compare banks with low-cost FX services (e.g., Wise, Revolut) for better rates."
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
+    { "title": "Live USD→GBP Rates", "description": "Base your conversion on current market data." },
+    { "title": "Fee & Spread Modeling", "description": "Add fees and markups to estimate real-world outcomes." },
+    { "title": "Reverse Conversion", "description": "Convert GBP back to USD under the same assumptions." },
+    { "title": "Quick Presets", "description": "One-click amounts for common conversions (£50, £100, £500)." }
   ],
-  "faqs": [
-    {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
-    },
-    {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
-    }
+  "faq": [
+    { "q": "Why is my card's GBP amount lower than expected?", "a": "Your bank or the merchant may add a spread above the mid‑market rate plus fees." },
+    { "q": "What is DCC?", "a": "Dynamic Currency Conversion converts at the point of sale/ATM using the merchant's rate, which is usually worse than your bank's." },
+    { "q": "Do rates change during the day?", "a": "Yes. FX rates move with the market and can vary by provider and time." },
+    { "q": "How can I reduce conversion costs?", "a": "Decline DCC, compare providers, and avoid weekend markups when possible." },
+    { "q": "Is this rate the same as the Bank of England rate?", "a": "The mid‑market rate may differ from official reference rates and provider quotes." }
+  ],
+  "relativeLinks": [
+    { "title": "Currency Converter", "url": "/finance/currency-converter" },
+    { "title": "USD to EUR Calculator", "url": "/finance/usd-to-eur-calculator" },
+    { "title": "USD to JPY Calculator", "url": "/finance/usd-to-jpy-calculator" },
+    { "title": "Exchange Rate Calculator", "url": "/finance/exchange-rate-calculator" }
   ]
 }

@@ -1,46 +1,102 @@
 {
-  "about": [
-    "The Length Converter is a versatile tool for converting between various units of length and distance. From millimeters to miles, this converter handles all common length measurements used in engineering, construction, science, and everyday life.",
-    "Length conversion is fundamental in many industries including construction, manufacturing, textiles, and international trade. Our converter provides accurate conversions between metric and imperial systems.",
-    "Whether you're working on architectural plans, measuring fabric, or calculating distances, this tool ensures precise length conversions with support for both common and specialized units."
-  ],
-  "howToUse": [
-    "Enter the length value you want to convert",
-    "Select the source unit (meters, feet, inches, etc.)",
-    "Choose the target unit for conversion",
-    "View the converted length instantly",
-    "Use the result for your calculations or measurements"
-  ],
+  "about": {
+    "title": "About Length Converter",
+    "description": "The Length Converter is a versatile tool for converting between various units of length and distance. From millimeters to miles, this converter handles all common length measurements used in engineering, construction, science, and everyday life. Length conversion is fundamental in many industries including construction, manufacturing, textiles, and international trade. Whether you're working on architectural plans, measuring fabric, or calculating distances, this tool ensures precise length conversions with support for both metric and imperial systems."
+  },
+  "howTo": {
+    "title": "How to Use the Length Converter",
+    "steps": [
+      {
+        "title": "Enter Length Value",
+        "description": "Input the length or distance value you want to convert."
+      },
+      {
+        "title": "Select Source Unit",
+        "description": "Choose the source unit: meters, feet, inches, centimeters, kilometers, miles, etc."
+      },
+      {
+        "title": "Choose Target Unit",
+        "description": "Select the target unit for conversion from metric or imperial systems."
+      },
+      {
+        "title": "Get Results",
+        "description": "View the converted length instantly with high precision."
+      }
+    ],
+    "tips": [
+      "Use metric units for scientific calculations",
+      "Imperial units are common in US construction",
+      "1 meter = 3.28084 feet for quick reference"
+    ]
+  },
   "features": [
-    "Convert between metric and imperial length units",
-    "Support for millimeters, centimeters, meters, kilometers",
-    "Imperial units: inches, feet, yards, miles",
-    "Specialized units: nautical miles, light years",
-    "Real-time conversion as you type",
-    "High precision calculations",
-    "Scientific notation for large distances",
-    "Mobile-optimized interface"
+    {
+      "title": "Comprehensive Unit Support",
+      "description": "Convert between metric (mm, cm, m, km) and imperial (in, ft, yd, mi) length units."
+    },
+    {
+      "title": "Specialized Units",
+      "description": "Support for nautical miles, light years, and other specialized distance measurements."
+    },
+    {
+      "title": "Real-Time Conversion",
+      "description": "Instant length conversion as you type with immediate results display."
+    },
+    {
+      "title": "High Precision Calculations",
+      "description": "Accurate conversions with up to 15 decimal places for scientific applications."
+    },
+    {
+      "title": "Scientific Notation",
+      "description": "Handle very large or very small distances with scientific notation support."
+    },
+    {
+      "title": "Mobile Optimized",
+      "description": "Responsive design works perfectly on all devices and screen sizes."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What length units are supported?",
-      "answer": "We support metric units (mm, cm, m, km), imperial units (in, ft, yd, mi), and specialized units like nautical miles and light years."
+      "q": "What length units does the converter support?",
+      "a": "Our length converter supports metric units (millimeters, centimeters, meters, kilometers), imperial units (inches, feet, yards, miles), and specialized units like nautical miles, light years, and astronomical units for comprehensive distance conversion."
     },
     {
-      "question": "How accurate are the length conversions?",
-      "answer": "All conversions use precise mathematical formulas with high decimal accuracy for professional and scientific use."
+      "q": "How accurate are the length conversions?",
+      "a": "All length conversions use precise mathematical formulas with up to 15 decimal places of accuracy. This high precision makes our converter suitable for professional engineering, scientific research, and construction applications."
     },
     {
-      "question": "What's the difference between a mile and a nautical mile?",
-      "answer": "A statute mile is 5,280 feet, while a nautical mile is 6,076 feet (1,852 meters), used in maritime and aviation navigation."
+      "q": "What's the difference between a mile and a nautical mile?",
+      "a": "A statute mile equals 5,280 feet (1.609 kilometers), while a nautical mile equals 6,076 feet (1.852 kilometers). Nautical miles are used in maritime and aviation navigation because they're based on Earth's circumference."
     },
     {
-      "question": "Can I convert very small or very large distances?",
-      "answer": "Yes, the converter handles everything from microscopic measurements to astronomical distances with scientific notation."
+      "q": "Can I convert very small or very large distances?",
+      "a": "Yes, our length converter handles everything from microscopic measurements (micrometers, nanometers) to astronomical distances (light years, parsecs) with scientific notation support for extreme values."
     },
     {
-      "question": "Is there a limit to the precision?",
-      "answer": "The converter provides up to 15 decimal places of precision for highly accurate scientific and engineering calculations."
+      "q": "How do I convert meters to feet quickly?",
+      "a": "To convert meters to feet, multiply by 3.28084. For example, 10 meters = 32.8084 feet. Our converter automates this calculation instantly with precise results for any length value."
+    },
+    {
+      "q": "What are common length conversion factors?",
+      "a": "Common conversions: 1 inch = 2.54 cm, 1 foot = 30.48 cm, 1 yard = 0.9144 m, 1 mile = 1.609 km, 1 meter = 3.28084 feet. Our converter handles all these automatically."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Meters to Feet Converter",
+      "url": "/unit/meters-to-feet-converter"
+    },
+    {
+      "title": "Feet to Meters Converter",
+      "url": "/unit/feet-to-meters-converter"
+    },
+    {
+      "title": "Unit Converter",
+      "url": "/unit/unit-converter"
+    },
+    {
+      "title": "Unit Tools Category",
+      "url": "/unit"
     }
   ]
 }

@@ -1,37 +1,102 @@
 {
-  "about": [
-    "The Data Converter provides comprehensive conversion between different data storage units including bytes, kilobytes, megabytes, gigabytes, and terabytes. This tool is essential for IT professionals, developers, and anyone working with digital storage calculations.",
-    "Understanding data unit conversions helps in storage planning, bandwidth calculations, and file size management across different systems and applications."
-  ],
-  "howToUse": [
-    "Select the source data unit from the dropdown",
-    "Enter the value you want to convert",
-    "Choose the target unit for conversion",
-    "View the instant conversion result"
-  ],
+  "about": {
+    "title": "About Data Size Converter",
+    "description": "The Data Size Converter provides comprehensive conversion between different digital storage units including bytes, kilobytes, megabytes, gigabytes, and terabytes. This professional data conversion tool is essential for IT professionals, developers, system administrators, and anyone working with digital storage calculations. Understanding data unit conversions helps in storage planning, bandwidth calculations, file size management, and system specifications across different platforms and applications. Whether you're calculating server storage, managing file sizes, or working with network data transfer rates, our converter ensures accurate conversions between binary and decimal data units."
+  },
+  "howTo": {
+    "title": "How to Use the Data Size Converter",
+    "steps": [
+      {
+        "title": "Enter Data Value",
+        "description": "Input the data size value you want to convert in the designated field. You can enter whole numbers or decimals."
+      },
+      {
+        "title": "Select Source Unit",
+        "description": "Choose the current data unit from the dropdown menu (bytes, KB, MB, GB, TB, etc.)."
+      },
+      {
+        "title": "Choose Target Unit",
+        "description": "Select the data unit you want to convert to from the available digital storage options."
+      },
+      {
+        "title": "View Conversion Results",
+        "description": "The converted data size will appear instantly with both binary and decimal calculations where applicable."
+      }
+    ],
+    "tips": [
+      "Use binary units (1024-based) for system memory and file sizes",
+      "Use decimal units (1000-based) for storage device specifications",
+      "Remember that 1 GB = 1,024 MB in binary or 1,000 MB in decimal"
+    ]
+  },
   "features": [
-    "Multiple data unit conversions",
-    "Binary and decimal calculations",
-    "Instant conversion results",
-    "Support for all common data units",
-    "Professional accuracy for technical use"
+    {
+      "title": "Comprehensive Unit Support",
+      "description": "Convert between all common data storage units including bytes, KB, MB, GB, TB, and PB with support for both binary and decimal calculations."
+    },
+    {
+      "title": "Binary and Decimal Systems",
+      "description": "Accurate conversions using both binary (1024-based) and decimal (1000-based) systems to match different industry standards and specifications."
+    },
+    {
+      "title": "Real-time Conversion",
+      "description": "Instant data size conversion as you type with immediate results display for efficient workflow and calculations."
+    },
+    {
+      "title": "Professional Precision",
+      "description": "High-precision calculations suitable for IT professionals, system administrators, and technical applications requiring accurate data measurements."
+    },
+    {
+      "title": "Large Data Handling",
+      "description": "Support for very large data sizes with scientific notation, perfect for enterprise storage planning and big data calculations."
+    },
+    {
+      "title": "Educational Information",
+      "description": "Built-in explanations of binary vs decimal systems help users understand the differences and choose the appropriate conversion method."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What's the difference between binary and decimal data units?",
-      "answer": "Binary units (1024-based) are used by operating systems, while decimal units (1000-based) are often used by storage manufacturers. Our converter supports both standards."
+      "q": "What's the difference between binary and decimal data units?",
+      "a": "Binary units use base-1024 calculations (1 KB = 1,024 bytes) and are commonly used by operating systems and file systems. Decimal units use base-1000 calculations (1 KB = 1,000 bytes) and are often used by storage device manufacturers. Our data size converter supports both standards for accurate conversions."
     },
     {
-      "question": "How many bytes are in a kilobyte?",
-      "answer": "In binary: 1 KB = 1,024 bytes. In decimal: 1 KB = 1,000 bytes. The difference becomes more significant with larger units."
+      "q": "How many bytes are in a kilobyte, megabyte, and gigabyte?",
+      "a": "In binary system: 1 KB = 1,024 bytes, 1 MB = 1,048,576 bytes, 1 GB = 1,073,741,824 bytes. In decimal system: 1 KB = 1,000 bytes, 1 MB = 1,000,000 bytes, 1 GB = 1,000,000,000 bytes. The difference becomes more significant with larger data units."
     },
     {
-      "question": "Why do hard drive sizes appear smaller than advertised?",
-      "answer": "Manufacturers use decimal units (1000-based) while operating systems use binary units (1024-based), creating apparent size differences."
+      "q": "Why do hard drive sizes appear smaller than advertised?",
+      "a": "Storage manufacturers typically advertise capacity using decimal units (1000-based), while operating systems display capacity using binary units (1024-based). This creates an apparent size difference where a 1TB drive shows as approximately 931GB in the operating system."
     },
     {
-      "question": "Which unit system should I use?",
-      "answer": "Use binary units for system memory and file sizes, decimal units when matching manufacturer specifications or network speeds."
+      "q": "Which data unit system should I use for conversions?",
+      "a": "Use binary units (1024-based) for system memory, RAM calculations, and actual file sizes as displayed by operating systems. Use decimal units (1000-based) when matching storage device specifications, network bandwidth, or manufacturer ratings."
+    },
+    {
+      "q": "How do I convert 500 GB to TB and MB?",
+      "a": "500 GB equals 0.5 TB in both binary and decimal systems. In binary: 500 GB = 512,000 MB. In decimal: 500 GB = 500,000 MB. Our data size converter handles these calculations automatically with precise results."
+    },
+    {
+      "q": "Is the data size converter accurate for professional IT use?",
+      "a": "Yes, our converter uses precise mathematical calculations for both binary and decimal systems, making it suitable for IT professionals, system administrators, developers, and technical applications requiring accurate data storage measurements."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Unit Converter",
+      "url": "/unit/unit-converter"
+    },
+    {
+      "title": "Speed Converter",
+      "url": "/unit/speed-converter"
+    },
+    {
+      "title": "Energy Converter",
+      "url": "/unit/energy-converter"
+    },
+    {
+      "title": "Unit Tools Category",
+      "url": "/unit"
     }
   ]
 }

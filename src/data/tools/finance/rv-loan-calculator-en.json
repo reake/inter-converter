@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Rv Loan Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About RV Loan Calculator - Recreational Vehicle Financing Tool",
+    "description": "The RV Loan Calculator is a comprehensive recreational vehicle financing tool designed to help you calculate monthly payments, total costs, and loan terms for motorhomes, travel trailers, and other RVs. This calculator analyzes loan amounts, interest rates, down payments, and loan terms to determine affordable RV financing options. Whether you're buying your first RV or upgrading to a luxury motorhome, this tool provides accurate financing calculations for recreational vehicle purchases."
+  },
+  "howTo": {
+    "title": "How to Use the RV Loan Calculator",
+    "steps": [
+      {
+        "title": "Enter RV Purchase Price",
+        "description": "Input the total price of the RV or motorhome you're considering purchasing."
+      },
+      {
+        "title": "Set Down Payment Amount",
+        "description": "Enter your down payment amount or percentage (typically 10-20% for RVs)."
+      },
+      {
+        "title": "Choose Loan Term",
+        "description": "Select the loan duration (RV loans can range from 10-20 years)."
+      },
+      {
+        "title": "Enter Interest Rate",
+        "description": "Input the annual interest rate offered by your lender or estimated rate."
+      },
+      {
+        "title": "Add Additional Costs",
+        "description": "Include taxes, fees, extended warranties, and other financing costs."
+      },
+      {
+        "title": "Review Payment Details",
+        "description": "Analyze monthly payments, total interest, and overall loan costs."
+      }
+    ],
+    "tips": [
+      "RV loans typically have higher rates than auto loans but lower than personal loans",
+      "Larger down payments can significantly reduce monthly payments and interest",
+      "Consider seasonal usage when budgeting for RV payments and maintenance",
+      "Shop multiple lenders as RV loan rates can vary significantly"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "RV-Specific Loan Terms",
+      "description": "Calculate payments for extended loan terms typical of RV financing (10-20 years)."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Down Payment Analysis",
+      "description": "Analyze how different down payment amounts affect monthly payments and total costs."
+    },
+    {
+      "title": "Total Cost Calculator",
+      "description": "Calculate total financing costs including interest, fees, taxes, and additional expenses."
+    },
+    {
+      "title": "Payment Affordability Check",
+      "description": "Determine if RV payments fit within your budget and debt-to-income ratios."
+    },
+    {
+      "title": "Interest Rate Comparison",
+      "description": "Compare different interest rates and their impact on total loan costs."
+    },
+    {
+      "title": "Seasonal Payment Planning",
+      "description": "Plan for seasonal RV usage and storage costs in your budget analysis."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How do RV loans differ from auto loans?",
+      "a": "RV loans typically have longer terms (10-20 years vs. 3-7 years), higher interest rates, and may require larger down payments. However, RVs over certain values may qualify for secured loan rates similar to home equity loans."
+    },
+    {
+      "q": "What's a typical down payment for an RV?",
+      "a": "RV down payments typically range from 10-20%, though some lenders may accept as little as 5% for qualified buyers. Larger down payments (20%+) often result in better interest rates and lower monthly payments."
+    },
+    {
+      "q": "Can I deduct RV loan interest on my taxes?",
+      "a": "If your RV has sleeping, cooking, and toilet facilities, it may qualify as a second home for tax purposes, potentially making the loan interest deductible. Consult a tax professional for specific guidance."
+    },
+    {
+      "q": "What factors affect RV loan approval?",
+      "a": "Lenders consider credit score, debt-to-income ratio, down payment amount, RV age and type, and your experience with RV ownership. New RVs and Class A motorhomes often get better rates than older or smaller units."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Auto Loan Calculator",
+      "url": "/finance/auto-loan-calculator"
+    },
+    {
+      "title": "Motorcycle Loan Calculator",
+      "url": "/finance/motorcycle-loan-calculator"
+    },
+    {
+      "title": "Personal Loan Calculator",
+      "url": "/finance/personal-loan-calculator"
+    },
+    {
+      "title": "Loan Refinance Calculator",
+      "url": "/finance/loan-refinance-calculator"
+    },
+    {
+      "title": "Budget Calculator",
+      "url": "/finance/budget-calculator"
     }
   ]
 }

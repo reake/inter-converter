@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Credit Utilization Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Credit Utilization Calculator - Credit Score Impact Tool",
+    "description": "The Credit Utilization Calculator is a comprehensive credit management tool designed to help you understand how your credit card balances affect your credit score and overall creditworthiness. This calculator analyzes your credit utilization ratio across individual cards and overall credit limits, providing recommendations to optimize your credit score. Whether you're planning purchases or managing existing debt, this tool helps maintain healthy credit utilization ratios."
+  },
+  "howTo": {
+    "title": "How to Use the Credit Utilization Calculator",
+    "steps": [
+      {
+        "title": "Enter Credit Card Information",
+        "description": "Input each credit card's current balance and credit limit."
+      },
+      {
+        "title": "Calculate Individual Ratios",
+        "description": "Review utilization ratios for each individual credit card account."
+      },
+      {
+        "title": "Analyze Overall Utilization",
+        "description": "Calculate your total credit utilization across all accounts."
+      },
+      {
+        "title": "Review Credit Score Impact",
+        "description": "Understand how your current utilization affects your credit score."
+      },
+      {
+        "title": "Get Optimization Recommendations",
+        "description": "Receive suggestions for improving your credit utilization ratios."
+      },
+      {
+        "title": "Plan Payment Strategies",
+        "description": "Determine optimal payment amounts to reach target utilization levels."
+      }
+    ],
+    "tips": [
+      "Keep total utilization below 30% for good credit scores",
+      "Aim for under 10% utilization for excellent credit scores",
+      "Pay down high-utilization cards first for maximum impact",
+      "Consider making payments before statement closing dates"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Individual Card Analysis",
+      "description": "Calculate utilization ratios for each credit card separately."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Overall Utilization Calculator",
+      "description": "Determine your total credit utilization across all accounts."
+    },
+    {
+      "title": "Credit Score Impact Assessment",
+      "description": "Understand how utilization changes affect your credit score."
+    },
+    {
+      "title": "Optimization Recommendations",
+      "description": "Get specific suggestions for improving your credit utilization."
+    },
+    {
+      "title": "Payment Strategy Planner",
+      "description": "Calculate payment amounts needed to reach target utilization levels."
+    },
+    {
+      "title": "Credit Limit Increase Analysis",
+      "description": "See how credit limit increases would improve your utilization ratios."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is a good credit utilization ratio?",
+      "a": "Generally, keep your total credit utilization below 30% for good credit scores, and below 10% for excellent scores. Individual cards should also stay below 30%, with lower ratios being better for your credit score."
+    },
+    {
+      "q": "How does credit utilization affect my credit score?",
+      "a": "Credit utilization accounts for about 30% of your credit score calculation. High utilization (above 30%) can significantly lower your score, while low utilization (under 10%) helps maintain or improve your score."
+    },
+    {
+      "q": "Should I pay off cards completely or spread balances?",
+      "a": "It's generally better to pay off high-utilization cards first to reduce individual card ratios. However, having small balances (1-9% utilization) on some cards can be better than having all cards at 0% utilization."
+    },
+    {
+      "q": "When should I make payments to improve utilization?",
+      "a": "Make payments before your statement closing date to reduce the balance reported to credit bureaus. Most cards report statement balances, not current balances, so timing matters for credit score impact."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Credit Card Interest Calculator",
+      "url": "/finance/credit-card-interest-calculator"
+    },
+    {
+      "title": "Credit Card Payoff Calculator",
+      "url": "/finance/credit-card-payoff-calculator"
+    },
+    {
+      "title": "Balance Transfer Calculator",
+      "url": "/finance/balance-transfer-calculator"
+    },
+    {
+      "title": "Debt Payoff Calculator",
+      "url": "/finance/debt-payoff-calculator"
+    },
+    {
+      "title": "Personal Loan Calculator",
+      "url": "/finance/personal-loan-calculator"
     }
   ]
 }

@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Eur To Usd Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About EUR to USD Calculator - Euro Dollar Exchange Rate Converter",
+    "description": "The EUR to USD Calculator is a comprehensive currency conversion tool designed to help you convert Euros to US Dollars using real-time exchange rates. This calculator provides accurate currency conversions for international transactions, travel planning, business dealings, and investment analysis. Whether you're planning a trip to the United States, making international purchases, or analyzing foreign exchange investments, this tool delivers precise EUR/USD conversion calculations."
+  },
+  "howTo": {
+    "title": "How to Use the EUR to USD Calculator",
+    "steps": [
+      {
+        "title": "Enter Euro Amount",
+        "description": "Input the amount in Euros (EUR) that you want to convert to US Dollars."
+      },
+      {
+        "title": "Check Current Exchange Rate",
+        "description": "Review the current EUR/USD exchange rate displayed by the calculator."
+      },
+      {
+        "title": "View USD Conversion",
+        "description": "See the equivalent amount in US Dollars (USD) based on current rates."
+      },
+      {
+        "title": "Consider Exchange Fees",
+        "description": "Factor in any bank or service fees for actual currency exchange transactions."
+      },
+      {
+        "title": "Compare Historical Rates",
+        "description": "Review recent exchange rate trends to understand currency fluctuations."
+      },
+      {
+        "title": "Plan Your Transaction",
+        "description": "Use the conversion information for travel, business, or investment decisions."
+      }
+    ],
+    "tips": [
+      "Exchange rates fluctuate constantly during market hours",
+      "Banks and services typically charge 1-4% fees on currency exchanges",
+      "Consider timing for large transactions when rates are favorable",
+      "Airport and tourist area exchanges often have poor rates"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Real-Time Exchange Rates",
+      "description": "Access current EUR/USD exchange rates updated throughout trading hours."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Bidirectional Conversion",
+      "description": "Convert from Euros to Dollars or Dollars to Euros with equal accuracy."
+    },
+    {
+      "title": "Historical Rate Charts",
+      "description": "View exchange rate trends and historical EUR/USD performance data."
+    },
+    {
+      "title": "Fee Calculator",
+      "description": "Estimate total costs including typical bank and service exchange fees."
+    },
+    {
+      "title": "Rate Alerts",
+      "description": "Set notifications for when EUR/USD reaches your target exchange rate."
+    },
+    {
+      "title": "Multiple Amount Calculations",
+      "description": "Convert multiple Euro amounts simultaneously for comparison purposes."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What affects the EUR/USD exchange rate?",
+      "a": "EUR/USD rates are influenced by economic indicators, central bank policies, inflation rates, political stability, trade balances, and market sentiment. Major events like ECB or Federal Reserve announcements can cause significant rate movements."
+    },
+    {
+      "q": "When is the best time to exchange EUR to USD?",
+      "a": "The best time depends on rate trends and your specific needs. Monitor rates over time and consider exchanging when the Euro is strong against the Dollar. For large amounts, consider dollar-cost averaging over multiple transactions."
+    },
+    {
+      "q": "How accurate are online exchange rate calculators?",
+      "a": "Online calculators use interbank rates which are very accurate for reference. However, actual exchange rates from banks or services will include spreads and fees, typically 1-4% above the interbank rate."
+    },
+    {
+      "q": "What's the difference between buying and selling rates?",
+      "a": "Banks quote different rates for buying and selling currencies. The 'buy' rate is what they pay you for your Euros, while the 'sell' rate is what you pay for Dollars. The spread between these rates is how banks profit from exchanges."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Exchange Rate Calculator",
+      "url": "/finance/exchange-rate-calculator"
+    },
+    {
+      "title": "Currency Converter",
+      "url": "/finance/currency-converter"
+    },
+    {
+      "title": "Investment Calculator",
+      "url": "/finance/investment-calculator"
+    },
+    {
+      "title": "Inflation Calculator",
+      "url": "/finance/inflation-calculator"
+    },
+    {
+      "title": "Cost of Living Calculator",
+      "url": "/finance/cost-of-living-calculator"
     }
   ]
 }

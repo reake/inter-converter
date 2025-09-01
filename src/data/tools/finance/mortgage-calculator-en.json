@@ -1,41 +1,102 @@
 {
-  "about": [
-    "The Mortgage Calculator provides comprehensive analysis of home loan payments including principal, interest, taxes, insurance, and PMI. This essential tool helps homebuyers understand the true cost of homeownership and plan their budget effectively.",
-    "Calculate monthly payments, compare loan terms, and analyze the impact of down payments and interest rates. Make informed decisions about one of the largest financial commitments of your lifetime."
-  ],
-  "howToUse": [
-    "Enter the home purchase price",
-    "Input your down payment amount or percentage",
-    "Set the loan term (typically 15 or 30 years)",
-    "Enter the interest rate",
-    "Add property taxes, insurance, and PMI if applicable",
-    "Review total monthly payment and cost breakdown"
-  ],
+  "about": {
+    "title": "About Mortgage Calculator",
+    "description": "The Mortgage Calculator provides comprehensive analysis of home loan payments including principal, interest, taxes, insurance, and PMI. This essential tool helps homebuyers understand the true cost of homeownership and plan their budget effectively. Calculate monthly payments, compare loan terms, and analyze the impact of down payments and interest rates to make informed decisions about one of the largest financial commitments of your lifetime."
+  },
+  "howTo": {
+    "title": "How to Use the Mortgage Calculator",
+    "steps": [
+      {
+        "title": "Enter Home Price",
+        "description": "Input the total purchase price of the home you're considering."
+      },
+      {
+        "title": "Set Down Payment",
+        "description": "Enter your down payment amount or percentage (typically 3-20%)."
+      },
+      {
+        "title": "Choose Loan Term",
+        "description": "Select loan term: 15-year for lower total cost or 30-year for lower monthly payments."
+      },
+      {
+        "title": "Enter Interest Rate",
+        "description": "Input the current mortgage interest rate from your lender."
+      }
+    ],
+    "tips": [
+      "20% down payment avoids PMI costs",
+      "Compare 15-year vs 30-year loan terms",
+      "Include property taxes and insurance for accurate totals"
+    ]
+  },
   "features": [
-    "Complete PITI payment calculation",
-    "Down payment impact analysis",
-    "Loan term comparison (15 vs 30 year)",
-    "PMI calculation and removal timeline",
-    "Property tax and insurance estimates",
-    "Amortization schedule with extra payments",
-    "Total cost of homeownership analysis"
+    {
+      "title": "PITI Payment Calculation",
+      "description": "Calculate complete monthly payment including Principal, Interest, Taxes, and Insurance."
+    },
+    {
+      "title": "Down Payment Analysis",
+      "description": "Analyze the impact of different down payment amounts on monthly payments and PMI."
+    },
+    {
+      "title": "Loan Term Comparison",
+      "description": "Compare 15-year vs 30-year mortgages for monthly payment and total cost differences."
+    },
+    {
+      "title": "PMI Calculation",
+      "description": "Calculate Private Mortgage Insurance costs and determine removal timeline."
+    },
+    {
+      "title": "Tax and Insurance Estimates",
+      "description": "Include property taxes and homeowners insurance for accurate payment projections."
+    },
+    {
+      "title": "Amortization Schedule",
+      "description": "View detailed payment breakdown and analyze the impact of extra payments."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What does PITI stand for?",
-      "answer": "PITI stands for Principal, Interest, Taxes, and Insurance. This represents your total monthly housing payment including the loan payment plus property taxes and homeowners insurance."
+      "q": "What does PITI stand for in mortgage calculations?",
+      "a": "PITI stands for Principal, Interest, Taxes, and Insurance. This represents your total monthly housing payment including the mortgage loan payment plus property taxes and homeowners insurance. Our mortgage calculator includes all PITI components for accurate payment estimates."
     },
     {
-      "question": "How much should I put down on a house?",
-      "answer": "While 20% down avoids PMI, many programs allow 3-5% down. Consider your cash flow, other debts, and emergency fund needs when deciding on down payment amount."
+      "q": "How much should I put down when buying a house?",
+      "a": "While 20% down payment avoids PMI costs, many loan programs allow 3-5% down payments. Consider your cash flow, other debts, emergency fund needs, and long-term financial goals when deciding on down payment amount using our mortgage calculator."
     },
     {
-      "question": "What is PMI and when can I remove it?",
-      "answer": "PMI (Private Mortgage Insurance) is required when you put down less than 20%. It can typically be removed when you reach 20% equity through payments or home value appreciation."
+      "q": "What is PMI and when can I remove it?",
+      "a": "PMI (Private Mortgage Insurance) is required when you put down less than 20% on a conventional loan. It can typically be removed when you reach 20% equity through mortgage payments or home value appreciation. Our calculator shows PMI costs and removal timeline."
     },
     {
-      "question": "Should I choose a 15-year or 30-year mortgage?",
-      "answer": "15-year mortgages have higher monthly payments but lower total interest costs. 30-year mortgages offer lower monthly payments but cost more over time. Choose based on your budget and financial goals."
+      "q": "Should I choose a 15-year or 30-year mortgage?",
+      "a": "15-year mortgages have higher monthly payments but significantly lower total interest costs. 30-year mortgages offer lower monthly payments but cost more over the loan lifetime. Use our mortgage calculator to compare both options based on your budget and financial goals."
+    },
+    {
+      "q": "How do I calculate my total monthly mortgage payment?",
+      "a": "Your total monthly mortgage payment includes: loan principal and interest + property taxes + homeowners insurance + PMI (if applicable). Our mortgage calculator automatically computes all these components to show your complete monthly housing cost."
+    },
+    {
+      "q": "What interest rate should I use in the mortgage calculator?",
+      "a": "Use the current mortgage interest rate quoted by your lender or the current market rate for your loan type and credit score. Rates vary based on loan term, down payment, credit score, and market conditions. Check with multiple lenders for accurate rates."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Loan Calculator",
+      "url": "/finance/loan-calculator"
+    },
+    {
+      "title": "Tax Calculator",
+      "url": "/finance/tax-calculator"
+    },
+    {
+      "title": "Currency Converter",
+      "url": "/finance/currency-converter"
+    },
+    {
+      "title": "Finance Tools Category",
+      "url": "/finance"
     }
   ]
 }

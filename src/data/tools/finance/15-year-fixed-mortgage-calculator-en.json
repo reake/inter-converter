@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The 15 Year Fixed Mortgage Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About 15 Year Fixed Mortgage Calculator - Accelerated Home Loan Tool",
+    "description": "The 15 Year Fixed Mortgage Calculator is a specialized home financing tool designed to help homebuyers calculate monthly payments, total interest costs, and equity building potential for 15-year fixed-rate mortgages. This mid-term mortgage option balances affordable monthly payments with significant interest savings compared to 30-year loans, making it popular among homebuyers seeking faster equity building. Whether you're purchasing a home or refinancing to a shorter term, this calculator provides accurate projections for 15-year mortgage scenarios and payment planning."
+  },
+  "howTo": {
+    "title": "How to Use the 15 Year Fixed Mortgage Calculator",
+    "steps": [
+      {
+        "title": "Enter Loan Amount",
+        "description": "Input your home purchase price minus down payment, or current mortgage balance for refinancing scenarios."
+      },
+      {
+        "title": "Set Interest Rate",
+        "description": "Enter the current 15-year fixed mortgage rate from your lender or use current market averages."
+      },
+      {
+        "title": "Add Property Expenses",
+        "description": "Include property taxes, homeowners insurance, and PMI for complete monthly housing payment calculation."
+      },
+      {
+        "title": "Review Payment Structure",
+        "description": "Analyze monthly principal and interest breakdown, plus total monthly housing costs."
+      },
+      {
+        "title": "Compare Savings",
+        "description": "Compare total interest costs and savings versus 30-year mortgage options."
+      },
+      {
+        "title": "Assess Affordability",
+        "description": "Ensure monthly payments fit within your budget and debt-to-income ratio guidelines."
+      }
+    ],
+    "tips": [
+      "15-year mortgages typically offer rates 0.25-0.75% lower than 30-year loans",
+      "Payments are about 50% higher than 30-year mortgages but save substantial interest",
+      "Consider refinancing if you can afford higher payments and have good credit",
+      "Factor in reduced mortgage interest tax deductions with shorter loan terms"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Monthly Payment Calculator",
+      "description": "Calculate exact monthly principal and interest payments for 15-year fixed mortgage terms."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Interest Savings Analysis",
+      "description": "Compare total interest costs between 15-year and 30-year mortgages to quantify savings."
+    },
+    {
+      "title": "Equity Building Timeline",
+      "description": "Track how quickly you build home equity with accelerated principal payments."
+    },
+    {
+      "title": "Refinancing Calculator",
+      "description": "Calculate break-even points and savings when refinancing to a 15-year mortgage."
+    },
+    {
+      "title": "Affordability Assessment",
+      "description": "Evaluate whether 15-year mortgage payments fit within recommended debt-to-income ratios."
+    },
+    {
+      "title": "Payment Comparison",
+      "description": "Side-by-side comparison with other mortgage terms to optimize your financing choice."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What are the benefits of a 15-year mortgage?",
+      "a": "15-year mortgages offer lower interest rates, substantial interest savings (typically $100,000+ compared to 30-year loans), faster equity building, and complete homeownership in half the time. You'll be mortgage-free 15 years sooner."
+    },
+    {
+      "q": "How much higher are 15-year mortgage payments?",
+      "a": "Monthly payments are typically 40-50% higher than 30-year mortgages. For example, a $300,000 loan might cost $2,100/month (15-year) vs $1,400/month (30-year), but you'll save over $150,000 in total interest."
+    },
+    {
+      "q": "Should I refinance to a 15-year mortgage?",
+      "a": "Refinancing to a 15-year mortgage makes sense if you can afford higher payments, have good credit, and current rates are favorable. Calculate break-even points including closing costs to ensure it's financially beneficial."
+    },
+    {
+      "q": "What credit score do I need for a 15-year mortgage?",
+      "a": "Most lenders require a minimum 620 credit score, but the best rates typically require 740+. Higher credit scores can save thousands in interest over the loan term, making credit improvement worthwhile before applying."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "30 Year Fixed Mortgage Calculator",
+      "url": "/finance/30-year-fixed-mortgage-calculator"
+    },
+    {
+      "title": "10 Year Fixed Mortgage Calculator",
+      "url": "/finance/10-year-fixed-mortgage-calculator"
+    },
+    {
+      "title": "15 vs 30 Year Mortgage Calculator",
+      "url": "/finance/15-vs-30-year-mortgage-calculator"
+    },
+    {
+      "title": "Mortgage Refinance Calculator",
+      "url": "/finance/mortgage-refinance-calculator"
+    },
+    {
+      "title": "Home Affordability Calculator",
+      "url": "/finance/home-affordability-calculator"
     }
   ]
 }

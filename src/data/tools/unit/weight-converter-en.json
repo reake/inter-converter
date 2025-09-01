@@ -1,46 +1,102 @@
 {
-  "about": [
-    "The Weight Converter is an essential tool for converting between different units of weight and mass. From grams to pounds, kilograms to ounces, this converter handles all common weight measurements used in cooking, shipping, science, and commerce.",
-    "Weight conversion is crucial in international trade, cooking, fitness tracking, and scientific research. Our converter provides accurate conversions between metric and imperial weight systems.",
-    "Whether you're following a recipe, calculating shipping costs, or conducting scientific experiments, this tool ensures precise weight conversions with support for both everyday and specialized units."
-  ],
-  "howToUse": [
-    "Enter the weight value you want to convert",
-    "Select the source unit (grams, pounds, kilograms, etc.)",
-    "Choose the target unit for conversion",
-    "View the converted weight instantly",
-    "Use the result for your cooking, shipping, or calculations"
-  ],
+  "about": {
+    "title": "About Weight Converter",
+    "description": "The Weight Converter is an essential tool for converting between different units of weight and mass. From grams to pounds, kilograms to ounces, this converter handles all common weight measurements used in cooking, shipping, science, and commerce. Weight conversion is crucial in international trade, cooking, fitness tracking, and scientific research. Whether you're following a recipe, calculating shipping costs, or conducting scientific experiments, this tool ensures precise weight conversions with support for both metric and imperial weight systems."
+  },
+  "howTo": {
+    "title": "How to Use the Weight Converter",
+    "steps": [
+      {
+        "title": "Enter Weight Value",
+        "description": "Input the weight or mass value you want to convert."
+      },
+      {
+        "title": "Select Source Unit",
+        "description": "Choose the source unit: grams, pounds, kilograms, ounces, stones, etc."
+      },
+      {
+        "title": "Choose Target Unit",
+        "description": "Select the target unit for conversion from metric or imperial systems."
+      },
+      {
+        "title": "Get Results",
+        "description": "View the converted weight instantly with high precision."
+      }
+    ],
+    "tips": [
+      "Use grams for precise cooking measurements",
+      "Pounds are common for body weight in the US",
+      "1 kilogram = 2.20462 pounds for quick reference"
+    ]
+  },
   "features": [
-    "Convert between metric and imperial weight units",
-    "Support for grams, kilograms, metric tons",
-    "Imperial units: ounces, pounds, stones, tons",
-    "Specialized units: carats, grains, troy ounces",
-    "Real-time conversion as you type",
-    "High precision calculations",
-    "Scientific notation for large masses",
-    "Mobile-friendly responsive design"
+    {
+      "title": "Comprehensive Weight Units",
+      "description": "Convert between metric (g, kg, tonnes) and imperial (oz, lb, stone, ton) weight units."
+    },
+    {
+      "title": "Specialized Units",
+      "description": "Support for carats, grains, troy ounces, and other specialized weight measurements."
+    },
+    {
+      "title": "Real-Time Conversion",
+      "description": "Instant weight conversion as you type with immediate results display."
+    },
+    {
+      "title": "High Precision Calculations",
+      "description": "Accurate conversions with decimal precision for cooking, shipping, and scientific use."
+    },
+    {
+      "title": "Scientific Notation",
+      "description": "Handle very large or very small masses with scientific notation support."
+    },
+    {
+      "title": "Mobile Optimized",
+      "description": "Responsive design works perfectly on all devices and screen sizes."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What weight units are supported?",
-      "answer": "We support metric units (g, kg, tonnes), imperial units (oz, lb, stone, ton), and specialized units like carats and troy ounces."
+      "q": "What weight units does the converter support?",
+      "a": "Our weight converter supports metric units (milligrams, grams, kilograms, tonnes), imperial units (ounces, pounds, stones, tons), and specialized units like carats, grains, and troy ounces for comprehensive weight conversion."
     },
     {
-      "question": "What's the difference between mass and weight?",
-      "answer": "Mass is the amount of matter in an object, while weight is the force of gravity on that mass. For practical conversions, they're used interchangeably."
+      "q": "What's the difference between mass and weight?",
+      "a": "Mass is the amount of matter in an object (measured in kg), while weight is the gravitational force on that mass (measured in Newtons). For practical weight conversions, these terms are used interchangeably."
     },
     {
-      "question": "How accurate are the weight conversions?",
-      "answer": "All conversions use precise mathematical formulas with high decimal accuracy suitable for commercial and scientific applications."
+      "q": "How accurate are the weight conversions?",
+      "a": "All weight conversions use precise mathematical formulas with high decimal accuracy. Our converter is suitable for commercial shipping, cooking recipes, scientific research, and professional applications."
     },
     {
-      "question": "What is a troy ounce?",
-      "answer": "A troy ounce (31.1 grams) is used for precious metals and is different from a regular ounce (28.35 grams)."
+      "q": "What is a troy ounce and how is it different?",
+      "a": "A troy ounce equals 31.1035 grams and is used for precious metals like gold and silver. A regular (avoirdupois) ounce equals 28.3495 grams and is used for general weight measurements."
     },
     {
-      "question": "Can I convert very small or very large weights?",
-      "answer": "Yes, the converter handles everything from milligrams to metric tons with appropriate precision and scientific notation."
+      "q": "Can I convert very small or very large weights?",
+      "a": "Yes, our weight converter handles everything from milligrams (for precise measurements) to metric tons (for industrial applications) with appropriate precision and scientific notation support."
+    },
+    {
+      "q": "How do I convert pounds to kilograms quickly?",
+      "a": "To convert pounds to kilograms, divide by 2.20462. For example, 150 pounds ÷ 2.20462 = 68.04 kg. Our converter automates this calculation instantly with precise results."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Pounds to Kg Converter",
+      "url": "/unit/pounds-to-kg-converter"
+    },
+    {
+      "title": "Kg to Pounds Converter",
+      "url": "/unit/kg-to-pounds-converter"
+    },
+    {
+      "title": "Unit Converter",
+      "url": "/unit/unit-converter"
+    },
+    {
+      "title": "Unit Tools Category",
+      "url": "/unit"
     }
   ]
 }

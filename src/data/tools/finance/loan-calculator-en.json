@@ -1,40 +1,102 @@
 {
-  "about": [
-    "The Loan Calculator helps you determine monthly payments, total interest costs, and amortization schedules for any type of loan. Whether it's a mortgage, auto loan, personal loan, or business loan, this tool provides comprehensive loan analysis.",
-    "Understanding your loan terms before signing helps you make informed financial decisions and compare different loan offers effectively. Calculate the true cost of borrowing and plan your budget accordingly."
-  ],
-  "howToUse": [
-    "Enter the loan amount (principal)",
-    "Input the annual interest rate (APR)",
-    "Set the loan term (years or months)",
-    "View monthly payment and total costs",
-    "Analyze the amortization schedule and payment breakdown"
-  ],
+  "about": {
+    "title": "About Loan Calculator",
+    "description": "The Loan Calculator helps you determine monthly payments, total interest costs, and amortization schedules for any type of loan. Whether it's a mortgage, auto loan, personal loan, or business loan, this tool provides comprehensive loan analysis. Understanding your loan terms before signing helps you make informed financial decisions and compare different loan offers effectively. Calculate the true cost of borrowing and plan your budget accordingly."
+  },
+  "howTo": {
+    "title": "How to Use the Loan Calculator",
+    "steps": [
+      {
+        "title": "Enter Loan Amount",
+        "description": "Input the total loan amount (principal) you want to borrow."
+      },
+      {
+        "title": "Set Interest Rate",
+        "description": "Enter the annual interest rate (APR) offered by the lender."
+      },
+      {
+        "title": "Choose Loan Term",
+        "description": "Set the loan term in years or months (e.g., 5 years, 60 months)."
+      },
+      {
+        "title": "Review Results",
+        "description": "Analyze monthly payment, total interest, and amortization schedule."
+      }
+    ],
+    "tips": [
+      "Compare different loan terms to find optimal payments",
+      "Consider the impact of extra payments on total interest",
+      "Use APR instead of interest rate for accurate comparisons"
+    ]
+  },
   "features": [
-    "Monthly payment calculation",
-    "Total interest cost analysis",
-    "Detailed amortization schedule",
-    "Principal vs interest breakdown",
-    "Multiple loan comparison",
-    "Extra payment impact calculator",
-    "Loan affordability assessment"
+    {
+      "title": "Monthly Payment Calculation",
+      "description": "Calculate exact monthly loan payments based on principal, interest rate, and term."
+    },
+    {
+      "title": "Total Interest Analysis",
+      "description": "See the total interest cost over the life of the loan and compare different scenarios."
+    },
+    {
+      "title": "Amortization Schedule",
+      "description": "View detailed payment breakdown showing principal and interest for each payment."
+    },
+    {
+      "title": "Payment Breakdown",
+      "description": "Understand how much of each payment goes to principal vs interest over time."
+    },
+    {
+      "title": "Loan Comparison Tool",
+      "description": "Compare multiple loan offers side-by-side to find the best terms."
+    },
+    {
+      "title": "Extra Payment Calculator",
+      "description": "Calculate the impact of additional payments on loan term and interest savings."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What's included in the monthly payment calculation?",
-      "answer": "The basic calculation includes principal and interest (P&I). For mortgages, you may need to add property taxes, insurance, and PMI separately for the total monthly housing payment."
+      "q": "What's included in the monthly loan payment calculation?",
+      "a": "The basic loan calculator includes principal and interest (P&I) payments. For mortgages, you may need to add property taxes, homeowners insurance, and PMI separately for the total monthly housing payment. Our calculator focuses on the core loan payment components."
     },
     {
-      "question": "How does the loan term affect my payments?",
-      "answer": "Longer terms result in lower monthly payments but higher total interest costs. Shorter terms mean higher monthly payments but significant interest savings over the life of the loan."
+      "q": "How does the loan term affect my monthly payments?",
+      "a": "Longer loan terms result in lower monthly payments but higher total interest costs over the loan lifetime. Shorter terms mean higher monthly payments but significant interest savings. Our loan calculator helps you compare different term options to find the right balance."
     },
     {
-      "question": "Can I calculate the impact of extra payments?",
-      "answer": "Yes, you can see how additional principal payments reduce the loan term and total interest. Even small extra payments can save thousands in interest over time."
+      "q": "Can I calculate the impact of making extra loan payments?",
+      "a": "Yes, our loan calculator shows how additional principal payments reduce the loan term and total interest paid. Even small extra payments can save thousands in interest over time and help you pay off loans years earlier."
     },
     {
-      "question": "What's the difference between interest rate and APR?",
-      "answer": "Interest rate is the cost of borrowing the principal. APR includes the interest rate plus additional fees and costs, giving you the true annual cost of the loan."
+      "q": "What's the difference between interest rate and APR?",
+      "a": "Interest rate is the basic cost of borrowing the principal amount. APR (Annual Percentage Rate) includes the interest rate plus additional fees and costs like origination fees, giving you the true annual cost of the loan. Use APR for accurate loan comparisons."
+    },
+    {
+      "q": "What types of loans can I calculate with this tool?",
+      "a": "Our loan calculator works for any fixed-rate loan including auto loans, personal loans, student loans, business loans, and mortgages. Simply enter the loan amount, interest rate, and term to get accurate payment calculations."
+    },
+    {
+      "q": "How accurate are the loan payment calculations?",
+      "a": "Our loan calculator uses standard amortization formulas used by banks and lenders, providing highly accurate payment estimates. However, actual payments may vary slightly due to rounding, fees, or specific lender calculation methods."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Mortgage Calculator",
+      "url": "/finance/mortgage-calculator"
+    },
+    {
+      "title": "Tax Calculator",
+      "url": "/finance/tax-calculator"
+    },
+    {
+      "title": "Currency Converter",
+      "url": "/finance/currency-converter"
+    },
+    {
+      "title": "Finance Tools Category",
+      "url": "/finance"
     }
   ]
 }

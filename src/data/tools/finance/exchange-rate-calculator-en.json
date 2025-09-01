@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Exchange Rate Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Exchange Rate Calculator - Multi-Currency Conversion Tool",
+    "description": "The Exchange Rate Calculator is a comprehensive multi-currency conversion tool designed to help you convert between different world currencies using real-time exchange rates. This calculator supports major currencies including USD, EUR, GBP, JPY, CAD, AUD, and many others, providing accurate conversions for international business, travel, investments, and personal finance planning. Whether you're comparing currency values or planning international transactions, this tool delivers precise exchange rate calculations."
+  },
+  "howTo": {
+    "title": "How to Use the Exchange Rate Calculator",
+    "steps": [
+      {
+        "title": "Select Source Currency",
+        "description": "Choose the currency you want to convert from using the dropdown menu."
+      },
+      {
+        "title": "Enter Amount",
+        "description": "Input the amount in your source currency that you want to convert."
+      },
+      {
+        "title": "Select Target Currency",
+        "description": "Choose the currency you want to convert to from the available options."
+      },
+      {
+        "title": "View Conversion Result",
+        "description": "See the converted amount based on current real-time exchange rates."
+      },
+      {
+        "title": "Check Exchange Rate",
+        "description": "Review the current exchange rate between your selected currencies."
+      },
+      {
+        "title": "Compare Multiple Currencies",
+        "description": "Convert the same amount to multiple currencies for comparison."
+      }
+    ],
+    "tips": [
+      "Exchange rates change constantly during market trading hours",
+      "Major currency pairs typically have tighter spreads",
+      "Consider transaction fees when planning actual exchanges",
+      "Monitor rates over time for better exchange timing"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Multi-Currency Support",
+      "description": "Convert between 150+ world currencies including major and exotic pairs."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Real-Time Exchange Rates",
+      "description": "Access live exchange rates updated throughout global trading hours."
+    },
+    {
+      "title": "Historical Rate Data",
+      "description": "View exchange rate trends and historical performance charts."
+    },
+    {
+      "title": "Cross-Rate Calculations",
+      "description": "Calculate exchange rates between any two currencies, not just USD pairs."
+    },
+    {
+      "title": "Rate Comparison Tool",
+      "description": "Compare exchange rates from multiple sources and providers."
+    },
+    {
+      "title": "Currency Trend Analysis",
+      "description": "Analyze currency strength and weakness trends over different time periods."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How often are exchange rates updated?",
+      "a": "Exchange rates are updated in real-time during market hours (Monday-Friday). Rates may be delayed by 15-20 minutes depending on the data source. Weekend rates typically reflect Friday's closing prices."
+    },
+    {
+      "q": "Why do exchange rates differ between sources?",
+      "a": "Different providers use various data sources and may include different spreads. Interbank rates are the most accurate, while retail rates include margins for banks and exchange services. Our calculator uses mid-market rates for reference."
+    },
+    {
+      "q": "What factors influence exchange rates?",
+      "a": "Exchange rates are affected by economic indicators, central bank policies, inflation, political stability, trade balances, market sentiment, and global events. Major economic announcements can cause significant rate movements."
+    },
+    {
+      "q": "How can I get better exchange rates?",
+      "a": "For better rates, compare multiple providers, avoid airport exchanges, use online services, consider timing around major economic events, and for large amounts, negotiate with banks or use specialized foreign exchange services."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "EUR to USD Calculator",
+      "url": "/finance/eur-to-usd-calculator"
+    },
+    {
+      "title": "Currency Converter",
+      "url": "/finance/currency-converter"
+    },
+    {
+      "title": "Investment Calculator",
+      "url": "/finance/investment-calculator"
+    },
+    {
+      "title": "Inflation Calculator",
+      "url": "/finance/inflation-calculator"
+    },
+    {
+      "title": "Cost of Living Calculator",
+      "url": "/finance/cost-of-living-calculator"
     }
   ]
 }

@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Roi Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About ROI Calculator",
+    "description": "The ROI (Return on Investment) Calculator is a powerful financial analysis tool that helps you measure the efficiency and profitability of your investments. This calculator determines the percentage return on your investment by comparing the gain or loss relative to the initial investment cost. Whether you're evaluating business investments, real estate purchases, stock portfolios, or marketing campaigns, this tool provides clear insights into investment performance and helps you make data-driven financial decisions."
+  },
+  "howTo": {
+    "title": "How to Use the ROI Calculator",
+    "steps": [
+      {
+        "title": "Initial Investment",
+        "description": "Enter the total amount of money you initially invested or the cost of the investment."
+      },
+      {
+        "title": "Current Value",
+        "description": "Input the current value of your investment or the amount you received when you sold it."
+      },
+      {
+        "title": "Additional Costs",
+        "description": "Include any additional costs such as fees, taxes, or maintenance expenses related to the investment."
+      },
+      {
+        "title": "Time Period",
+        "description": "Specify the investment duration to calculate annualized ROI for better comparison."
+      },
+      {
+        "title": "Calculate ROI",
+        "description": "Review the ROI percentage, total gain/loss, and annualized return on your investment."
+      },
+      {
+        "title": "Compare Investments",
+        "description": "Use the results to compare different investment opportunities and make informed decisions."
+      }
+    ],
+    "tips": [
+      "Include all costs (fees, taxes, maintenance) for accurate ROI calculation",
+      "Compare annualized ROI for investments with different time periods",
+      "Consider risk factors alongside ROI when evaluating investments",
+      "Track ROI regularly to monitor investment performance"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Comprehensive ROI Analysis",
+      "description": "Calculate total return, percentage gain/loss, and annualized ROI for complete investment analysis."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Multiple Investment Types",
+      "description": "Suitable for stocks, real estate, business investments, marketing campaigns, and more."
+    },
+    {
+      "title": "Cost Inclusion",
+      "description": "Factor in all associated costs including fees, taxes, and maintenance for accurate calculations."
+    },
+    {
+      "title": "Annualized Returns",
+      "description": "Calculate annualized ROI to compare investments with different time horizons effectively."
+    },
+    {
+      "title": "Performance Tracking",
+      "description": "Monitor investment performance over time with detailed return analysis."
+    },
+    {
+      "title": "Investment Comparison",
+      "description": "Compare multiple investment opportunities to identify the most profitable options."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is a good ROI percentage?",
+      "a": "A good ROI varies by investment type and risk level. Stock market averages 7-10% annually, real estate typically 8-12%, while high-risk investments may target 15%+ returns. Compare ROI against similar investments and consider risk factors."
+    },
+    {
+      "q": "How is ROI calculated?",
+      "a": "ROI = (Current Value - Initial Investment - Additional Costs) / (Initial Investment + Additional Costs) × 100. For annualized ROI, divide by the number of years and multiply by 100 for percentage."
+    },
+    {
+      "q": "Should I include taxes in ROI calculation?",
+      "a": "Yes, include all costs including taxes, fees, and maintenance expenses for accurate ROI calculation. This gives you the true net return on your investment after all expenses."
+    },
+    {
+      "q": "What's the difference between ROI and annualized ROI?",
+      "a": "ROI shows total return over the entire investment period, while annualized ROI shows the average yearly return. Annualized ROI is better for comparing investments with different time periods."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Investment Calculator",
+      "url": "/finance/investment-calculator"
+    },
+    {
+      "title": "Compound Interest Calculator",
+      "url": "/finance/compound-interest-calculator"
+    },
+    {
+      "title": "Break Even Calculator",
+      "url": "/finance/break-even-calculator"
+    },
+    {
+      "title": "Capital Gains Tax Calculator",
+      "url": "/finance/capital-gains-tax-calculator"
+    },
+    {
+      "title": "Stock Calculator",
+      "url": "/finance/stock-calculator"
     }
   ]
 }

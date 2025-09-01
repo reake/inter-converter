@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Cd Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About CD Calculator - Certificate of Deposit Investment Tool",
+    "description": "The CD Calculator is a comprehensive savings tool designed to help you calculate returns on Certificate of Deposit investments and compare CD rates from different banks. Whether you're evaluating short-term or long-term CDs, this calculator provides accurate projections for interest earnings, maturity values, and annual percentage yields. Understanding CD calculations helps you maximize your savings returns and choose the best deposit terms for your financial goals."
+  },
+  "howTo": {
+    "title": "How to Use the CD Calculator",
+    "steps": [
+      {
+        "title": "Initial Deposit",
+        "description": "Enter the principal amount you plan to invest in the Certificate of Deposit."
+      },
+      {
+        "title": "Interest Rate",
+        "description": "Input the annual percentage yield (APY) or interest rate offered by the bank."
+      },
+      {
+        "title": "Term Length",
+        "description": "Select the CD term length from 3 months to 5 years or enter a custom term period."
+      },
+      {
+        "title": "Compounding Frequency",
+        "description": "Choose how often interest compounds: daily, monthly, quarterly, or annually."
+      },
+      {
+        "title": "Additional Deposits",
+        "description": "For add-on CDs, specify any additional deposits you plan to make during the term."
+      },
+      {
+        "title": "Review Results",
+        "description": "Analyze total interest earned, final balance, and effective annual yield for your CD investment."
+      }
+    ],
+    "tips": [
+      "Compare CD rates from multiple banks and credit unions",
+      "Consider CD laddering strategy for better liquidity",
+      "Understand early withdrawal penalties before investing",
+      "Factor in inflation when evaluating real returns"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Maturity Value Calculation",
+      "description": "Calculate the total value of your CD at maturity including principal and compound interest."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Interest Earnings Projection",
+      "description": "Project total interest earnings over the CD term with accurate compounding calculations."
+    },
+    {
+      "title": "Multiple Term Comparison",
+      "description": "Compare returns across different CD terms to optimize your investment timeline."
+    },
+    {
+      "title": "APY vs Interest Rate Analysis",
+      "description": "Understand the difference between nominal rates and Annual Percentage Yield (APY)."
+    },
+    {
+      "title": "CD Laddering Strategy",
+      "description": "Plan CD laddering strategies for better liquidity and rate optimization."
+    },
+    {
+      "title": "Early Withdrawal Impact",
+      "description": "Calculate the impact of early withdrawal penalties on your CD returns."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What's the difference between CD interest rate and APY?",
+      "a": "The interest rate is the nominal rate, while APY (Annual Percentage Yield) includes the effect of compounding. APY gives you the true annual return and is the better metric for comparing CDs from different institutions."
+    },
+    {
+      "q": "How often do CDs compound interest?",
+      "a": "Most CDs compound interest daily or monthly, though some compound quarterly or annually. More frequent compounding results in slightly higher returns. Always check the compounding frequency when comparing CD offers."
+    },
+    {
+      "q": "What happens if I withdraw money early from a CD?",
+      "a": "Early withdrawal typically results in penalties, often 3-12 months of interest depending on the CD term. Some banks may also charge principal if you haven't earned enough interest. Always understand penalty terms before investing."
+    },
+    {
+      "q": "Are CDs better than high-yield savings accounts?",
+      "a": "CDs typically offer higher rates but lock up your money for a fixed term. High-yield savings accounts offer more liquidity but usually lower rates. Choose based on your liquidity needs and rate preferences."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "High Yield Savings Calculator",
+      "url": "/finance/high-yield-savings-calculator"
+    },
+    {
+      "title": "Savings Calculator",
+      "url": "/finance/savings-calculator"
+    },
+    {
+      "title": "Investment Calculator",
+      "url": "/finance/investment-calculator"
+    },
+    {
+      "title": "Compound Interest Calculator",
+      "url": "/finance/compound-interest-calculator"
+    },
+    {
+      "title": "Bond Calculator",
+      "url": "/finance/bond-calculator"
     }
   ]
 }

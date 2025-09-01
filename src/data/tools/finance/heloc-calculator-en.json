@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Heloc Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About HELOC Calculator - Home Equity Line of Credit Tool",
+    "description": "The HELOC Calculator is a comprehensive home equity financing tool designed to help homeowners calculate credit limits, monthly payments, and costs for Home Equity Lines of Credit. This calculator helps you determine available credit, interest-only payments during the draw period, and principal plus interest payments during repayment. Whether you need flexible access to home equity for ongoing expenses or major projects, this tool provides accurate HELOC projections."
+  },
+  "howTo": {
+    "title": "How to Use the HELOC Calculator",
+    "steps": [
+      {
+        "title": "Enter Property Value",
+        "description": "Input your current home value based on recent appraisal or market analysis."
+      },
+      {
+        "title": "Add Existing Mortgage",
+        "description": "Enter your current mortgage balance to calculate available equity."
+      },
+      {
+        "title": "Set Credit Limit",
+        "description": "Determine your desired HELOC credit limit (typically up to 80% LTV)."
+      },
+      {
+        "title": "Enter Interest Rate",
+        "description": "Input the variable interest rate offered by your lender."
+      },
+      {
+        "title": "Set Draw Period",
+        "description": "Specify the draw period length (typically 10 years) and repayment period."
+      },
+      {
+        "title": "Calculate Payments",
+        "description": "Review interest-only payments during draw period and full payments during repayment."
+      }
+    ],
+    "tips": [
+      "HELOCs typically have variable rates that can change over time",
+      "During draw period, you may only need to pay interest",
+      "Consider rate caps and how payments change during repayment period",
+      "Factor in closing costs and annual fees when comparing options"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Available Credit Calculator",
+      "description": "Calculate how much credit you can access based on home value and existing mortgage balance."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Two-Phase Payment Analysis",
+      "description": "Analyze payments during both the draw period (interest-only) and repayment period (principal + interest)."
+    },
+    {
+      "title": "Variable Rate Impact",
+      "description": "Calculate how interest rate changes affect monthly payments over the HELOC term."
+    },
+    {
+      "title": "HELOC vs Home Equity Loan",
+      "description": "Compare flexible HELOC access with fixed-rate home equity loan payments."
+    },
+    {
+      "title": "Payment Shock Calculator",
+      "description": "Analyze payment increases when transitioning from draw period to repayment period."
+    },
+    {
+      "title": "Interest-Only vs Principal Payments",
+      "description": "Compare costs of making interest-only payments versus paying down principal during draw period."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How does a HELOC work?",
+      "a": "A HELOC works like a credit card secured by your home. During the draw period (typically 10 years), you can borrow up to your credit limit and usually pay only interest. During the repayment period (15-20 years), you pay both principal and interest on the outstanding balance."
+    },
+    {
+      "q": "What's the difference between a HELOC and home equity loan?",
+      "a": "A HELOC provides flexible access to funds with variable rates and interest-only payments during the draw period. A home equity loan provides a lump sum with fixed rates and consistent monthly payments. HELOCs offer flexibility, while home equity loans offer payment predictability."
+    },
+    {
+      "q": "How much can I borrow with a HELOC?",
+      "a": "Most lenders allow you to borrow up to 80-85% of your home's value minus your existing mortgage balance. For example, if your home is worth $400,000 and you owe $200,000, you might qualify for a HELOC of $120,000-$140,000."
+    },
+    {
+      "q": "Are HELOC interest payments tax deductible?",
+      "a": "HELOC interest may be tax deductible if you use the funds to buy, build, or substantially improve your home. The deduction is limited to interest on up to $750,000 of qualified residence loans. Consult a tax professional for specific guidance."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Home Equity Loan Calculator",
+      "url": "/finance/home-equity-loan-calculator"
+    },
+    {
+      "title": "Cash-Out Refinance Calculator",
+      "url": "/finance/cash-out-refinance-calculator"
+    },
+    {
+      "title": "Home Improvement Loan Calculator",
+      "url": "/finance/home-improvement-loan-calculator"
+    },
+    {
+      "title": "Mortgage Calculator",
+      "url": "/finance/mortgage-calculator"
+    },
+    {
+      "title": "Debt Consolidation Calculator",
+      "url": "/finance/debt-consolidation-calculator"
     }
   ]
 }

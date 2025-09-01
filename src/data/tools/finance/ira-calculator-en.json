@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Ira Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About IRA Calculator - Individual Retirement Account Planning Tool",
+    "description": "The IRA Calculator is a comprehensive retirement planning tool designed to help you calculate the growth potential of your Individual Retirement Account investments. Whether you're planning for Traditional IRA or Roth IRA contributions, this calculator provides accurate projections of your retirement savings growth over time. Understanding IRA calculations is essential for maximizing your retirement savings and making informed decisions about contribution limits, tax benefits, and withdrawal strategies."
+  },
+  "howTo": {
+    "title": "How to Use the IRA Calculator",
+    "steps": [
+      {
+        "title": "Current Age",
+        "description": "Enter your current age to calculate the time horizon until retirement."
+      },
+      {
+        "title": "Retirement Age",
+        "description": "Specify your planned retirement age (typically 59½ or later to avoid penalties)."
+      },
+      {
+        "title": "Current IRA Balance",
+        "description": "Input your existing IRA balance if you already have an account."
+      },
+      {
+        "title": "Annual Contribution",
+        "description": "Enter your planned annual IRA contribution (subject to IRS limits)."
+      },
+      {
+        "title": "Expected Return",
+        "description": "Set the expected annual rate of return based on your investment strategy."
+      },
+      {
+        "title": "IRA Type",
+        "description": "Select Traditional IRA or Roth IRA to see different tax implications."
+      }
+    ],
+    "tips": [
+      "Maximize annual contributions to reach IRS limits ($6,500 for 2023, $7,500 if 50+)",
+      "Consider Roth IRA for tax-free withdrawals in retirement",
+      "Start early to maximize compound growth over time",
+      "Review and adjust investment allocation based on age and risk tolerance"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "IRA Growth Projection",
+      "description": "Calculate projected IRA balance at retirement with compound interest growth."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Contribution Limit Tracking",
+      "description": "Track annual contribution limits and catch-up contributions for age 50+."
+    },
+    {
+      "title": "Traditional vs Roth Comparison",
+      "description": "Compare Traditional IRA tax deductions with Roth IRA tax-free growth."
+    },
+    {
+      "title": "Required Distribution Calculator",
+      "description": "Calculate required minimum distributions (RMDs) starting at age 73."
+    },
+    {
+      "title": "Tax Impact Analysis",
+      "description": "Analyze tax implications of IRA contributions and withdrawals."
+    },
+    {
+      "title": "Catch-up Contribution Calculator",
+      "description": "Calculate additional contribution limits available for investors age 50 and older."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What's the difference between Traditional and Roth IRA?",
+      "a": "Traditional IRA contributions may be tax-deductible now, but withdrawals in retirement are taxed as income. Roth IRA contributions are made with after-tax dollars, but qualified withdrawals in retirement are tax-free."
+    },
+    {
+      "q": "What are the 2024 IRA contribution limits?",
+      "a": "For 2024, you can contribute up to $7,000 to an IRA ($8,000 if you're 50 or older). These limits apply to the total of all your IRA contributions, whether Traditional or Roth."
+    },
+    {
+      "q": "When can I withdraw from my IRA without penalties?",
+      "a": "You can withdraw IRA funds penalty-free starting at age 59½. Early withdrawals before this age typically incur a 10% penalty, though some exceptions exist for first-time home purchases, education expenses, and medical costs."
+    },
+    {
+      "q": "Do I have to take required minimum distributions from my IRA?",
+      "a": "Traditional IRAs require minimum distributions starting at age 73. Roth IRAs have no required distributions during the owner's lifetime, making them excellent for estate planning."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "401k Calculator",
+      "url": "/finance/401k-calculator"
+    },
+    {
+      "title": "Retirement Calculator",
+      "url": "/finance/retirement-calculator"
+    },
+    {
+      "title": "Roth IRA Calculator",
+      "url": "/finance/roth-ira-calculator"
+    },
+    {
+      "title": "Social Security Calculator",
+      "url": "/finance/social-security-calculator"
+    },
+    {
+      "title": "Investment Calculator",
+      "url": "/finance/investment-calculator"
     }
   ]
 }

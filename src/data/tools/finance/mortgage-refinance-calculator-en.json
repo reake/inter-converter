@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Mortgage Refinance Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Mortgage Refinance Calculator - Rate and Term Refinancing Tool",
+    "description": "The Mortgage Refinance Calculator is a comprehensive refinancing analysis tool designed to help homeowners determine if refinancing their mortgage makes financial sense. This calculator compares your current mortgage with potential new loan terms, calculating monthly payment changes, total interest savings, and break-even points. Whether you're looking to lower your rate, change loan terms, or access equity, this tool provides accurate refinancing projections."
+  },
+  "howTo": {
+    "title": "How to Use the Mortgage Refinance Calculator",
+    "steps": [
+      {
+        "title": "Enter Current Mortgage Details",
+        "description": "Input your current mortgage balance, interest rate, and remaining loan term."
+      },
+      {
+        "title": "Set New Loan Terms",
+        "description": "Enter the proposed new interest rate and loan term for the refinance."
+      },
+      {
+        "title": "Add Closing Costs",
+        "description": "Include estimated closing costs and fees for the refinancing transaction."
+      },
+      {
+        "title": "Compare Monthly Payments",
+        "description": "Review how refinancing affects your monthly mortgage payment."
+      },
+      {
+        "title": "Calculate Break-Even Point",
+        "description": "Determine how long it takes to recoup closing costs through payment savings."
+      },
+      {
+        "title": "Analyze Total Savings",
+        "description": "Review total interest savings over the life of the new loan."
+      }
+    ],
+    "tips": [
+      "Generally, refinancing makes sense if you can reduce your rate by 0.5-1%",
+      "Consider how long you plan to stay in the home when evaluating break-even",
+      "Factor in all closing costs, not just the interest rate difference",
+      "Consider changing loan terms to accelerate payoff or reduce payments"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Payment Comparison Calculator",
+      "description": "Compare current mortgage payments with new refinanced loan payments."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Break-Even Analysis",
+      "description": "Calculate how long it takes to recoup refinancing costs through monthly savings."
+    },
+    {
+      "title": "Total Interest Savings",
+      "description": "Calculate lifetime interest savings from refinancing to a lower rate."
+    },
+    {
+      "title": "Closing Cost Calculator",
+      "description": "Factor in all refinancing costs including origination fees, appraisal, and title costs."
+    },
+    {
+      "title": "Term Change Analysis",
+      "description": "Analyze the impact of changing loan terms (15-year vs 30-year) during refinancing."
+    },
+    {
+      "title": "Net Benefit Calculator",
+      "description": "Calculate net financial benefit after considering all costs and savings."
+    }
+  ],
+  "faq": [
+    {
+      "q": "When should I consider refinancing my mortgage?",
+      "a": "Consider refinancing when rates drop 0.5-1% below your current rate, you want to change loan terms, need to remove PMI, or want to switch from ARM to fixed-rate. Also consider if you plan to stay in the home long enough to recoup closing costs."
+    },
+    {
+      "q": "How much does it cost to refinance a mortgage?",
+      "a": "Refinancing typically costs 2-5% of the loan amount in closing costs. This includes origination fees (0.5-1%), appraisal ($300-600), title insurance, and other fees. Some lenders offer no-cost refinancing with slightly higher rates."
+    },
+    {
+      "q": "How long does the refinancing process take?",
+      "a": "Mortgage refinancing typically takes 30-45 days from application to closing. This includes time for application processing, appraisal, underwriting, and final approval. Having documents ready can speed up the process."
+    },
+    {
+      "q": "Can I refinance if my home value has decreased?",
+      "a": "Refinancing with decreased home value is challenging but possible. You may need to bring cash to closing, consider government programs like HARP, or wait for home values to recover. Lenders typically require 80% LTV or lower."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Cash Out Refinance Calculator",
+      "url": "/finance/cash-out-refinance-calculator"
+    },
+    {
+      "title": "Mortgage Calculator",
+      "url": "/finance/mortgage-calculator"
+    },
+    {
+      "title": "15 vs 30 Year Mortgage Calculator",
+      "url": "/finance/15-vs-30-year-mortgage-calculator"
+    },
+    {
+      "title": "ARM vs Fixed Rate Calculator",
+      "url": "/finance/arm-vs-fixed-rate-calculator"
+    },
+    {
+      "title": "Closing Cost Calculator",
+      "url": "/finance/closing-cost-calculator"
     }
   ]
 }

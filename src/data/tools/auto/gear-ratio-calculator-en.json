@@ -1,52 +1,102 @@
 {
-  "about": [
-    "Our Gear Ratio Calculator helps you determine ring and pinion ratios quickly and accurately. Built for real-world automotive projects, it supports drivetrain planning, axle swaps, off-road builds, and performance tuning without the guesswork.",
-    "A correct gear ratio directly affects acceleration, cruising RPM, fuel economy, towing ability, and overall drivability. With this gear ratio calculator, you can test multiple ring and pinion combinations and instantly see how each setup changes the final drive ratio.",
-    "To use the tool, simply enter the number of ring gear teeth and the number of pinion gear teeth. The calculator returns the exact gear ratio (for example, 41 ÷ 11 = 3.73). This ratio describes how many times the driveshaft (pinion) turns for every rotation of the axle (ring gear).",
-    "Performance enthusiasts often pick shorter (numerically higher) ratios such as 4.10 or 4.56 to improve off-the-line torque and quicken acceleration. Daily drivers and highway cruisers may prefer taller (numerically lower) ratios such as 3.42 or 3.08 for lower RPM at speed and better efficiency.",
-    "When combined with tire diameter and transmission ratios, your gear ratio selection influences real-world speed at a given RPM. Off-road builds with larger tires usually move to a higher numerical axle ratio to restore lost torque and keep the engine in its power band.",
-    "Because this gear ratio calculator runs entirely in your browser, no data is uploaded. You can experiment freely with different ring and pinion tooth counts, compare outputs side by side, and save time on manual math.",
-    "Typical use cases include axle re-gearing after tire size changes, optimizing quarter-mile performance, preparing for towing and hauling, and validating OEM specifications. Whether you are tuning a muscle car, a 4x4 truck, or a track build, the calculator provides fast, reliable results.",
-    "Tip: After picking a ratio, review your cruising RPM at common highway speeds with a separate RPM vs. speed tool. The combined insight from both calculators helps you balance acceleration, noise, comfort, and fuel consumption for your specific use case."
-  ],
-  "howToUse": [
-    "Enter the number of ring gear teeth (for example, 41).",
-    "Enter the number of pinion gear teeth (for example, 11).",
-    "View the calculated gear ratio instantly (for example, 3.73).",
-    "Adjust inputs to compare multiple ring and pinion combinations.",
-    "Record results and shortlist ratios that match your goals (acceleration, cruising RPM, towing).",
-    "Validate your choice by considering tire diameter and transmission ratios in downstream calculators."
-  ],
+  "about": {
+    "title": "About Gear Ratio Calculator",
+    "description": "Our Gear Ratio Calculator helps you determine ring and pinion ratios quickly and accurately. Built for real-world automotive projects, it supports drivetrain planning, axle swaps, off-road builds, and performance tuning without the guesswork. A correct gear ratio directly affects acceleration, cruising RPM, fuel economy, towing ability, and overall drivability. With this gear ratio calculator, you can test multiple ring and pinion combinations and instantly see how each setup changes the final drive ratio."
+  },
+  "howTo": {
+    "title": "How to Use the Gear Ratio Calculator",
+    "steps": [
+      {
+        "title": "Enter Ring Gear Teeth",
+        "description": "Input the number of ring gear teeth (typically 35-50 teeth for most applications)."
+      },
+      {
+        "title": "Enter Pinion Gear Teeth",
+        "description": "Input the number of pinion gear teeth (typically 8-15 teeth for most applications)."
+      },
+      {
+        "title": "Calculate Ratio",
+        "description": "View the calculated gear ratio instantly (ring teeth ÷ pinion teeth = ratio)."
+      },
+      {
+        "title": "Compare Options",
+        "description": "Test multiple combinations to find the optimal ratio for your application."
+      }
+    ],
+    "tips": [
+      "Higher numerical ratios (4.10+) improve acceleration but increase cruising RPM",
+      "Lower numerical ratios (3.08-3.42) reduce RPM for better highway efficiency",
+      "Match front and rear axle ratios on 4WD vehicles to prevent driveline binding"
+    ]
+  },
   "features": [
-    "Accurate ring and pinion gear ratio calculation in one step.",
-    "Instant results with clear formatting for quick comparison.",
-    "Useful for street, track, towing, and off-road applications.",
-    "Works offline; no data is transmitted to servers.",
-    "Great companion for RPM vs. speed and tire size calculators.",
-    "Optimized for mobile and desktop with a clean interface.",
-    "Designed for enthusiasts, technicians, and DIY builders alike.",
-    "Lightweight, fast, and free to use."
+    {
+      "title": "Accurate Gear Ratio Calculation",
+      "description": "Precise ring and pinion gear ratio calculation using the standard formula (ring ÷ pinion)."
+    },
+    {
+      "title": "Instant Results",
+      "description": "Get immediate gear ratio results with clear formatting for quick comparison."
+    },
+    {
+      "title": "Multiple Applications",
+      "description": "Perfect for street, track, towing, off-road, and performance applications."
+    },
+    {
+      "title": "Offline Operation",
+      "description": "Works entirely in your browser with no data transmission to servers."
+    },
+    {
+      "title": "Performance Planning",
+      "description": "Essential tool for drivetrain planning, axle swaps, and performance optimization."
+    },
+    {
+      "title": "Professional Accuracy",
+      "description": "Designed for enthusiasts, technicians, and professional builders."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What is a gear ratio and why does it matter?",
-      "answer": "Gear ratio equals ring gear teeth divided by pinion gear teeth (e.g., 41 ÷ 11 = 3.73). Higher numerical ratios improve acceleration by multiplying torque but raise cruising RPM; lower ratios reduce RPM at speed and improve efficiency."
+      "q": "What is a gear ratio and why does it matter?",
+      "a": "Gear ratio equals ring gear teeth divided by pinion gear teeth (e.g., 41 ÷ 11 = 3.73). Higher numerical ratios improve acceleration by multiplying torque but raise cruising RPM; lower ratios reduce RPM at speed and improve fuel efficiency. Our gear ratio calculator helps you find the optimal balance."
     },
     {
-      "question": "How do I calculate ring and pinion gear ratio?",
-      "answer": "Divide the ring gear tooth count by the pinion gear tooth count. The calculator shows the ratio to two decimals by default and supports quick comparison across setups."
+      "q": "How do I calculate ring and pinion gear ratio?",
+      "a": "Simply divide the ring gear tooth count by the pinion gear tooth count. For example, 41 ring teeth ÷ 11 pinion teeth = 3.73 ratio. Our calculator performs this calculation instantly and displays results with precision for easy comparison."
     },
     {
-      "question": "Which ratio works best with larger tires or off-road builds?",
-      "answer": "Bigger tires reduce effective torque. Off-road builds typically use a higher numerical axle ratio (e.g., 4.10–4.88) to restore drivability and keep the engine within its power band."
+      "q": "Which gear ratio works best with larger tires or off-road builds?",
+      "a": "Larger tires effectively reduce torque multiplication, so off-road builds typically use higher numerical axle ratios (4.10–4.88) to restore drivability and keep the engine in its optimal power band. Use our calculator to determine the best ratio for your tire size."
     },
     {
-      "question": "Does a higher gear ratio hurt highway fuel economy?",
-      "answer": "Often yes. Higher numerical ratios increase RPM at a given speed, which can add noise and fuel consumption. Choose a ratio that balances acceleration, towing, and cruising comfort."
+      "q": "Does a higher gear ratio hurt highway fuel economy?",
+      "a": "Higher numerical ratios increase engine RPM at highway speeds, which typically increases fuel consumption and noise. Choose a gear ratio that balances your needs for acceleration, towing capability, and cruising comfort based on your primary driving conditions."
     },
     {
-      "question": "Do I need to re-gear both axles on a 4x4?",
-      "answer": "Yes. Front and rear axle ratios must match to avoid driveline binding in 4WD. Always re-gear both axles to the same ratio."
+      "q": "Do I need to re-gear both axles on a 4WD vehicle?",
+      "a": "Yes, front and rear axle ratios must match exactly to prevent driveline binding when in 4WD mode. Always re-gear both axles to the same ratio. Mismatched ratios can cause expensive drivetrain damage."
+    },
+    {
+      "q": "What are common gear ratios for different applications?",
+      "a": "Street performance: 3.73-4.10, Off-road/towing: 4.10-4.88, Highway cruising: 3.08-3.42, Drag racing: 4.30-4.88. The optimal ratio depends on your engine's power band, tire size, transmission ratios, and intended use."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "RPM Calculator",
+      "url": "/auto/rpm-calculator"
+    },
+    {
+      "title": "Tire Speed Calculator",
+      "url": "/auto/tire-speed-calculator"
+    },
+    {
+      "title": "Torque Horsepower Calculator",
+      "url": "/auto/torque-horsepower-calculator"
+    },
+    {
+      "title": "Automotive Tools Category",
+      "url": "/auto"
     }
   ]
 }

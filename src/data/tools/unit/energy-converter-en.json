@@ -1,37 +1,102 @@
 {
-  "about": [
-    "The Energy Converter provides comprehensive conversion between different energy units including joules, calories, BTUs, kilowatt-hours, and more. This tool is essential for engineers, scientists, and professionals working with energy calculations.",
-    "Understanding energy unit conversions helps in power system design, thermal calculations, and energy efficiency analysis across various applications."
-  ],
-  "howToUse": [
-    "Select the source energy unit from the dropdown",
-    "Enter the energy value you want to convert",
-    "Choose the target unit for conversion",
-    "View the instant conversion result"
-  ],
+  "about": {
+    "title": "About Energy Converter",
+    "description": "The Energy Converter provides comprehensive conversion between different energy units including joules, calories, BTUs, kilowatt-hours, and more specialized energy measurements. This professional energy conversion tool is essential for engineers, scientists, HVAC professionals, and anyone working with energy calculations across thermal, electrical, and mechanical systems. Understanding energy unit conversions helps in power system design, thermal calculations, energy efficiency analysis, and scientific research applications. Whether you're calculating heating requirements, electrical consumption, or scientific energy measurements, our converter ensures accurate conversions between all major energy units with professional precision."
+  },
+  "howTo": {
+    "title": "How to Use the Energy Converter",
+    "steps": [
+      {
+        "title": "Enter Energy Value",
+        "description": "Input the energy value you want to convert in the designated field. You can enter whole numbers or decimals for precise calculations."
+      },
+      {
+        "title": "Select Source Unit",
+        "description": "Choose the current energy unit from the dropdown menu (joules, calories, BTU, kWh, etc.)."
+      },
+      {
+        "title": "Choose Target Unit",
+        "description": "Select the energy unit you want to convert to from the available energy measurement options."
+      },
+      {
+        "title": "View Conversion Results",
+        "description": "The converted energy value will appear instantly with high precision calculations suitable for engineering and scientific use."
+      }
+    ],
+    "tips": [
+      "Use joules for scientific and SI unit calculations",
+      "Use kWh for electrical energy consumption measurements",
+      "Use BTU for heating, cooling, and HVAC system calculations"
+    ]
+  },
   "features": [
-    "Multiple energy unit conversions",
-    "Scientific and engineering units",
-    "High precision calculations",
-    "Support for thermal and electrical energy",
-    "Professional accuracy for technical use"
+    {
+      "title": "Comprehensive Energy Units",
+      "description": "Convert between joules, calories, BTU, kWh, and other energy units covering thermal, electrical, and mechanical energy measurements."
+    },
+    {
+      "title": "Scientific Precision",
+      "description": "High-precision calculations using exact conversion factors suitable for engineering, scientific research, and professional applications."
+    },
+    {
+      "title": "Real-time Conversion",
+      "description": "Instant energy conversion as you type with immediate results display for efficient workflow and calculations."
+    },
+    {
+      "title": "HVAC and Thermal Applications",
+      "description": "Specialized support for BTU conversions commonly used in heating, ventilation, air conditioning, and thermal system design."
+    },
+    {
+      "title": "Electrical Energy Support",
+      "description": "Accurate kWh conversions for electrical energy consumption, power system analysis, and energy efficiency calculations."
+    },
+    {
+      "title": "Educational Resources",
+      "description": "Built-in information about different energy units and their applications in various engineering and scientific fields."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What's the difference between joules and calories?",
-      "answer": "Joules are the SI unit for energy, while calories measure thermal energy. 1 calorie equals approximately 4.184 joules."
+      "q": "What's the difference between joules and calories for energy measurement?",
+      "a": "Joules are the SI (International System) unit for energy used in scientific and engineering applications, while calories measure thermal energy, particularly in food and nutrition. 1 calorie equals exactly 4.184 joules. Our energy converter handles both units with precise calculations for all applications."
     },
     {
-      "question": "How do I convert kWh to joules?",
-      "answer": "1 kilowatt-hour equals 3,600,000 joules (3.6 MJ). Multiply kWh by 3,600,000 to get joules."
+      "q": "How do I convert kilowatt-hours (kWh) to joules?",
+      "a": "1 kilowatt-hour equals exactly 3,600,000 joules (3.6 megajoules). To convert kWh to joules, multiply the kWh value by 3,600,000. For example, 5 kWh = 18,000,000 joules. Our energy converter performs this calculation automatically with full precision."
     },
     {
-      "question": "What are BTUs used for?",
-      "answer": "BTUs (British Thermal Units) are commonly used in heating, ventilation, and air conditioning systems to measure thermal energy."
+      "q": "What are BTUs used for in energy calculations?",
+      "a": "BTUs (British Thermal Units) are commonly used in heating, ventilation, and air conditioning (HVAC) systems to measure thermal energy. 1 BTU equals approximately 1,055 joules. BTUs are standard in HVAC system ratings, furnace capacity, and cooling system specifications."
     },
     {
-      "question": "Which energy unit should I use?",
-      "answer": "Use joules for scientific calculations, kWh for electrical energy, calories for food energy, and BTUs for HVAC applications."
+      "q": "Which energy unit should I use for different applications?",
+      "a": "Use joules for scientific calculations and SI unit systems, kWh for electrical energy consumption and utility billing, calories for food energy and nutrition, BTUs for HVAC and thermal systems, and foot-pounds for mechanical energy in imperial systems."
+    },
+    {
+      "q": "How accurate is the energy converter for professional use?",
+      "a": "Our energy converter uses exact international conversion factors and maintains high decimal precision, making it suitable for engineering calculations, scientific research, HVAC system design, and professional energy analysis applications."
+    },
+    {
+      "q": "Can I convert between different types of energy units?",
+      "a": "Yes, our energy converter handles all major energy units including thermal energy (BTU, calories), electrical energy (kWh, joules), and mechanical energy (foot-pounds) with accurate cross-conversions between different energy measurement systems."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Power Converter",
+      "url": "/unit/power-converter"
+    },
+    {
+      "title": "Temperature Converter",
+      "url": "/unit/temperature-converter"
+    },
+    {
+      "title": "Unit Converter",
+      "url": "/unit/unit-converter"
+    },
+    {
+      "title": "Unit Tools Category",
+      "url": "/unit"
     }
   ]
 }

@@ -1,39 +1,107 @@
 {
-  "about": [
-    "The Pregnancy Calculator estimates your due date, current pregnancy week, and important milestones based on your last menstrual period or conception date. Accurate pregnancy dating is essential for proper prenatal care and monitoring.",
-    "Understanding pregnancy timeline helps track fetal development, schedule important appointments, and prepare for each trimester. The calculator provides comprehensive pregnancy information and milestone tracking."
-  ],
-  "howToUse": [
-    "Enter your last menstrual period date",
-    "Or input your estimated conception date",
-    "View your estimated due date",
-    "See current pregnancy week and trimester",
-    "Track important pregnancy milestones"
-  ],
+  "about": {
+    "title": "About Pregnancy Calculator",
+    "description": "The Pregnancy Calculator estimates your due date, current pregnancy week, and important milestones based on your last menstrual period or conception date. Accurate pregnancy dating is essential for proper prenatal care and monitoring. Understanding pregnancy timeline helps track fetal development, schedule important appointments, and prepare for each trimester. The calculator provides comprehensive pregnancy information and milestone tracking for expectant mothers."
+  },
+  "howTo": {
+    "title": "How to Use the Pregnancy Calculator",
+    "steps": [
+      {
+        "title": "Enter Last Menstrual Period",
+        "description": "Input the first day of your last menstrual period (LMP) for accurate due date calculation."
+      },
+      {
+        "title": "Or Input Conception Date",
+        "description": "Alternatively, enter your estimated conception date if you know when conception occurred."
+      },
+      {
+        "title": "View Due Date",
+        "description": "See your estimated due date calculated based on the standard 280-day pregnancy duration."
+      },
+      {
+        "title": "Check Current Week",
+        "description": "View your current pregnancy week and trimester with detailed progression information."
+      },
+      {
+        "title": "Track Milestones",
+        "description": "Monitor important pregnancy milestones and fetal development stages throughout your pregnancy."
+      },
+      {
+        "title": "Plan Appointments",
+        "description": "Use the timeline to schedule prenatal appointments and important medical checkups."
+      }
+    ],
+    "tips": [
+      "Keep track of your last menstrual period date for accurate calculations",
+      "Remember that due dates are estimates with a 2-week window",
+      "Schedule regular prenatal appointments based on your pregnancy timeline",
+      "Consult healthcare providers for personalized pregnancy care"
+    ]
+  },
   "features": [
-    "Due date calculation",
-    "Current pregnancy week tracking",
-    "Trimester breakdown",
-    "Fetal development milestones",
-    "Important appointment reminders",
-    "Pregnancy timeline visualization"
+    {
+      "title": "Due Date Calculation",
+      "description": "Accurate due date estimation based on last menstrual period or conception date."
+    },
+    {
+      "title": "Pregnancy Week Tracking",
+      "description": "Current pregnancy week calculation with detailed trimester information."
+    },
+    {
+      "title": "Trimester Breakdown",
+      "description": "Complete trimester timeline with important milestones for each stage."
+    },
+    {
+      "title": "Fetal Development Milestones",
+      "description": "Key fetal development stages and important pregnancy milestones tracking."
+    },
+    {
+      "title": "Appointment Reminders",
+      "description": "Important prenatal appointment scheduling and medical checkup reminders."
+    },
+    {
+      "title": "Pregnancy Timeline",
+      "description": "Visual pregnancy timeline with week-by-week progression and development stages."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "How accurate is the due date calculation?",
-      "answer": "Due dates are estimates with a 2-week window. Only 5% of babies are born on their exact due date. Most are born within 2 weeks before or after."
+      "q": "How accurate is the due date calculation?",
+      "a": "Due dates are estimates with a 2-week window of accuracy. Only about 5% of babies are born on their exact due date, with most births occurring within 2 weeks before or after the estimated date. Ultrasound dating in early pregnancy can provide more precise estimates."
     },
     {
-      "question": "What's the difference between gestational age and fetal age?",
-      "answer": "Gestational age is calculated from the last menstrual period (about 2 weeks longer). Fetal age is from conception. Medical professionals typically use gestational age."
+      "q": "What's the difference between gestational age and fetal age?",
+      "a": "Gestational age is calculated from the last menstrual period and is about 2 weeks longer than fetal age. Fetal age is calculated from conception. Medical professionals typically use gestational age for pregnancy dating and milestone tracking."
     },
     {
-      "question": "When do the trimesters begin and end?",
-      "answer": "First trimester: weeks 1-12, Second trimester: weeks 13-27, Third trimester: weeks 28-40. Each trimester has distinct developmental milestones."
+      "q": "When do the trimesters begin and end?",
+      "a": "First trimester: weeks 1-12 (organ formation), Second trimester: weeks 13-27 (rapid growth), Third trimester: weeks 28-40 (final development and preparation for birth). Each trimester has distinct developmental milestones and medical considerations."
     },
     {
-      "question": "Should I rely solely on this calculator?",
-      "answer": "This calculator provides estimates. Always consult healthcare providers for accurate dating, especially if you have irregular cycles or other complications."
+      "q": "Should I rely solely on this calculator for pregnancy planning?",
+      "a": "This calculator provides helpful estimates, but always consult healthcare providers for accurate dating and personalized care. Factors like irregular cycles, medical conditions, or conception timing can affect accuracy, requiring professional medical assessment."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Ovulation Calculator",
+      "url": "/health/ovulation-calculator"
+    },
+    {
+      "title": "BMI Calculator",
+      "url": "/health/bmi-calculator"
+    },
+    {
+      "title": "Calorie Calculator",
+      "url": "/health/calorie-calculator"
+    },
+    {
+      "title": "Water Intake Calculator",
+      "url": "/health/water-intake-calculator"
+    },
+    {
+      "title": "Sleep Calculator",
+      "url": "/health/sleep-calculator"
     }
   ]
 }

@@ -1,31 +1,40 @@
 {
-  "about": [
-    "The Usda Mortgage Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "USDA Mortgage Calculator - Zero-Down Payment, Guarantee Fee & Monthly Payment Estimator",
+    "description": "Estimate your monthly mortgage payment for USDA loans, including principal & interest, property taxes, homeowners insurance, the upfront guarantee fee (often financed), and the annual fee. See how eligibility rules and DTI affect affordability."
+  },
+  "howTo": {
+    "title": "How to Use the USDA Mortgage Calculator",
+    "steps": [
+      { "title": "Enter Home Price", "description": "Input the target purchase price for the rural-eligible property." },
+      { "title": "Set Down Payment (0% Typical)", "description": "USDA loans often allow zero down; adjust if you plan to put money down." },
+      { "title": "Add Rates & Fees", "description": "Enter interest rate, upfront guarantee fee (can be financed), and annual fee." },
+      { "title": "Include Taxes & Insurance", "description": "Add property taxes, homeowners insurance, and HOA if applicable." },
+      { "title": "Review Payment & DTI", "description": "See monthly payment breakdown and estimate debt-to-income impact." }
+    ],
+    "tips": [
+      "Confirm property eligibility and household income limits for USDA programs.",
+      "The upfront guarantee fee can be financed into the loan amount.",
+      "Lower DTI and strong credit may improve approval odds and pricing."
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
+    { "title": "Zero-Down Modeling", "description": "Accurately estimate payments with 0% down scenarios common to USDA loans." },
+    { "title": "Guarantee & Annual Fee Support", "description": "Model the upfront guarantee fee and ongoing annual fee with finance option." },
+    { "title": "Full Escrow Breakdown", "description": "Include taxes, insurance, and HOA for a realistic monthly payment." },
+    { "title": "DTI Awareness", "description": "Estimate front-end/back-end DTI impact for qualification insights." }
   ],
-  "faqs": [
-    {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
-    },
-    {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
-    }
+  "faq": [
+    { "q": "What is a USDA loan?", "a": "A government-backed mortgage for eligible rural properties with income limits, often allowing zero down payment." },
+    { "q": "What is the guarantee fee?", "a": "An upfront fee (commonly financed) plus a small annual fee that replaces traditional mortgage insurance." },
+    { "q": "Can I finance the guarantee fee?", "a": "Yes, many borrowers roll the upfront guarantee fee into the loan amount subject to program rules." },
+    { "q": "Are there income and location limits?", "a": "Yes. USDA loans require household income to be under limits, and the property must be in an eligible rural area." },
+    { "q": "How does USDA differ from FHA?", "a": "USDA allows zero down with guarantee/annual fees; FHA requires a down payment and uses upfront/annual MIP, not location-based eligibility." }
+  ],
+  "relativeLinks": [
+    { "title": "Mortgage Calculator", "url": "/finance/mortgage-calculator" },
+    { "title": "Mortgage APR Calculator", "url": "/finance/mortgage-apr-calculator" },
+    { "title": "Mortgage Amortization Calculator", "url": "/finance/mortgage-amortization-calculator" },
+    { "title": "Loan Calculator", "url": "/finance/loan-calculator" }
   ]
 }

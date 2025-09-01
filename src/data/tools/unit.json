@@ -2,7 +2,7 @@
   {
     "id": "temperature-converter",
     "name": "Temperature Converter",
-    "description": "Convert between Celsius, Fahrenheit and Kelvin temperature scales. Professional temperature conversion tool.",
+    "description": "Temperature Converter - Celsius, Fahrenheit & Kelvin temperature conversion tool with precise calculations and formula explanations.",
     "titleSuffix": "Celsius, Fahrenheit & Kelvin",
     "category": "unit",
     "keywords": [
@@ -19,6 +19,7 @@
     ],
     "path": "/unit/temperature-converter",
     "isActive": true,
+    "seoflag": true,
     "searchVolume": 285000,
     "difficulty": 1,
     "icon": "🌡️"
@@ -26,7 +27,7 @@
   {
     "id": "length-converter",
     "name": "Length Converter",
-    "description": "Convert between metric and imperial length units. Meters, feet, inches, centimeters conversion tool.",
+    "description": "Length Converter - Metric & Imperial Units conversion tool for meters, feet, inches, and centimeters with accurate calculations.",
     "titleSuffix": "Metric & Imperial Units",
     "category": "unit",
     "keywords": [
@@ -43,6 +44,7 @@
     ],
     "path": "/unit/length-converter",
     "isActive": true,
+    "seoflag": true,
     "searchVolume": 195000,
     "difficulty": 1,
     "icon": "📏"
@@ -50,7 +52,7 @@
   {
     "id": "weight-converter",
     "name": "Weight Converter",
-    "description": "Convert between pounds, kilograms and more weight units. Professional mass conversion tool.",
+    "description": "Weight Converter - Pounds, Kilograms & More mass conversion tool with precise calculations and multiple unit support.",
     "titleSuffix": "Pounds, Kilograms & More",
     "category": "unit",
     "keywords": [
@@ -67,6 +69,7 @@
     ],
     "path": "/unit/weight-converter",
     "isActive": true,
+    "seoflag": true,
     "searchVolume": 175000,
     "difficulty": 1,
     "icon": "⚖️"
@@ -74,7 +77,7 @@
   {
     "id": "volume-converter",
     "name": "Volume Converter",
-    "description": "Convert between liters, gallons and more volume units. Professional liquid measurement tool.",
+    "description": "Volume Converter - Liters, Gallons & More liquid measurement tool with accurate volume calculations and conversions.",
     "titleSuffix": "Liters, Gallons & More",
     "category": "unit",
     "keywords": [
@@ -91,6 +94,7 @@
     ],
     "path": "/unit/volume-converter",
     "isActive": true,
+    "seoflag": true,
     "searchVolume": 125000,
     "difficulty": 1,
     "icon": "🥤"
@@ -98,7 +102,7 @@
   {
     "id": "area-converter",
     "name": "Area Converter",
-    "description": "Convert between m², ft², acres and hectares. Professional area measurement tool.",
+    "description": "Area Converter - m², ft², Acres & Hectares area measurement tool with precise surface area calculations.",
     "titleSuffix": "m², ft², Acres & Hectares",
     "category": "unit",
     "keywords": [
@@ -115,6 +119,7 @@
     ],
     "path": "/unit/area-converter",
     "isActive": false,
+    "seoflag": true,
     "searchVolume": 85000,
     "difficulty": 1,
     "icon": "📐"
@@ -122,7 +127,7 @@
   {
     "id": "speed-converter",
     "name": "Speed Converter",
-    "description": "Convert between MPH, KMH, m/s and knots. Professional speed conversion tool.",
+    "description": "Speed Converter - MPH, KMH, m/s & Knots velocity conversion tool with accurate speed calculations.",
     "titleSuffix": "MPH, KMH, m/s & Knots",
     "category": "unit",
     "keywords": [
@@ -139,6 +144,7 @@
     ],
     "path": "/unit/speed-converter",
     "isActive": false,
+    "seoflag": true,
     "searchVolume": 95000,
     "difficulty": 1,
     "icon": "🏃"
@@ -146,7 +152,7 @@
   {
     "id": "energy-converter",
     "name": "Energy Converter",
-    "description": "Convert between joules, calories, BTU, kWh and other energy units.",
+    "description": "Energy Converter - Joules, Calories, BTU & kWh energy conversion tool with precise calculations and multiple units.",
     "titleSuffix": "Joules, Calories, BTU & kWh",
     "category": "unit",
     "keywords": [
@@ -163,6 +169,7 @@
     ],
     "path": "/unit/energy-converter",
     "isActive": false,
+    "seoflag": true,
     "searchVolume": 65000,
     "difficulty": 2,
     "icon": "⚡"
@@ -170,7 +177,7 @@
   {
     "id": "pressure-converter",
     "name": "Pressure Converter",
-    "description": "Convert between PSI, bar, pascal, atmosphere and other pressure units.",
+    "description": "Pressure Converter - PSI, Bar, Pascal & ATM pressure conversion tool with accurate calculations and formula support.",
     "titleSuffix": "PSI, Bar, Pascal & ATM",
     "category": "unit",
     "keywords": [
@@ -187,6 +194,7 @@
     ],
     "path": "/unit/pressure-converter",
     "isActive": false,
+    "seoflag": true,
     "searchVolume": 55000,
     "difficulty": 2,
     "icon": "🌪️"
@@ -194,7 +202,7 @@
   {
     "id": "power-converter",
     "name": "Power Converter",
-    "description": "Convert between watts, horsepower, BTU/hr and other power units.",
+    "description": "Power Converter - Watts, Horsepower & BTU/hr power conversion tool with precise calculations and multiple units.",
     "titleSuffix": "Watts, Horsepower & BTU/hr",
     "category": "unit",
     "keywords": [
@@ -211,6 +219,7 @@
     ],
     "path": "/unit/power-converter",
     "isActive": false,
+    "seoflag": true,
     "searchVolume": 45000,
     "difficulty": 2,
     "icon": "⚡"
@@ -218,7 +227,7 @@
   {
     "id": "data-converter",
     "name": "Data Size Converter",
-    "description": "Convert between bytes, KB, MB, GB, TB and other digital storage units.",
+    "description": "Data Size Converter - Bytes, KB, MB, GB & TB digital storage conversion tool with accurate file size calculations.",
     "titleSuffix": "Bytes, KB, MB, GB & TB",
     "category": "unit",
     "keywords": [
@@ -235,6 +244,7 @@
     ],
     "path": "/unit/data-converter",
     "isActive": false,
+    "seoflag": true,
     "searchVolume": 75000,
     "difficulty": 1,
     "icon": "💾"
@@ -242,7 +252,7 @@
   {
     "id": "fahrenheit-to-celsius-converter",
     "name": "Fahrenheit to Celsius Converter",
-    "description": "Convert Fahrenheit to Celsius temperature with precise calculations and formula explanation.",
+    "description": "Fahrenheit to Celsius Converter - °F to °C Formula temperature conversion tool with precise calculations and step-by-step explanations.",
     "titleSuffix": "°F to °C Formula",
     "category": "unit",
     "keywords": [
@@ -259,6 +269,7 @@
     ],
     "path": "/unit/fahrenheit-to-celsius-converter",
     "isActive": false,
+    "seoflag": true,
     "searchVolume": 245000,
     "difficulty": 1,
     "icon": "🌡️"
@@ -266,7 +277,7 @@
   {
     "id": "celsius-to-fahrenheit-converter",
     "name": "Celsius to Fahrenheit Converter",
-    "description": "Convert Celsius to Fahrenheit temperature with precise calculations and formula explanation.",
+    "description": "Celsius to Fahrenheit Converter - °C to °F Formula temperature conversion tool with precise calculations and step-by-step explanations.",
     "titleSuffix": "°C to °F Formula",
     "category": "unit",
     "keywords": [
@@ -283,6 +294,7 @@
     ],
     "path": "/unit/celsius-to-fahrenheit-converter",
     "isActive": false,
+    "seoflag": true,
     "searchVolume": 225000,
     "difficulty": 1,
     "icon": "🌡️"
@@ -290,7 +302,7 @@
   {
     "id": "pounds-to-kg-converter",
     "name": "Pounds to Kg Converter",
-    "description": "Convert pounds to kilograms with precise calculations and conversion formula.",
+    "description": "Pounds to Kg Converter - Lbs to Kg Conversion weight conversion tool with precise calculations and formula explanations.",
     "titleSuffix": "Lbs to Kg Conversion",
     "category": "unit",
     "keywords": [
@@ -307,6 +319,7 @@
     ],
     "path": "/unit/pounds-to-kg-converter",
     "isActive": false,
+    "seoflag": true,
     "searchVolume": 198000,
     "difficulty": 1,
     "icon": "⚖️"
@@ -314,7 +327,7 @@
   {
     "id": "kg-to-pounds-converter",
     "name": "Kg to Pounds Converter",
-    "description": "Convert kilograms to pounds with precise calculations and conversion formula.",
+    "description": "Kg to Pounds Converter - Kg to Lbs Conversion weight conversion tool with precise calculations and formula explanations.",
     "titleSuffix": "Kg to Lbs Conversion",
     "category": "unit",
     "keywords": [
@@ -331,6 +344,7 @@
     ],
     "path": "/unit/kg-to-pounds-converter",
     "isActive": false,
+    "seoflag": true,
     "searchVolume": 185000,
     "difficulty": 1,
     "icon": "⚖️"
@@ -338,7 +352,7 @@
   {
     "id": "unit-converter",
     "name": "Universal Unit Converter",
-    "description": "Convert between all types of units including length, weight, temperature, volume, area, speed, energy, pressure, power, and data.",
+    "description": "Universal Unit Converter - All-in-One Measurement Tool for length, weight, temperature, volume, area, speed, energy, pressure, power, and data conversions.",
     "titleSuffix": "All-in-One Measurement Tool",
     "category": "unit",
     "keywords": [
@@ -355,6 +369,7 @@
     ],
     "path": "/unit/unit-converter",
     "isActive": false,
+    "seoflag": true,
     "searchVolume": 325000,
     "difficulty": 2,
     "icon": "🔄"
@@ -362,7 +377,7 @@
   {
     "id": "cm-to-inches-converter",
     "name": "CM to Inches Converter",
-    "description": "Convert centimeters to inches with precise calculations and conversion formula.",
+    "description": "CM to Inches Converter - CM to Inches Length Tool with precise calculations and conversion formula for accurate measurements.",
     "titleSuffix": "CM to Inches Length Tool",
     "category": "unit",
     "keywords": [
@@ -374,6 +389,7 @@
     ],
     "path": "/unit/cm-to-inches-converter",
     "isActive": false,
+    "seoflag": true,
     "searchVolume": 155000,
     "difficulty": 1,
     "icon": "📏"
@@ -381,7 +397,7 @@
   {
     "id": "inches-to-cm-converter",
     "name": "Inches to CM Converter",
-    "description": "Convert inches to centimeters with precise calculations and conversion formula.",
+    "description": "Inches to CM Converter - Inches to CM Length Tool with precise calculations and conversion formula for accurate measurements.",
     "titleSuffix": "Inches to CM Length Tool",
     "category": "unit",
     "keywords": [
@@ -393,6 +409,7 @@
     ],
     "path": "/unit/inches-to-cm-converter",
     "isActive": false,
+    "seoflag": true,
     "searchVolume": 145000,
     "difficulty": 1,
     "icon": "📏"
@@ -400,7 +417,7 @@
   {
     "id": "feet-to-meters-converter",
     "name": "Feet to Meters Converter",
-    "description": "Convert feet to meters with precise calculations and conversion formula.",
+    "description": "Feet to Meters Converter - Feet to Meters Distance Tool with precise calculations and conversion formula for accurate measurements.",
     "titleSuffix": "Feet to Meters Distance Tool",
     "category": "unit",
     "keywords": [
@@ -412,6 +429,7 @@
     ],
     "path": "/unit/feet-to-meters-converter",
     "isActive": false,
+    "seoflag": true,
     "searchVolume": 125000,
     "difficulty": 1,
     "icon": "📏"
@@ -419,7 +437,7 @@
   {
     "id": "meters-to-feet-converter",
     "name": "Meters to Feet Converter",
-    "description": "Convert meters to feet with precise calculations and conversion formula.",
+    "description": "Meters to Feet Converter - Meters to Feet Distance Tool with precise calculations and conversion formula for accurate measurements.",
     "titleSuffix": "Meters to Feet Distance Tool",
     "category": "unit",
     "keywords": [
@@ -431,6 +449,7 @@
     ],
     "path": "/unit/meters-to-feet-converter",
     "isActive": false,
+    "seoflag": true,
     "searchVolume": 115000,
     "difficulty": 1,
     "icon": "📏"

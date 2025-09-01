@@ -1,31 +1,107 @@
 {
-  "about": [
-    "The Stock Calculator Calculator is a professional financial calculation tool designed to help you with accurate financial calculations and planning.",
-    "This tool provides an intuitive interface and precise calculation results, suitable for both personal and professional financial planning needs.",
-    "Use this calculator to make informed financial decisions and optimize your financial strategies."
-  ],
-  "howToUse": [
-    "Enter the relevant financial parameters",
-    "Set calculation options and preferences",
-    "Review detailed calculation results",
-    "Analyze the impact of different scenarios",
-    "Export or save calculation results"
-  ],
+  "about": {
+    "title": "About Stock Calculator - Investment Return Analysis Tool",
+    "description": "The Stock Calculator is a comprehensive stock investment analysis tool designed to help you calculate returns, gains, losses, and performance metrics for individual stock investments. This calculator analyzes purchase prices, selling prices, dividends, and time periods to determine total returns and annualized performance. Whether you're tracking existing investments or planning stock purchases, this tool provides accurate stock investment calculations."
+  },
+  "howTo": {
+    "title": "How to Use the Stock Calculator",
+    "steps": [
+      {
+        "title": "Enter Purchase Details",
+        "description": "Input the stock purchase price, number of shares, and purchase date."
+      },
+      {
+        "title": "Add Selling Information",
+        "description": "Enter the selling price and sale date (or current price for unrealized gains)."
+      },
+      {
+        "title": "Include Dividends",
+        "description": "Add any dividend payments received during the holding period."
+      },
+      {
+        "title": "Factor in Costs",
+        "description": "Include brokerage fees, commissions, and other transaction costs."
+      },
+      {
+        "title": "Calculate Returns",
+        "description": "Review total return, percentage gain/loss, and annualized performance."
+      },
+      {
+        "title": "Analyze Tax Impact",
+        "description": "Consider capital gains taxes and after-tax returns on your investment."
+      }
+    ],
+    "tips": [
+      "Include all dividends for accurate total return calculations",
+      "Factor in transaction costs to get net returns",
+      "Consider tax implications of short-term vs. long-term gains",
+      "Use annualized returns to compare investments with different time periods"
+    ]
+  },
   "features": [
-    "Accurate financial calculation algorithms",
-    "Multiple calculation modes and options",
-    "Real-time result updates",
-    "Detailed analysis reports",
-    "User-friendly interface design"
-  ],
-  "faqs": [
     {
-      "question": "How do I use this calculator?",
-      "answer": "Enter the required financial parameters, select appropriate calculation options, and the system will automatically generate detailed calculation results and analysis."
+      "title": "Total Return Calculator",
+      "description": "Calculate complete returns including capital gains and dividend income."
     },
     {
-      "question": "Are the calculation results accurate?",
-      "answer": "We use industry-standard financial calculation formulas to ensure the accuracy and reliability of results."
+      "title": "Annualized Performance",
+      "description": "Compute annualized returns for comparing investments over different periods."
+    },
+    {
+      "title": "Dividend Yield Analysis",
+      "description": "Calculate dividend yields and total dividend income over holding periods."
+    },
+    {
+      "title": "Cost Basis Tracking",
+      "description": "Track adjusted cost basis including fees, commissions, and reinvestments."
+    },
+    {
+      "title": "Tax Impact Calculator",
+      "description": "Estimate capital gains taxes and after-tax returns on stock investments."
+    },
+    {
+      "title": "Performance Comparison",
+      "description": "Compare stock performance against market benchmarks and indices."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How do I calculate stock returns accurately?",
+      "a": "Total return = (Ending Value + Dividends - Beginning Value) / Beginning Value. Include all dividends received and subtract transaction costs for accurate net returns. Use annualized returns for comparing different time periods."
+    },
+    {
+      "q": "What's the difference between realized and unrealized gains?",
+      "a": "Realized gains occur when you sell stock for more than you paid. Unrealized gains are 'paper profits' on stocks you still own. Only realized gains are taxable, and tax rates depend on holding period (short vs. long-term)."
+    },
+    {
+      "q": "How do dividends affect stock returns?",
+      "a": "Dividends are part of total return and should be included in performance calculations. Dividend yield = Annual Dividends / Stock Price. Reinvested dividends compound returns over time through additional share purchases."
+    },
+    {
+      "q": "What costs should I include in stock calculations?",
+      "a": "Include all transaction costs: brokerage commissions, SEC fees, exchange fees, and any account maintenance fees. These costs reduce your net returns and should be factored into performance analysis."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Investment Calculator",
+      "url": "/finance/investment-calculator"
+    },
+    {
+      "title": "Mutual Fund Calculator",
+      "url": "/finance/mutual-fund-calculator"
+    },
+    {
+      "title": "Compound Interest Calculator",
+      "url": "/finance/compound-interest-calculator"
+    },
+    {
+      "title": "Retirement Calculator",
+      "url": "/finance/retirement-calculator"
+    },
+    {
+      "title": "Tax Calculator",
+      "url": "/finance/tax-calculator"
     }
   ]
 }

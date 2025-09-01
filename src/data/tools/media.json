@@ -8,6 +8,7 @@
     "keywords": ["pdf", "word", "doc", "docx", "converter", "document"],
     "path": "/media/pdf-to-word-converter",
     "isActive": true,
+    "seoflag": true,
     "searchVolume": 201000,
     "difficulty": 4,
     "icon": "📄"
@@ -21,6 +22,7 @@
     "keywords": ["jpg", "jpeg", "png", "image", "converter", "photo"],
     "path": "/media/jpg-to-png-converter",
     "isActive": true,
+    "seoflag": true,
     "searchVolume": 89000,
     "difficulty": 2,
     "icon": "🖼️"

@@ -1,46 +1,102 @@
 {
-  "about": [
-    "The Area Converter is a comprehensive tool for converting between different units of area measurement. From square meters to acres, square feet to hectares, this converter handles all common area measurements used in real estate, agriculture, construction, and land surveying.",
-    "Area conversion is essential in property transactions, agricultural planning, construction projects, and international land dealings. Our converter provides accurate conversions between metric and imperial area systems.",
-    "Whether you're calculating property sizes, planning agricultural plots, or working with architectural specifications, this tool ensures precise area conversions with support for both common and specialized units."
-  ],
-  "howToUse": [
-    "Enter the area value you want to convert",
-    "Select the source unit (square meters, acres, square feet, etc.)",
-    "Choose the target unit for conversion",
-    "View the converted area instantly",
-    "Use the result for your property, construction, or planning calculations"
-  ],
+  "about": {
+    "title": "About Area Converter",
+    "description": "The Area Converter is a comprehensive tool for converting between different units of area measurement including square meters, acres, square feet, and hectares. This professional area conversion tool handles all common area measurements used in real estate, agriculture, construction, and land surveying with precise calculations and instant results. Whether you're calculating property sizes, planning agricultural plots, or working with architectural specifications, our area converter ensures accurate conversions between metric and imperial area systems for professional and educational use."
+  },
+  "howTo": {
+    "title": "How to Use the Area Converter",
+    "steps": [
+      {
+        "title": "Enter Area Value",
+        "description": "Input the area value you want to convert in the designated field. You can enter whole numbers or decimals."
+      },
+      {
+        "title": "Select Source Unit",
+        "description": "Choose the current unit of your area measurement from the dropdown menu (square meters, acres, square feet, hectares, etc.)."
+      },
+      {
+        "title": "Choose Target Unit",
+        "description": "Select the unit you want to convert to from the available area measurement options."
+      },
+      {
+        "title": "View Instant Results",
+        "description": "The converted area value will appear automatically with high precision calculations suitable for professional use."
+      }
+    ],
+    "tips": [
+      "Use hectares for large agricultural areas and land planning",
+      "Acres are commonly used in real estate and property measurements",
+      "Square meters provide precise measurements for construction and architectural projects"
+    ]
+  },
   "features": [
-    "Convert between metric and imperial area units",
-    "Support for square meters, square kilometers, hectares",
-    "Imperial units: square feet, square yards, acres, square miles",
-    "Real-time conversion as you type",
-    "High precision calculations",
-    "Scientific notation for large areas",
-    "Mobile-optimized interface",
-    "Educational area measurement information"
+    {
+      "title": "Comprehensive Unit Support",
+      "description": "Convert between metric units (m², km², hectares) and imperial units (ft², yd², acres, mi²) with complete coverage of professional area measurements."
+    },
+    {
+      "title": "Real-time Conversion",
+      "description": "Instant area conversion as you type with high precision calculations suitable for surveying, real estate, and construction applications."
+    },
+    {
+      "title": "Professional Accuracy",
+      "description": "High-precision mathematical formulas ensure accurate results for property transactions, agricultural planning, and architectural specifications."
+    },
+    {
+      "title": "Large Area Handling",
+      "description": "Scientific notation support for very large areas like square kilometers and square miles, perfect for land development and geographic calculations."
+    },
+    {
+      "title": "Mobile-Optimized Interface",
+      "description": "Responsive design works perfectly on all devices, allowing area conversions on-site for construction and surveying professionals."
+    },
+    {
+      "title": "Educational Resources",
+      "description": "Built-in area measurement information and conversion formulas help users understand different area units and their applications."
+    }
   ],
-  "faqs": [
+  "faq": [
     {
-      "question": "What area units are supported?",
-      "answer": "We support metric units (m², km², hectares), imperial units (ft², yd², acres, mi²), and specialized land measurement units."
+      "q": "What area units does the area converter support?",
+      "a": "Our area converter supports comprehensive metric units including square meters (m²), square kilometers (km²), and hectares, plus imperial units like square feet (ft²), square yards (yd²), acres, and square miles (mi²). We also include specialized land measurement units for professional surveying and real estate applications."
     },
     {
-      "question": "How big is an acre?",
-      "answer": "An acre is 43,560 square feet or 4,047 square meters. It's commonly used in real estate and agriculture."
+      "q": "How big is an acre in square meters and square feet?",
+      "a": "An acre equals exactly 43,560 square feet or 4,047 square meters. This imperial area unit is commonly used in real estate transactions, agricultural land measurement, and property development across the United States and other countries using imperial measurements."
     },
     {
-      "question": "What's the difference between a hectare and an acre?",
-      "answer": "A hectare is 10,000 square meters (2.47 acres), while an acre is 4,047 square meters. Hectares are metric, acres are imperial."
+      "q": "What's the difference between a hectare and an acre for land measurement?",
+      "a": "A hectare is a metric unit equal to 10,000 square meters (2.47 acres), while an acre is an imperial unit equal to 4,047 square meters. Hectares are used internationally in agriculture and land planning, while acres are primarily used in countries with imperial measurement systems."
     },
     {
-      "question": "How accurate are the area conversions?",
-      "answer": "All conversions use precise mathematical formulas with high decimal accuracy suitable for professional surveying and real estate."
+      "q": "How accurate are the area conversion calculations?",
+      "a": "All area conversions use precise mathematical formulas with high decimal accuracy suitable for professional surveying, real estate transactions, and construction projects. The converter maintains precision across all supported units from square millimeters to square kilometers."
     },
     {
-      "question": "Can I convert very large or very small areas?",
-      "answer": "Yes, the converter handles everything from square millimeters to square kilometers with appropriate precision and scientific notation."
+      "q": "Can I convert very large areas like square kilometers or very small areas?",
+      "a": "Yes, our area converter handles everything from square millimeters to square kilometers with appropriate precision and scientific notation. This makes it perfect for geographic calculations, large land development projects, and precise architectural measurements."
+    },
+    {
+      "q": "Is the area converter suitable for real estate and construction use?",
+      "a": "Absolutely! The area converter is designed for professional use in real estate transactions, construction planning, architectural specifications, and land surveying. It provides the accuracy and unit coverage needed for property measurements and building calculations."
+    }
+  ],
+  "relativeLinks": [
+    {
+      "title": "Length Converter",
+      "url": "/unit/length-converter"
+    },
+    {
+      "title": "Volume Converter",
+      "url": "/unit/volume-converter"
+    },
+    {
+      "title": "Temperature Converter",
+      "url": "/unit/temperature-converter"
+    },
+    {
+      "title": "Unit Conversion Tools",
+      "url": "/unit"
     }
   ]
 }
