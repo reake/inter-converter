@@ -224,3 +224,8 @@ Online Stopwatch - Precision Timing & Lap Timer
 Unix Timestamp Converter - Unix Epoch Time Converter
 Working Days Calculator - Business Days Analysis
 World Clock - Global Time Display
+
+
+
+提示词：
+@auto.json@color.json@finance.json@health.json@media.json@time.json@unit.json 分析这些json文件，根据主关键字(name)+长尾关键字（titleSuffix）组合，对工具介绍字段description进行重写，符合google seo规范@seo.md 

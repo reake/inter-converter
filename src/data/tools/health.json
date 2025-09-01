@@ -2,7 +2,7 @@
   {
     "id": "bmi-calculator",
     "name": "BMI Calculator",
-    "description": "Calculate Body Mass Index and get health recommendations. Free BMI calculator with weight status interpretation and health tips.",
+    "description": "Calculate Body Mass Index (BMI) with instant health status analysis and recommendations. Professional BMI calculator with weight category interpretation and personalized health guidance.",
     "titleSuffix": "Body Mass Index Analysis",
     "category": "health",
     "keywords": [
@@ -27,7 +27,7 @@
   {
     "id": "calorie-calculator",
     "name": "Calorie Calculator",
-    "description": "Calculate daily calorie needs based on age, gender, weight, height, and activity level. TDEE calculator for weight loss and fitness goals.",
+    "description": "Calculate daily calorie needs and TDEE for weight management and fitness goals. Advanced calorie calculator considering age, gender, activity level, and metabolic factors.",
     "titleSuffix": "TDEE & BMR Metabolism",
     "category": "health",
     "keywords": ["calorie calculator", "daily calories", "tdee", "bmr", "metabolism", "weight loss"],
@@ -41,7 +41,7 @@
   {
     "id": "body-fat-calculator",
     "name": "Body Fat Calculator",
-    "description": "Calculate body fat percentage using various measurement methods. Body composition calculator with multiple formulas.",
+    "description": "Calculate body fat percentage using multiple measurement methods and formulas. Comprehensive body composition calculator with health analysis and fitness recommendations.",
     "titleSuffix": "Body Fat Percentage Analysis",
     "category": "health",
     "keywords": ["body fat", "body fat percentage", "fitness", "health", "body composition"],
@@ -55,7 +55,7 @@
   {
     "id": "ideal-weight-calculator",
     "name": "Ideal Weight Calculator",
-    "description": "Calculate ideal body weight using multiple formulas and methods. Target weight calculator for healthy weight goals.",
+    "description": "Calculate ideal body weight using proven medical formulas and health standards. Professional target weight calculator for setting realistic and healthy weight goals.",
     "titleSuffix": "Target Weight & Health Goals",
     "category": "health",
     "keywords": ["ideal weight", "target weight", "healthy weight", "weight goal", "fitness"],
@@ -69,7 +69,7 @@
   {
     "id": "pregnancy-calculator",
     "name": "Pregnancy Calculator",
-    "description": "Calculate due date, pregnancy weeks, and track pregnancy milestones. Pregnancy calculator with trimester information.",
+    "description": "Calculate pregnancy due date and track pregnancy weeks with trimester milestones for expecting mothers. Professional pregnancy calculator with conception date and fetal development tracking.",
     "titleSuffix": "Due Date & Pregnancy Tracker",
     "category": "health",
     "keywords": ["pregnancy calculator", "due date", "pregnancy weeks", "conception", "trimester"],
@@ -83,7 +83,7 @@
   {
     "id": "water-intake-calculator",
     "name": "Water Intake Calculator",
-    "description": "Calculate daily water intake needs based on weight, activity, and climate. Hydration calculator for optimal health.",
+    "description": "Calculate daily water intake requirements based on body weight, activity level, and climate conditions. Professional hydration calculator for optimal health and wellness planning.",
     "titleSuffix": "Daily Hydration Analysis",
     "category": "health",
     "keywords": ["water intake", "hydration", "daily water", "fluid needs", "health"],
@@ -97,7 +97,7 @@
   {
     "id": "heart-rate-calculator",
     "name": "Heart Rate Calculator",
-    "description": "Calculate target heart rate zones for exercise and fitness training. Heart rate calculator for cardio workouts.",
+    "description": "Calculate target heart rate zones for exercise training and cardio fitness optimization. Professional heart rate calculator with age-based training zones and workout intensity analysis.",
     "titleSuffix": "Exercise Heart Rate Zones",
     "category": "health",
     "keywords": ["heart rate", "target heart rate", "exercise", "fitness", "cardio", "training zones"],
@@ -111,7 +111,7 @@
   {
     "id": "macro-calculator",
     "name": "Macro Calculator",
-    "description": "Calculate macronutrient ratios (protein, carbs, fats) for fitness goals. Macro calculator for diet planning.",
+    "description": "Calculate macronutrient ratios for protein, carbohydrates, and fats based on fitness goals and diet planning. Professional macro calculator with personalized nutrition targets and meal planning.",
     "titleSuffix": "Nutrition & Diet Planning",
     "category": "health",
     "keywords": ["macro calculator", "macronutrients", "protein", "carbs", "fats", "nutrition"],
@@ -125,7 +125,7 @@
   {
     "id": "sleep-calculator",
     "name": "Sleep Calculator",
-    "description": "Calculate optimal bedtime and wake time based on sleep cycles. Sleep calculator for better rest quality.",
+    "description": "Calculate optimal bedtime and wake time based on natural sleep cycles for better rest quality. Professional sleep calculator with REM cycle analysis and sleep schedule optimization.",
     "titleSuffix": "Sleep Cycle Optimization",
     "category": "health",
     "keywords": ["sleep calculator", "bedtime", "wake time", "sleep cycles", "rem sleep"],
@@ -139,7 +139,7 @@
   {
     "id": "ovulation-calculator",
     "name": "Ovulation Calculator",
-    "description": "Calculate ovulation dates and fertile window for family planning. Fertility calculator with cycle tracking.",
+    "description": "Calculate ovulation dates and fertile window for conception and family planning strategies. Professional fertility calculator with menstrual cycle tracking and conception probability analysis.",
     "titleSuffix": "Fertility & Family Planning",
     "category": "health",
     "keywords": ["ovulation calculator", "fertile window", "conception", "family planning", "menstrual cycle"],
@@ -153,7 +153,7 @@
   {
     "id": "protein-calculator",
     "name": "Protein Calculator",
-    "description": "Calculate daily protein needs based on weight, activity, and fitness goals. Protein calculator for muscle building.",
+    "description": "Calculate daily protein requirements based on body weight, activity level, and fitness goals for muscle building. Professional protein calculator with personalized intake recommendations and nutrition planning.",
     "titleSuffix": "Daily Protein & Fitness Goals",
     "category": "health",
     "keywords": ["protein calculator", "daily protein", "protein needs", "fitness", "muscle building"],

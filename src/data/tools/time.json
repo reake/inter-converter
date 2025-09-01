@@ -2,7 +2,7 @@
   {
     "id": "timestamp-converter",
     "name": "Unix Timestamp Converter",
-    "description": "Convert Unix timestamps to human-readable dates and vice versa. Free timestamp conversion tool with timezone support.",
+    "description": "Convert Unix timestamps to human-readable dates and vice versa with timezone support. Professional epoch time converter for developers and system administrators.",
     "titleSuffix": "Epoch Date Time Tool",
     "category": "time",
     "keywords": [
@@ -27,7 +27,7 @@
   {
     "id": "timezone-converter",
     "name": "Time Zone Converter",
-    "description": "Convert time between different time zones worldwide. Free timezone converter with daylight saving time support.",
+    "description": "Convert time between different time zones worldwide with daylight saving time support. Professional timezone converter for international scheduling and global coordination.",
     "titleSuffix": "Global Time Zones",
     "category": "time",
     "keywords": [
@@ -52,7 +52,7 @@
   {
     "id": "date-difference-calculator",
     "name": "Date Difference Calculator",
-    "description": "Date Difference Calculator - Date Duration Analysis",
+    "description": "Calculate the difference between two dates in days, months, and years. Comprehensive date difference calculator for project planning and age calculations.",
     "titleSuffix": "Date Duration Analysis",
     "category": "time",
     "keywords": [
@@ -77,7 +77,7 @@
   {
     "id": "countdown-timer",
     "name": "Countdown Timer",
-    "description": "Create customizable countdown timers for events, deadlines, and special occasions. Online countdown clock.",
+    "description": "Create customizable countdown timers for events, deadlines, and special occasions. Interactive countdown clock with multiple timer formats and alert options.",
     "titleSuffix": "Event & Deadline Timer",
     "category": "time",
     "keywords": [
@@ -102,7 +102,7 @@
   {
     "id": "age-calculator",
     "name": "Age Calculator",
-    "description": "Age Calculator - Exact Age & Birthday Analysis",
+    "description": "Calculate exact age from birth date with precise years, months, days, and hours analysis. Professional age calculator with birthday countdown and life milestone tracking.",
     "titleSuffix": "Exact Age & Birthday Analysis",
     "category": "time",
     "keywords": [
@@ -123,7 +123,7 @@
   {
     "id": "date-calculator",
     "name": "Date Calculator",
-    "description": "Date Calculator - Date Math & Calculation Tool",
+    "description": "Calculate dates by adding or subtracting days, months, and years for planning and scheduling. Professional date calculator with business days and future date analysis tools.",
     "titleSuffix": "Date Math & Calculation Tool",
     "category": "time",
     "keywords": [
@@ -184,7 +184,7 @@
   {
     "id": "working-days-calculator",
     "name": "Working Days Calculator",
-    "description": "Working Days Calculator - Business Days Analysis",
+    "description": "Calculate working days and business days between dates excluding weekends and holidays. Professional business calculator with project timeline and deadline planning tools.",
     "titleSuffix": "Business Days Analysis",
     "category": "time",
     "keywords": [

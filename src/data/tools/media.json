@@ -2,7 +2,7 @@
   {
     "id": "pdf-to-word-converter",
     "name": "PDF to Word Converter",
-    "description": "Convert PDF files to editable Word documents. Free PDF to Word converter with accurate formatting preservation.",
+    "description": "Convert PDF files to editable Word documents with accurate formatting preservation. Professional PDF to Word converter supporting DOC and DOCX formats with layout integrity.",
     "titleSuffix": "Editable Document Conversion",
     "category": "media",
     "keywords": ["pdf", "word", "doc", "docx", "converter", "document"],
@@ -16,7 +16,7 @@
   {
     "id": "jpg-to-png-converter",
     "name": "JPG to PNG Converter",
-    "description": "Convert JPG images to PNG format with transparency support. Free JPG to PNG converter for image editing.",
+    "description": "Convert JPG images to PNG format with transparency support and lossless quality. Professional image converter for web graphics and photo editing applications.",
     "titleSuffix": "Image Format & Transparency",
     "category": "media",
     "keywords": ["jpg", "jpeg", "png", "image", "converter", "photo"],

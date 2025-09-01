@@ -2,7 +2,7 @@
   {
     "id": "rgb-to-hex-converter",
     "name": "RGB to HEX Converter",
-    "description": "Convert RGB to HEX with our web design & CSS colors tool. Professional RGB to HEX converter with color preview for web design and CSS development.",
+    "description": "Convert RGB color values to HEX codes instantly for web design and CSS development. Professional RGB to HEX converter with live color preview and copy-paste functionality.",
     "titleSuffix": "Web Design & CSS Colors",
     "category": "color",
     "keywords": ["rgb", "hex", "color", "converter", "css", "design", "web", "palette"],
@@ -16,7 +16,7 @@
   {
     "id": "color-picker-tool",
     "name": "Color Picker Tool",
-    "description": "Use our color picker tool with HSL / RGB palette generator. Professional color picker with HSL controls, palettes and color history for designers.",
+    "description": "Interactive color picker tool with HSL and RGB palette generation capabilities. Professional color picker featuring HSL controls, color history, and palette export for designers.",
     "titleSuffix": "HSL / RGB Palette Generator",
     "category": "color",
     "keywords": ["color", "picker", "hsl", "palette", "design", "web", "css", "tool"],
@@ -30,7 +30,7 @@
   {
     "id": "hex-to-rgb-converter",
     "name": "HEX to RGB Converter",
-    "description": "Convert HEX to RGB with our CSS web colors tool. Accurate HEX to RGB converter with color preview and validation for web development.",
+    "description": "Convert HEX color codes to RGB values instantly for CSS and web development. Accurate HEX to RGB converter with color preview and validation for precise color matching.",
     "titleSuffix": "CSS Web Colors",
     "category": "color",
     "keywords": ["hex", "rgb", "color", "converter", "css", "design", "hex to rgb", "color code converter"],
@@ -44,7 +44,7 @@
   {
     "id": "color-palette-generator",
     "name": "Color Palette Generator",
-    "description": "Generate color palettes with our harmony & color schemes tool. Create beautiful color palettes and harmonious color combinations for design projects.",
+    "description": "Generate harmonious color palettes and professional color schemes for design projects. Advanced color palette generator with multiple harmony rules and export options.",
     "titleSuffix": "Harmony & Color Schemes",
     "category": "color",
     "keywords": ["color", "palette", "generator", "scheme", "design", "colors", "harmony"],
@@ -58,7 +58,7 @@
   {
     "id": "contrast-checker",
     "name": "Color Contrast Checker",
-    "description": "Check color contrast with our WCAG AA/AAA standards tool. Validate color contrast ratios for accessibility compliance and web accessibility.",
+    "description": "Check color contrast ratios against WCAG AA/AAA accessibility standards. Professional contrast checker ensuring web accessibility compliance with detailed ratio analysis.",
     "titleSuffix": "WCAG AA/AAA Standards",
     "category": "color",
     "keywords": ["contrast", "accessibility", "wcag", "color", "checker", "ratio"],
@@ -72,7 +72,7 @@
   {
     "id": "gradient-generator",
     "name": "CSS Gradient Generator",
-    "description": "Generate CSS gradients with our linear & radial CSS tool. Create beautiful CSS gradients with live preview and code generation for web design.",
+    "description": "Generate CSS gradients with linear and radial options for modern web design. Professional gradient generator with live preview, custom stops, and ready-to-use CSS code.",
     "titleSuffix": "Linear & Radial CSS",
     "category": "color",
     "keywords": ["gradient", "css", "generator", "linear", "radial", "background"],
@@ -86,7 +86,7 @@
   {
     "id": "hex-to-hsl-converter",
     "name": "HEX to HSL Converter",
-    "description": "Convert HEX to HSL with our color space conversion tool. Accurate HEX to HSL converter with color preview for HSL color space conversion.",
+    "description": "Convert HEX color codes to HSL values for advanced color manipulation. Precise HEX to HSL converter with color preview and HSL color space analysis.",
     "titleSuffix": "HSL Color Space",
     "category": "color",
     "keywords": ["hex", "hsl", "color", "converter", "css", "design"],

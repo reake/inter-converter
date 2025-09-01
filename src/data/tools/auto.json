@@ -2,7 +2,7 @@
   {
     "id": "carburetor-cfm-calculator",
     "name": "Carburetor CFM Calculator",
-    "description": "Carburetor CFM Calculator - Engine Airflow Sizing Tool",
+    "description": "Calculate carburetor CFM requirements for optimal engine performance. Professional carburetor sizing calculator with airflow analysis for automotive enthusiasts and mechanics.",
     "titleSuffix": "Engine Airflow Sizing Tool",
     "category": "auto",
     "keywords": [
@@ -27,7 +27,7 @@
   {
     "id": "compression-ratio-calculator",
     "name": "Compression Ratio Calculator",
-    "description": "Compression Ratio Calculator - Horsepower & Performance Analysis",
+    "description": "Calculate engine compression ratio and analyze horsepower potential. Advanced compression ratio calculator for engine building and performance optimization projects.",
     "titleSuffix": "Horsepower & Performance Analysis",
     "category": "auto",
     "keywords": ["compression", "ratio", "horsepower", "engine", "performance"],
@@ -41,7 +41,7 @@
   {
     "id": "engine-size-converter",
     "name": "Engine Size Converter",
-    "description": "Engine Size Converter - Displacement (CI to L) Conversion Tool",
+    "description": "Convert engine displacement between cubic inches and liters instantly. Accurate engine size converter for automotive specifications and engine building calculations.",
     "titleSuffix": "Displacement (CI to L) Conversion Tool",
     "category": "auto",
     "keywords": ["engine", "displacement", "cubic inches", "liters", "Converters"],
@@ -55,7 +55,7 @@
   {
     "id": "gear-ratio-calculator",
     "name": "Gear Ratio Calculator",
-    "description": "Gear Ratio Calculator - Differential & Transmission Analysis",
+    "description": "Calculate gear ratios for optimal vehicle performance and fuel efficiency. Professional gear ratio calculator for differential and transmission analysis.",
     "titleSuffix": "Differential & Transmission Analysis",
     "category": "auto",
     "keywords": ["gear", "ratio", "differential", "performance", "transmission"],
@@ -69,7 +69,7 @@
   {
     "id": "power-to-weight-ratio",
     "name": "Power to Weight Ratio Calculator",
-    "description": "Power to Weight Ratio Calculator - HP/Weight Performance Analysis",
+    "description": "Calculate power-to-weight ratio for vehicle performance analysis. Determine horsepower per pound ratios for racing and automotive performance comparisons.",
     "titleSuffix": "HP/Weight Performance Analysis",
     "category": "auto",
     "keywords": ["power", "weight", "ratio", "horsepower", "performance"],
@@ -83,7 +83,7 @@
   {
     "id": "ram-air-calculator",
     "name": "Ram Air Calculator",
-    "description": "Ram Air Calculator - Cold Air Intake Performance",
+    "description": "Calculate ram air horsepower gains and cold air intake performance benefits. Professional ram air calculator for induction system optimization and tuning.",
     "titleSuffix": "Cold Air Intake Performance",
     "category": "auto",
     "keywords": ["ram air", "horsepower", "induction", "performance", "pontiac"],
@@ -97,7 +97,7 @@
   {
     "id": "rpm-calculator",
     "name": "RPM Calculator",
-    "description": "RPM Calculator - Speed, Gear & Tire Analysis",
+    "description": "Calculate RPM based on vehicle speed, gear ratio, and tire size. Comprehensive RPM calculator for transmission tuning and performance analysis.",
     "titleSuffix": "Speed, Gear & Tire Analysis",
     "category": "auto",
     "keywords": ["rpm", "speed", "gear ratio", "tire", "engine"],
@@ -111,7 +111,7 @@
   {
     "id": "speed-converter",
     "name": "Speed Converter",
-    "description": "Speed Converter - MPH to KPH Automotive",
+    "description": "Convert speed between MPH and KPH for automotive applications. Instant speed converter with precise calculations for racing and vehicle specifications.",
     "titleSuffix": "MPH to KPH Automotive",
     "category": "auto",
     "keywords": ["speed", "mph", "kph", "Converters", "auto"],
@@ -125,7 +125,7 @@
   {
     "id": "supercharger-calculator",
     "name": "Supercharger Calculator",
-    "description": "Supercharger Calculator - Boost & Performance Analysis",
+    "description": "Calculate supercharger boost pressure and horsepower gains. Professional supercharger calculator for forced induction performance analysis and tuning.",
     "titleSuffix": "Boost & Performance Analysis",
     "category": "auto",
     "keywords": ["supercharger", "horsepower", "boost", "psi", "performance"],
@@ -139,7 +139,7 @@
   {
     "id": "temperature-converter",
     "name": "Automotive Temperature Converter",
-    "description": "Automotive Temperature Converter - F to C Engine & Cooling System Tool",
+    "description": "Convert automotive temperatures between Fahrenheit and Celsius for engine and cooling system analysis. Essential temperature converter for automotive diagnostics.",
     "titleSuffix": "F to C Engine & Cooling System Tool",
     "category": "auto",
     "keywords": ["automotive temperature converter", "fahrenheit celsius converter", "engine temperature conversion", "cooling system temperature", "automotive thermal analysis", "f to c converter auto", "celsius fahrenheit automotive", "engine tuning temperature", "coolant temperature converter", "automotive temperature tool"],
@@ -153,7 +153,7 @@
   {
     "id": "temperature-converter-enhanced",
     "name": "Enhanced Temperature Converter",
-    "description": "Enhanced Temperature Converter - Advanced Thermal Analysis Tool",
+    "description": "Advanced temperature converter with thermal efficiency analysis for automotive applications. Enhanced temperature tool for engine tuning and thermal management.",
     "titleSuffix": "Advanced Thermal Analysis Tool",
     "category": "auto",
     "keywords": ["enhanced temperature converter", "thermal efficiency", "temperature differential", "automotive thermal analysis", "engine tuning temperature"],
@@ -167,7 +167,7 @@
   {
     "id": "tire-calculator",
     "name": "Tire Calculator",
-    "description": "Tire Calculator - Speedometer & Performance Analysis",
+    "description": "Calculate tire diameter effects on speedometer accuracy and vehicle performance. Comprehensive tire calculator for wheel and tire sizing decisions.",
     "titleSuffix": "Speedometer & Performance Analysis",
     "category": "auto",
     "keywords": ["tire", "diameter", "speed", "rpm", "performance"],
@@ -181,7 +181,7 @@
   {
     "id": "torque-horsepower-calculator",
     "name": "Torque & Horsepower Calculator",
-    "description": "Torque & Horsepower Calculator - Engine Power & RPM Analysis",
+    "description": "Convert between torque and horsepower with RPM analysis. Professional engine power calculator for performance tuning and dyno result interpretation.",
     "titleSuffix": "Engine Power & RPM Analysis",
     "category": "auto",
     "keywords": ["torque", "horsepower", "rpm", "Converters", "engine"],
@@ -195,7 +195,7 @@
   {
     "id": "volumetric-efficiency-calculator",
     "name": "Volumetric Efficiency Calculator",
-    "description": "Volumetric Efficiency Calculator - Engine Tuning & Airflow Analysis",
+    "description": "Calculate engine volumetric efficiency for optimal airflow and performance tuning. Advanced VE calculator for engine builders and performance enthusiasts.",
     "titleSuffix": "Engine Tuning & Airflow Analysis",
     "category": "auto",
     "keywords": ["volumetric efficiency", "ve", "engine", "performance", "tuning"],
@@ -209,7 +209,7 @@
   {
     "id": "engine-volume-calculator",
     "name": "Engine Volume Calculator",
-    "description": "Engine Volume Calculator - Bore & Stroke Analysis",
+    "description": "Calculate engine cylinder volume from bore and stroke measurements. Precise engine volume calculator for displacement calculations and engine building.",
     "titleSuffix": "Bore & Stroke Analysis",
     "category": "auto",
     "keywords": ["volume", "cylinder", "displacement", "bore", "stroke"],
@@ -223,7 +223,7 @@
   {
     "id": "auto-fluid-calculator",
     "name": "Automotive Fluid Weight Calculator",
-    "description": "Automotive Fluid Weight Calculator - Fluid Volume & Weight Analysis",
+    "description": "Calculate weight of automotive fluids including gasoline, oil, and transmission fluid. Essential fluid weight calculator for vehicle weight distribution analysis.",
     "titleSuffix": "Fluid Volume & Weight Analysis",
     "category": "auto",
     "keywords": ["fluid", "volume", "weight", "gasoline", "oil", "transmission"],
@@ -237,7 +237,7 @@
   {
     "id": "auto-weight-converter",
     "name": "Automotive Weight Converter",
-    "description": "Automotive Weight Converter - Automotive Weight Conversion",
+    "description": "Convert automotive weights between pounds, kilograms, and other units. Specialized weight converter for vehicle specifications and racing applications.",
     "titleSuffix": "Automotive Weight Conversion",
     "category": "auto",
     "keywords": ["weight", "Converters", "pounds", "kilograms", "ounces", "grams"],
@@ -251,7 +251,7 @@
   {
     "id": "engine-displacement-calculator",
     "name": "Engine Displacement Calculator",
-    "description": "Engine Displacement Calculator - Engine Building & Displacement Analysis",
+    "description": "Calculate total engine displacement from bore, stroke, and cylinder count. Professional displacement calculator for engine building and performance planning.",
     "titleSuffix": "Engine Building & Displacement Analysis",
     "category": "auto",
     "keywords": ["displacement", "bore", "stroke", "engine", "cubic", "inches"],
@@ -265,7 +265,7 @@
   {
     "id": "power-to-weight-calculator",
     "name": "Power to Weight Calculator",
-    "description": "Power to Weight Calculator - Vehicle Performance Analysis",
+    "description": "Calculate vehicle power-to-weight ratio for performance comparison and analysis. Essential calculator for racing and automotive performance evaluation.",
     "titleSuffix": "Vehicle Performance Analysis",
     "category": "auto",
     "keywords": ["power to weight", "power weight ratio", "performance", "horsepower", "vehicle weight"],
@@ -279,7 +279,7 @@
   {
     "id": "tire-speed-calculator",
     "name": "Tire Speed Calculator",
-    "description": "Tire Speed Calculator - Tire & Gear Speed Analysis",
+    "description": "Calculate vehicle speed based on tire diameter and gear ratios. Comprehensive tire speed calculator for speedometer calibration and performance tuning.",
     "titleSuffix": "Tire & Gear Speed Analysis",
     "category": "auto",
     "keywords": ["tire speed calculator", "tire diameter speed", "gear ratio speed", "rpm speed calculator", "vehicle speed calculator"],

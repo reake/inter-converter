@@ -2,7 +2,7 @@
   {
     "id": "temperature-converter",
     "name": "Temperature Converter",
-    "description": "Temperature Converter - Celsius, Fahrenheit & Kelvin temperature conversion tool with precise calculations and formula explanations.",
+    "description": "Convert temperatures between Celsius, Fahrenheit, and Kelvin with precise calculations. Professional temperature converter with formula explanations and instant conversion results.",
     "titleSuffix": "Celsius, Fahrenheit & Kelvin",
     "category": "unit",
     "keywords": [
@@ -27,7 +27,7 @@
   {
     "id": "length-converter",
     "name": "Length Converter",
-    "description": "Length Converter - Metric & Imperial Units conversion tool for meters, feet, inches, and centimeters with accurate calculations.",
+    "description": "Convert lengths between metric and imperial units including meters, feet, inches, and centimeters. Accurate length converter for construction, engineering, and everyday measurements.",
     "titleSuffix": "Metric & Imperial Units",
     "category": "unit",
     "keywords": [
@@ -52,7 +52,7 @@
   {
     "id": "weight-converter",
     "name": "Weight Converter",
-    "description": "Weight Converter - Pounds, Kilograms & More mass conversion tool with precise calculations and multiple unit support.",
+    "description": "Convert weights between pounds, kilograms, and other mass units with precise calculations. Professional weight converter supporting multiple units for fitness, cooking, and shipping.",
     "titleSuffix": "Pounds, Kilograms & More",
     "category": "unit",
     "keywords": [
@@ -77,7 +77,7 @@
   {
     "id": "volume-converter",
     "name": "Volume Converter",
-    "description": "Volume Converter - Liters, Gallons & More liquid measurement tool with accurate volume calculations and conversions.",
+    "description": "Convert volumes between liters, gallons, and other liquid measurements with accurate calculations. Essential volume converter for cooking, chemistry, and fluid measurements.",
     "titleSuffix": "Liters, Gallons & More",
     "category": "unit",
     "keywords": [
@@ -252,7 +252,7 @@
   {
     "id": "fahrenheit-to-celsius-converter",
     "name": "Fahrenheit to Celsius Converter",
-    "description": "Fahrenheit to Celsius Converter - °F to °C Formula temperature conversion tool with precise calculations and step-by-step explanations.",
+    "description": "Convert Fahrenheit to Celsius with precise calculations and step-by-step formula explanations. Professional °F to °C converter for weather, cooking, and scientific applications.",
     "titleSuffix": "°F to °C Formula",
     "category": "unit",
     "keywords": [
@@ -277,7 +277,7 @@
   {
     "id": "celsius-to-fahrenheit-converter",
     "name": "Celsius to Fahrenheit Converter",
-    "description": "Celsius to Fahrenheit Converter - °C to °F Formula temperature conversion tool with precise calculations and step-by-step explanations.",
+    "description": "Convert Celsius to Fahrenheit with precise calculations and step-by-step formula explanations. Professional °C to °F converter for international temperature conversions.",
     "titleSuffix": "°C to °F Formula",
     "category": "unit",
     "keywords": [
@@ -302,7 +302,7 @@
   {
     "id": "pounds-to-kg-converter",
     "name": "Pounds to Kg Converter",
-    "description": "Pounds to Kg Converter - Lbs to Kg Conversion weight conversion tool with precise calculations and formula explanations.",
+    "description": "Convert pounds to kilograms with precise calculations and conversion formulas. Professional lbs to kg converter for fitness tracking, shipping, and international weight standards.",
     "titleSuffix": "Lbs to Kg Conversion",
     "category": "unit",
     "keywords": [
@@ -327,7 +327,7 @@
   {
     "id": "kg-to-pounds-converter",
     "name": "Kg to Pounds Converter",
-    "description": "Kg to Pounds Converter - Kg to Lbs Conversion weight conversion tool with precise calculations and formula explanations.",
+    "description": "Convert kilograms to pounds with precise calculations and conversion formulas. Professional kg to lbs converter for fitness, travel, and weight management applications.",
     "titleSuffix": "Kg to Lbs Conversion",
     "category": "unit",
     "keywords": [
@@ -352,7 +352,7 @@
   {
     "id": "unit-converter",
     "name": "Universal Unit Converter",
-    "description": "Universal Unit Converter - All-in-One Measurement Tool for length, weight, temperature, volume, area, speed, energy, pressure, power, and data conversions.",
+    "description": "Convert between all measurement units including length, weight, temperature, volume, area, speed, energy, and pressure. Professional universal converter with metric and imperial unit support.",
     "titleSuffix": "All-in-One Measurement Tool",
     "category": "unit",
     "keywords": [
@@ -377,7 +377,7 @@
   {
     "id": "cm-to-inches-converter",
     "name": "CM to Inches Converter",
-    "description": "CM to Inches Converter - CM to Inches Length Tool with precise calculations and conversion formula for accurate measurements.",
+    "description": "Convert centimeters to inches with precise calculations and conversion formulas for accurate length measurements. Professional CM to inches converter with decimal precision and measurement tables.",
     "titleSuffix": "CM to Inches Length Tool",
     "category": "unit",
     "keywords": [
@@ -397,7 +397,7 @@
   {
     "id": "inches-to-cm-converter",
     "name": "Inches to CM Converter",
-    "description": "Inches to CM Converter - Inches to CM Length Tool with precise calculations and conversion formula for accurate measurements.",
+    "description": "Convert inches to centimeters with precise calculations and conversion formulas for accurate length measurements. Professional inches to CM converter with decimal precision and measurement tables.",
     "titleSuffix": "Inches to CM Length Tool",
     "category": "unit",
     "keywords": [
@@ -417,7 +417,7 @@
   {
     "id": "feet-to-meters-converter",
     "name": "Feet to Meters Converter",
-    "description": "Feet to Meters Converter - Feet to Meters Distance Tool with precise calculations and conversion formula for accurate measurements.",
+    "description": "Convert feet to meters with precise calculations and conversion formulas for accurate distance measurements. Professional feet to meters converter with decimal precision and measurement tables.",
     "titleSuffix": "Feet to Meters Distance Tool",
     "category": "unit",
     "keywords": [
@@ -437,7 +437,7 @@
   {
     "id": "meters-to-feet-converter",
     "name": "Meters to Feet Converter",
-    "description": "Meters to Feet Converter - Meters to Feet Distance Tool with precise calculations and conversion formula for accurate measurements.",
+    "description": "Convert meters to feet with precise calculations and conversion formulas for accurate distance measurements. Professional meters to feet converter with decimal precision and measurement tables.",
     "titleSuffix": "Meters to Feet Distance Tool",
     "category": "unit",
     "keywords": [

@@ -2,7 +2,7 @@
   {
     "id": "currency-converter",
     "name": "Currency Converter",
-    "description": "Currency Converter - Real-Time Exchange Rates",
+    "description": "Convert currencies with real-time exchange rates and live forex data. Professional currency converter supporting 150+ currencies with accurate conversion rates and historical charts.",
     "titleSuffix": "Real-Time Exchange Rates",
     "category": "finance",
     "keywords": [
@@ -27,7 +27,7 @@
   {
     "id": "loan-calculator",
     "name": "Loan Calculator",
-    "description": "Loan Calculator - Payment Schedule Analysis",
+    "description": "Calculate loan payments, interest, and amortization schedules instantly. Comprehensive loan calculator with payment breakdown analysis for mortgages, auto loans, and personal financing.",
     "titleSuffix": "Payment Schedule Analysis",
     "category": "finance",
     "keywords": ["loan", "mortgage", "payment", "interest", "calculator", "finance"],
@@ -41,7 +41,7 @@
   {
     "id": "tax-calculator",
     "name": "Tax Calculator",
-    "description": "Tax Calculator - Income Tax Planning",
+    "description": "Calculate income tax, deductions, and tax liability for accurate tax planning. Professional tax calculator supporting federal and state tax calculations with current tax brackets.",
     "titleSuffix": "Income Tax Planning",
     "category": "finance",
     "keywords": ["tax", "income", "calculator", "irs", "refund", "liability"],
@@ -55,7 +55,7 @@
   {
     "id": "mortgage-calculator",
     "name": "Mortgage Calculator",
-    "description": "Mortgage Calculator - PMI & Property Tax Analysis",
+    "description": "Calculate mortgage payments including PMI, property tax, and insurance costs. Complete mortgage calculator with amortization schedule and total cost analysis for home buyers.",
     "titleSuffix": "PMI & Property Tax Analysis",
     "category": "finance",
     "keywords": ["mortgage", "home loan", "payment", "interest", "calculator", "real estate"],
@@ -69,7 +69,7 @@
   {
     "id": "auto-loan-calculator",
     "name": "Auto Loan Calculator",
-    "description": "Auto Loan Calculator - Vehicle Payment Analysis",
+    "description": "Calculate auto loan payments, interest rates, and total costs for vehicle financing. Professional auto loan calculator with payment schedules and comparison tools for car buyers.",
     "titleSuffix": "Vehicle Payment Analysis",
     "category": "finance",
     "keywords": ["auto loan", "car loan", "vehicle financing", "payment calculator"],
@@ -83,7 +83,7 @@
   {
     "id": "credit-card-payoff-calculator",
     "name": "Credit Card Payoff Calculator",
-    "description": "Credit Card Payoff Calculator - Debt Payoff Strategy",
+    "description": "Calculate credit card payoff time and interest savings with strategic debt elimination. Advanced credit card calculator with multiple payment scenarios and debt reduction strategies.",
     "titleSuffix": "Debt Payoff Strategy",
     "category": "finance",
     "keywords": ["credit card", "debt payoff", "payment calculator", "interest"],
@@ -97,7 +97,7 @@
   {
     "id": "savings-calculator",
     "name": "Savings Calculator",
-    "description": "Savings Calculator - Compound Interest Growth",
+    "description": "Calculate savings growth with compound interest and regular deposits. Advanced savings calculator showing how your money grows over time with detailed projections.",
     "titleSuffix": "Compound Interest Growth",
     "category": "finance",
     "keywords": ["savings", "compound interest", "deposit", "growth calculator"],
@@ -111,7 +111,7 @@
   {
     "id": "401k-calculator",
     "name": "401(k) Calculator",
-    "description": "401(k) Calculator - Retirement Savings Planning",
+    "description": "Calculate 401(k) retirement savings growth with employer matching and contribution limits. Professional retirement planning calculator with tax-deferred growth projections.",
     "titleSuffix": "Retirement Savings Planning",
     "category": "finance",
     "keywords": ["401k", "retirement", "savings", "contribution calculator"],
@@ -125,7 +125,7 @@
   {
     "id": "compound-interest-calculator",
     "name": "Compound Interest Calculator",
-    "description": "Compound Interest Calculator - Investment Growth Analysis",
+    "description": "Calculate compound interest growth for investments and savings accounts. Professional compound interest calculator with detailed growth projections and earning breakdowns.",
     "titleSuffix": "Investment Growth Analysis",
     "category": "finance",
     "keywords": ["compound interest", "investment", "growth", "calculator"],
@@ -139,7 +139,7 @@
   {
     "id": "retirement-calculator",
     "name": "Retirement Calculator",
-    "description": "Retirement Calculator - Retirement Planning Analysis",
+    "description": "Calculate retirement savings needs and income projections for financial independence. Comprehensive retirement planning calculator with inflation adjustments and withdrawal strategies.",
     "titleSuffix": "Retirement Planning Analysis",
     "category": "finance",
     "keywords": ["retirement", "savings", "planning", "calculator"],
@@ -153,7 +153,7 @@
   {
     "id": "investment-calculator",
     "name": "Investment Calculator",
-    "description": "Investment Calculator - Portfolio Growth & Returns",
+    "description": "Calculate investment returns and portfolio growth with compound interest analysis. Professional investment calculator with risk assessment and diversification recommendations.",
     "titleSuffix": "Portfolio Growth & Returns",
     "category": "finance",
     "keywords": ["investment", "returns", "portfolio", "calculator"],
@@ -167,7 +167,7 @@
   {
     "id": "home-affordability-calculator",
     "name": "Home Affordability Calculator",
-    "description": "Home Affordability Calculator - Home Buying Budget Analysis",
+    "description": "Calculate home affordability based on income, debt, and down payment capacity. Professional home buying calculator with mortgage qualification and budget analysis.",
     "titleSuffix": "Home Buying Budget Analysis",
     "category": "finance",
     "keywords": ["home affordability", "house price", "income", "calculator"],
@@ -181,7 +181,7 @@
   {
     "id": "debt-payoff-calculator",
     "name": "Debt Payoff Calculator",
-    "description": "Debt Payoff Calculator - Debt Elimination Strategy",
+    "description": "Calculate debt payoff strategies using snowball and avalanche methods for faster debt elimination. Professional debt calculator with payment schedules and interest savings analysis.",
     "titleSuffix": "Debt Elimination Strategy",
     "category": "finance",
     "keywords": ["debt payoff", "snowball", "avalanche", "calculator"],
@@ -195,7 +195,7 @@
   {
     "id": "income-tax-calculator",
     "name": "Income Tax Calculator",
-    "description": "Income Tax Calculator - Federal & State Tax Analysis",
+    "description": "Calculate federal and state income tax liability with deductions and tax brackets. Comprehensive income tax calculator for accurate tax planning and refund estimation.",
     "titleSuffix": "Federal & State Tax Analysis",
     "category": "finance",
     "keywords": ["income tax", "federal tax", "state tax", "calculator"],
@@ -209,7 +209,7 @@
   {
     "id": "cost-of-living-calculator",
     "name": "Cost of Living Calculator",
-    "description": "Cost of Living Calculator - City & State Comparison",
+    "description": "Compare cost of living between cities and states for relocation planning. Professional cost calculator analyzing housing, transportation, and living expenses across locations.",
     "titleSuffix": "City & State Comparison",
     "category": "finance",
     "keywords": ["cost of living", "city comparison", "expenses", "calculator"],
@@ -223,7 +223,7 @@
   {
     "id": "bitcoin-calculator",
     "name": "Bitcoin Calculator",
-    "description": "Bitcoin Calculator - Crypto Investment Analysis",
+    "description": "Calculate Bitcoin investment returns and cryptocurrency portfolio performance. Advanced crypto calculator with price analysis and investment tracking for digital assets.",
     "titleSuffix": "Crypto Investment Analysis",
     "category": "finance",
     "keywords": ["bitcoin", "cryptocurrency", "investment", "calculator"],
@@ -237,7 +237,7 @@
   {
     "id": "roi-calculator",
     "name": "ROI Calculator",
-    "description": "ROI Calculator - Return on Investment Analysis",
+    "description": "Calculate return on investment (ROI) for business decisions and investment opportunities. Professional ROI calculator with profit analysis and investment performance metrics.",
     "titleSuffix": "Return on Investment Analysis",
     "category": "finance",
     "keywords": ["roi", "return on investment", "profit", "calculator", "business"],
@@ -251,7 +251,7 @@
   {
     "id": "break-even-calculator",
     "name": "Break Even Calculator",
-    "description": "Break Even Calculator - Business Profitability Analysis",
+    "description": "Calculate break-even point for business profitability and cost recovery analysis. Essential business calculator for pricing decisions and financial planning strategies.",
     "titleSuffix": "Business Profitability Analysis",
     "category": "finance",
     "keywords": ["break even", "business", "profit", "calculator", "analysis"],
@@ -265,7 +265,7 @@
   {
     "id": "net-worth-calculator",
     "name": "Net Worth Calculator",
-    "description": "Net Worth Calculator - Assets & Liabilities Analysis",
+    "description": "Calculate net worth by analyzing total assets and liabilities for wealth tracking. Comprehensive financial calculator for personal wealth management and financial health assessment.",
     "titleSuffix": "Assets & Liabilities Analysis",
     "category": "finance",
     "keywords": ["net worth", "assets", "liabilities", "wealth", "calculator"],
@@ -279,7 +279,7 @@
   {
     "id": "budget-calculator",
     "name": "Budget Calculator",
-    "description": "Budget Calculator - Income & Expense Planning",
+    "description": "Create personal budgets with income and expense planning for financial management. Comprehensive budget calculator with spending categories and savings goal tracking.",
     "titleSuffix": "Income & Expense Planning",
     "category": "finance",
     "keywords": ["budget", "expenses", "income", "planning", "calculator"],
@@ -293,7 +293,7 @@
   {
     "id": "tip-calculator",
     "name": "Tip Calculator",
-    "description": "Tip Calculator - Bill Split & Gratuity Analysis",
+    "description": "Calculate tips and split bills for restaurants and services with gratuity analysis. Professional tip calculator with custom percentages and group bill splitting features.",
     "titleSuffix": "Bill Split & Gratuity Analysis",
     "category": "finance",
     "keywords": ["tip", "gratuity", "bill split", "restaurant", "calculator"],
@@ -307,7 +307,7 @@
   {
     "id": "sales-tax-calculator",
     "name": "Sales Tax Calculator",
-    "description": "Sales Tax Calculator - State & VAT Analysis",
+    "description": "Calculate sales tax and VAT for purchases across different states and countries. Accurate tax calculator with current rates and total cost analysis for shopping.",
     "titleSuffix": "State & VAT Analysis",
     "category": "finance",
     "keywords": ["sales tax", "vat", "tax calculator", "purchase", "state tax"],
@@ -321,7 +321,7 @@
   {
     "id": "inflation-calculator",
     "name": "Inflation Calculator",
-    "description": "Inflation Calculator - Purchasing Power Analysis",
+    "description": "Calculate inflation impact on purchasing power and money value over time. Historical inflation calculator with CPI data for economic analysis and financial planning.",
     "titleSuffix": "Purchasing Power Analysis",
     "category": "finance",
     "keywords": ["inflation", "purchasing power", "money value", "calculator", "cpi"],
@@ -335,7 +335,7 @@
   {
     "id": "present-value-calculator",
     "name": "Present Value Calculator",
-    "description": "Present Value Calculator - NPV & Cash Flow Analysis",
+    "description": "Calculate present value of future cash flows with NPV analysis for investment decisions. Professional financial calculator with discount rates and cash flow projections.",
     "titleSuffix": "NPV & Cash Flow Analysis",
     "category": "finance",
     "keywords": ["present value", "npv", "discount rate", "cash flow", "calculator"],
@@ -349,7 +349,7 @@
   {
     "id": "future-value-calculator",
     "name": "Future Value Calculator",
-    "description": "Future Value Calculator - Investment Growth Projection",
+    "description": "Calculate future value of investments with compound interest growth projections. Advanced investment calculator for long-term financial planning and wealth building.",
     "titleSuffix": "Investment Growth Projection",
     "category": "finance",
     "keywords": ["future value", "investment", "compound interest", "growth", "calculator"],
@@ -363,7 +363,7 @@
   {
     "id": "annuity-calculator",
     "name": "Annuity Calculator",
-    "description": "Annuity Calculator - Retirement Payment Analysis",
+    "description": "Calculate annuity payments and present value for retirement income planning. Professional annuity calculator with payment schedules and retirement analysis tools.",
     "titleSuffix": "Retirement Payment Analysis",
     "category": "finance",
     "keywords": ["annuity", "payments", "present value", "retirement", "calculator"],
@@ -377,7 +377,7 @@
   {
     "id": "bond-calculator",
     "name": "Bond Calculator",
-    "description": "Bond Calculator - Fixed Income Analysis",
+    "description": "Calculate bond yields, prices, and duration for fixed income investment analysis. Professional bond calculator with yield-to-maturity and interest rate sensitivity.",
     "titleSuffix": "Fixed Income Analysis",
     "category": "finance",
     "keywords": ["bond", "yield", "price", "duration", "fixed income", "calculator"],
@@ -391,7 +391,7 @@
   {
     "id": "dividend-calculator",
     "name": "Dividend Calculator",
-    "description": "Dividend Calculator - Stock Dividend Analysis",
+    "description": "Calculate dividend yields and stock dividend growth for investment income analysis. Professional dividend calculator with reinvestment options and yield projections.",
     "titleSuffix": "Stock Dividend Analysis",
     "category": "finance",
     "keywords": ["dividend", "yield", "growth", "stocks", "returns", "calculator"],
@@ -405,7 +405,7 @@
   {
     "id": "stock-calculator",
     "name": "Stock Calculator",
-    "description": "Stock Calculator - Equity Performance Analysis",
+    "description": "Calculate stock returns, profit, and loss for equity investment performance analysis. Comprehensive stock calculator with capital gains and dividend tracking.",
     "titleSuffix": "Equity Performance Analysis",
     "category": "finance",
     "keywords": ["stock", "returns", "profit", "loss", "investment", "calculator"],
@@ -419,7 +419,7 @@
   {
     "id": "options-calculator",
     "name": "Options Calculator",
-    "description": "Options Calculator - Options Pricing & Greeks",
+    "description": "Calculate options pricing, Greeks, and profit/loss for derivatives trading analysis. Advanced options calculator with Black-Scholes model and risk assessment tools.",
     "titleSuffix": "Options Pricing & Greeks",
     "category": "finance",
     "keywords": ["options", "pricing", "greeks", "profit", "loss", "calculator"],
@@ -433,7 +433,7 @@
   {
     "id": "forex-calculator",
     "name": "Forex Calculator",
-    "description": "Forex Calculator - Pip Value & Position Sizing",
+    "description": "Calculate forex pip values and position sizing for currency trading strategies. Professional forex calculator with profit/loss analysis and risk management tools.",
     "titleSuffix": "Pip Value & Position Sizing",
     "category": "finance",
     "keywords": ["forex", "pip", "position size", "profit", "loss", "calculator"],
@@ -447,7 +447,7 @@
   {
     "id": "crypto-calculator",
     "name": "Crypto Calculator",
-    "description": "Crypto Calculator - DCA & Portfolio Analysis",
+    "description": "Calculate cryptocurrency returns with DCA strategy and portfolio analysis tools. Advanced crypto calculator for digital asset investment tracking and performance evaluation.",
     "titleSuffix": "DCA & Portfolio Analysis",
     "category": "finance",
     "keywords": ["crypto", "cryptocurrency", "returns", "dca", "portfolio", "calculator"],
@@ -461,7 +461,7 @@
   {
     "id": "ethereum-calculator",
     "name": "Ethereum Calculator",
-    "description": "Ethereum Calculator - ETH Staking & Returns",
+    "description": "Calculate Ethereum investment returns and ETH staking rewards for crypto portfolio management. Professional Ethereum calculator with yield analysis and staking projections.",
     "titleSuffix": "ETH Staking & Returns",
     "category": "finance",
     "keywords": ["ethereum", "eth", "investment", "staking", "rewards", "calculator"],
@@ -475,7 +475,7 @@
   {
     "id": "refinance-calculator",
     "name": "Refinance Calculator",
-    "description": "Refinance Calculator - Mortgage Refinancing Analysis",
+    "description": "Calculate mortgage refinancing benefits and break-even analysis for home loans. Professional refinance calculator with closing costs and payment comparison tools.",
     "titleSuffix": "Mortgage Refinancing Analysis",
     "category": "finance",
     "keywords": ["refinance", "savings", "break even", "mortgage", "calculator"],
@@ -489,7 +489,7 @@
   {
     "id": "rent-vs-buy-calculator",
     "name": "Rent vs Buy Calculator",
-    "description": "Rent vs Buy Calculator - Home Cost Comparison",
+    "description": "Compare rent vs buy costs for home ownership decisions with comprehensive financial analysis. Professional real estate calculator with total cost comparison and break-even analysis.",
     "titleSuffix": "Home Cost Comparison",
     "category": "finance",
     "keywords": ["rent", "buy", "home", "comparison", "real estate", "calculator"],
@@ -503,7 +503,7 @@
   {
     "id": "property-tax-calculator",
     "name": "Property Tax Calculator",
-    "description": "Property Tax Calculator - Real Estate Tax Analysis",
+    "description": "Calculate property taxes based on assessed value and local tax rates for real estate planning. Accurate property tax calculator with exemptions and assessment analysis tools.",
     "titleSuffix": "Real Estate Tax Analysis",
     "category": "finance",
     "keywords": ["property tax", "real estate", "assessed value", "tax rate", "calculator"],
@@ -517,7 +517,7 @@
   {
     "id": "capital-gains-calculator",
     "name": "Capital Gains Calculator",
-    "description": "Capital Gains Calculator - Investment Tax Analysis",
+    "description": "Calculate capital gains tax on investment and property sales with tax optimization strategies. Professional tax calculator with short-term and long-term capital gains analysis.",
     "titleSuffix": "Investment Tax Analysis",
     "category": "finance",
     "keywords": ["capital gains", "tax", "investment", "property", "sales", "calculator"],
@@ -531,7 +531,7 @@
   {
     "id": "business-loan-calculator",
     "name": "Business Loan Calculator",
-    "description": "Business Loan Calculator - Small Business Financing",
+    "description": "Calculate business loan payments and interest costs for small business financing decisions. Professional business calculator with payment schedules and loan comparison tools.",
     "titleSuffix": "Small Business Financing",
     "category": "finance",
     "keywords": ["business loan", "payments", "interest", "small business", "calculator"],
@@ -545,7 +545,7 @@
   {
     "id": "sba-loan-calculator",
     "name": "SBA Loan Calculator",
-    "description": "SBA Loan Calculator - SBA Financing Analysis",
+    "description": "Calculate SBA loan payments and qualification requirements for small business administration financing. Specialized SBA calculator with program analysis and payment projections.",
     "titleSuffix": "SBA Financing Analysis",
     "category": "finance",
     "keywords": ["sba loan", "small business", "payments", "qualification", "calculator"],
@@ -559,7 +559,7 @@
   {
     "id": "personal-loan-calculator",
     "name": "Personal Loan Calculator",
-    "description": "Personal Loan Calculator - Personal Financing Analysis",
+    "description": "Calculate personal loan payments and compare rates for individual financing needs. Comprehensive personal loan calculator with APR comparison and payment scheduling tools.",
     "titleSuffix": "Personal Financing Analysis",
     "category": "finance",
     "keywords": ["personal loan", "payments", "interest rate", "comparison", "calculator"],
@@ -573,7 +573,7 @@
   {
     "id": "student-loan-calculator",
     "name": "Student Loan Calculator",
-    "description": "Student Loan Calculator - Education Loan Analysis",
+    "description": "Calculate student loan payments and repayment options for education financing planning. Professional education loan calculator with forgiveness programs and payment strategies.",
     "titleSuffix": "Education Loan Analysis",
     "category": "finance",
     "keywords": ["student loan", "payments", "repayment", "education", "calculator"],
@@ -587,7 +587,7 @@
   {
     "id": "heloc-calculator",
     "name": "HELOC Calculator",
-    "description": "HELOC Calculator - Home Equity Credit Line",
+    "description": "Calculate HELOC payments and available credit for home equity line of credit planning. Professional HELOC calculator with draw period and repayment phase analysis.",
     "titleSuffix": "Home Equity Credit Line",
     "category": "finance",
     "keywords": ["heloc", "home equity", "line of credit", "payments", "calculator"],
@@ -601,7 +601,7 @@
   {
     "id": "home-equity-calculator",
     "name": "Home Equity Calculator",
-    "description": "Home Equity Calculator - Available Equity Analysis",
+    "description": "Calculate available home equity and loan-to-value ratio for home equity financing decisions. Professional equity calculator with current market value and mortgage balance analysis.",
     "titleSuffix": "Available Equity Analysis",
     "category": "finance",
     "keywords": ["home equity", "loan", "available equity", "ltv", "calculator"],
@@ -615,7 +615,7 @@
   {
     "id": "cd-calculator",
     "name": "CD Calculator",
-    "description": "CD Calculator - Certificate of Deposit Returns",
+    "description": "Calculate certificate of deposit returns and maturity values for fixed-term savings planning. Professional CD calculator with compound interest and penalty analysis tools.",
     "titleSuffix": "Certificate of Deposit Returns",
     "category": "finance",
     "keywords": ["cd", "certificate of deposit", "returns", "maturity", "calculator"],
@@ -629,7 +629,7 @@
   {
     "id": "ira-calculator",
     "name": "IRA Calculator",
-    "description": "IRA Calculator - Traditional IRA Planning",
+    "description": "Calculate traditional IRA contributions and retirement savings growth for tax-deferred planning. Professional IRA calculator with contribution limits and withdrawal strategies.",
     "titleSuffix": "Traditional IRA Planning",
     "category": "finance",
     "keywords": ["ira", "retirement", "contributions", "savings", "growth", "calculator"],
@@ -643,7 +643,7 @@
   {
     "id": "roth-ira-calculator",
     "name": "Roth IRA Calculator",
-    "description": "Roth IRA Calculator - Tax-Free Retirement Planning",
+    "description": "Calculate Roth IRA contributions and tax-free retirement growth for long-term wealth building. Advanced Roth calculator with conversion analysis and tax-free withdrawal projections.",
     "titleSuffix": "Tax-Free Retirement Planning",
     "category": "finance",
     "keywords": ["roth ira", "retirement", "tax free", "contributions", "calculator"],
@@ -657,7 +657,7 @@
   {
     "id": "pension-calculator",
     "name": "Pension Calculator",
-    "description": "Pension Calculator - Pension Benefits Analysis",
+    "description": "Calculate pension benefits and retirement income from defined benefit plans for retirement planning. Professional pension calculator with annuity options and benefit projections.",
     "titleSuffix": "Pension Benefits Analysis",
     "category": "finance",
     "keywords": ["pension", "benefits", "retirement income", "annuity", "calculator"],
@@ -671,7 +671,7 @@
   {
     "id": "social-security-calculator",
     "name": "Social Security Calculator",
-    "description": "Social Security Calculator - Benefits & Claiming Strategy",
+    "description": "Calculate Social Security benefits and optimize claiming strategies for maximum retirement income. Professional benefits calculator with full retirement age and spousal benefit analysis.",
     "titleSuffix": "Benefits & Claiming Strategy",
     "category": "finance",
     "keywords": ["social security", "benefits", "claiming strategy", "retirement", "calculator"],
@@ -685,7 +685,7 @@
   {
     "id": "fire-calculator",
     "name": "FIRE Calculator",
-    "description": "FIRE Calculator - Financial Independence Analysis",
+    "description": "Calculate FIRE (Financial Independence Retire Early) timeline and savings requirements for early retirement planning. Advanced FIRE calculator with withdrawal rate and portfolio analysis.",
     "titleSuffix": "Financial Independence Analysis",
     "category": "finance",
     "keywords": ["fire", "financial independence", "retire early", "savings", "calculator"],
@@ -699,7 +699,7 @@
   {
     "id": "emergency-fund-calculator",
     "name": "Emergency Fund Calculator",
-    "description": "Emergency Fund Calculator - Financial Security Planning",
+    "description": "Calculate emergency fund requirements based on monthly expenses for financial security planning. Professional emergency fund calculator with savings goals and timeline analysis.",
     "titleSuffix": "Financial Security Planning",
     "category": "finance",
     "keywords": ["emergency fund", "expenses", "savings", "financial security", "calculator"],
@@ -713,7 +713,7 @@
   {
     "id": "debt-to-income-calculator",
     "name": "Debt-to-Income Calculator",
-    "description": "Debt-to-Income Calculator - DTI Ratio Analysis",
+    "description": "Calculate debt-to-income ratio for loan qualification and financial health assessment. Professional DTI calculator with mortgage and credit approval analysis tools.",
     "titleSuffix": "DTI Ratio Analysis",
     "category": "finance",
     "keywords": ["debt to income", "dti", "ratio", "loan qualification", "calculator"],
@@ -727,7 +727,7 @@
   {
     "id": "loan-to-value-calculator",
     "name": "Loan-to-Value Calculator",
-    "description": "Loan-to-Value Calculator - LTV Ratio Analysis",
+    "description": "Calculate loan-to-value ratio for mortgage and refinancing qualification analysis. Professional LTV calculator with equity assessment and lending requirement tools.",
     "titleSuffix": "LTV Ratio Analysis",
     "category": "finance",
     "keywords": ["loan to value", "ltv", "ratio", "mortgage", "refinancing", "calculator"],
@@ -741,7 +741,7 @@
   {
     "id": "apr-calculator",
     "name": "APR Calculator",
-    "description": "APR Calculator - Annual Percentage Rate Analysis",
+    "description": "Calculate annual percentage rate including fees and costs for true loan cost analysis. Professional APR calculator with comprehensive lending cost comparison tools.",
     "titleSuffix": "Annual Percentage Rate Analysis",
     "category": "finance",
     "keywords": ["apr", "annual percentage rate", "fees", "costs", "calculator"],
@@ -755,7 +755,7 @@
   {
     "id": "effective-interest-rate-calculator",
     "name": "Effective Interest Rate Calculator",
-    "description": "Effective Interest Rate Calculator - Effective Rate Analysis",
+    "description": "Calculate effective interest rate with compounding frequency for accurate investment analysis. Advanced rate calculator with annual equivalent rate and yield comparison tools.",
     "titleSuffix": "Effective Rate Analysis",
     "category": "finance",
     "keywords": ["effective interest rate", "annual rate", "compounding", "calculator"],
@@ -769,7 +769,7 @@
   {
     "id": "amortization-calculator",
     "name": "Amortization Calculator",
-    "description": "Amortization Calculator - Payment Schedule Analysis",
+    "description": "Calculate loan amortization schedule with principal and interest breakdown for payment planning. Professional amortization calculator with extra payment and payoff analysis.",
     "titleSuffix": "Payment Schedule Analysis",
     "category": "finance",
     "keywords": ["amortization", "schedule", "principal", "interest", "loan", "calculator"],
@@ -783,7 +783,7 @@
   {
     "id": "balloon-payment-calculator",
     "name": "Balloon Payment Calculator",
-    "description": "Balloon Payment Calculator - Balloon Loan Analysis",
+    "description": "Calculate balloon loan payments and final balloon payment for specialized financing analysis. Professional balloon calculator with payment structure and refinancing options.",
     "titleSuffix": "Balloon Loan Analysis",
     "category": "finance",
     "keywords": ["balloon payment", "loan", "final payment", "calculator"],
@@ -797,7 +797,7 @@
   {
     "id": "lease-calculator",
     "name": "Lease Calculator",
-    "description": "Lease Calculator - Car Lease Payment Analysis",
+    "description": "Calculate car lease payments and terms for vehicle leasing decisions with cost analysis. Professional lease calculator with residual value and money factor calculations.",
     "titleSuffix": "Car Lease Payment Analysis",
     "category": "finance",
     "keywords": ["lease", "car lease", "payments", "lease vs buy", "calculator"],
@@ -811,7 +811,7 @@
   {
     "id": "lease-vs-buy-calculator",
     "name": "Lease vs Buy Calculator",
-    "description": "Lease vs Buy Calculator - Vehicle Cost Comparison",
+    "description": "Compare lease vs buy costs for vehicle financing decisions with total cost analysis. Professional automotive calculator with depreciation and ownership cost comparison.",
     "titleSuffix": "Vehicle Cost Comparison",
     "category": "finance",
     "keywords": ["lease vs buy", "car", "comparison", "costs", "calculator"],
@@ -825,7 +825,7 @@
   {
     "id": "car-depreciation-calculator",
     "name": "Car Depreciation Calculator",
-    "description": "Car Depreciation Calculator - Vehicle Value Analysis",
+    "description": "Calculate car depreciation and future vehicle value for resale and insurance planning. Professional depreciation calculator with market value and age-based analysis.",
     "titleSuffix": "Vehicle Value Analysis",
     "category": "finance",
     "keywords": ["car depreciation", "vehicle", "future value", "resale", "calculator"],
@@ -839,7 +839,7 @@
   {
     "id": "insurance-calculator",
     "name": "Insurance Calculator",
-    "description": "Insurance Calculator - Coverage Needs Analysis",
+    "description": "Calculate insurance coverage needs and premium costs for comprehensive protection planning. Professional insurance calculator with coverage analysis and cost comparison tools.",
     "titleSuffix": "Coverage Needs Analysis",
     "category": "finance",
     "keywords": ["insurance", "coverage", "needs", "life insurance", "calculator"],
@@ -853,7 +853,7 @@
   {
     "id": "life-insurance-calculator",
     "name": "Life Insurance Calculator",
-    "description": "Life Insurance Calculator - Life Coverage Planning",
+    "description": "Calculate life insurance coverage needs and premium costs for family financial protection. Professional life insurance calculator with income replacement and debt coverage analysis.",
     "titleSuffix": "Life Coverage Planning",
     "category": "finance",
     "keywords": ["life insurance", "coverage", "needs", "premiums", "calculator"],
@@ -867,7 +867,7 @@
   {
     "id": "disability-insurance-calculator",
     "name": "Disability Insurance Calculator",
-    "description": "Disability Insurance Calculator - Income Protection Planning",
+    "description": "Calculate disability insurance benefits and coverage needs for income protection planning. Professional disability calculator with benefit analysis and premium cost evaluation.",
     "titleSuffix": "Income Protection Planning",
     "category": "finance",
     "keywords": ["disability insurance", "benefits", "needs", "income protection", "calculator"],
@@ -881,7 +881,7 @@
   {
     "id": "health-insurance-calculator",
     "name": "Health Insurance Calculator",
-    "description": "Health Insurance Calculator - Health Plan Comparison",
+    "description": "Calculate health insurance costs and compare health plans for optimal coverage selection. Professional health insurance calculator with deductible and premium analysis tools.",
     "titleSuffix": "Health Plan Comparison",
     "category": "finance",
     "keywords": ["health insurance", "costs", "plans", "comparison", "calculator"],
@@ -895,7 +895,7 @@
   {
     "id": "auto-insurance-calculator",
     "name": "Auto Insurance Calculator",
-    "description": "Auto Insurance Calculator - Car Insurance Analysis",
+    "description": "Calculate auto insurance premiums and coverage options for vehicle protection planning. Professional car insurance calculator with liability and comprehensive coverage analysis.",
     "titleSuffix": "Car Insurance Analysis",
     "category": "finance",
     "keywords": ["auto insurance", "premiums", "coverage", "car insurance", "calculator"],
@@ -909,7 +909,7 @@
   {
     "id": "home-insurance-calculator",
     "name": "Home Insurance Calculator",
-    "description": "Home Insurance Calculator - Homeowners Coverage Analysis",
+    "description": "Calculate home insurance premiums and coverage options for homeowners protection planning. Professional homeowners calculator with dwelling and personal property coverage analysis.",
     "titleSuffix": "Homeowners Coverage Analysis",
     "category": "finance",
     "keywords": ["home insurance", "homeowners", "coverage", "premiums", "calculator"],
@@ -923,7 +923,7 @@
   {
     "id": "umbrella-insurance-calculator",
     "name": "Umbrella Insurance Calculator",
-    "description": "Umbrella Insurance Calculator - Liability Protection Analysis",
+    "description": "Calculate umbrella insurance coverage needs for additional liability protection beyond standard policies. Professional umbrella calculator with asset protection and coverage gap analysis.",
     "titleSuffix": "Liability Protection Analysis",
     "category": "finance",
     "keywords": ["umbrella insurance", "liability", "coverage", "protection", "calculator"],
@@ -937,7 +937,7 @@
   {
     "id": "college-savings-calculator",
     "name": "College Savings Calculator",
-    "description": "College Savings Calculator - Education Savings Planning",
+    "description": "Calculate college savings requirements and 529 plan contributions for education funding goals. Professional education calculator with tuition inflation and savings timeline analysis.",
     "titleSuffix": "Education Savings Planning",
     "category": "finance",
     "keywords": ["college savings", "529 plan", "education", "tuition", "calculator"],
@@ -951,7 +951,7 @@
   {
     "id": "529-plan-calculator",
     "name": "529 Plan Calculator",
-    "description": "529 Plan Calculator - Education Tax Benefits",
+    "description": "Calculate 529 education savings plan benefits with tax advantages for college funding strategies. Professional 529 calculator with contribution limits and withdrawal planning tools.",
     "titleSuffix": "Education Tax Benefits",
     "category": "finance",
     "keywords": ["529 plan", "education savings", "tax benefits", "college", "calculator"],
@@ -965,7 +965,7 @@
   {
     "id": "child-support-calculator",
     "name": "Child Support Calculator",
-    "description": "Child Support Calculator - State Guidelines Analysis",
+    "description": "Calculate child support payments based on state guidelines and custody arrangements for family planning. Professional child support calculator with income and expense analysis tools.",
     "titleSuffix": "State Guidelines Analysis",
     "category": "finance",
     "keywords": ["child support", "payments", "guidelines", "custody", "calculator"],
@@ -979,7 +979,7 @@
   {
     "id": "alimony-calculator",
     "name": "Alimony Calculator",
-    "description": "Alimony Calculator - Spousal Support Analysis",
+    "description": "Calculate alimony and spousal support payments for divorce financial planning and settlement analysis. Professional alimony calculator with duration and payment structure tools.",
     "titleSuffix": "Spousal Support Analysis",
     "category": "finance",
     "keywords": ["alimony", "spousal support", "payments", "divorce", "calculator"],
@@ -993,7 +993,7 @@
   {
     "id": "divorce-settlement-calculator",
     "name": "Divorce Settlement Calculator",
-    "description": "Divorce Settlement Calculator - Asset Division Analysis",
+    "description": "Calculate divorce settlement and asset division for equitable property distribution planning. Professional divorce calculator with marital property and financial analysis tools.",
     "titleSuffix": "Asset Division Analysis",
     "category": "finance",
     "keywords": ["divorce settlement", "asset division", "financial", "property", "calculator"],
@@ -1007,7 +1007,7 @@
   {
     "id": "estate-tax-calculator",
     "name": "Estate Tax Calculator",
-    "description": "Estate Tax Calculator - Inheritance Tax Analysis",
+    "description": "Calculate estate tax liability and exemptions for inheritance and estate planning strategies. Professional estate tax calculator with federal and state tax analysis tools.",
     "titleSuffix": "Inheritance Tax Analysis",
     "category": "finance",
     "keywords": ["estate tax", "liability", "exemptions", "inheritance", "calculator"],
@@ -1021,7 +1021,7 @@
   {
     "id": "gift-tax-calculator",
     "name": "Gift Tax Calculator",
-    "description": "Gift Tax Calculator - Gift Tax Exemptions",
+    "description": "Calculate gift tax liability and annual exclusion limits for tax-efficient gifting strategies. Professional gift tax calculator with exemption analysis and planning tools.",
     "titleSuffix": "Gift Tax Exemptions",
     "category": "finance",
     "keywords": ["gift tax", "liability", "annual exclusion", "gifts", "calculator"],
@@ -1035,7 +1035,7 @@
   {
     "id": "inheritance-calculator",
     "name": "Inheritance Calculator",
-    "description": "Inheritance Calculator - Estate Distribution Analysis",
+    "description": "Calculate inheritance distribution and tax implications for estate planning and beneficiary analysis. Professional inheritance calculator with tax assessment and distribution planning tools.",
     "titleSuffix": "Estate Distribution Analysis",
     "category": "finance",
     "keywords": ["inheritance", "distribution", "tax implications", "estate", "calculator"],
@@ -1049,7 +1049,7 @@
   {
     "id": "trust-calculator",
     "name": "Trust Calculator",
-    "description": "Trust Calculator - Trust Planning Analysis",
+    "description": "Calculate trust distributions and tax benefits for estate planning and wealth transfer strategies. Advanced trust calculator with tax optimization and beneficiary planning analysis.",
     "titleSuffix": "Trust Planning Analysis",
     "category": "finance",
     "keywords": ["trust", "distributions", "tax benefits", "estate planning", "calculator"],
@@ -1063,7 +1063,7 @@
   {
     "id": "paycheck-calculator",
     "name": "Paycheck Calculator",
-    "description": "Paycheck Calculator - Take-Home Pay Analysis",
+    "description": "Calculate take-home pay after taxes and deductions for accurate paycheck planning and budgeting. Professional paycheck calculator with federal, state, and local tax withholding analysis.",
     "titleSuffix": "Take-Home Pay Analysis",
     "category": "finance",
     "keywords": ["paycheck", "take home pay", "taxes", "deductions", "calculator"],
@@ -1077,7 +1077,7 @@
   {
     "id": "hourly-to-salary-calculator",
     "name": "Hourly to Salary Calculator",
-    "description": "Hourly to Salary Calculator - Wage Conversion Analysis",
+    "description": "Convert hourly wages to annual salary and compare compensation packages for career planning. Professional wage calculator with benefits analysis and total compensation comparison tools.",
     "titleSuffix": "Wage Conversion Analysis",
     "category": "finance",
     "keywords": ["hourly", "salary", "wage", "annual", "conversion", "calculator"],
