@@ -35,7 +35,8 @@ export async function generateMetadata({
     ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
     : baseKeywords;
 
-  const title = `${toolName} | InterConverter`;
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
   const canonicalPath = `/${l}/finance/tax-calculator`;
 
   return {

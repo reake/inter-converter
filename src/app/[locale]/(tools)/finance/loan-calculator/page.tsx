@@ -28,13 +28,14 @@ export async function generateMetadata({
   const entry = catalogs[l]?.find((it) => it.id === 'loan-calculator') || catalogs.en.find((it) => it.id === 'loan-calculator');
 
   const toolName: string = entry?.name ?? 'Loan Calculator';
-  const description: string = entry?.description ?? 'Calculate monthly payments, total interest costs, and amortization schedules for any type of loan.';
+  const description: string = entry?.description ?? 'Calculate loan payments, total interest, and amortization schedule. Free loan payment calculator for personal loans, auto loans, and more.';
   const baseKeywords = generateOptimizedKeywords('loan-calculator', 'finance', 'Loan Calculator');
   const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
     ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
     : baseKeywords;
 
-  const title = `${toolName} | InterConverter`;
+  const titleSuffix: string = entry?.titleSuffix ?? '';
+  const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
   const canonicalPath = `/${l}/finance/loan-calculator`;
 
   return {

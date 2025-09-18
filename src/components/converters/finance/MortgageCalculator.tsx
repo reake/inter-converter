@@ -152,10 +152,10 @@ export default function MortgageCalculator() {
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="15">15 Years</SelectItem>
-                  <SelectItem value="20">20 Years</SelectItem>
-                  <SelectItem value="25">25 Years</SelectItem>
-                  <SelectItem value="30">30 Years</SelectItem>
+                  <SelectItem value="15">{t('loanTerm15Years')}</SelectItem>
+                  <SelectItem value="20">{t('loanTerm20Years')}</SelectItem>
+                  <SelectItem value="25">{t('loanTerm25Years')}</SelectItem>
+                  <SelectItem value="30">{t('loanTerm30Years')}</SelectItem>
                 </SelectContent>
               </Select>
             </div>

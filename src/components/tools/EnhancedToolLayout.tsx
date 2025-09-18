@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Head from 'next/head';
 import { ToolLayoutProps } from '@/types/tools';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ToolFAQs, FAQ } from './ToolFAQs';
@@ -85,12 +86,26 @@ export function EnhancedToolLayout({
 
   return (
     <>
+      <Head>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        {/* Additional image meta could be injected dynamically via page metadata */}
+      </Head>
+      {/* Structured Data */}
       {structuredData && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       )}
+      {/* Breadcrumb Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbStructuredData(title, category, toolId)) }}
+      />
+      {/* x-default hreflang */}
+      <link rel="alternate" hrefLang="x-default" href={`/${category}/${toolId}`} />
 
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         <div className="mb-8 text-center">
@@ -250,4 +265,27 @@ function generateEnhancedStructuredData(
   }
 
   return structuredData;
+}
+
+// Breadcrumb structured data generator
+function generateBreadcrumbStructuredData(title: string, category: string, toolId: string) {
+  const baseUrl = 'https://interconverter.com';
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": category.charAt(0).toUpperCase() + category.slice(1),
+        "item": `${baseUrl}/${category}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": title,
+        "item": `${baseUrl}/${category}/${toolId}`
+      }
+    ]
+  };
 }

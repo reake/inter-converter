@@ -107,6 +107,47 @@
       "🔬 Scientists"
     ]
   },
+  "tools": {
+    "mortgageCalculator": {
+      "title": "Mortgage Calculator",
+      "description": "Calculate monthly mortgage payments, total interest, and amortization schedule with taxes, insurance, and PMI.",
+      "homePrice": "Home Price ($)",
+      "downPayment": "Down Payment ($)",
+      "interestRate": "Interest Rate (%)",
+      "loanTerm": "Loan Term",
+      "loanTerm15Years": "15 Years",
+      "loanTerm20Years": "20 Years",
+      "loanTerm25Years": "25 Years",
+      "loanTerm30Years": "30 Years",
+      "annualPropertyTax": "Annual Property Tax ($)",
+      "annualHomeInsurance": "Annual Home Insurance ($)",
+      "pmiRate": "PMI Rate (% annually)",
+      "calculate": "Calculate Mortgage",
+      "monthlyPaymentBreakdown": "Monthly Payment Breakdown",
+      "totalMonthlyPayment": "Total Monthly Payment",
+      "principalAndInterest": "Principal & Interest",
+      "propertyTaxes": "Property Taxes",
+      "monthlyHomeInsurance": "Home Insurance",
+      "pmi": "PMI (Private Mortgage Insurance)",
+      "totalInterestPaid": "Total Interest Paid",
+      "totalPayments": "Total of All Payments",
+      "amortizationSchedule": "Amortization Schedule (First 5 Years)",
+      "month": "Month",
+      "payment": "Payment",
+      "principal": "Principal",
+      "interest": "Interest",
+      "balance": "Balance",
+      "tips": {
+        "title": "Mortgage Tips",
+        "tip1": "A larger down payment reduces your monthly payment and eliminates PMI if 20% or more",
+        "tip2": "Consider the total cost of homeownership including taxes, insurance, and maintenance",
+        "tip3": "Shop around for the best interest rates - even 0.25% can save thousands",
+        "tip4": "Factor in closing costs, which typically range from 2-5% of the home price",
+        "tip5": "Consider a 15-year mortgage for faster payoff and less total interest",
+        "tip6": "Make extra principal payments to reduce the total interest paid over time"
+      }
+    }
+  },
   "toolsPage": {
     "hero": {
       "title": "All Free Online Tools",
@@ -729,5 +770,9 @@
   "about": {
     "title": "About",
     "description": "This is a InterConverter built with Next.js and Tailwind CSS."
+  },
+  "timestampConverter": {
+    "title": "Timestamp Converter",
+    "description": "Convert Unix timestamps to human-readable dates and vice versa"
   }
 }

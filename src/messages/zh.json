@@ -107,6 +107,47 @@
       "🔬 科学家"
     ]
   },
+  "tools": {
+    "mortgageCalculator": {
+      "title": "房贷计算器",
+      "description": "计算月供、总利息和还款计划，包含税费、保险和PMI。",
+      "homePrice": "房屋价格 ($)",
+      "downPayment": "首付款 ($)",
+      "interestRate": "利率 (%)",
+      "loanTerm": "贷款期限",
+      "loanTerm15Years": "15年",
+      "loanTerm20Years": "20年",
+      "loanTerm25Years": "25年",
+      "loanTerm30Years": "30年",
+      "annualPropertyTax": "年度房产税 ($)",
+      "annualHomeInsurance": "年度房屋保险 ($)",
+      "pmiRate": "PMI费率 (年利率%)",
+      "calculate": "计算房贷",
+      "monthlyPaymentBreakdown": "月供明细",
+      "totalMonthlyPayment": "月供总额",
+      "principalAndInterest": "本金和利息",
+      "propertyTaxes": "房产税",
+      "monthlyHomeInsurance": "房屋保险",
+      "pmi": "PMI (私人抵押贷款保险)",
+      "totalInterestPaid": "总利息支出",
+      "totalPayments": "总还款额",
+      "amortizationSchedule": "还款计划表 (前5年)",
+      "month": "月份",
+      "payment": "还款额",
+      "principal": "本金",
+      "interest": "利息",
+      "balance": "余额",
+      "tips": {
+        "title": "房贷小贴士",
+        "tip1": "首付越多，月供越低，首付20%以上可免除PMI",
+        "tip2": "考虑房屋总成本，包括税费、保险和维护费用",
+        "tip3": "货比三家寻找最佳利率 - 即使0.25%的差异也能节省数千美元",
+        "tip4": "考虑过户费用，通常为房价的2-5%",
+        "tip5": "考虑15年期房贷，还款更快，总利息更少",
+        "tip6": "额外还本金可减少总利息支出"
+      }
+    }
+  },
   "toolsPage": {
     "hero": {
       "title": "所有免费在线工具",
@@ -729,5 +770,9 @@
   "about": {
     "title": "关于",
     "description": "这是一个使用 Next.js 和 Tailwind CSS 构建的极简工具站。"
+  },
+  "timestampConverter": {
+    "title": "时间戳转换器",
+    "description": "将Unix时间戳转换为可读日期格式，反之亦然"
   }
 }

@@ -30,6 +30,9 @@ export default async function RootLayout({
     messages = await getMessages();
   }
 
+  const defaultThemeEnv = process.env.NEXT_PUBLIC_DEFAULT_THEME || 'light';
+  const enableSystemTheme = defaultThemeEnv === 'system';
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
@@ -45,8 +48,8 @@ export default async function RootLayout({
         <GoogleAnalytics />
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme={defaultThemeEnv as any}
+          enableSystem={enableSystemTheme}
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
