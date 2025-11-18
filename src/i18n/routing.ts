@@ -1,5 +1,20 @@
 import { defineRouting } from 'next-intl/routing';
 import { createNavigation } from 'next-intl/navigation';
+import { TOOLS_CONFIG, TOOL_CATEGORIES } from '@/config/tools';
+
+// Build pathnames from config to cover every category + tool page for hreflang/canonical accuracy
+const basePathnames = ['/', '/tools', '/about'];
+const categoryPathnames = Object.keys(TOOL_CATEGORIES).map((slug) => `/${slug}`);
+const toolPathnames = TOOLS_CONFIG.map((tool) => tool.path);
+
+// Deduplicate and map to the shared internal path (same as external here)
+const pathnames = [...new Set([...basePathnames, ...categoryPathnames, ...toolPathnames])].reduce(
+  (acc, pathname) => {
+    acc[pathname] = pathname;
+    return acc;
+  },
+  {} as Record<string, string>
+);
 
 export const routing = defineRouting({
   // A list of all locales that are supported
@@ -17,25 +32,7 @@ export const routing = defineRouting({
   // The `pathnames` object holds pairs of internal and
   // external paths. Based on the locale, the external
   // paths are rewritten to the shared, internal ones.
-  pathnames: {
-    // If all locales use the same pathname, a single
-    // string or only the key can be provided.
-    '/': '/',
-    '/tools': '/tools',
-    '/auto': '/auto',
-    '/about': '/about',
-    '/timestamp-converter': '/timestamp-converter',
-    '/currency-converter': '/currency-converter',
-    '/loan-calculator': '/loan-calculator',
-    '/pdf-to-word-converter': '/pdf-to-word-converter',
-    '/jpg-to-png-converter': '/jpg-to-png-converter',
-    '/hex-to-rgb-converter': '/hex-to-rgb-converter',
-    '/bmi-calculator': '/bmi-calculator',
-    '/unit-converter': '/unit-converter',
-    '/countdown-timer': '/countdown-timer',
-    '/tax-calculator': '/tax-calculator',
-    '/date-difference-calculator': '/date-difference-calculator',
-  }
+  pathnames,
 });
 
 // Lightweight wrappers around Next.js' navigation APIs

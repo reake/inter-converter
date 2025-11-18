@@ -4,20 +4,16 @@ import { MetadataRoute } from 'next';
 export const dynamic = 'force-static';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://interconverter.com';
+  // Prefer env for preview/staging correctness, fall back to production domain
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://interconverter.com';
 
   return {
     rules: [
       {
         userAgent: '*',
-        allow: [
-          '/',
-        ],
-        disallow: [
-          '/api/',
-          '/_next/',
-          '*.json',
-        ],
+        allow: ['/'],
+        // Keep critical assets crawlable; forbid only internal/runtime paths
+        disallow: ['/api/', '/_next/'],
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,

@@ -6,7 +6,7 @@ import { routing } from '@/i18n/routing';
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://interconverter.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://interconverter.com';
   const currentDate = new Date();
   
   // Base pages
@@ -50,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: tool.searchVolume && tool.searchVolume > 50000 ? 0.9 : 0.7,
     }));
 
-  // Localized pages for non-default locales
+  // Localized pages for non-default locales, including categories
   const localizedPages: MetadataRoute.Sitemap = [];
   routing.locales.forEach(locale => {
     if (locale !== routing.defaultLocale) {
@@ -60,6 +60,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
           ...page,
           url: `${baseUrl}/${locale}${page.url.replace(baseUrl, '')}`,
           priority: (page.priority || 0.5) * 0.8, // Slightly lower priority for non-default locales
+        });
+      });
+
+      // Add localized category pages
+      categories.forEach(category => {
+        localizedPages.push({
+          url: `${baseUrl}/${locale}/${category}`,
+          lastModified: currentDate,
+          changeFrequency: 'weekly',
+          priority: 0.8 * 0.8,
         });
       });
 

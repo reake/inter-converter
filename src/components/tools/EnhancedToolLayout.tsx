@@ -44,6 +44,7 @@ export function EnhancedToolLayout({
   sectionTitles,
   locale
 }: EnhancedToolLayoutProps) {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://interconverter.com';
   const defaultHowToUse = [
     "Enter your input in the designated field",
     "The conversion will happen automatically",
@@ -61,7 +62,9 @@ export function EnhancedToolLayout({
   const howToUseSteps = customHowToUse || defaultHowToUse;
   const features = customFeatures || defaultFeatures;
   const normalizedFaqs = faqs || [];
-  const structuredData = includeStructuredData ? generateEnhancedStructuredData(title, description, toolId, category, normalizedFaqs) : null;
+  const structuredData = includeStructuredData
+    ? generateEnhancedStructuredData(baseUrl, title, description, toolId, category, normalizedFaqs)
+    : null;
   
   const toolsToShow = relatedTools;
 
@@ -102,10 +105,12 @@ export function EnhancedToolLayout({
       {/* Breadcrumb Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbStructuredData(title, category, toolId)) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbStructuredData(baseUrl, title, category, toolId)),
+        }}
       />
       {/* x-default hreflang */}
-      <link rel="alternate" hrefLang="x-default" href={`/${category}/${toolId}`} />
+      <link rel="alternate" hrefLang="x-default" href={`${baseUrl}/${category}/${toolId}`} />
 
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         <div className="mb-8 text-center">
@@ -223,13 +228,13 @@ export function EnhancedToolLayout({
 
 // Generate enhanced structured data for SEO
 function generateEnhancedStructuredData(
+  baseUrl: string,
   title: string,
   description: string,
   toolId: string,
   category: string,
   faqs: FAQ[]
 ) {
-  const baseUrl = 'https://interconverter.com';
   const toolUrl = `${baseUrl}/${category}/${toolId}`;
 
   const structuredData: any = {
@@ -268,8 +273,7 @@ function generateEnhancedStructuredData(
 }
 
 // Breadcrumb structured data generator
-function generateBreadcrumbStructuredData(title: string, category: string, toolId: string) {
-  const baseUrl = 'https://interconverter.com';
+function generateBreadcrumbStructuredData(baseUrl: string, title: string, category: string, toolId: string) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
