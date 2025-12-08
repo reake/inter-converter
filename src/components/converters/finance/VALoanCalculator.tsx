@@ -224,7 +224,7 @@ export default function VALoanCalculator() {
                       <Checkbox 
                         id="firstTimeUse" 
                         checked={firstTimeUse}
-                        onCheckedChange={setFirstTimeUse}
+                        onCheckedChange={(checked) => setFirstTimeUse(checked === true)}
                       />
                       <Label htmlFor="firstTimeUse">First-time VA loan use</Label>
                     </div>
@@ -233,7 +233,7 @@ export default function VALoanCalculator() {
                       <Checkbox 
                         id="disability" 
                         checked={disability}
-                        onCheckedChange={setDisability}
+                        onCheckedChange={(checked) => setDisability(checked === true)}
                       />
                       <Label htmlFor="disability">Service-connected disability (10%+)</Label>
                     </div>

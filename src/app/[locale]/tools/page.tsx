@@ -6,13 +6,13 @@ import { ToolsPageClient } from '@/components/tools/ToolsPageClient';
 export const dynamic = 'force-static';
 
 interface Props {
-  params: {
+  params: Promise<{
     locale: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = params;
+  const { locale } = await params;
   
   const titles = {
     en: 'All Free Online Converters & Calculators | InterConverter',
@@ -45,6 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function ToolsPage({ params }: Props) {
-  return <ToolsPageClient locale={params.locale} />;
+export default async function ToolsPage({ params }: Props) {
+  const { locale } = await params;
+  return <ToolsPageClient locale={locale} />;
 }

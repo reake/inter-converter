@@ -230,3 +230,5 @@ export function WeightConverter() {
     </div>
   );
 }
+
+export default WeightConverter;

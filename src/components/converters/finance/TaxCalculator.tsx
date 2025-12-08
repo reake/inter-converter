@@ -430,3 +430,5 @@ export function TaxCalculator() {
     </div>
   );
 }
+
+export default TaxCalculator;

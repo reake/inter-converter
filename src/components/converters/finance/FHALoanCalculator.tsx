@@ -138,7 +138,7 @@ export default function FHALoanCalculator() {
     return {
       creditScore: score >= 580,
       downPayment: downPercent >= 3.5,
-      loanLimit: loanAmount <= results?.maxLoanAmount,
+      loanLimit: loanAmount <= (results?.maxLoanAmount || 0),
       overall: score >= 580 && downPercent >= 3.5 && loanAmount <= (results?.maxLoanAmount || 0)
     };
   };

@@ -418,3 +418,5 @@ export function CurrencyConverter() {
     </div>
   );
 }
+
+export default CurrencyConverter;
