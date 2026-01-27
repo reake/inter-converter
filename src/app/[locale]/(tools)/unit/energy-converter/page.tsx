@@ -35,7 +35,7 @@ export async function generateMetadata({
 
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
-  const canonicalPath = `/${l}/unit/energy-converter`;
+  const canonicalPath = `${l === "en" ? "" : "/" + l}/unit/energy-converter`;
 
   return {
     title,
@@ -105,6 +105,7 @@ export default async function EnergyConverterPage({
 
   return (
     <EnhancedToolLayout
+      locale={l}
       title={toolName}
       description={description}
       keywords={keywords}

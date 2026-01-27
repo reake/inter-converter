@@ -33,7 +33,7 @@ export function LanguageToggle() {
     const browserLang = getBrowserLanguage();
     const preferredLang = languageManager.getPreferredLanguage();
     setIsAutoDetected(locale === browserLang && locale !== preferredLang);
-  }, [locale]);
+  }, [locale, languageManager]);
 
   const switchLanguage = (newLocale: string) => {
     // Update language manager

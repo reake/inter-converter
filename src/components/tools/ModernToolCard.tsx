@@ -1,11 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ToolConfig } from '@/types/tools';
-import { TOOL_CATEGORIES } from '@/config/tools';
+import { getToolCategories } from '@/config/tools';
 
 interface ModernToolCardProps {
   tool: ToolConfig;
@@ -25,7 +25,9 @@ export function ModernToolCard({
   locale = 'en'
 }: ModernToolCardProps) {
   const [isHovered, setIsHovered] = useState(false);
-  const categoryInfo = TOOL_CATEGORIES[tool.category as keyof typeof TOOL_CATEGORIES];
+  const toolCategories = getToolCategories(locale);
+  const categoryInfo = toolCategories[tool.category as keyof typeof toolCategories];
+  const isZh = locale === 'zh';
   
   const getCategoryGradient = (category: string) => {
     const gradients = {
@@ -44,17 +46,17 @@ export function ModernToolCard({
   const getDifficultyInfo = (difficulty: number) => {
     if (difficulty <= 2) return { 
       color: 'bg-green-100 text-green-700 border-green-200', 
-      text: 'Easy',
+      text: isZh ? '简单' : 'Easy',
       icon: '🟢'
     };
     if (difficulty <= 3) return { 
       color: 'bg-yellow-100 text-yellow-700 border-yellow-200', 
-      text: 'Medium',
+      text: isZh ? '中等' : 'Medium',
       icon: '🟡'
     };
     return { 
       color: 'bg-red-100 text-red-700 border-red-200', 
-      text: 'Advanced',
+      text: isZh ? '高级' : 'Advanced',
       icon: '🔴'
     };
   };
@@ -65,7 +67,7 @@ export function ModernToolCard({
     return volume.toString();
   };
 
-  const toolPath = locale === 'en' ? tool.path : `/${locale}${tool.path}`;
+  const toolPath = tool.path;
   const difficultyInfo = getDifficultyInfo(tool.difficulty || 1);
   const categoryGradient = getCategoryGradient(tool.category);
 

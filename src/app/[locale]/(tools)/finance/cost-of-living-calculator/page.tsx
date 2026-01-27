@@ -35,7 +35,7 @@ export async function generateMetadata({
 
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
-  const canonicalPath = `/${l}/finance/cost-of-living-calculator`;
+  const canonicalPath = `${l === "en" ? "" : "/" + l}/finance/cost-of-living-calculator`;
 
   return {
     title,

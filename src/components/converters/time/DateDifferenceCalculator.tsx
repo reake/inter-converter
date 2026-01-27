@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -26,16 +26,26 @@ export function DateDifferenceCalculator() {
   const [result, setResult] = useState<DateDifference | null>(null);
   const [error, setError] = useState('');
 
-  useEffect(() => {
-    if (startDate && endDate) {
-      calculateDifference();
-    } else {
-      setResult(null);
-      setError('');
-    }
-  }, [startDate, endDate, includeEndDate, businessDaysOnly]);
+  const isBusinessDay = useCallback((date: Date): boolean => {
+    const day = date.getDay();
+    return day !== 0 && day !== 6; // Not Sunday (0) or Saturday (6)
+  }, []);
 
-  const calculateDifference = () => {
+  const calculateBusinessDays = useCallback((start: Date, end: Date): number => {
+    let count = 0;
+    const current = new Date(start);
+    
+    while (current < end) {
+      if (isBusinessDay(current)) {
+        count++;
+      }
+      current.setDate(current.getDate() + 1);
+    }
+    
+    return count;
+  }, [isBusinessDay]);
+
+  const calculateDifference = useCallback(() => {
     try {
       const start = new Date(startDate);
       const end = new Date(endDate);
@@ -91,30 +101,21 @@ export function DateDifferenceCalculator() {
 
       setResult(difference);
       setError('');
-    } catch (err) {
+    } catch {
       setError('Error calculating date difference');
       setResult(null);
     }
-  };
+  }, [startDate, endDate, includeEndDate, calculateBusinessDays, isBusinessDay]);
 
-  const calculateBusinessDays = (start: Date, end: Date): number => {
-    let count = 0;
-    const current = new Date(start);
-    
-    while (current < end) {
-      if (isBusinessDay(current)) {
-        count++;
-      }
-      current.setDate(current.getDate() + 1);
+  useEffect(() => {
+    if (startDate && endDate) {
+      calculateDifference();
+    } else {
+      setResult(null);
+      setError('');
     }
-    
-    return count;
-  };
+  }, [startDate, endDate, includeEndDate, businessDaysOnly, calculateDifference]);
 
-  const isBusinessDay = (date: Date): boolean => {
-    const day = date.getDay();
-    return day !== 0 && day !== 6; // Not Sunday (0) or Saturday (6)
-  };
 
   const copyToClipboard = async (text: string) => {
     try {
@@ -334,7 +335,7 @@ export function DateDifferenceCalculator() {
             <div>
               <h4 className="font-medium mb-2">Tips</h4>
               <div className="space-y-2 text-sm">
-                <div>• Use "Include end date" for inclusive counting</div>
+                <div>• Use &quot;Include end date&quot; for inclusive counting</div>
                 <div>• Business days exclude weekends</div>
                 <div>• Results account for leap years</div>
                 <div>• All calculations are precise to the day</div>

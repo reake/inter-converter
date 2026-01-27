@@ -40,7 +40,7 @@ export async function generateMetadata({
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
 
-  const canonicalPath = `/${l}/auto/gear-ratio-calculator`;
+  const canonicalPath = `${l === "en" ? "" : "/" + l}/auto/gear-ratio-calculator`;
 
   return {
     title,

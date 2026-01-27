@@ -1,4 +1,3 @@
-import { Metadata } from 'next';
 import Head from 'next/head';
 import { ToolLayoutProps } from '@/types/tools';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -31,7 +30,6 @@ export function EnhancedToolLayout({
   description,
   children,
   toolId,
-  keywords = [],
   category = '',
   emoji,
   includeStructuredData = true,
@@ -237,7 +235,7 @@ function generateEnhancedStructuredData(
 ) {
   const toolUrl = `${baseUrl}/${category}/${toolId}`;
 
-  const structuredData: any = {
+  const structuredData: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": title,

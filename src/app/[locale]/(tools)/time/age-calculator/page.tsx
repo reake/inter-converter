@@ -35,7 +35,7 @@ export async function generateMetadata({
 
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
-  const canonicalPath = `/${l}/time/age-calculator`;
+  const canonicalPath = `${l === "en" ? "" : "/" + l}/time/age-calculator`;
 
   return {
     title,
@@ -105,6 +105,7 @@ export default async function AgeCalculatorPage({
 
   return (
     <EnhancedToolLayout
+      locale={l}
       title={toolName}
       description={description}
       keywords={keywords}

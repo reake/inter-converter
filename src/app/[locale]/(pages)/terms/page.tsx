@@ -3,6 +3,29 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle } from 'lucide-react';
+import { Metadata } from 'next';
+import { generateMetadata as generateSEOMetadata } from '@/lib/seo/metadata';
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isZh = locale === 'zh';
+
+  return generateSEOMetadata({
+    title: isZh ? '服务条款 | InterConverter' : 'Terms of Service | InterConverter',
+    description: isZh
+      ? '查看 InterConverter 的使用条款与服务政策。'
+      : 'Review the terms and conditions for using InterConverter.',
+    locale,
+    pathname: '/terms',
+    keywords: isZh
+      ? ['服务条款', '使用条款', 'InterConverter']
+      : ['terms of service', 'terms', 'InterConverter']
+  });
+}
 
 
 

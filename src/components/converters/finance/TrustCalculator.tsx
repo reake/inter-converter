@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -25,7 +25,7 @@ export function TrustCalculator() {
     yieldRate: number;
   } | null>(null);
 
-  const calculateTrustDistribution = () => {
+  const calculateTrustDistribution = useCallback(() => {
     const principal = parseFloat(trustPrincipal) || 0;
     const income = parseFloat(annualIncome) || 0;
     const rate = parseFloat(distributionRate) || 0;
@@ -74,13 +74,13 @@ export function TrustCalculator() {
       remainingPrincipal,
       yieldRate
     });
-  };
+  }, [trustPrincipal, annualIncome, distributionRate, distributionType, beneficiaryTaxRate]);
 
   useEffect(() => {
     if (trustPrincipal && annualIncome) {
       calculateTrustDistribution();
     }
-  }, [trustPrincipal, annualIncome, distributionRate, distributionType, beneficiaryTaxRate]);
+  }, [trustPrincipal, annualIncome, calculateTrustDistribution]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

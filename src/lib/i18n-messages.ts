@@ -3,9 +3,9 @@ import zh from '@/messages/zh.json';
 
 export type SupportedLocale = 'en' | 'zh';
 
-const MAP: Record<SupportedLocale, any> = {
-  en,
-  zh,
+const MAP: Record<SupportedLocale, Record<string, unknown>> = {
+  en: en as Record<string, unknown>,
+  zh: zh as Record<string, unknown>,
 };
 
 export function getMessages(locale: string) {

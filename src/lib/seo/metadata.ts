@@ -74,7 +74,7 @@ export async function loadToolContent(category: string, toolId: string, locale: 
   try {
     const content = await import(`@/data/tools/${category}/${toolId}-${locale}.json`);
     return content.default;
-  } catch (error) {
+  } catch {
     // Fallback to global configuration if tool-specific content doesn't exist
     return null;
   }
@@ -85,7 +85,7 @@ export async function loadCategoryContent(category: string, locale: string) {
   try {
     const content = await import(`@/data/tools/${category}/${category}-${locale}.json`);
     return content.default;
-  } catch (error) {
+  } catch {
     return null;
   }
 }

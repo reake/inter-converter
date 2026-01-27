@@ -1,8 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -31,7 +30,7 @@ export default function SecuredLoanCalculator() {
   const [creditScore, setCreditScore] = useState<string>('700');
   const [results, setResults] = useState<SecuredLoanResults | null>(null);
 
-  const calculateSecuredLoan = () => {
+  const calculateSecuredLoan = useCallback(() => {
     const principal = parseFloat(loanAmount);
     const collateral = parseFloat(collateralValue);
     const annualRate = parseFloat(interestRate) / 100;
@@ -93,11 +92,11 @@ export default function SecuredLoanCalculator() {
         savings: totalSavings
       }
     });
-  };
+  }, [loanAmount, collateralValue, interestRate, loanTerm, creditScore]);
 
   useEffect(() => {
     calculateSecuredLoan();
-  }, [loanAmount, collateralValue, interestRate, loanTerm, collateralType, creditScore]);
+  }, [calculateSecuredLoan]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -382,7 +381,7 @@ export default function SecuredLoanCalculator() {
                       <div>📉 <strong>Depreciation:</strong> Collateral may lose value</div>
                       <div>📋 <strong>More Paperwork:</strong> Appraisals and documentation</div>
                       <div>⏰ <strong>Longer Process:</strong> More time to approve</div>
-                      <div>🔒 <strong>Asset Tied Up:</strong> Can't sell collateral freely</div>
+                      <div>🔒 <strong>Asset Tied Up:</strong> Can&apos;t sell collateral freely</div>
                     </div>
                   </CardContent>
                 </Card>
@@ -393,9 +392,9 @@ export default function SecuredLoanCalculator() {
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-2 text-sm">
-                      <div>🏠 <strong>No Asset Risk:</strong> Can't lose property</div>
+                      <div>🏠 <strong>No Asset Risk:</strong> Can&apos;t lose property</div>
                       <div>⚡ <strong>Faster Approval:</strong> Less documentation needed</div>
-                      <div>🔓 <strong>No Collateral:</strong> Don't need valuable assets</div>
+                      <div>🔓 <strong>No Collateral:</strong> Don&apos;t need valuable assets</div>
                       <div>📋 <strong>Simple Process:</strong> Credit-based approval</div>
                       <div>💰 <strong>Flexible Use:</strong> No restrictions on funds</div>
                     </div>
@@ -409,7 +408,7 @@ export default function SecuredLoanCalculator() {
                   <CardContent>
                     <div className="space-y-2 text-sm">
                       <div>🔒 <strong>Choose Secured If:</strong> You have valuable assets, want lower rates, need larger amounts</div>
-                      <div>💳 <strong>Choose Unsecured If:</strong> You have good credit, need funds quickly, don't want asset risk</div>
+                      <div>💳 <strong>Choose Unsecured If:</strong> You have good credit, need funds quickly, don&apos;t want asset risk</div>
                       <div>⚖️ <strong>Consider Both:</strong> Compare total costs and risks</div>
                     </div>
                   </CardContent>

@@ -40,7 +40,7 @@ export async function generateMetadata({
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
 
-  const canonicalPath = `/${l}/auto/auto-weight-converter`;
+  const canonicalPath = `${l === "en" ? "" : "/" + l}/auto/auto-weight-converter`;
 
   return {
     title,

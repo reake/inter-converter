@@ -115,7 +115,7 @@ export function ToolSearch({
         <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-lg shadow-lg border z-50">
           <div className="p-4 text-center text-gray-600">
             <Search className="h-8 w-8 mx-auto mb-2 text-gray-400" />
-            <div className="text-sm">No tools found for "{searchQuery}"</div>
+            <div className="text-sm">No tools found for &quot;{searchQuery}&quot;</div>
             <div className="text-xs text-gray-500 mt-1">Try different keywords or browse by category</div>
           </div>
         </div>

@@ -9,10 +9,9 @@ interface FaqSectionProps {
   title: string;
   subtitle?: string;
   faqItems: FaqItem[];
-  locale: string;
 }
 
-export function FaqSection({ title, subtitle, faqItems, locale }: FaqSectionProps) {
+export function FaqSection({ title, subtitle, faqItems }: FaqSectionProps) {
   return (
     <>
       <JsonLd data={generateFAQSchema(faqItems)} />

@@ -1,0 +1,2772 @@
+[
+  {
+    "id": "carburetor-cfm-calculator",
+    "name": "Carburetor CFM Calculator",
+    "description": "Calculate carburetor CFM requirements for optimal engine performance. Professional carburetor sizing calculator with airflow analysis for automotive enthusiasts and mechanics.",
+    "category": "auto",
+    "keywords": [
+      "carburetor cfm calculator",
+      "carburetor sizing calculator",
+      "engine airflow calculator",
+      "cfm requirements calculator",
+      "carburetor selection tool",
+      "carburetor cfm calculator engine size",
+      "carb sizing calculator",
+      "engine cfm calculator",
+      "carburetor calculator online",
+      "auto cfm calculator"
+    ],
+    "path": "/auto/carburetor-cfm-calculator",
+    "isActive": true,
+    "searchVolume": 12000,
+    "difficulty": 2,
+    "icon": "🏎️"
+  },
+  {
+    "id": "compression-ratio-calculator",
+    "name": "Compression Ratio Calculator",
+    "description": "Calculate engine compression ratio and analyze horsepower potential. Advanced compression ratio calculator for engine building and performance optimization projects.",
+    "category": "auto",
+    "keywords": [
+      "compression",
+      "ratio",
+      "horsepower",
+      "engine",
+      "performance"
+    ],
+    "path": "/auto/compression-ratio-calculator",
+    "isActive": true,
+    "searchVolume": 8500,
+    "difficulty": 3,
+    "icon": "⚙️"
+  },
+  {
+    "id": "engine-size-converter",
+    "name": "Engine Size Converter",
+    "description": "Convert engine displacement between cubic inches and liters instantly. Accurate engine size converter for automotive specifications and engine building calculations.",
+    "category": "auto",
+    "keywords": [
+      "engine",
+      "displacement",
+      "cubic inches",
+      "liters",
+      "Converters"
+    ],
+    "path": "/auto/engine-size-converter",
+    "isActive": true,
+    "searchVolume": 15000,
+    "difficulty": 1,
+    "icon": "🔧"
+  },
+  {
+    "id": "gear-ratio-calculator",
+    "name": "Gear Ratio Calculator",
+    "description": "Calculate gear ratios for optimal vehicle performance and fuel efficiency. Professional gear ratio calculator for differential and transmission analysis.",
+    "category": "auto",
+    "keywords": [
+      "gear",
+      "ratio",
+      "differential",
+      "performance",
+      "transmission"
+    ],
+    "path": "/auto/gear-ratio-calculator",
+    "isActive": true,
+    "searchVolume": 18000,
+    "difficulty": 2,
+    "icon": "⚙️"
+  },
+  {
+    "id": "power-to-weight-ratio",
+    "name": "Power to Weight Ratio Calculator",
+    "description": "Calculate power-to-weight ratio for vehicle performance analysis. Determine horsepower per pound ratios for racing and automotive performance comparisons.",
+    "category": "auto",
+    "keywords": [
+      "power",
+      "weight",
+      "ratio",
+      "horsepower",
+      "performance"
+    ],
+    "path": "/auto/power-to-weight-ratio",
+    "isActive": true,
+    "searchVolume": 9500,
+    "difficulty": 1,
+    "icon": "💪"
+  },
+  {
+    "id": "ram-air-calculator",
+    "name": "Ram Air Calculator",
+    "description": "Calculate ram air horsepower gains and cold air intake performance benefits. Professional ram air calculator for induction system optimization and tuning.",
+    "category": "auto",
+    "keywords": [
+      "ram air",
+      "horsepower",
+      "induction",
+      "performance",
+      "pontiac"
+    ],
+    "path": "/auto/ram-air-calculator",
+    "isActive": true,
+    "searchVolume": 4500,
+    "difficulty": 3,
+    "icon": "💨"
+  },
+  {
+    "id": "rpm-calculator",
+    "name": "RPM Calculator",
+    "description": "Calculate RPM based on vehicle speed, gear ratio, and tire size. Comprehensive RPM calculator for transmission tuning and performance analysis.",
+    "category": "auto",
+    "keywords": [
+      "rpm",
+      "speed",
+      "gear ratio",
+      "tire",
+      "engine"
+    ],
+    "path": "/auto/rpm-calculator",
+    "isActive": true,
+    "searchVolume": 22000,
+    "difficulty": 2,
+    "icon": "🌀"
+  },
+  {
+    "id": "speed-converter",
+    "name": "Speed Converter",
+    "description": "Convert speed between MPH and KPH for automotive applications. Instant speed converter with precise calculations for racing and vehicle specifications.",
+    "category": "auto",
+    "keywords": [
+      "speed",
+      "mph",
+      "kph",
+      "Converters",
+      "auto"
+    ],
+    "path": "/auto/speed-converter",
+    "isActive": true,
+    "searchVolume": 35000,
+    "difficulty": 1,
+    "icon": "🏁"
+  },
+  {
+    "id": "supercharger-calculator",
+    "name": "Supercharger Calculator",
+    "description": "Calculate supercharger boost pressure and horsepower gains. Professional supercharger calculator for forced induction performance analysis and tuning.",
+    "category": "auto",
+    "keywords": [
+      "supercharger",
+      "horsepower",
+      "boost",
+      "psi",
+      "performance"
+    ],
+    "path": "/auto/supercharger-calculator",
+    "isActive": true,
+    "searchVolume": 7500,
+    "difficulty": 3,
+    "icon": "🌪️"
+  },
+  {
+    "id": "temperature-converter",
+    "name": "Automotive Temperature Converter",
+    "description": "Convert automotive temperatures between Fahrenheit and Celsius for engine and cooling system analysis. Essential temperature converter for automotive diagnostics.",
+    "category": "auto",
+    "keywords": [
+      "automotive temperature converter",
+      "fahrenheit celsius converter",
+      "engine temperature conversion",
+      "cooling system temperature",
+      "automotive thermal analysis",
+      "f to c converter auto",
+      "celsius fahrenheit automotive",
+      "engine tuning temperature",
+      "coolant temperature converter",
+      "automotive temperature tool"
+    ],
+    "path": "/auto/temperature-converter",
+    "isActive": true,
+    "searchVolume": 28000,
+    "difficulty": 1,
+    "icon": "🌡️"
+  },
+  {
+    "id": "temperature-converter-enhanced",
+    "name": "Enhanced Temperature Converter",
+    "description": "Advanced temperature converter with thermal efficiency analysis for automotive applications. Enhanced temperature tool for engine tuning and thermal management.",
+    "category": "auto",
+    "keywords": [
+      "enhanced temperature converter",
+      "thermal efficiency",
+      "temperature differential",
+      "automotive thermal analysis",
+      "engine tuning temperature"
+    ],
+    "path": "/auto/temperature-converter-enhanced",
+    "isActive": true,
+    "searchVolume": 5500,
+    "difficulty": 3,
+    "icon": "🌡️"
+  },
+  {
+    "id": "tire-calculator",
+    "name": "Tire Calculator",
+    "description": "Calculate tire diameter effects on speedometer accuracy and vehicle performance. Comprehensive tire calculator for wheel and tire sizing decisions.",
+    "category": "auto",
+    "keywords": [
+      "tire",
+      "diameter",
+      "speed",
+      "rpm",
+      "performance"
+    ],
+    "path": "/auto/tire-calculator",
+    "isActive": true,
+    "searchVolume": 16000,
+    "difficulty": 2,
+    "icon": "🛞"
+  },
+  {
+    "id": "torque-horsepower-calculator",
+    "name": "Torque & Horsepower Calculator",
+    "description": "Convert between torque and horsepower with RPM analysis. Professional engine power calculator for performance tuning and dyno result interpretation.",
+    "category": "auto",
+    "keywords": [
+      "torque",
+      "horsepower",
+      "rpm",
+      "Converters",
+      "engine"
+    ],
+    "path": "/auto/torque-horsepower-calculator",
+    "isActive": true,
+    "searchVolume": 19000,
+    "difficulty": 2,
+    "icon": "🔩"
+  },
+  {
+    "id": "volumetric-efficiency-calculator",
+    "name": "Volumetric Efficiency Calculator",
+    "description": "Calculate engine volumetric efficiency for optimal airflow and performance tuning. Advanced VE calculator for engine builders and performance enthusiasts.",
+    "category": "auto",
+    "keywords": [
+      "volumetric efficiency",
+      "ve",
+      "engine",
+      "performance",
+      "tuning"
+    ],
+    "path": "/auto/volumetric-efficiency-calculator",
+    "isActive": true,
+    "searchVolume": 3500,
+    "difficulty": 4,
+    "icon": "📊"
+  },
+  {
+    "id": "engine-volume-calculator",
+    "name": "Engine Volume Calculator",
+    "description": "Calculate engine cylinder volume from bore and stroke measurements. Precise engine volume calculator for displacement calculations and engine building.",
+    "category": "auto",
+    "keywords": [
+      "volume",
+      "cylinder",
+      "displacement",
+      "bore",
+      "stroke"
+    ],
+    "path": "/auto/engine-volume-calculator",
+    "isActive": true,
+    "searchVolume": 11000,
+    "difficulty": 2,
+    "icon": "📐"
+  },
+  {
+    "id": "auto-fluid-calculator",
+    "name": "Automotive Fluid Weight Calculator",
+    "description": "Calculate weight of automotive fluids including gasoline, oil, and transmission fluid. Essential fluid weight calculator for vehicle weight distribution analysis.",
+    "category": "auto",
+    "keywords": [
+      "fluid",
+      "volume",
+      "weight",
+      "gasoline",
+      "oil",
+      "transmission"
+    ],
+    "path": "/auto/fluid-weight-calculator",
+    "isActive": true,
+    "searchVolume": 6500,
+    "difficulty": 1,
+    "icon": "🛢️"
+  },
+  {
+    "id": "auto-weight-converter",
+    "name": "Automotive Weight Converter",
+    "description": "Convert automotive weights between pounds, kilograms, and other units. Specialized weight converter for vehicle specifications and racing applications.",
+    "category": "auto",
+    "keywords": [
+      "weight",
+      "Converters",
+      "pounds",
+      "kilograms",
+      "ounces",
+      "grams"
+    ],
+    "path": "/auto/auto-weight-converter",
+    "isActive": true,
+    "searchVolume": 8000,
+    "difficulty": 1,
+    "icon": "⚖️"
+  },
+  {
+    "id": "engine-displacement-calculator",
+    "name": "Engine Displacement Calculator",
+    "description": "Calculate total engine displacement from bore, stroke, and cylinder count. Professional displacement calculator for engine building and performance planning.",
+    "category": "auto",
+    "keywords": [
+      "displacement",
+      "bore",
+      "stroke",
+      "engine",
+      "cubic",
+      "inches"
+    ],
+    "path": "/auto/engine-displacement-calculator",
+    "isActive": true,
+    "searchVolume": 9500,
+    "difficulty": 2,
+    "icon": "🔧"
+  },
+  {
+    "id": "power-to-weight-calculator",
+    "name": "Power to Weight Calculator",
+    "description": "Calculate vehicle power-to-weight ratio for performance comparison and analysis. Essential calculator for racing and automotive performance evaluation.",
+    "category": "auto",
+    "keywords": [
+      "power to weight",
+      "power weight ratio",
+      "performance",
+      "horsepower",
+      "vehicle weight"
+    ],
+    "path": "/auto/power-to-weight-calculator",
+    "isActive": true,
+    "searchVolume": 8500,
+    "difficulty": 2,
+    "icon": "⚡"
+  },
+  {
+    "id": "tire-speed-calculator",
+    "name": "Tire Speed Calculator",
+    "description": "Calculate vehicle speed based on tire diameter and gear ratios. Comprehensive tire speed calculator for speedometer calibration and performance tuning.",
+    "category": "auto",
+    "keywords": [
+      "tire speed calculator",
+      "tire diameter speed",
+      "gear ratio speed",
+      "rpm speed calculator",
+      "vehicle speed calculator"
+    ],
+    "path": "/auto/tire-speed-calculator",
+    "isActive": true,
+    "searchVolume": 12000,
+    "difficulty": 2,
+    "icon": "🏁"
+  },
+  {
+    "id": "rgb-to-hex-converter",
+    "name": "RGB to HEX Converter",
+    "description": "Convert RGB color values to HEX codes instantly for web design and CSS development. Professional RGB to HEX converter with live color preview and copy-paste functionality.",
+    "category": "color",
+    "keywords": [
+      "rgb",
+      "hex",
+      "color",
+      "converter",
+      "css",
+      "design",
+      "web",
+      "palette"
+    ],
+    "path": "/color/rgb-to-hex-converter",
+    "isActive": true,
+    "searchVolume": 85000,
+    "difficulty": 1,
+    "icon": "🎨"
+  },
+  {
+    "id": "color-picker-tool",
+    "name": "Color Picker Tool",
+    "description": "Interactive color picker tool with HSL and RGB palette generation capabilities. Professional color picker featuring HSL controls, color history, and palette export for designers.",
+    "category": "color",
+    "keywords": [
+      "color",
+      "picker",
+      "hsl",
+      "palette",
+      "design",
+      "web",
+      "css",
+      "tool"
+    ],
+    "path": "/color/color-picker-tool",
+    "isActive": true,
+    "searchVolume": 78000,
+    "difficulty": 2,
+    "icon": "🌈"
+  },
+  {
+    "id": "hex-to-rgb-converter",
+    "name": "HEX to RGB Converter",
+    "description": "Convert HEX color codes to RGB values instantly for CSS and web development. Accurate HEX to RGB converter with color preview and validation for precise color matching.",
+    "category": "color",
+    "keywords": [
+      "hex",
+      "rgb",
+      "color",
+      "converter",
+      "css",
+      "design",
+      "hex to rgb",
+      "color code converter"
+    ],
+    "path": "/color/hex-to-rgb-converter",
+    "isActive": true,
+    "searchVolume": 67000,
+    "difficulty": 1,
+    "icon": "🎨"
+  },
+  {
+    "id": "color-palette-generator",
+    "name": "Color Palette Generator",
+    "description": "Generate harmonious color palettes and professional color schemes for design projects. Advanced color palette generator with multiple harmony rules and export options.",
+    "category": "color",
+    "keywords": [
+      "color",
+      "palette",
+      "generator",
+      "scheme",
+      "design",
+      "colors",
+      "harmony"
+    ],
+    "path": "/color/color-palette-generator",
+    "isActive": true,
+    "searchVolume": 45000,
+    "difficulty": 2,
+    "icon": "🎨"
+  },
+  {
+    "id": "contrast-checker",
+    "name": "Color Contrast Checker",
+    "description": "Check color contrast ratios against WCAG AA/AAA accessibility standards. Professional contrast checker ensuring web accessibility compliance with detailed ratio analysis.",
+    "category": "color",
+    "keywords": [
+      "contrast",
+      "accessibility",
+      "wcag",
+      "color",
+      "checker",
+      "ratio"
+    ],
+    "path": "/color/contrast-checker",
+    "isActive": false,
+    "searchVolume": 35000,
+    "difficulty": 2,
+    "icon": "⚖️"
+  },
+  {
+    "id": "gradient-generator",
+    "name": "CSS Gradient Generator",
+    "description": "Generate CSS gradients with linear and radial options for modern web design. Professional gradient generator with live preview, custom stops, and ready-to-use CSS code.",
+    "category": "color",
+    "keywords": [
+      "gradient",
+      "css",
+      "generator",
+      "linear",
+      "radial",
+      "background"
+    ],
+    "path": "/color/gradient-generator",
+    "isActive": false,
+    "searchVolume": 28000,
+    "difficulty": 3,
+    "icon": "🌈"
+  },
+  {
+    "id": "hex-to-hsl-converter",
+    "name": "HEX to HSL Converter",
+    "description": "Convert HEX color codes to HSL values for advanced color manipulation. Precise HEX to HSL converter with color preview and HSL color space analysis.",
+    "category": "color",
+    "keywords": [
+      "hex",
+      "hsl",
+      "color",
+      "converter",
+      "css",
+      "design"
+    ],
+    "path": "/color/hex-to-hsl-converter",
+    "isActive": false,
+    "searchVolume": 22000,
+    "difficulty": 1,
+    "icon": "🎨"
+  },
+  {
+    "id": "currency-converter",
+    "name": "Currency Converter",
+    "description": "Convert currencies with real-time exchange rates and live forex data. Professional currency converter supporting 150+ currencies with accurate conversion rates and historical charts.",
+    "category": "finance",
+    "keywords": [
+      "currency converter",
+      "exchange rate converter",
+      "money converter",
+      "forex converter",
+      "currency exchange calculator",
+      "real time currency converter",
+      "live exchange rate converter",
+      "currency converter no ads",
+      "accurate currency converter online",
+      "foreign exchange converter"
+    ],
+    "path": "/finance/currency-converter",
+    "isActive": true,
+    "searchVolume": 165000,
+    "difficulty": 3,
+    "icon": "💱"
+  },
+  {
+    "id": "loan-calculator",
+    "name": "Loan Calculator",
+    "description": "Calculate loan payments, interest, and amortization schedules instantly. Comprehensive loan calculator with payment breakdown analysis for mortgages, auto loans, and personal financing.",
+    "category": "finance",
+    "keywords": [
+      "loan",
+      "mortgage",
+      "payment",
+      "interest",
+      "calculator",
+      "finance"
+    ],
+    "path": "/finance/loan-calculator",
+    "isActive": true,
+    "searchVolume": 74000,
+    "difficulty": 2,
+    "icon": "🏦"
+  },
+  {
+    "id": "tax-calculator",
+    "name": "Tax Calculator",
+    "description": "Calculate income tax, deductions, and tax liability for accurate tax planning. Professional tax calculator supporting federal and state tax calculations with current tax brackets.",
+    "category": "finance",
+    "keywords": [
+      "tax",
+      "income",
+      "calculator",
+      "irs",
+      "refund",
+      "liability"
+    ],
+    "path": "/finance/tax-calculator",
+    "isActive": true,
+    "searchVolume": 156000,
+    "difficulty": 3,
+    "icon": "🧾"
+  },
+  {
+    "id": "mortgage-calculator",
+    "name": "Mortgage Calculator",
+    "description": "Calculate mortgage payments including PMI, property tax, and insurance costs. Complete mortgage calculator with amortization schedule and total cost analysis for home buyers.",
+    "category": "finance",
+    "keywords": [
+      "mortgage",
+      "home loan",
+      "payment",
+      "interest",
+      "calculator",
+      "real estate"
+    ],
+    "path": "/finance/mortgage-calculator",
+    "isActive": true,
+    "searchVolume": 380000,
+    "difficulty": 2,
+    "icon": "🏠"
+  },
+  {
+    "id": "auto-loan-calculator",
+    "name": "Auto Loan Calculator",
+    "description": "Calculate auto loan payments, interest rates, and total costs for vehicle financing. Professional auto loan calculator with payment schedules and comparison tools for car buyers.",
+    "category": "finance",
+    "keywords": [
+      "auto loan",
+      "car loan",
+      "vehicle financing",
+      "payment calculator"
+    ],
+    "path": "/finance/auto-loan-calculator",
+    "isActive": false,
+    "searchVolume": 180000,
+    "difficulty": 1,
+    "icon": "🚗"
+  },
+  {
+    "id": "credit-card-payoff-calculator",
+    "name": "Credit Card Payoff Calculator",
+    "description": "Calculate credit card payoff time and interest savings with strategic debt elimination. Advanced credit card calculator with multiple payment scenarios and debt reduction strategies.",
+    "category": "finance",
+    "keywords": [
+      "credit card",
+      "debt payoff",
+      "payment calculator",
+      "interest"
+    ],
+    "path": "/finance/credit-card-calculator",
+    "isActive": false,
+    "searchVolume": 134000,
+    "difficulty": 1,
+    "icon": "💳"
+  },
+  {
+    "id": "savings-calculator",
+    "name": "Savings Calculator",
+    "description": "Calculate savings growth with compound interest and regular deposits. Advanced savings calculator showing how your money grows over time with detailed projections.",
+    "category": "finance",
+    "keywords": [
+      "savings",
+      "compound interest",
+      "deposit",
+      "growth calculator"
+    ],
+    "path": "/finance/savings-calculator",
+    "isActive": false,
+    "searchVolume": 220000,
+    "difficulty": 1,
+    "icon": "💰"
+  },
+  {
+    "id": "401k-calculator",
+    "name": "401(k) Calculator",
+    "description": "Calculate 401(k) retirement savings growth with employer matching and contribution limits. Professional retirement planning calculator with tax-deferred growth projections.",
+    "category": "finance",
+    "keywords": [
+      "401k",
+      "retirement",
+      "savings",
+      "contribution calculator"
+    ],
+    "path": "/finance/401k-calculator",
+    "isActive": false,
+    "searchVolume": 85000,
+    "difficulty": 2,
+    "icon": "🏛️"
+  },
+  {
+    "id": "compound-interest-calculator",
+    "name": "Compound Interest Calculator",
+    "description": "Calculate compound interest growth for investments and savings accounts. Professional compound interest calculator with detailed growth projections and earning breakdowns.",
+    "category": "finance",
+    "keywords": [
+      "compound interest",
+      "investment",
+      "growth",
+      "calculator"
+    ],
+    "path": "/finance/compound-interest-calculator",
+    "isActive": false,
+    "searchVolume": 135000,
+    "difficulty": 1,
+    "icon": "📈"
+  },
+  {
+    "id": "retirement-calculator",
+    "name": "Retirement Calculator",
+    "description": "Calculate retirement savings needs and income projections for financial independence. Comprehensive retirement planning calculator with inflation adjustments and withdrawal strategies.",
+    "category": "finance",
+    "keywords": [
+      "retirement",
+      "savings",
+      "planning",
+      "calculator"
+    ],
+    "path": "/finance/retirement-calculator",
+    "isActive": false,
+    "searchVolume": 185000,
+    "difficulty": 3,
+    "icon": "🌅"
+  },
+  {
+    "id": "investment-calculator",
+    "name": "Investment Calculator",
+    "description": "Calculate investment returns and portfolio growth with compound interest analysis. Professional investment calculator with risk assessment and diversification recommendations.",
+    "category": "finance",
+    "keywords": [
+      "investment",
+      "returns",
+      "portfolio",
+      "calculator"
+    ],
+    "path": "/finance/investment-calculator",
+    "isActive": false,
+    "searchVolume": 145000,
+    "difficulty": 2,
+    "icon": "📊"
+  },
+  {
+    "id": "home-affordability-calculator",
+    "name": "Home Affordability Calculator",
+    "description": "Calculate home affordability based on income, debt, and down payment capacity. Professional home buying calculator with mortgage qualification and budget analysis.",
+    "category": "finance",
+    "keywords": [
+      "home affordability",
+      "house price",
+      "income",
+      "calculator"
+    ],
+    "path": "/finance/home-affordability-calculator",
+    "isActive": false,
+    "searchVolume": 125000,
+    "difficulty": 2,
+    "icon": "🏡"
+  },
+  {
+    "id": "debt-payoff-calculator",
+    "name": "Debt Payoff Calculator",
+    "description": "Calculate debt payoff strategies using snowball and avalanche methods for faster debt elimination. Professional debt calculator with payment schedules and interest savings analysis.",
+    "category": "finance",
+    "keywords": [
+      "debt payoff",
+      "snowball",
+      "avalanche",
+      "calculator"
+    ],
+    "path": "/finance/debt-payoff-calculator",
+    "isActive": false,
+    "searchVolume": 85000,
+    "difficulty": 2,
+    "icon": "❄️"
+  },
+  {
+    "id": "income-tax-calculator",
+    "name": "Income Tax Calculator",
+    "description": "Calculate federal and state income tax liability with deductions and tax brackets. Comprehensive income tax calculator for accurate tax planning and refund estimation.",
+    "category": "finance",
+    "keywords": [
+      "income tax",
+      "federal tax",
+      "state tax",
+      "calculator"
+    ],
+    "path": "/finance/income-tax-calculator",
+    "isActive": false,
+    "searchVolume": 150000,
+    "difficulty": 2,
+    "icon": "💼"
+  },
+  {
+    "id": "cost-of-living-calculator",
+    "name": "Cost of Living Calculator",
+    "description": "Compare cost of living between cities and states for relocation planning. Professional cost calculator analyzing housing, transportation, and living expenses across locations.",
+    "category": "finance",
+    "keywords": [
+      "cost of living",
+      "city comparison",
+      "expenses",
+      "calculator"
+    ],
+    "path": "/finance/cost-of-living-calculator",
+    "isActive": false,
+    "searchVolume": 165000,
+    "difficulty": 2,
+    "icon": "🏙️"
+  },
+  {
+    "id": "bitcoin-calculator",
+    "name": "Bitcoin Calculator",
+    "description": "Calculate Bitcoin investment returns and cryptocurrency portfolio performance. Advanced crypto calculator with price analysis and investment tracking for digital assets.",
+    "category": "finance",
+    "keywords": [
+      "bitcoin",
+      "cryptocurrency",
+      "investment",
+      "calculator"
+    ],
+    "path": "/finance/bitcoin-calculator",
+    "isActive": false,
+    "searchVolume": 125000,
+    "difficulty": 3,
+    "icon": "₿"
+  },
+  {
+    "id": "roi-calculator",
+    "name": "ROI Calculator",
+    "description": "Calculate return on investment (ROI) for business decisions and investment opportunities. Professional ROI calculator with profit analysis and investment performance metrics.",
+    "category": "finance",
+    "keywords": [
+      "roi",
+      "return on investment",
+      "profit",
+      "calculator",
+      "business"
+    ],
+    "path": "/finance/roi-calculator",
+    "isActive": false,
+    "searchVolume": 78000,
+    "difficulty": 1,
+    "icon": "📈"
+  },
+  {
+    "id": "break-even-calculator",
+    "name": "Break Even Calculator",
+    "description": "Calculate break-even point for business profitability and cost recovery analysis. Essential business calculator for pricing decisions and financial planning strategies.",
+    "category": "finance",
+    "keywords": [
+      "break even",
+      "business",
+      "profit",
+      "calculator",
+      "analysis"
+    ],
+    "path": "/finance/break-even-calculator",
+    "isActive": false,
+    "searchVolume": 67000,
+    "difficulty": 2,
+    "icon": "⚖️"
+  },
+  {
+    "id": "net-worth-calculator",
+    "name": "Net Worth Calculator",
+    "description": "Calculate net worth by analyzing total assets and liabilities for wealth tracking. Comprehensive financial calculator for personal wealth management and financial health assessment.",
+    "category": "finance",
+    "keywords": [
+      "net worth",
+      "assets",
+      "liabilities",
+      "wealth",
+      "calculator"
+    ],
+    "path": "/finance/net-worth-calculator",
+    "isActive": false,
+    "searchVolume": 78000,
+    "difficulty": 1,
+    "icon": "💎"
+  },
+  {
+    "id": "budget-calculator",
+    "name": "Budget Calculator",
+    "description": "Create personal budgets with income and expense planning for financial management. Comprehensive budget calculator with spending categories and savings goal tracking.",
+    "category": "finance",
+    "keywords": [
+      "budget",
+      "expenses",
+      "income",
+      "planning",
+      "calculator"
+    ],
+    "path": "/finance/budget-calculator",
+    "isActive": false,
+    "searchVolume": 156000,
+    "difficulty": 1,
+    "icon": "📊"
+  },
+  {
+    "id": "tip-calculator",
+    "name": "Tip Calculator",
+    "description": "Calculate tips and split bills for restaurants and services with gratuity analysis. Professional tip calculator with custom percentages and group bill splitting features.",
+    "category": "finance",
+    "keywords": [
+      "tip",
+      "gratuity",
+      "bill split",
+      "restaurant",
+      "calculator"
+    ],
+    "path": "/finance/tip-calculator",
+    "isActive": false,
+    "searchVolume": 234000,
+    "difficulty": 1,
+    "icon": "🧾"
+  },
+  {
+    "id": "sales-tax-calculator",
+    "name": "Sales Tax Calculator",
+    "description": "Calculate sales tax and VAT for purchases across different states and countries. Accurate tax calculator with current rates and total cost analysis for shopping.",
+    "category": "finance",
+    "keywords": [
+      "sales tax",
+      "vat",
+      "tax calculator",
+      "purchase",
+      "state tax"
+    ],
+    "path": "/finance/sales-tax-calculator",
+    "isActive": false,
+    "searchVolume": 145000,
+    "difficulty": 1,
+    "icon": "🏪"
+  },
+  {
+    "id": "inflation-calculator",
+    "name": "Inflation Calculator",
+    "description": "Calculate inflation impact on purchasing power and money value over time. Historical inflation calculator with CPI data for economic analysis and financial planning.",
+    "category": "finance",
+    "keywords": [
+      "inflation",
+      "purchasing power",
+      "money value",
+      "calculator",
+      "cpi"
+    ],
+    "path": "/finance/inflation-calculator",
+    "isActive": false,
+    "searchVolume": 98000,
+    "difficulty": 2,
+    "icon": "📉"
+  },
+  {
+    "id": "present-value-calculator",
+    "name": "Present Value Calculator",
+    "description": "Calculate present value of future cash flows with NPV analysis for investment decisions. Professional financial calculator with discount rates and cash flow projections.",
+    "category": "finance",
+    "keywords": [
+      "present value",
+      "npv",
+      "discount rate",
+      "cash flow",
+      "calculator"
+    ],
+    "path": "/finance/present-value-calculator",
+    "isActive": false,
+    "searchVolume": 56000,
+    "difficulty": 3,
+    "icon": "💰"
+  },
+  {
+    "id": "future-value-calculator",
+    "name": "Future Value Calculator",
+    "description": "Calculate future value of investments with compound interest growth projections. Advanced investment calculator for long-term financial planning and wealth building.",
+    "category": "finance",
+    "keywords": [
+      "future value",
+      "investment",
+      "compound interest",
+      "growth",
+      "calculator"
+    ],
+    "path": "/finance/future-value-calculator",
+    "isActive": false,
+    "searchVolume": 67000,
+    "difficulty": 2,
+    "icon": "🔮"
+  },
+  {
+    "id": "annuity-calculator",
+    "name": "Annuity Calculator",
+    "description": "Calculate annuity payments and present value for retirement income planning. Professional annuity calculator with payment schedules and retirement analysis tools.",
+    "category": "finance",
+    "keywords": [
+      "annuity",
+      "payments",
+      "present value",
+      "retirement",
+      "calculator"
+    ],
+    "path": "/finance/annuity-calculator",
+    "isActive": false,
+    "searchVolume": 45000,
+    "difficulty": 3,
+    "icon": "📅"
+  },
+  {
+    "id": "bond-calculator",
+    "name": "Bond Calculator",
+    "description": "Calculate bond yields, prices, and duration for fixed income investment analysis. Professional bond calculator with yield-to-maturity and interest rate sensitivity.",
+    "category": "finance",
+    "keywords": [
+      "bond",
+      "yield",
+      "price",
+      "duration",
+      "fixed income",
+      "calculator"
+    ],
+    "path": "/finance/bond-calculator",
+    "isActive": false,
+    "searchVolume": 38000,
+    "difficulty": 3,
+    "icon": "📜"
+  },
+  {
+    "id": "dividend-calculator",
+    "name": "Dividend Calculator",
+    "description": "Calculate dividend yields and stock dividend growth for investment income analysis. Professional dividend calculator with reinvestment options and yield projections.",
+    "category": "finance",
+    "keywords": [
+      "dividend",
+      "yield",
+      "growth",
+      "stocks",
+      "returns",
+      "calculator"
+    ],
+    "path": "/finance/dividend-calculator",
+    "isActive": false,
+    "searchVolume": 52000,
+    "difficulty": 2,
+    "icon": "💰"
+  },
+  {
+    "id": "stock-calculator",
+    "name": "Stock Calculator",
+    "description": "Calculate stock returns, profit, and loss for equity investment performance analysis. Comprehensive stock calculator with capital gains and dividend tracking.",
+    "category": "finance",
+    "keywords": [
+      "stock",
+      "returns",
+      "profit",
+      "loss",
+      "investment",
+      "calculator"
+    ],
+    "path": "/finance/stock-calculator",
+    "isActive": false,
+    "searchVolume": 89000,
+    "difficulty": 2,
+    "icon": "📈"
+  },
+  {
+    "id": "options-calculator",
+    "name": "Options Calculator",
+    "description": "Calculate options pricing, Greeks, and profit/loss for derivatives trading analysis. Advanced options calculator with Black-Scholes model and risk assessment tools.",
+    "category": "finance",
+    "keywords": [
+      "options",
+      "pricing",
+      "greeks",
+      "profit",
+      "loss",
+      "calculator"
+    ],
+    "path": "/finance/options-calculator",
+    "isActive": false,
+    "searchVolume": 34000,
+    "difficulty": 4,
+    "icon": "📊"
+  },
+  {
+    "id": "forex-calculator",
+    "name": "Forex Calculator",
+    "description": "Calculate forex pip values and position sizing for currency trading strategies. Professional forex calculator with profit/loss analysis and risk management tools.",
+    "category": "finance",
+    "keywords": [
+      "forex",
+      "pip",
+      "position size",
+      "profit",
+      "loss",
+      "calculator"
+    ],
+    "path": "/finance/forex-calculator",
+    "isActive": false,
+    "searchVolume": 67000,
+    "difficulty": 3,
+    "icon": "💱"
+  },
+  {
+    "id": "crypto-calculator",
+    "name": "Crypto Calculator",
+    "description": "Calculate cryptocurrency returns with DCA strategy and portfolio analysis tools. Advanced crypto calculator for digital asset investment tracking and performance evaluation.",
+    "category": "finance",
+    "keywords": [
+      "crypto",
+      "cryptocurrency",
+      "returns",
+      "dca",
+      "portfolio",
+      "calculator"
+    ],
+    "path": "/finance/crypto-calculator",
+    "isActive": false,
+    "searchVolume": 145000,
+    "difficulty": 2,
+    "icon": "₿"
+  },
+  {
+    "id": "ethereum-calculator",
+    "name": "Ethereum Calculator",
+    "description": "Calculate Ethereum investment returns and ETH staking rewards for crypto portfolio management. Professional Ethereum calculator with yield analysis and staking projections.",
+    "category": "finance",
+    "keywords": [
+      "ethereum",
+      "eth",
+      "investment",
+      "staking",
+      "rewards",
+      "calculator"
+    ],
+    "path": "/finance/ethereum-calculator",
+    "isActive": false,
+    "searchVolume": 78000,
+    "difficulty": 2,
+    "icon": "⟠"
+  },
+  {
+    "id": "refinance-calculator",
+    "name": "Refinance Calculator",
+    "description": "Calculate mortgage refinancing benefits and break-even analysis for home loans. Professional refinance calculator with closing costs and payment comparison tools.",
+    "category": "finance",
+    "keywords": [
+      "refinance",
+      "savings",
+      "break even",
+      "mortgage",
+      "calculator"
+    ],
+    "path": "/finance/refinance-calculator",
+    "isActive": false,
+    "searchVolume": 125000,
+    "difficulty": 2,
+    "icon": "🏠"
+  },
+  {
+    "id": "rent-vs-buy-calculator",
+    "name": "Rent vs Buy Calculator",
+    "description": "Compare rent vs buy costs for home ownership decisions with comprehensive financial analysis. Professional real estate calculator with total cost comparison and break-even analysis.",
+    "category": "finance",
+    "keywords": [
+      "rent",
+      "buy",
+      "home",
+      "comparison",
+      "real estate",
+      "calculator"
+    ],
+    "path": "/finance/rent-vs-buy-calculator",
+    "isActive": false,
+    "searchVolume": 89000,
+    "difficulty": 2,
+    "icon": "🏘️"
+  },
+  {
+    "id": "property-tax-calculator",
+    "name": "Property Tax Calculator",
+    "description": "Calculate property taxes based on assessed value and local tax rates for real estate planning. Accurate property tax calculator with exemptions and assessment analysis tools.",
+    "category": "finance",
+    "keywords": [
+      "property tax",
+      "real estate",
+      "assessed value",
+      "tax rate",
+      "calculator"
+    ],
+    "path": "/finance/property-tax-calculator",
+    "isActive": false,
+    "searchVolume": 156000,
+    "difficulty": 2,
+    "icon": "🏛️"
+  },
+  {
+    "id": "capital-gains-calculator",
+    "name": "Capital Gains Calculator",
+    "description": "Calculate capital gains tax on investment and property sales with tax optimization strategies. Professional tax calculator with short-term and long-term capital gains analysis.",
+    "category": "finance",
+    "keywords": [
+      "capital gains",
+      "tax",
+      "investment",
+      "property",
+      "sales",
+      "calculator"
+    ],
+    "path": "/finance/capital-gains-calculator",
+    "isActive": false,
+    "searchVolume": 134000,
+    "difficulty": 3,
+    "icon": "📈"
+  },
+  {
+    "id": "business-loan-calculator",
+    "name": "Business Loan Calculator",
+    "description": "Calculate business loan payments and interest costs for small business financing decisions. Professional business calculator with payment schedules and loan comparison tools.",
+    "category": "finance",
+    "keywords": [
+      "business loan",
+      "payments",
+      "interest",
+      "small business",
+      "calculator"
+    ],
+    "path": "/finance/business-loan-calculator",
+    "isActive": false,
+    "searchVolume": 67000,
+    "difficulty": 2,
+    "icon": "🏢"
+  },
+  {
+    "id": "sba-loan-calculator",
+    "name": "SBA Loan Calculator",
+    "description": "Calculate SBA loan payments and qualification requirements for small business administration financing. Specialized SBA calculator with program analysis and payment projections.",
+    "category": "finance",
+    "keywords": [
+      "sba loan",
+      "small business",
+      "payments",
+      "qualification",
+      "calculator"
+    ],
+    "path": "/finance/sba-loan-calculator",
+    "isActive": false,
+    "searchVolume": 34000,
+    "difficulty": 3,
+    "icon": "🏛️"
+  },
+  {
+    "id": "personal-loan-calculator",
+    "name": "Personal Loan Calculator",
+    "description": "Calculate personal loan payments and compare rates for individual financing needs. Comprehensive personal loan calculator with APR comparison and payment scheduling tools.",
+    "category": "finance",
+    "keywords": [
+      "personal loan",
+      "payments",
+      "interest rate",
+      "comparison",
+      "calculator"
+    ],
+    "path": "/finance/personal-loan-calculator",
+    "isActive": false,
+    "searchVolume": 189000,
+    "difficulty": 1,
+    "icon": "💳"
+  },
+  {
+    "id": "student-loan-calculator",
+    "name": "Student Loan Calculator",
+    "description": "Calculate student loan payments and repayment options for education financing planning. Professional education loan calculator with forgiveness programs and payment strategies.",
+    "category": "finance",
+    "keywords": [
+      "student loan",
+      "payments",
+      "repayment",
+      "education",
+      "calculator"
+    ],
+    "path": "/finance/student-loan-calculator",
+    "isActive": false,
+    "searchVolume": 167000,
+    "difficulty": 2,
+    "icon": "🎓"
+  },
+  {
+    "id": "heloc-calculator",
+    "name": "HELOC Calculator",
+    "description": "Calculate HELOC payments and available credit for home equity line of credit planning. Professional HELOC calculator with draw period and repayment phase analysis.",
+    "category": "finance",
+    "keywords": [
+      "heloc",
+      "home equity",
+      "line of credit",
+      "payments",
+      "calculator"
+    ],
+    "path": "/finance/heloc-calculator",
+    "isActive": false,
+    "searchVolume": 78000,
+    "difficulty": 2,
+    "icon": "🏠"
+  },
+  {
+    "id": "home-equity-calculator",
+    "name": "Home Equity Calculator",
+    "description": "Calculate available home equity and loan-to-value ratio for home equity financing decisions. Professional equity calculator with current market value and mortgage balance analysis.",
+    "category": "finance",
+    "keywords": [
+      "home equity",
+      "loan",
+      "available equity",
+      "ltv",
+      "calculator"
+    ],
+    "path": "/finance/home-equity-calculator",
+    "isActive": false,
+    "searchVolume": 95000,
+    "difficulty": 2,
+    "icon": "🏡"
+  },
+  {
+    "id": "cd-calculator",
+    "name": "CD Calculator",
+    "description": "Calculate certificate of deposit returns and maturity values for fixed-term savings planning. Professional CD calculator with compound interest and penalty analysis tools.",
+    "category": "finance",
+    "keywords": [
+      "cd",
+      "certificate of deposit",
+      "returns",
+      "maturity",
+      "calculator"
+    ],
+    "path": "/finance/cd-calculator",
+    "isActive": false,
+    "searchVolume": 67000,
+    "difficulty": 1,
+    "icon": "💿"
+  },
+  {
+    "id": "ira-calculator",
+    "name": "IRA Calculator",
+    "description": "Calculate traditional IRA contributions and retirement savings growth for tax-deferred planning. Professional IRA calculator with contribution limits and withdrawal strategies.",
+    "category": "finance",
+    "keywords": [
+      "ira",
+      "retirement",
+      "contributions",
+      "savings",
+      "growth",
+      "calculator"
+    ],
+    "path": "/finance/ira-calculator",
+    "isActive": false,
+    "searchVolume": 89000,
+    "difficulty": 2,
+    "icon": "🏛️"
+  },
+  {
+    "id": "roth-ira-calculator",
+    "name": "Roth IRA Calculator",
+    "description": "Calculate Roth IRA contributions and tax-free retirement growth for long-term wealth building. Advanced Roth calculator with conversion analysis and tax-free withdrawal projections.",
+    "category": "finance",
+    "keywords": [
+      "roth ira",
+      "retirement",
+      "tax free",
+      "contributions",
+      "calculator"
+    ],
+    "path": "/finance/roth-ira-calculator",
+    "isActive": false,
+    "searchVolume": 78000,
+    "difficulty": 2,
+    "icon": "🏛️"
+  },
+  {
+    "id": "pension-calculator",
+    "name": "Pension Calculator",
+    "description": "Calculate pension benefits and retirement income from defined benefit plans for retirement planning. Professional pension calculator with annuity options and benefit projections.",
+    "category": "finance",
+    "keywords": [
+      "pension",
+      "benefits",
+      "retirement income",
+      "annuity",
+      "calculator"
+    ],
+    "path": "/finance/pension-calculator",
+    "isActive": false,
+    "searchVolume": 56000,
+    "difficulty": 3,
+    "icon": "👴"
+  },
+  {
+    "id": "social-security-calculator",
+    "name": "Social Security Calculator",
+    "description": "Calculate Social Security benefits and optimize claiming strategies for maximum retirement income. Professional benefits calculator with full retirement age and spousal benefit analysis.",
+    "category": "finance",
+    "keywords": [
+      "social security",
+      "benefits",
+      "claiming strategy",
+      "retirement",
+      "calculator"
+    ],
+    "path": "/finance/social-security-calculator",
+    "isActive": false,
+    "searchVolume": 145000,
+    "difficulty": 3,
+    "icon": "🏛️"
+  },
+  {
+    "id": "fire-calculator",
+    "name": "FIRE Calculator",
+    "description": "Calculate FIRE (Financial Independence Retire Early) timeline and savings requirements for early retirement planning. Advanced FIRE calculator with withdrawal rate and portfolio analysis.",
+    "category": "finance",
+    "keywords": [
+      "fire",
+      "financial independence",
+      "retire early",
+      "savings",
+      "calculator"
+    ],
+    "path": "/finance/fire-calculator",
+    "isActive": false,
+    "searchVolume": 67000,
+    "difficulty": 2,
+    "icon": "🔥"
+  },
+  {
+    "id": "emergency-fund-calculator",
+    "name": "Emergency Fund Calculator",
+    "description": "Calculate emergency fund requirements based on monthly expenses for financial security planning. Professional emergency fund calculator with savings goals and timeline analysis.",
+    "category": "finance",
+    "keywords": [
+      "emergency fund",
+      "expenses",
+      "savings",
+      "financial security",
+      "calculator"
+    ],
+    "path": "/finance/emergency-fund-calculator",
+    "isActive": false,
+    "searchVolume": 45000,
+    "difficulty": 1,
+    "icon": "🚨"
+  },
+  {
+    "id": "debt-to-income-calculator",
+    "name": "Debt-to-Income Calculator",
+    "description": "Calculate debt-to-income ratio for loan qualification and financial health assessment. Professional DTI calculator with mortgage and credit approval analysis tools.",
+    "category": "finance",
+    "keywords": [
+      "debt to income",
+      "dti",
+      "ratio",
+      "loan qualification",
+      "calculator"
+    ],
+    "path": "/finance/debt-to-income-calculator",
+    "isActive": false,
+    "searchVolume": 89000,
+    "difficulty": 1,
+    "icon": "📉"
+  },
+  {
+    "id": "loan-to-value-calculator",
+    "name": "Loan-to-Value Calculator",
+    "description": "Calculate loan-to-value ratio for mortgage and refinancing qualification analysis. Professional LTV calculator with equity assessment and lending requirement tools.",
+    "category": "finance",
+    "keywords": [
+      "loan to value",
+      "ltv",
+      "ratio",
+      "mortgage",
+      "refinancing",
+      "calculator"
+    ],
+    "path": "/finance/loan-to-value-calculator",
+    "isActive": false,
+    "searchVolume": 67000,
+    "difficulty": 2,
+    "icon": "🏠"
+  },
+  {
+    "id": "apr-calculator",
+    "name": "APR Calculator",
+    "description": "Calculate annual percentage rate including fees and costs for true loan cost analysis. Professional APR calculator with comprehensive lending cost comparison tools.",
+    "category": "finance",
+    "keywords": [
+      "apr",
+      "annual percentage rate",
+      "fees",
+      "costs",
+      "calculator"
+    ],
+    "path": "/finance/apr-calculator",
+    "isActive": false,
+    "searchVolume": 56000,
+    "difficulty": 2,
+    "icon": "📈"
+  },
+  {
+    "id": "effective-interest-rate-calculator",
+    "name": "Effective Interest Rate Calculator",
+    "description": "Calculate effective interest rate with compounding frequency for accurate investment analysis. Advanced rate calculator with annual equivalent rate and yield comparison tools.",
+    "category": "finance",
+    "keywords": [
+      "effective interest rate",
+      "annual rate",
+      "compounding",
+      "calculator"
+    ],
+    "path": "/finance/effective-interest-rate-calculator",
+    "isActive": false,
+    "searchVolume": 34000,
+    "difficulty": 3,
+    "icon": "📊"
+  },
+  {
+    "id": "amortization-calculator",
+    "name": "Amortization Calculator",
+    "description": "Calculate loan amortization schedule with principal and interest breakdown for payment planning. Professional amortization calculator with extra payment and payoff analysis.",
+    "category": "finance",
+    "keywords": [
+      "amortization",
+      "schedule",
+      "principal",
+      "interest",
+      "loan",
+      "calculator"
+    ],
+    "path": "/finance/amortization-calculator",
+    "isActive": false,
+    "searchVolume": 95000,
+    "difficulty": 2,
+    "icon": "📋"
+  },
+  {
+    "id": "balloon-payment-calculator",
+    "name": "Balloon Payment Calculator",
+    "description": "Calculate balloon loan payments and final balloon payment for specialized financing analysis. Professional balloon calculator with payment structure and refinancing options.",
+    "category": "finance",
+    "keywords": [
+      "balloon payment",
+      "loan",
+      "final payment",
+      "calculator"
+    ],
+    "path": "/finance/balloon-payment-calculator",
+    "isActive": false,
+    "searchVolume": 23000,
+    "difficulty": 3,
+    "icon": "🎈"
+  },
+  {
+    "id": "lease-calculator",
+    "name": "Lease Calculator",
+    "description": "Calculate car lease payments and terms for vehicle leasing decisions with cost analysis. Professional lease calculator with residual value and money factor calculations.",
+    "category": "finance",
+    "keywords": [
+      "lease",
+      "car lease",
+      "payments",
+      "lease vs buy",
+      "calculator"
+    ],
+    "path": "/finance/lease-calculator",
+    "isActive": false,
+    "searchVolume": 134000,
+    "difficulty": 2,
+    "icon": "🚗"
+  },
+  {
+    "id": "lease-vs-buy-calculator",
+    "name": "Lease vs Buy Calculator",
+    "description": "Compare lease vs buy costs for vehicle financing decisions with total cost analysis. Professional automotive calculator with depreciation and ownership cost comparison.",
+    "category": "finance",
+    "keywords": [
+      "lease vs buy",
+      "car",
+      "comparison",
+      "costs",
+      "calculator"
+    ],
+    "path": "/finance/lease-vs-buy-calculator",
+    "isActive": false,
+    "searchVolume": 67000,
+    "difficulty": 2,
+    "icon": "🚙"
+  },
+  {
+    "id": "car-depreciation-calculator",
+    "name": "Car Depreciation Calculator",
+    "description": "Calculate car depreciation and future vehicle value for resale and insurance planning. Professional depreciation calculator with market value and age-based analysis.",
+    "category": "finance",
+    "keywords": [
+      "car depreciation",
+      "vehicle",
+      "future value",
+      "resale",
+      "calculator"
+    ],
+    "path": "/finance/car-depreciation-calculator",
+    "isActive": false,
+    "searchVolume": 45000,
+    "difficulty": 2,
+    "icon": "📉"
+  },
+  {
+    "id": "insurance-calculator",
+    "name": "Insurance Calculator",
+    "description": "Calculate insurance coverage needs and premium costs for comprehensive protection planning. Professional insurance calculator with coverage analysis and cost comparison tools.",
+    "category": "finance",
+    "keywords": [
+      "insurance",
+      "coverage",
+      "needs",
+      "life insurance",
+      "calculator"
+    ],
+    "path": "/finance/insurance-calculator",
+    "isActive": false,
+    "searchVolume": 89000,
+    "difficulty": 2,
+    "icon": "🛡️"
+  },
+  {
+    "id": "life-insurance-calculator",
+    "name": "Life Insurance Calculator",
+    "description": "Calculate life insurance coverage needs and premium costs for family financial protection. Professional life insurance calculator with income replacement and debt coverage analysis.",
+    "category": "finance",
+    "keywords": [
+      "life insurance",
+      "coverage",
+      "needs",
+      "premiums",
+      "calculator"
+    ],
+    "path": "/finance/life-insurance-calculator",
+    "isActive": false,
+    "searchVolume": 123000,
+    "difficulty": 2,
+    "icon": "👨‍👩‍👧‍👦"
+  },
+  {
+    "id": "disability-insurance-calculator",
+    "name": "Disability Insurance Calculator",
+    "description": "Calculate disability insurance benefits and coverage needs for income protection planning. Professional disability calculator with benefit analysis and premium cost evaluation.",
+    "category": "finance",
+    "keywords": [
+      "disability insurance",
+      "benefits",
+      "needs",
+      "income protection",
+      "calculator"
+    ],
+    "path": "/finance/disability-insurance-calculator",
+    "isActive": false,
+    "searchVolume": 34000,
+    "difficulty": 2,
+    "icon": "♿"
+  },
+  {
+    "id": "health-insurance-calculator",
+    "name": "Health Insurance Calculator",
+    "description": "Calculate health insurance costs and compare health plans for optimal coverage selection. Professional health insurance calculator with deductible and premium analysis tools.",
+    "category": "finance",
+    "keywords": [
+      "health insurance",
+      "costs",
+      "plans",
+      "comparison",
+      "calculator"
+    ],
+    "path": "/finance/health-insurance-calculator",
+    "isActive": false,
+    "searchVolume": 167000,
+    "difficulty": 2,
+    "icon": "🏥"
+  },
+  {
+    "id": "auto-insurance-calculator",
+    "name": "Auto Insurance Calculator",
+    "description": "Calculate auto insurance premiums and coverage options for vehicle protection planning. Professional car insurance calculator with liability and comprehensive coverage analysis.",
+    "category": "finance",
+    "keywords": [
+      "auto insurance",
+      "premiums",
+      "coverage",
+      "car insurance",
+      "calculator"
+    ],
+    "path": "/finance/auto-insurance-calculator",
+    "isActive": false,
+    "searchVolume": 145000,
+    "difficulty": 2,
+    "icon": "🚗"
+  },
+  {
+    "id": "home-insurance-calculator",
+    "name": "Home Insurance Calculator",
+    "description": "Calculate home insurance premiums and coverage options for homeowners protection planning. Professional homeowners calculator with dwelling and personal property coverage analysis.",
+    "category": "finance",
+    "keywords": [
+      "home insurance",
+      "homeowners",
+      "coverage",
+      "premiums",
+      "calculator"
+    ],
+    "path": "/finance/home-insurance-calculator",
+    "isActive": false,
+    "searchVolume": 89000,
+    "difficulty": 2,
+    "icon": "🏠"
+  },
+  {
+    "id": "umbrella-insurance-calculator",
+    "name": "Umbrella Insurance Calculator",
+    "description": "Calculate umbrella insurance coverage needs for additional liability protection beyond standard policies. Professional umbrella calculator with asset protection and coverage gap analysis.",
+    "category": "finance",
+    "keywords": [
+      "umbrella insurance",
+      "liability",
+      "coverage",
+      "protection",
+      "calculator"
+    ],
+    "path": "/finance/umbrella-insurance-calculator",
+    "isActive": false,
+    "searchVolume": 23000,
+    "difficulty": 3,
+    "icon": "☂️"
+  },
+  {
+    "id": "college-savings-calculator",
+    "name": "College Savings Calculator",
+    "description": "Calculate college savings requirements and 529 plan contributions for education funding goals. Professional education calculator with tuition inflation and savings timeline analysis.",
+    "category": "finance",
+    "keywords": [
+      "college savings",
+      "529 plan",
+      "education",
+      "tuition",
+      "calculator"
+    ],
+    "path": "/finance/college-savings-calculator",
+    "isActive": false,
+    "searchVolume": 78000,
+    "difficulty": 2,
+    "icon": "🎓"
+  },
+  {
+    "id": "529-plan-calculator",
+    "name": "529 Plan Calculator",
+    "description": "Calculate 529 education savings plan benefits with tax advantages for college funding strategies. Professional 529 calculator with contribution limits and withdrawal planning tools.",
+    "category": "finance",
+    "keywords": [
+      "529 plan",
+      "education savings",
+      "tax benefits",
+      "college",
+      "calculator"
+    ],
+    "path": "/finance/529-plan-calculator",
+    "isActive": false,
+    "searchVolume": 45000,
+    "difficulty": 2,
+    "icon": "📚"
+  },
+  {
+    "id": "child-support-calculator",
+    "name": "Child Support Calculator",
+    "description": "Calculate child support payments based on state guidelines and custody arrangements for family planning. Professional child support calculator with income and expense analysis tools.",
+    "category": "finance",
+    "keywords": [
+      "child support",
+      "payments",
+      "guidelines",
+      "custody",
+      "calculator"
+    ],
+    "path": "/finance/child-support-calculator",
+    "isActive": false,
+    "searchVolume": 134000,
+    "difficulty": 3,
+    "icon": "👶"
+  },
+  {
+    "id": "alimony-calculator",
+    "name": "Alimony Calculator",
+    "description": "Calculate alimony and spousal support payments for divorce financial planning and settlement analysis. Professional alimony calculator with duration and payment structure tools.",
+    "category": "finance",
+    "keywords": [
+      "alimony",
+      "spousal support",
+      "payments",
+      "divorce",
+      "calculator"
+    ],
+    "path": "/finance/alimony-calculator",
+    "isActive": false,
+    "searchVolume": 67000,
+    "difficulty": 3,
+    "icon": "💔"
+  },
+  {
+    "id": "divorce-settlement-calculator",
+    "name": "Divorce Settlement Calculator",
+    "description": "Calculate divorce settlement and asset division for equitable property distribution planning. Professional divorce calculator with marital property and financial analysis tools.",
+    "category": "finance",
+    "keywords": [
+      "divorce settlement",
+      "asset division",
+      "financial",
+      "property",
+      "calculator"
+    ],
+    "path": "/finance/divorce-settlement-calculator",
+    "isActive": false,
+    "searchVolume": 45000,
+    "difficulty": 3,
+    "icon": "⚖️"
+  },
+  {
+    "id": "estate-tax-calculator",
+    "name": "Estate Tax Calculator",
+    "description": "Calculate estate tax liability and exemptions for inheritance and estate planning strategies. Professional estate tax calculator with federal and state tax analysis tools.",
+    "category": "finance",
+    "keywords": [
+      "estate tax",
+      "liability",
+      "exemptions",
+      "inheritance",
+      "calculator"
+    ],
+    "path": "/finance/estate-tax-calculator",
+    "isActive": false,
+    "searchVolume": 34000,
+    "difficulty": 3,
+    "icon": "🏛️"
+  },
+  {
+    "id": "gift-tax-calculator",
+    "name": "Gift Tax Calculator",
+    "description": "Calculate gift tax liability and annual exclusion limits for tax-efficient gifting strategies. Professional gift tax calculator with exemption analysis and planning tools.",
+    "category": "finance",
+    "keywords": [
+      "gift tax",
+      "liability",
+      "annual exclusion",
+      "gifts",
+      "calculator"
+    ],
+    "path": "/finance/gift-tax-calculator",
+    "isActive": false,
+    "searchVolume": 23000,
+    "difficulty": 3,
+    "icon": "🎁"
+  },
+  {
+    "id": "inheritance-calculator",
+    "name": "Inheritance Calculator",
+    "description": "Calculate inheritance distribution and tax implications for estate planning and beneficiary analysis. Professional inheritance calculator with tax assessment and distribution planning tools.",
+    "category": "finance",
+    "keywords": [
+      "inheritance",
+      "distribution",
+      "tax implications",
+      "estate",
+      "calculator"
+    ],
+    "path": "/finance/inheritance-calculator",
+    "isActive": false,
+    "searchVolume": 56000,
+    "difficulty": 3,
+    "icon": "👴"
+  },
+  {
+    "id": "trust-calculator",
+    "name": "Trust Calculator",
+    "description": "Calculate trust distributions and tax benefits for estate planning and wealth transfer strategies. Advanced trust calculator with tax optimization and beneficiary planning analysis.",
+    "category": "finance",
+    "keywords": [
+      "trust",
+      "distributions",
+      "tax benefits",
+      "estate planning",
+      "calculator"
+    ],
+    "path": "/finance/trust-calculator",
+    "isActive": false,
+    "searchVolume": 28000,
+    "difficulty": 4,
+    "icon": "🏛️"
+  },
+  {
+    "id": "paycheck-calculator",
+    "name": "Paycheck Calculator",
+    "description": "Calculate take-home pay after taxes and deductions for accurate paycheck planning and budgeting. Professional paycheck calculator with federal, state, and local tax withholding analysis.",
+    "category": "finance",
+    "keywords": [
+      "paycheck",
+      "take home pay",
+      "taxes",
+      "deductions",
+      "calculator"
+    ],
+    "path": "/finance/paycheck-calculator",
+    "isActive": false,
+    "searchVolume": 234000,
+    "difficulty": 2,
+    "icon": "💰"
+  },
+  {
+    "id": "hourly-to-salary-calculator",
+    "name": "Hourly to Salary Calculator",
+    "description": "Convert hourly wages to annual salary and compare compensation packages for career planning. Professional wage calculator with benefits analysis and total compensation comparison tools.",
+    "category": "finance",
+    "keywords": [
+      "hourly",
+      "salary",
+      "wage",
+      "annual",
+      "conversion",
+      "calculator"
+    ],
+    "path": "/finance/hourly-to-salary-calculator",
+    "isActive": false,
+    "searchVolume": 167000,
+    "difficulty": 1,
+    "icon": "⏰"
+  },
+  {
+    "id": "bmi-calculator",
+    "name": "BMI Calculator",
+    "description": "Calculate Body Mass Index (BMI) with instant health status analysis and recommendations. Professional BMI calculator with weight category interpretation and personalized health guidance.",
+    "category": "health",
+    "keywords": [
+      "bmi calculator",
+      "body mass index calculator",
+      "bmi chart calculator",
+      "ideal weight calculator",
+      "healthy weight calculator",
+      "weight status calculator",
+      "bmi calculator adults",
+      "body mass index chart",
+      "bmi calculation formula",
+      "weight category calculator"
+    ],
+    "path": "/health/bmi-calculator",
+    "isActive": true,
+    "searchVolume": 135000,
+    "difficulty": 1,
+    "icon": "⚖️"
+  },
+  {
+    "id": "calorie-calculator",
+    "name": "Calorie Calculator",
+    "description": "Calculate daily calorie needs and TDEE for weight management and fitness goals. Advanced calorie calculator considering age, gender, activity level, and metabolic factors.",
+    "category": "health",
+    "keywords": [
+      "calorie calculator",
+      "daily calories",
+      "tdee",
+      "bmr",
+      "metabolism",
+      "weight loss"
+    ],
+    "path": "/health/calorie-calculator",
+    "isActive": true,
+    "searchVolume": 245000,
+    "difficulty": 2,
+    "icon": "🔥"
+  },
+  {
+    "id": "body-fat-calculator",
+    "name": "Body Fat Calculator",
+    "description": "Calculate body fat percentage using multiple measurement methods and formulas. Comprehensive body composition calculator with health analysis and fitness recommendations.",
+    "category": "health",
+    "keywords": [
+      "body fat",
+      "body fat percentage",
+      "fitness",
+      "health",
+      "body composition"
+    ],
+    "path": "/health/body-fat-calculator",
+    "isActive": true,
+    "searchVolume": 89000,
+    "difficulty": 2,
+    "icon": "📊"
+  },
+  {
+    "id": "ideal-weight-calculator",
+    "name": "Ideal Weight Calculator",
+    "description": "Calculate ideal body weight using proven medical formulas and health standards. Professional target weight calculator for setting realistic and healthy weight goals.",
+    "category": "health",
+    "keywords": [
+      "ideal weight",
+      "target weight",
+      "healthy weight",
+      "weight goal",
+      "fitness"
+    ],
+    "path": "/health/ideal-weight-calculator",
+    "isActive": true,
+    "searchVolume": 156000,
+    "difficulty": 1,
+    "icon": "🎯"
+  },
+  {
+    "id": "pregnancy-calculator",
+    "name": "Pregnancy Calculator",
+    "description": "Calculate pregnancy due date and track pregnancy weeks with trimester milestones for expecting mothers. Professional pregnancy calculator with conception date and fetal development tracking.",
+    "category": "health",
+    "keywords": [
+      "pregnancy calculator",
+      "due date",
+      "pregnancy weeks",
+      "conception",
+      "trimester"
+    ],
+    "path": "/health/pregnancy-calculator",
+    "isActive": false,
+    "searchVolume": 198000,
+    "difficulty": 2,
+    "icon": "🤱"
+  },
+  {
+    "id": "water-intake-calculator",
+    "name": "Water Intake Calculator",
+    "description": "Calculate daily water intake requirements based on body weight, activity level, and climate conditions. Professional hydration calculator for optimal health and wellness planning.",
+    "category": "health",
+    "keywords": [
+      "water intake",
+      "hydration",
+      "daily water",
+      "fluid needs",
+      "health"
+    ],
+    "path": "/health/water-intake-calculator",
+    "isActive": false,
+    "searchVolume": 125000,
+    "difficulty": 1,
+    "icon": "💧"
+  },
+  {
+    "id": "heart-rate-calculator",
+    "name": "Heart Rate Calculator",
+    "description": "Calculate target heart rate zones for exercise training and cardio fitness optimization. Professional heart rate calculator with age-based training zones and workout intensity analysis.",
+    "category": "health",
+    "keywords": [
+      "heart rate",
+      "target heart rate",
+      "exercise",
+      "fitness",
+      "cardio",
+      "training zones"
+    ],
+    "path": "/health/heart-rate-calculator",
+    "isActive": false,
+    "searchVolume": 78000,
+    "difficulty": 2,
+    "icon": "❤️"
+  },
+  {
+    "id": "macro-calculator",
+    "name": "Macro Calculator",
+    "description": "Calculate macronutrient ratios for protein, carbohydrates, and fats based on fitness goals and diet planning. Professional macro calculator with personalized nutrition targets and meal planning.",
+    "category": "health",
+    "keywords": [
+      "macro calculator",
+      "macronutrients",
+      "protein",
+      "carbs",
+      "fats",
+      "nutrition"
+    ],
+    "path": "/health/macro-calculator",
+    "isActive": false,
+    "searchVolume": 167000,
+    "difficulty": 2,
+    "icon": "🥗"
+  },
+  {
+    "id": "sleep-calculator",
+    "name": "Sleep Calculator",
+    "description": "Calculate optimal bedtime and wake time based on natural sleep cycles for better rest quality. Professional sleep calculator with REM cycle analysis and sleep schedule optimization.",
+    "category": "health",
+    "keywords": [
+      "sleep calculator",
+      "bedtime",
+      "wake time",
+      "sleep cycles",
+      "rem sleep"
+    ],
+    "path": "/health/sleep-calculator",
+    "isActive": false,
+    "searchVolume": 145000,
+    "difficulty": 1,
+    "icon": "😴"
+  },
+  {
+    "id": "ovulation-calculator",
+    "name": "Ovulation Calculator",
+    "description": "Calculate ovulation dates and fertile window for conception and family planning strategies. Professional fertility calculator with menstrual cycle tracking and conception probability analysis.",
+    "category": "health",
+    "keywords": [
+      "ovulation calculator",
+      "fertile window",
+      "conception",
+      "family planning",
+      "menstrual cycle"
+    ],
+    "path": "/health/ovulation-calculator",
+    "isActive": false,
+    "searchVolume": 234000,
+    "difficulty": 2,
+    "icon": "🌸"
+  },
+  {
+    "id": "protein-calculator",
+    "name": "Protein Calculator",
+    "description": "Calculate daily protein requirements based on body weight, activity level, and fitness goals for muscle building. Professional protein calculator with personalized intake recommendations and nutrition planning.",
+    "category": "health",
+    "keywords": [
+      "protein calculator",
+      "daily protein",
+      "protein needs",
+      "fitness",
+      "muscle building"
+    ],
+    "path": "/health/protein-calculator",
+    "isActive": false,
+    "searchVolume": 89000,
+    "difficulty": 1,
+    "icon": "🥩"
+  },
+  {
+    "id": "pdf-to-word-converter",
+    "name": "PDF to Word Converter",
+    "description": "Convert PDF files to editable Word documents with accurate formatting preservation. Professional PDF to Word converter supporting DOC and DOCX formats with layout integrity.",
+    "category": "media",
+    "keywords": [
+      "pdf",
+      "word",
+      "doc",
+      "docx",
+      "converter",
+      "document"
+    ],
+    "path": "/media/pdf-to-word-converter",
+    "isActive": true,
+    "searchVolume": 201000,
+    "difficulty": 4,
+    "icon": "📄"
+  },
+  {
+    "id": "jpg-to-png-converter",
+    "name": "JPG to PNG Converter",
+    "description": "Convert JPG images to PNG format with transparency support and lossless quality. Professional image converter for web graphics and photo editing applications.",
+    "category": "media",
+    "keywords": [
+      "jpg",
+      "jpeg",
+      "png",
+      "image",
+      "converter",
+      "photo"
+    ],
+    "path": "/media/jpg-to-png-converter",
+    "isActive": true,
+    "searchVolume": 89000,
+    "difficulty": 2,
+    "icon": "🖼️"
+  },
+  {
+    "id": "timestamp-converter",
+    "name": "Unix Timestamp Converter",
+    "description": "Convert Unix timestamps to human-readable dates and vice versa with timezone support. Professional epoch time converter for developers and system administrators.",
+    "category": "time",
+    "keywords": [
+      "timestamp converter",
+      "unix timestamp converter",
+      "epoch converter",
+      "unix time converter",
+      "timestamp to date",
+      "epoch time converter",
+      "posix time converter",
+      "unix timestamp online",
+      "epoch time to date",
+      "timestamp calculator"
+    ],
+    "path": "/time/timestamp-converter",
+    "isActive": true,
+    "searchVolume": 185000,
+    "difficulty": 1,
+    "icon": "🕐"
+  },
+  {
+    "id": "timezone-converter",
+    "name": "Time Zone Converter",
+    "description": "Convert time between different time zones worldwide with daylight saving time support. Professional timezone converter for international scheduling and global coordination.",
+    "category": "time",
+    "keywords": [
+      "timezone converter",
+      "time zone converter",
+      "world time converter",
+      "timezone calculator",
+      "time conversion tool",
+      "world clock converter",
+      "timezone tool",
+      "time zone calculator",
+      "global time converter",
+      "international time tool"
+    ],
+    "path": "/time/timezone-converter",
+    "isActive": true,
+    "searchVolume": 225000,
+    "difficulty": 2,
+    "icon": "🌍"
+  },
+  {
+    "id": "date-difference-calculator",
+    "name": "Date Difference Calculator",
+    "description": "Calculate the difference between two dates in days, months, and years. Comprehensive date difference calculator for project planning and age calculations.",
+    "category": "time",
+    "keywords": [
+      "date calculator",
+      "date difference calculator",
+      "days between dates",
+      "date duration calculator",
+      "time between dates",
+      "date math calculator",
+      "calendar calculator",
+      "date interval calculator",
+      "age calculator dates",
+      "date arithmetic tool"
+    ],
+    "path": "/time/date-difference-calculator",
+    "isActive": true,
+    "searchVolume": 165000,
+    "difficulty": 1,
+    "icon": "📅"
+  },
+  {
+    "id": "countdown-timer",
+    "name": "Countdown Timer",
+    "description": "Create customizable countdown timers for events, deadlines, and special occasions. Interactive countdown clock with multiple timer formats and alert options.",
+    "category": "time",
+    "keywords": [
+      "countdown timer",
+      "countdown clock",
+      "event countdown",
+      "timer countdown",
+      "deadline timer",
+      "countdown widget",
+      "online countdown",
+      "event timer",
+      "countdown calculator",
+      "time countdown"
+    ],
+    "path": "/time/countdown-timer",
+    "isActive": true,
+    "searchVolume": 145000,
+    "difficulty": 1,
+    "icon": "⏰"
+  },
+  {
+    "id": "age-calculator",
+    "name": "Age Calculator",
+    "description": "Calculate exact age from birth date with precise years, months, days, and hours analysis. Professional age calculator with birthday countdown and life milestone tracking.",
+    "category": "time",
+    "keywords": [
+      "age calculator",
+      "calculate age",
+      "age from birth date",
+      "how old am i",
+      "age in days",
+      "exact age calculator"
+    ],
+    "path": "/time/age-calculator",
+    "isActive": false,
+    "searchVolume": 125000,
+    "difficulty": 1,
+    "icon": "🎂"
+  },
+  {
+    "id": "date-calculator",
+    "name": "Date Calculator",
+    "description": "Calculate dates by adding or subtracting days, months, and years for planning and scheduling. Professional date calculator with business days and future date analysis tools.",
+    "category": "time",
+    "keywords": [
+      "date calculator",
+      "add days to date",
+      "subtract days from date",
+      "date math",
+      "future date calculator"
+    ],
+    "path": "/time/date-calculator",
+    "isActive": false,
+    "searchVolume": 95000,
+    "difficulty": 1,
+    "icon": "📅"
+  },
+  {
+    "id": "stopwatch",
+    "name": "Online Stopwatch",
+    "description": "Precise online stopwatch with lap times and split functionality. Professional timing tool for sports and activities.",
+    "category": "time",
+    "keywords": [
+      "stopwatch",
+      "online stopwatch",
+      "timer",
+      "lap timer",
+      "precision timer",
+      "split timer"
+    ],
+    "path": "/time/online-stopwatch",
+    "isActive": false,
+    "searchVolume": 85000,
+    "difficulty": 1,
+    "icon": "⏱️"
+  },
+  {
+    "id": "unix-timestamp-converter",
+    "name": "Unix Timestamp Converter",
+    "description": "Convert Unix timestamps to readable dates and vice versa with timezone support. Unix epoch time converter.",
+    "category": "time",
+    "keywords": [
+      "unix timestamp",
+      "epoch time",
+      "timestamp converter",
+      "unix time converter",
+      "epoch converter"
+    ],
+    "path": "/time/unix-timestamp-converter",
+    "isActive": false,
+    "searchVolume": 155000,
+    "difficulty": 1,
+    "icon": "🕐"
+  },
+  {
+    "id": "working-days-calculator",
+    "name": "Working Days Calculator",
+    "description": "Calculate working days and business days between dates excluding weekends and holidays. Professional business calculator with project timeline and deadline planning tools.",
+    "category": "time",
+    "keywords": [
+      "working days calculator",
+      "business days calculator",
+      "weekdays calculator",
+      "work days between dates",
+      "business days counter"
+    ],
+    "path": "/time/working-days-calculator",
+    "isActive": false,
+    "searchVolume": 45000,
+    "difficulty": 2,
+    "icon": "💼"
+  },
+  {
+    "id": "world-clock",
+    "name": "World Clock",
+    "description": "Display current time in multiple time zones around the world. Global time display with major cities.",
+    "category": "time",
+    "keywords": [
+      "world clock",
+      "world time",
+      "global time",
+      "international time",
+      "time zones",
+      "current time worldwide"
+    ],
+    "path": "/time/world-clock",
+    "isActive": false,
+    "searchVolume": 75000,
+    "difficulty": 2,
+    "icon": "🌍"
+  },
+  {
+    "id": "temperature-converter",
+    "name": "Temperature Converter",
+    "description": "Convert temperatures between Celsius, Fahrenheit, and Kelvin with precise calculations. Professional temperature converter with formula explanations and instant conversion results.",
+    "category": "unit",
+    "keywords": [
+      "temperature converter",
+      "celsius to fahrenheit",
+      "fahrenheit to celsius",
+      "kelvin converter",
+      "temperature conversion",
+      "celsius fahrenheit converter",
+      "temperature calculator",
+      "degree converter",
+      "temp converter",
+      "temperature conversion tool"
+    ],
+    "path": "/unit/temperature-converter",
+    "isActive": true,
+    "searchVolume": 285000,
+    "difficulty": 1,
+    "icon": "🌡️"
+  },
+  {
+    "id": "length-converter",
+    "name": "Length Converter",
+    "description": "Convert lengths between metric and imperial units including meters, feet, inches, and centimeters. Accurate length converter for construction, engineering, and everyday measurements.",
+    "category": "unit",
+    "keywords": [
+      "length converter",
+      "distance converter",
+      "meter to feet",
+      "feet to meter",
+      "cm to inches",
+      "inches to cm",
+      "length conversion",
+      "distance conversion",
+      "measurement converter",
+      "unit converter length"
+    ],
+    "path": "/unit/length-converter",
+    "isActive": true,
+    "searchVolume": 195000,
+    "difficulty": 1,
+    "icon": "📏"
+  },
+  {
+    "id": "weight-converter",
+    "name": "Weight Converter",
+    "description": "Convert weights between pounds, kilograms, and other mass units with precise calculations. Professional weight converter supporting multiple units for fitness, cooking, and shipping.",
+    "category": "unit",
+    "keywords": [
+      "weight converter",
+      "mass converter",
+      "kg to pounds",
+      "pounds to kg",
+      "weight conversion",
+      "mass conversion",
+      "kilogram converter",
+      "pound converter",
+      "weight calculator",
+      "mass calculator"
+    ],
+    "path": "/unit/weight-converter",
+    "isActive": true,
+    "searchVolume": 175000,
+    "difficulty": 1,
+    "icon": "⚖️"
+  },
+  {
+    "id": "volume-converter",
+    "name": "Volume Converter",
+    "description": "Convert volumes between liters, gallons, and other liquid measurements with accurate calculations. Essential volume converter for cooking, chemistry, and fluid measurements.",
+    "category": "unit",
+    "keywords": [
+      "volume converter",
+      "liquid converter",
+      "liter to gallon",
+      "gallon to liter",
+      "volume conversion",
+      "liquid conversion",
+      "capacity converter",
+      "fluid converter",
+      "volume calculator",
+      "liquid calculator"
+    ],
+    "path": "/unit/volume-converter",
+    "isActive": true,
+    "searchVolume": 125000,
+    "difficulty": 1,
+    "icon": "🥤"
+  },
+  {
+    "id": "area-converter",
+    "name": "Area Converter",
+    "description": "Area Converter - m², ft², Acres & Hectares area measurement tool with precise surface area calculations.",
+    "category": "unit",
+    "keywords": [
+      "area converter",
+      "square meter converter",
+      "square feet converter",
+      "acre converter",
+      "hectare converter",
+      "area conversion",
+      "surface area converter",
+      "land area converter",
+      "area calculator",
+      "square unit converter"
+    ],
+    "path": "/unit/area-converter",
+    "isActive": false,
+    "searchVolume": 85000,
+    "difficulty": 1,
+    "icon": "📐"
+  },
+  {
+    "id": "speed-converter",
+    "name": "Speed Converter",
+    "description": "Speed Converter - MPH, KMH, m/s & Knots velocity conversion tool with accurate speed calculations.",
+    "category": "unit",
+    "keywords": [
+      "speed converter",
+      "velocity converter",
+      "mph to kmh",
+      "kmh to mph",
+      "speed conversion",
+      "velocity conversion",
+      "mph converter",
+      "kmh converter",
+      "speed calculator",
+      "velocity calculator"
+    ],
+    "path": "/unit/speed-converter",
+    "isActive": false,
+    "searchVolume": 95000,
+    "difficulty": 1,
+    "icon": "🏃"
+  },
+  {
+    "id": "energy-converter",
+    "name": "Energy Converter",
+    "description": "Energy Converter - Joules, Calories, BTU & kWh energy conversion tool with precise calculations and multiple units.",
+    "category": "unit",
+    "keywords": [
+      "energy converter",
+      "calorie converter",
+      "joule converter",
+      "btu converter",
+      "kwh converter",
+      "energy conversion",
+      "power conversion",
+      "energy calculator",
+      "calorie calculator",
+      "energy unit converter"
+    ],
+    "path": "/unit/energy-converter",
+    "isActive": false,
+    "searchVolume": 65000,
+    "difficulty": 2,
+    "icon": "⚡"
+  },
+  {
+    "id": "pressure-converter",
+    "name": "Pressure Converter",
+    "description": "Pressure Converter - PSI, Bar, Pascal & ATM pressure conversion tool with accurate calculations and formula support.",
+    "category": "unit",
+    "keywords": [
+      "pressure converter",
+      "psi converter",
+      "bar converter",
+      "pascal converter",
+      "atmosphere converter",
+      "pressure conversion",
+      "pressure calculator",
+      "pressure unit converter",
+      "psi to bar",
+      "bar to psi"
+    ],
+    "path": "/unit/pressure-converter",
+    "isActive": false,
+    "searchVolume": 55000,
+    "difficulty": 2,
+    "icon": "🌪️"
+  },
+  {
+    "id": "power-converter",
+    "name": "Power Converter",
+    "description": "Power Converter - Watts, Horsepower & BTU/hr power conversion tool with precise calculations and multiple units.",
+    "category": "unit",
+    "keywords": [
+      "power converter",
+      "watt converter",
+      "horsepower converter",
+      "btu converter",
+      "power conversion",
+      "watt calculator",
+      "horsepower calculator",
+      "power unit converter",
+      "hp to watts",
+      "watts to hp"
+    ],
+    "path": "/unit/power-converter",
+    "isActive": false,
+    "searchVolume": 45000,
+    "difficulty": 2,
+    "icon": "⚡"
+  },
+  {
+    "id": "data-converter",
+    "name": "Data Size Converter",
+    "description": "Data Size Converter - Bytes, KB, MB, GB & TB digital storage conversion tool with accurate file size calculations.",
+    "category": "unit",
+    "keywords": [
+      "data converter",
+      "byte converter",
+      "mb to gb",
+      "gb to tb",
+      "data size converter",
+      "storage converter",
+      "file size converter",
+      "digital storage converter",
+      "data calculator",
+      "storage calculator"
+    ],
+    "path": "/unit/data-converter",
+    "isActive": false,
+    "searchVolume": 75000,
+    "difficulty": 1,
+    "icon": "💾"
+  },
+  {
+    "id": "fahrenheit-to-celsius-converter",
+    "name": "Fahrenheit to Celsius Converter",
+    "description": "Convert Fahrenheit to Celsius with precise calculations and step-by-step formula explanations. Professional °F to °C converter for weather, cooking, and scientific applications.",
+    "category": "unit",
+    "keywords": [
+      "fahrenheit to celsius",
+      "f to c converter",
+      "fahrenheit celsius converter",
+      "temperature converter f to c",
+      "fahrenheit to celsius calculator",
+      "f to c calculator",
+      "fahrenheit celsius conversion",
+      "convert fahrenheit to celsius",
+      "f to celsius converter",
+      "fahrenheit to c converter"
+    ],
+    "path": "/unit/fahrenheit-to-celsius-converter",
+    "isActive": false,
+    "searchVolume": 245000,
+    "difficulty": 1,
+    "icon": "🌡️"
+  },
+  {
+    "id": "celsius-to-fahrenheit-converter",
+    "name": "Celsius to Fahrenheit Converter",
+    "description": "Convert Celsius to Fahrenheit with precise calculations and step-by-step formula explanations. Professional °C to °F converter for international temperature conversions.",
+    "category": "unit",
+    "keywords": [
+      "celsius to fahrenheit",
+      "c to f converter",
+      "celsius fahrenheit converter",
+      "temperature converter c to f",
+      "celsius to fahrenheit calculator",
+      "c to f calculator",
+      "celsius fahrenheit conversion",
+      "convert celsius to fahrenheit",
+      "c to fahrenheit converter",
+      "celsius to f converter"
+    ],
+    "path": "/unit/celsius-to-fahrenheit-converter",
+    "isActive": false,
+    "searchVolume": 225000,
+    "difficulty": 1,
+    "icon": "🌡️"
+  },
+  {
+    "id": "pounds-to-kg-converter",
+    "name": "Pounds to Kg Converter",
+    "description": "Convert pounds to kilograms with precise calculations and conversion formulas. Professional lbs to kg converter for fitness tracking, shipping, and international weight standards.",
+    "category": "unit",
+    "keywords": [
+      "pounds to kg",
+      "lbs to kg converter",
+      "pounds to kilograms",
+      "weight converter lbs to kg",
+      "pounds to kg calculator",
+      "lbs to kg calculator",
+      "pounds kg conversion",
+      "convert pounds to kg",
+      "lb to kg converter",
+      "pounds to kilograms converter"
+    ],
+    "path": "/unit/pounds-to-kg-converter",
+    "isActive": false,
+    "searchVolume": 198000,
+    "difficulty": 1,
+    "icon": "⚖️"
+  },
+  {
+    "id": "kg-to-pounds-converter",
+    "name": "Kg to Pounds Converter",
+    "description": "Convert kilograms to pounds with precise calculations and conversion formulas. Professional kg to lbs converter for fitness, travel, and weight management applications.",
+    "category": "unit",
+    "keywords": [
+      "kg to pounds",
+      "kg to lbs converter",
+      "kilograms to pounds",
+      "weight converter kg to lbs",
+      "kg to pounds calculator",
+      "kg to lbs calculator",
+      "kg pounds conversion",
+      "convert kg to pounds",
+      "kilogram to pounds converter",
+      "kg to lb converter"
+    ],
+    "path": "/unit/kg-to-pounds-converter",
+    "isActive": false,
+    "searchVolume": 185000,
+    "difficulty": 1,
+    "icon": "⚖️"
+  },
+  {
+    "id": "unit-converter",
+    "name": "Universal Unit Converter",
+    "description": "Convert between all measurement units including length, weight, temperature, volume, area, speed, energy, and pressure. Professional universal converter with metric and imperial unit support.",
+    "category": "unit",
+    "keywords": [
+      "unit converter",
+      "universal converter",
+      "measurement converter",
+      "convert units",
+      "unit conversion",
+      "metric converter",
+      "imperial converter",
+      "conversion calculator",
+      "unit calculator",
+      "measurement calculator"
+    ],
+    "path": "/unit/unit-converter",
+    "isActive": false,
+    "searchVolume": 325000,
+    "difficulty": 2,
+    "icon": "🔄"
+  },
+  {
+    "id": "cm-to-inches-converter",
+    "name": "CM to Inches Converter",
+    "description": "Convert centimeters to inches with precise calculations and conversion formulas for accurate length measurements. Professional CM to inches converter with decimal precision and measurement tables.",
+    "category": "unit",
+    "keywords": [
+      "cm to inches",
+      "centimeters to inches",
+      "cm to in converter",
+      "length converter cm to inches",
+      "cm to inches calculator"
+    ],
+    "path": "/unit/cm-to-inches-converter",
+    "isActive": false,
+    "searchVolume": 155000,
+    "difficulty": 1,
+    "icon": "📏"
+  },
+  {
+    "id": "inches-to-cm-converter",
+    "name": "Inches to CM Converter",
+    "description": "Convert inches to centimeters with precise calculations and conversion formulas for accurate length measurements. Professional inches to CM converter with decimal precision and measurement tables.",
+    "category": "unit",
+    "keywords": [
+      "inches to cm",
+      "inches to centimeters",
+      "in to cm converter",
+      "length converter inches to cm",
+      "inches to cm calculator"
+    ],
+    "path": "/unit/inches-to-cm-converter",
+    "isActive": false,
+    "searchVolume": 145000,
+    "difficulty": 1,
+    "icon": "📏"
+  },
+  {
+    "id": "feet-to-meters-converter",
+    "name": "Feet to Meters Converter",
+    "description": "Convert feet to meters with precise calculations and conversion formulas for accurate distance measurements. Professional feet to meters converter with decimal precision and measurement tables.",
+    "category": "unit",
+    "keywords": [
+      "feet to meters",
+      "ft to m converter",
+      "feet to metres",
+      "length converter feet to meters",
+      "feet to meters calculator"
+    ],
+    "path": "/unit/feet-to-meters-converter",
+    "isActive": false,
+    "searchVolume": 125000,
+    "difficulty": 1,
+    "icon": "📏"
+  },
+  {
+    "id": "meters-to-feet-converter",
+    "name": "Meters to Feet Converter",
+    "description": "Convert meters to feet with precise calculations and conversion formulas for accurate distance measurements. Professional meters to feet converter with decimal precision and measurement tables.",
+    "category": "unit",
+    "keywords": [
+      "meters to feet",
+      "m to ft converter",
+      "metres to feet",
+      "length converter meters to feet",
+      "meters to feet calculator"
+    ],
+    "path": "/unit/meters-to-feet-converter",
+    "isActive": false,
+    "searchVolume": 115000,
+    "difficulty": 1,
+    "icon": "📏"
+  }
+]

@@ -35,7 +35,7 @@ export async function generateMetadata({
 
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
-  const canonicalPath = `/${l}/time/countdown-timer`;
+  const canonicalPath = `${l === "en" ? "" : "/" + l}/time/countdown-timer`;
 
   return {
     title,
@@ -105,6 +105,7 @@ export default async function CountdownTimerPage({
 
   return (
     <EnhancedToolLayout
+      locale={l}
       title={toolName}
       description={description}
       keywords={keywords}

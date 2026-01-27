@@ -1,5 +1,6 @@
 import { ToolConfig } from '@/types/tools';
-import { TOOLS_CONFIG } from '@/config/tools';
+import searchIndexEn from '@/data/search-index-en.json';
+import searchIndexZh from '@/data/search-index-zh.json';
 
 export interface SearchResult {
   tool: ToolConfig;
@@ -28,8 +29,9 @@ class SearchEngine {
     limit?: number;
     minScore?: number;
     categories?: string[];
+    locale?: string;
   } = {}): SearchResult[] {
-    const { limit = 10, minScore = 1, categories } = options;
+    const { limit = 10, minScore = 1, categories, locale = 'en' } = options;
     
     if (!query.trim()) return [];
 
@@ -45,9 +47,11 @@ class SearchEngine {
     const results: SearchResult[] = [];
 
     // Filter tools by category if specified
+    const normalizedLocale = locale.toLowerCase();
+    const toolsIndex = normalizedLocale === 'zh' ? searchIndexZh : searchIndexEn;
     const toolsToSearch = categories 
-      ? TOOLS_CONFIG.filter(tool => categories.includes(tool.category))
-      : TOOLS_CONFIG;
+      ? toolsIndex.filter(tool => categories.includes(tool.category))
+      : toolsIndex;
 
     for (const tool of toolsToSearch) {
       if (!tool.isActive) continue;
@@ -238,8 +242,8 @@ class SearchEngine {
   /**
    * Get search suggestions based on query
    */
-  getSuggestions(query: string, limit: number = 6): SearchResult[] {
-    return this.search(query, { limit, minScore: 10 });
+  getSuggestions(query: string, limit: number = 6, locale: string = 'en'): SearchResult[] {
+    return this.search(query, { limit, minScore: 10, locale });
   }
 
   /**
@@ -298,6 +302,6 @@ export const searchTools = (query: string, options?: Parameters<SearchEngine['se
   return searchEngine.search(query, options).map(result => result.tool);
 };
 
-export const getSearchSuggestions = (query: string, limit?: number) => {
-  return searchEngine.getSuggestions(query, limit);
+export const getSearchSuggestions = (query: string, limit?: number, locale: string = 'en') => {
+  return searchEngine.getSuggestions(query, limit, locale);
 };

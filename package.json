@@ -15,7 +15,8 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "preview": "npm run build:cloudflare && wrangler pages dev .vercel/output/static",
-    "analyze": "ANALYZE=true npm run build"
+    "analyze": "ANALYZE=true npm run build",
+    "build:search-index": "node scripts/build-search-index.js"
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.15",

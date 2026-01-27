@@ -35,7 +35,7 @@ export async function generateMetadata({
 
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
-  const canonicalPath = `/${l}/finance/20-year-fixed-mortgage-calculator`;
+  const canonicalPath = `${l === "en" ? "" : "/" + l}/finance/20-year-fixed-mortgage-calculator`;
 
   return {
     title,

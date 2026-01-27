@@ -278,7 +278,7 @@ export function getTranslationCompleteness(locale: string): number {
 }
 
 // Get missing translation keys (placeholder for future implementation)
-export function getMissingTranslations(_locale: string): string[] {
+export function getMissingTranslations(): string[] {
   // This would be implemented to check against a reference translation file
   // and return missing keys
   return [];

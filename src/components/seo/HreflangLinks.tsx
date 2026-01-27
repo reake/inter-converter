@@ -1,11 +1,10 @@
 import { routing } from '@/i18n/routing';
 
 interface HreflangLinksProps {
-  currentLocale: string;
   pathname: string;
 }
 
-export function HreflangLinks({ currentLocale, pathname }: HreflangLinksProps) {
+export function HreflangLinks({ pathname }: HreflangLinksProps) {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://interconverter.com';
   
   return (

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -41,11 +41,7 @@ export function VolumeConverter() {
   const [result, setResult] = useState<number | null>(null);
   const [error, setError] = useState('');
 
-  useEffect(() => {
-    convertValue();
-  }, [value, fromUnit, toUnit]);
-
-  const convertValue = () => {
+  const convertValue = useCallback(() => {
     if (!value || isNaN(parseFloat(value))) {
       setResult(null);
       setError('');
@@ -64,11 +60,15 @@ export function VolumeConverter() {
         setError('Conversion not supported');
         setResult(null);
       }
-    } catch (err) {
+    } catch {
       setError('Conversion error');
       setResult(null);
     }
-  };
+  }, [value, fromUnit, toUnit]);
+
+  useEffect(() => {
+    convertValue();
+  }, [convertValue]);
 
   const swapUnits = () => {
     const temp = fromUnit;

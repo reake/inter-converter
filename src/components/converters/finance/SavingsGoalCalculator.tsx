@@ -1,12 +1,11 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Button } from '@/components/ui/button';
 
 interface SavingsGoalResults {
   monthlyDeposit: number;
@@ -34,7 +33,7 @@ export default function SavingsGoalCalculator() {
     '365': 'Daily'
   };
 
-  const calculateSavingsGoal = () => {
+  const calculateSavingsGoal = useCallback(() => {
     const goal = parseFloat(goalAmount);
     const current = parseFloat(currentSavings);
     const rate = parseFloat(interestRate) / 100;
@@ -92,21 +91,17 @@ export default function SavingsGoalCalculator() {
     }
 
     setResults(calculatedResults);
-  };
+  }, [goalAmount, currentSavings, monthlyDeposit, interestRate, timeFrame, compoundingFreq, calculationType]);
 
   useEffect(() => {
     calculateSavingsGoal();
-  }, [goalAmount, currentSavings, monthlyDeposit, interestRate, timeFrame, compoundingFreq, calculationType]);
+  }, [calculateSavingsGoal]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD'
     }).format(amount);
-  };
-
-  const formatNumber = (num: number) => {
-    return new Intl.NumberFormat('en-US').format(Math.round(num));
   };
 
   return (
@@ -421,7 +416,7 @@ export default function SavingsGoalCalculator() {
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">💡</span>
-                    <span>Don't let inflation erode your purchasing power - adjust goals accordingly</span>
+                    <span>Don&apos;t let inflation erode your purchasing power - adjust goals accordingly</span>
                   </li>
                 </ul>
               </div>
@@ -431,7 +426,7 @@ export default function SavingsGoalCalculator() {
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
                     <span className="text-red-500 mr-2">⚠️</span>
-                    <span>Don't set unrealistic savings targets that are impossible to maintain</span>
+                    <span>Don&apos;t set unrealistic savings targets that are impossible to maintain</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-red-500 mr-2">⚠️</span>
@@ -439,7 +434,7 @@ export default function SavingsGoalCalculator() {
                   </li>
                   <li className="flex items-start">
                     <span className="text-red-500 mr-2">⚠️</span>
-                    <span>Don't ignore the impact of fees on your savings growth</span>
+                    <span>Don&apos;t ignore the impact of fees on your savings growth</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-red-500 mr-2">⚠️</span>

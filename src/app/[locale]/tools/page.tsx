@@ -4,7 +4,7 @@ import { Link } from '@/i18n/routing';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { getToolsByAllCategories, TOOL_CATEGORIES, getPopularTools } from '@/config/tools';
+import { getToolsByAllCategories, getToolCategories, getPopularTools } from '@/config/tools';
 import { ArrowRight, TrendingUp, Users, Star, Calculator } from 'lucide-react';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo/metadata';
 import { HreflangLinks } from '@/components/seo/HreflangLinks';
@@ -50,10 +50,11 @@ export default async function ToolsPage({
   const t = await getTranslations({ locale, namespace: 'toolsPage' });
   
   // Get all tools by categories with isActive filtering (limit 8 per category for overview)
-  const toolsByCategory = getToolsByAllCategories(8);
+  const toolsByCategory = getToolsByAllCategories(8, locale);
   
   // Get popular tools across all categories
-  const popularTools = getPopularTools(6);
+  const popularTools = getPopularTools(6, locale);
+  const toolCategories = getToolCategories(locale);
   
   // Category icons mapping
   const categoryIcons: Record<string, string> = {
@@ -81,7 +82,7 @@ export default async function ToolsPage({
 
   return (
     <>
-      <HreflangLinks currentLocale={locale} pathname="/tools" />
+      <HreflangLinks pathname="/tools" />
       <CanonicalLink locale={locale} pathname="/tools" />
       <JsonLd data={generateWebsiteSchema(locale)} />
       
@@ -184,7 +185,7 @@ export default async function ToolsPage({
 
           <div className="space-y-16">
             {Object.entries(toolsByCategory).map(([categoryKey, categoryTools]) => {
-              const categoryInfo = TOOL_CATEGORIES[categoryKey as keyof typeof TOOL_CATEGORIES];
+              const categoryInfo = toolCategories[categoryKey as keyof typeof toolCategories];
               const categoryIcon = categoryIcons[categoryKey] || '🔧';
               const categoryColor = categoryColors[categoryKey] || 'from-gray-500 to-gray-600';
               

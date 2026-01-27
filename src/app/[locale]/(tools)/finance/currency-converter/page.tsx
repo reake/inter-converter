@@ -36,7 +36,7 @@ export async function generateMetadata({
 
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
-  const canonicalPath = `/${l}/finance/currency-converter`;
+  const canonicalPath = `${l === "en" ? "" : "/" + l}/finance/currency-converter`;
 
   return {
     title,

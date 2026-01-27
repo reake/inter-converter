@@ -33,7 +33,7 @@ export class ConvertersEngine {
           source: 'Converters-engine'
         }
       };
-    } catch (error) {
+    } catch {
       return {
         success: false,
         error: 'Failed to convert timestamp'
@@ -62,7 +62,7 @@ export class ConvertersEngine {
           source: 'Converters-engine'
         }
       };
-    } catch (error) {
+    } catch {
       return {
         success: false,
         error: 'Failed to convert date to timestamp'
@@ -99,7 +99,7 @@ export class ConvertersEngine {
           source: 'Converters-engine'
         }
       };
-    } catch (error) {
+    } catch {
       return {
         success: false,
         error: 'Failed to convert units'
@@ -120,7 +120,7 @@ export class ConvertersEngine {
         success: false,
         error: 'Unsupported color Converters'
       };
-    } catch (error) {
+    } catch {
       return {
         success: false,
         error: 'Failed to convert color'
@@ -227,7 +227,7 @@ export class ConvertersEngine {
           source: 'Converters-engine'
         }
       };
-    } catch (error) {
+    } catch {
       return {
         success: false,
         error: 'Failed to calculate BMI'
@@ -335,7 +335,7 @@ export class ConvertersEngine {
           source: 'Converters-engine'
         }
       };
-    } catch (error) {
+    } catch {
       return {
         success: false,
         error: 'Failed to convert temperature'

@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { getFinanceTools, getToolsByCategory, getPopularTools, FINANCE_TOOLS_CONFIG } from '@/config/tools';
+import { getFinanceTools, getPopularTools } from '@/config/tools';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo/metadata';
 import { HreflangLinks } from '@/components/seo/HreflangLinks';
 import { CanonicalLink } from '@/components/seo/CanonicalLink';
@@ -43,8 +43,8 @@ export default async function FinancePage({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'categoryPages.finance' });
-  const allFinanceTools = getFinanceTools();
-  const popularTools = getPopularTools().filter(tool => tool.category === 'finance').slice(0, 6);
+  const allFinanceTools = getFinanceTools(undefined, locale);
+  const popularTools = getPopularTools(10, locale).filter(tool => tool.category === 'finance').slice(0, 6);
   
   // Get tools by keywords/type (since we don't have subcategory)
   const loanTools = allFinanceTools.filter(tool => 
@@ -152,7 +152,7 @@ export default async function FinancePage({
 
   return (
     <>
-      <HreflangLinks currentLocale={locale} pathname="/finance" />
+      <HreflangLinks pathname="/finance" />
       <CanonicalLink locale={locale} pathname="/finance" />
       <JsonLd data={generateWebsiteSchema(locale)} />
       

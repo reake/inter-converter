@@ -1,10 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { Ruler, ArrowRightLeft } from 'lucide-react';
 import { CopyButton } from '@/components/ui/CopyButton';
 import { ConvertersEngine } from '@/lib/converters/conversion-engine';
@@ -145,11 +144,7 @@ export function UnitConverter() {
     setToUnit(units[1] || units[0]);
   }, [category]);
 
-  useEffect(() => {
-    convertValue();
-  }, [value, fromUnit, toUnit, category]);
-
-  const convertValue = () => {
+  const convertValue = useCallback(() => {
     if (!value || isNaN(parseFloat(value))) {
       setResult(null);
       setError('');
@@ -189,11 +184,15 @@ export function UnitConverter() {
           }
         }
       }
-    } catch (err) {
+    } catch {
       setError('Converters error');
       setResult(null);
     }
-  };
+  }, [value, fromUnit, toUnit, category]);
+
+  useEffect(() => {
+    convertValue();
+  }, [convertValue]);
 
   const swapUnits = () => {
     const temp = fromUnit;

@@ -35,7 +35,7 @@ export async function generateMetadata({
 
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
-  const canonicalPath = `/${l}/time/working-days-calculator`;
+  const canonicalPath = `${l === "en" ? "" : "/" + l}/time/working-days-calculator`;
 
   return {
     title,
@@ -105,6 +105,7 @@ export default async function WorkingDaysCalculatorPage({
 
   return (
     <EnhancedToolLayout
+      locale={l}
       title={toolName}
       description={description}
       keywords={keywords}

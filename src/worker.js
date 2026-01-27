@@ -3,14 +3,14 @@
  * 处理静态资源和 API 请求
  */
 
-export default {
+const worker = {
   async fetch(request, env) {
     const url = new URL(request.url);
     
     try {
       // API 路由处理
       if (url.pathname.startsWith('/api/')) {
-        return await handleAPI(request, env);
+        return await handleAPI(request);
       }
       
       // 健康检查端点
@@ -49,10 +49,12 @@ export default {
   },
 };
 
+export default worker;
+
 /**
  * 处理 API 请求
  */
-async function handleAPI(request, env) {
+async function handleAPI(request) {
   const url = new URL(request.url);
   const path = url.pathname;
   
@@ -338,5 +340,4 @@ function addSecurityHeaders(response, url) {
 
   return newResponse;
 }
-
 

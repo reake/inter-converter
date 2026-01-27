@@ -38,7 +38,7 @@ export default async function ColorToolsPage({ params }: { params: Promise<{ loc
     {
       name: t('categories.colorConversion.name'),
       description: t('categories.colorConversion.description'),
-      tools: getColorTools().filter(tool => 
+      tools: getColorTools(undefined, locale).filter(tool => 
         tool.id.includes('hex') || tool.id.includes('rgb') || tool.id.includes('hsl')
       ),
       icon: t('categories.colorConversion.icon'),
@@ -47,7 +47,7 @@ export default async function ColorToolsPage({ params }: { params: Promise<{ loc
     {
       name: t('categories.colorSelection.name'),
       description: t('categories.colorSelection.description'),
-      tools: getColorTools().filter(tool => 
+      tools: getColorTools(undefined, locale).filter(tool => 
         tool.id.includes('picker') || tool.id.includes('palette')
       ),
       icon: t('categories.colorSelection.icon'),
@@ -56,7 +56,7 @@ export default async function ColorToolsPage({ params }: { params: Promise<{ loc
     {
       name: t('categories.designGeneration.name'),
       description: t('categories.designGeneration.description'),
-      tools: getColorTools().filter(tool => 
+      tools: getColorTools(undefined, locale).filter(tool => 
         tool.id.includes('gradient') || tool.id.includes('generator')
       ),
       icon: t('categories.designGeneration.icon'),
@@ -65,14 +65,14 @@ export default async function ColorToolsPage({ params }: { params: Promise<{ loc
     {
       name: t('categories.accessibility.name'),
       description: t('categories.accessibility.description'),
-      tools: getColorTools().filter(tool => 
+      tools: getColorTools(undefined, locale).filter(tool => 
         tool.id.includes('contrast') || tool.id.includes('accessibility')
       ),
       icon: t('categories.accessibility.icon'),
       color: 'bg-green-50 border-green-200'
     }
   ];
-  const colorTools = getColorTools();
+  const colorTools = getColorTools(undefined, locale);
   
   // Popular tools (high search volume)
   const popularTools = colorTools.filter(tool => (tool.searchVolume || 0) > 50000);
@@ -93,7 +93,7 @@ export default async function ColorToolsPage({ params }: { params: Promise<{ loc
 
   return (
     <>
-      <HreflangLinks pathname="/color" currentLocale={locale} />
+      <HreflangLinks pathname="/color" />
       <CanonicalLink pathname="/color" locale={locale} />
       <JsonLd
         data={{

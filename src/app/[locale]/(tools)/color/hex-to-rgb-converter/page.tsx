@@ -41,7 +41,7 @@ export async function generateMetadata({
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
 
-  const canonicalPath = `/${l}/color/hex-to-rgb-converter`;
+  const canonicalPath = `${l === "en" ? "" : "/" + l}/color/hex-to-rgb-converter`;
 
   return {
     title,

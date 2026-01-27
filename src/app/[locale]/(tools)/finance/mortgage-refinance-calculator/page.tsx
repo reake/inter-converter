@@ -35,7 +35,7 @@ export async function generateMetadata({
 
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
-  const canonicalPath = `/${l}/finance/mortgage-refinance-calculator`;
+  const canonicalPath = `${l === "en" ? "" : "/" + l}/finance/mortgage-refinance-calculator`;
 
   return {
     title,

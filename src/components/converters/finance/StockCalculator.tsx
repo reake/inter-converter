@@ -1,11 +1,9 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 interface StockResults {
@@ -28,7 +26,7 @@ export default function StockCalculator() {
   const [commissionSell, setCommissionSell] = useState<string>('0');
   const [results, setResults] = useState<StockResults | null>(null);
 
-  const calculateStock = () => {
+  const calculateStock = useCallback(() => {
     const numShares = parseFloat(shares);
     const buyPrice = parseFloat(purchasePrice);
     const sellPrice = parseFloat(currentPrice);
@@ -63,11 +61,11 @@ export default function StockCalculator() {
       annualizedReturn: annualizedReturn * 100,
       breakEvenPrice
     });
-  };
+  }, [shares, purchasePrice, currentPrice, dividendPerShare, holdingPeriod, commissionBuy, commissionSell]);
 
   useEffect(() => {
     calculateStock();
-  }, [shares, purchasePrice, currentPrice, dividendPerShare, holdingPeriod, commissionBuy, commissionSell]);
+  }, [calculateStock]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

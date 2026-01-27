@@ -301,7 +301,7 @@ export function CountdownTimer() {
                     <div className="text-center p-6 bg-red-50 dark:bg-red-950 rounded-lg">
                       <Bell className="h-12 w-12 text-red-600 dark:text-red-400 mx-auto mb-2" />
                       <div className="text-2xl font-bold text-red-600 dark:text-red-400 mb-2">
-                        Time's Up!
+                        Time&apos;s Up!
                       </div>
                       <div className="text-muted-foreground">
                         {timer.name} has expired

@@ -1,14 +1,13 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
-import { TOOLS_CONFIG, TOOL_CATEGORIES, getPopularTools } from '@/config/tools';
+import { getToolCategories, getToolsByAllCategories } from '@/config/tools';
 import { ModernToolCard } from '@/components/tools/ModernToolCard';
-import { AdvancedFilters } from '@/components/tools/AdvancedFilters';
+import { AdvancedFilters, type FilterState } from '@/components/tools/AdvancedFilters';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ToolConfig } from '@/types/tools';
 import { useTranslation } from '@/hooks/useTranslation';
-import Link from 'next/link';
 
 interface ToolsPageClientProps {
   locale: string;
@@ -20,12 +19,11 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
   const [sortBy, setSortBy] = useState<'popularity' | 'name' | 'category'>('popularity');
   const [filteredTools, setFilteredTools] = useState<ToolConfig[]>([]);
   const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
-  const [currentFilters, setCurrentFilters] = useState<any>(null);
+  const [currentFilters, setCurrentFilters] = useState<FilterState | null>(null);
 
   // Memoize expensive calculations to prevent re-creation on every render
-  const popularTools = useMemo(() => getPopularTools(8), []);
-  const allTools = useMemo(() => TOOLS_CONFIG.filter(tool => tool.isActive), []);
-  const featuredTools = useMemo(() => popularTools.slice(0, 3), [popularTools]);
+  const allTools = useMemo(() => Object.values(getToolsByAllCategories(1000, locale)).flat(), [locale]);
+  const toolCategories = useMemo(() => getToolCategories(locale), [locale]);
 
   // Group tools by category
   const toolsByCategory = useMemo(() => {
@@ -46,7 +44,7 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
   };
 
   // Handle advanced filters
-  const handleAdvancedFiltersChange = (filtered: ToolConfig[], filters: any) => {
+  const handleAdvancedFiltersChange = (filtered: ToolConfig[], filters: FilterState) => {
     setFilteredTools(filtered);
     setCurrentFilters(filters);
     setSelectedCategory('all'); // Reset category selection when using advanced filters
@@ -60,7 +58,7 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
     }
 
     // Start with all tools or category filtered tools
-    let filtered = selectedCategory === 'all'
+    const filtered = selectedCategory === 'all'
       ? allTools
       : allTools.filter(tool => tool.category === selectedCategory);
 
@@ -90,10 +88,10 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
   const categoryStats = useMemo(() =>
     Object.entries(toolsByCategory).map(([key, tools]) => ({
       key,
-      name: TOOL_CATEGORIES[key as keyof typeof TOOL_CATEGORIES]?.name || key,
+      name: toolCategories[key as keyof typeof toolCategories]?.name || key,
       count: tools.length,
       totalSearchVolume: tools.reduce((sum, tool) => sum + (tool.searchVolume || 0), 0)
-    })), [toolsByCategory]
+    })), [toolsByCategory, toolCategories]
   );
 
   return (
@@ -138,7 +136,7 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
               onClick={() => handleCategorySelect('all')}
               className="transition-all duration-200"
             >
-{t.allTools} ({TOOLS_CONFIG.length})
+        {t.allTools} ({allTools.length})
             </Button>
             {categoryStats.map(({ key, name, count }) => (
               <Button
@@ -198,6 +196,7 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
                 tools={allTools}
                 onFiltersChange={handleAdvancedFiltersChange}
                 className="animate-fade-in-up"
+                locale={locale}
               />
             </div>
           )}
@@ -210,7 +209,7 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
           {/* Results Summary */}
           <div className="mb-8 text-center">
             <div className="flex flex-wrap justify-center items-center gap-4 text-sm text-gray-600">
-              <span>Showing {displayTools.length} of {TOOLS_CONFIG.length} tools</span>
+              <span>Showing {displayTools.length} of {allTools.length} tools</span>
               {currentFilters && (currentFilters.categories.length > 0 || currentFilters.difficulties.length > 0 || currentFilters.searchVolume !== 'all') && (
                 <Badge variant="outline" className="bg-blue-50 text-blue-700">
                   Filtered results
@@ -218,7 +217,7 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
               )}
               {selectedCategory !== 'all' && !showAdvancedFilters && (
                 <Badge variant="outline" className="bg-green-50 text-green-700">
-                  Category: {TOOL_CATEGORIES[selectedCategory as keyof typeof TOOL_CATEGORIES]?.name}
+                  Category: {toolCategories[selectedCategory as keyof typeof toolCategories]?.name}
                 </Badge>
               )}
             </div>
@@ -229,7 +228,7 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
             // Show all tools grouped by category (default view)
             <div className="space-y-16">
               {Object.entries(toolsByCategory).map(([categoryKey, categoryTools]) => {
-                const categoryInfo = TOOL_CATEGORIES[categoryKey as keyof typeof TOOL_CATEGORIES];
+                const categoryInfo = toolCategories[categoryKey as keyof typeof toolCategories];
                 const displayTools = categoryTools.slice(0, 8); // Limit to 8 tools per category
 
                 return (
@@ -281,7 +280,7 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
               <div className="mb-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {selectedCategory !== 'all'
-                    ? TOOL_CATEGORIES[selectedCategory as keyof typeof TOOL_CATEGORIES]?.name
+                    ? toolCategories[selectedCategory as keyof typeof toolCategories]?.name
                     : 'Filtered Tools'
                   }
                 </h3>

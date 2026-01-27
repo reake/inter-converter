@@ -1,11 +1,10 @@
 'use client';
 
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
-import { TOOL_CATEGORIES } from '@/config/tools';
+import { getToolCategories } from '@/config/tools';
 import { getSearchSuggestions, SearchResult } from '@/lib/search-engine';
 import { useSearch } from '@/lib/search-context';
-import { ToolConfig } from '@/types/tools';
 
 interface ToolSuggestion {
   id: string;
@@ -42,10 +41,11 @@ export function SearchInput({
   const suggestionsRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
   const { addToHistory, navigateWithSearch } = useSearch();
+  const localizedRedirect = locale === 'en' ? redirectTo : `/${locale}${redirectTo}`;
+  const toolCategories = getToolCategories(locale);
 
   // Debounced search function
-  const debouncedSearch = useCallback(
-    debounce((searchQuery: string) => {
+  const debouncedSearch = useMemo(() => debounce((searchQuery: string) => {
       if (searchQuery.trim().length === 0) {
         setSuggestions([]);
         setIsOpen(false);
@@ -53,7 +53,7 @@ export function SearchInput({
       }
 
       setIsLoading(true);
-      const results = getSearchSuggestions(searchQuery, 6);
+      const results = getSearchSuggestions(searchQuery, 6, locale);
       
       // Convert to suggestions format
       const toolSuggestions: ToolSuggestion[] = results.map((result: SearchResult) => ({
@@ -69,9 +69,7 @@ export function SearchInput({
       setSuggestions(toolSuggestions);
       setIsOpen(toolSuggestions.length > 0);
       setIsLoading(false);
-    }, 300),
-    []
-  );
+    }, 300), [locale]);
 
 
 
@@ -135,7 +133,7 @@ export function SearchInput({
           navigateToTool(suggestions[0]);
         } else {
           // Fallback to tools page with search query
-          navigateWithSearch(redirectTo, query);
+          navigateWithSearch(localizedRedirect, query);
         }
       }
     }
@@ -160,7 +158,7 @@ export function SearchInput({
   const handleFocus = () => {
     if (!showSuggestions) {
       // Original behavior - redirect to tools page
-      router.push(redirectTo);
+      router.push(localizedRedirect);
       return;
     }
     
@@ -235,7 +233,7 @@ export function SearchInput({
                   {suggestion.name}
                 </div>
                 <div className="text-sm text-gray-500 capitalize">
-                  {TOOL_CATEGORIES[suggestion.category as keyof typeof TOOL_CATEGORIES]?.name || suggestion.category}
+                  {toolCategories[suggestion.category as keyof typeof toolCategories]?.name || suggestion.category}
                 </div>
               </div>
               <div className="flex-shrink-0 text-gray-400">
@@ -252,12 +250,12 @@ export function SearchInput({
 }
 
 // Debounce utility function
-function debounce<T extends (...args: any[]) => any>(
-  func: T,
+function debounce<Args extends unknown[]>(
+  func: (...args: Args) => void,
   wait: number
-): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
+): (...args: Args) => void {
+  let timeout: ReturnType<typeof setTimeout>;
+  return (...args: Args) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };

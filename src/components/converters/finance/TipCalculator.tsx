@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -31,11 +31,7 @@ export default function TipCalculator() {
     tipPerPerson: 0
   });
 
-  useEffect(() => {
-    calculateTip();
-  }, [billAmount, tipPercentage, numberOfPeople]);
-
-  const calculateTip = () => {
+  const calculateTip = useCallback(() => {
     const bill = parseFloat(billAmount) || 0;
     const tip = parseFloat(tipPercentage) || 0;
     const people = parseInt(numberOfPeople) || 1;
@@ -53,7 +49,11 @@ export default function TipCalculator() {
       amountPerPerson,
       tipPerPerson
     });
-  };
+  }, [billAmount, tipPercentage, numberOfPeople]);
+
+  useEffect(() => {
+    calculateTip();
+  }, [calculateTip]);
 
   const handleTipPreset = (percentage: number) => {
     setTipPercentage(percentage.toString());

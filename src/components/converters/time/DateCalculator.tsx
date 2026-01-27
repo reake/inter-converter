@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -13,15 +13,26 @@ export function DateCalculator() {
   const [calculationType, setCalculationType] = useState<'difference' | 'add' | 'subtract'>('difference');
   const [addValue, setAddValue] = useState('1');
   const [addUnit, setAddUnit] = useState('days');
-  const [result, setResult] = useState<any>(null);
+  type DateDiffResult = {
+    type: 'difference';
+    totalDays: number;
+    totalHours: number;
+    totalMinutes: number;
+    breakdown: { years: number; months: number; days: number; hours: number; minutes: number };
+    formatted: string;
+  };
+  type DateCalcResult = {
+    type: 'add' | 'subtract';
+    resultDate: Date;
+    formatted: string;
+    iso: string;
+  };
+  type DateErrorResult = { error: string };
+  type DateResult = DateDiffResult | DateCalcResult | DateErrorResult | null;
 
-  useEffect(() => {
-    if (startDate) {
-      calculateResult();
-    }
-  }, [startDate, endDate, calculationType, addValue, addUnit]);
+  const [result, setResult] = useState<DateResult>(null);
 
-  const calculateResult = () => {
+  const calculateResult = useCallback(() => {
     try {
       const start = new Date(startDate);
       
@@ -47,7 +58,7 @@ export function DateCalculator() {
         });
       } else if (calculationType === 'add' || calculationType === 'subtract') {
         const value = parseInt(addValue) * (calculationType === 'subtract' ? -1 : 1);
-        let resultDate = new Date(start);
+        const resultDate = new Date(start);
         
         switch (addUnit) {
           case 'years':
@@ -77,10 +88,16 @@ export function DateCalculator() {
           iso: resultDate.toISOString()
         });
       }
-    } catch (error) {
+    } catch {
       setResult({ error: 'Invalid date format' });
     }
-  };
+  }, [startDate, endDate, calculationType, addValue, addUnit]);
+
+  useEffect(() => {
+    if (startDate) {
+      calculateResult();
+    }
+  }, [startDate, calculateResult]);
 
   const setToday = () => {
     const today = new Date();
@@ -108,7 +125,7 @@ export function DateCalculator() {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <Select value={calculationType} onValueChange={(value: any) => setCalculationType(value)}>
+          <Select value={calculationType} onValueChange={(value) => setCalculationType(value as 'difference' | 'add' | 'subtract')}>
             <SelectTrigger>
               <SelectValue />
             </SelectTrigger>
@@ -204,7 +221,7 @@ export function DateCalculator() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            {result && !result.error ? (
+            {result && !('error' in result) ? (
               <div className="space-y-4">
                 {result.type === 'difference' && (
                   <>
@@ -255,7 +272,7 @@ export function DateCalculator() {
                   </>
                 )}
               </div>
-            ) : result?.error ? (
+            ) : result && 'error' in result ? (
               <div className="text-center p-4 text-red-600">
                 {result.error}
               </div>

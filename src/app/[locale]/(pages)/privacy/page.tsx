@@ -3,6 +3,29 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Shield, Eye, Database, Lock, Globe, CheckCircle } from 'lucide-react';
+import { Metadata } from 'next';
+import { generateMetadata as generateSEOMetadata } from '@/lib/seo/metadata';
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isZh = locale === 'zh';
+
+  return generateSEOMetadata({
+    title: isZh ? '隐私政策 | InterConverter' : 'Privacy Policy | InterConverter',
+    description: isZh
+      ? '了解我们如何处理数据、保护隐私以及我们的安全承诺。'
+      : 'Learn how we handle data, protect privacy, and our security commitments.',
+    locale,
+    pathname: '/privacy',
+    keywords: isZh
+      ? ['隐私政策', '数据安全', '隐私', 'InterConverter']
+      : ['privacy policy', 'data security', 'privacy', 'InterConverter']
+  });
+}
 
 
 

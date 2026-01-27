@@ -55,14 +55,13 @@ export default function TimezoneConverter() {
       today.setHours(hours, minutes, seconds || 0, 0);
       
       // Create date in source timezone
-      const sourceDate = new Date(today.toLocaleString('en-US', { timeZone: fromTz }));
       const targetDate = new Date(today.getTime() + (today.getTimezoneOffset() * 60000));
       
       // Convert to target timezone
       const result = new Date(targetDate.toLocaleString('en-US', { timeZone: toTz }));
       
       return result.toTimeString().slice(0, 8);
-    } catch (error) {
+    } catch {
       return 'Invalid time';
     }
   };
@@ -76,7 +75,7 @@ export default function TimezoneConverter() {
         minute: '2-digit',
         second: '2-digit'
       });
-    } catch (error) {
+    } catch {
       return 'Invalid timezone';
     }
   };
@@ -90,7 +89,7 @@ export default function TimezoneConverter() {
         month: 'short',
         day: 'numeric'
       });
-    } catch (error) {
+    } catch {
       return 'Invalid timezone';
     }
   };

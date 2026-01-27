@@ -105,13 +105,13 @@ export function PerformanceMonitor() {
         // Monitor layout shifts
         const layoutShiftObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            const layoutShiftEntry = entry as any;
-            if (!layoutShiftEntry.hadRecentInput && layoutShiftEntry.value > 0.1) {
+            const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+            if (!layoutShiftEntry.hadRecentInput && (layoutShiftEntry.value || 0) > 0.1) {
               if (window.gtag) {
                 window.gtag('event', 'layout_shift', {
                   event_category: 'Performance',
                   event_label: 'Layout Shift',
-                  value: Math.round(layoutShiftEntry.value * 1000),
+                  value: Math.round((layoutShiftEntry.value || 0) * 1000),
                 });
               }
             }
@@ -141,9 +141,9 @@ export function ResourceMonitor() {
     const handleLoad = () => {
       // Monitor resource loading times
       if ('performance' in window && 'getEntriesByType' in window.performance) {
-        const resources = window.performance.getEntriesByType('resource');
+        const resources = window.performance.getEntriesByType('resource') as PerformanceResourceTiming[];
         
-        resources.forEach((resource: any) => {
+        resources.forEach((resource) => {
           if (resource.duration > 1000) { // Resources taking longer than 1s
             if (window.gtag) {
               window.gtag('event', 'slow_resource', {
@@ -175,7 +175,7 @@ declare global {
         event_category?: string;
         event_label?: string;
         value?: number;
-        custom_map?: Record<string, any>;
+        custom_map?: Record<string, unknown>;
       }
     ) => void;
   }

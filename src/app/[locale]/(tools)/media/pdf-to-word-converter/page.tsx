@@ -34,7 +34,7 @@ export async function generateMetadata({
 
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
-  const canonicalPath = `/${l}/media/pdf-to-word-converter`;
+  const canonicalPath = `${l === "en" ? "" : "/" + l}/media/pdf-to-word-converter`;
 
   return {
     title,
@@ -104,6 +104,7 @@ export default async function PdfToWordConverterPage({
 
   return (
     <EnhancedToolLayout
+      locale={l}
       title={toolName}
       description={description}
       keywords={keywords}

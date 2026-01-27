@@ -220,7 +220,7 @@ export default function OnlineStopwatch() {
               <div className="text-center py-8 text-muted-foreground">
                 <Clock className="h-12 w-12 mx-auto mb-3 opacity-50" />
                 <p>No lap times recorded</p>
-                <p className="text-sm mt-2">Start the timer and press "Lap" to record times</p>
+                <p className="text-sm mt-2">Start the timer and press &quot;Lap&quot; to record times</p>
               </div>
             )}
           </CardContent>

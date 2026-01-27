@@ -1,8 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -33,7 +32,7 @@ export default function UnsecuredLoanCalculator() {
   const [loanPurpose, setLoanPurpose] = useState<string>('debt-consolidation');
   const [results, setResults] = useState<UnsecuredLoanResults | null>(null);
 
-  const calculateUnsecuredLoan = () => {
+  const calculateUnsecuredLoan = useCallback(() => {
     const principal = parseFloat(loanAmount);
     const annualRate = parseFloat(interestRate) / 100;
     const years = parseFloat(loanTerm);
@@ -106,11 +105,11 @@ export default function UnsecuredLoanCalculator() {
         creditCardCost
       }
     });
-  };
+  }, [loanAmount, interestRate, loanTerm, creditScore, monthlyIncome, monthlyDebts]);
 
   useEffect(() => {
     calculateUnsecuredLoan();
-  }, [loanAmount, interestRate, loanTerm, creditScore, monthlyIncome, monthlyDebts, loanPurpose]);
+  }, [calculateUnsecuredLoan]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -338,7 +337,7 @@ export default function UnsecuredLoanCalculator() {
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-2 text-sm">
-                      <div>🆔 <strong>Identification:</strong> Driver's license or passport</div>
+                      <div>🆔 <strong>Identification:</strong> Driver&apos;s license or passport</div>
                       <div>💰 <strong>Income Proof:</strong> Pay stubs, tax returns</div>
                       <div>🏦 <strong>Bank Statements:</strong> 2-3 months recent</div>
                       <div>🏠 <strong>Address Proof:</strong> Utility bill or lease</div>

@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function TimeToolsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'categoryPages.time' });
-  const timeTools = getTimeTools();
+  const timeTools = getTimeTools(undefined, locale);
   
   const toolCategories = [
     {
@@ -80,7 +80,7 @@ export default async function TimeToolsPage({ params }: { params: Promise<{ loca
 
   return (
     <>
-      <HreflangLinks pathname="/time" currentLocale={locale} />
+      <HreflangLinks pathname="/time" />
       <CanonicalLink pathname="/time" locale={locale} />
       <JsonLd data={generateWebsiteSchema(locale)} />
       

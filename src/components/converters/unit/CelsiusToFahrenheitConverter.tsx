@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -10,7 +10,6 @@ import { CopyButton } from '@/components/ui/CopyButton';
 export default function CelsiusToFahrenheitConverter() {
   const [celsius, setCelsius] = useState<string>('0');
   const [fahrenheit, setFahrenheit] = useState<string>('32');
-  const [error, setError] = useState('');
 
   const convertCelsiusToFahrenheit = (c: number): number => {
     return (c * 9 / 5) + 32;
@@ -26,10 +25,9 @@ export default function CelsiusToFahrenheitConverter() {
     if (!isNaN(c)) {
       const f = convertCelsiusToFahrenheit(c);
       setFahrenheit(f.toFixed(2));
-      setError('');
+      
     } else {
       setFahrenheit('');
-      setError('');
     }
   };
 
@@ -39,10 +37,9 @@ export default function CelsiusToFahrenheitConverter() {
     if (!isNaN(f)) {
       const c = convertFahrenheitToCelsius(f);
       setCelsius(c.toFixed(2));
-      setError('');
+      
     } else {
       setCelsius('');
-      setError('');
     }
   };
 
@@ -51,10 +48,6 @@ export default function CelsiusToFahrenheitConverter() {
     setCelsius(fahrenheit);
     setFahrenheit(temp);
   };
-
-  useEffect(() => {
-    handleCelsiusChange(celsius);
-  }, []);
 
   const commonTemperatures = [
     { c: -40, f: -40, desc: 'Extreme Cold' },

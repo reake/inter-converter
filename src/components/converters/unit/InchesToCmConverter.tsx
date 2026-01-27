@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Ruler, ArrowRightLeft, Copy } from 'lucide-react';
+import { Ruler, ArrowRightLeft } from 'lucide-react';
 
 export default function InchesToCmConverter() {
   const [inches, setInches] = useState<string>('1');
@@ -47,14 +47,6 @@ export default function InchesToCmConverter() {
     setCentimeters(tempInches);
   };
 
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
-  };
-
-  useEffect(() => {
-    handleInchesChange(inches);
-  }, []);
-
   const commonMeasurements = [
     { inch: 1, cm: 2.54, desc: '1 inch' },
     { inch: 2, cm: 5.08, desc: '2 inches' },
@@ -87,7 +79,7 @@ export default function InchesToCmConverter() {
               />
               <div className="text-center p-4 bg-blue-50 rounded-lg">
                 <div className="text-3xl font-bold text-blue-600">
-                  {inches}"
+                  {inches}&quot;
                 </div>
                 <div className="text-sm text-gray-600">Inches</div>
               </div>
@@ -137,7 +129,7 @@ export default function InchesToCmConverter() {
           <div className="grid md:grid-cols-2 gap-4">
             <div className="p-4 border rounded-lg">
               <div className="text-sm text-gray-600">Inches (Imperial)</div>
-              <div className="text-2xl font-bold text-blue-600">{inches}"</div>
+              <div className="text-2xl font-bold text-blue-600">{inches}&quot;</div>
               <div className="text-xs text-gray-500">in</div>
             </div>
             <div className="p-4 border rounded-lg">
@@ -162,7 +154,7 @@ export default function InchesToCmConverter() {
                 </div>
                 <div className="flex gap-6 text-right">
                   <div>
-                    <div className="text-blue-600 font-bold">{measurement.inch}"</div>
+                    <div className="text-blue-600 font-bold">{measurement.inch}&quot;</div>
                   </div>
                   <div>
                     <div className="text-green-600 font-bold">{measurement.cm} cm</div>

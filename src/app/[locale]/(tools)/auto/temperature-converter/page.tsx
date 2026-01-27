@@ -41,7 +41,7 @@ export async function generateMetadata({
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
 
-  const canonicalPath = `/${l}/auto/temperature-converter`;
+  const canonicalPath = `${l === "en" ? "" : "/" + l}/auto/temperature-converter`;
 
   return {
     title,

@@ -6,9 +6,14 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { WebVitals, PerformanceMonitor, ResourceMonitor } from '@/components/performance/WebVitals';
 import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics';
 import "./globals.css";
+import type { Metadata } from "next";
 
 // Ensure static rendering for static export builds
 export const dynamic = 'force-static';
+
+export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://interconverter.com'),
+};
 
 export default async function RootLayout({
   children,

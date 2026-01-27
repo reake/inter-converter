@@ -44,10 +44,10 @@ export default async function AutoPage({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'categoryPages.auto' });
-  const allAutoTools = getAutoTools();
+  const allAutoTools = getAutoTools(undefined, locale);
   
   // Get popular tools (top 6 by search volume)
-  const popularTools = getPopularTools().filter(tool => tool.category === 'auto').slice(0, 6);
+  const popularTools = getPopularTools(10, locale).filter(tool => tool.category === 'auto').slice(0, 6);
 
   // Get tools by category
   const engineTools = allAutoTools.filter(tool => 
@@ -172,7 +172,7 @@ export default async function AutoPage({
 
   return (
     <>
-      <HreflangLinks currentLocale={locale} pathname="/auto" />
+      <HreflangLinks pathname="/auto" />
       <CanonicalLink locale={locale} pathname="/auto" />
       <JsonLd data={generateWebsiteSchema(locale)} />
       

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -46,10 +46,6 @@ export default function KgToPoundsConverter() {
     setKilograms(tempLbs);
     setPounds(tempKg);
   };
-
-  useEffect(() => {
-    handleKilogramsChange(kilograms);
-  }, []);
 
   const commonWeights = [
     { kg: 1, lbs: 2.2, desc: '1 kilogram' },

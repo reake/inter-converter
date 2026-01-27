@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -42,7 +42,7 @@ export default function RewardsCalculator() {
   const [spendingRequirement, setSpendingRequirement] = useState<string>('3000');
   const [results, setResults] = useState<RewardsResults | null>(null);
 
-  const calculateRewards = () => {
+  const calculateRewards = useCallback(() => {
     const fee = parseFloat(annualFee) || 0;
     const bonus = parseFloat(signupBonus) || 0;
     const spendReq = parseFloat(spendingRequirement) || 0;
@@ -85,11 +85,11 @@ export default function RewardsCalculator() {
       annualFee: fee,
       netValue
     });
-  };
+  }, [annualFee, signupBonus, spendingRequirement, categories, rewardType]);
 
   useEffect(() => {
     calculateRewards();
-  }, [categories, annualFee, rewardType, signupBonus, spendingRequirement]);
+  }, [calculateRewards]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -375,11 +375,11 @@ export default function RewardsCalculator() {
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-2 text-sm">
-                      <div>💸 <strong>Don't overspend:</strong> Rewards don't justify debt</div>
+                      <div>💸 <strong>Don&apos;t overspend:</strong> Rewards don&apos;t justify debt</div>
                       <div>📅 <strong>Pay in full:</strong> Interest negates rewards</div>
                       <div>💳 <strong>Annual fee math:</strong> Ensure rewards exceed fees</div>
                       <div>📊 <strong>Track spending:</strong> Stay within budget</div>
-                      <div>🎯 <strong>Use what you earn:</strong> Don't let points expire</div>
+                      <div>🎯 <strong>Use what you earn:</strong> Don&apos;t let points expire</div>
                     </div>
                   </CardContent>
                 </Card>
@@ -443,7 +443,7 @@ export default function RewardsCalculator() {
                       <div>📊 <strong>Low reward rates:</strong> Less than 1% everywhere</div>
                       <div>⏰ <strong>Expiring points:</strong> Use-it-or-lose-it policies</div>
                       <div>💳 <strong>Store cards:</strong> Limited use, high APR</div>
-                      <div>🎯 <strong>Wrong fit:</strong> Doesn't match spending patterns</div>
+                      <div>🎯 <strong>Wrong fit:</strong> Doesn&apos;t match spending patterns</div>
                     </div>
                   </CardContent>
                 </Card>

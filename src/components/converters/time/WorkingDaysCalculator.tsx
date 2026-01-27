@@ -1,11 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
-import { Calendar, Briefcase, Clock } from 'lucide-react';
+import { Calendar, Briefcase } from 'lucide-react';
 
 export function WorkingDaysCalculator() {
   const [startDate, setStartDate] = useState('');
@@ -14,26 +14,35 @@ export function WorkingDaysCalculator() {
   const [excludeHolidays, setExcludeHolidays] = useState(false);
   const [customHolidays, setCustomHolidays] = useState<string[]>([]);
   const [newHoliday, setNewHoliday] = useState('');
-  const [result, setResult] = useState<any>(null);
+  type WorkingDaysResult = {
+    totalDays: number;
+    workingDays: number;
+    weekends: number;
+    holidays: number;
+    workingHours: number;
+    weeks: number;
+    remainingDays: number;
+    breakdown: {
+      weekdays: number;
+      excludedWeekends: number;
+      excludedHolidays: number;
+    };
+  };
+  type WorkingDaysError = { error: string };
+  const [result, setResult] = useState<WorkingDaysResult | WorkingDaysError | null>(null);
 
-  useEffect(() => {
-    if (startDate && endDate) {
-      calculateWorkingDays();
-    }
-  }, [startDate, endDate, excludeWeekends, excludeHolidays, customHolidays]);
-
-  const isWeekend = (date: Date) => {
+  const isWeekend = useCallback((date: Date) => {
     const day = date.getDay();
     return day === 0 || day === 6; // Sunday = 0, Saturday = 6
-  };
+  }, []);
 
-  const isHoliday = (date: Date) => {
+  const isHoliday = useCallback((date: Date) => {
     if (!excludeHolidays) return false;
     const dateStr = date.toISOString().split('T')[0];
     return customHolidays.includes(dateStr);
-  };
+  }, [excludeHolidays, customHolidays]);
 
-  const calculateWorkingDays = () => {
+  const calculateWorkingDays = useCallback(() => {
     try {
       const start = new Date(startDate);
       const end = new Date(endDate);
@@ -85,10 +94,16 @@ export function WorkingDaysCalculator() {
           excludedHolidays: holidays
         }
       });
-    } catch (error) {
+    } catch {
       setResult({ error: 'Invalid date format' });
     }
-  };
+  }, [startDate, endDate, excludeWeekends, isHoliday, isWeekend]);
+
+  useEffect(() => {
+    if (startDate && endDate) {
+      calculateWorkingDays();
+    }
+  }, [startDate, endDate, calculateWorkingDays]);
 
   const addHoliday = () => {
     if (newHoliday && !customHolidays.includes(newHoliday)) {
@@ -256,7 +271,7 @@ export function WorkingDaysCalculator() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            {result && !result.error ? (
+            {result && !('error' in result) ? (
               <div className="space-y-4">
                 <div className="text-center p-4 bg-muted rounded-lg">
                   <div className="text-2xl font-bold text-primary mb-2">
@@ -312,7 +327,7 @@ export function WorkingDaysCalculator() {
                   </div>
                 </div>
               </div>
-            ) : result?.error ? (
+            ) : result && 'error' in result ? (
               <div className="text-center p-4 text-red-600">
                 {result.error}
               </div>

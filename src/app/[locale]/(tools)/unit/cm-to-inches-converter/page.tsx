@@ -35,7 +35,7 @@ export async function generateMetadata({
 
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
-  const canonicalPath = `/${l}/unit/cm-to-inches-converter`;
+  const canonicalPath = `${l === "en" ? "" : "/" + l}/unit/cm-to-inches-converter`;
 
   return {
     title,
@@ -105,6 +105,7 @@ export default async function CmToInchesConverterPage({
 
   return (
     <EnhancedToolLayout
+      locale={l}
       title={toolName}
       description={description}
       keywords={keywords}

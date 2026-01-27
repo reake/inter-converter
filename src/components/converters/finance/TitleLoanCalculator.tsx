@@ -1,8 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -34,7 +33,7 @@ export default function TitleLoanCalculator() {
   const [creditScore, setCreditScore] = useState<string>('600');
   const [results, setResults] = useState<TitleLoanResults | null>(null);
 
-  const calculateTitleLoan = () => {
+  const calculateTitleLoan = useCallback(() => {
     const vehicleVal = parseFloat(vehicleValue);
     const principal = parseFloat(loanAmount);
     const annualRate = parseFloat(interestRate) / 100;
@@ -110,11 +109,11 @@ export default function TitleLoanCalculator() {
         paydayLoan: paydayTotal - principal
       }
     });
-  };
+  }, [vehicleValue, loanAmount, interestRate, loanTerm, vehicleYear, vehicleMileage, creditScore]);
 
   useEffect(() => {
     calculateTitleLoan();
-  }, [vehicleValue, loanAmount, interestRate, loanTerm, vehicleYear, vehicleMileage, creditScore]);
+  }, [calculateTitleLoan]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -398,10 +397,10 @@ export default function TitleLoanCalculator() {
                   <CardContent>
                     <div className="space-y-2 text-sm">
                       <div>🎯 <strong>Targeting Vulnerable:</strong> Low-income communities</div>
-                      <div>📺 <strong>Misleading Ads:</strong> "Fast cash" promises</div>
+                      <div>📺 <strong>Misleading Ads:</strong> &quot;Fast cash&quot; promises</div>
                       <div>🔄 <strong>Rollover Encouragement:</strong> Profit from renewals</div>
                       <div>📋 <strong>Hidden Fees:</strong> Processing, documentation costs</div>
-                      <div>⚡ <strong>Pressure Tactics:</strong> "Act now" urgency</div>
+                      <div>⚡ <strong>Pressure Tactics:</strong> &quot;Act now&quot; urgency</div>
                     </div>
                   </CardContent>
                 </Card>
@@ -438,7 +437,7 @@ export default function TitleLoanCalculator() {
 
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-green-800 text-sm">🆘 If You're Trapped</CardTitle>
+                    <CardTitle className="text-green-800 text-sm">🆘 If You&apos;re Trapped</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-2 text-sm">

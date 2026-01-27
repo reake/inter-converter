@@ -12,7 +12,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Link } from "@/i18n/routing";
-import { getPopularTools, getToolsByAllCategories, TOOL_CATEGORIES } from "@/config/tools";
+import { getPopularTools, getToolsByAllCategories, getToolCategories } from "@/config/tools";
 import { EnhancedToolCard } from "@/components/tools/EnhancedToolCard";
 import { generateMetadata as generateSEOMetadata } from "@/lib/seo/metadata";
 import { StructuredData } from "@/components/tools/StructuredData";
@@ -57,18 +57,19 @@ export default async function HomePage({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'homepage' });
   const tCommon = await getTranslations({ locale, namespace: 'common' });
-  const popularTools = getPopularTools(6);
-  const toolsByCategory = getToolsByAllCategories(4);
+  const popularTools = getPopularTools(6, locale);
+  const toolsByCategory = getToolsByAllCategories(4, locale);
+  const toolCategories = getToolCategories(locale);
   
   const faqItems = t.raw('faq') as Array<{question: string, answer: string}>;
   const professionals = t.raw('professionals') as string[];
 
   return (
     <>
-      <HreflangLinks currentLocale={locale} pathname="/" />
+      <HreflangLinks pathname="/" />
       <CanonicalLink locale={locale} pathname="/" />
       <JsonLd data={generateWebsiteSchema(locale)} />
-      <StructuredData tools={popularTools} locale={locale} />
+      <StructuredData tools={popularTools} locale={locale} faqItems={faqItems} />
      
       {/* Hero Section */}
       <section className="relative overflow-visible bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700">
@@ -119,6 +120,7 @@ export default async function HomePage({
               tool={tool}
               featured={index < 3}
               showStats={true}
+              locale={locale}
             />
           ))}
         </div>
@@ -136,7 +138,7 @@ export default async function HomePage({
         </h2>
         <div className="space-y-12">
           {Object.entries(toolsByCategory).map(([categoryKey, tools]) => {
-            const category = TOOL_CATEGORIES[categoryKey as keyof typeof TOOL_CATEGORIES];
+            const category = toolCategories[categoryKey as keyof typeof toolCategories];
             return (
               <div key={categoryKey} className="">
                 <div className="flex items-center justify-between mb-6">
@@ -155,6 +157,7 @@ export default async function HomePage({
                       tool={tool}
                       featured={false}
                       showStats={false}
+                      locale={locale}
                     />
                   ))}
                 </div>
@@ -169,7 +172,6 @@ export default async function HomePage({
         title={t('sections.faq')}
         subtitle={t('sections.faqSubtitle')}
         faqItems={faqItems}
-        locale={locale}
       />
 
       {/* About InterConverter Section */}

@@ -32,7 +32,7 @@ export function Header() {
               return (
                 <Link
                   key={item.href}
-                  href={item.href as any}
+                  href={item.href}
                   className={cn(
                     "text-sm font-medium transition-colors hover:text-primary",
                     isActive ? "text-primary" : "text-muted-foreground"

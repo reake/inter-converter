@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -10,7 +10,6 @@ import { CopyButton } from '@/components/ui/CopyButton';
 export default function PoundsToKgConverter() {
   const [pounds, setPounds] = useState<string>('1');
   const [kilograms, setKilograms] = useState<string>('0.45');
-  const [error, setError] = useState('');
 
   const convertPoundsToKg = (lbs: number): number => {
     return lbs * 0.45359237;
@@ -26,10 +25,9 @@ export default function PoundsToKgConverter() {
     if (!isNaN(lbs)) {
       const kg = convertPoundsToKg(lbs);
       setKilograms(kg.toFixed(4));
-      setError('');
+      
     } else {
       setKilograms('');
-      setError('');
     }
   };
 
@@ -39,10 +37,9 @@ export default function PoundsToKgConverter() {
     if (!isNaN(kg)) {
       const lbs = convertKgToPounds(kg);
       setPounds(lbs.toFixed(4));
-      setError('');
+      
     } else {
       setPounds('');
-      setError('');
     }
   };
 
@@ -62,12 +59,6 @@ export default function PoundsToKgConverter() {
   const formatResult = (value: number) => {
     return parseFloat(value.toFixed(4)).toString();
   };
-
-  useEffect(() => {
-    if (pounds) {
-      handlePoundsChange(pounds);
-    }
-  }, []);
 
   return (
     <div className="space-y-6">
@@ -159,12 +150,6 @@ export default function PoundsToKgConverter() {
             </div>
           )}
 
-          {/* Error Display */}
-          {error && (
-            <div className="text-destructive text-sm p-3 bg-destructive/10 rounded-lg">
-              {error}
-            </div>
-          )}
         </CardContent>
       </Card>
 

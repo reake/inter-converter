@@ -44,7 +44,7 @@ export default async function HealthFitnessPage({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'categoryPages.health' });
-  const tools = getToolsByCategory('health');
+  const tools = getToolsByCategory('health', undefined, locale);
 
   const getDifficultyColor = (difficulty: number) => {
     if (difficulty <= 2) return 'bg-green-100 text-green-800 border-green-200';
@@ -54,7 +54,7 @@ export default async function HealthFitnessPage({
 
   return (
     <>
-      <HreflangLinks currentLocale={locale} pathname="/health" />
+      <HreflangLinks pathname="/health" />
       <CanonicalLink locale={locale} pathname="/health" />
       <JsonLd data={generateWebsiteSchema(locale)} />
       

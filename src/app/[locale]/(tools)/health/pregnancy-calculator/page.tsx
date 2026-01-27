@@ -41,7 +41,7 @@ export async function generateMetadata({
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
 
-  const canonicalPath = `/${l}/health/pregnancy-calculator`;
+  const canonicalPath = `${l === "en" ? "" : "/" + l}/health/pregnancy-calculator`;
 
   return {
     title,

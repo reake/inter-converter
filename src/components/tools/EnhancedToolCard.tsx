@@ -1,18 +1,21 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ToolConfig } from '@/types/tools';
-import { TOOL_CATEGORIES } from '@/config/tools';
+import { getToolCategories } from '@/config/tools';
 
 interface EnhancedToolCardProps {
   tool: ToolConfig;
   featured?: boolean;
   showStats?: boolean;
+  locale?: string;
 }
 
-export function EnhancedToolCard({ tool, featured = false, showStats = true }: EnhancedToolCardProps) {
-  const categoryInfo = TOOL_CATEGORIES[tool.category as keyof typeof TOOL_CATEGORIES];
+export function EnhancedToolCard({ tool, featured = false, showStats = true, locale = 'en' }: EnhancedToolCardProps) {
+  const toolCategories = getToolCategories(locale);
+  const categoryInfo = toolCategories[tool.category as keyof typeof toolCategories];
+  const isZh = locale === 'zh';
   
   const getDifficultyColor = (difficulty: number) => {
     if (difficulty <= 2) return 'bg-green-100 text-green-700 border-green-200';
@@ -21,9 +24,9 @@ export function EnhancedToolCard({ tool, featured = false, showStats = true }: E
   };
 
   const getDifficultyText = (difficulty: number) => {
-    if (difficulty <= 2) return 'Easy';
-    if (difficulty <= 3) return 'Medium';
-    return 'Advanced';
+    if (difficulty <= 2) return isZh ? '简单' : 'Easy';
+    if (difficulty <= 3) return isZh ? '中等' : 'Medium';
+    return isZh ? '高级' : 'Advanced';
   };
 
   return (

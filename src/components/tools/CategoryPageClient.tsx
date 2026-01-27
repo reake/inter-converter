@@ -1,14 +1,14 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { TOOLS_CONFIG, TOOL_CATEGORIES } from '@/config/tools';
+import { getToolsByCategory, getToolCategories } from '@/config/tools';
 import { ModernToolCard } from '@/components/tools/ModernToolCard';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ToolConfig, ToolCategory } from '@/types/tools';
+import { ToolCategory } from '@/types/tools';
 import { ArrowLeft, Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 
 interface CategoryPageClientProps {
   category: ToolCategory;
@@ -18,11 +18,12 @@ interface CategoryPageClientProps {
 export function CategoryPageClient({ category, locale }: CategoryPageClientProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<'popularity' | 'name'>('popularity');
+  const toolCategories = useMemo(() => getToolCategories(locale), [locale]);
 
   // Get all tools for this category
   const categoryTools = useMemo(() => {
-    return TOOLS_CONFIG.filter(tool => tool.category === category && tool.isActive);
-  }, [category]);
+    return getToolsByCategory(category, undefined, locale);
+  }, [category, locale]);
 
   // Filter and sort tools
   const displayTools = useMemo(() => {
@@ -51,7 +52,7 @@ export function CategoryPageClient({ category, locale }: CategoryPageClientProps
     });
   }, [categoryTools, searchQuery, sortBy]);
 
-  const categoryInfo = TOOL_CATEGORIES[category];
+  const categoryInfo = toolCategories[category];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
@@ -196,14 +197,14 @@ export function CategoryPageClient({ category, locale }: CategoryPageClientProps
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {Object.entries(TOOL_CATEGORIES)
+            {Object.entries(toolCategories)
               .filter(([key]) => key !== category)
               .map(([key, info]) => {
-                const toolCount = TOOLS_CONFIG.filter(tool => tool.category === key && tool.isActive).length;
+                const toolCount = getToolsByCategory(key as ToolCategory, undefined, locale).length;
                 return (
                   <Link
                     key={key}
-                    href={`/tools/${key}`}
+                    href={`/${key}`}
                     className="block p-6 bg-white rounded-lg border hover:shadow-lg transition-shadow"
                   >
                     <h3 className="font-semibold text-lg mb-2">{info.name}</h3>

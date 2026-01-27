@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -29,7 +29,7 @@ export default function ThirtyYearMortgageCalculator() {
   const [pmi, setPmi] = useState<string>('200');
   const [results, setResults] = useState<MortgageResults | null>(null);
 
-  const calculateMortgage = () => {
+  const calculateMortgage = useCallback(() => {
     const price = parseFloat(homePrice);
     const down = parseFloat(downPayment);
     const rate = parseFloat(interestRate) / 100 / 12;
@@ -84,11 +84,11 @@ export default function ThirtyYearMortgageCalculator() {
       monthlyInterestAmount,
       amortizationSchedule
     });
-  };
+  }, [homePrice, downPayment, interestRate, propertyTax, homeInsurance, pmi]);
 
   useEffect(() => {
     calculateMortgage();
-  }, [homePrice, downPayment, interestRate, propertyTax, homeInsurance, pmi]);
+  }, [calculateMortgage]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -373,7 +373,7 @@ export default function ThirtyYearMortgageCalculator() {
                         </div>
                       </div>
                       <div className="text-sm text-gray-600">
-                        <p>Over 30 years, you'll pay {formatCurrency(results.totalInterest)} in interest on your {formatCurrency(parseFloat(homePrice) - parseFloat(downPayment))} loan. Consider making extra principal payments to reduce total interest.</p>
+                        <p>Over 30 years, you&apos;ll pay {formatCurrency(results.totalInterest)} in interest on your {formatCurrency(parseFloat(homePrice) - parseFloat(downPayment))} loan. Consider making extra principal payments to reduce total interest.</p>
                       </div>
                     </div>
                   </CardContent>

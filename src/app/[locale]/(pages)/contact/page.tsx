@@ -14,6 +14,29 @@ import {
   Globe,
   Shield
 } from 'lucide-react';
+import { Metadata } from 'next';
+import { generateMetadata as generateSEOMetadata } from '@/lib/seo/metadata';
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isZh = locale === 'zh';
+
+  return generateSEOMetadata({
+    title: isZh ? '联系我们 | InterConverter' : 'Contact InterConverter',
+    description: isZh
+      ? '获取支持、反馈建议或合作咨询。我们很乐意听到你的声音。'
+      : 'Get support, share feedback, or reach out about partnerships. We’d love to hear from you.',
+    locale,
+    pathname: '/contact',
+    keywords: isZh
+      ? ['联系我们', '支持', '反馈', '合作', 'InterConverter']
+      : ['contact', 'support', 'feedback', 'partnerships', 'InterConverter']
+  });
+}
 
 
 

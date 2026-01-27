@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -9,20 +9,27 @@ import { Calendar, User, Cake } from 'lucide-react';
 export function AgeCalculator() {
   const [birthDate, setBirthDate] = useState('');
   const [targetDate, setTargetDate] = useState('');
-  const [result, setResult] = useState<any>(null);
+  type AgeResult = {
+    exact: { years: number; months: number; days: number };
+    totalDays: number;
+    totalHours: number;
+    totalMinutes: number;
+    nextBirthday: { date: string; daysLeft: number };
+    zodiacSign: string;
+    chineseZodiac: string;
+    birthDayOfWeek: string;
+    ageInWeeks: number;
+    ageInMonths: number;
+  };
+  type AgeError = { error: string };
+  const [result, setResult] = useState<AgeResult | AgeError | null>(null);
 
   useEffect(() => {
     const today = new Date();
     setTargetDate(today.toISOString().split('T')[0]);
   }, []);
 
-  useEffect(() => {
-    if (birthDate && targetDate) {
-      calculateAge();
-    }
-  }, [birthDate, targetDate]);
-
-  const calculateAge = () => {
+  const calculateAge = useCallback(() => {
     try {
       const birth = new Date(birthDate);
       const target = new Date(targetDate);
@@ -83,10 +90,16 @@ export function AgeCalculator() {
         ageInWeeks: Math.floor(totalDays / 7),
         ageInMonths: years * 12 + months
       });
-    } catch (error) {
+    } catch {
       setResult({ error: 'Invalid date format' });
     }
-  };
+  }, [birthDate, targetDate]);
+
+  useEffect(() => {
+    if (birthDate && targetDate) {
+      calculateAge();
+    }
+  }, [birthDate, targetDate, calculateAge]);
 
   const getZodiacSign = (month: number, day: number) => {
     const signs = [
@@ -176,7 +189,7 @@ export function AgeCalculator() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            {result && !result.error ? (
+            {result && !('error' in result) ? (
               <div className="space-y-4">
                 <div className="text-center p-4 bg-muted rounded-lg">
                   <div className="text-2xl font-bold text-primary mb-2">
@@ -206,7 +219,7 @@ export function AgeCalculator() {
                   </div>
                 </div>
               </div>
-            ) : result?.error ? (
+            ) : result && 'error' in result ? (
               <div className="text-center p-4 text-red-600">
                 {result.error}
               </div>
@@ -219,7 +232,7 @@ export function AgeCalculator() {
         </Card>
       </div>
 
-      {result && !result.error && (
+      {result && !('error' in result) && (
         <>
           {/* Birthday Information */}
           <Card>

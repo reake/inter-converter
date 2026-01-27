@@ -1,4 +1,4 @@
-import { CompressionResult, CFMResult, SuperchargerResult, VEResult } from '@/types/automotive';
+import { CompressionResult, SuperchargerResult, VEResult } from '@/types/automotive';
 
 export class EngineFormulas {
   /**

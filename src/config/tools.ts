@@ -2,6 +2,7 @@
 export {
   TOOLS_CONFIG,
   TOOL_CATEGORIES,
+  getToolCategories,
   getToolById,
   getToolsByCategory,
   getPopularTools,

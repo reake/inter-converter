@@ -1,5 +1,7 @@
 import { getFallbackLanguage, DEFAULT_LANGUAGE } from './language-config';
 
+type Translations = Record<string, unknown>;
+
 export interface TranslationKey {
   key: string;
   namespace: string;
@@ -25,9 +27,9 @@ export interface TranslationStats {
 
 class TranslationEngine {
   private static instance: TranslationEngine;
-  private translations: Map<string, Record<string, any>> = new Map();
+  private translations: Map<string, Translations> = new Map();
   private missingTranslations: TranslationMissing[] = [];
-  private loadingPromises: Map<string, Promise<any>> = new Map();
+  private loadingPromises: Map<string, Promise<Translations>> = new Map();
   private translationStats: Map<string, TranslationStats> = new Map();
 
   static getInstance(): TranslationEngine {
@@ -38,7 +40,7 @@ class TranslationEngine {
   }
 
   // Load translations for a specific locale
-  async loadTranslations(locale: string): Promise<Record<string, any>> {
+  async loadTranslations(locale: string): Promise<Translations> {
     // Check if already loaded
     if (this.translations.has(locale)) {
       return this.translations.get(locale)!;
@@ -75,12 +77,12 @@ class TranslationEngine {
   }
 
   // Fetch translations from the server or local files
-  private async fetchTranslations(locale: string): Promise<Record<string, any>> {
+  private async fetchTranslations(locale: string): Promise<Translations> {
     try {
       // Try to load from messages directory
       const response = await fetch(`/messages/${locale}.json`);
       if (response.ok) {
-        return await response.json();
+        return (await response.json()) as Translations;
       }
     } catch (error) {
       console.warn(`Could not fetch translations for ${locale}:`, error);
@@ -88,8 +90,8 @@ class TranslationEngine {
 
     // Try dynamic import as fallback
     try {
-      const module = await import(`../../messages/${locale}.json`);
-      return module.default || module;
+      const importedModule = await import(`../../messages/${locale}.json`);
+      return (importedModule.default || importedModule) as Translations;
     } catch (error) {
       console.warn(`Could not import translations for ${locale}:`, error);
     }
@@ -131,15 +133,19 @@ class TranslationEngine {
       value = this.interpolateString(value, interpolations);
     }
 
-    return value;
+    return typeof value === 'string' ? value : String(value);
   }
 
   // Get nested value from object using dot notation
-  private getNestedValue(obj: any, path: string): any {
+  private getNestedValue(obj: Translations | undefined, path: string): unknown {
     if (!obj) return undefined;
     
-    return path.split('.').reduce((current, key) => {
-      return current && current[key] !== undefined ? current[key] : undefined;
+    return path.split('.').reduce<unknown>((current, key) => {
+      if (current && typeof current === 'object' && !Array.isArray(current)) {
+        const record = current as Record<string, unknown>;
+        return record[key];
+      }
+      return undefined;
     }, obj);
   }
 
@@ -170,7 +176,7 @@ class TranslationEngine {
   }
 
   // Update translation statistics
-  private updateTranslationStats(locale: string, translations: Record<string, any>): void {
+  private updateTranslationStats(locale: string, translations: Translations): void {
     const flatKeys = this.flattenObject(translations);
     const totalKeys = Object.keys(flatKeys).length;
     
@@ -195,17 +201,18 @@ class TranslationEngine {
   }
 
   // Flatten nested object to count keys
-  private flattenObject(obj: any, prefix = ''): Record<string, any> {
-    const flattened: Record<string, any> = {};
+  private flattenObject(obj: Record<string, unknown>, prefix = ''): Record<string, unknown> {
+    const flattened: Record<string, unknown> = {};
     
     for (const key in obj) {
-      if (obj.hasOwnProperty(key)) {
+      if (Object.prototype.hasOwnProperty.call(obj, key)) {
         const newKey = prefix ? `${prefix}.${key}` : key;
+        const value = obj[key];
         
-        if (typeof obj[key] === 'object' && obj[key] !== null && !Array.isArray(obj[key])) {
-          Object.assign(flattened, this.flattenObject(obj[key], newKey));
+        if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
+          Object.assign(flattened, this.flattenObject(value as Record<string, unknown>, newKey));
         } else {
-          flattened[newKey] = obj[key];
+          flattened[newKey] = value;
         }
       }
     }
@@ -254,19 +261,20 @@ class TranslationEngine {
   }
 
   // Validate translation keys against a schema
-  validateTranslations(locale: string, schema: Record<string, any>): string[] {
+  validateTranslations(locale: string, schema: Record<string, { required?: boolean }>): string[] {
     const translations = this.translations.get(locale);
     if (!translations) {
       return ['Translations not loaded'];
     }
 
     const errors: string[] = [];
-    const flatSchema = this.flattenObject(schema);
+    const flatSchema = this.flattenObject(schema as Record<string, unknown>);
     const flatTranslations = this.flattenObject(translations);
 
     // Check for missing required keys
     for (const key in flatSchema) {
-      if (flatSchema[key].required && !flatTranslations[key]) {
+      const schemaValue = flatSchema[key] as { required?: boolean } | undefined;
+      if (schemaValue?.required && !flatTranslations[key]) {
         errors.push(`Missing required translation key: ${key}`);
       }
     }
@@ -294,7 +302,7 @@ class TranslationEngine {
   }
 
   // Import translations from external source
-  async importTranslations(locale: string, translations: Record<string, any>): Promise<void> {
+  async importTranslations(locale: string, translations: Translations): Promise<void> {
     const existing = this.translations.get(locale) || {};
     const merged = this.deepMerge(existing, translations);
     
@@ -303,15 +311,19 @@ class TranslationEngine {
   }
 
   // Deep merge two objects
-  private deepMerge(target: any, source: any): any {
-    const result = { ...target };
+  private deepMerge(target: Record<string, unknown>, source: Record<string, unknown>): Record<string, unknown> {
+    const result: Record<string, unknown> = { ...target };
     
     for (const key in source) {
-      if (source.hasOwnProperty(key)) {
-        if (typeof source[key] === 'object' && source[key] !== null && !Array.isArray(source[key])) {
-          result[key] = this.deepMerge(result[key] || {}, source[key]);
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        const sourceValue = source[key];
+        if (typeof sourceValue === 'object' && sourceValue !== null && !Array.isArray(sourceValue)) {
+          const targetValue = (result[key] && typeof result[key] === 'object' && !Array.isArray(result[key]))
+            ? (result[key] as Record<string, unknown>)
+            : {};
+          result[key] = this.deepMerge(targetValue, sourceValue as Record<string, unknown>);
         } else {
-          result[key] = source[key];
+          result[key] = sourceValue;
         }
       }
     }
@@ -324,7 +336,7 @@ class TranslationEngine {
 export const translationEngine = TranslationEngine.getInstance();
 
 // Utility functions
-export async function loadTranslationsForLocale(locale: string): Promise<Record<string, any>> {
+export async function loadTranslationsForLocale(locale: string): Promise<Translations> {
   return translationEngine.loadTranslations(locale);
 }
 

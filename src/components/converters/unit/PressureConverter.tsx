@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { useState, useEffect, useCallback } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -24,11 +24,7 @@ export function PressureConverter() {
   const [value, setValue] = useState('1');
   const [result, setResult] = useState<number | null>(null);
 
-  useEffect(() => {
-    convertValue();
-  }, [value, fromUnit, toUnit]);
-
-  const convertValue = () => {
+  const convertValue = useCallback(() => {
     if (!value || isNaN(parseFloat(value))) {
       setResult(null);
       return;
@@ -42,7 +38,11 @@ export function PressureConverter() {
     const convertedValue = pascalValue / toFactor;
     
     setResult(convertedValue);
-  };
+  }, [value, fromUnit, toUnit]);
+
+  useEffect(() => {
+    convertValue();
+  }, [convertValue]);
 
   const swapUnits = () => {
     const temp = fromUnit;

@@ -1,0 +1,2838 @@
+[
+  {
+    "id": "carburetor-cfm-calculator",
+    "name": "化油器CFM计算器",
+    "description": "计算化油器CFM需求以获得最佳发动机性能。专业化油器选型计算器，为汽车爱好者和机械师提供气流分析。",
+    "category": "auto",
+    "keywords": [
+      "化油器cfm计算器",
+      "化油器选型计算器",
+      "发动机气流计算器",
+      "cfm需求计算器",
+      "化油器选择工具",
+      "化油器cfm计算器发动机尺寸",
+      "化油器选型计算器",
+      "发动机cfm计算器",
+      "化油器计算器在线",
+      "汽车cfm计算器"
+    ],
+    "path": "/zh/auto/carburetor-cfm-calculator",
+    "isActive": true,
+    "searchVolume": 12000,
+    "difficulty": 2,
+    "icon": "🏎️"
+  },
+  {
+    "id": "compression-ratio-calculator",
+    "name": "压缩比计算器",
+    "description": "计算发动机压缩比并分析马力潜力。先进的压缩比计算器，用于发动机制造和性能优化项目。",
+    "category": "auto",
+    "keywords": [
+      "压缩比",
+      "比率",
+      "马力",
+      "发动机",
+      "性能"
+    ],
+    "path": "/zh/auto/compression-ratio-calculator",
+    "isActive": true,
+    "searchVolume": 8500,
+    "difficulty": 3,
+    "icon": "⚙️"
+  },
+  {
+    "id": "engine-size-converter",
+    "name": "发动机尺寸转换器",
+    "description": "立即在立方英寸和升之间转换发动机排量。准确的发动机尺寸转换器，用于汽车规格和发动机制造计算。",
+    "category": "auto",
+    "keywords": [
+      "发动机",
+      "排量",
+      "立方英寸",
+      "升",
+      "转换器"
+    ],
+    "path": "/zh/auto/engine-size-converter",
+    "isActive": true,
+    "searchVolume": 15000,
+    "difficulty": 1,
+    "icon": "🔧"
+  },
+  {
+    "id": "gear-ratio-calculator",
+    "name": "齿轮比计算器",
+    "description": "计算齿轮比以获得最佳车辆性能和燃油效率。专业齿轮比计算器，用于差速器和变速器分析。",
+    "category": "auto",
+    "keywords": [
+      "齿轮",
+      "比率",
+      "差速器",
+      "性能",
+      "变速器"
+    ],
+    "path": "/zh/auto/gear-ratio-calculator",
+    "isActive": true,
+    "searchVolume": 18000,
+    "difficulty": 2,
+    "icon": "⚙️"
+  },
+  {
+    "id": "power-to-weight-ratio",
+    "name": "功重比计算器",
+    "description": "计算车辆性能分析的功重比。确定赛车和汽车性能比较的马力每磅比率。",
+    "category": "auto",
+    "keywords": [
+      "功率",
+      "重量",
+      "比率",
+      "马力",
+      "性能"
+    ],
+    "path": "/zh/auto/power-to-weight-ratio",
+    "isActive": true,
+    "searchVolume": 9500,
+    "difficulty": 1,
+    "icon": "💪"
+  },
+  {
+    "id": "ram-air-calculator",
+    "name": "冲压进气计算器",
+    "description": "计算冲压进气马力增益和冷空气进气性能优势。专业冲压进气计算器，用于进气系统优化和调校。",
+    "category": "auto",
+    "keywords": [
+      "冲压进气",
+      "马力",
+      "进气",
+      "性能",
+      "庞蒂亚克"
+    ],
+    "path": "/zh/auto/ram-air-calculator",
+    "isActive": true,
+    "searchVolume": 4500,
+    "difficulty": 3,
+    "icon": "💨"
+  },
+  {
+    "id": "rpm-calculator",
+    "name": "转速计算器",
+    "description": "根据车速、齿轮比和轮胎尺寸计算转速。综合转速计算器，用于变速器调校和性能分析。",
+    "category": "auto",
+    "keywords": [
+      "转速",
+      "速度",
+      "齿轮比",
+      "轮胎",
+      "发动机"
+    ],
+    "path": "/zh/auto/rpm-calculator",
+    "isActive": true,
+    "searchVolume": 22000,
+    "difficulty": 2,
+    "icon": "🌀"
+  },
+  {
+    "id": "speed-converter",
+    "name": "速度转换器",
+    "description": "为汽车应用在MPH和KPH之间转换速度。即时速度转换器，为赛车和车辆规格提供精确计算。",
+    "category": "auto",
+    "keywords": [
+      "速度",
+      "mph",
+      "kph",
+      "转换器",
+      "汽车"
+    ],
+    "path": "/zh/auto/speed-converter",
+    "isActive": true,
+    "searchVolume": 35000,
+    "difficulty": 1,
+    "icon": "🏁"
+  },
+  {
+    "id": "supercharger-calculator",
+    "name": "增压器计算器",
+    "description": "计算增压器增压压力和马力增益。专业增压器计算器，用于强制进气性能分析和调校。",
+    "category": "auto",
+    "keywords": [
+      "增压器",
+      "马力",
+      "增压",
+      "psi",
+      "性能"
+    ],
+    "path": "/zh/auto/supercharger-calculator",
+    "isActive": true,
+    "searchVolume": 7500,
+    "difficulty": 3,
+    "icon": "🌪️"
+  },
+  {
+    "id": "temperature-converter",
+    "name": "汽车温度转换器",
+    "description": "为发动机和冷却系统分析在华氏度和摄氏度之间转换汽车温度。汽车诊断必备的温度转换器。",
+    "category": "auto",
+    "keywords": [
+      "汽车温度转换器",
+      "华氏摄氏转换器",
+      "发动机温度转换",
+      "冷却系统温度",
+      "汽车热分析",
+      "f到c转换器汽车",
+      "摄氏华氏汽车",
+      "发动机调校温度",
+      "冷却液温度转换器",
+      "汽车温度工具"
+    ],
+    "path": "/zh/auto/temperature-converter",
+    "isActive": true,
+    "searchVolume": 28000,
+    "difficulty": 1,
+    "icon": "🌡️"
+  },
+  {
+    "id": "temperature-converter-enhanced",
+    "name": "增强型温度转换器",
+    "description": "具有汽车应用热效率分析的先进温度转换器。用于发动机调校和热管理的增强型温度工具。",
+    "category": "auto",
+    "keywords": [
+      "增强型温度转换器",
+      "热效率",
+      "温差",
+      "汽车热分析",
+      "发动机调校温度"
+    ],
+    "path": "/zh/auto/temperature-converter-enhanced",
+    "isActive": true,
+    "searchVolume": 5500,
+    "difficulty": 3,
+    "icon": "🌡️"
+  },
+  {
+    "id": "tire-calculator",
+    "name": "轮胎计算器",
+    "description": "计算轮胎直径对速度表准确性和车辆性能的影响。综合轮胎计算器，用于轮胎和轮毂尺寸决策。",
+    "category": "auto",
+    "keywords": [
+      "轮胎",
+      "直径",
+      "速度",
+      "转速",
+      "性能"
+    ],
+    "path": "/zh/auto/tire-calculator",
+    "isActive": true,
+    "searchVolume": 16000,
+    "difficulty": 2,
+    "icon": "🛞"
+  },
+  {
+    "id": "torque-horsepower-calculator",
+    "name": "扭矩马力计算器",
+    "description": "通过转速分析在扭矩和马力之间转换。专业发动机功率计算器，用于性能调校和测功机结果解释。",
+    "category": "auto",
+    "keywords": [
+      "扭矩",
+      "马力",
+      "转速",
+      "转换器",
+      "发动机"
+    ],
+    "path": "/zh/auto/torque-horsepower-calculator",
+    "isActive": true,
+    "searchVolume": 19000,
+    "difficulty": 2,
+    "icon": "🔩"
+  },
+  {
+    "id": "volumetric-efficiency-calculator",
+    "name": "容积效率计算器",
+    "description": "计算发动机容积效率以获得最佳气流和性能调校。先进的VE计算器，为发动机制造商和性能爱好者设计。",
+    "category": "auto",
+    "keywords": [
+      "容积效率",
+      "ve",
+      "发动机",
+      "性能",
+      "调校"
+    ],
+    "path": "/zh/auto/volumetric-efficiency-calculator",
+    "isActive": true,
+    "searchVolume": 3500,
+    "difficulty": 4,
+    "icon": "📊"
+  },
+  {
+    "id": "engine-volume-calculator",
+    "name": "发动机容积计算器",
+    "description": "根据缸径和冲程测量计算发动机气缸容积。精确的发动机容积计算器，用于排量计算和发动机制造。",
+    "category": "auto",
+    "keywords": [
+      "容积",
+      "气缸",
+      "排量",
+      "缸径",
+      "冲程"
+    ],
+    "path": "/zh/auto/engine-volume-calculator",
+    "isActive": true,
+    "searchVolume": 11000,
+    "difficulty": 2,
+    "icon": "📐"
+  },
+  {
+    "id": "auto-fluid-calculator",
+    "name": "汽车液体重量计算器",
+    "description": "计算包括汽油、机油和变速器油在内的汽车液体重量。车辆重量分布分析必备的液体重量计算器。",
+    "category": "auto",
+    "keywords": [
+      "液体",
+      "容积",
+      "重量",
+      "汽油",
+      "机油",
+      "变速器"
+    ],
+    "path": "/zh/auto/fluid-weight-calculator",
+    "isActive": true,
+    "searchVolume": 6500,
+    "difficulty": 1,
+    "icon": "🛢️"
+  },
+  {
+    "id": "auto-weight-converter",
+    "name": "汽车重量转换器",
+    "description": "在磅、千克和其他单位之间转换汽车重量。专门用于车辆规格和赛车应用的重量转换器。",
+    "category": "auto",
+    "keywords": [
+      "重量",
+      "转换器",
+      "磅",
+      "千克",
+      "盎司",
+      "克"
+    ],
+    "path": "/zh/auto/auto-weight-converter",
+    "isActive": true,
+    "searchVolume": 8000,
+    "difficulty": 1,
+    "icon": "⚖️"
+  },
+  {
+    "id": "engine-displacement-calculator",
+    "name": "发动机排量计算器",
+    "description": "根据缸径、冲程和气缸数计算总发动机排量。专业排量计算器，用于发动机制造和性能规划。",
+    "category": "auto",
+    "keywords": [
+      "排量",
+      "缸径",
+      "冲程",
+      "发动机",
+      "立方",
+      "英寸"
+    ],
+    "path": "/zh/auto/engine-displacement-calculator",
+    "isActive": true,
+    "searchVolume": 9500,
+    "difficulty": 2,
+    "icon": "🔧"
+  },
+  {
+    "id": "power-to-weight-calculator",
+    "name": "功重比计算器",
+    "description": "计算车辆功重比用于性能比较和分析。赛车和汽车性能评估必备的计算器。",
+    "category": "auto",
+    "keywords": [
+      "功重比",
+      "功重比率",
+      "性能",
+      "马力",
+      "车辆重量"
+    ],
+    "path": "/zh/auto/power-to-weight-calculator",
+    "isActive": true,
+    "searchVolume": 8500,
+    "difficulty": 2,
+    "icon": "⚡"
+  },
+  {
+    "id": "tire-speed-calculator",
+    "name": "轮胎速度计算器",
+    "description": "根据轮胎直径和齿轮比计算车辆速度。综合轮胎速度计算器，用于速度表校准和性能调校。",
+    "category": "auto",
+    "keywords": [
+      "轮胎速度计算器",
+      "轮胎直径速度",
+      "齿轮比速度",
+      "转速速度计算器",
+      "车辆速度计算器"
+    ],
+    "path": "/zh/auto/tire-speed-calculator",
+    "isActive": true,
+    "searchVolume": 12000,
+    "difficulty": 2,
+    "icon": "🏁"
+  },
+  {
+    "id": "rgb-to-hex-converter",
+    "name": "RGB转HEX转换器",
+    "description": "为网页设计和CSS开发即时将RGB颜色值转换为HEX代码。专业RGB转HEX转换器，具有实时颜色预览和复制粘贴功能。",
+    "category": "color",
+    "keywords": [
+      "rgb",
+      "hex",
+      "颜色",
+      "转换器",
+      "css",
+      "设计",
+      "网页",
+      "调色板"
+    ],
+    "path": "/zh/color/rgb-to-hex-converter",
+    "isActive": true,
+    "searchVolume": 85000,
+    "difficulty": 1,
+    "icon": "🎨"
+  },
+  {
+    "id": "color-picker-tool",
+    "name": "颜色选择器工具",
+    "description": "具有HSL和RGB调色板生成功能的交互式颜色选择器工具。专业颜色选择器，配备HSL控制、颜色历史记录和调色板导出功能。",
+    "category": "color",
+    "keywords": [
+      "颜色",
+      "选择器",
+      "hsl",
+      "调色板",
+      "设计",
+      "网页",
+      "css",
+      "工具"
+    ],
+    "path": "/zh/color/color-picker-tool",
+    "isActive": true,
+    "searchVolume": 78000,
+    "difficulty": 2,
+    "icon": "🌈"
+  },
+  {
+    "id": "hex-to-rgb-converter",
+    "name": "HEX转RGB转换器",
+    "description": "为CSS和网页开发即时将HEX颜色代码转换为RGB值。精确的HEX转RGB转换器，具有颜色预览和验证功能，确保精确的颜色匹配。",
+    "category": "color",
+    "keywords": [
+      "hex",
+      "rgb",
+      "颜色",
+      "转换器",
+      "css",
+      "设计",
+      "hex转rgb",
+      "颜色代码转换器"
+    ],
+    "path": "/zh/color/hex-to-rgb-converter",
+    "isActive": true,
+    "searchVolume": 67000,
+    "difficulty": 1,
+    "icon": "🎨"
+  },
+  {
+    "id": "color-palette-generator",
+    "name": "调色板生成器",
+    "description": "为设计项目生成和谐的调色板和专业配色方案。先进的调色板生成器，具有多种和谐规则和导出选项。",
+    "category": "color",
+    "keywords": [
+      "颜色",
+      "调色板",
+      "生成器",
+      "配色",
+      "设计",
+      "颜色",
+      "和谐"
+    ],
+    "path": "/zh/color/color-palette-generator",
+    "isActive": true,
+    "searchVolume": 45000,
+    "difficulty": 2,
+    "icon": "🎨"
+  },
+  {
+    "id": "contrast-checker",
+    "name": "颜色对比度检查器",
+    "description": "根据WCAG AA/AAA无障碍标准检查颜色对比度比率。专业对比度检查器，确保网页无障碍合规性，提供详细比率分析。",
+    "category": "color",
+    "keywords": [
+      "对比度",
+      "无障碍",
+      "wcag",
+      "颜色",
+      "检查器",
+      "比率"
+    ],
+    "path": "/zh/color/contrast-checker",
+    "isActive": false,
+    "searchVolume": 35000,
+    "difficulty": 2,
+    "icon": "⚖️"
+  },
+  {
+    "id": "gradient-generator",
+    "name": "CSS渐变生成器",
+    "description": "为现代网页设计生成具有线性和径向选项的CSS渐变。专业渐变生成器，具有实时预览、自定义停止点和即用CSS代码。",
+    "category": "color",
+    "keywords": [
+      "渐变",
+      "css",
+      "生成器",
+      "线性",
+      "径向",
+      "背景"
+    ],
+    "path": "/zh/color/gradient-generator",
+    "isActive": false,
+    "searchVolume": 28000,
+    "difficulty": 3,
+    "icon": "🌈"
+  },
+  {
+    "id": "hex-to-hsl-converter",
+    "name": "HEX转HSL转换器",
+    "description": "将HEX颜色代码转换为HSL值，用于高级颜色操作。精确的HEX转HSL转换器，具有颜色预览和HSL色彩空间分析。",
+    "category": "color",
+    "keywords": [
+      "hex",
+      "hsl",
+      "颜色",
+      "转换器",
+      "css",
+      "设计"
+    ],
+    "path": "/zh/color/hex-to-hsl-converter",
+    "isActive": false,
+    "searchVolume": 22000,
+    "difficulty": 1,
+    "icon": "🎨"
+  },
+  {
+    "id": "currency-converter",
+    "name": "货币转换器",
+    "description": "实时汇率的全球货币转换器，支持180+种货币。专业外汇转换器，具有历史汇率图表和汇率提醒功能。",
+    "category": "finance",
+    "keywords": [
+      "货币",
+      "转换器",
+      "汇率",
+      "外汇",
+      "美元",
+      "欧元",
+      "人民币",
+      "日元"
+    ],
+    "path": "/zh/finance/currency-converter",
+    "isActive": true,
+    "searchVolume": 2450000,
+    "difficulty": 1,
+    "icon": "💱"
+  },
+  {
+    "id": "loan-calculator",
+    "name": "贷款计算器",
+    "description": "计算贷款月供、利息和还款计划的综合贷款计算器。专业贷款分析工具，支持不同贷款类型和还款方式。",
+    "category": "finance",
+    "keywords": [
+      "贷款",
+      "计算器",
+      "月供",
+      "利息",
+      "还款",
+      "房贷",
+      "车贷",
+      "个人贷款"
+    ],
+    "path": "/zh/finance/loan-calculator",
+    "isActive": true,
+    "searchVolume": 890000,
+    "difficulty": 1,
+    "icon": "🏦"
+  },
+  {
+    "id": "mortgage-calculator",
+    "name": "房贷计算器",
+    "description": "计算房贷月供、总利息和还款计划的专业房贷计算器。包含首付、利率和贷款期限分析工具。",
+    "category": "finance",
+    "keywords": [
+      "房贷",
+      "计算器",
+      "月供",
+      "利息",
+      "首付",
+      "房屋贷款",
+      "按揭"
+    ],
+    "path": "/zh/finance/mortgage-calculator",
+    "isActive": true,
+    "searchVolume": 1230000,
+    "difficulty": 1,
+    "icon": "🏠"
+  },
+  {
+    "id": "compound-interest-calculator",
+    "name": "复利计算器",
+    "description": "计算复利投资收益和财富增长的专业复利计算器。包含定期投资和复利效应分析工具。",
+    "category": "finance",
+    "keywords": [
+      "复利",
+      "计算器",
+      "投资",
+      "收益",
+      "财富增长",
+      "定投",
+      "理财"
+    ],
+    "path": "/zh/finance/compound-interest-calculator",
+    "isActive": true,
+    "searchVolume": 456000,
+    "difficulty": 2,
+    "icon": "📈"
+  },
+  {
+    "id": "savings-calculator",
+    "name": "储蓄计算器",
+    "description": "计算储蓄目标和定期存款收益的储蓄计算器。专业储蓄规划工具，帮助制定储蓄计划和目标。",
+    "category": "finance",
+    "keywords": [
+      "储蓄",
+      "计算器",
+      "存款",
+      "收益",
+      "储蓄目标",
+      "定期存款",
+      "理财规划"
+    ],
+    "path": "/zh/finance/savings-calculator",
+    "isActive": true,
+    "searchVolume": 234000,
+    "difficulty": 1,
+    "icon": "💰"
+  },
+  {
+    "id": "tax-calculator",
+    "name": "税务计算器",
+    "description": "计算个人所得税和税务规划的综合税务计算器。专业税务分析工具，支持不同税率和扣除项目。",
+    "category": "finance",
+    "keywords": [
+      "税务",
+      "计算器",
+      "个人所得税",
+      "税率",
+      "扣除",
+      "纳税",
+      "税务规划"
+    ],
+    "path": "/zh/finance/tax-calculator",
+    "isActive": true,
+    "searchVolume": 567000,
+    "difficulty": 2,
+    "icon": "🧾"
+  },
+  {
+    "id": "investment-calculator",
+    "name": "投资计算器",
+    "description": "计算投资收益和风险分析的专业投资计算器。包含股票、基金和债券投资分析工具。",
+    "category": "finance",
+    "keywords": [
+      "投资",
+      "计算器",
+      "收益",
+      "风险",
+      "股票",
+      "基金",
+      "债券",
+      "投资组合"
+    ],
+    "path": "/zh/finance/investment-calculator",
+    "isActive": true,
+    "searchVolume": 345000,
+    "difficulty": 2,
+    "icon": "📊"
+  },
+  {
+    "id": "retirement-calculator",
+    "name": "退休计算器",
+    "description": "计算退休储蓄需求和养老金规划的退休计算器。专业退休规划工具，帮助制定养老储蓄计划。",
+    "category": "finance",
+    "keywords": [
+      "退休",
+      "计算器",
+      "养老",
+      "储蓄",
+      "退休规划",
+      "养老金",
+      "退休基金"
+    ],
+    "path": "/zh/finance/retirement-calculator",
+    "isActive": true,
+    "searchVolume": 289000,
+    "difficulty": 2,
+    "icon": "👴"
+  },
+  {
+    "id": "budget-calculator",
+    "name": "预算计算器",
+    "description": "制定个人和家庭预算计划的预算计算器。专业预算管理工具，帮助控制支出和储蓄规划。",
+    "category": "finance",
+    "keywords": [
+      "预算",
+      "计算器",
+      "支出",
+      "收入",
+      "预算规划",
+      "家庭预算",
+      "理财"
+    ],
+    "path": "/zh/finance/budget-calculator",
+    "isActive": true,
+    "searchVolume": 178000,
+    "difficulty": 1,
+    "icon": "📋"
+  },
+  {
+    "id": "debt-payoff-calculator",
+    "name": "债务还清计算器",
+    "description": "计算债务还清时间和策略的债务管理计算器。专业债务分析工具，优化还款计划和利息节省。",
+    "category": "finance",
+    "keywords": [
+      "债务",
+      "还清",
+      "计算器",
+      "还款",
+      "债务管理",
+      "利息",
+      "债务规划"
+    ],
+    "path": "/zh/finance/debt-payoff-calculator",
+    "isActive": true,
+    "searchVolume": 156000,
+    "difficulty": 2,
+    "icon": "💳"
+  },
+  {
+    "id": "credit-card-calculator",
+    "name": "信用卡计算器",
+    "description": "计算信用卡还款和利息的信用卡计算器。专业信用卡分析工具，优化还款策略和利息管理。",
+    "category": "finance",
+    "keywords": [
+      "信用卡",
+      "计算器",
+      "还款",
+      "利息",
+      "最低还款",
+      "信用卡债务",
+      "年费"
+    ],
+    "path": "/zh/finance/credit-card-calculator",
+    "isActive": true,
+    "searchVolume": 234000,
+    "difficulty": 1,
+    "icon": "💳"
+  },
+  {
+    "id": "auto-loan-calculator",
+    "name": "汽车贷款计算器",
+    "description": "计算汽车贷款月供和总成本的汽车贷款计算器。专业汽车金融工具，包含首付和贷款期限分析。",
+    "category": "finance",
+    "keywords": [
+      "汽车贷款",
+      "车贷",
+      "计算器",
+      "月供",
+      "首付",
+      "汽车金融",
+      "车辆贷款"
+    ],
+    "path": "/zh/finance/auto-loan-calculator",
+    "isActive": true,
+    "searchVolume": 345000,
+    "difficulty": 1,
+    "icon": "🚗"
+  },
+  {
+    "id": "home-affordability-calculator",
+    "name": "购房能力计算器",
+    "description": "评估购房能力和房价承受范围的购房计算器。专业房产分析工具，基于收入和债务评估购房预算。",
+    "category": "finance",
+    "keywords": [
+      "购房",
+      "能力",
+      "计算器",
+      "房价",
+      "预算",
+      "收入",
+      "房产投资"
+    ],
+    "path": "/zh/finance/home-affordability-calculator",
+    "isActive": true,
+    "searchVolume": 189000,
+    "difficulty": 2,
+    "icon": "🏡"
+  },
+  {
+    "id": "roi-calculator",
+    "name": "投资回报率计算器",
+    "description": "计算投资回报率和盈利能力的ROI计算器。专业投资分析工具，评估投资项目的收益性和风险。",
+    "category": "finance",
+    "keywords": [
+      "roi",
+      "投资回报率",
+      "计算器",
+      "收益",
+      "盈利",
+      "投资分析",
+      "回报"
+    ],
+    "path": "/zh/finance/roi-calculator",
+    "isActive": true,
+    "searchVolume": 123000,
+    "difficulty": 2,
+    "icon": "📈"
+  },
+  {
+    "id": "break-even-calculator",
+    "name": "盈亏平衡计算器",
+    "description": "计算盈亏平衡点和成本分析的商业计算器。专业商业分析工具，评估产品和服务的盈利能力。",
+    "category": "finance",
+    "keywords": [
+      "盈亏平衡",
+      "计算器",
+      "成本",
+      "收入",
+      "利润",
+      "商业分析",
+      "盈利点"
+    ],
+    "path": "/zh/finance/break-even-calculator",
+    "isActive": true,
+    "searchVolume": 89000,
+    "difficulty": 2,
+    "icon": "⚖️"
+  },
+  {
+    "id": "net-worth-calculator",
+    "name": "净资产计算器",
+    "description": "计算个人净资产和财务状况的净资产计算器。专业财务分析工具，评估资产负债和财富积累。",
+    "category": "finance",
+    "keywords": [
+      "净资产",
+      "计算器",
+      "资产",
+      "负债",
+      "财务状况",
+      "财富",
+      "资产负债表"
+    ],
+    "path": "/zh/finance/net-worth-calculator",
+    "isActive": true,
+    "searchVolume": 67000,
+    "difficulty": 1,
+    "icon": "💎"
+  },
+  {
+    "id": "cash-flow-calculator",
+    "name": "现金流计算器",
+    "description": "分析现金流入流出和资金管理的现金流计算器。专业财务管理工具，优化资金配置和流动性。",
+    "category": "finance",
+    "keywords": [
+      "现金流",
+      "计算器",
+      "资金",
+      "流入",
+      "流出",
+      "财务管理",
+      "流动性"
+    ],
+    "path": "/zh/finance/cash-flow-calculator",
+    "isActive": true,
+    "searchVolume": 78000,
+    "difficulty": 2,
+    "icon": "💰"
+  },
+  {
+    "id": "profit-margin-calculator",
+    "name": "利润率计算器",
+    "description": "计算利润率和盈利能力的商业计算器。专业商业分析工具，评估产品和服务的利润水平。",
+    "category": "finance",
+    "keywords": [
+      "利润率",
+      "计算器",
+      "利润",
+      "成本",
+      "收入",
+      "盈利",
+      "商业分析"
+    ],
+    "path": "/zh/finance/profit-margin-calculator",
+    "isActive": true,
+    "searchVolume": 95000,
+    "difficulty": 1,
+    "icon": "📊"
+  },
+  {
+    "id": "discount-calculator",
+    "name": "折扣计算器",
+    "description": "计算折扣价格和节省金额的折扣计算器。实用购物工具，帮助计算促销价格和优惠幅度。",
+    "category": "finance",
+    "keywords": [
+      "折扣",
+      "计算器",
+      "优惠",
+      "价格",
+      "节省",
+      "促销",
+      "购物"
+    ],
+    "path": "/zh/finance/discount-calculator",
+    "isActive": false,
+    "searchVolume": 145000,
+    "difficulty": 1,
+    "icon": "🏷️"
+  },
+  {
+    "id": "tip-calculator",
+    "name": "小费计算器",
+    "description": "计算餐厅小费和账单分摊的小费计算器。实用餐饮工具，支持不同小费比例和人数分摊计算。",
+    "category": "finance",
+    "keywords": [
+      "小费",
+      "计算器",
+      "餐厅",
+      "账单",
+      "分摊",
+      "服务费",
+      "用餐"
+    ],
+    "path": "/zh/finance/tip-calculator",
+    "isActive": false,
+    "searchVolume": 234000,
+    "difficulty": 1,
+    "icon": "🧾"
+  },
+  {
+    "id": "sales-tax-calculator",
+    "name": "销售税计算器",
+    "description": "计算不同州和国家的销售税和增值税。精确的税务计算器，具有当前税率和购物总成本分析。",
+    "category": "finance",
+    "keywords": [
+      "销售税",
+      "增值税",
+      "税务计算器",
+      "购买",
+      "州税"
+    ],
+    "path": "/zh/finance/sales-tax-calculator",
+    "isActive": false,
+    "searchVolume": 145000,
+    "difficulty": 1,
+    "icon": "🏪"
+  },
+  {
+    "id": "inflation-calculator",
+    "name": "通胀计算器",
+    "description": "计算通胀对购买力和货币价值的影响。历史通胀计算器，具有CPI数据，用于经济分析和财务规划。",
+    "category": "finance",
+    "keywords": [
+      "通胀",
+      "购买力",
+      "货币价值",
+      "计算器",
+      "cpi"
+    ],
+    "path": "/zh/finance/inflation-calculator",
+    "isActive": false,
+    "searchVolume": 98000,
+    "difficulty": 2,
+    "icon": "📉"
+  },
+  {
+    "id": "present-value-calculator",
+    "name": "现值计算器",
+    "description": "计算未来现金流的现值，进行NPV分析以做投资决策。专业财务计算器，具有贴现率和现金流预测。",
+    "category": "finance",
+    "keywords": [
+      "现值",
+      "npv",
+      "贴现率",
+      "现金流",
+      "计算器"
+    ],
+    "path": "/zh/finance/present-value-calculator",
+    "isActive": false,
+    "searchVolume": 56000,
+    "difficulty": 3,
+    "icon": "💰"
+  },
+  {
+    "id": "future-value-calculator",
+    "name": "未来价值计算器",
+    "description": "计算投资的未来价值和复利增长预测。高级投资计算器，用于长期财务规划和财富建设。",
+    "category": "finance",
+    "keywords": [
+      "未来价值",
+      "投资",
+      "复利",
+      "增长",
+      "计算器"
+    ],
+    "path": "/zh/finance/future-value-calculator",
+    "isActive": false,
+    "searchVolume": 67000,
+    "difficulty": 2,
+    "icon": "🔮"
+  },
+  {
+    "id": "annuity-calculator",
+    "name": "年金计算器",
+    "description": "计算年金支付和现值，用于退休收入规划。专业年金计算器，具有支付计划和退休分析工具。",
+    "category": "finance",
+    "keywords": [
+      "年金",
+      "支付",
+      "现值",
+      "退休",
+      "计算器"
+    ],
+    "path": "/zh/finance/annuity-calculator",
+    "isActive": false,
+    "searchVolume": 45000,
+    "difficulty": 3,
+    "icon": "📅"
+  },
+  {
+    "id": "bond-calculator",
+    "name": "债券计算器",
+    "description": "计算债券收益率、价格和久期，用于固定收益投资分析。专业债券计算器，具有到期收益率和利率敏感性。",
+    "category": "finance",
+    "keywords": [
+      "债券",
+      "收益率",
+      "价格",
+      "久期",
+      "固定收益",
+      "计算器"
+    ],
+    "path": "/zh/finance/bond-calculator",
+    "isActive": false,
+    "searchVolume": 38000,
+    "difficulty": 3,
+    "icon": "📜"
+  },
+  {
+    "id": "dividend-calculator",
+    "name": "股息计算器",
+    "description": "计算股息收益率和股票股息增长，用于投资收入分析。专业股息计算器，具有再投资选项和收益率预测。",
+    "category": "finance",
+    "keywords": [
+      "股息",
+      "收益率",
+      "增长",
+      "股票",
+      "回报",
+      "计算器"
+    ],
+    "path": "/zh/finance/dividend-calculator",
+    "isActive": false,
+    "searchVolume": 52000,
+    "difficulty": 2,
+    "icon": "💰"
+  },
+  {
+    "id": "stock-calculator",
+    "name": "股票计算器",
+    "description": "计算股票回报、利润和损失，用于股权投资绩效分析。综合股票计算器，具有资本收益和股息跟踪。",
+    "category": "finance",
+    "keywords": [
+      "股票",
+      "回报",
+      "利润",
+      "损失",
+      "投资",
+      "计算器"
+    ],
+    "path": "/zh/finance/stock-calculator",
+    "isActive": false,
+    "searchVolume": 89000,
+    "difficulty": 2,
+    "icon": "📈"
+  },
+  {
+    "id": "paycheck-calculator",
+    "name": "工资计算器",
+    "description": "计算税后实得工资，用于准确的工资规划和预算。专业工资计算器，具有联邦、州和地方税扣缴分析。",
+    "category": "finance",
+    "keywords": [
+      "工资",
+      "实得工资",
+      "税收",
+      "扣除",
+      "计算器"
+    ],
+    "path": "/zh/finance/paycheck-calculator",
+    "isActive": false,
+    "searchVolume": 234000,
+    "difficulty": 2,
+    "icon": "💰"
+  },
+  {
+    "id": "hourly-to-salary-calculator",
+    "name": "时薪转年薪计算器",
+    "description": "将时薪转换为年薪并比较薪酬方案，用于职业规划。专业工资计算器，具有福利分析和总薪酬比较工具。",
+    "category": "finance",
+    "keywords": [
+      "时薪",
+      "年薪",
+      "工资",
+      "年度",
+      "转换",
+      "计算器"
+    ],
+    "path": "/zh/finance/hourly-to-salary-calculator",
+    "isActive": false,
+    "searchVolume": 167000,
+    "difficulty": 1,
+    "icon": "⏰"
+  },
+  {
+    "id": "options-calculator",
+    "name": "期权计算器",
+    "description": "计算期权定价、希腊字母和盈亏，用于衍生品交易分析。高级期权计算器，具有Black-Scholes模型和风险评估工具。",
+    "category": "finance",
+    "keywords": [
+      "期权",
+      "定价",
+      "希腊字母",
+      "利润",
+      "损失",
+      "计算器"
+    ],
+    "path": "/zh/finance/options-calculator",
+    "isActive": false,
+    "searchVolume": 34000,
+    "difficulty": 4,
+    "icon": "📊"
+  },
+  {
+    "id": "forex-calculator",
+    "name": "外汇计算器",
+    "description": "计算外汇点值和仓位大小，用于货币交易策略。专业外汇计算器，具有盈亏分析和风险管理工具。",
+    "category": "finance",
+    "keywords": [
+      "外汇",
+      "点值",
+      "仓位大小",
+      "利润",
+      "损失",
+      "计算器"
+    ],
+    "path": "/zh/finance/forex-calculator",
+    "isActive": false,
+    "searchVolume": 67000,
+    "difficulty": 3,
+    "icon": "💱"
+  },
+  {
+    "id": "crypto-calculator",
+    "name": "加密货币计算器",
+    "description": "计算加密货币回报，具有DCA策略和投资组合分析工具。高级加密货币计算器，用于数字资产投资跟踪和绩效评估。",
+    "category": "finance",
+    "keywords": [
+      "加密货币",
+      "数字货币",
+      "回报",
+      "定投",
+      "投资组合",
+      "计算器"
+    ],
+    "path": "/zh/finance/crypto-calculator",
+    "isActive": false,
+    "searchVolume": 145000,
+    "difficulty": 2,
+    "icon": "₿"
+  },
+  {
+    "id": "ethereum-calculator",
+    "name": "以太坊计算器",
+    "description": "计算以太坊投资回报和ETH质押奖励，用于加密货币投资组合管理。专业以太坊计算器，具有收益分析和质押预测。",
+    "category": "finance",
+    "keywords": [
+      "以太坊",
+      "eth",
+      "投资",
+      "质押",
+      "奖励",
+      "计算器"
+    ],
+    "path": "/zh/finance/ethereum-calculator",
+    "isActive": false,
+    "searchVolume": 78000,
+    "difficulty": 2,
+    "icon": "⟠"
+  },
+  {
+    "id": "refinance-calculator",
+    "name": "再融资计算器",
+    "description": "计算房贷再融资收益和盈亏平衡分析。专业再融资计算器，具有过户费和还款比较工具。",
+    "category": "finance",
+    "keywords": [
+      "再融资",
+      "节省",
+      "盈亏平衡",
+      "房贷",
+      "计算器"
+    ],
+    "path": "/zh/finance/refinance-calculator",
+    "isActive": false,
+    "searchVolume": 125000,
+    "difficulty": 2,
+    "icon": "🏠"
+  },
+  {
+    "id": "rent-vs-buy-calculator",
+    "name": "租房vs买房计算器",
+    "description": "比较租房与买房成本，用于房屋所有权决策的综合财务分析。专业房地产计算器，具有总成本比较和盈亏平衡分析。",
+    "category": "finance",
+    "keywords": [
+      "租房",
+      "买房",
+      "房屋",
+      "比较",
+      "房地产",
+      "计算器"
+    ],
+    "path": "/zh/finance/rent-vs-buy-calculator",
+    "isActive": false,
+    "searchVolume": 89000,
+    "difficulty": 2,
+    "icon": "🏘️"
+  },
+  {
+    "id": "property-tax-calculator",
+    "name": "房产税计算器",
+    "description": "基于评估价值和当地税率计算房产税，用于房地产规划。精确的房产税计算器，具有免税和评估分析工具。",
+    "category": "finance",
+    "keywords": [
+      "房产税",
+      "房地产",
+      "评估价值",
+      "税率",
+      "计算器"
+    ],
+    "path": "/zh/finance/property-tax-calculator",
+    "isActive": false,
+    "searchVolume": 156000,
+    "difficulty": 2,
+    "icon": "🏛️"
+  },
+  {
+    "id": "capital-gains-calculator",
+    "name": "资本利得税计算器",
+    "description": "计算投资和房产销售的资本利得税，具有税务优化策略。专业税务计算器，具有短期和长期资本利得分析。",
+    "category": "finance",
+    "keywords": [
+      "资本利得",
+      "税收",
+      "投资",
+      "房产",
+      "销售",
+      "计算器"
+    ],
+    "path": "/zh/finance/capital-gains-calculator",
+    "isActive": false,
+    "searchVolume": 134000,
+    "difficulty": 3,
+    "icon": "📈"
+  },
+  {
+    "id": "business-loan-calculator",
+    "name": "商业贷款计算器",
+    "description": "计算商业贷款还款和利息成本，用于小企业融资决策。专业商业计算器，具有还款计划和贷款比较工具。",
+    "category": "finance",
+    "keywords": [
+      "商业贷款",
+      "还款",
+      "利息",
+      "小企业",
+      "计算器"
+    ],
+    "path": "/zh/finance/business-loan-calculator",
+    "isActive": false,
+    "searchVolume": 67000,
+    "difficulty": 2,
+    "icon": "🏢"
+  },
+  {
+    "id": "sba-loan-calculator",
+    "name": "SBA贷款计算器",
+    "description": "计算SBA贷款还款和资格要求，用于小企业管理局融资。专业SBA计算器，具有项目分析和还款预测。",
+    "category": "finance",
+    "keywords": [
+      "sba贷款",
+      "小企业",
+      "还款",
+      "资格",
+      "计算器"
+    ],
+    "path": "/zh/finance/sba-loan-calculator",
+    "isActive": false,
+    "searchVolume": 34000,
+    "difficulty": 3,
+    "icon": "🏛️"
+  },
+  {
+    "id": "personal-loan-calculator",
+    "name": "个人贷款计算器",
+    "description": "计算个人贷款还款并比较利率，满足个人融资需求。综合个人贷款计算器，具有APR比较和还款计划工具。",
+    "category": "finance",
+    "keywords": [
+      "个人贷款",
+      "还款",
+      "利率",
+      "比较",
+      "计算器"
+    ],
+    "path": "/zh/finance/personal-loan-calculator",
+    "isActive": false,
+    "searchVolume": 189000,
+    "difficulty": 1,
+    "icon": "💳"
+  },
+  {
+    "id": "student-loan-calculator",
+    "name": "学生贷款计算器",
+    "description": "计算学生贷款还款和还款选项，用于教育融资规划。专业教育贷款计算器，具有宽恕计划和还款策略。",
+    "category": "finance",
+    "keywords": [
+      "学生贷款",
+      "还款",
+      "偿还",
+      "教育",
+      "计算器"
+    ],
+    "path": "/zh/finance/student-loan-calculator",
+    "isActive": false,
+    "searchVolume": 167000,
+    "difficulty": 2,
+    "icon": "🎓"
+  },
+  {
+    "id": "heloc-calculator",
+    "name": "房屋净值信贷额度计算器",
+    "description": "计算HELOC还款和可用信贷，用于房屋净值信贷额度规划。专业HELOC计算器，具有提取期和还款期分析。",
+    "category": "finance",
+    "keywords": [
+      "heloc",
+      "房屋净值",
+      "信贷额度",
+      "还款",
+      "计算器"
+    ],
+    "path": "/zh/finance/heloc-calculator",
+    "isActive": false,
+    "searchVolume": 78000,
+    "difficulty": 2,
+    "icon": "🏠"
+  },
+  {
+    "id": "home-equity-calculator",
+    "name": "房屋净值计算器",
+    "description": "计算可用房屋净值和贷款价值比，用于房屋净值融资决策。专业净值计算器，具有当前市值和房贷余额分析。",
+    "category": "finance",
+    "keywords": [
+      "房屋净值",
+      "贷款",
+      "可用净值",
+      "ltv",
+      "计算器"
+    ],
+    "path": "/zh/finance/home-equity-calculator",
+    "isActive": false,
+    "searchVolume": 95000,
+    "difficulty": 2,
+    "icon": "🏡"
+  },
+  {
+    "id": "cd-calculator",
+    "name": "定期存款计算器",
+    "description": "计算定期存款回报和到期价值，用于固定期限储蓄规划。专业CD计算器，具有复利和罚金分析工具。",
+    "category": "finance",
+    "keywords": [
+      "定期存款",
+      "存款证明",
+      "回报",
+      "到期",
+      "计算器"
+    ],
+    "path": "/zh/finance/cd-calculator",
+    "isActive": false,
+    "searchVolume": 67000,
+    "difficulty": 1,
+    "icon": "💿"
+  },
+  {
+    "id": "ira-calculator",
+    "name": "IRA计算器",
+    "description": "计算传统IRA缴费和退休储蓄增长，用于延税规划。专业IRA计算器，具有缴费限额和提取策略。",
+    "category": "finance",
+    "keywords": [
+      "ira",
+      "退休",
+      "缴费",
+      "储蓄",
+      "增长",
+      "计算器"
+    ],
+    "path": "/zh/finance/ira-calculator",
+    "isActive": false,
+    "searchVolume": 89000,
+    "difficulty": 2,
+    "icon": "🏛️"
+  },
+  {
+    "id": "roth-ira-calculator",
+    "name": "罗斯IRA计算器",
+    "description": "计算罗斯IRA缴费和免税退休增长，用于长期财富建设。高级罗斯计算器，具有转换分析和免税提取预测。",
+    "category": "finance",
+    "keywords": [
+      "罗斯ira",
+      "退休",
+      "免税",
+      "缴费",
+      "计算器"
+    ],
+    "path": "/zh/finance/roth-ira-calculator",
+    "isActive": false,
+    "searchVolume": 78000,
+    "difficulty": 2,
+    "icon": "🏛️"
+  },
+  {
+    "id": "pension-calculator",
+    "name": "养老金计算器",
+    "description": "计算养老金福利和确定福利计划的退休收入，用于退休规划。专业养老金计算器，具有年金选项和福利预测。",
+    "category": "finance",
+    "keywords": [
+      "养老金",
+      "福利",
+      "退休收入",
+      "年金",
+      "计算器"
+    ],
+    "path": "/zh/finance/pension-calculator",
+    "isActive": false,
+    "searchVolume": 56000,
+    "difficulty": 3,
+    "icon": "👴"
+  },
+  {
+    "id": "social-security-calculator",
+    "name": "社会保障计算器",
+    "description": "计算社会保障福利并优化申领策略，获得最大退休收入。专业福利计算器，具有完全退休年龄和配偶福利分析。",
+    "category": "finance",
+    "keywords": [
+      "社会保障",
+      "福利",
+      "申领策略",
+      "退休",
+      "计算器"
+    ],
+    "path": "/zh/finance/social-security-calculator",
+    "isActive": false,
+    "searchVolume": 145000,
+    "difficulty": 3,
+    "icon": "🏛️"
+  },
+  {
+    "id": "fire-calculator",
+    "name": "FIRE计算器",
+    "description": "计算FIRE（财务独立提前退休）时间表和储蓄要求，用于提前退休规划。高级FIRE计算器，具有提取率和投资组合分析。",
+    "category": "finance",
+    "keywords": [
+      "fire",
+      "财务独立",
+      "提前退休",
+      "储蓄",
+      "计算器"
+    ],
+    "path": "/zh/finance/fire-calculator",
+    "isActive": false,
+    "searchVolume": 67000,
+    "difficulty": 2,
+    "icon": "🔥"
+  },
+  {
+    "id": "emergency-fund-calculator",
+    "name": "应急基金计算器",
+    "description": "基于月支出计算应急基金需求，用于财务安全规划。专业应急基金计算器，具有储蓄目标和时间表分析。",
+    "category": "finance",
+    "keywords": [
+      "应急基金",
+      "支出",
+      "储蓄",
+      "财务安全",
+      "计算器"
+    ],
+    "path": "/zh/finance/emergency-fund-calculator",
+    "isActive": false,
+    "searchVolume": 45000,
+    "difficulty": 1,
+    "icon": "🚨"
+  },
+  {
+    "id": "debt-to-income-calculator",
+    "name": "债务收入比计算器",
+    "description": "计算债务收入比，用于贷款资格和财务健康评估。专业DTI计算器，具有房贷和信贷审批分析工具。",
+    "category": "finance",
+    "keywords": [
+      "债务收入比",
+      "dti",
+      "比率",
+      "贷款资格",
+      "计算器"
+    ],
+    "path": "/zh/finance/debt-to-income-calculator",
+    "isActive": false,
+    "searchVolume": 89000,
+    "difficulty": 1,
+    "icon": "📉"
+  },
+  {
+    "id": "loan-to-value-calculator",
+    "name": "贷款价值比计算器",
+    "description": "计算房贷和再融资资格分析的贷款价值比。专业LTV计算器，具有净值评估和放贷要求工具。",
+    "category": "finance",
+    "keywords": [
+      "贷款价值比",
+      "ltv",
+      "比率",
+      "房贷",
+      "再融资",
+      "计算器"
+    ],
+    "path": "/zh/finance/loan-to-value-calculator",
+    "isActive": false,
+    "searchVolume": 67000,
+    "difficulty": 2,
+    "icon": "🏠"
+  },
+  {
+    "id": "apr-calculator",
+    "name": "年利率计算器",
+    "description": "计算包含费用和成本的年利率，用于真实贷款成本分析。专业APR计算器，具有综合放贷成本比较工具。",
+    "category": "finance",
+    "keywords": [
+      "年利率",
+      "apr",
+      "费用",
+      "成本",
+      "计算器"
+    ],
+    "path": "/zh/finance/apr-calculator",
+    "isActive": false,
+    "searchVolume": 56000,
+    "difficulty": 2,
+    "icon": "📈"
+  },
+  {
+    "id": "effective-interest-rate-calculator",
+    "name": "实际利率计算器",
+    "description": "计算带复利频率的实际利率，用于准确投资分析。高级利率计算器，具有年等价利率和收益比较工具。",
+    "category": "finance",
+    "keywords": [
+      "实际利率",
+      "年利率",
+      "复利",
+      "计算器"
+    ],
+    "path": "/zh/finance/effective-interest-rate-calculator",
+    "isActive": false,
+    "searchVolume": 34000,
+    "difficulty": 3,
+    "icon": "📊"
+  },
+  {
+    "id": "amortization-calculator",
+    "name": "摊销计算器",
+    "description": "计算贷款摊销计划，包含本金和利息明细，用于还款规划。专业摊销计算器，具有额外还款和提前还清分析。",
+    "category": "finance",
+    "keywords": [
+      "摊销",
+      "计划",
+      "本金",
+      "利息",
+      "贷款",
+      "计算器"
+    ],
+    "path": "/zh/finance/amortization-calculator",
+    "isActive": false,
+    "searchVolume": 95000,
+    "difficulty": 2,
+    "icon": "📋"
+  },
+  {
+    "id": "balloon-payment-calculator",
+    "name": "气球贷款计算器",
+    "description": "计算气球贷款还款和最终气球还款，用于特殊融资分析。专业气球计算器，具有还款结构和再融资选项。",
+    "category": "finance",
+    "keywords": [
+      "气球还款",
+      "贷款",
+      "最终还款",
+      "计算器"
+    ],
+    "path": "/zh/finance/balloon-payment-calculator",
+    "isActive": false,
+    "searchVolume": 23000,
+    "difficulty": 3,
+    "icon": "🎈"
+  },
+  {
+    "id": "lease-calculator",
+    "name": "租赁计算器",
+    "description": "计算汽车租赁还款和条款，用于车辆租赁决策和成本分析。专业租赁计算器，具有残值和资金因子计算。",
+    "category": "finance",
+    "keywords": [
+      "租赁",
+      "汽车租赁",
+      "还款",
+      "租赁vs购买",
+      "计算器"
+    ],
+    "path": "/zh/finance/lease-calculator",
+    "isActive": false,
+    "searchVolume": 134000,
+    "difficulty": 2,
+    "icon": "🚗"
+  },
+  {
+    "id": "lease-vs-buy-calculator",
+    "name": "租赁vs购买计算器",
+    "description": "比较车辆融资决策的租赁vs购买成本，包含总成本分析。专业汽车计算器，具有折旧和拥有成本比较。",
+    "category": "finance",
+    "keywords": [
+      "租赁vs购买",
+      "汽车",
+      "比较",
+      "成本",
+      "计算器"
+    ],
+    "path": "/zh/finance/lease-vs-buy-calculator",
+    "isActive": false,
+    "searchVolume": 67000,
+    "difficulty": 2,
+    "icon": "🚙"
+  },
+  {
+    "id": "car-depreciation-calculator",
+    "name": "汽车折旧计算器",
+    "description": "计算汽车折旧和未来车辆价值，用于转售和保险规划。专业折旧计算器，具有市值和年龄分析。",
+    "category": "finance",
+    "keywords": [
+      "汽车折旧",
+      "车辆",
+      "未来价值",
+      "转售",
+      "计算器"
+    ],
+    "path": "/zh/finance/car-depreciation-calculator",
+    "isActive": false,
+    "searchVolume": 45000,
+    "difficulty": 2,
+    "icon": "📉"
+  },
+  {
+    "id": "insurance-calculator",
+    "name": "保险计算器",
+    "description": "计算保险覆盖需求和保费成本，用于综合保护规划。专业保险计算器，具有覆盖分析和成本比较工具。",
+    "category": "finance",
+    "keywords": [
+      "保险",
+      "覆盖",
+      "需求",
+      "人寿保险",
+      "计算器"
+    ],
+    "path": "/zh/finance/insurance-calculator",
+    "isActive": false,
+    "searchVolume": 89000,
+    "difficulty": 2,
+    "icon": "🛡️"
+  },
+  {
+    "id": "life-insurance-calculator",
+    "name": "人寿保险计算器",
+    "description": "计算人寿保险覆盖需求和保费成本，用于家庭财务保护。专业人寿保险计算器，具有收入替代和债务覆盖分析。",
+    "category": "finance",
+    "keywords": [
+      "人寿保险",
+      "覆盖",
+      "需求",
+      "保费",
+      "计算器"
+    ],
+    "path": "/zh/finance/life-insurance-calculator",
+    "isActive": false,
+    "searchVolume": 123000,
+    "difficulty": 2,
+    "icon": "👨‍👩‍👧‍👦"
+  },
+  {
+    "id": "disability-insurance-calculator",
+    "name": "残疾保险计算器",
+    "description": "计算残疾保险福利和覆盖需求，用于收入保护规划。专业残疾计算器，具有福利分析和保费成本评估。",
+    "category": "finance",
+    "keywords": [
+      "残疾保险",
+      "福利",
+      "需求",
+      "收入保护",
+      "计算器"
+    ],
+    "path": "/zh/finance/disability-insurance-calculator",
+    "isActive": false,
+    "searchVolume": 34000,
+    "difficulty": 2,
+    "icon": "♿"
+  },
+  {
+    "id": "health-insurance-calculator",
+    "name": "健康保险计算器",
+    "description": "计算健康保险成本并比较健康计划，用于最佳覆盖选择。专业健康保险计算器，具有免赔额和保费分析工具。",
+    "category": "finance",
+    "keywords": [
+      "健康保险",
+      "成本",
+      "计划",
+      "比较",
+      "计算器"
+    ],
+    "path": "/zh/finance/health-insurance-calculator",
+    "isActive": false,
+    "searchVolume": 167000,
+    "difficulty": 2,
+    "icon": "🏥"
+  },
+  {
+    "id": "auto-insurance-calculator",
+    "name": "汽车保险计算器",
+    "description": "计算汽车保险保费和覆盖选项，用于车辆保护规划。专业汽车保险计算器，具有责任险和综合险覆盖分析。",
+    "category": "finance",
+    "keywords": [
+      "汽车保险",
+      "保费",
+      "覆盖",
+      "车险",
+      "计算器"
+    ],
+    "path": "/zh/finance/auto-insurance-calculator",
+    "isActive": false,
+    "searchVolume": 145000,
+    "difficulty": 2,
+    "icon": "🚗"
+  },
+  {
+    "id": "home-insurance-calculator",
+    "name": "房屋保险计算器",
+    "description": "计算房屋保险保费和覆盖选项，用于房主保护规划。专业房主计算器，具有住宅和个人财产覆盖分析。",
+    "category": "finance",
+    "keywords": [
+      "房屋保险",
+      "房主",
+      "覆盖",
+      "保费",
+      "计算器"
+    ],
+    "path": "/zh/finance/home-insurance-calculator",
+    "isActive": false,
+    "searchVolume": 89000,
+    "difficulty": 2,
+    "icon": "🏠"
+  },
+  {
+    "id": "umbrella-insurance-calculator",
+    "name": "雨伞保险计算器",
+    "description": "计算雨伞保险覆盖需求，用于超出标准保单的额外责任保护。专业雨伞计算器，具有资产保护和覆盖缺口分析。",
+    "category": "finance",
+    "keywords": [
+      "雨伞保险",
+      "责任",
+      "覆盖",
+      "保护",
+      "计算器"
+    ],
+    "path": "/zh/finance/umbrella-insurance-calculator",
+    "isActive": false,
+    "searchVolume": 23000,
+    "difficulty": 3,
+    "icon": "☂️"
+  },
+  {
+    "id": "college-savings-calculator",
+    "name": "大学储蓄计算器",
+    "description": "计算大学储蓄要求和529计划缴费，用于教育资金目标。专业教育计算器，具有学费通胀和储蓄时间表分析。",
+    "category": "finance",
+    "keywords": [
+      "大学储蓄",
+      "529计划",
+      "教育",
+      "学费",
+      "计算器"
+    ],
+    "path": "/zh/finance/college-savings-calculator",
+    "isActive": false,
+    "searchVolume": 78000,
+    "difficulty": 2,
+    "icon": "🎓"
+  },
+  {
+    "id": "529-plan-calculator",
+    "name": "529计划计算器",
+    "description": "计算529教育储蓄计划的税收优势福利，用于大学资金策略。专业529计算器，具有缴费限额和提取规划工具。",
+    "category": "finance",
+    "keywords": [
+      "529计划",
+      "教育储蓄",
+      "税收优惠",
+      "大学",
+      "计算器"
+    ],
+    "path": "/zh/finance/529-plan-calculator",
+    "isActive": false,
+    "searchVolume": 45000,
+    "difficulty": 2,
+    "icon": "📚"
+  },
+  {
+    "id": "child-support-calculator",
+    "name": "子女抚养费计算器",
+    "description": "基于州指导原则和监护安排计算子女抚养费，用于家庭规划。专业子女抚养费计算器，具有收入和支出分析工具。",
+    "category": "finance",
+    "keywords": [
+      "子女抚养费",
+      "支付",
+      "指导原则",
+      "监护",
+      "计算器"
+    ],
+    "path": "/zh/finance/child-support-calculator",
+    "isActive": false,
+    "searchVolume": 134000,
+    "difficulty": 3,
+    "icon": "👶"
+  },
+  {
+    "id": "alimony-calculator",
+    "name": "赡养费计算器",
+    "description": "计算赡养费和配偶支持费用，用于离婚财务规划和和解分析。专业赡养费计算器，具有期限和支付结构工具。",
+    "category": "finance",
+    "keywords": [
+      "赡养费",
+      "配偶支持",
+      "支付",
+      "离婚",
+      "计算器"
+    ],
+    "path": "/zh/finance/alimony-calculator",
+    "isActive": false,
+    "searchVolume": 67000,
+    "difficulty": 3,
+    "icon": "💔"
+  },
+  {
+    "id": "divorce-settlement-calculator",
+    "name": "离婚和解计算器",
+    "description": "计算离婚和解和资产分割，用于公平财产分配规划。专业离婚计算器，具有婚姻财产和财务分析工具。",
+    "category": "finance",
+    "keywords": [
+      "离婚和解",
+      "资产分割",
+      "财务",
+      "财产",
+      "计算器"
+    ],
+    "path": "/zh/finance/divorce-settlement-calculator",
+    "isActive": false,
+    "searchVolume": 45000,
+    "difficulty": 3,
+    "icon": "⚖️"
+  },
+  {
+    "id": "estate-tax-calculator",
+    "name": "遗产税计算器",
+    "description": "计算遗产税责任和免税额，用于继承和遗产规划策略。专业遗产税计算器，具有联邦和州税分析工具。",
+    "category": "finance",
+    "keywords": [
+      "遗产税",
+      "责任",
+      "免税额",
+      "继承",
+      "计算器"
+    ],
+    "path": "/zh/finance/estate-tax-calculator",
+    "isActive": false,
+    "searchVolume": 34000,
+    "difficulty": 3,
+    "icon": "🏛️"
+  },
+  {
+    "id": "gift-tax-calculator",
+    "name": "赠与税计算器",
+    "description": "计算赠与税责任和年度免税限额，用于税收高效赠与策略。专业赠与税计算器，具有免税分析和规划工具。",
+    "category": "finance",
+    "keywords": [
+      "赠与税",
+      "责任",
+      "年度免税",
+      "赠与",
+      "计算器"
+    ],
+    "path": "/zh/finance/gift-tax-calculator",
+    "isActive": false,
+    "searchVolume": 23000,
+    "difficulty": 3,
+    "icon": "🎁"
+  },
+  {
+    "id": "inheritance-calculator",
+    "name": "继承计算器",
+    "description": "计算继承分配和税收影响，用于遗产规划和受益人分析。专业继承计算器，具有税收评估和分配规划工具。",
+    "category": "finance",
+    "keywords": [
+      "继承",
+      "分配",
+      "税收影响",
+      "遗产",
+      "计算器"
+    ],
+    "path": "/zh/finance/inheritance-calculator",
+    "isActive": false,
+    "searchVolume": 56000,
+    "difficulty": 3,
+    "icon": "👴"
+  },
+  {
+    "id": "trust-calculator",
+    "name": "信托计算器",
+    "description": "计算信托分配和税收优惠，用于遗产规划和财富转移策略。高级信托计算器，具有税收优化和受益人规划分析。",
+    "category": "finance",
+    "keywords": [
+      "信托",
+      "分配",
+      "税收优惠",
+      "遗产规划",
+      "计算器"
+    ],
+    "path": "/zh/finance/trust-calculator",
+    "isActive": false,
+    "searchVolume": 28000,
+    "difficulty": 4,
+    "icon": "🏛️"
+  },
+  {
+    "id": "paycheck-calculator",
+    "name": "工资单计算器",
+    "description": "计算税后实得工资和扣除额，用于准确的工资规划和预算。专业工资单计算器，具有联邦、州和地方税预扣分析。",
+    "category": "finance",
+    "keywords": [
+      "工资单",
+      "实得工资",
+      "税收",
+      "扣除",
+      "计算器"
+    ],
+    "path": "/zh/finance/paycheck-calculator",
+    "isActive": false,
+    "searchVolume": 234000,
+    "difficulty": 2,
+    "icon": "💰"
+  },
+  {
+    "id": "hourly-to-salary-calculator",
+    "name": "时薪转年薪计算器",
+    "description": "将时薪转换为年薪并比较薪酬包，用于职业规划。专业工资计算器，具有福利分析和总薪酬比较工具。",
+    "category": "finance",
+    "keywords": [
+      "时薪",
+      "年薪",
+      "工资",
+      "年度",
+      "转换",
+      "计算器"
+    ],
+    "path": "/zh/finance/hourly-to-salary-calculator",
+    "isActive": false,
+    "searchVolume": 167000,
+    "difficulty": 1,
+    "icon": "⏰"
+  },
+  {
+    "id": "bmi-calculator",
+    "name": "BMI计算器",
+    "description": "计算身体质量指数(BMI)，提供即时健康状态分析和建议。专业BMI计算器，包含体重类别解释和个性化健康指导。",
+    "category": "health",
+    "keywords": [
+      "bmi计算器",
+      "身体质量指数计算器",
+      "bmi图表计算器",
+      "理想体重计算器",
+      "健康体重计算器",
+      "体重状态计算器",
+      "成人bmi计算器",
+      "身体质量指数图表",
+      "bmi计算公式",
+      "体重类别计算器"
+    ],
+    "path": "/zh/health/bmi-calculator",
+    "isActive": true,
+    "searchVolume": 135000,
+    "difficulty": 1,
+    "icon": "⚖️"
+  },
+  {
+    "id": "calorie-calculator",
+    "name": "卡路里计算器",
+    "description": "计算每日卡路里需求和TDEE，用于体重管理和健身目标。先进的卡路里计算器，考虑年龄、性别、活动水平和代谢因素。",
+    "category": "health",
+    "keywords": [
+      "卡路里计算器",
+      "每日卡路里",
+      "tdee",
+      "bmr",
+      "代谢",
+      "减肥"
+    ],
+    "path": "/zh/health/calorie-calculator",
+    "isActive": true,
+    "searchVolume": 245000,
+    "difficulty": 2,
+    "icon": "🔥"
+  },
+  {
+    "id": "body-fat-calculator",
+    "name": "体脂率计算器",
+    "description": "使用多种测量方法和公式计算体脂百分比。综合身体成分计算器，提供健康分析和健身建议。",
+    "category": "health",
+    "keywords": [
+      "体脂",
+      "体脂百分比",
+      "健身",
+      "健康",
+      "身体成分"
+    ],
+    "path": "/zh/health/body-fat-calculator",
+    "isActive": true,
+    "searchVolume": 89000,
+    "difficulty": 2,
+    "icon": "📊"
+  },
+  {
+    "id": "ideal-weight-calculator",
+    "name": "理想体重计算器",
+    "description": "使用经过验证的医学公式和健康标准计算理想体重。专业目标体重计算器，用于设定现实且健康的体重目标。",
+    "category": "health",
+    "keywords": [
+      "理想体重",
+      "目标体重",
+      "健康体重",
+      "体重目标",
+      "健身"
+    ],
+    "path": "/zh/health/ideal-weight-calculator",
+    "isActive": true,
+    "searchVolume": 156000,
+    "difficulty": 1,
+    "icon": "🎯"
+  },
+  {
+    "id": "pregnancy-calculator",
+    "name": "怀孕计算器",
+    "description": "计算预产期并跟踪怀孕周数，为准妈妈提供孕期里程碑。专业怀孕计算器，包含受孕日期和胎儿发育跟踪。",
+    "category": "health",
+    "keywords": [
+      "怀孕计算器",
+      "预产期",
+      "怀孕周数",
+      "受孕",
+      "孕期"
+    ],
+    "path": "/zh/health/pregnancy-calculator",
+    "isActive": false,
+    "searchVolume": 198000,
+    "difficulty": 2,
+    "icon": "🤱"
+  },
+  {
+    "id": "water-intake-calculator",
+    "name": "饮水量计算器",
+    "description": "根据体重、活动水平和气候条件计算每日饮水需求。专业水分补充计算器，用于最佳健康和养生规划。",
+    "category": "health",
+    "keywords": [
+      "饮水量",
+      "水分补充",
+      "每日饮水",
+      "液体需求",
+      "健康"
+    ],
+    "path": "/zh/health/water-intake-calculator",
+    "isActive": false,
+    "searchVolume": 125000,
+    "difficulty": 1,
+    "icon": "💧"
+  },
+  {
+    "id": "heart-rate-calculator",
+    "name": "心率计算器",
+    "description": "计算运动训练和有氧健身优化的目标心率区间。专业心率计算器，提供基于年龄的训练区间和锻炼强度分析。",
+    "category": "health",
+    "keywords": [
+      "心率",
+      "目标心率",
+      "运动",
+      "健身",
+      "有氧",
+      "训练区间"
+    ],
+    "path": "/zh/health/heart-rate-calculator",
+    "isActive": false,
+    "searchVolume": 78000,
+    "difficulty": 2,
+    "icon": "❤️"
+  },
+  {
+    "id": "macro-calculator",
+    "name": "宏量营养素计算器",
+    "description": "根据健身目标和饮食规划计算蛋白质、碳水化合物和脂肪的宏量营养素比例。专业宏量计算器，提供个性化营养目标和膳食规划。",
+    "category": "health",
+    "keywords": [
+      "宏量计算器",
+      "宏量营养素",
+      "蛋白质",
+      "碳水",
+      "脂肪",
+      "营养"
+    ],
+    "path": "/zh/health/macro-calculator",
+    "isActive": false,
+    "searchVolume": 167000,
+    "difficulty": 2,
+    "icon": "🥗"
+  },
+  {
+    "id": "sleep-calculator",
+    "name": "睡眠计算器",
+    "description": "基于自然睡眠周期计算最佳就寝和起床时间，提高睡眠质量。专业睡眠计算器，包含REM周期分析和睡眠时间表优化。",
+    "category": "health",
+    "keywords": [
+      "睡眠计算器",
+      "就寝时间",
+      "起床时间",
+      "睡眠周期",
+      "rem睡眠"
+    ],
+    "path": "/zh/health/sleep-calculator",
+    "isActive": false,
+    "searchVolume": 145000,
+    "difficulty": 1,
+    "icon": "😴"
+  },
+  {
+    "id": "ovulation-calculator",
+    "name": "排卵期计算器",
+    "description": "计算排卵日期和受孕窗口期，用于受孕和家庭规划策略。专业生育力计算器，包含月经周期跟踪和受孕概率分析。",
+    "category": "health",
+    "keywords": [
+      "排卵期计算器",
+      "受孕窗口期",
+      "受孕",
+      "家庭规划",
+      "月经周期"
+    ],
+    "path": "/zh/health/ovulation-calculator",
+    "isActive": false,
+    "searchVolume": 234000,
+    "difficulty": 2,
+    "icon": "🌸"
+  },
+  {
+    "id": "protein-calculator",
+    "name": "蛋白质计算器",
+    "description": "根据体重、活动水平和健身目标计算每日蛋白质需求，用于肌肉建设。专业蛋白质计算器，提供个性化摄入建议和营养规划。",
+    "category": "health",
+    "keywords": [
+      "蛋白质计算器",
+      "每日蛋白质",
+      "蛋白质需求",
+      "健身",
+      "肌肉建设"
+    ],
+    "path": "/zh/health/protein-calculator",
+    "isActive": false,
+    "searchVolume": 89000,
+    "difficulty": 1,
+    "icon": "🥩"
+  },
+  {
+    "id": "pdf-to-word-converter",
+    "name": "PDF转Word转换器",
+    "description": "将PDF文件转换为可编辑的Word文档，准确保持格式。专业PDF转Word转换器，支持DOC和DOCX格式，保持布局完整性。",
+    "category": "media",
+    "keywords": [
+      "pdf",
+      "word",
+      "doc",
+      "docx",
+      "转换器",
+      "文档"
+    ],
+    "path": "/zh/media/pdf-to-word-converter",
+    "isActive": true,
+    "searchVolume": 201000,
+    "difficulty": 4,
+    "icon": "📄"
+  },
+  {
+    "id": "jpg-to-png-converter",
+    "name": "JPG转PNG转换器",
+    "description": "将JPG图片转换为PNG格式，支持透明度和无损质量。专业图片转换器，用于网页图形和照片编辑应用。",
+    "category": "media",
+    "keywords": [
+      "jpg",
+      "jpeg",
+      "png",
+      "图片",
+      "转换器",
+      "照片"
+    ],
+    "path": "/zh/media/jpg-to-png-converter",
+    "isActive": true,
+    "searchVolume": 89000,
+    "difficulty": 2,
+    "icon": "🖼️"
+  },
+  {
+    "id": "timestamp-converter",
+    "name": "Unix时间戳转换器",
+    "description": "将Unix时间戳转换为可读日期，反之亦然，支持时区。专业纪元时间转换器，为开发人员和系统管理员设计。",
+    "category": "time",
+    "keywords": [
+      "时间戳转换器",
+      "unix时间戳转换器",
+      "纪元转换器",
+      "unix时间转换器",
+      "时间戳转日期",
+      "纪元时间转换器",
+      "posix时间转换器",
+      "unix时间戳在线",
+      "纪元时间转日期",
+      "时间戳计算器"
+    ],
+    "path": "/zh/time/timestamp-converter",
+    "isActive": true,
+    "searchVolume": 185000,
+    "difficulty": 1,
+    "icon": "🕐"
+  },
+  {
+    "id": "timezone-converter",
+    "name": "时区转换器",
+    "description": "在全球不同时区之间转换时间，支持夏令时。专业时区转换器，用于国际调度和全球协调。",
+    "category": "time",
+    "keywords": [
+      "时区转换器",
+      "时区转换器",
+      "世界时间转换器",
+      "时区计算器",
+      "时间转换工具",
+      "世界时钟转换器",
+      "时区工具",
+      "时区计算器",
+      "全球时间转换器",
+      "国际时间工具"
+    ],
+    "path": "/zh/time/timezone-converter",
+    "isActive": true,
+    "searchVolume": 225000,
+    "difficulty": 2,
+    "icon": "🌍"
+  },
+  {
+    "id": "date-difference-calculator",
+    "name": "日期差计算器",
+    "description": "计算两个日期之间的天数、月数和年数差异。综合日期差计算器，用于项目规划和年龄计算。",
+    "category": "time",
+    "keywords": [
+      "日期计算器",
+      "日期差计算器",
+      "日期间天数",
+      "日期持续时间计算器",
+      "日期间时间",
+      "日期数学计算器",
+      "日历计算器",
+      "日期间隔计算器",
+      "年龄计算器日期",
+      "日期算术工具"
+    ],
+    "path": "/zh/time/date-difference-calculator",
+    "isActive": true,
+    "searchVolume": 165000,
+    "difficulty": 1,
+    "icon": "📅"
+  },
+  {
+    "id": "countdown-timer",
+    "name": "倒计时器",
+    "description": "为事件、截止日期和特殊场合创建可定制的倒计时器。交互式倒计时时钟，具有多种计时器格式和提醒选项。",
+    "category": "time",
+    "keywords": [
+      "倒计时器",
+      "倒计时时钟",
+      "事件倒计时",
+      "计时器倒计时",
+      "截止日期计时器",
+      "倒计时小部件",
+      "在线倒计时",
+      "事件计时器",
+      "倒计时计算器",
+      "时间倒计时"
+    ],
+    "path": "/zh/time/countdown-timer",
+    "isActive": true,
+    "searchVolume": 145000,
+    "difficulty": 1,
+    "icon": "⏰"
+  },
+  {
+    "id": "age-calculator",
+    "name": "年龄计算器",
+    "description": "从出生日期计算精确年龄，包含精确的年、月、日和小时分析。专业年龄计算器，具有生日倒计时和人生里程碑跟踪。",
+    "category": "time",
+    "keywords": [
+      "年龄计算器",
+      "计算年龄",
+      "从出生日期算年龄",
+      "我多大了",
+      "以天计算年龄",
+      "精确年龄计算器"
+    ],
+    "path": "/zh/time/age-calculator",
+    "isActive": false,
+    "searchVolume": 125000,
+    "difficulty": 1,
+    "icon": "🎂"
+  },
+  {
+    "id": "date-calculator",
+    "name": "日期计算器",
+    "description": "通过加减天数、月数和年数来计算日期，用于规划和调度。专业日期计算器，具有工作日和未来日期分析工具。",
+    "category": "time",
+    "keywords": [
+      "日期计算器",
+      "日期加天数",
+      "日期减天数",
+      "日期数学",
+      "未来日期计算器"
+    ],
+    "path": "/zh/time/date-calculator",
+    "isActive": false,
+    "searchVolume": 95000,
+    "difficulty": 1,
+    "icon": "📅"
+  },
+  {
+    "id": "stopwatch",
+    "name": "在线秒表",
+    "description": "具有圈数时间和分段功能的精确在线秒表。专业计时工具，用于体育和活动。",
+    "category": "time",
+    "keywords": [
+      "秒表",
+      "在线秒表",
+      "计时器",
+      "圈数计时器",
+      "精确计时器",
+      "分段计时器"
+    ],
+    "path": "/zh/time/online-stopwatch",
+    "isActive": false,
+    "searchVolume": 85000,
+    "difficulty": 1,
+    "icon": "⏱️"
+  },
+  {
+    "id": "unix-timestamp-converter",
+    "name": "Unix时间戳转换器",
+    "description": "将Unix时间戳转换为可读日期，反之亦然，支持时区。Unix纪元时间转换器。",
+    "category": "time",
+    "keywords": [
+      "unix时间戳",
+      "纪元时间",
+      "时间戳转换器",
+      "unix时间转换器",
+      "纪元转换器"
+    ],
+    "path": "/zh/time/unix-timestamp-converter",
+    "isActive": false,
+    "searchVolume": 155000,
+    "difficulty": 1,
+    "icon": "🕐"
+  },
+  {
+    "id": "working-days-calculator",
+    "name": "工作日计算器",
+    "description": "计算日期间的工作日和营业日，排除周末和节假日。专业商务计算器，具有项目时间表和截止日期规划工具。",
+    "category": "time",
+    "keywords": [
+      "工作日计算器",
+      "营业日计算器",
+      "工作日计算器",
+      "日期间工作日",
+      "营业日计数器"
+    ],
+    "path": "/zh/time/working-days-calculator",
+    "isActive": false,
+    "searchVolume": 45000,
+    "difficulty": 2,
+    "icon": "💼"
+  },
+  {
+    "id": "world-clock",
+    "name": "世界时钟",
+    "description": "显示世界各地多个时区的当前时间。全球时间显示，包含主要城市。",
+    "category": "time",
+    "keywords": [
+      "世界时钟",
+      "世界时间",
+      "全球时间",
+      "国际时间",
+      "时区",
+      "全球当前时间"
+    ],
+    "path": "/zh/time/world-clock",
+    "isActive": false,
+    "searchVolume": 75000,
+    "difficulty": 2,
+    "icon": "🌍"
+  },
+  {
+    "id": "temperature-converter",
+    "name": "温度转换器",
+    "description": "在摄氏度、华氏度和开尔文之间进行精确的温度转换。专业温度转换器，具有公式解释和即时转换结果。",
+    "category": "unit",
+    "keywords": [
+      "温度转换器",
+      "摄氏度转华氏度",
+      "华氏度转摄氏度",
+      "开尔文转换器",
+      "温度转换",
+      "摄氏华氏转换器",
+      "温度计算器",
+      "度数转换器",
+      "温度转换器",
+      "温度转换工具"
+    ],
+    "path": "/zh/unit/temperature-converter",
+    "isActive": true,
+    "searchVolume": 285000,
+    "difficulty": 1,
+    "icon": "🌡️"
+  },
+  {
+    "id": "length-converter",
+    "name": "长度转换器",
+    "description": "在公制和英制单位之间转换长度，包括米、英尺、英寸和厘米。精确的长度转换器，用于建筑、工程和日常测量。",
+    "category": "unit",
+    "keywords": [
+      "长度转换器",
+      "距离转换器",
+      "米转英尺",
+      "英尺转米",
+      "厘米转英寸",
+      "英寸转厘米",
+      "长度转换",
+      "距离转换",
+      "测量转换器",
+      "单位转换器长度"
+    ],
+    "path": "/zh/unit/length-converter",
+    "isActive": true,
+    "searchVolume": 195000,
+    "difficulty": 1,
+    "icon": "📏"
+  },
+  {
+    "id": "weight-converter",
+    "name": "重量转换器",
+    "description": "在磅、千克和其他质量单位之间进行精确的重量转换。专业重量转换器，支持多种单位，用于健身、烹饪和运输。",
+    "category": "unit",
+    "keywords": [
+      "重量转换器",
+      "质量转换器",
+      "千克转磅",
+      "磅转千克",
+      "重量转换",
+      "质量转换",
+      "千克转换器",
+      "磅转换器",
+      "重量计算器",
+      "质量计算器"
+    ],
+    "path": "/zh/unit/weight-converter",
+    "isActive": true,
+    "searchVolume": 175000,
+    "difficulty": 1,
+    "icon": "⚖️"
+  },
+  {
+    "id": "volume-converter",
+    "name": "体积转换器",
+    "description": "在升、加仑和其他液体测量单位之间进行精确的体积转换。基本体积转换器，用于烹饪、化学和液体测量。",
+    "category": "unit",
+    "keywords": [
+      "体积转换器",
+      "液体转换器",
+      "升转加仑",
+      "加仑转升",
+      "体积转换",
+      "液体转换",
+      "容量转换器",
+      "流体转换器",
+      "体积计算器",
+      "液体计算器"
+    ],
+    "path": "/zh/unit/volume-converter",
+    "isActive": true,
+    "searchVolume": 125000,
+    "difficulty": 1,
+    "icon": "🥤"
+  },
+  {
+    "id": "area-converter",
+    "name": "面积转换器",
+    "description": "面积转换器 - 平方米、平方英尺、英亩和公顷面积测量工具，具有精确的表面积计算。",
+    "category": "unit",
+    "keywords": [
+      "面积转换器",
+      "平方米转换器",
+      "平方英尺转换器",
+      "英亩转换器",
+      "公顷转换器",
+      "面积转换",
+      "表面积转换器",
+      "土地面积转换器",
+      "面积计算器",
+      "平方单位转换器"
+    ],
+    "path": "/zh/unit/area-converter",
+    "isActive": false,
+    "searchVolume": 85000,
+    "difficulty": 1,
+    "icon": "📐"
+  },
+  {
+    "id": "speed-converter",
+    "name": "速度转换器",
+    "description": "速度转换器 - 英里/小时、公里/小时、米/秒和节速度转换工具，具有精确的速度计算。",
+    "category": "unit",
+    "keywords": [
+      "速度转换器",
+      "速度转换器",
+      "英里转公里",
+      "公里转英里",
+      "速度转换",
+      "速度转换",
+      "英里转换器",
+      "公里转换器",
+      "速度计算器",
+      "速度计算器"
+    ],
+    "path": "/zh/unit/speed-converter",
+    "isActive": false,
+    "searchVolume": 95000,
+    "difficulty": 1,
+    "icon": "🏃"
+  },
+  {
+    "id": "energy-converter",
+    "name": "能量转换器",
+    "description": "能量转换器 - 焦耳、卡路里、BTU和千瓦时能量转换工具，具有精确计算和多种单位。",
+    "category": "unit",
+    "keywords": [
+      "能量转换器",
+      "卡路里转换器",
+      "焦耳转换器",
+      "btu转换器",
+      "千瓦时转换器",
+      "能量转换",
+      "功率转换",
+      "能量计算器",
+      "卡路里计算器",
+      "能量单位转换器"
+    ],
+    "path": "/zh/unit/energy-converter",
+    "isActive": false,
+    "searchVolume": 65000,
+    "difficulty": 2,
+    "icon": "⚡"
+  },
+  {
+    "id": "pressure-converter",
+    "name": "压力转换器",
+    "description": "压力转换器 - PSI、巴、帕斯卡和大气压压力转换工具，具有精确计算和公式支持。",
+    "category": "unit",
+    "keywords": [
+      "压力转换器",
+      "psi转换器",
+      "巴转换器",
+      "帕斯卡转换器",
+      "大气压转换器",
+      "压力转换",
+      "压力计算器",
+      "压力单位转换器",
+      "psi转巴",
+      "巴转psi"
+    ],
+    "path": "/zh/unit/pressure-converter",
+    "isActive": false,
+    "searchVolume": 55000,
+    "difficulty": 2,
+    "icon": "🌪️"
+  },
+  {
+    "id": "power-converter",
+    "name": "功率转换器",
+    "description": "功率转换器 - 瓦特、马力和BTU/小时功率转换工具，具有精确计算和多种单位。",
+    "category": "unit",
+    "keywords": [
+      "功率转换器",
+      "瓦特转换器",
+      "马力转换器",
+      "btu转换器",
+      "功率转换",
+      "瓦特计算器",
+      "马力计算器",
+      "功率单位转换器",
+      "马力转瓦特",
+      "瓦特转马力"
+    ],
+    "path": "/zh/unit/power-converter",
+    "isActive": false,
+    "searchVolume": 45000,
+    "difficulty": 2,
+    "icon": "⚡"
+  },
+  {
+    "id": "data-converter",
+    "name": "数据大小转换器",
+    "description": "数据大小转换器 - 字节、KB、MB、GB和TB数字存储转换工具，具有精确的文件大小计算。",
+    "category": "unit",
+    "keywords": [
+      "数据转换器",
+      "字节转换器",
+      "mb转gb",
+      "gb转tb",
+      "数据大小转换器",
+      "存储转换器",
+      "文件大小转换器",
+      "数字存储转换器",
+      "数据计算器",
+      "存储计算器"
+    ],
+    "path": "/zh/unit/data-converter",
+    "isActive": false,
+    "searchVolume": 75000,
+    "difficulty": 1,
+    "icon": "💾"
+  },
+  {
+    "id": "fahrenheit-to-celsius-converter",
+    "name": "华氏度转摄氏度转换器",
+    "description": "将华氏度转换为摄氏度，具有精确计算和逐步公式解释。专业°F转°C转换器，用于天气、烹饪和科学应用。",
+    "category": "unit",
+    "keywords": [
+      "华氏度转摄氏度",
+      "f转c转换器",
+      "华氏摄氏转换器",
+      "温度转换器f转c",
+      "华氏度转摄氏度计算器",
+      "f转c计算器",
+      "华氏摄氏转换",
+      "华氏度转摄氏度",
+      "f转摄氏度转换器",
+      "华氏度转c转换器"
+    ],
+    "path": "/zh/unit/fahrenheit-to-celsius-converter",
+    "isActive": false,
+    "searchVolume": 245000,
+    "difficulty": 1,
+    "icon": "🌡️"
+  },
+  {
+    "id": "celsius-to-fahrenheit-converter",
+    "name": "摄氏度转华氏度转换器",
+    "description": "将摄氏度转换为华氏度，具有精确计算和逐步公式解释。专业°C转°F转换器，用于国际温度转换。",
+    "category": "unit",
+    "keywords": [
+      "摄氏度转华氏度",
+      "c转f转换器",
+      "摄氏华氏转换器",
+      "温度转换器c转f",
+      "摄氏度转华氏度计算器",
+      "c转f计算器",
+      "摄氏华氏转换",
+      "摄氏度转华氏度",
+      "c转华氏度转换器",
+      "摄氏度转f转换器"
+    ],
+    "path": "/zh/unit/celsius-to-fahrenheit-converter",
+    "isActive": false,
+    "searchVolume": 225000,
+    "difficulty": 1,
+    "icon": "🌡️"
+  },
+  {
+    "id": "pounds-to-kg-converter",
+    "name": "磅转千克转换器",
+    "description": "将磅转换为千克，具有精确计算和转换公式。专业磅转千克转换器，用于健身跟踪、运输和国际重量标准。",
+    "category": "unit",
+    "keywords": [
+      "磅转千克",
+      "磅转千克转换器",
+      "磅转千克",
+      "重量转换器磅转千克",
+      "磅转千克计算器",
+      "磅转千克计算器",
+      "磅千克转换",
+      "磅转千克",
+      "磅转千克转换器",
+      "磅转千克转换器"
+    ],
+    "path": "/zh/unit/pounds-to-kg-converter",
+    "isActive": false,
+    "searchVolume": 198000,
+    "difficulty": 1,
+    "icon": "⚖️"
+  },
+  {
+    "id": "kg-to-pounds-converter",
+    "name": "千克转磅转换器",
+    "description": "将千克转换为磅，具有精确计算和转换公式。专业千克转磅转换器，用于健身、旅行和体重管理应用。",
+    "category": "unit",
+    "keywords": [
+      "千克转磅",
+      "千克转磅转换器",
+      "千克转磅",
+      "重量转换器千克转磅",
+      "千克转磅计算器",
+      "千克转磅计算器",
+      "千克磅转换",
+      "千克转磅",
+      "千克转磅转换器",
+      "千克转磅转换器"
+    ],
+    "path": "/zh/unit/kg-to-pounds-converter",
+    "isActive": false,
+    "searchVolume": 185000,
+    "difficulty": 1,
+    "icon": "⚖️"
+  },
+  {
+    "id": "unit-converter",
+    "name": "通用单位转换器",
+    "description": "在所有测量单位之间转换，包括长度、重量、温度、体积、面积、速度、能量和压力。专业通用转换器，支持公制和英制单位。",
+    "category": "unit",
+    "keywords": [
+      "单位转换器",
+      "通用转换器",
+      "测量转换器",
+      "转换单位",
+      "单位转换",
+      "公制转换器",
+      "英制转换器",
+      "转换计算器",
+      "单位计算器",
+      "测量计算器"
+    ],
+    "path": "/zh/unit/unit-converter",
+    "isActive": false,
+    "searchVolume": 325000,
+    "difficulty": 2,
+    "icon": "🔄"
+  },
+  {
+    "id": "cm-to-inches-converter",
+    "name": "厘米转英寸转换器",
+    "description": "将厘米转换为英寸，具有精确计算和转换公式，用于准确的长度测量。专业厘米转英寸转换器，具有小数精度和测量表。",
+    "category": "unit",
+    "keywords": [
+      "厘米转英寸",
+      "厘米转英寸",
+      "厘米转英寸转换器",
+      "长度转换器厘米转英寸",
+      "厘米转英寸计算器"
+    ],
+    "path": "/zh/unit/cm-to-inches-converter",
+    "isActive": false,
+    "searchVolume": 155000,
+    "difficulty": 1,
+    "icon": "📏"
+  },
+  {
+    "id": "inches-to-cm-converter",
+    "name": "英寸转厘米转换器",
+    "description": "将英寸转换为厘米，具有精确计算和转换公式，用于准确的长度测量。专业英寸转厘米转换器，具有小数精度和测量表。",
+    "category": "unit",
+    "keywords": [
+      "英寸转厘米",
+      "英寸转厘米",
+      "英寸转厘米转换器",
+      "长度转换器英寸转厘米",
+      "英寸转厘米计算器"
+    ],
+    "path": "/zh/unit/inches-to-cm-converter",
+    "isActive": false,
+    "searchVolume": 145000,
+    "difficulty": 1,
+    "icon": "📏"
+  },
+  {
+    "id": "feet-to-meters-converter",
+    "name": "英尺转米转换器",
+    "description": "将英尺转换为米，具有精确计算和转换公式，用于准确的距离测量。专业英尺转米转换器，具有小数精度和测量表。",
+    "category": "unit",
+    "keywords": [
+      "英尺转米",
+      "英尺转米转换器",
+      "英尺转米",
+      "长度转换器英尺转米",
+      "英尺转米计算器"
+    ],
+    "path": "/zh/unit/feet-to-meters-converter",
+    "isActive": false,
+    "searchVolume": 125000,
+    "difficulty": 1,
+    "icon": "📏"
+  },
+  {
+    "id": "meters-to-feet-converter",
+    "name": "米转英尺转换器",
+    "description": "将米转换为英尺，具有精确计算和转换公式，用于准确的距离测量。专业米转英尺转换器，具有小数精度和测量表。",
+    "category": "unit",
+    "keywords": [
+      "米转英尺",
+      "米转英尺转换器",
+      "米转英尺",
+      "长度转换器米转英尺",
+      "米转英尺计算器"
+    ],
+    "path": "/zh/unit/meters-to-feet-converter",
+    "isActive": false,
+    "searchVolume": 115000,
+    "difficulty": 1,
+    "icon": "📏"
+  }
+]

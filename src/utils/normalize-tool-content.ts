@@ -1,5 +1,5 @@
 import { ToolContent, FAQItem } from '@/types/tool-content';
-import { RichToolContent, RichAboutContent, RichHowToContent, RichFeatureContent, RichFAQContent, RichHowToStep } from '@/types/json-content';
+import { RichAboutContent, RichHowToContent, RichFeatureContent, RichFAQContent, RichHowToStep } from '@/types/json-content';
 
 /**
  * Normalize rich JSON structure to simple arrays for ToolContent
@@ -22,7 +22,7 @@ function isRichFAQContent(item: unknown): item is RichFAQContent {
 }
 
 export function normalizeToolContent(rawContent: unknown): ToolContent {
-  const content = rawContent as any; // 临时使用any，但通过类型守卫确保安全
+  const content = rawContent as Record<string, unknown>; // 临时使用unknown，但通过类型守卫确保安全
 
   // Handle about - ensure it's always a string array
   let about: string[] = [];

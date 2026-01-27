@@ -41,7 +41,7 @@ export async function generateMetadata({
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
 
-  const canonicalPath = `/${l}/color/contrast-checker`;
+  const canonicalPath = `${l === "en" ? "" : "/" + l}/color/contrast-checker`;
 
   return {
     title,

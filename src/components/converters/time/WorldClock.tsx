@@ -54,7 +54,7 @@ export function WorldClock() {
         second: '2-digit',
         hour12: true
       }).format(currentTime);
-    } catch (error) {
+    } catch {
       return 'Invalid timezone';
     }
   };
@@ -68,7 +68,7 @@ export function WorldClock() {
         month: 'long',
         day: 'numeric'
       }).format(currentTime);
-    } catch (error) {
+    } catch {
       return 'Invalid timezone';
     }
   };
@@ -86,7 +86,7 @@ export function WorldClock() {
       if (hourNum >= 12 && hourNum < 18) return { status: 'Afternoon', color: 'text-orange-600' };
       if (hourNum >= 18 && hourNum < 22) return { status: 'Evening', color: 'text-purple-600' };
       return { status: 'Night', color: 'text-blue-600' };
-    } catch (error) {
+    } catch {
       return { status: 'Unknown', color: 'text-gray-600' };
     }
   };

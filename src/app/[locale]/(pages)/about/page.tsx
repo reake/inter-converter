@@ -3,6 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { Metadata } from 'next';
+import { generateMetadata as generateSEOMetadata } from '@/lib/seo/metadata';
 import {
   Target,
   Users,
@@ -18,6 +20,27 @@ import {
 
 
 
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isZh = locale === 'zh';
+
+  return generateSEOMetadata({
+    title: isZh ? '关于我们 | InterConverter' : 'About InterConverter',
+    description: isZh
+      ? '了解 InterConverter 的使命、产品理念以及为开发者和专业人士打造的免费转换工具。'
+      : 'Learn about InterConverter’s mission, values, and the free conversion tools built for developers and professionals.',
+    locale,
+    pathname: '/about',
+    keywords: isZh
+      ? ['关于我们', 'InterConverter', '在线工具', '转换器', '计算器']
+      : ['about', 'InterConverter', 'online tools', 'converter', 'calculator']
+  });
+}
 
 // Force static generation
 export const dynamic = 'force-static';

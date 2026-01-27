@@ -41,7 +41,7 @@ export async function generateMetadata({
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
 
-  const canonicalPath = `/${l}/auto/fluid-weight-calculator`;
+  const canonicalPath = `${l === "en" ? "" : "/" + l}/auto/fluid-weight-calculator`;
 
   return {
     title,

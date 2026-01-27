@@ -33,10 +33,10 @@ export default async function UnitPage({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'categoryPages.unit' });
   // Get all active unit tools from JSON data (isActive filtering is already applied in getUnitTools)
-  const allUnitTools = getUnitTools();
+  const allUnitTools = getUnitTools(undefined, locale);
   
   // Get popular tools (top 6 by search volume)
-  const popularTools = getPopularTools().filter(tool => tool.category === 'unit').slice(0, 6);
+  const popularTools = getPopularTools(10, locale).filter(tool => tool.category === 'unit').slice(0, 6);
 
   // Get tools by keywords/type - now using the JSON data with isActive filtering
   const lengthTools = allUnitTools.filter(tool => 
@@ -144,7 +144,7 @@ export default async function UnitPage({ params }: { params: Promise<{ locale: s
 
   return (
     <>
-      <HreflangLinks pathname="/unit" currentLocale={locale} />
+      <HreflangLinks pathname="/unit" />
       <CanonicalLink pathname="/unit" locale={locale} />
       <JsonLd
         data={{

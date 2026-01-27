@@ -178,7 +178,6 @@ function generateOptimizedToolTitle(toolName: string, category: string): string 
 
 // Generate SEO metadata for tool pages
 export function generateToolMetadata(tool: ToolConfig, locale: string = 'en'): Metadata {
-  const categoryInfo = TOOL_CATEGORIES[tool.category as keyof typeof TOOL_CATEGORIES];
   const longtailKeywords = CATEGORY_LONGTAIL_KEYWORDS[tool.category as keyof typeof CATEGORY_LONGTAIL_KEYWORDS] || [];
 
   // Optimized title format: Tool Name + Scenario/Benefit + Brand
@@ -268,6 +267,7 @@ export function generateToolMetadata(tool: ToolConfig, locale: string = 'en'): M
 export function generateCategoryMetadata(category: string, locale: string = 'en'): Metadata {
   const categoryInfo = TOOL_CATEGORIES[category as keyof typeof TOOL_CATEGORIES];
   const longtailKeywords = CATEGORY_LONGTAIL_KEYWORDS[category as keyof typeof CATEGORY_LONGTAIL_KEYWORDS] || [];
+  const localePrefix = locale === 'en' ? '' : `/${locale}`;
 
   if (!categoryInfo) {
     return {};
@@ -287,8 +287,6 @@ export function generateCategoryMetadata(category: string, locale: string = 'en'
 
   const toolCount = toolCounts[category] || 10;
   const title = `${toolCount}+ Free Online ${categoryInfo.name} Tools & Calculators | InterConverter`;
-  const alternativeTitle = `${categoryInfo.name} Tools Online – ${toolCount}+ Free Calculators at InterConverter`;
-
   const description = `${categoryInfo.description} Professional ${categoryInfo.name.toLowerCase()} tools including ${longtailKeywords.slice(0, 3).join(', ')}. Free, accurate, and instant results.`;
 
   return {
@@ -305,11 +303,12 @@ export function generateCategoryMetadata(category: string, locale: string = 'en'
     openGraph: {
       title,
       description,
-      url: `${SEO_CONFIG.siteUrl}/${category}`,
+      url: `${SEO_CONFIG.siteUrl}${localePrefix}/${category}`,
       type: 'website',
+      locale: locale === 'zh' ? 'zh_CN' : 'en_US',
     },
     alternates: {
-      canonical: `${SEO_CONFIG.siteUrl}/${category}`,
+      canonical: `${SEO_CONFIG.siteUrl}${localePrefix}/${category}`,
     },
   };
 }

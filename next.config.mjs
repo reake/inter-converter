@@ -6,25 +6,18 @@ const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === "true",
 });
 
+const isStaticExport = process.env.NODE_ENV === 'production' && process.env.BUILD_TARGET === 'static';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
 
-  // Conditional configuration based on environment
-  ...(process.env.NODE_ENV === 'production' && process.env.BUILD_TARGET === 'static' ? {
-    // Static export configuration for Cloudflare Workers
+  // Static export configuration for Cloudflare Workers
+  ...(isStaticExport ? {
     output: 'export',
     trailingSlash: false,
     skipTrailingSlashRedirect: true,
-    images: {
-      unoptimized: true,
-    },
-  } : {
-    // Development configuration
-    images: {
-      unoptimized: false,
-    },
-  }),
+  } : {}),
 
   // Performance optimizations
   experimental: {
@@ -33,6 +26,7 @@ const nextConfig = {
 
   // Image optimization
   images: {
+    unoptimized: isStaticExport,
     remotePatterns: [
       {
         protocol: "https",

@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function FileMediaPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'categoryPages.media' });
-  const tools = getToolsByCategory('media');
+  const tools = getToolsByCategory('media', undefined, locale);
 
   const getDifficultyColor = (difficulty: number) => {
     if (difficulty <= 2) return 'bg-green-100 text-green-800 border-green-200';
@@ -50,7 +50,7 @@ export default async function FileMediaPage({ params }: { params: Promise<{ loca
 
   return (
     <>
-      <HreflangLinks pathname="/media" currentLocale={locale} />
+      <HreflangLinks pathname="/media" />
       <CanonicalLink pathname="/media" locale={locale} />
       <JsonLd data={generateWebsiteSchema(locale)} />
       

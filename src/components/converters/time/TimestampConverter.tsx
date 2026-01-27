@@ -1,13 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Clock, Calendar } from 'lucide-react';
-import { CopyButton, CopyResult } from '@/components/ui/CopyButton';
+import { CopyResult } from '@/components/ui/CopyButton';
 import { ConvertersEngine } from '@/lib/converters/conversion-engine';
 
 const COMMON_TIMEZONES = [
@@ -22,7 +21,6 @@ const COMMON_TIMEZONES = [
 ];
 
 export function TimestampConverter() {
-  const t = useTranslations('tools.timestampConverter');
   const [timestamp, setTimestamp] = useState('');
   const [dateTime, setDateTime] = useState('');
   const [timezone, setTimezone] = useState('UTC');

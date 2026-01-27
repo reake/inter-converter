@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -28,11 +28,7 @@ export default function BMICalculator() {
   const [result, setResult] = useState<BMIResult | null>(null);
   const [error, setError] = useState('');
 
-  useEffect(() => {
-    calculateBMI();
-  }, [height, weight, unit, heightFeet, heightInches]);
-
-  const calculateBMI = () => {
+  const calculateBMI = useCallback(() => {
     try {
       let heightValue: number;
       const weightValue = parseFloat(weight);
@@ -83,11 +79,15 @@ export default function BMICalculator() {
         setError(bmiResult.error || 'Failed to calculate BMI');
         setResult(null);
       }
-    } catch (err) {
+    } catch {
       setError('Error calculating BMI');
       setResult(null);
     }
-  };
+  }, [height, weight, unit, heightFeet, heightInches]);
+
+  useEffect(() => {
+    calculateBMI();
+  }, [calculateBMI]);
 
   const calculateIdealWeightRange = (heightValue: number, unit: 'metric' | 'imperial') => {
     // Using BMI range of 18.5-24.9 for ideal weight
@@ -270,7 +270,7 @@ export default function BMICalculator() {
             >
               <div>
                 <div className="font-medium">Average Adult</div>
-                <div className="text-sm text-muted-foreground">5'7", 154lbs</div>
+                <div className="text-sm text-muted-foreground">5&apos;7&quot;, 154lbs</div>
               </div>
             </Button>
             <Button
@@ -386,7 +386,7 @@ export default function BMICalculator() {
               <h4 className="font-medium mb-3">What is BMI?</h4>
               <div className="space-y-2 text-sm text-muted-foreground">
                 <div>• Body Mass Index measures body fat based on height and weight</div>
-                <div>• It's a screening tool, not a diagnostic tool</div>
+                <div>• It&apos;s a screening tool, not a diagnostic tool</div>
                 <div>• BMI applies to most adults 18-65 years</div>
                 <div>• Results may vary for athletes and elderly</div>
               </div>

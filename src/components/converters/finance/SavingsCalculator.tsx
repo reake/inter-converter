@@ -32,8 +32,6 @@ export default function SavingsCalculator() {
     const monthly = parseFloat(monthlyContribution) || 0;
     const rate = parseFloat(annualRate) / 100 || 0;
     const time = parseFloat(years) || 0;
-    const frequency = parseFloat(compoundingFrequency) || 12;
-
     if (rate === 0 || time === 0) return;
 
     const monthlyRate = rate / 12;

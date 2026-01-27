@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -46,10 +46,6 @@ export default function CmToInchesConverter() {
     setCentimeters(tempInches);
     setInches(tempCm);
   };
-
-  useEffect(() => {
-    handleCentimetersChange(centimeters);
-  }, []);
 
   const commonMeasurements = [
     { cm: 1, inches: 0.39, desc: '1 centimeter' },
@@ -109,7 +105,7 @@ export default function CmToInchesConverter() {
               />
               <div className="text-center p-4 bg-green-50 rounded-lg">
                 <div className="text-3xl font-bold text-green-600">
-                  {inches}"
+                  {inches}&quot;
                 </div>
                 <div className="text-sm text-gray-600">Inches</div>
               </div>
@@ -138,7 +134,7 @@ export default function CmToInchesConverter() {
             </div>
             <div className="p-4 border rounded-lg">
               <div className="text-sm text-gray-600">Inches (Imperial)</div>
-              <div className="text-2xl font-bold text-green-600">{inches}"</div>
+              <div className="text-2xl font-bold text-green-600">{inches}&quot;</div>
               <div className="text-xs text-gray-500">in</div>
             </div>
           </div>
@@ -161,7 +157,7 @@ export default function CmToInchesConverter() {
                     <div className="text-blue-600 font-bold">{measurement.cm} cm</div>
                   </div>
                   <div>
-                    <div className="text-green-600 font-bold">{measurement.inches}"</div>
+                    <div className="text-green-600 font-bold">{measurement.inches}&quot;</div>
                   </div>
                 </div>
               </div>

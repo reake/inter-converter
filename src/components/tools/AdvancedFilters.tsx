@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -8,10 +8,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Input } from '@/components/ui/input';
 import { Search, X } from 'lucide-react';
-import { TOOL_CATEGORIES } from '@/config/tools';
+import { getToolCategories } from '@/config/tools';
 import { ToolConfig } from '@/types/tools';
 
-interface FilterState {
+export interface FilterState {
   categories: string[];
   difficulties: number[];
   searchVolume: 'all' | 'high' | 'medium' | 'low';
@@ -24,11 +24,13 @@ interface AdvancedFiltersProps {
   tools: ToolConfig[];
   onFiltersChange: (filteredTools: ToolConfig[], filters: FilterState) => void;
   className?: string;
+  locale?: string;
 }
 
-export function AdvancedFilters({ tools, onFiltersChange, className = '' }: AdvancedFiltersProps) {
+export function AdvancedFilters({ tools, onFiltersChange, className = '', locale = 'en' }: AdvancedFiltersProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const toolCategories = getToolCategories(locale);
   
   const [filters, setFilters] = useState<FilterState>({
     categories: [],
@@ -83,7 +85,7 @@ export function AdvancedFilters({ tools, onFiltersChange, className = '' }: Adva
   };
 
   // Apply filters and sorting
-  const applyFilters = (newFilters: FilterState) => {
+  const applyFilters = useCallback((newFilters: FilterState) => {
     let filtered = [...tools];
 
     // Search query filter
@@ -145,7 +147,7 @@ export function AdvancedFilters({ tools, onFiltersChange, className = '' }: Adva
     });
 
     onFiltersChange(filtered, newFilters);
-  };
+  }, [tools, onFiltersChange]);
 
   // Handle filter changes
   const handleFilterChange = (newFilters: Partial<FilterState>) => {
@@ -192,7 +194,7 @@ export function AdvancedFilters({ tools, onFiltersChange, className = '' }: Adva
   // Apply filters on mount
   useEffect(() => {
     applyFilters(filters);
-  }, [tools]);
+  }, [applyFilters, filters]);
 
   const getDifficultyLabel = (difficulty: number) => {
     switch (difficulty) {
@@ -301,7 +303,7 @@ export function AdvancedFilters({ tools, onFiltersChange, className = '' }: Adva
           <div className="space-y-3">
             <h4 className="font-medium text-sm text-gray-700">Categories</h4>
             <div className="flex flex-wrap gap-2">
-              {Object.entries(TOOL_CATEGORIES).map(([key, category]) => (
+              {Object.entries(toolCategories).map(([key, category]) => (
                 <Button
                   key={key}
                   variant={filters.categories.includes(key) ? "default" : "outline"}

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -10,7 +10,6 @@ import { CopyButton } from '@/components/ui/CopyButton';
 export default function FahrenheitToCelsiusConverter() {
   const [fahrenheit, setFahrenheit] = useState<string>('32');
   const [celsius, setCelsius] = useState<string>('0');
-  const [error, setError] = useState('');
 
   const convertFahrenheitToCelsius = (f: number): number => {
     return (f - 32) * 5 / 9;
@@ -26,10 +25,9 @@ export default function FahrenheitToCelsiusConverter() {
     if (!isNaN(f)) {
       const c = convertFahrenheitToCelsius(f);
       setCelsius(c.toFixed(2));
-      setError('');
+      
     } else {
       setCelsius('');
-      setError('');
     }
   };
 
@@ -39,10 +37,9 @@ export default function FahrenheitToCelsiusConverter() {
     if (!isNaN(c)) {
       const f = convertCelsiusToFahrenheit(c);
       setFahrenheit(f.toFixed(2));
-      setError('');
+      
     } else {
       setFahrenheit('');
-      setError('');
     }
   };
 
@@ -62,12 +59,6 @@ export default function FahrenheitToCelsiusConverter() {
   const formatResult = (value: number) => {
     return parseFloat(value.toFixed(2)).toString();
   };
-
-  useEffect(() => {
-    if (fahrenheit) {
-      handleFahrenheitChange(fahrenheit);
-    }
-  }, []);
 
   return (
     <div className="space-y-6">
@@ -159,12 +150,6 @@ export default function FahrenheitToCelsiusConverter() {
             </div>
           )}
 
-          {/* Error Display */}
-          {error && (
-            <div className="text-destructive text-sm p-3 bg-destructive/10 rounded-lg">
-              {error}
-            </div>
-          )}
         </CardContent>
       </Card>
 

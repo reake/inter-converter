@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -82,11 +82,7 @@ export default function TaxCalculator() {
   const [itemizedDeductions, setItemizedDeductions] = useState('0');
   const [result, setResult] = useState<TaxResult | null>(null);
 
-  useEffect(() => {
-    calculateTax();
-  }, [income, filingStatus, deductionType, itemizedDeductions]);
-
-  const calculateTax = () => {
+  const calculateTax = useCallback(() => {
     const grossIncome = parseFloat(income) || 0;
     if (grossIncome <= 0) {
       setResult(null);
@@ -126,7 +122,11 @@ export default function TaxCalculator() {
       afterTaxIncome,
       standardDeduction
     });
-  };
+  }, [income, filingStatus, deductionType, itemizedDeductions]);
+
+  useEffect(() => {
+    calculateTax();
+  }, [calculateTax]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

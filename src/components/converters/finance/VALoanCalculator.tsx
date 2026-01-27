@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -36,7 +36,7 @@ export default function VALoanCalculator() {
     'surviving-spouse': 'Surviving Spouse'
   };
 
-  const calculateVALoan = () => {
+  const calculateVALoan = useCallback(() => {
     const price = parseFloat(homePrice);
     const down = parseFloat(downPayment);
     const rate = parseFloat(interestRate) / 100 / 12;
@@ -99,11 +99,11 @@ export default function VALoanCalculator() {
       entitlementUsed,
       remainingEntitlement
     });
-  };
+  }, [homePrice, downPayment, interestRate, loanTerm, serviceType, firstTimeUse, disability, propertyTax, homeInsurance]);
 
   useEffect(() => {
     calculateVALoan();
-  }, [homePrice, downPayment, interestRate, loanTerm, serviceType, firstTimeUse, disability, propertyTax, homeInsurance]);
+  }, [calculateVALoan]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -119,20 +119,6 @@ export default function VALoanCalculator() {
     const down = parseFloat(downPayment);
     return price > 0 ? ((down / price) * 100).toFixed(1) : '0';
   };
-
-  const isEligible = () => {
-    const price = parseFloat(homePrice);
-    const loanAmount = price - parseFloat(downPayment);
-    
-    return {
-      loanLimit: loanAmount <= (results?.maxLoanAmount || 0),
-      occupancy: true, // Assumed primary residence
-      creditScore: true, // VA doesn't set minimum credit score
-      overall: loanAmount <= (results?.maxLoanAmount || 0)
-    };
-  };
-
-  const eligibility = isEligible();
 
   return (
     <div className="w-full max-w-4xl mx-auto space-y-6">
@@ -424,7 +410,7 @@ export default function VALoanCalculator() {
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-blue-600 font-bold">•</span>
-                        <span>Meet lender's credit and income requirements</span>
+                        <span>Meet lender&apos;s credit and income requirements</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-blue-600 font-bold">•</span>

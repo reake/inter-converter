@@ -24,7 +24,7 @@ export interface EducationalContent {
   safetyWarnings?: string[];
 }
 
-export interface AutomotiveCalculationResult<T = any> {
+export interface AutomotiveCalculationResult<T = unknown> {
   success: boolean;
   result?: T;
   error?: string;
@@ -33,7 +33,7 @@ export interface AutomotiveCalculationResult<T = any> {
   metadata: {
     timestamp: Date;
     formula: string;
-    inputs: Record<string, any>;
+    inputs: Record<string, unknown>;
     accuracy: 'high' | 'medium' | 'estimated';
   };
 }

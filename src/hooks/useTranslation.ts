@@ -346,8 +346,23 @@ const translations: Record<string, TranslationStrings> = {
 };
 
 export function useTranslation(lang: string = 'en') {
-  const [currentLang, setCurrentLang] = useState(lang);
-  const [t, setT] = useState<TranslationStrings>(translations[lang] || translations.en);
+  const resolveLang = (preferred?: string) => {
+    if (preferred) return preferred;
+    if (typeof document !== 'undefined') {
+      const docLang = document.documentElement.lang;
+      if (docLang) return docLang;
+    }
+    return 'en';
+  };
+
+  const [currentLang, setCurrentLang] = useState(resolveLang(lang));
+  const [t, setT] = useState<TranslationStrings>(translations[resolveLang(lang)] || translations.en);
+
+  useEffect(() => {
+    const resolved = resolveLang(lang);
+    setCurrentLang(resolved);
+    setT(translations[resolved] || translations.en);
+  }, [lang]);
 
   useEffect(() => {
     setT(translations[currentLang] || translations.en);

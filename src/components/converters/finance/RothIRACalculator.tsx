@@ -1,11 +1,9 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 interface RothResults {
@@ -30,7 +28,7 @@ export default function RothIRACalculator() {
   const [retirementTaxRate, setRetirementTaxRate] = useState<string>('15');
   const [results, setResults] = useState<RothResults | null>(null);
 
-  const calculateRothIRA = () => {
+  const calculateRothIRA = useCallback(() => {
     const age = parseInt(currentAge);
     const retAge = parseInt(retirementAge);
     const balance = parseFloat(currentBalance);
@@ -53,9 +51,6 @@ export default function RothIRACalculator() {
     }
     
     const totalGrowth = rothBalance - totalContributions;
-    
-    // Roth withdrawals are tax-free in retirement
-    const taxFreeWithdrawals = rothBalance;
     
     // Compare with Traditional IRA
     // Traditional IRA: pre-tax contributions, taxed on withdrawal
@@ -80,11 +75,11 @@ export default function RothIRACalculator() {
         taxSavings
       }
     });
-  };
+  }, [annualContribution, currentAge, currentBalance, currentTaxRate, expectedReturn, retirementAge, retirementTaxRate]);
 
   useEffect(() => {
     calculateRothIRA();
-  }, [currentAge, retirementAge, currentBalance, annualContribution, expectedReturn, currentTaxRate, retirementTaxRate]);
+  }, [calculateRothIRA]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
