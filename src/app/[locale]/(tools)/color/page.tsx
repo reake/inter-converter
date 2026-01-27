@@ -33,6 +33,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function ColorToolsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'categoryPages.color' });
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://interconverter.com';
+  const localePrefix = locale === 'en' ? '' : `/${locale}`;
   
   const toolCategories = [
     {
@@ -101,12 +103,12 @@ export default async function ColorToolsPage({ params }: { params: Promise<{ loc
           "@type": "WebPage",
           "name": t('title'),
           "description": t('description'),
-          "url": `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/color`,
+          "url": `${baseUrl}${localePrefix}/color`,
           "inLanguage": locale,
           "isPartOf": {
             "@type": "WebSite",
             "name": "InterConverter",
-            "url": process.env.NEXT_PUBLIC_SITE_URL
+            "url": baseUrl
           }
         }}
       />

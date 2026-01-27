@@ -48,9 +48,9 @@ export async function generateMetadata({
       locale: l === 'zh' ? 'zh_CN' : 'en_US',
       images: [
         {
-          url: '/images/og-online-stopwatch.jpg',
-          width: 1200,
-          height: 630,
+          url: '/icons/icon-512x512.png',
+          width: 512,
+          height: 512,
           alt: toolName
         }
       ]

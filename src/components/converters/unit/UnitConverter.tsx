@@ -357,10 +357,10 @@ export function UnitConverter() {
         </CardContent>
       </Card>
 
-      {/* Quick Converterss */}
+      {/* Quick Conversions */}
       <Card>
         <CardHeader className="pb-3">
-          <CardTitle className="text-lg">Quick Converterss</CardTitle>
+          <CardTitle className="text-lg">Quick Conversions</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -401,7 +401,7 @@ export function UnitConverter() {
       {/* Converters Reference */}
       <Card>
         <CardHeader className="pb-3">
-          <CardTitle className="text-lg">Common {UNIT_CATEGORIES[category].name} Converterss</CardTitle>
+          <CardTitle className="text-lg">Common {UNIT_CATEGORIES[category].name} Conversions</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -209,8 +209,8 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
 
   // Unit Tools
   'unit-converter': {
-    title: 'Unit Converter | Free Measurement Converters Tool',
-    description: 'Convert units of measurement instantly. Free online unit converter for length, weight, temperature, volume, area, and more. Accurate Converterss.',
+    title: 'Unit Converter | Free Measurement Conversion Tool',
+    description: 'Convert units of measurement instantly. Free online unit converter for length, weight, temperature, volume, area, and more. Accurate conversions.',
     keywords: [
       'unit converter',
       'measurement converter',
@@ -223,8 +223,8 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
       'area converter',
       'distance converter',
       'mass converter',
-      'Converters calculator',
-      'unit Converters tool',
+      'converter calculator',
+      'unit converter tool',
       'measurement calculator',
       'metric imperial converter'
     ],

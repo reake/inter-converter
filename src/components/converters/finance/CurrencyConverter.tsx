@@ -304,7 +304,7 @@ export default function CurrencyConverter() {
         </CardContent>
       </Card>
 
-      {/* Popular Converterss */}
+      {/* Popular Conversions */}
       <Card className="border-0 shadow-xl overflow-hidden">
         <div className="h-2 bg-gradient-to-r from-blue-400 to-purple-500"></div>
         <CardHeader className="bg-gradient-to-br from-blue-50 to-purple-50">
@@ -401,7 +401,7 @@ export default function CurrencyConverter() {
               {[
                 { icon: '⏰', text: 'Rates update every few minutes during market hours' },
                 { icon: '📅', text: 'Weekend rates may differ from weekday trading rates' },
-                { icon: '🏦', text: 'Banks may charge additional fees for currency Converterss' },
+                { icon: '🏦', text: 'Banks may charge additional fees for currency conversions' },
                 { icon: '📊', text: 'Rates shown are for informational purposes only' },
                 { icon: '🌐', text: 'Exchange rates fluctuate based on global economic factors' },
                 { icon: '💼', text: 'Always check with your bank for actual Converters rates' },

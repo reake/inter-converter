@@ -20,9 +20,9 @@ export function StructuredData({ tools = [], category, locale = 'en', faqItems =
   const websiteData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "InterConverter - Free Online Converters Tools",
+    "name": "InterConverter - Free Online Converter Tools",
     "alternateName": "InterConverter",
-    "description": "Professional online Converters tools and calculators. Free, secure, and accurate tools for unit Converters, currency calculation, and specialized calculations.",
+    "description": "Professional online converter tools and calculators. Free, secure, and accurate tools for unit converters, currency calculation, and specialized calculations.",
     "url": `${baseUrl}${localePrefix}`,
     "potentialAction": {
       "@type": "SearchAction",
@@ -32,7 +32,7 @@ export function StructuredData({ tools = [], category, locale = 'en', faqItems =
       },
       "query-input": "required name=search_term_string"
     },
-    "keywords": "online converter, free calculator, unit Converters, currency converter, measurement tools, professional calculators"
+    "keywords": "online converter, free calculator, unit converters, currency converter, measurement tools, professional calculators"
   };
 
   // Organization structured data
@@ -41,7 +41,7 @@ export function StructuredData({ tools = [], category, locale = 'en', faqItems =
     "@type": "Organization",
     "name": "InterConverter",
     "legalName": "InterConverter",
-    "description": "Leading provider of free online Converters tools and professional calculators for developers, engineers, students, and professionals worldwide",
+    "description": "Leading provider of free online converter tools and professional calculators for developers, engineers, students, and professionals worldwide",
     "url": baseUrl,
     "foundingDate": "2024",
     "contactPoint": {
@@ -104,8 +104,8 @@ export function StructuredData({ tools = [], category, locale = 'en', faqItems =
   const toolsData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": category ? `${categoryInfo?.name} Tools` : "Online Converters Tools",
-    "description": category ? categoryInfo?.description : "Comprehensive collection of free online Converters tools and calculators",
+    "name": category ? `${categoryInfo?.name} Tools` : "Online Converter Tools",
+    "description": category ? categoryInfo?.description : "Comprehensive collection of free online converter tools and calculators",
     "numberOfItems": tools.length,
     "itemListElement": tools.slice(0, 20).map((tool, index) => ({
       "@type": "SoftwareApplication",
@@ -129,10 +129,10 @@ export function StructuredData({ tools = [], category, locale = 'en', faqItems =
   const collectionData = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": category ? `${categoryInfo?.name} Tools` : "Online Converters Tools",
+    "name": category ? `${categoryInfo?.name} Tools` : "Online Converter Tools",
     "description": category ? 
       `Free ${categoryInfo?.name.toLowerCase()} tools including ${tools.slice(0, 3).map(t => t.name).join(', ')} and more.` :
-      `Free online Converters tools and calculators. Convert units, currencies, files, and more.`,
+      `Free online converter tools and calculators. Convert units, currencies, files, and more.`,
     "url": category ? `${baseUrl}${localePrefix}/${category}` : `${baseUrl}${localePrefix}/tools`,
     "mainEntity": {
       "@type": "ItemList",
@@ -147,7 +147,7 @@ export function StructuredData({ tools = [], category, locale = 'en', faqItems =
     "about": {
       "@type": "Thing",
       "name": category ? categoryInfo?.name : "Online Tools",
-      "description": category ? categoryInfo?.description : "Free online Converters and calculation tools"
+      "description": category ? categoryInfo?.description : "Free online converter and calculation tools"
     }
   };
 

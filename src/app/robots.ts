@@ -11,9 +11,9 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: ['/'],
+        allow: ['/', '/manifest.json'],
         // Keep critical assets crawlable; forbid only internal/runtime paths
-        disallow: ['/api/', '/_next/'],
+        disallow: ['/api/'],
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,

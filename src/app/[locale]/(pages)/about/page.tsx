@@ -107,7 +107,7 @@ export default function AboutPage() {
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
           We're building the most comprehensive collection of free, fast, and privacy-focused
-          Converters tools and calculators for developers, engineers, students, and professionals.
+          converter tools and calculators for developers, engineers, students, and professionals.
         </p>
       </div>
 
@@ -208,7 +208,7 @@ export default function AboutPage() {
         <CardContent>
           <p className="text-gray-600 leading-relaxed mb-4">
             InterConverter is developed by a team of passionate developers and engineers who understand
-            the daily need for reliable Converters tools. We use these tools ourselves and are committed
+            the daily need for reliable converter tools. We use these tools ourselves and are committed
             to maintaining the highest standards of accuracy and performance.
           </p>
           <p className="text-gray-600 leading-relaxed">
@@ -223,7 +223,7 @@ export default function AboutPage() {
       <div className="text-center">
         <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
         <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-          Explore our comprehensive collection of Converters tools and calculators.
+          Explore our comprehensive collection of converter tools and calculators.
           No registration required, no downloads needed.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

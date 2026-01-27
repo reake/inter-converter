@@ -185,7 +185,7 @@ export function SpeedConverter() {
         <CardContent>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <h4 className="font-semibold text-gray-700">Common Converterss</h4>
+              <h4 className="font-semibold text-gray-700">Common Conversions</h4>
               <div className="text-sm space-y-1">
                 <div className="flex justify-between font-mono">
                   <span>10 MPH</span>
@@ -223,7 +223,7 @@ export function SpeedConverter() {
             </div>
             
             <div className="space-y-2">
-              <h4 className="font-semibold text-gray-700">Metric Converterss</h4>
+              <h4 className="font-semibold text-gray-700">Metric Conversions</h4>
               <div className="text-sm space-y-1">
                 <div className="flex justify-between font-mono">
                   <span>50 KPH</span>

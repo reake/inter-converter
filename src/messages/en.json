@@ -15,24 +15,24 @@
     "browseCategories": "Browse Categories",
     "viewAllTools": "View All Tools",
     "viewMore": "View More",
-    "searchPlaceholder": "Search Converters tools..."
+    "searchPlaceholder": "Search converter tools..."
   },
   "homepage": {
     "hero": {
       "title": "InterConverter",
-      "subtitle": "Free Online Converters & Calculators Tools",
-      "description": "Professional-grade Converters tools and calculators for developers, engineers, students, and professionals. Completely free, secure, and works instantly in your browser without downloads."
+      "subtitle": "Free Online Converters & Calculators",
+      "description": "Free online converters and calculators for developers and professionals. Fast, accurate, privacy-first, and works instantly in your browser."
     },
     "sections": {
       "popularTools": "Most Popular Tools",
       "browseByCategory": "Browse Tools by Category",
       "faq": "Frequently Asked Questions",
-      "faqSubtitle": "Everything you need to know about our Converters tools",
+      "faqSubtitle": "Everything you need to know about our converter tools",
       "aboutTitle": "About InterConverter.com",
-      "aboutDescription": "InterConverter.com is the premier destination for professional-grade Converters tools and calculators. Built by developers for developers, designers, engineers, and professionals who demand accuracy and efficiency.",
+      "aboutDescription": "InterConverter.com is the premier destination for professional-grade converter tools and calculators. Built by developers for developers, designers, engineers, and professionals who demand accuracy and efficiency.",
       "whyChoose": "Why Choose InterConverter?",
       "trustedBy": "Trusted by Professionals Worldwide",
-      "trustedByDescription": "From automotive engineers calculating compression ratios to web developers converting colors, InterConverter.com serves thousands of professionals daily. Join the community of users who rely on our tools for accurate, fast, and reliable Converterss."
+      "trustedByDescription": "From automotive engineers calculating compression ratios to web developers converting colors, InterConverter.com serves thousands of professionals daily. Join the community of users who rely on our tools for accurate, fast, and reliable conversions."
     },
     "features": {
       "professionalQuality": {
@@ -45,7 +45,7 @@
       },
       "privacyFirst": {
         "title": "Privacy First",
-        "description": "Your data never leaves your device. No tracking, no data collection, no user accounts required. Complete privacy and security for all your Converterss."
+        "description": "Your data never leaves your device. No tracking, no data collection, no user accounts required. Complete privacy and security for all your converter tools."
       },
       "mobileOptimized": {
         "title": "Mobile Optimized",
@@ -57,11 +57,11 @@
       },
       "alwaysUpdated": {
         "title": "Always Updated",
-        "description": "Regular updates with new tools, features, and improvements. We continuously add new Converters tools based on user feedback and industry needs."
+        "description": "Regular updates with new tools, features, and improvements. We continuously add new converter tools based on user feedback and industry needs."
       },
       "instantResults": {
         "title": "Instant Results",
-        "description": "Get immediate, accurate Converterss without delays. All processing happens in your browser for maximum speed."
+        "description": "Get immediate, accurate conversions without delays. All processing happens in your browser for maximum speed."
       },
       "completelyFree": {
         "title": "Completely Free",
@@ -69,13 +69,13 @@
       },
       "privacyProtected": {
         "title": "Privacy Protected",
-        "description": "Your data stays on your device. No tracking, no data collection, complete privacy for all your Converterss."
+        "description": "Your data stays on your device. No tracking, no data collection, complete privacy for all your converter tools."
       }
     },
     "faq": [
       {
         "question": "Are these tools really free?",
-        "answer": "Yes! All our Converters tools are completely free to use with no hidden costs, registration requirements, or usage limits. We believe in providing accessible tools for everyone."
+        "answer": "Yes! All our converter tools are completely free to use with no hidden costs, registration requirements, or usage limits. We believe in providing accessible tools for everyone."
       },
       {
         "question": "Do you store my data?",

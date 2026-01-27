@@ -19,7 +19,7 @@ export const generateWebsiteSchema = (locale: string) => ({
   "url": process.env.NEXT_PUBLIC_SITE_URL || "https://interconverter.com",
   "description": locale === 'zh' 
     ? "专业级在线转换器和计算器工具集合" 
-    : "Professional online converters and calculators tools collection",
+    : "Professional online converters and calculators collection",
   "inLanguage": locale,
   "potentialAction": {
     "@type": "SearchAction",
