@@ -69,7 +69,7 @@ export default async function HomePage({
       <HreflangLinks pathname="/" />
       <CanonicalLink locale={locale} pathname="/" />
       <JsonLd data={generateWebsiteSchema(locale)} />
-      <StructuredData tools={popularTools} locale={locale} faqItems={faqItems} />
+      <StructuredData tools={popularTools} locale={locale}/>
      
       {/* Hero Section */}
       <section className="relative overflow-visible bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700">
@@ -97,11 +97,32 @@ export default async function HomePage({
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold shadow-lg">
-              <Link href="/tools">{tCommon('exploreAllTools')}</Link>
+              <Link href="/tools">{tCommon('startConverting')}</Link>
             </Button>
-            <Button asChild size="lg" className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold shadow-lg border-0">
-              <Link href="/tools">{tCommon('browseCategories')}</Link>
+            <Button asChild size="lg" variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold">
+              <Link href="/tools">{tCommon('viewAllTools')}</Link>
             </Button>
+          </div>
+          
+          <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-blue-100">
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>100% Free</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              <span>No Registration</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              <span>Instant Results</span>
+            </div>
           </div>
         </div>
       </section>

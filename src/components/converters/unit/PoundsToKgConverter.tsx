@@ -73,22 +73,25 @@ export default function PoundsToKgConverter() {
         <CardContent className="space-y-6">
           {/* Value Input */}
           <div>
-            <label className="block text-sm font-medium mb-2">Weight Value</label>
+            <label htmlFor="pounds-input" className="block text-sm font-medium mb-2">Weight Value</label>
             <Input
+              id="pounds-input"
               type="number"
               value={pounds}
               onChange={(e) => handlePoundsChange(e.target.value)}
               placeholder="Enter pounds"
               className="text-lg"
               step="any"
+              aria-label="Enter weight in pounds"
             />
           </div>
 
           {/* Unit Selection */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
             <div>
-              <label className="block text-sm font-medium mb-2">Pounds (lbs)</label>
+              <label htmlFor="pounds-unit" className="block text-sm font-medium mb-2">Pounds (lbs)</label>
               <Input
+                id="pounds-unit"
                 type="number"
                 value={pounds}
                 onChange={(e) => handlePoundsChange(e.target.value)}
@@ -104,20 +107,23 @@ export default function PoundsToKgConverter() {
                 variant="outline"
                 size="sm"
                 className="rounded-full w-10 h-10 p-0"
+                aria-label="Swap between pounds and kilograms"
               >
-                <ArrowRightLeft className="h-4 w-4" />
+                <ArrowRightLeft className="h-4 w-4" aria-hidden="true" />
               </Button>
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-2">Kilograms (kg)</label>
+              <label htmlFor="kilograms-input" className="block text-sm font-medium mb-2">Kilograms (kg)</label>
               <Input
+                id="kilograms-input"
                 type="number"
                 value={kilograms}
                 onChange={(e) => handleKilogramsChange(e.target.value)}
                 placeholder="Enter kilograms"
                 className="text-lg"
                 step="any"
+                aria-label="Enter weight in kilograms"
               />
             </div>
           </div>

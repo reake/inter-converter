@@ -61,7 +61,7 @@ export function EnhancedToolLayout({
   const features = customFeatures || defaultFeatures;
   const normalizedFaqs = faqs || [];
   const structuredData = includeStructuredData
-    ? generateEnhancedStructuredData(baseUrl, title, description, toolId, category, normalizedFaqs)
+    ? generateEnhancedStructuredData(baseUrl, title, description, toolId, category, normalizedFaqs, howToUseSteps)
     : null;
   
   const toolsToShow = relatedTools;
@@ -231,7 +231,8 @@ function generateEnhancedStructuredData(
   description: string,
   toolId: string,
   category: string,
-  faqs: FAQ[]
+  faqs: FAQ[],
+  howToUse?: string[]
 ) {
   const toolUrl = `${baseUrl}/${category}/${toolId}`;
 
@@ -243,13 +244,33 @@ function generateEnhancedStructuredData(
     "url": toolUrl,
     "applicationCategory": "UtilityApplication",
     "operatingSystem": "Any",
-    "permissions": "browser",
+    "browserRequirements": "Requires JavaScript. Requires HTML5.",
+    "permissions": "No special permissions required",
     "isAccessibleForFree": true,
     "offers": {
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD"
-    }
+    },
+    "featureList": [
+      "Free to use",
+      "No registration required",
+      "Instant results",
+      "Privacy protected",
+      "Works offline"
+    ],
+    "brand": {
+      "@type": "Brand",
+      "name": "InterConverter"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "InterConverter",
+      "url": baseUrl
+    },
+    "datePublished": "2024-01-01",
+    "dateModified": new Date().toISOString().split('T')[0],
+    "inLanguage": "en"
   };
 
   // Add FAQ structured data if available
@@ -264,6 +285,32 @@ function generateEnhancedStructuredData(
           "text": faq.answer
         }
       }))
+    };
+  }
+
+  // HowTo schema for step-by-step guides
+  if (howToUse && howToUse.length > 0) {
+    const howToData = {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": `How to Use ${title}`,
+      "description": `Step-by-step guide for using ${title}`,
+      "totalTime": "PT1M",
+      "step": howToUse.map((step, index) => ({
+        "@type": "HowToStep",
+        "position": index + 1,
+        "name": `Step ${index + 1}`,
+        "text": step,
+        "url": `${toolUrl}#how-to-use`
+      }))
+    };
+    
+    return {
+      ...structuredData,
+      "@graph": [
+        structuredData,
+        howToData
+      ]
     };
   }
 

@@ -6,10 +6,9 @@ interface StructuredDataProps {
   tools: ToolConfig[];
   category?: string;
   locale?: string;
-  faqItems?: Array<{ question: string; answer: string }>;
 }
 
-export function StructuredData({ tools = [], category, locale = 'en', faqItems = [] }: StructuredDataProps) {
+export function StructuredData({ tools = [], category, locale = 'en' }: StructuredDataProps) {
   const toolCategories = getToolCategories(locale);
   const categoryInfo = category ? toolCategories[category as keyof typeof toolCategories] : null;
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://interconverter.com';
@@ -86,19 +85,7 @@ export function StructuredData({ tools = [], category, locale = 'en', faqItems =
     ]
   };
 
-  // FAQ structured data
-  const faqData = faqItems.length > 0 ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqItems.map((item) => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.answer
-      }
-    }))
-  } : null;
+  const faqData = null;
 
   // Software Application structured data for tools
   const toolsData = {

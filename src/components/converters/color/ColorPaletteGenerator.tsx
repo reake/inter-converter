@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -15,18 +15,16 @@ export function ColorPaletteGenerator() {
   const [scheme, setScheme] = useState<ColorScheme>('complementary');
   const [palette, setPalette] = useState<string[]>([]);
 
-  useEffect(() => {
-    generatePalette();
-  }, [baseColor, scheme]);
-
-  const hexToHsl = (hex: string) => {
+  const hexToHsl = useCallback((hex: string) => {
     const r = parseInt(hex.slice(1, 3), 16) / 255;
     const g = parseInt(hex.slice(3, 5), 16) / 255;
     const b = parseInt(hex.slice(5, 7), 16) / 255;
 
     const max = Math.max(r, g, b);
     const min = Math.min(r, g, b);
-    let h = 0, s = 0, l = (max + min) / 2;
+    let h = 0;
+    let s = 0;
+    const l = (max + min) / 2;
 
     if (max !== min) {
       const d = max - min;
@@ -41,9 +39,9 @@ export function ColorPaletteGenerator() {
     }
 
     return { h: h * 360, s: s * 100, l: l * 100 };
-  };
+  }, []);
 
-  const hslToHex = (h: number, s: number, l: number) => {
+  const hslToHex = useCallback((h: number, s: number, l: number) => {
     h = h / 360;
     s = s / 100;
     l = l / 100;
@@ -74,9 +72,9 @@ export function ColorPaletteGenerator() {
     };
 
     return `#${toHex(r)}${toHex(g)}${toHex(b)}`.toUpperCase();
-  };
+  }, []);
 
-  const generatePalette = () => {
+  const generatePalette = useCallback(() => {
     const { h, s, l } = hexToHsl(baseColor);
     let colors: string[] = [baseColor];
 
@@ -143,14 +141,14 @@ export function ColorPaletteGenerator() {
     }
 
     setPalette(colors);
-  };
+  }, [baseColor, scheme, hexToHsl, hslToHex]);
 
   const generateRandomColor = () => {
     const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
     setBaseColor(randomColor.toUpperCase());
   };
 
-  const exportPalette = () => {
+  const exportPalette = useCallback(() => {
     const paletteData = {
       baseColor,
       scheme,
@@ -165,7 +163,7 @@ export function ColorPaletteGenerator() {
     a.download = `color-palette-${scheme}.json`;
     a.click();
     URL.revokeObjectURL(url);
-  };
+  }, [baseColor, scheme, palette]);
 
   const schemeDescriptions = {
     monochromatic: 'Uses variations in lightness and saturation of a single color',
