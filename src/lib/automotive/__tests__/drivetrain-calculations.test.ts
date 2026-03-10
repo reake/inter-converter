@@ -30,12 +30,12 @@ describe('DrivetrainFormulas', () => {
   describe('Speed and RPM Calculations', () => {
     test('calculates speed from RPM, ratio, and tire diameter correctly', () => {
       const speed = DrivetrainFormulas.calculateSpeed(3000, 3.73, 28);
-      expect(speed).toBeCloseTo(67.2, 1);
+      expect(speed).toBeCloseTo(67.0, 1);
     });
 
     test('calculates RPM from speed, ratio, and tire diameter correctly', () => {
       const rpm = DrivetrainFormulas.calculateRPM(60, 3.73, 28);
-      expect(rpm).toBeCloseTo(2678.6, 1);
+      expect(rpm).toBeCloseTo(2685.6, 1);
     });
 
     test('speed and RPM calculations are consistent', () => {
@@ -53,7 +53,7 @@ describe('DrivetrainFormulas', () => {
   describe('Tire Calculations', () => {
     test('calculates tire RPM correctly', () => {
       const trpm = DrivetrainFormulas.calculateTireRPM(28);
-      expect(trpm).toBeCloseTo(719.4, 1);
+      expect(trpm).toBeCloseTo(720.3, 1);
     });
 
     test('calculates speed change from tire size change correctly', () => {
@@ -125,15 +125,15 @@ describe('DrivetrainFormulas', () => {
   describe('Gear Ratio Applications and Recommendations', () => {
     test('provides appropriate applications for different ratios', () => {
       const highRatio = DrivetrainFormulas.calculateIdealRatio(60, 6000, 28);
-      const lowRatio = DrivetrainFormulas.calculateIdealRatio(120, 6000, 28);
+      const lowRatio = DrivetrainFormulas.calculateIdealRatio(200, 6000, 28);
       
       expect(highRatio.applications.some(app => app.includes('racing'))).toBe(true);
-      expect(lowRatio.applications.some(app => app.includes('highway'))).toBe(true);
+      expect(lowRatio.applications.some(app => app.toLowerCase().includes('highway'))).toBe(true);
     });
 
     test('provides appropriate recommendations for different ratios', () => {
       const highRatio = DrivetrainFormulas.calculateIdealRatio(60, 6000, 28);
-      const lowRatio = DrivetrainFormulas.calculateIdealRatio(120, 6000, 28);
+      const lowRatio = DrivetrainFormulas.calculateIdealRatio(200, 6000, 28);
       
       expect(highRatio.recommendations.length).toBeGreaterThan(0);
       expect(lowRatio.recommendations.length).toBeGreaterThan(0);

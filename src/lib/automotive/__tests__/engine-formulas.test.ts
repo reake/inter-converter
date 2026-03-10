@@ -13,8 +13,8 @@ describe('EngineFormulas', () => {
     });
 
     test('calculates CFM from liters correctly', () => {
-      expect(EngineFormulas.calculateCFMFromLiters(5.7, 'stock')).toBeCloseTo(563.2, 1);
-      expect(EngineFormulas.calculateCFMFromLiters(5.7, 'street-strip')).toBeCloseTo(612.8, 1);
+      expect(EngineFormulas.calculateCFMFromLiters(5.7, 'stock')).toBeCloseTo(562.8, 1);
+      expect(EngineFormulas.calculateCFMFromLiters(5.7, 'street-strip')).toBeCloseTo(612.2, 1);
     });
   });
 
@@ -112,17 +112,17 @@ describe('EngineFormulas', () => {
   describe('Torque and Horsepower Relationships', () => {
     test('calculates torque from HP and RPM correctly', () => {
       expect(EngineFormulas.calculateTorque(300, 5252)).toBeCloseTo(300, 1);
-      expect(EngineFormulas.calculateTorque(400, 6000)).toBeCloseTo(350, 1);
+      expect(EngineFormulas.calculateTorque(400, 6000)).toBeCloseTo(350.1, 1);
     });
 
     test('calculates horsepower from torque and RPM correctly', () => {
       expect(EngineFormulas.calculateHorsepower(300, 5252)).toBeCloseTo(300, 1);
-      expect(EngineFormulas.calculateHorsepower(350, 6000)).toBeCloseTo(400, 1);
+      expect(EngineFormulas.calculateHorsepower(350, 6000)).toBeCloseTo(399.8, 1);
     });
 
     test('calculates RPM from HP and torque correctly', () => {
       expect(EngineFormulas.calculateRPM(300, 300)).toBeCloseTo(5252, 1);
-      expect(EngineFormulas.calculateRPM(400, 350)).toBeCloseTo(6000, 1);
+      expect(EngineFormulas.calculateRPM(400, 350)).toBeCloseTo(6002.3, 1);
     });
 
     test('torque and HP are equal at 5252 RPM', () => {
@@ -166,7 +166,7 @@ describe('EngineFormulas', () => {
     test('bore and stroke to displacement calculation', () => {
       const cylinderVolume = EngineFormulas.calculateCylinderVolume(4.0, 3.48);
       const totalDisplacement = EngineFormulas.calculateEngineDisplacement(cylinderVolume, 8);
-      expect(totalDisplacement).toBeCloseTo(350, 1);
+      expect(totalDisplacement).toBeCloseTo(349.8, 1);
     });
   });
 });

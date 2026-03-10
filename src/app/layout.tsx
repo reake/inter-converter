@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { ThemeProvider } from '@/components/theme-provider';
 import { WebVitals, PerformanceMonitor, ResourceMonitor } from '@/components/performance/WebVitals';
 import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics';
+import { GoogleAdsense } from '@/components/analytics/GoogleAdsense';
 import "./globals.css";
 import type { Metadata } from "next";
 
@@ -51,6 +52,7 @@ export default async function RootLayout({
       </head>
       <body>
         <GoogleAnalytics />
+        <GoogleAdsense />
         <ThemeProvider
           attribute="class"
           defaultTheme={defaultThemeEnv as any}
