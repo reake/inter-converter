@@ -1,14 +1,14 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import { ColorPaletteGenerator } from '@/components/converters/color/ColorPaletteGenerator';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
 import enTool from '@/data/tools/color/color-palette-generator-en.json';
 import zhTool from '@/data/tools/color/color-palette-generator-zh.json';
 import colorEn from '@/data/tools/color.json';
 import colorZh from '@/data/tools/color-zh.json';
-import { ToolContent } from '@/types/tool-content';
 import { normalizeToolContent } from '@/utils/normalize-tool-content';
+import { buildToolPageMetadata } from '@/lib/seo/tool-page-metadata';
+import { getLocalizedToolEntry, type ToolCatalogEntry } from '@/lib/tool-page-catalog';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -21,15 +21,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const l = (locale || 'en').toLowerCase();
 
-  const catalogs: Record<string, any[]> = {
-    en: colorEn as any[],
-    zh: (colorZh as any[]) || (colorEn as any[])
-  };
-  const getEntry = (id: string) => {
-    const list = catalogs[l] || catalogs.en;
-    return list.find((it) => it.id === id) || catalogs.en.find((it) => it.id === id);
-  };
-  const entry = getEntry('color-palette-generator');
+  const entry = getLocalizedToolEntry(l, 'color-palette-generator', colorEn as ToolCatalogEntry[], colorZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name ?? 'Color Palette Generator';
   const description: string = entry?.description ?? 'Generate beautiful color palettes using color theory. Create monochromatic, complementary, triadic and other color schemes instantly for web design and branding.';
@@ -41,48 +33,16 @@ export async function generateMetadata({
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
 
-  const canonicalPath = `${l === "en" ? "" : "/" + l}/color/color-palette-generator`;
 
-  return {
+  return buildToolPageMetadata({
+    locale: l,
+    category: 'color',
+    toolId: 'color-palette-generator',
     title,
     description,
-    keywords: keywords.join(', '),
-    openGraph: {
-      title,
-      description,
-      type: 'website',
-      locale: l === 'zh' ? 'zh_CN' : 'en_US',
-      images: [
-        {
-          url: '/icons/icon-512x512.png',
-          width: 512,
-          height: 512,
-          alt: toolName
-        }
-      ]
-    },
-    alternates: {
-      canonical: canonicalPath,
-      languages: {
-        en: '/color/color-palette-generator',
-        zh: '/zh/color/color-palette-generator'
-      }
-    },
-    authors: [{ name: 'InterConverter Team' }],
-    creator: 'InterConverter',
-    publisher: 'InterConverter',
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1
-      }
-    }
-  };
+    keywords,
+    path: '/color/color-palette-generator'
+  });
 }
 
 export default async function ColorPaletteGeneratorPage({
@@ -97,11 +57,7 @@ export default async function ColorPaletteGeneratorPage({
   const rawContent = l === 'zh' ? zhTool : enTool;
   const toolContent = normalizeToolContent(rawContent);
 
-  const faqs = getFAQsByToolId('color-palette-generator', 'color');
-
-  const catalogs: Record<string, any[]> = { en: colorEn as any[], zh: (colorZh as any[]) || (colorEn as any[]) };
-  const catalog = catalogs[l] || catalogs.en;
-  const entry = catalog.find((it) => it.id === 'color-palette-generator') || (colorEn as any[]).find((it) => it.id === 'color-palette-generator');
+  const entry = getLocalizedToolEntry(l, 'color-palette-generator', colorEn as ToolCatalogEntry[], colorZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name || 'Color Palette Generator';
   const descriptionText: string = entry?.description || 'Generate beautiful color palettes using color theory with instant calculations and harmonious color schemes.';

@@ -6,8 +6,9 @@ import enTool from '@/data/tools/finance/usd-to-jpy-calculator-en.json';
 import zhTool from '@/data/tools/finance/usd-to-jpy-calculator-zh.json';
 import financeEn from '@/data/tools/finance.json';
 import financeZh from '@/data/tools/finance-zh.json';
-import { ToolContent } from '@/types/tool-content';
 import { normalizeToolContent } from '@/utils/normalize-tool-content';
+import { buildToolPageMetadata, resolveToolPageDescription } from '@/lib/seo/tool-page-metadata';
+import { getLocalizedToolEntry, type ToolCatalogEntry } from '@/lib/tool-page-catalog';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -20,14 +21,10 @@ export async function generateMetadata({
   const { locale } = await params;
   const l = (locale || 'en').toLowerCase();
 
-  const catalogs: Record<string, any[]> = {
-    en: financeEn as any[],
-    zh: (financeZh as any[]) || (financeEn as any[])
-  };
-  const entry = catalogs[l]?.find((it) => it.id === 'usd-to-jpy-calculator') || catalogs.en.find((it) => it.id === 'usd-to-jpy-calculator');
+  const entry = getLocalizedToolEntry(l, 'usd-to-jpy-calculator', financeEn as ToolCatalogEntry[], financeZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name ?? 'CurrencyConverter';
-  const description: string = entry?.description ?? 'Professional financial calculator for accurate calculations and planning.';
+  const description: string = resolveToolPageDescription(entry?.description, 'finance');
   const baseKeywords = generateOptimizedKeywords('usd-to-jpy-calculator', 'finance', 'CurrencyConverter');
   const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
     ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
@@ -35,48 +32,16 @@ export async function generateMetadata({
 
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
-  const canonicalPath = `${l === "en" ? "" : "/" + l}/finance/usd-to-jpy-calculator`;
 
-  return {
+  return buildToolPageMetadata({
+    locale: l,
+    category: 'finance',
+    toolId: 'usd-to-jpy-calculator',
     title,
     description,
-    keywords: keywords.join(', '),
-    openGraph: {
-      title,
-      description,
-      type: 'website',
-      locale: l === 'zh' ? 'zh_CN' : 'en_US',
-      images: [
-        {
-          url: '/icons/icon-512x512.png',
-          width: 512,
-          height: 512,
-          alt: toolName
-        }
-      ]
-    },
-    alternates: {
-      canonical: canonicalPath,
-      languages: {
-        en: '/finance/usd-to-jpy-calculator',
-        zh: '/zh/finance/usd-to-jpy-calculator'
-      }
-    },
-    authors: [{ name: 'InterConverter Team' }],
-    creator: 'InterConverter',
-    publisher: 'InterConverter',
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1
-      }
-    }
-  };
+    keywords,
+    path: '/finance/usd-to-jpy-calculator'
+  });
 }
 
 export default async function CurrencyConverterPage({
@@ -96,11 +61,10 @@ export default async function CurrencyConverterPage({
   const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
   const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
 
-  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
-  const entry = catalogs[l]?.find((it) => it.id === 'usd-to-jpy-calculator') || catalogs.en.find((it) => it.id === 'usd-to-jpy-calculator');
+  const entry = getLocalizedToolEntry(l, 'usd-to-jpy-calculator', financeEn as ToolCatalogEntry[], financeZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name || 'CurrencyConverter';
-  const descriptionText: string = entry?.description || 'Professional financial calculator for accurate calculations and planning.';
+  const descriptionText: string = resolveToolPageDescription(entry?.description, 'finance');
   const baseKeywords = generateOptimizedKeywords('usd-to-jpy-calculator', 'finance', 'CurrencyConverter');
   const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
     ? Array.from(new Set([...baseKeywords, ...entry.keywords]))

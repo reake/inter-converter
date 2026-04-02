@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -23,7 +23,7 @@ export default function FifteenYearMortgageCalculator() {
   const [homeInsurance, setHomeInsurance] = useState<string>('1200');
   const [results, setResults] = useState<MortgageResults | null>(null);
 
-  const calculateMortgage = () => {
+  const calculateMortgage = useCallback(() => {
     const price = parseFloat(homePrice);
     const down = parseFloat(downPayment);
     const rate = parseFloat(interestRate) / 100 / 12;
@@ -62,11 +62,11 @@ export default function FifteenYearMortgageCalculator() {
       interestSavings,
       payoffDate: payoffDate.toLocaleDateString()
     });
-  };
+  }, [homePrice, downPayment, interestRate, propertyTax, homeInsurance]);
 
   useEffect(() => {
     calculateMortgage();
-  }, [homePrice, downPayment, interestRate, propertyTax, homeInsurance]);
+  }, [calculateMortgage]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

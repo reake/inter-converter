@@ -1,84 +1,87 @@
 {
   "about": {
     "title": "About Timestamp Converter",
-    "description": "The Timestamp Converter converts between human-readable dates and Unix timestamps (epoch time). Essential for developers, system administrators, and anyone working with databases, APIs, or log files that use timestamp formats. Supports bidirectional conversion with multiple timestamp formats including seconds and milliseconds since epoch, making it invaluable for debugging, data analysis, and system integration tasks."
+    "description": [
+      "This timestamp converter is built for the common job of moving between Unix time and readable dates without guessing whether the input is in seconds or milliseconds.",
+      "It is most useful when you are reading API responses, checking database values, reviewing logs, or debugging event timing. The goal is not only to show a converted value, but to make the format easier to verify before you paste it into code, dashboards, or documentation."
+    ]
   },
   "howTo": {
     "title": "How to Use the Timestamp Converter",
     "steps": [
       {
-        "title": "Enter Timestamp or Date",
-        "description": "Input a Unix timestamp or select current time, or enter a human-readable date."
+        "title": "Paste the value or enter a date",
+        "description": "Start with either the raw Unix timestamp you received from a log or API, or type the human-readable date you want to convert."
       },
       {
-        "title": "Choose Format",
-        "description": "Select between seconds or milliseconds timestamp format."
+        "title": "Check whether the value is in seconds or milliseconds",
+        "description": "Most 10-digit Unix values are seconds and most 13-digit values are milliseconds. Use that as a quick sanity check before trusting the result."
       },
       {
-        "title": "View Conversion",
-        "description": "See the bidirectional conversion between timestamp and readable date."
+        "title": "Review the converted date in context",
+        "description": "Look at the full date, time, and timezone context rather than only the numeric timestamp. This catches off-by-hours errors early."
       },
       {
-        "title": "Copy Results",
-        "description": "Copy the converted result for use in your applications or systems."
+        "title": "Copy the format that matches your workflow",
+        "description": "Use the converted output that fits your task, such as a readable date for QA notes or a Unix value for code, logs, and scripts."
       }
     ],
     "tips": [
-      "10-digit timestamps are in seconds, 13-digit are in milliseconds",
-      "Use current timestamp for real-time applications",
-      "Consider time zone differences for accurate conversions"
+      "10-digit timestamps are usually seconds; 13-digit timestamps are usually milliseconds.",
+      "A correct conversion can still be misleading if you read it in the wrong timezone.",
+      "When debugging an API, compare the converted value against the event time you expected rather than assuming the payload is correct."
     ]
   },
   "features": [
     {
-      "title": "Bidirectional Conversion",
-      "description": "Convert from Unix timestamp to date and from date to Unix timestamp seamlessly."
+      "title": "Second vs millisecond checks",
+      "description": "The page is useful for the most common timestamp mistake: reading a millisecond value as seconds or the other way around."
     },
     {
-      "title": "Multiple Formats",
-      "description": "Support for both seconds and milliseconds timestamp formats with automatic detection."
+      "title": "Readable date output",
+      "description": "The result is easier to verify when you need to compare a raw Unix value against a log line, deployment event, or scheduled task."
     },
     {
-      "title": "Current Timestamp",
-      "description": "Generate current Unix timestamp for real-time applications and testing."
+      "title": "Developer workflow support",
+      "description": "Useful for API debugging, database checks, analytics validation, and support work where raw epoch values appear regularly."
     },
     {
-      "title": "Date Format Options",
-      "description": "Display converted dates in multiple human-readable formats for flexibility."
+      "title": "Current time reference",
+      "description": "A current timestamp reference helps when you need a quick baseline for testing webhooks, caching, or expiry logic."
     },
     {
-      "title": "Timezone Support",
-      "description": "Handle different time zones and daylight saving time adjustments accurately."
+      "title": "Timezone awareness",
+      "description": "The page is most valuable when you use it together with timezone awareness instead of treating timestamps as plain local clock values."
     },
     {
-      "title": "Batch Processing",
-      "description": "Convert multiple timestamps or dates simultaneously for efficiency."
+      "title": "Copy-ready outputs",
+      "description": "Converted values can be copied directly into issue reports, code comments, test fixtures, or debugging notes."
     }
   ],
   "faq": [
     {
-      "q": "What is a Unix timestamp and how does it work?",
-      "a": "A Unix timestamp is the number of seconds (or milliseconds) that have elapsed since January 1, 1970, 00:00:00 UTC, also known as the Unix epoch. Our timestamp converter handles both formats for accurate date-time conversions."
+      "q": "What is a Unix timestamp?",
+      "a": "A Unix timestamp is the count of time elapsed since January 1, 1970 00:00:00 UTC. It is often stored in seconds or milliseconds so systems can compare, sort, and transmit dates in a machine-friendly format."
     },
     {
-      "q": "How do I know if my timestamp is in seconds or milliseconds?",
-      "a": "Timestamps with 10 digits are typically in seconds, while 13-digit timestamps are in milliseconds. Our timestamp converter automatically detects the format and converts accordingly for accurate results."
+      "q": "Why does the same timestamp look wrong by several hours?",
+      "a": "The raw timestamp may be correct while the displayed time is being interpreted in a different timezone. Check whether you are comparing UTC output against a local event time."
     },
     {
-      "q": "Does the timestamp converter handle different time zones?",
-      "a": "Yes, our timestamp converter can display results in different time zones and accounts for daylight saving time changes. This ensures accurate conversions regardless of your geographic location."
+      "q": "How can I quickly tell seconds from milliseconds?",
+      "a": "As a rule of thumb, 10 digits usually means seconds and 13 digits usually means milliseconds. If a converted year looks wildly wrong, that is often the first thing to check."
     },
     {
-      "q": "What's the valid range for timestamp conversion?",
-      "a": "The timestamp converter supports timestamps from 1970 to 2038 for 32-bit systems, and extends much further for 64-bit timestamps. This covers virtually all practical use cases for modern applications."
+      "q": "Is this tool useful outside software development?",
+      "a": "Yes. It also helps with analytics exports, CSV cleanup, support investigations, and any workflow where a system stores dates as raw epoch values."
     },
     {
-      "q": "Can I convert current time to timestamp?",
-      "a": "Yes, our timestamp converter includes a current timestamp generator that provides the current Unix timestamp in both seconds and milliseconds formats. Perfect for real-time applications and testing."
+      "q": "Can I rely on the converted value without double-checking it?",
+      "a": "You should still verify important dates against the source system, especially when timezone, daylight saving time, or export formatting may affect what you expected to see."
     },
     {
-      "q": "Is the timestamp converter useful for developers?",
-      "a": "Absolutely! The timestamp converter is essential for developers working with databases, APIs, log files, and any system that uses Unix timestamps. It simplifies debugging and data analysis tasks significantly."
+      "q": "What is the most common timestamp mistake?",
+      "a": "The most common mistake is confusing seconds and milliseconds. The second most common mistake is comparing a UTC timestamp to a local event time without noticing the timezone difference."
     }
   ],
   "relativeLinks": [
@@ -89,10 +92,6 @@
     {
       "title": "Date Difference Calculator",
       "url": "/time/date-difference-calculator"
-    },
-    {
-      "title": "Countdown Timer",
-      "url": "/time/countdown-timer"
     },
     {
       "title": "Time Tools Category",

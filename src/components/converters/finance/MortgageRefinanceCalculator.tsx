@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -27,7 +27,7 @@ export default function MortgageRefinanceCalculator() {
   const [closingCosts, setClosingCosts] = useState<string>('5000');
   const [results, setResults] = useState<RefinanceResults | null>(null);
 
-  const calculateRefinance = () => {
+  const calculateRefinance = useCallback(() => {
     const balance = parseFloat(currentBalance);
     const currentR = parseFloat(currentRate) / 100 / 12;
     const currentMonths = parseFloat(currentYearsLeft) * 12;
@@ -69,11 +69,11 @@ export default function MortgageRefinanceCalculator() {
       interestSavings,
       worthRefinancing
     });
-  };
+  }, [currentBalance, currentRate, currentYearsLeft, newRate, newTerm, closingCosts]);
 
   useEffect(() => {
     calculateRefinance();
-  }, [currentBalance, currentRate, currentYearsLeft, newRate, newTerm, closingCosts]);
+  }, [calculateRefinance]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

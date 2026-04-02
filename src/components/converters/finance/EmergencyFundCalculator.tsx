@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -26,7 +26,7 @@ export default function EmergencyFundCalculator() {
   const [employmentType, setEmploymentType] = useState<string>('stable');
   const [results, setResults] = useState<EmergencyFundResults | null>(null);
 
-  const calculateEmergencyFund = () => {
+  const calculateEmergencyFund = useCallback(() => {
     const expenses = parseFloat(monthlyExpenses);
     const current = parseFloat(currentSavings);
     const contribution = parseFloat(monthlyContribution);
@@ -71,11 +71,11 @@ export default function EmergencyFundCalculator() {
       projectedBalance,
       riskAssessment
     });
-  };
+  }, [monthlyExpenses, currentSavings, monthlyContribution, interestRate, targetMonths, employmentType]);
 
   useEffect(() => {
     calculateEmergencyFund();
-  }, [monthlyExpenses, currentSavings, monthlyContribution, interestRate, targetMonths, employmentType]);
+  }, [calculateEmergencyFund]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -470,7 +470,7 @@ export default function EmergencyFundCalculator() {
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-green-600 font-bold">•</span>
-                        <span>Sleep better knowing you're prepared</span>
+                        <span>Sleep better knowing you&apos;re prepared</span>
                       </li>
                     </ul>
                   </CardContent>

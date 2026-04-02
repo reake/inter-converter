@@ -286,7 +286,7 @@ export default function InsuranceCalculator() {
             <li>• Review your coverage annually and after major life changes</li>
             <li>• Consider bundling policies for potential discounts</li>
             <li>• Maintain good credit score to get better rates</li>
-            <li>• Don't be underinsured - adequate coverage is crucial</li>
+            <li>• Don&apos;t be underinsured - adequate coverage is crucial</li>
             <li>• Consider umbrella policy for additional liability protection</li>
           </ul>
         </CardContent>

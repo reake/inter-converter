@@ -1,8 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -28,7 +27,7 @@ export default function HomeImprovementLoanCalculator() {
   const [creditScore, setCreditScore] = useState<string>('750');
   const [results, setResults] = useState<LoanResults | null>(null);
 
-  const calculateLoan = () => {
+  const calculateLoan = useCallback(() => {
     const cost = parseFloat(projectCost);
     const down = parseFloat(downPayment);
     const rate = parseFloat(interestRate) / 100 / 12;
@@ -58,11 +57,11 @@ export default function HomeImprovementLoanCalculator() {
         interest: interestPayment
       }
     });
-  };
+  }, [projectCost, downPayment, interestRate, loanTerm]);
 
   useEffect(() => {
     calculateLoan();
-  }, [projectCost, downPayment, interestRate, loanTerm, loanType, creditScore]);
+  }, [calculateLoan]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

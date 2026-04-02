@@ -31,6 +31,7 @@ export function SearchInput({
   onSearch,
   showSuggestions = true
 }: SearchInputProps) {
+  const inputAriaLabel = placeholder === 'Search...' ? 'Search converter tools' : placeholder;
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState<ToolSuggestion[]>([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -190,6 +191,7 @@ export function SearchInput({
         <input
           ref={inputRef}
           type="text"
+          aria-label={inputAriaLabel}
           placeholder={placeholder}
           value={query}
           onChange={handleInputChange}

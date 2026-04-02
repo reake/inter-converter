@@ -6,8 +6,9 @@ import enTool from '@/data/tools/unit/power-converter-en.json';
 import zhTool from '@/data/tools/unit/power-converter-zh.json';
 import unitEn from '@/data/tools/unit.json';
 import unitZh from '@/data/tools/unit-zh.json';
-import { ToolContent } from '@/types/tool-content';
 import { normalizeToolContent } from '@/utils/normalize-tool-content';
+import { buildToolPageMetadata } from '@/lib/seo/tool-page-metadata';
+import { getLocalizedToolEntry, type ToolCatalogEntry } from '@/lib/tool-page-catalog';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -20,11 +21,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const l = (locale || 'en').toLowerCase();
 
-  const catalogs: Record<string, any[]> = {
-    en: unitEn as any[],
-    zh: (unitZh as any[]) || (unitEn as any[])
-  };
-  const entry = catalogs[l]?.find((it) => it.id === 'power-converter') || catalogs.en.find((it) => it.id === 'power-converter');
+  const entry = getLocalizedToolEntry(l, 'power-converter', unitEn as ToolCatalogEntry[], unitZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name ?? 'PowerConverter';
   const description: string = entry?.description ?? '';
@@ -35,48 +32,16 @@ export async function generateMetadata({
 
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
-  const canonicalPath = `${l === "en" ? "" : "/" + l}/unit/power-converter`;
 
-  return {
+  return buildToolPageMetadata({
+    locale: l,
+    category: 'unit',
+    toolId: 'power-converter',
     title,
     description,
-    keywords: keywords.join(', '),
-    openGraph: {
-      title,
-      description,
-      type: 'website',
-      locale: l === 'zh' ? 'zh_CN' : 'en_US',
-      images: [
-        {
-          url: '/icons/icon-512x512.png',
-          width: 512,
-          height: 512,
-          alt: toolName
-        }
-      ]
-    },
-    alternates: {
-      canonical: canonicalPath,
-      languages: {
-        en: '/unit/power-converter',
-        zh: '/zh/unit/power-converter'
-      }
-    },
-    authors: [{ name: 'InterConverter Team' }],
-    creator: 'InterConverter',
-    publisher: 'InterConverter',
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1
-      }
-    }
-  };
+    keywords,
+    path: '/unit/power-converter'
+  });
 }
 
 export default async function PowerConverterPage({
@@ -90,11 +55,7 @@ export default async function PowerConverterPage({
   // Load JSON content based on locale
   const rawContent = l === 'zh' ? zhTool : enTool;
   const toolContent = normalizeToolContent(rawContent);
-  const catalogs: Record<string, any[]> = {
-    en: unitEn as any[],
-    zh: (unitZh as any[]) || (unitEn as any[])
-  };
-  const entry = catalogs[l]?.find((it) => it.id === 'power-converter') || catalogs.en.find((it) => it.id === 'power-converter');
+  const entry = getLocalizedToolEntry(l, 'power-converter', unitEn as ToolCatalogEntry[], unitZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name ?? 'PowerConverter';
   const description: string = entry?.description ?? '';

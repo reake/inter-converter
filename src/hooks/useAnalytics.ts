@@ -2,12 +2,6 @@
 
 import { useCallback } from 'react';
 
-interface GtagCommand {
-  (command: 'event', eventName: string, params?: Record<string, unknown>): void;
-  (command: 'config', targetId: string, params?: Record<string, unknown>): void;
-  (command: 'set', params: Record<string, unknown>): void;
-}
-
 interface Gtag {
   (command: string, ...args: unknown[]): void;
   getAll?: () => string[];

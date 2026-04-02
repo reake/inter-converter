@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -29,7 +29,7 @@ export default function BalanceTransferCalculator() {
   const [monthlyPayment, setMonthlyPayment] = useState<string>('200');
   const [results, setResults] = useState<TransferResults | null>(null);
 
-  const calculateTransfer = () => {
+  const calculateTransfer = useCallback(() => {
     const balance = parseFloat(currentBalance);
     const currentRate = parseFloat(currentAPR) / 100 / 12;
     const newRate = parseFloat(newAPR) / 100 / 12;
@@ -104,11 +104,11 @@ export default function BalanceTransferCalculator() {
       breakEvenMonths,
       worthTransferring
     });
-  };
+  }, [currentBalance, currentAPR, newAPR, promoLength, regularAPR, transferFeePercent, monthlyPayment]);
 
   useEffect(() => {
     calculateTransfer();
-  }, [currentBalance, currentAPR, newAPR, promoLength, regularAPR, transferFeePercent, monthlyPayment]);
+  }, [calculateTransfer]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -494,7 +494,7 @@ export default function BalanceTransferCalculator() {
                     <div className="text-center p-4 bg-purple-50 rounded-lg">
                       <div className="text-2xl mb-2">4️⃣</div>
                       <div className="font-semibold text-purple-800">Avoid New Debt</div>
-                      <div className="text-sm text-purple-600 mt-1">Don't use old cards again</div>
+                      <div className="text-sm text-purple-600 mt-1">Don&apos;t use old cards again</div>
                     </div>
                   </div>
                 </CardContent>

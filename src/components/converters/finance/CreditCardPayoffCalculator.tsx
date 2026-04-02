@@ -114,7 +114,7 @@ export default function CreditCardPayoffCalculator() {
             💳 Credit Card Payoff Calculator
           </CardTitle>
           <CardDescription>
-            Calculate how long it will take to pay off your credit card debt and how much interest you'll pay
+            Calculate how long it will take to pay off your credit card debt and how much interest you&apos;ll pay
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">

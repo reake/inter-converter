@@ -109,19 +109,19 @@ export function RPMCalculator() {
               <h4 className="font-semibold text-gray-700">Highway Cruising (70 MPH)</h4>
               <div className="text-sm space-y-2">
                 <div className="flex justify-between">
-                  <span>3.08 ratio, 28" tires:</span>
+                  <span>3.08 ratio, 28&quot; tires:</span>
                   <span className="font-mono">2,600 RPM</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>3.42 ratio, 28" tires:</span>
+                  <span>3.42 ratio, 28&quot; tires:</span>
                   <span className="font-mono">2,880 RPM</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>3.73 ratio, 28" tires:</span>
+                  <span>3.73 ratio, 28&quot; tires:</span>
                   <span className="font-mono">3,140 RPM</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>4.10 ratio, 28" tires:</span>
+                  <span>4.10 ratio, 28&quot; tires:</span>
                   <span className="font-mono">3,450 RPM</span>
                 </div>
               </div>
@@ -131,19 +131,19 @@ export function RPMCalculator() {
               <h4 className="font-semibold text-gray-700">City Driving (35 MPH)</h4>
               <div className="text-sm space-y-2">
                 <div className="flex justify-between">
-                  <span>3.08 ratio, 28" tires:</span>
+                  <span>3.08 ratio, 28&quot; tires:</span>
                   <span className="font-mono">1,300 RPM</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>3.42 ratio, 28" tires:</span>
+                  <span>3.42 ratio, 28&quot; tires:</span>
                   <span className="font-mono">1,440 RPM</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>3.73 ratio, 28" tires:</span>
+                  <span>3.73 ratio, 28&quot; tires:</span>
                   <span className="font-mono">1,570 RPM</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>4.10 ratio, 28" tires:</span>
+                  <span>4.10 ratio, 28&quot; tires:</span>
                   <span className="font-mono">1,725 RPM</span>
                 </div>
               </div>
@@ -164,15 +164,15 @@ export function RPMCalculator() {
               <div className="text-sm space-y-1">
                 <div className="flex justify-between">
                   <span>205/55R16</span>
-                  <span>24.9"</span>
+                  <span>24.9&quot;</span>
                 </div>
                 <div className="flex justify-between">
                   <span>225/60R16</span>
-                  <span>26.6"</span>
+                  <span>26.6&quot;</span>
                 </div>
                 <div className="flex justify-between">
                   <span>235/65R17</span>
-                  <span>29.0"</span>
+                  <span>29.0&quot;</span>
                 </div>
               </div>
             </div>
@@ -182,15 +182,15 @@ export function RPMCalculator() {
               <div className="text-sm space-y-1">
                 <div className="flex justify-between">
                   <span>245/40R18</span>
-                  <span>25.7"</span>
+                  <span>25.7&quot;</span>
                 </div>
                 <div className="flex justify-between">
                   <span>275/35R19</span>
-                  <span>26.6"</span>
+                  <span>26.6&quot;</span>
                 </div>
                 <div className="flex justify-between">
                   <span>295/30R20</span>
-                  <span>27.0"</span>
+                  <span>27.0&quot;</span>
                 </div>
               </div>
             </div>
@@ -200,15 +200,15 @@ export function RPMCalculator() {
               <div className="text-sm space-y-1">
                 <div className="flex justify-between">
                   <span>265/70R17</span>
-                  <span>31.6"</span>
+                  <span>31.6&quot;</span>
                 </div>
                 <div className="flex justify-between">
                   <span>285/75R16</span>
-                  <span>32.8"</span>
+                  <span>32.8&quot;</span>
                 </div>
                 <div className="flex justify-between">
                   <span>33x12.50R15</span>
-                  <span>33.0"</span>
+                  <span>33.0&quot;</span>
                 </div>
               </div>
             </div>

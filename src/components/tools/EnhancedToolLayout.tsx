@@ -56,18 +56,18 @@ export function EnhancedToolLayout({
     "Works offline",
     "Mobile-friendly interface"
   ];
+  const l = (locale || 'en').toLowerCase();
 
   const howToUseSteps = customHowToUse || defaultHowToUse;
   const features = customFeatures || defaultFeatures;
   const normalizedFaqs = faqs || [];
   const structuredData = includeStructuredData
-    ? generateEnhancedStructuredData(baseUrl, title, description, toolId, category, normalizedFaqs, howToUseSteps)
+    ? generateEnhancedStructuredData(baseUrl, title, description, toolId, category, l, normalizedFaqs, howToUseSteps)
     : null;
   
   const toolsToShow = relatedTools;
 
   // Localized section titles
-  const l = (locale || 'en').toLowerCase();
   const defaultTitles = l === 'zh'
   ? {
       about: `关于${title}`,
@@ -101,10 +101,10 @@ export function EnhancedToolLayout({
         />
       )}
       {/* Breadcrumb Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateBreadcrumbStructuredData(baseUrl, title, category, toolId)),
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbStructuredData(baseUrl, title, category, toolId, l)),
         }}
       />
       {/* x-default hreflang */}
@@ -231,10 +231,12 @@ function generateEnhancedStructuredData(
   description: string,
   toolId: string,
   category: string,
+  locale: string,
   faqs: FAQ[],
   howToUse?: string[]
 ) {
-  const toolUrl = `${baseUrl}/${category}/${toolId}`;
+  const localePrefix = locale === 'en' ? '' : `/${locale}`;
+  const toolUrl = `${baseUrl}${localePrefix}/${category}/${toolId}`;
 
   const structuredData: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -270,7 +272,7 @@ function generateEnhancedStructuredData(
     },
     "datePublished": "2024-01-01",
     "dateModified": new Date().toISOString().split('T')[0],
-    "inLanguage": "en"
+    "inLanguage": locale
   };
 
   // Add FAQ structured data if available
@@ -318,7 +320,15 @@ function generateEnhancedStructuredData(
 }
 
 // Breadcrumb structured data generator
-function generateBreadcrumbStructuredData(baseUrl: string, title: string, category: string, toolId: string) {
+function generateBreadcrumbStructuredData(
+  baseUrl: string,
+  title: string,
+  category: string,
+  toolId: string,
+  locale: string,
+) {
+  const localePrefix = locale === 'en' ? '' : `/${locale}`;
+
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -327,13 +337,13 @@ function generateBreadcrumbStructuredData(baseUrl: string, title: string, catego
         "@type": "ListItem",
         "position": 1,
         "name": category.charAt(0).toUpperCase() + category.slice(1),
-        "item": `${baseUrl}/${category}`
+        "item": `${baseUrl}${localePrefix}/${category}`
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": title,
-        "item": `${baseUrl}/${category}/${toolId}`
+        "item": `${baseUrl}${localePrefix}/${category}/${toolId}`
       }
     ]
   };

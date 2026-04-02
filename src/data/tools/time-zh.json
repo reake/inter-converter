@@ -2,8 +2,8 @@
   {
     "id": "timestamp-converter",
     "name": "Unix时间戳转换器",
-    "description": "将Unix时间戳转换为可读日期，反之亦然，支持时区。专业纪元时间转换器，为开发人员和系统管理员设计。",
-    "titleSuffix": "纪元日期时间工具",
+    "description": "在 Unix 时间戳与可读日期之间快速转换，可处理秒和毫秒输入，并查看 UTC 或本地时间，方便调试接口、日志和数据库里的时间字段。",
+    "titleSuffix": "Unix 与纪元",
     "category": "time",
     "keywords": [
       "时间戳转换器",
@@ -27,8 +27,8 @@
   {
     "id": "timezone-converter",
     "name": "时区转换器",
-    "description": "在全球不同时区之间转换时间，支持夏令时。专业时区转换器，用于国际调度和全球协调。",
-    "titleSuffix": "全球时区",
+    "description": "在城市和时区之间换算时间，自动考虑夏令时，适合会议安排、交接班和跨国协作，也能帮助你确认同一时刻在不同地区的显示结果。",
+    "titleSuffix": "世界时间",
     "category": "time",
     "keywords": [
       "时区转换器",
@@ -52,8 +52,8 @@
   {
     "id": "date-difference-calculator",
     "name": "日期差计算器",
-    "description": "计算两个日期之间的天数、月数和年数差异。综合日期差计算器，用于项目规划和年龄计算。",
-    "titleSuffix": "日期持续时间分析",
+    "description": "计算两个日期之间相差的天数、月数和年数，适合项目计划、年龄核对、账期和截止日，也便于你快速检查是否要包含结束日或工作日。",
+    "titleSuffix": "两个日期之间",
     "category": "time",
     "keywords": [
       "日期计算器",

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -56,13 +56,7 @@ export default function CurrencyConverter() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  useEffect(() => {
-    if (amount && fromCurrency && toCurrency) {
-      convertCurrency();
-    }
-  }, [amount, fromCurrency, toCurrency]);
-
-  const convertCurrency = async () => {
+  const convertCurrency = useCallback(async () => {
     if (!amount || isNaN(parseFloat(amount))) {
       setResult(null);
       setExchangeRate(null);
@@ -122,14 +116,20 @@ export default function CurrencyConverter() {
         lastUpdated: new Date()
       });
 
-    } catch (err) {
+    } catch {
       setError('Failed to get exchange rate. Please try again.');
       setResult(null);
       setExchangeRate(null);
     } finally {
       setLoading(false);
     }
-  };
+  }, [amount, fromCurrency, toCurrency]);
+
+  useEffect(() => {
+    if (amount && fromCurrency && toCurrency) {
+      void convertCurrency();
+    }
+  }, [amount, fromCurrency, toCurrency, convertCurrency]);
 
   const swapCurrencies = () => {
     const temp = fromCurrency;
@@ -145,7 +145,6 @@ export default function CurrencyConverter() {
   };
 
   const formatCurrency = (value: number, currency: string) => {
-    const currencyInfo = POPULAR_CURRENCIES.find(c => c.code === currency);
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: currency,

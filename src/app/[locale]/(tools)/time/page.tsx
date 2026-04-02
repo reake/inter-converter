@@ -3,11 +3,9 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { getTimeTools } from '@/config/tools';
+import { getReviewApprovedToolsByCategory } from '@/config/tools';
 import { ArrowRight, TrendingUp, Users, Star, Clock } from 'lucide-react';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo/metadata';
-import { HreflangLinks } from '@/components/seo/HreflangLinks';
-import { CanonicalLink } from '@/components/seo/CanonicalLink';
 import { JsonLd, generateWebsiteSchema } from '@/components/seo/JsonLd';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -32,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function TimeToolsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'categoryPages.time' });
-  const timeTools = getTimeTools(undefined, locale);
+  const timeTools = getReviewApprovedToolsByCategory('time', locale);
   
   const toolCategories = [
     {
@@ -62,26 +60,13 @@ export default async function TimeToolsPage({ params }: { params: Promise<{ loca
       icon: '⏱️',
       color: 'bg-purple-50 border-purple-200'
     }
-  ];
+  ].filter((category) => category.tools.length > 0);
   
   // Popular tools (high search volume)
   const popularTools = timeTools.filter(tool => (tool.searchVolume || 0) > 50000);
-  
-  // Essential tools (most commonly used)
-  const essentialTools = timeTools.filter(tool => (tool.difficulty || 1) === 1);
-  
-  // Advanced tools (for professionals)
-  const advancedTools = timeTools.filter(tool => (tool.difficulty || 1) >= 2);
-
-  // All tools sorted by popularity
-  const allTools = timeTools
-    .sort((a, b) => (b.searchVolume || 0) - (a.searchVolume || 0))
-    .slice(0, 4);
 
   return (
     <>
-      <HreflangLinks pathname="/time" />
-      <CanonicalLink pathname="/time" locale={locale} />
       <JsonLd data={generateWebsiteSchema(locale)} />
       
       <div className="container mx-auto px-4 py-8 max-w-7xl">
@@ -119,14 +104,14 @@ export default async function TimeToolsPage({ params }: { params: Promise<{ loca
           <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('sections.popular.title')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {popularTools.map((tool) => (
-              <Link key={tool.id} href={tool.path as any} className="group">
+              <Link key={tool.id} href={tool.path} className="group">
                 <Card className="h-full hover:shadow-lg transition-all duration-200 border-2 hover:border-primary/20">
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between">
                       <div className="text-2xl">{tool.icon}</div>
-                      <Badge variant="secondary" className="text-xs">
+                      {/* <Badge variant="secondary" className="text-xs">
                         {(tool.searchVolume || 0).toLocaleString()}
-                      </Badge>
+                      </Badge> */}
                     </div>
                     <CardTitle className="text-lg group-hover:text-primary transition-colors">
                       {tool.name}
@@ -167,20 +152,20 @@ export default async function TimeToolsPage({ params }: { params: Promise<{ loca
                 <CardContent>
                   <div className="space-y-2">
                     {category.tools.map((tool) => (
-                      <Link
-                        key={tool.id}
-                        href={tool.path as any}
-                        className="flex items-center justify-between p-3 rounded-lg bg-white/60 hover:bg-white/80 transition-colors group"
-                      >
+                    <Link
+                      key={tool.id}
+                      href={tool.path}
+                      className="flex items-center justify-between p-3 rounded-lg bg-white/60 hover:bg-white/80 transition-colors group"
+                    >
                         <div className="flex items-center gap-3">
                           <span className="text-lg">{tool.icon}</span>
                           <div>
                             <div className="font-medium text-gray-900 group-hover:text-primary transition-colors">
                               {tool.name}
                             </div>
-                            <div className="text-xs text-gray-500">
+                            {/* <div className="text-xs text-gray-500">
                               {(tool.searchVolume || 0).toLocaleString()} {t('common.monthlySearches')}
-                            </div>
+                            </div> */}
                           </div>
                         </div>
                         <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-primary group-hover:translate-x-1 transition-all" />

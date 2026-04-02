@@ -262,8 +262,8 @@ export function VolumetricEfficiencyCalculator() {
           <div>
             <h4 className="font-semibold mb-2">What is Volumetric Efficiency?</h4>
             <p className="text-sm text-muted-foreground">
-              Volumetric efficiency (VE) measures how well an engine fills its cylinders with air compared to the theoretical maximum. 
-              It's expressed as a percentage and indicates the engine's breathing efficiency.
+              Volumetric efficiency (VE) measures how well an engine fills its cylinders with air compared to the theoretical maximum.
+              It&apos;s expressed as a percentage and indicates the engine&apos;s breathing efficiency.
             </p>
           </div>
           

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -31,7 +31,7 @@ export default function FourOhOneKCalculator() {
   const [annualReturn, setAnnualReturn] = useState<string>('7');
   const [results, setResults] = useState<RetirementResults | null>(null);
 
-  const calculate401k = () => {
+  const calculate401k = useCallback(() => {
     const age = parseInt(currentAge);
     const retAge = parseInt(retirementAge);
     const balance = parseFloat(currentBalance);
@@ -53,7 +53,6 @@ export default function FourOhOneKCalculator() {
     const yearlyBreakdown = [];
 
     for (let year = 1; year <= yearsToRetirement; year++) {
-      let yearStartBalance = currentBalance401k;
       let yearContributions = 0;
       let yearEmployerMatch = 0;
       let yearGrowth = 0;
@@ -91,11 +90,11 @@ export default function FourOhOneKCalculator() {
       monthlyContribution,
       yearlyBreakdown
     });
-  };
+  }, [currentAge, retirementAge, currentBalance, annualSalary, contributionPercent, employerMatchPercent, annualReturn]);
 
   useEffect(() => {
     calculate401k();
-  }, [currentAge, retirementAge, currentBalance, annualSalary, contributionPercent, employerMatchPercent, annualReturn]);
+  }, [calculate401k]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -510,7 +509,7 @@ export default function FourOhOneKCalculator() {
                       <div className="text-2xl mb-2">🚨</div>
                       <div className="font-semibold text-red-800">Priority 1</div>
                       <div className="text-sm text-red-600 mt-1">
-                        Get full employer match - it's free money!
+                        Get full employer match - it&apos;s free money!
                       </div>
                     </div>
                     <div className="text-center p-4 bg-yellow-50 rounded-lg">

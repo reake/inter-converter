@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -62,8 +62,8 @@ export default function NotFound() {
             Converter Not Found
           </h2>
           <p className="text-lg md:text-xl text-blue-100 mb-4 max-w-3xl mx-auto leading-relaxed">
-            Oops! The conversion tool you're looking for seems to have converted itself into thin air. 
-            But don't worry – we have plenty of other amazing tools to help you convert anything!
+            Oops! The conversion tool you&apos;re looking for seems to have converted itself into thin air.
+            But don&apos;t worry - we have plenty of other useful tools to help you convert what you need.
           </p>
           {/* Countdown hint */}
           <p className="text-base md:text-lg text-white/95 font-medium drop-shadow mb-8">
@@ -105,7 +105,7 @@ export default function NotFound() {
               Try These Popular Tools Instead
             </h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              While you're here, check out some of our most popular conversion tools
+              While you&apos;re here, check out some of our most popular conversion tools
             </p>
           </div>
 
@@ -180,7 +180,7 @@ export default function NotFound() {
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">Contact Us</h4>
               <p className="text-gray-600 text-sm mb-4">
-                Can't find what you need? Let us know!
+                Can&apos;t find what you need? Let us know!
               </p>
               <Button asChild variant="outline" size="sm">
                 <Link href="/contact">Get Help</Link>

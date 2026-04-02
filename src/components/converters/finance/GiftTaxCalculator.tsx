@@ -1,12 +1,29 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Calculator, DollarSign, Users, FileText } from 'lucide-react';
+
+const ANNUAL_EXCLUSION = 18000;
+const LIFETIME_EXEMPTION = 13610000;
+const GIFT_TAX_RATES = [
+  { min: 0, max: 10000, rate: 0.18 },
+  { min: 10000, max: 20000, rate: 0.20 },
+  { min: 20000, max: 40000, rate: 0.22 },
+  { min: 40000, max: 60000, rate: 0.24 },
+  { min: 60000, max: 80000, rate: 0.26 },
+  { min: 80000, max: 100000, rate: 0.28 },
+  { min: 100000, max: 150000, rate: 0.30 },
+  { min: 150000, max: 250000, rate: 0.32 },
+  { min: 250000, max: 500000, rate: 0.34 },
+  { min: 500000, max: 750000, rate: 0.37 },
+  { min: 750000, max: 1000000, rate: 0.39 },
+  { min: 1000000, max: Infinity, rate: 0.40 }
+] as const;
 
 export function GiftTaxCalculator() {
   const [giftAmount, setGiftAmount] = useState<string>('');
@@ -21,25 +38,7 @@ export function GiftTaxCalculator() {
     needsReturn: boolean;
   } | null>(null);
 
-  // 2024 gift tax rates and exemptions
-  const ANNUAL_EXCLUSION = 18000;
-  const LIFETIME_EXEMPTION = 13610000;
-  const GIFT_TAX_RATES = [
-    { min: 0, max: 10000, rate: 0.18 },
-    { min: 10000, max: 20000, rate: 0.20 },
-    { min: 20000, max: 40000, rate: 0.22 },
-    { min: 40000, max: 60000, rate: 0.24 },
-    { min: 60000, max: 80000, rate: 0.26 },
-    { min: 80000, max: 100000, rate: 0.28 },
-    { min: 100000, max: 150000, rate: 0.30 },
-    { min: 150000, max: 250000, rate: 0.32 },
-    { min: 250000, max: 500000, rate: 0.34 },
-    { min: 500000, max: 750000, rate: 0.37 },
-    { min: 750000, max: 1000000, rate: 0.39 },
-    { min: 1000000, max: Infinity, rate: 0.40 }
-  ];
-
-  const calculateGiftTax = () => {
+  const calculateGiftTax = useCallback(() => {
     const gift = parseFloat(giftAmount) || 0;
     const previous = parseFloat(previousGifts) || 0;
     
@@ -79,13 +78,13 @@ export function GiftTaxCalculator() {
       remainingExemption: Math.max(0, LIFETIME_EXEMPTION - totalLifetimeGifts),
       needsReturn: gift > exclusion
     });
-  };
+  }, [giftAmount, relationship, previousGifts]);
 
   useEffect(() => {
     if (giftAmount) {
       calculateGiftTax();
     }
-  }, [giftAmount, relationship, previousGifts]);
+  }, [giftAmount, calculateGiftTax]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

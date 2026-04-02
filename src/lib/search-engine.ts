@@ -1,4 +1,5 @@
 import { ToolConfig } from '@/types/tools';
+import { isReviewApprovedTool } from '@/config/tools';
 import searchIndexEn from '@/data/search-index-en.json';
 import searchIndexZh from '@/data/search-index-zh.json';
 
@@ -55,6 +56,7 @@ class SearchEngine {
 
     for (const tool of toolsToSearch) {
       if (!tool.isActive) continue;
+      if (!isReviewApprovedTool(tool)) continue;
 
       const score = this.calculateScore(tool, lowercaseQuery);
       if (score > minScore) {

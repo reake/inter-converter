@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -42,7 +42,7 @@ export default function InterestOnlyMortgageCalculator() {
     'deep-subprime': 'Deep Subprime (300-500)'
   };
 
-  const calculateMortgage = () => {
+  const calculateMortgage = useCallback(() => {
     const principal = parseFloat(loanAmount);
     const monthlyRate = parseFloat(interestRate) / 100 / 12;
     const ioMonths = parseInt(interestOnlyPeriod);
@@ -90,7 +90,7 @@ export default function InterestOnlyMortgageCalculator() {
 
     // Generate amortization schedule
     generateAmortizationSchedule(principal, monthlyRate, ioMonths, totalMonths, interestOnlyPayment, principalAndInterestPayment);
-  };
+  }, [loanAmount, interestRate, interestOnlyPeriod, totalLoanTerm]);
 
   const generateAmortizationSchedule = (
     principal: number,
@@ -137,7 +137,7 @@ export default function InterestOnlyMortgageCalculator() {
 
   useEffect(() => {
     calculateMortgage();
-  }, [loanAmount, interestRate, interestOnlyPeriod, totalLoanTerm]);
+  }, [calculateMortgage]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -146,10 +146,6 @@ export default function InterestOnlyMortgageCalculator() {
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
     }).format(amount);
-  };
-
-  const formatNumber = (num: number) => {
-    return new Intl.NumberFormat('en-US').format(Math.round(num));
   };
 
   return (

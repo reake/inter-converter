@@ -1,13 +1,13 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Metadata } from 'next';
+import { Shield, Database, Eye, Lock, CheckCircle } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Shield, Eye, Database, Lock, Globe, CheckCircle } from 'lucide-react';
-import { Metadata } from 'next';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo/metadata';
 
 export async function generateMetadata({
-  params
+  params,
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
@@ -17,236 +17,159 @@ export async function generateMetadata({
   return generateSEOMetadata({
     title: isZh ? '隐私政策 | InterConverter' : 'Privacy Policy | InterConverter',
     description: isZh
-      ? '了解我们如何处理数据、保护隐私以及我们的安全承诺。'
-      : 'Learn how we handle data, protect privacy, and our security commitments.',
+      ? '了解 InterConverter 目前如何处理站点数据、浏览器端计算、分析脚本与联系请求。'
+      : 'Learn how InterConverter currently handles site data, browser-based calculations, analytics scripts, and contact requests.',
     locale,
     pathname: '/privacy',
     keywords: isZh
-      ? ['隐私政策', '数据安全', '隐私', 'InterConverter']
-      : ['privacy policy', 'data security', 'privacy', 'InterConverter']
+      ? ['隐私政策', '数据处理', '浏览器计算', 'InterConverter']
+      : ['privacy policy', 'data handling', 'browser-based tools', 'InterConverter'],
   });
 }
 
-
-
-
-// Force static generation
 export const dynamic = 'force-static';
+
+const lastUpdated = 'March 31, 2026';
+
 export default function PrivacyPage() {
-  const lastUpdated = 'January 1, 2024';
-
-  const privacyPrinciples = [
-    {
-      icon: <Shield className="h-6 w-6" />,
-      title: 'No Data Collection',
-      description: 'We do not collect, store, or transmit any personal data or calculation results.'
-    },
-    {
-      icon: <Eye className="h-6 w-6" />,
-      title: 'No Tracking',
-      description: 'No cookies, analytics, or tracking scripts that monitor your behavior.'
-    },
-    {
-      icon: <Database className="h-6 w-6" />,
-      title: 'Local Processing',
-      description: 'All calculations happen locally in your browser, never on our servers.'
-    },
-    {
-      icon: <Lock className="h-6 w-6" />,
-      title: 'Secure by Design',
-      description: 'Built with privacy and security as core principles from the ground up.'
-    }
-  ];
-
   return (
-    <div className="container mx-auto px-4 py-12 max-w-4xl">
-      {/* Header */}
-      <div className="text-center mb-12">
-        <div className="inline-flex items-center justify-center w-16 h-16 bg-green-50 dark:bg-green-950 rounded-2xl mb-6">
+    <div className="container mx-auto max-w-4xl px-4 py-12">
+      <div className="mb-12 text-center">
+        <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-green-50 dark:bg-green-950">
           <Shield className="h-8 w-8 text-green-600" />
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Your privacy is our priority. Learn how we protect your data and respect your privacy.
+        <h1 className="mb-4 text-4xl font-bold md:text-5xl">Privacy Policy</h1>
+        <p className="mx-auto max-w-2xl text-xl text-gray-600">
+          This page explains what InterConverter does with site-level data, what happens in the
+          browser when you use a featured tool, and where the limits of that privacy model are.
         </p>
         <Badge variant="secondary" className="mt-4">
           Last updated: {lastUpdated}
         </Badge>
       </div>
 
-      {/* Privacy Alert */}
       <Alert className="mb-8 border-green-200 bg-green-50 dark:bg-green-950">
         <CheckCircle className="h-4 w-4 text-green-600" />
         <AlertDescription className="text-green-800 dark:text-green-200">
-          <strong>TL;DR:</strong> We don't collect any personal data. All calculations happen in your browser. 
-          Your privacy is 100% protected.
+          <strong>Summary:</strong> many featured conversions run in the browser, but the site also
+          uses standard site infrastructure such as analytics and advertising scripts. This policy
+          describes those differences clearly.
         </AlertDescription>
       </Alert>
 
-      {/* Privacy Principles */}
-      <div className="mb-12">
-        <h2 className="text-2xl font-bold mb-8 text-center">Our Privacy Principles</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          {privacyPrinciples.map((principle, index) => (
-            <Card key={index}>
-              <CardContent className="pt-6">
-                <div className="flex items-start gap-4">
-                  <div className="text-green-600 mt-1">{principle.icon}</div>
-                  <div>
-                    <h3 className="font-semibold mb-2">{principle.title}</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">{principle.description}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+      <div className="mb-12 grid gap-6 md:grid-cols-2">
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Database className="h-5 w-5 text-green-600" />
+              Tool inputs
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-sm leading-6 text-gray-600">
+            Many featured calculators and converters perform their core logic locally in the browser.
+            When that is the case, the values you enter are processed on your device rather than
+            being sent to a custom server endpoint for conversion.
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Eye className="h-5 w-5 text-green-600" />
+              Site measurement
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-sm leading-6 text-gray-600">
+            The site may load standard analytics and advertising scripts for traffic measurement,
+            funding, and review operations. Those scripts are separate from the calculator logic and
+            should be understood as part of normal site operation.
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Lock className="h-5 w-5 text-green-600" />
+              Contact requests
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-sm leading-6 text-gray-600">
+            If you contact us by email, the information you provide in that message is used only to
+            review and respond to the request, including bug reports, policy questions, and support
+            follow-up.
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Shield className="h-5 w-5 text-green-600" />
+              Local preferences
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-sm leading-6 text-gray-600">
+            The site may store limited browser-side preferences such as theme or locale choices so
+            pages render more consistently on return visits.
+          </CardContent>
+        </Card>
       </div>
 
-      {/* Detailed Sections */}
       <div className="space-y-8">
         <Card>
           <CardHeader>
-            <CardTitle>Information We Do NOT Collect</CardTitle>
+            <CardTitle>What this site does not promise</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="grid md:grid-cols-2 gap-4">
-              <div>
-                <h4 className="font-semibold mb-2">Personal Information</h4>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Names, email addresses, or contact information</li>
-                  <li>• IP addresses or location data</li>
-                  <li>• Device identifiers or browser fingerprints</li>
-                  <li>• User accounts or profiles</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-2">Usage Data</h4>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Calculation inputs or results</li>
-                  <li>• Browsing history or behavior</li>
-                  <li>• Search queries or preferences</li>
-                  <li>• Analytics or tracking data</li>
-                </ul>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>How Our Tools Work</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-gray-600 mb-4">
-              All InterConverter tools are designed to work entirely in your browser using client-side JavaScript. 
-              This means:
+          <CardContent className="space-y-4 text-gray-600">
+            <p>
+              InterConverter does not promise complete anonymity or a zero-script environment. The
+              site is not presented as a privacy utility. It is a public tool site that tries to
+              keep the featured conversion workflows straightforward and to avoid unnecessary form
+              submission for basic calculations.
             </p>
-            <ul className="space-y-2 text-gray-600">
-              <li className="flex items-start gap-2">
-                <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                Your data never leaves your device
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                No server-side processing or storage
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                Tools work offline once loaded
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                No network requests for calculations
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>Cookies and Local Storage</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-gray-600 mb-4">
-              We use minimal local storage only for essential functionality:
-            </p>
-            <ul className="space-y-2 text-gray-600">
-              <li>• <strong>Theme Preference:</strong> To remember if you prefer light or dark mode</li>
-              <li>• <strong>Language Setting:</strong> To remember your preferred language</li>
-              <li>• <strong>No Tracking Cookies:</strong> We do not use any analytics or tracking cookies</li>
-            </ul>
-            <p className="text-sm text-gray-500 mt-4">
-              You can clear this data anytime through your browser settings without affecting functionality.
+            <p>
+              If you need guarantees beyond a typical public web application, do not rely on this
+              site for that purpose.
             </p>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <CardTitle>Third-Party Services</CardTitle>
+            <CardTitle>Browser-side processing</CardTitle>
           </CardHeader>
-          <CardContent>
-            <p className="text-gray-600 mb-4">
-              We minimize third-party dependencies to protect your privacy:
+          <CardContent className="space-y-4 text-gray-600">
+            <p>
+              Where a featured tool is implemented entirely in client-side code, the calculation is
+              performed in the browser after the page has loaded. That design reduces friction and
+              often avoids sending raw calculator inputs to a custom backend service.
             </p>
-            <ul className="space-y-2 text-gray-600">
-              <li>• <strong>No Analytics:</strong> No Google Analytics, Facebook Pixel, or similar tracking</li>
-              <li>• <strong>No Ads:</strong> No advertising networks or ad tracking</li>
-              <li>• <strong>No CDNs:</strong> All resources are served directly from our servers</li>
-              <li>• <strong>Currency Data:</strong> Exchange rates are fetched from public APIs without user identification</li>
-            </ul>
+            <p>
+              That does not mean every page is offline-only or free of all network requests. Page
+              assets, analytics tags, advertising scripts, and other site resources may still load.
+            </p>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <CardTitle>Data Security</CardTitle>
+            <CardTitle>Email and support records</CardTitle>
           </CardHeader>
-          <CardContent>
-            <p className="text-gray-600 mb-4">
-              Since we don't collect data, there's no data to secure. However, we still implement security best practices:
+          <CardContent className="space-y-4 text-gray-600">
+            <p>
+              If you send us an email, we may retain the message long enough to review the issue,
+              reply, and keep a record of decisions related to support, bug reports, or policy
+              questions.
             </p>
-            <ul className="space-y-2 text-gray-600">
-              <li>• HTTPS encryption for all connections</li>
-              <li>• Content Security Policy (CSP) headers</li>
-              <li>• Regular security updates and monitoring</li>
-              <li>• Open-source code for transparency</li>
-            </ul>
+            <p>
+              Do not send sensitive personal, legal, medical, or financial information that is not
+              necessary for the request.
+            </p>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <CardTitle>Your Rights</CardTitle>
+            <CardTitle>Contact</CardTitle>
           </CardHeader>
-          <CardContent>
-            <p className="text-gray-600 mb-4">
-              Since we don't collect personal data, traditional data rights don't apply. However, you have:
-            </p>
-            <ul className="space-y-2 text-gray-600">
-              <li>• <strong>Right to Use:</strong> Free access to all tools without registration</li>
-              <li>• <strong>Right to Privacy:</strong> Complete anonymity while using our services</li>
-              <li>• <strong>Right to Transparency:</strong> Open-source code and clear privacy practices</li>
-              <li>• <strong>Right to Control:</strong> Manage your browser settings and local storage</li>
-            </ul>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>Contact Us</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-gray-600">
-              If you have any questions about this Privacy Policy or our privacy practices, please contact us at:
-            </p>
-            <p className="mt-4">
-              <strong>Email:</strong> privacy@interconverter.com
-            </p>
-            <p className="text-sm text-gray-500 mt-4">
-              We'll respond to privacy inquiries within 48 hours.
-            </p>
+          <CardContent className="text-gray-600">
+            For privacy questions or policy-related requests, email <strong>legal@interconverter.com</strong>.
           </CardContent>
         </Card>
       </div>

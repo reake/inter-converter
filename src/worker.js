@@ -3,6 +3,20 @@
  * 处理静态资源和 API 请求
  */
 
+const CONTENT_SECURITY_POLICY = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://www.google-analytics.com",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data: blob: https:",
+  "font-src 'self' data:",
+  "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com",
+  "frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "upgrade-insecure-requests",
+].join('; ');
+
 const worker = {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -312,24 +326,29 @@ function getCORSHeaders(contentType = null) {
 /**
  * 添加安全头部和缓存控制
  */
-function addSecurityHeaders(response, url) {
+export function addSecurityHeaders(response, url) {
   const newResponse = new Response(response.body, response);
+  const contentType = response.headers.get('Content-Type') || '';
+  const isStaticAsset = pathnameHasStaticAssetExtension(url.pathname);
+  const isHtmlDocument =
+    contentType.includes('text/html') ||
+    (!isStaticAsset && !url.pathname.startsWith('/api/'));
   
   // 安全头部
   newResponse.headers.set('X-Content-Type-Options', 'nosniff');
   newResponse.headers.set('X-Frame-Options', 'DENY');
   newResponse.headers.set('X-XSS-Protection', '1; mode=block');
   newResponse.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  newResponse.headers.set('Content-Security-Policy', CONTENT_SECURITY_POLICY);
+  newResponse.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
   
   // 缓存控制
-  const pathname = url.pathname;
-  
-  if (pathname.match(/\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$/)) {
+  if (isStaticAsset) {
     // 静态资源长期缓存
     newResponse.headers.set('Cache-Control', 'public, max-age=31536000, immutable');
-  } else if (pathname.match(/\.(html|htm)$/)) {
-    // HTML 文件短期缓存
-    newResponse.headers.set('Cache-Control', 'public, max-age=3600, must-revalidate');
+  } else if (isHtmlDocument) {
+    // HTML 页面不做长缓存，避免正式域继续提供旧 metadata
+    newResponse.headers.set('Cache-Control', 'public, max-age=0, s-maxage=0, must-revalidate');
   } else {
     // 其他文件默认缓存
     newResponse.headers.set('Cache-Control', 'public, max-age=86400');
@@ -341,3 +360,6 @@ function addSecurityHeaders(response, url) {
   return newResponse;
 }
 
+function pathnameHasStaticAssetExtension(pathname) {
+  return /\.(css|js|mjs|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|webp|avif|txt|xml|json|map)$/i.test(pathname);
+}

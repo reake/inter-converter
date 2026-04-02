@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Palette, Copy, Shuffle } from 'lucide-react';
+import { Palette, Shuffle } from 'lucide-react';
 import { CopyButton } from '@/components/ui/CopyButton';
 
 const GRADIENT_DIRECTIONS = {
@@ -26,13 +26,8 @@ export function GradientGenerator() {
   const [cssCode, setCssCode] = useState('');
 
   useEffect(() => {
-    generateCSS();
+    setCssCode(`background: linear-gradient(${direction}, ${color1}, ${color2});`);
   }, [color1, color2, direction]);
-
-  const generateCSS = () => {
-    const css = `background: linear-gradient(${direction}, ${color1}, ${color2});`;
-    setCssCode(css);
-  };
 
   const generateRandomGradient = () => {
     const randomColor = () => {

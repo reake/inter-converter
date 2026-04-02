@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -25,7 +25,7 @@ interface AmortizationEntry {
 export default function AutoLoanCalculator() {
   const [carPrice, setCarPrice] = useState<string>('25000');
   const [downPayment, setDownPayment] = useState<string>('5000');
-  const [tradeInValue, setTradeInValue] = useState<string>('0');
+  const [tradeInValue] = useState<string>('0');
   const [interestRate, setInterestRate] = useState<string>('4.96');
   const [loanTerm, setLoanTerm] = useState<string>('72');
   const [creditScore, setCreditScore] = useState<string>('prime');
@@ -49,7 +49,7 @@ export default function AutoLoanCalculator() {
     { value: '84', label: '84 Months' }
   ];
 
-  const calculateLoan = () => {
+  const calculateLoan = useCallback(() => {
     const price = parseFloat(carPrice);
     const down = parseFloat(downPayment);
     const trade = parseFloat(tradeInValue);
@@ -91,7 +91,7 @@ export default function AutoLoanCalculator() {
 
     // Generate amortization schedule
     generateAmortizationSchedule(loanAmount, rate, months, monthlyPayment);
-  };
+  }, [carPrice, downPayment, tradeInValue, interestRate, loanTerm]);
 
   const generateAmortizationSchedule = (
     principal: number,
@@ -123,7 +123,7 @@ export default function AutoLoanCalculator() {
 
   useEffect(() => {
     calculateLoan();
-  }, [carPrice, downPayment, tradeInValue, interestRate, loanTerm]);
+  }, [calculateLoan]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

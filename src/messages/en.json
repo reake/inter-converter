@@ -21,82 +21,78 @@
   "homepage": {
     "hero": {
       "title": "InterConverter",
-      "subtitle": "Free Online Converters & Calculators",
-      "description": "Free online converters and calculators for developers and professionals. Fast, accurate, privacy-first, and works instantly in your browser."
+      "subtitle": "Selected Online Converters and Calculators",
+      "description": "A curated set of browser-based tools for measurement, time, color, and file conversion tasks, with clearer explanations and verification notes."
     },
     "sections": {
-      "popularTools": "Most Popular Tools",
-      "browseByCategory": "Browse Tools by Category",
+      "popularTools": "Featured Tools",
+      "browseByCategory": "Browse Featured Categories",
       "faq": "Frequently Asked Questions",
-      "faqSubtitle": "Everything you need to know about our converter tools",
+      "faqSubtitle": "Practical questions about how the current featured tools work",
       "aboutTitle": "About InterConverter.com",
-      "aboutDescription": "InterConverter.com is the premier destination for professional-grade converter tools and calculators. Built by developers for developers, designers, engineers, and professionals who demand accuracy and efficiency.",
+      "aboutDescription": "InterConverter currently focuses on a smaller public tool set so each featured page can be easier to review, explain, and maintain.",
       "whyChoose": "Why Choose InterConverter?",
-      "trustedBy": "Trusted by Professionals Worldwide",
-      "trustedByDescription": "From automotive engineers calculating compression ratios to web developers converting colors, InterConverter.com serves thousands of professionals daily. Join the community of users who rely on our tools for accurate, fast, and reliable conversions."
+      "trustedBy": "Built for repeat use",
+      "trustedByDescription": "The public site prioritizes tools that solve common tasks clearly. Featured pages are being expanded with examples, caveats, and workflow guidance instead of directory-style filler."
     },
     "features": {
       "professionalQuality": {
         "title": "Professional Quality",
-        "description": "Every tool is built with precision and tested for accuracy. We use industry-standard algorithms and formulas to ensure reliable results for professional use."
+        "description": "Featured tools use explicit formulas, clearer units, and result formatting designed for quick verification."
       },
       "lightningFast": {
         "title": "Lightning Fast",
-        "description": "All calculations happen instantly in your browser. No server delays, no waiting times. Get results immediately with our optimized, client-side processing."
+        "description": "Most featured conversions happen immediately in the browser with minimal workflow friction."
       },
       "privacyFirst": {
         "title": "Privacy First",
-        "description": "Your data never leaves your device. No tracking, no data collection, no user accounts required. Complete privacy and security for all your converter tools."
+        "description": "Many featured tools process their core calculation in the browser. Site-level analytics and advertising scripts may still load as part of normal page delivery."
       },
       "mobileOptimized": {
         "title": "Mobile Optimized",
-        "description": "Perfect experience on all devices. Responsive design ensures all tools work flawlessly on desktop, tablet, and mobile devices."
+        "description": "The public featured set is being maintained with mobile readability and straightforward form inputs in mind."
       },
       "globalStandards": {
         "title": "Global Standards",
-        "description": "Support for international standards, multiple currencies, units, and formats. Built for a global audience with localization and accessibility in mind."
+        "description": "Featured pages focus on common, widely used formats and units rather than trying to cover every niche case at once."
       },
       "alwaysUpdated": {
-        "title": "Always Updated",
-        "description": "Regular updates with new tools, features, and improvements. We continuously add new converter tools based on user feedback and industry needs."
+        "title": "Focused maintenance",
+        "description": "Pages are revised in batches as workflows, examples, and explanation quality are improved."
       },
       "instantResults": {
-        "title": "Instant Results",
-        "description": "Get immediate, accurate conversions without delays. All processing happens in your browser for maximum speed."
+        "title": "Quick Results",
+        "description": "Most featured tools return results immediately and are presented with simpler explanation blocks."
       },
       "completelyFree": {
         "title": "Completely Free",
-        "description": "No subscriptions, no hidden fees, no registration required. Professional-grade tools available to everyone."
+        "description": "The public tool pages are free to access without an account."
       },
       "privacyProtected": {
         "title": "Privacy Protected",
-        "description": "Your data stays on your device. No tracking, no data collection, complete privacy for all your converter tools."
+        "description": "Calculation inputs are not treated as support submissions unless you explicitly contact us."
       }
     },
     "faq": [
       {
-        "question": "Are these tools really free?",
-        "answer": "Yes! All our converter tools are completely free to use with no hidden costs, registration requirements, or usage limits. We believe in providing accessible tools for everyone."
+        "question": "Why are only certain tools featured right now?",
+        "answer": "The public site is intentionally curated. We are prioritizing tools that are broadly useful and easier to explain clearly before expanding the featured surface again."
       },
       {
-        "question": "Do you store my data?",
-        "answer": "No, all calculations are performed locally in your browser. We don't store, track, or have access to your input data or results. Your privacy is our priority."
+        "question": "Do featured tools run in the browser?",
+        "answer": "Many featured conversion workflows run in the browser after the page loads. Site assets, analytics scripts, and advertising scripts may still load as part of the page."
       },
       {
-        "question": "How accurate are the results?",
-        "answer": "Our tools use industry-standard formulas and regularly updated data sources to ensure maximum accuracy. For financial tools, we use real-time exchange rates and official data."
+        "question": "Can I rely on the result without checking it?",
+        "answer": "No. For high-stakes work, always verify important results independently. Featured pages are meant to be useful and clear, but not a substitute for professional review."
       },
       {
-        "question": "Do I need to create an account?",
-        "answer": "No registration required! Simply visit any tool page and start converting immediately. All tools work instantly without any sign-up process."
+        "question": "Do I need an account?",
+        "answer": "No. The current featured tools are available without account creation."
       },
       {
-        "question": "Can I use these tools on mobile?",
-        "answer": "Absolutely! All our tools are fully responsive and optimized for mobile devices. They work perfectly on smartphones, tablets, and desktop computers."
-      },
-      {
-        "question": "How often are exchange rates updated?",
-        "answer": "Currency exchange rates are updated every 15 minutes during market hours from reliable financial data providers to ensure you get the most current rates."
+        "question": "Can I request improvements to a page?",
+        "answer": "Yes. Use the contact page to report unclear copy, calculation issues, missing examples, or requests for additional featured tools."
       }
     ],
     "professionals": [
@@ -151,21 +147,21 @@
   },
   "toolsPage": {
     "hero": {
-      "title": "All Free Online Tools",
-      "description": "Browse our complete collection of converters and calculators. Covering unit conversion, financial calculations, health tools, and more categories.",
+      "title": "Featured Online Tools",
+      "description": "Browse the curated public tool set for measurement, time, color, contrast, and file conversion tasks, with clearer guidance and practical notes.",
       "stats": {
-        "professionalTools": "250+ Professional Tools",
-        "freeToUse": "100% Free to Use",
-        "accurateResults": "Real-time Accurate Results"
+        "professionalTools": "Curated public tool set",
+        "freeToUse": "Free to access",
+        "accurateResults": "Clear browser-based workflows"
       }
     },
     "sections": {
-      "popularTools": "Most Popular Tools",
-      "popularToolsDescription": "The most frequently used converters and calculators by our users",
-      "browseByCategory": "Browse Tools by Category",
-      "browseByCategoryDescription": "Explore our professional tool collections organized by functionality",
-      "callToAction": "Need a Specific Calculator or Converter?",
-      "callToActionDescription": "We're continuously expanding our collection of professional tools. Request new calculators or suggest improvements!"
+      "popularTools": "Featured tools",
+      "popularToolsDescription": "The public tools currently being maintained and reviewed most actively",
+      "browseByCategory": "Browse featured categories",
+      "browseByCategoryDescription": "Explore the smaller public tool surface by category",
+      "callToAction": "Need a correction or a missing example?",
+      "callToActionDescription": "Contact us if a featured page needs clearer guidance, stronger examples, or better explanation."
     },
     "actions": {
       "useTool": "Use Tool",
@@ -178,7 +174,7 @@
   "categoryPages": {
     "auto": {
       "title": "Automotive Calculators",
-      "description": "19+ professional automotive calculators for engine performance, tuning, and modifications. Based on the original Mark's Street And Strip InterConverter™.",
+      "description": "Automotive tools remain implemented, but this category is not currently part of the featured public tool set.",
       "stats": {
         "autoTools": "19+ Auto Tools",
         "realTimeCalculations": "Real-time calculations",
@@ -206,7 +202,7 @@
       "infoCards": {
         "aboutCalculators": {
           "title": "About These Calculators",
-          "content": "These automotive calculators are based on proven formulas and real-world experience from the original Mark's Street And Strip InterConverter™. They're designed for mechanics, racers, and automotive enthusiasts who need accurate calculations for engine modifications and performance tuning."
+          "content": "These automotive reference tools are based on established formulas and workshop-style calculations. They should be treated as supporting estimates, not as a substitute for professional inspection or safety review."
         },
         "safetyNotice": {
           "title": "Safety Notice",
@@ -219,13 +215,24 @@
         "advanced": "Advanced"
       },
       "seo": {
-        "title": "Free Automotive Converters & Engine Tools | InterConverter",
-        "keywords": ["automotive calculators", "engine calculators", "carburetor cfm calculator", "compression ratio calculator", "gear ratio calculator", "horsepower calculator", "rpm calculator", "engine tuning tools", "automotive performance tools", "free automotive calculators"]
+        "title": "Automotive Tools Reference | InterConverter",
+        "keywords": [
+          "automotive tools reference",
+          "engine calculators",
+          "carburetor cfm calculator",
+          "compression ratio calculator",
+          "gear ratio calculator",
+          "horsepower calculator",
+          "rpm calculator",
+          "engine tuning tools",
+          "automotive performance tools",
+          "engine reference tools"
+        ]
       }
     },
     "finance": {
       "title": "Financial Calculators & Tools",
-      "description": "Comprehensive collection of 77+ financial calculators for loans, mortgages, investments, taxes, and more. Free tools to help you make informed financial decisions and plan your financial future.",
+      "description": "Finance tools remain implemented, but this category is not currently promoted as part of the featured public tool surface.",
       "stats": {
         "financialTools": "77+ Financial Tools",
         "bankingLoans": "Banking & Loans",
@@ -342,7 +349,7 @@
       },
       "disclaimer": {
         "title": "Important Disclaimer",
-        "content": "These financial calculators provide estimates for educational and informational purposes only. Results may vary based on individual circumstances, market conditions, interest rates, and other factors. This information should not be considered as professional financial, investment, tax, or legal advice. Always consult with qualified financial professionals before making important financial decisions. Past performance does not guarantee future results. Interest rates, tax laws, and market conditions can change significantly over time."
+        "content": "These finance tools provide estimates for educational and informational purposes only. Results may vary based on individual circumstances, market conditions, interest rates, and other factors. This information should not be considered professional financial, investment, tax, or legal advice. Always consult qualified professionals before making important financial decisions. Past performance does not guarantee future results. Interest rates, tax laws, and market conditions can change significantly over time."
       },
       "difficulty": {
         "beginner": "Beginner",
@@ -353,16 +360,43 @@
         "tools": "Tools"
       },
       "seo": {
-        "title": "Free Financial Calculators & Tools - Loans, Mortgages, Investments | InterConverter",
-        "keywords": ["financial calculators", "loan calculator", "mortgage calculator", "investment calculator", "tax calculator", "finance tools", "personal finance", "financial planning", "money calculator", "free financial tools"]
+        "title": "Finance Tools Reference | InterConverter",
+        "keywords": [
+          "finance reference tools",
+          "loan calculator",
+          "mortgage calculator",
+          "investment calculator",
+          "tax calculator",
+          "finance tools",
+          "personal finance",
+          "financial planning",
+          "money calculator",
+          "free financial tools"
+        ]
       }
     },
     "health": {
       "title": "Health & Fitness Calculators",
-      "description": "Free health and fitness calculators including BMI calculator, body fat calculator, calorie calculator, and more. Professional health assessment tools for wellness tracking.",
+      "description": "Health tools remain implemented, but this category is not currently promoted as part of the featured public surface.",
       "seo": {
         "title": "Free Health & Fitness Calculators - BMI, Body Fat, Calorie Tools | InterConverter",
-        "keywords": ["bmi calculator", "body mass index calculator", "health calculator", "fitness calculator", "calorie calculator", "body fat calculator", "ideal weight calculator", "health metrics calculator", "wellness calculator", "fitness tracking tools", "health assessment tools", "body composition calculator", "heart rate calculator", "free health calculators", "online health tools"]
+        "keywords": [
+          "bmi calculator",
+          "body mass index calculator",
+          "health reference tool",
+          "fitness calculator",
+          "calorie calculator",
+          "body fat calculator",
+          "ideal weight calculator",
+          "health metrics calculator",
+          "wellness calculator",
+          "fitness tracking tools",
+          "health assessment tools",
+          "body composition calculator",
+          "heart rate calculator",
+          "wellness reference tools",
+          "online health tools"
+        ]
       },
       "stats": {
         "accurateCalculations": "Accurate calculations",
@@ -372,7 +406,7 @@
       "sections": {
         "calculators": {
           "title": "Health Calculators",
-          "description": "Track your health metrics and fitness progress with our professional-grade calculators"
+          "description": "This category currently remains available as a low-profile reference page."
         },
         "bmiCategories": {
           "title": "BMI Categories",
@@ -431,28 +465,44 @@
     },
     "media": {
       "title": "File & Media Converters",
-      "description": "Professional file and media conversion tools for documents, images, and multimedia files. Convert PDF to Word, JPG to PNG, video formats, and more. Free, secure, and fast online file converters.",
+      "description": "The current public file conversion category focuses on the JPG to PNG workflow with clearer guidance about format differences and processing limits.",
       "seo": {
-        "title": "Free File & Media Converters - PDF to Word, JPG to PNG, Video Tools | InterConverter",
-        "keywords": ["file converter", "media converter", "pdf to word converter", "jpg to png converter", "image converter", "video converter", "audio converter", "document converter", "format converter", "online file converter", "free media tools", "file format conversion", "multimedia converter", "digital file tools", "conversion software"]
+        "title": "Featured File Conversion Tools | InterConverter",
+        "keywords": [
+          "file converter",
+          "media converter",
+          "pdf to word converter",
+          "jpg to png converter",
+          "image converter",
+          "video converter",
+          "audio converter",
+          "document converter",
+          "format converter",
+          "online file converter",
+          "free media tools",
+          "file format conversion",
+          "multimedia converter",
+          "digital file tools",
+          "conversion software"
+        ]
       },
       "stats": {
-        "secureProcessing": "Secure processing",
-        "fastConversion": "Fast conversion",
-        "highQuality": "High quality"
+        "secureProcessing": "Task-focused public tools",
+        "fastConversion": "Simple conversion workflows",
+        "highQuality": "Reviewed public pages"
       },
       "sections": {
         "converters": {
           "title": "File Converter Tools",
-          "description": "Convert documents, images, and media files between different formats with ease"
+          "description": "The current public page focuses on the image format workflow that is actively being reviewed."
         },
         "fileTypes": {
-          "title": "Supported File Types",
-          "description": "Convert between popular document, image, and media formats"
+          "title": "Current featured workflow",
+          "description": "This review pass highlights the JPG to PNG path rather than a broad format directory."
         },
         "features": {
-          "title": "Why Choose Our Converters?",
-          "description": "Professional-grade conversion tools with security and quality in mind"
+          "title": "What this page explains",
+          "description": "The featured file page focuses on format tradeoffs, browser limits, and when to verify the output yourself."
         }
       },
       "fileTypes": {
@@ -483,21 +533,21 @@
       },
       "features": {
         "secure": {
-          "title": "Secure Processing",
-          "description": "Files are processed securely and automatically deleted after conversion"
+          "title": "Focused scope",
+          "description": "The public category only promotes the workflow that is currently being maintained and explained in more detail."
         },
         "fast": {
-          "title": "Lightning Fast",
-          "description": "Optimized algorithms ensure quick conversion without quality loss"
+          "title": "Processing notes",
+          "description": "Featured file tools should explain transparency, compression, and other format-specific tradeoffs instead of promising perfect outputs."
         },
         "quality": {
-          "title": "High Quality",
-          "description": "Maintain original quality and formatting during conversion process"
+          "title": "Verification boundaries",
+          "description": "If the result is important for a production workflow, you should still review the exported asset yourself."
         }
       },
       "privacy": {
-        "title": "Privacy & Security Notice",
-        "content": "Your privacy is our priority. All files are processed securely using encrypted connections. Files are automatically deleted from our servers immediately after conversion. We never store, access, or share your files with third parties."
+        "title": "Processing notice",
+        "content": "File-tool pages should explain what happens in the browser, what limits still apply, and when a user should verify the converted result independently."
       },
       "difficulty": {
         "beginner": "Beginner",
@@ -510,15 +560,31 @@
     },
     "time": {
       "title": "Time & Date Tools",
-      "description": "Professional time and date calculation tools including timestamp converter, timezone converter, date calculator, age calculator, and countdown timer. Essential tools for developers and time management.",
+      "description": "Focused time and date tools for timestamps, timezone checks, date differences, and scheduling workflows across teams and systems.",
       "seo": {
-        "title": "Free Time & Date Tools - Timestamp Converter, Timezone Calculator | InterConverter",
-        "keywords": ["timestamp converter", "timezone converter", "date calculator", "age calculator", "countdown timer", "unix timestamp", "time zone calculator", "date difference calculator", "world clock", "time converter", "date tools", "time management tools", "developer time tools", "epoch converter", "date formatter"]
+        "title": "Featured Time Tools | InterConverter",
+        "keywords": [
+          "timestamp converter",
+          "timezone converter",
+          "date calculator",
+          "age calculator",
+          "countdown timer",
+          "unix timestamp",
+          "time zone calculator",
+          "date difference calculator",
+          "world clock",
+          "time converter",
+          "date tools",
+          "time management tools",
+          "developer time tools",
+          "epoch converter",
+          "date formatter"
+        ]
       },
       "stats": {
-        "conversions": "15M+ time conversions",
-        "timezoneAccurate": "Timezone Accurate",
-        "realTimeUpdates": "Real-time Updates"
+        "conversions": "Featured developer and planning tools",
+        "timezoneAccurate": "Timezone-aware workflows",
+        "realTimeUpdates": "Readable date outputs"
       },
       "sections": {
         "popular": {
@@ -542,7 +608,7 @@
           "icon": "🌍"
         },
         "dateCalculation": {
-          "name": "Date Calculation", 
+          "name": "Date Calculation",
           "description": "Calculate dates, ages, and time differences",
           "icon": "📅"
         },
@@ -581,15 +647,36 @@
     },
     "unit": {
       "title": "Unit & Measurement Converters",
-      "description": "Convert between different units of measurement with our comprehensive collection of free online tools. Accurate, fast, and easy-to-use converters for length, weight, temperature, and more.",
+      "description": "Formula-based unit converters for temperature, length, weight, and volume checks, with quick results for common measurement work.",
       "seo": {
-        "title": "Free Unit & Measurement Converters - Length, Weight, Temperature Tools | InterConverter",
-        "keywords": ["unit converter", "measurement converter", "length converter", "weight converter", "temperature converter", "area converter", "volume converter", "speed converter", "pressure converter", "energy converter", "power converter", "data converter", "metric imperial converter", "measurement tools", "conversion calculator", "meters to feet", "celsius to fahrenheit", "pounds to kg", "free unit converter", "online measurement tools"]
+        "title": "Featured Unit Converters | InterConverter",
+        "keywords": [
+          "unit converter",
+          "measurement converter",
+          "length converter",
+          "weight converter",
+          "temperature converter",
+          "area converter",
+          "volume converter",
+          "speed converter",
+          "pressure converter",
+          "energy converter",
+          "power converter",
+          "data converter",
+          "metric imperial converter",
+          "measurement tools",
+          "conversion calculator",
+          "meters to feet",
+          "celsius to fahrenheit",
+          "pounds to kg",
+          "free unit converter",
+          "online measurement tools"
+        ]
       },
       "stats": {
-        "conversions": "10M+ conversions monthly",
-        "freeAccurate": "100% Free & Accurate",
-        "realTimeResults": "Real-time Results"
+        "conversions": "Featured core conversions",
+        "freeAccurate": "Formula-based outputs",
+        "realTimeResults": "Immediate results"
       },
       "sections": {
         "popular": {
@@ -667,15 +754,33 @@
     },
     "color": {
       "title": "Color & Design Tools",
-      "description": "Professional color conversion tools for web developers and designers. Convert color codes, pick colors, generate gradients, and ensure accessibility compliance.",
+      "description": "Focused color tools for format conversion, color picking, and contrast checks used in interface design and front-end reviews.",
       "seo": {
-        "title": "Free Color & Design Tools - HEX to RGB, Color Picker, Palette Generator | InterConverter",
-        "keywords": ["color converter", "hex to rgb converter", "rgb to hex converter", "color picker tool", "gradient generator", "color palette generator", "contrast checker", "web design tools", "css color tools", "color code converter", "design tools", "accessibility tools", "wcag contrast checker", "color theory tools", "hsl converter", "free color tools", "online color picker"]
+        "title": "Featured Color Tools | InterConverter",
+        "keywords": [
+          "color converter",
+          "hex to rgb converter",
+          "rgb to hex converter",
+          "color picker tool",
+          "gradient generator",
+          "color palette generator",
+          "contrast checker",
+          "web design tools",
+          "css color tools",
+          "color code converter",
+          "design tools",
+          "accessibility tools",
+          "wcag contrast checker",
+          "color theory tools",
+          "hsl converter",
+          "free color tools",
+          "online color picker"
+        ]
       },
       "stats": {
-        "designers": "5M+ designers trust us",
-        "professionalGrade": "Professional Grade Tools",
-        "wcagCompliant": "WCAG Compliant"
+        "designers": "Featured design utilities",
+        "professionalGrade": "Format-aware outputs",
+        "wcagCompliant": "Accessibility checks included"
       },
       "sections": {
         "essential": {
@@ -734,7 +839,7 @@
         "designGeneration": "Create beautiful gradients, extract color palettes from images, and generate harmonious color schemes based on color theory principles.",
         "professionalColorPicker": "Advanced color selection with HSL controls, color history, and real-time preview. Supports all major color formats and provides instant CSS code generation.",
         "accessibilityCompliance": "Ensure your designs meet WCAG AA and AAA standards with our contrast checker. Test text readability and color combinations for optimal accessibility.",
-        "conclusion": "All tools are free, work offline after loading, and provide professional-grade accuracy. Perfect for UI/UX designers, web developers, graphic designers, and digital artists."
+        "conclusion": "The featured color tools focus on practical format conversion, contrast checks, and clearer result interpretation for design and front-end workflows."
       },
       "common": {
         "monthlySearches": "monthly searches"
@@ -755,7 +860,7 @@
           "description": "All tools run locally in your browser for maximum speed and privacy"
         },
         {
-          "title": "No Registration",
+          "title": "No Sign-in",
           "description": "Use all tools instantly without creating an account"
         },
         {

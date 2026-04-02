@@ -16,6 +16,26 @@ import autoToolsZh from '@/data/tools/auto-zh.json';
 import healthToolsZh from '@/data/tools/health-zh.json';
 import mediaToolsZh from '@/data/tools/media-zh.json';
 
+const REVIEW_APPROVED_TOOL_PATHS = [
+  '/unit/temperature-converter',
+  '/unit/length-converter',
+  '/unit/weight-converter',
+  '/unit/volume-converter',
+  '/time/timestamp-converter',
+  '/time/timezone-converter',
+  '/time/date-difference-calculator',
+  '/color/rgb-to-hex-converter',
+  '/color/hex-to-rgb-converter',
+  '/color/color-picker-tool',
+  '/color/contrast-checker',
+  '/media/jpg-to-png-converter',
+] as const;
+
+const REVIEW_APPROVED_TOOL_PATH_SET = new Set<string>(REVIEW_APPROVED_TOOL_PATHS);
+const REVIEW_APPROVED_CATEGORIES: ToolCategory[] = ['unit', 'time', 'color', 'media'];
+
+const normalizeReviewPath = (path: string): string => path.replace(/^\/[a-z]{2}(?=\/)/, '');
+
 type ToolConfigInput = Partial<ToolConfig> & {
   id: string;
   name: string;
@@ -162,9 +182,55 @@ export const getToolById = (id: string, locale: string = 'en'): ToolConfig | und
   return getToolsByLocale(locale).find(tool => tool.id === id);
 };
 
+export const getReviewApprovedToolPaths = (): readonly string[] => REVIEW_APPROVED_TOOL_PATHS;
+
+export const isReviewApprovedTool = (tool: Pick<ToolConfig, 'path'>): boolean => {
+  return REVIEW_APPROVED_TOOL_PATH_SET.has(normalizeReviewPath(tool.path));
+};
+
 export const getToolsByCategory = (category: ToolCategory, limit?: number, locale: string = 'en'): ToolConfig[] => {
   const tools = getToolsByLocale(locale).filter(tool => tool.category === category && tool.isActive);
   return limit ? tools.slice(0, limit) : tools;
+};
+
+export const getReviewApprovedTools = (locale: string = 'en'): ToolConfig[] => {
+  return getToolsByLocale(locale).filter((tool) => tool.isActive && isReviewApprovedTool(tool));
+};
+
+export const getReviewApprovedToolsByCategory = (
+  category: ToolCategory,
+  locale: string = 'en',
+  limit?: number,
+): ToolConfig[] => {
+  const tools = getReviewApprovedTools(locale).filter((tool) => tool.category === category);
+  return limit ? tools.slice(0, limit) : tools;
+};
+
+export const getReviewApprovedCategories = (): ToolCategory[] => [...REVIEW_APPROVED_CATEGORIES];
+
+export const getReviewApprovedPopularTools = (
+  limit: number = 5,
+  locale: string = 'en',
+): ToolConfig[] => {
+  return [...getReviewApprovedTools(locale)]
+    .sort((a, b) => (b.searchVolume || 0) - (a.searchVolume || 0))
+    .slice(0, limit);
+};
+
+export const getReviewApprovedToolsByAllCategories = (
+  limit: number = 10,
+  locale: string = 'en',
+): Record<ToolCategory, ToolConfig[]> => {
+  const result: Partial<Record<ToolCategory, ToolConfig[]>> = {};
+
+  REVIEW_APPROVED_CATEGORIES.forEach((category) => {
+    const categoryTools = getReviewApprovedToolsByCategory(category, locale, limit);
+    if (categoryTools.length > 0) {
+      result[category] = categoryTools;
+    }
+  });
+
+  return result as Record<ToolCategory, ToolConfig[]>;
 };
 
 export const getPopularTools = (limit: number = 5, locale: string = 'en'): ToolConfig[] => {

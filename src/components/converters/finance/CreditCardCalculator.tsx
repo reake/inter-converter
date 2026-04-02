@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -40,9 +40,7 @@ export default function CreditCardCalculator({
   const [minimumPayment, setMinimumPayment] = useState('100');
   const [results, setResults] = useState<Results | null>(null);
   const [paymentSchedule, setPaymentSchedule] = useState<PaymentSchedule[]>([]);
-  const [showSchedule, setShowSchedule] = useState(false);
-
-  const calculatePayoff = () => {
+  const calculatePayoff = useCallback(() => {
     const currentBalance = parseFloat(balance);
     const annualRate = parseFloat(apr) / 100;
     const monthlyRate = annualRate / 12;
@@ -103,11 +101,11 @@ export default function CreditCardCalculator({
     });
 
     setPaymentSchedule(schedule);
-  };
+  }, [balance, apr, monthlyPayment, minimumPayment]);
 
   useEffect(() => {
     calculatePayoff();
-  }, [balance, apr, monthlyPayment, minimumPayment]);
+  }, [calculatePayoff]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

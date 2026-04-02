@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -21,7 +21,7 @@ export function TireSpeedCalculator() {
   const [rpm, setRpm] = useState<string>('');
   const [result, setResult] = useState<TireSpeedResult | null>(null);
 
-  const calculateSpeed = () => {
+  const calculateSpeed = useCallback(() => {
     const diameter = parseFloat(tireDiameter);
     const ratio = parseFloat(gearRatio);
     const engineRpm = parseFloat(rpm);
@@ -51,7 +51,7 @@ export function TireSpeedCalculator() {
       tireCircumference: Math.round(circumference * 100) / 100,
       revolutionsPerMile: Math.round(revolutionsPerMile)
     });
-  };
+  }, [tireDiameter, gearRatio, rpm]);
 
   const clearAll = () => {
     setTireDiameter('');
@@ -65,7 +65,7 @@ export function TireSpeedCalculator() {
     if (tireDiameter && gearRatio && rpm) {
       calculateSpeed();
     }
-  }, [tireDiameter, gearRatio, rpm]);
+  }, [tireDiameter, gearRatio, rpm, calculateSpeed]);
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
@@ -204,37 +204,37 @@ export function TireSpeedCalculator() {
             <div className="space-y-2">
               <Badge variant="outline" className="w-full justify-center">Street Tires</Badge>
               <div className="text-sm space-y-1">
-                <div>225/60R16: 26.6"</div>
-                <div>235/70R16: 28.0"</div>
-                <div>245/75R16: 29.5"</div>
-                <div>265/70R17: 30.6"</div>
+                <div>225/60R16: 26.6&quot;</div>
+                <div>235/70R16: 28.0&quot;</div>
+                <div>245/75R16: 29.5&quot;</div>
+                <div>265/70R17: 30.6&quot;</div>
               </div>
             </div>
             <div className="space-y-2">
               <Badge variant="outline" className="w-full justify-center">Performance</Badge>
               <div className="text-sm space-y-1">
-                <div>245/45R17: 25.7"</div>
-                <div>255/40R18: 26.0"</div>
-                <div>275/35R19: 26.6"</div>
-                <div>295/30R20: 27.0"</div>
+                <div>245/45R17: 25.7&quot;</div>
+                <div>255/40R18: 26.0&quot;</div>
+                <div>275/35R19: 26.6&quot;</div>
+                <div>295/30R20: 27.0&quot;</div>
               </div>
             </div>
             <div className="space-y-2">
               <Badge variant="outline" className="w-full justify-center">Drag Racing</Badge>
               <div className="text-sm space-y-1">
-                <div>28x9.0R15: 28.0"</div>
-                <div>29x10.5R15: 29.0"</div>
-                <div>30x12.0R15: 30.0"</div>
-                <div>31x13.5R15: 31.0"</div>
+                <div>28x9.0R15: 28.0&quot;</div>
+                <div>29x10.5R15: 29.0&quot;</div>
+                <div>30x12.0R15: 30.0&quot;</div>
+                <div>31x13.5R15: 31.0&quot;</div>
               </div>
             </div>
             <div className="space-y-2">
               <Badge variant="outline" className="w-full justify-center">Off-Road</Badge>
               <div className="text-sm space-y-1">
-                <div>31x10.5R15: 31.0"</div>
-                <div>33x12.5R15: 33.0"</div>
-                <div>35x12.5R17: 35.0"</div>
-                <div>37x13.5R17: 37.0"</div>
+                <div>31x10.5R15: 31.0&quot;</div>
+                <div>33x12.5R15: 33.0&quot;</div>
+                <div>35x12.5R17: 35.0&quot;</div>
+                <div>37x13.5R17: 37.0&quot;</div>
               </div>
             </div>
           </div>

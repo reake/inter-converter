@@ -1,8 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -33,7 +32,7 @@ export default function PayrollTaxCalculator() {
   const [preDeductions, setPreDeductions] = useState<string>('500');
   const [results, setResults] = useState<PayrollResults | null>(null);
 
-  const calculatePayroll = () => {
+  const calculatePayroll = useCallback(() => {
     const annualSalary = parseFloat(salary);
     const preTaxDeductions = parseFloat(preDeductions);
     const allowancesNum = parseInt(allowances);
@@ -117,11 +116,11 @@ export default function PayrollTaxCalculator() {
       effectiveRate,
       yearlyProjection
     });
-  };
+  }, [salary, payFrequency, filingStatus, allowances, state, preDeductions]);
 
   useEffect(() => {
     calculatePayroll();
-  }, [salary, payFrequency, filingStatus, allowances, state, preDeductions]);
+  }, [calculatePayroll]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -406,7 +405,7 @@ export default function PayrollTaxCalculator() {
                   <CardContent>
                     <div className="space-y-2 text-sm">
                       <div>🎯 Aim for small refund or owe</div>
-                      <div>💰 Don't give government free loan</div>
+                      <div>💰 Don&apos;t give government free loan</div>
                       <div>📊 Review quarterly</div>
                       <div>📈 Adjust for bonuses/raises</div>
                       <div>🏦 Consider extra withholding vs. estimated payments</div>

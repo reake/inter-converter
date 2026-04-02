@@ -85,6 +85,7 @@ export function TimestampConverter() {
 
   return (
     <div className="space-y-6">
+      <h2 className="sr-only">Timestamp conversion tool</h2>
       {/* Current Time */}
       <Card>
         <CardHeader className="pb-3">
@@ -101,11 +102,11 @@ export function TimestampConverter() {
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="text-sm font-medium text-muted-foreground">Current Timestamp</label>
+              <div className="text-sm font-medium text-muted-foreground">Current Timestamp</div>
               <div className="text-lg font-mono">{Math.floor(Date.now() / 1000)}</div>
             </div>
             <div>
-              <label className="text-sm font-medium text-muted-foreground">Current Date</label>
+              <div className="text-sm font-medium text-muted-foreground">Current Date</div>
               <div className="text-lg">{new Date().toLocaleString()}</div>
             </div>
           </div>
@@ -118,7 +119,10 @@ export function TimestampConverter() {
           <CardTitle className="text-lg">Timezone</CardTitle>
         </CardHeader>
         <CardContent>
+          <label htmlFor="timestamp-timezone" className="sr-only">Timezone</label>
           <select
+            id="timestamp-timezone"
+            aria-label="Timezone"
             value={timezone}
             onChange={(e) => setTimezone(e.target.value)}
             className="w-full p-2 border border-input rounded-md bg-background"
@@ -145,8 +149,9 @@ export function TimestampConverter() {
         </CardHeader>
         <CardContent className="space-y-4">
           <div>
-            <label className="block text-sm font-medium mb-2">Unix Timestamp</label>
+            <label htmlFor="unix-timestamp-input" className="block text-sm font-medium mb-2">Unix Timestamp</label>
             <Input
+              id="unix-timestamp-input"
               type="text"
               value={timestamp}
               onChange={(e) => setTimestamp(e.target.value)}
@@ -160,6 +165,7 @@ export function TimestampConverter() {
               <label className="block text-sm font-medium mb-2">Converted Date</label>
               <CopyResult
                 value={convertedDate}
+                label="Converted date"
                 placeholder="Converted date will appear here"
                 inputClassName="font-mono"
               />
@@ -181,8 +187,9 @@ export function TimestampConverter() {
         </CardHeader>
         <CardContent className="space-y-4">
           <div>
-            <label className="block text-sm font-medium mb-2">Date & Time</label>
+            <label htmlFor="date-time-input" className="block text-sm font-medium mb-2">Date & Time</label>
             <Input
+              id="date-time-input"
               type="datetime-local"
               value={dateTime}
               onChange={(e) => setDateTime(e.target.value)}
@@ -194,6 +201,7 @@ export function TimestampConverter() {
               <label className="block text-sm font-medium mb-2">Unix Timestamp</label>
               <CopyResult
                 value={convertedTimestamp}
+                label="Converted Unix timestamp"
                 placeholder="Converted timestamp will appear here"
                 inputClassName="font-mono"
               />

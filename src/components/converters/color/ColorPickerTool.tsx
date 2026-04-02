@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -59,16 +59,12 @@ export default function ColorPickerTool() {
     return `#${toHex(r)}${toHex(g)}${toHex(b)}`.toUpperCase();
   };
 
-  const updateColor = () => {
+  useEffect(() => {
     const rgb = hslToRgb(hue, saturation, lightness);
     setRed(rgb.r);
     setGreen(rgb.g);
     setBlue(rgb.b);
     setHex(rgbToHex(rgb.r, rgb.g, rgb.b));
-  };
-
-  useEffect(() => {
-    updateColor();
   }, [hue, saturation, lightness]);
 
   const addToHistory = (color: string) => {
@@ -107,6 +103,7 @@ export default function ColorPickerTool() {
 
   return (
     <div className="space-y-6">
+      <h2 className="sr-only">Color picker workspace</h2>
       <Tabs defaultValue="picker" className="space-y-6">
         <TabsList className="grid w-full grid-cols-4">
           <TabsTrigger value="picker">Color Picker</TabsTrigger>
@@ -126,8 +123,9 @@ export default function ColorPickerTool() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div>
-                  <Label>Hue: {hue}°</Label>
+                  <Label htmlFor="color-picker-hue">Hue: {hue}°</Label>
                   <input
+                    id="color-picker-hue"
                     type="range"
                     min="0"
                     max="360"
@@ -145,8 +143,9 @@ export default function ColorPickerTool() {
                 </div>
 
                 <div>
-                  <Label>Saturation: {saturation}%</Label>
+                  <Label htmlFor="color-picker-saturation">Saturation: {saturation}%</Label>
                   <input
+                    id="color-picker-saturation"
                     type="range"
                     min="0"
                     max="100"
@@ -163,8 +162,9 @@ export default function ColorPickerTool() {
                 </div>
 
                 <div>
-                  <Label>Lightness: {lightness}%</Label>
+                  <Label htmlFor="color-picker-lightness">Lightness: {lightness}%</Label>
                   <input
+                    id="color-picker-lightness"
                     type="range"
                     min="0"
                     max="100"
@@ -183,22 +183,22 @@ export default function ColorPickerTool() {
 
                 <div className="grid grid-cols-3 gap-3">
                   <div>
-                    <Label>Red</Label>
-                    <Input value={red} readOnly className="text-center" />
+                    <Label htmlFor="color-picker-red">Red</Label>
+                    <Input id="color-picker-red" value={red} readOnly className="text-center" />
                   </div>
                   <div>
-                    <Label>Green</Label>
-                    <Input value={green} readOnly className="text-center" />
+                    <Label htmlFor="color-picker-green">Green</Label>
+                    <Input id="color-picker-green" value={green} readOnly className="text-center" />
                   </div>
                   <div>
-                    <Label>Blue</Label>
-                    <Input value={blue} readOnly className="text-center" />
+                    <Label htmlFor="color-picker-blue">Blue</Label>
+                    <Input id="color-picker-blue" value={blue} readOnly className="text-center" />
                   </div>
                 </div>
 
                 <div>
-                  <Label>HEX Color Code</Label>
-                  <Input value={hex} readOnly className="text-center font-mono text-lg" />
+                  <Label htmlFor="color-picker-hex">HEX Color Code</Label>
+                  <Input id="color-picker-hex" value={hex} readOnly className="text-center font-mono text-lg" />
                 </div>
 
                 <Button onClick={generateRandomColor} variant="outline" className="w-full">

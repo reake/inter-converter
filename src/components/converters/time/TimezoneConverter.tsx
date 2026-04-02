@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Label } from '@/components/ui/label';
 import { Globe, Clock, Plus, Trash2 } from 'lucide-react';
 
 interface TimezoneInfo {
@@ -111,6 +111,7 @@ export default function TimezoneConverter() {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
+      <h2 className="sr-only">Timezone conversion tool</h2>
       <Card className="mb-6">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -121,8 +122,9 @@ export default function TimezoneConverter() {
         <CardContent>
           <div className="grid md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium mb-2">Time</label>
+              <Label htmlFor="source-time">Time</Label>
               <Input
+                id="source-time"
                 type="time"
                 value={sourceTime}
                 onChange={(e) => setSourceTime(e.target.value)}
@@ -131,19 +133,19 @@ export default function TimezoneConverter() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium mb-2">Timezone</label>
-              <Select value={sourceTimezone} onValueChange={setSourceTimezone}>
-                <SelectTrigger>
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  {timezones.map((tz) => (
-                    <SelectItem key={tz.id} value={tz.id}>
-                      {tz.name}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <Label htmlFor="source-timezone-select">Timezone</Label>
+              <select
+                id="source-timezone-select"
+                value={sourceTimezone}
+                onChange={(e) => setSourceTimezone(e.target.value)}
+                className="w-full p-3 border border-input rounded-md bg-background"
+              >
+                {timezones.map((tz) => (
+                  <option key={tz.id} value={tz.id}>
+                    {tz.name}
+                  </option>
+                ))}
+              </select>
             </div>
           </div>
           
@@ -197,6 +199,7 @@ export default function TimezoneConverter() {
                         size="sm" 
                         variant="outline"
                         className="text-red-600 hover:text-red-700"
+                        aria-label={`Remove ${timezoneInfo.name}`}
                       >
                         <Trash2 className="h-4 w-4" />
                       </Button>

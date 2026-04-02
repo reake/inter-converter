@@ -7,6 +7,8 @@ interface MetadataOptions {
   pathname: string;
   keywords?: string[];
   ogImage?: string;
+  index?: boolean;
+  follow?: boolean;
 }
 
 export function generateMetadata({
@@ -15,7 +17,9 @@ export function generateMetadata({
   locale,
   pathname,
   keywords = [],
-  ogImage
+  ogImage,
+  index = true,
+  follow = true,
 }: MetadataOptions): Metadata {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://interconverter.com';
   const canonicalUrl = `${baseUrl}${locale === 'en' ? '' : `/${locale}`}${pathname}`;
@@ -56,11 +60,11 @@ export function generateMetadata({
       },
     },
     robots: {
-      index: true,
-      follow: true,
+      index,
+      follow,
       googleBot: {
-        index: true,
-        follow: true,
+        index,
+        follow,
         'max-video-preview': -1,
         'max-image-preview': 'large',
         'max-snippet': -1,

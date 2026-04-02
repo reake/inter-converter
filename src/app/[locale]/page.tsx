@@ -1,6 +1,5 @@
 import React from "react";
 import { Metadata } from 'next';
-import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { Button } from "@/components/ui/button";
 import { SearchInput } from "@/components/ui/SearchInput";
@@ -12,13 +11,15 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Link } from "@/i18n/routing";
-import { getPopularTools, getToolsByAllCategories, getToolCategories } from "@/config/tools";
+import {
+  getReviewApprovedPopularTools,
+  getReviewApprovedToolsByAllCategories,
+  getToolCategories,
+} from "@/config/tools";
 import { EnhancedToolCard } from "@/components/tools/EnhancedToolCard";
 import { generateMetadata as generateSEOMetadata } from "@/lib/seo/metadata";
 import { StructuredData } from "@/components/tools/StructuredData";
-import { JsonLd, generateWebsiteSchema, generateFAQSchema } from "@/components/seo/JsonLd";
-import { HreflangLinks } from "@/components/seo/HreflangLinks";
-import { CanonicalLink } from "@/components/seo/CanonicalLink";
+import { JsonLd, generateWebsiteSchema } from "@/components/seo/JsonLd";
 import { FaqSection } from "@/components/seo/FaqSection";
 
 
@@ -33,17 +34,30 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'homepage' });
   
+  const title = locale === 'zh'
+    ? 'InterConverter - 精选在线转换工具与计算器'
+    : 'InterConverter - Selected Online Converters and Calculators';
+  
+  const description = locale === 'zh'
+    ? '免费在线转换工具与计算器平台。提供单位转换、时间计算、颜色转换、货币换算、BMI计算等实用工具。无需注册，即刻使用。'
+    : 'Free online converter and calculator tools. Unit conversion, timestamp tools, color converters, currency calculators, BMI calculators, and more. No registration required.';
+
   return generateSEOMetadata({
-    title: `${t('hero.title')} - ${t('hero.subtitle')}`,
-    description: t('hero.description'),
+    title,
+    description,
     locale,
     pathname: '/',
     keywords: [
       locale === 'zh' ? '在线转换器' : 'online converter',
       locale === 'zh' ? '计算器工具' : 'calculator tools',
-      locale === 'zh' ? '免费工具' : 'free tools',
       locale === 'zh' ? '单位转换' : 'unit conversion',
-      locale === 'zh' ? '货币转换' : 'currency converter'
+      locale === 'zh' ? '时间转换工具' : 'timestamp converter',
+      locale === 'zh' ? '颜色转换' : 'color converter',
+      locale === 'zh' ? '货币换算' : 'currency converter',
+      locale === 'zh' ? 'BMI计算器' : 'BMI calculator',
+      locale === 'zh' ? '免费在线工具' : 'free online tools',
+      locale === 'zh' ? '数字转换' : 'number converter',
+      locale === 'zh' ? '文本工具' : 'text tools'
     ]
   });
 }
@@ -57,17 +71,18 @@ export default async function HomePage({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'homepage' });
   const tCommon = await getTranslations({ locale, namespace: 'common' });
-  const popularTools = getPopularTools(6, locale);
-  const toolsByCategory = getToolsByAllCategories(4, locale);
+  const popularTools = getReviewApprovedPopularTools(6, locale);
+  const toolsByCategory = getReviewApprovedToolsByAllCategories(4, locale);
   const toolCategories = getToolCategories(locale);
   
   const faqItems = t.raw('faq') as Array<{question: string, answer: string}>;
   const professionals = t.raw('professionals') as string[];
+  const heroHighlights = locale === 'zh'
+    ? ['精选公开工具集', '说明持续修订', '无需注册']
+    : ['Curated public tool set', 'Reviewed explanations', 'No account required'];
 
   return (
     <>
-      <HreflangLinks pathname="/" />
-      <CanonicalLink locale={locale} pathname="/" />
       <JsonLd data={generateWebsiteSchema(locale)} />
       <StructuredData tools={popularTools} locale={locale}/>
      
@@ -105,24 +120,14 @@ export default async function HomePage({
           </div>
           
           <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-blue-100">
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-              </svg>
-              <span>100% Free</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-              </svg>
-              <span>No Registration</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-              <span>Instant Results</span>
-            </div>
+            {heroHighlights.map((item) => (
+              <div key={item} className="flex items-center gap-2">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>{item}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -168,7 +173,7 @@ export default async function HomePage({
                     <p className="text-gray-600 mt-1">{category.description}</p>
                   </div>
                   <Button asChild variant="outline" size="sm">
-                    <a href={`/${categoryKey}`}>{tCommon('viewMore')}</a>
+                    <Link href={`/${categoryKey}`}>{tCommon('viewMore')}</Link>
                   </Button>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">

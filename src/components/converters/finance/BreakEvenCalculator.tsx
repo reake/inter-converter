@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -19,7 +19,7 @@ export function BreakEvenCalculator() {
     profitAtUnits: (units: number) => number;
   } | null>(null);
 
-  const calculateBreakEven = () => {
+  const calculateBreakEven = useCallback(() => {
     const fixed = parseFloat(fixedCosts) || 0;
     const variableCost = parseFloat(variableCostPerUnit) || 0;
     const sellingPrice = parseFloat(sellingPricePerUnit) || 0;
@@ -42,13 +42,13 @@ export function BreakEvenCalculator() {
       contributionMarginRatio,
       profitAtUnits
     });
-  };
+  }, [fixedCosts, variableCostPerUnit, sellingPricePerUnit]);
 
   useEffect(() => {
     if (fixedCosts && variableCostPerUnit && sellingPricePerUnit) {
       calculateBreakEven();
     }
-  }, [fixedCosts, variableCostPerUnit, sellingPricePerUnit]);
+  }, [fixedCosts, variableCostPerUnit, sellingPricePerUnit, calculateBreakEven]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

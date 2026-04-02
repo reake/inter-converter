@@ -1,8 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -40,7 +39,7 @@ export default function MinimumPaymentCalculator() {
   const [fixedPaymentAmount, setFixedPaymentAmount] = useState<string>('200');
   const [results, setResults] = useState<PaymentResults | null>(null);
 
-  const calculatePayments = () => {
+  const calculatePayments = useCallback(() => {
     const bal = parseFloat(balance);
     const annualRate = parseFloat(apr) / 100;
     const monthlyRate = annualRate / 12;
@@ -146,11 +145,11 @@ export default function MinimumPaymentCalculator() {
         }
       }
     });
-  };
+  }, [balance, apr, minimumType, minimumPercent, minimumFixed, fixedPaymentAmount]);
 
   useEffect(() => {
     calculatePayments();
-  }, [balance, apr, minimumType, minimumPercent, minimumFixed, fixedPaymentAmount]);
+  }, [calculatePayments]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

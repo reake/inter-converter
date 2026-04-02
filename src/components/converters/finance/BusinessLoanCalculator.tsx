@@ -1,8 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -41,7 +40,7 @@ export default function BusinessLoanCalculator() {
     'poor': 'Poor (600-649)'
   };
 
-  const calculateLoan = () => {
+  const calculateLoan = useCallback(() => {
     const principal = parseFloat(loanAmount);
     const rate = parseFloat(interestRate) / 100 / 12;
     const months = parseFloat(loanTerm) * 12;
@@ -72,11 +71,11 @@ export default function BusinessLoanCalculator() {
       cashFlowImpact,
       debtServiceCoverage
     });
-  };
+  }, [loanAmount, interestRate, loanTerm, loanType, businessRevenue, monthlyExpenses]);
 
   useEffect(() => {
     calculateLoan();
-  }, [loanAmount, interestRate, loanTerm, loanType, businessRevenue, monthlyExpenses]);
+  }, [calculateLoan]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -263,7 +262,7 @@ export default function BusinessLoanCalculator() {
                         </div>
                       </div>
                       <div className="mt-4 text-sm text-gray-600">
-                        <p>This ratio measures your business's ability to service debt payments. A ratio above 1.25 is generally considered healthy.</p>
+                        <p>This ratio measures your business&apos;s ability to service debt payments. A ratio above 1.25 is generally considered healthy.</p>
                       </div>
                     </CardContent>
                   </Card>

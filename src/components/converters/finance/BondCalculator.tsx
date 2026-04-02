@@ -1,10 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { TrendingUp, Calculator } from 'lucide-react';
 import { CopyButton } from '@/components/ui/CopyButton';
 
@@ -23,13 +21,7 @@ export default function BondCalculator() {
   const [yearsToMaturity, setYearsToMaturity] = useState('10');
   const [result, setResult] = useState<BondCalculation | null>(null);
 
-  useEffect(() => {
-    if (faceValue && purchasePrice && couponRate && yearsToMaturity) {
-      calculateBond();
-    }
-  }, [faceValue, purchasePrice, couponRate, yearsToMaturity]);
-
-  const calculateBond = () => {
+  const calculateBond = useCallback(() => {
     const face = parseFloat(faceValue);
     const price = parseFloat(purchasePrice);
     const coupon = parseFloat(couponRate) / 100;
@@ -55,7 +47,13 @@ export default function BondCalculator() {
       annualizedReturn,
       duration: years
     });
-  };
+  }, [faceValue, purchasePrice, couponRate, yearsToMaturity]);
+
+  useEffect(() => {
+    if (faceValue && purchasePrice && couponRate && yearsToMaturity) {
+      calculateBond();
+    }
+  }, [faceValue, purchasePrice, couponRate, yearsToMaturity, calculateBond]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

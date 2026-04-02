@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -38,7 +38,7 @@ export default function MutualFundCalculator() {
     'international': 'International Fund'
   };
 
-  const calculateMutualFund = () => {
+  const calculateMutualFund = useCallback(() => {
     const initial = parseFloat(initialInvestment);
     const monthly = parseFloat(monthlyInvestment);
     const returnRate = parseFloat(expectedReturn) / 100;
@@ -96,11 +96,11 @@ export default function MutualFundCalculator() {
     };
 
     setResults(calculatedResults);
-  };
+  }, [initialInvestment, monthlyInvestment, expectedReturn, expenseRatio, frontEndLoad, backEndLoad, investmentPeriod]);
 
   useEffect(() => {
     calculateMutualFund();
-  }, [initialInvestment, monthlyInvestment, expectedReturn, expenseRatio, frontEndLoad, backEndLoad, investmentPeriod, fundType]);
+  }, [calculateMutualFund]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

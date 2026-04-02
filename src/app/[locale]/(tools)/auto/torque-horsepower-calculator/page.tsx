@@ -7,8 +7,9 @@ import enTool from '@/data/tools/auto/torque-horsepower-calculator-en.json';
 import zhTool from '@/data/tools/auto/torque-horsepower-calculator-zh.json';
 import autoEn from '@/data/tools/auto.json';
 import autoZh from '@/data/tools/auto-zh.json';
-import { ToolContent } from '@/types/tool-content';
 import { normalizeToolContent } from '@/utils/normalize-tool-content';
+import { buildToolPageMetadata } from '@/lib/seo/tool-page-metadata';
+import { getLocalizedToolEntry, type ToolCatalogEntry } from '@/lib/tool-page-catalog';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -22,15 +23,7 @@ export async function generateMetadata({
   const l = (locale || 'en').toLowerCase();
 
   // Localized catalog and helper
-  const catalogs: Record<string, any[]> = {
-    en: autoEn as any[],
-    zh: (autoZh as any[]) || (autoEn as any[])
-  };
-  const getEntry = (id: string) => {
-    const list = catalogs[l] || catalogs.en;
-    return list.find((it) => it.id === id) || catalogs.en.find((it) => it.id === id);
-  };
-  const entry = getEntry('torque-horsepower-calculator');
+  const entry = getLocalizedToolEntry(l, 'torque-horsepower-calculator', autoEn as ToolCatalogEntry[], autoZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name ?? 'Torque & Horsepower Calculator';
   const description: string = entry?.description ?? 'Convert between torque and horsepower at different RPMs.';
@@ -42,48 +35,16 @@ export async function generateMetadata({
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
 
-  const canonicalPath = `${l === "en" ? "" : "/" + l}/auto/torque-horsepower-calculator`;
 
-  return {
+  return buildToolPageMetadata({
+    locale: l,
+    category: 'auto',
+    toolId: 'torque-horsepower-calculator',
     title,
     description,
-    keywords: keywords.join(', '),
-    openGraph: {
-      title,
-      description,
-      type: 'website',
-      locale: l === 'zh' ? 'zh_CN' : 'en_US',
-      images: [
-        {
-          url: '/icons/icon-512x512.png',
-          width: 512,
-          height: 512,
-          alt: toolName
-        }
-      ]
-    },
-    alternates: {
-      canonical: canonicalPath,
-      languages: {
-        en: '/auto/torque-horsepower-calculator',
-        zh: '/zh/auto/torque-horsepower-calculator'
-      }
-    },
-    authors: [{ name: 'InterConverter Team' }],
-    creator: 'InterConverter',
-    publisher: 'InterConverter',
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1
-      }
-    }
-  };
+    keywords,
+    path: '/auto/torque-horsepower-calculator'
+  });
 }
 
 export default async function TorqueHorsepowerCalculatorPage({
@@ -103,9 +64,7 @@ export default async function TorqueHorsepowerCalculatorPage({
     : getFAQsByToolId('torque-horsepower-calculator', 'auto');
 
   // Load catalog entry for this tool to source localized name/description/keywords
-  const catalogs: Record<string, any[]> = { en: autoEn as any[], zh: (autoZh as any[]) || (autoEn as any[]) };
-  const catalog = catalogs[l] || catalogs.en;
-  const entry = catalog.find((it) => it.id === 'torque-horsepower-calculator') || (autoEn as any[]).find((it) => it.id === 'torque-horsepower-calculator');
+  const entry = getLocalizedToolEntry(l, 'torque-horsepower-calculator', autoEn as ToolCatalogEntry[], autoZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name || 'Torque & Horsepower Calculator';
   const descriptionText: string = entry?.description || 'Convert between torque and horsepower at different RPMs.';

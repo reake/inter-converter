@@ -1,14 +1,14 @@
 import { Metadata } from "next";
 import { EnhancedToolLayout } from "@/components/tools/EnhancedToolLayout";
 import LoanCalculator from "@/components/converters/finance/LoanCalculator";
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
 import enTool from '@/data/tools/finance/loan-calculator-en.json';
 import zhTool from '@/data/tools/finance/loan-calculator-zh.json';
 import financeEn from '@/data/tools/finance.json';
 import financeZh from '@/data/tools/finance-zh.json';
-import { ToolContent } from '@/types/tool-content';
 import { normalizeToolContent } from '@/utils/normalize-tool-content';
+import { buildToolPageMetadata } from '@/lib/seo/tool-page-metadata';
+import { getLocalizedToolEntry, type ToolCatalogEntry } from '@/lib/tool-page-catalog';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -21,11 +21,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const l = (locale || 'en').toLowerCase();
 
-  const catalogs: Record<string, any[]> = {
-    en: financeEn as any[],
-    zh: (financeZh as any[]) || (financeEn as any[])
-  };
-  const entry = catalogs[l]?.find((it) => it.id === 'loan-calculator') || catalogs.en.find((it) => it.id === 'loan-calculator');
+  const entry = getLocalizedToolEntry(l, 'loan-calculator', financeEn as ToolCatalogEntry[], financeZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name ?? 'Loan Calculator';
   const description: string = entry?.description ?? 'Calculate loan payments, total interest, and amortization schedule. Free loan payment calculator for personal loans, auto loans, and more.';
@@ -36,48 +32,16 @@ export async function generateMetadata({
 
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
-  const canonicalPath = `${l === "en" ? "" : "/" + l}/finance/loan-calculator`;
 
-  return {
+  return buildToolPageMetadata({
+    locale: l,
+    category: 'finance',
+    toolId: 'loan-calculator',
     title,
     description,
-    keywords: keywords.join(', '),
-    openGraph: {
-      title,
-      description,
-      type: 'website',
-      locale: l === 'zh' ? 'zh_CN' : 'en_US',
-      images: [
-        {
-          url: '/icons/icon-512x512.png',
-          width: 512,
-          height: 512,
-          alt: toolName
-        }
-      ]
-    },
-    alternates: {
-      canonical: canonicalPath,
-      languages: {
-        en: '/finance/loan-calculator',
-        zh: '/zh/finance/loan-calculator'
-      }
-    },
-    authors: [{ name: 'InterConverter Team' }],
-    creator: 'InterConverter',
-    publisher: 'InterConverter',
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1
-      }
-    }
-  };
+    keywords,
+    path: '/finance/loan-calculator'
+  });
 }
 
 export default async function LoanCalculatorPage({
@@ -97,8 +61,7 @@ export default async function LoanCalculatorPage({
   const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
   const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
 
-  const catalogs: Record<string, any[]> = { en: financeEn as any[], zh: (financeZh as any[]) || (financeEn as any[]) };
-  const entry = catalogs[l]?.find((it) => it.id === 'loan-calculator') || catalogs.en.find((it) => it.id === 'loan-calculator');
+  const entry = getLocalizedToolEntry(l, 'loan-calculator', financeEn as ToolCatalogEntry[], financeZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name || 'Loan Calculator';
   const descriptionText: string = entry?.description || 'Calculate monthly payments, total interest costs, and amortization schedules for any type of loan.';

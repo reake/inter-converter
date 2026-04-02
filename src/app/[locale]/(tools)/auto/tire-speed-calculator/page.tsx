@@ -7,8 +7,9 @@ import enTool from '@/data/tools/auto/tire-speed-calculator-en.json';
 import zhTool from '@/data/tools/auto/tire-speed-calculator-zh.json';
 import autoEn from '@/data/tools/auto.json';
 import autoZh from '@/data/tools/auto-zh.json';
-import { ToolContent } from '@/types/tool-content';
 import { normalizeToolContent } from '@/utils/normalize-tool-content';
+import { buildToolPageMetadata } from '@/lib/seo/tool-page-metadata';
+import { getLocalizedToolEntry, type ToolCatalogEntry } from '@/lib/tool-page-catalog';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -21,15 +22,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const l = (locale || 'en').toLowerCase();
 
-  const catalogs: Record<string, any[]> = {
-    en: autoEn as any[],
-    zh: (autoZh as any[]) || (autoEn as any[])
-  };
-  const getEntry = (id: string) => {
-    const list = catalogs[l] || catalogs.en;
-    return list.find((it) => it.id === id) || catalogs.en.find((it) => it.id === id);
-  };
-  const entry = getEntry('tire-speed-calculator');
+  const entry = getLocalizedToolEntry(l, 'tire-speed-calculator', autoEn as ToolCatalogEntry[], autoZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name ?? 'Tire Speed Calculator';
   const description: string = entry?.description ?? 'Calculate vehicle speed based on tire diameter, gear ratio, and RPM. Essential tool for performance tuning and gear selection with professional accuracy.';
@@ -41,48 +34,16 @@ export async function generateMetadata({
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
 
-  const canonicalPath = `${l === "en" ? "" : "/" + l}/auto/tire-speed-calculator`;
 
-  return {
+  return buildToolPageMetadata({
+    locale: l,
+    category: 'auto',
+    toolId: 'tire-speed-calculator',
     title,
     description,
-    keywords: keywords.join(', '),
-    openGraph: {
-      title,
-      description,
-      type: 'website',
-      locale: l === 'zh' ? 'zh_CN' : 'en_US',
-      images: [
-        {
-          url: '/icons/icon-512x512.png',
-          width: 512,
-          height: 512,
-          alt: toolName
-        }
-      ]
-    },
-    alternates: {
-      canonical: canonicalPath,
-      languages: {
-        en: '/auto/tire-speed-calculator',
-        zh: '/zh/auto/tire-speed-calculator'
-      }
-    },
-    authors: [{ name: 'InterConverter Team' }],
-    creator: 'InterConverter',
-    publisher: 'InterConverter',
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1
-      }
-    }
-  };
+    keywords,
+    path: '/auto/tire-speed-calculator'
+  });
 }
 
 export default async function TireSpeedCalculatorPage({
@@ -102,9 +63,7 @@ export default async function TireSpeedCalculatorPage({
     : getFAQsByToolId('tire-speed-calculator', 'auto');
 
   // Load catalog entry for this tool to source localized name/description/keywords
-  const catalogMap: Record<string, any[]> = { en: autoEn as any[], zh: (autoZh as any[]) || (autoEn as any[]) };
-  const catalog = catalogMap[l] || (autoEn as any[]);
-  const entry = catalog.find((it) => it.id === 'tire-speed-calculator') || (autoEn as any[]).find((it) => it.id === 'tire-speed-calculator');
+  const entry = getLocalizedToolEntry(l, 'tire-speed-calculator', autoEn as ToolCatalogEntry[], autoZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name || 'Tire Speed Calculator';
   const descriptionText: string = entry?.description || 'Calculate vehicle speed based on tire diameter, gear ratio, and RPM. Essential tool for performance tuning and optimal gear selection.';

@@ -1,84 +1,87 @@
 {
   "about": {
     "title": "About Timezone Converter",
-    "description": "The Timezone Converter helps you convert time between different time zones around the world. Perfect for scheduling international meetings, coordinating with global teams, or planning travel across time zones. Features real-time conversion with daylight saving time awareness, making it essential for business communications, event planning, and managing relationships across different geographical locations."
+    "description": [
+      "This timezone converter is meant for the practical work of comparing one local time against another without manually calculating offsets.",
+      "It is useful for scheduling calls, checking launch times, translating deadlines for distributed teams, and reviewing whether a UTC timestamp lines up with what people in a given city would actually see on the clock."
+    ]
   },
   "howTo": {
     "title": "How to Use the Timezone Converter",
     "steps": [
       {
-        "title": "Select Source Timezone",
-        "description": "Choose your current time zone or the time zone you're converting from."
+        "title": "Choose the source timezone",
+        "description": "Start with the timezone where the original event time was created, not the timezone where you are currently sitting."
       },
       {
-        "title": "Enter Time",
-        "description": "Input the specific time you want to convert to other time zones."
+        "title": "Enter the local date and time",
+        "description": "Use the exact local time you want to compare, such as a meeting slot, release window, or customer deadline."
       },
       {
-        "title": "Choose Target Timezone",
-        "description": "Select the destination time zone you want to convert to."
+        "title": "Pick the destination timezone",
+        "description": "Select the city or timezone used by the other person, office, or system you need to coordinate with."
       },
       {
-        "title": "View Results",
-        "description": "See the converted time instantly with daylight saving time adjustments."
+        "title": "Check the calendar date as well as the clock time",
+        "description": "Cross-timezone conversions often shift the day. Confirm whether the converted result lands earlier, later, or even on the next date."
       }
     ],
     "tips": [
-      "Use popular cities for quick time zone selection",
-      "Add multiple time zones for global meeting planning",
-      "Check UTC offset for precise time calculations"
+      "A meeting can fail even when the hour looks right if the converted date shifts to the previous or next day.",
+      "Daylight saving time changes are a common source of scheduling mistakes.",
+      "Use city-based timezone labels when possible so you do not mix up regions that currently share the same UTC offset."
     ]
   },
   "features": [
     {
-      "title": "Global Timezone Database",
-      "description": "Comprehensive database covering all major world time zones and regional variations."
+      "title": "Cross-region scheduling support",
+      "description": "Useful for planning interviews, handoffs, launches, or customer calls across regions that do not share a working day."
     },
     {
-      "title": "Daylight Saving Time",
-      "description": "Automatic handling of daylight saving time changes throughout the year."
+      "title": "DST-aware comparisons",
+      "description": "The page is more useful than a static offset table because daylight saving rules can change the real-world answer."
     },
     {
-      "title": "Multiple Zone Comparison",
-      "description": "Compare the same time across multiple time zones simultaneously."
+      "title": "City-oriented workflow",
+      "description": "Thinking in cities helps avoid the common mistake of choosing the wrong offset label for the same region."
     },
     {
-      "title": "Real-Time Updates",
-      "description": "Live time conversion with automatic updates as time progresses."
+      "title": "Date-shift visibility",
+      "description": "The converted result helps you catch when a deadline lands on a different local calendar day for another team."
     },
     {
-      "title": "Popular Cities Selection",
-      "description": "Quick selection from major cities and business centers worldwide."
+      "title": "UTC translation help",
+      "description": "Works well alongside timestamp checks when an event is stored in UTC but discussed in local business time."
     },
     {
-      "title": "UTC Offset Display",
-      "description": "Clear UTC offset information for precise time zone understanding."
+      "title": "Faster handoff planning",
+      "description": "Useful for quickly seeing whether a proposed time fits overlap hours instead of forcing manual offset math."
     }
   ],
   "faq": [
     {
-      "q": "Does the timezone converter handle daylight saving time automatically?",
-      "a": "Yes, our timezone converter automatically accounts for daylight saving time changes in all supported time zones throughout the year. The system updates automatically when DST begins and ends, ensuring accurate time conversions."
+      "q": "Why is timezone conversion harder than subtracting a fixed number of hours?",
+      "a": "Because real timezones are not just simple offsets. Daylight saving time, regional rules, and historical changes can all affect what the correct local time should be."
     },
     {
-      "q": "How many time zones are supported by the converter?",
-      "a": "The timezone converter supports all major world time zones, including regional variations and historical time zone changes. This covers over 400 time zones worldwide with their specific UTC offsets and DST rules."
+      "q": "What is the most common timezone mistake?",
+      "a": "People often convert the hour correctly but forget to check the date. A late-evening time in one region may already be the next morning somewhere else."
     },
     {
-      "q": "Can I compare multiple time zones simultaneously?",
-      "a": "Yes, you can add multiple time zones to see the same time across different regions simultaneously. This is perfect for scheduling international meetings or coordinating with global teams across various time zones."
+      "q": "Should I use UTC offsets or city names?",
+      "a": "City names are safer for most workflows because they track the timezone rules that actually apply to that location. A bare UTC offset can miss daylight saving changes."
     },
     {
-      "q": "What happens if a time zone changes its rules?",
-      "a": "Our timezone converter uses an updated time zone database that reflects current and historical time zone rules and changes. The system is regularly updated to handle any governmental changes to time zone policies."
+      "q": "Can this help with meeting planning?",
+      "a": "Yes. It is especially useful when you need to compare one proposed time across multiple offices before sending an invite."
     },
     {
-      "q": "How accurate is the timezone conversion?",
-      "a": "The timezone converter is highly accurate, using the official IANA Time Zone Database. It accounts for all historical changes, current rules, and future scheduled changes to ensure precise time conversions."
+      "q": "Why does one timezone seem to change while another does not?",
+      "a": "Some regions observe daylight saving time and others do not. That means the gap between two cities can change during the year."
     },
     {
-      "q": "Can I use the converter for scheduling meetings across time zones?",
-      "a": "Absolutely! The timezone converter is perfect for scheduling international meetings. You can compare multiple time zones to find suitable meeting times that work for participants in different geographical locations."
+      "q": "Should I still verify important event times?",
+      "a": "Yes. For launches, contracts, travel, or other important events, confirm the final time in the system of record instead of relying on one conversion view alone."
     }
   ],
   "relativeLinks": [
@@ -89,10 +92,6 @@
     {
       "title": "Date Difference Calculator",
       "url": "/time/date-difference-calculator"
-    },
-    {
-      "title": "Countdown Timer",
-      "url": "/time/countdown-timer"
     },
     {
       "title": "Time Tools Category",

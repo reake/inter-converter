@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -75,7 +75,7 @@ export function AutoWeightConverter() {
     setErrors({});
   };
 
-  const getDisplayValue = (value: number, unit: string): string => {
+  const getDisplayValue = (value: number): string => {
     if (value < 0.001 && value > 0) {
       return value.toExponential(3);
     } else if (value < 1) {
@@ -159,32 +159,32 @@ export function AutoWeightConverter() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               <div className="flex justify-between items-center p-3 bg-muted rounded-lg">
                 <span className="text-sm font-medium">Pounds:</span>
-                <Badge variant="default">{getDisplayValue(results.pounds, 'lbs')} lbs</Badge>
+                <Badge variant="default">{getDisplayValue(results.pounds)} lbs</Badge>
               </div>
               
               <div className="flex justify-between items-center p-3 bg-muted rounded-lg">
                 <span className="text-sm font-medium">Kilograms:</span>
-                <Badge variant="secondary">{getDisplayValue(results.kilograms, 'kg')} kg</Badge>
+                <Badge variant="secondary">{getDisplayValue(results.kilograms)} kg</Badge>
               </div>
               
               <div className="flex justify-between items-center p-3 bg-muted rounded-lg">
                 <span className="text-sm font-medium">Ounces:</span>
-                <Badge variant="outline">{getDisplayValue(results.ounces, 'oz')} oz</Badge>
+                <Badge variant="outline">{getDisplayValue(results.ounces)} oz</Badge>
               </div>
               
               <div className="flex justify-between items-center p-3 bg-muted rounded-lg">
                 <span className="text-sm font-medium">Grams:</span>
-                <Badge variant="outline">{getDisplayValue(results.grams, 'g')} g</Badge>
+                <Badge variant="outline">{getDisplayValue(results.grams)} g</Badge>
               </div>
               
               <div className="flex justify-between items-center p-3 bg-muted rounded-lg">
                 <span className="text-sm font-medium">Tons (US):</span>
-                <Badge variant="outline">{getDisplayValue(results.tons, 'tons')} tons</Badge>
+                <Badge variant="outline">{getDisplayValue(results.tons)} tons</Badge>
               </div>
               
               <div className="flex justify-between items-center p-3 bg-muted rounded-lg">
                 <span className="text-sm font-medium">Stones:</span>
-                <Badge variant="outline">{getDisplayValue(results.stones, 'st')} st</Badge>
+                <Badge variant="outline">{getDisplayValue(results.stones)} st</Badge>
               </div>
             </div>
           </CardContent>

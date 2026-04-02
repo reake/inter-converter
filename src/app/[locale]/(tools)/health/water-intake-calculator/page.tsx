@@ -1,14 +1,14 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import WaterIntakeCalculator from '@/components/converters/health/WaterIntakeCalculator';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
 import enTool from '@/data/tools/health/water-intake-calculator-en.json';
 import zhTool from '@/data/tools/health/water-intake-calculator-zh.json';
 import healthEn from '@/data/tools/health.json';
 import healthZh from '@/data/tools/health-zh.json';
-import { ToolContent } from '@/types/tool-content';
 import { normalizeToolContent } from '@/utils/normalize-tool-content';
+import { buildToolPageMetadata } from '@/lib/seo/tool-page-metadata';
+import { getLocalizedToolEntry, type ToolCatalogEntry } from '@/lib/tool-page-catalog';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -21,15 +21,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const l = (locale || 'en').toLowerCase();
 
-  const catalogs: Record<string, any[]> = {
-    en: healthEn as any[],
-    zh: (healthZh as any[]) || (healthEn as any[])
-  };
-  const getEntry = (id: string) => {
-    const list = catalogs[l] || catalogs.en;
-    return list.find((it) => it.id === id) || catalogs.en.find((it) => it.id === id);
-  };
-  const entry = getEntry('water-intake-calculator');
+  const entry = getLocalizedToolEntry(l, 'water-intake-calculator', healthEn as ToolCatalogEntry[], healthZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name ?? 'Water Intake Calculator';
   const description: string = entry?.description ?? 'Calculate daily water intake requirements based on body weight, activity level, and climate conditions with instant calculations.';
@@ -41,48 +33,16 @@ export async function generateMetadata({
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
 
-  const canonicalPath = `${l === "en" ? "" : "/" + l}/health/water-intake-calculator`;
 
-  return {
+  return buildToolPageMetadata({
+    locale: l,
+    category: 'health',
+    toolId: 'water-intake-calculator',
     title,
     description,
-    keywords: keywords.join(', '),
-    openGraph: {
-      title,
-      description,
-      type: 'website',
-      locale: l === 'zh' ? 'zh_CN' : 'en_US',
-      images: [
-        {
-          url: '/icons/icon-512x512.png',
-          width: 512,
-          height: 512,
-          alt: toolName
-        }
-      ]
-    },
-    alternates: {
-      canonical: canonicalPath,
-      languages: {
-        en: '/health/water-intake-calculator',
-        zh: '/zh/health/water-intake-calculator'
-      }
-    },
-    authors: [{ name: 'InterConverter Team' }],
-    creator: 'InterConverter',
-    publisher: 'InterConverter',
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1
-      }
-    }
-  };
+    keywords,
+    path: '/health/water-intake-calculator'
+  });
 }
 
 export default async function WaterIntakeCalculatorPage({
@@ -103,9 +63,7 @@ export default async function WaterIntakeCalculatorPage({
   const features = toolContent.features?.length ? toolContent.features : fallbackContent.features;
   const faqs = toolContent.faqs?.length ? toolContent.faqs : fallbackContent.faqs;
 
-  const catalogs: Record<string, any[]> = { en: healthEn as any[], zh: (healthZh as any[]) || (healthEn as any[]) };
-  const catalog = catalogs[l] || catalogs.en;
-  const entry = catalog.find((it) => it.id === 'water-intake-calculator') || (healthEn as any[]).find((it) => it.id === 'water-intake-calculator');
+  const entry = getLocalizedToolEntry(l, 'water-intake-calculator', healthEn as ToolCatalogEntry[], healthZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name || 'Water Intake Calculator';
   const descriptionText: string = entry?.description || 'Calculate daily water intake needs based on weight, activity level, and environmental factors for optimal hydration.';

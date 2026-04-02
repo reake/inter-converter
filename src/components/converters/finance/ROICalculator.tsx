@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -18,7 +18,7 @@ export function ROICalculator() {
     totalReturn: number;
   } | null>(null);
 
-  const calculateROI = () => {
+  const calculateROI = useCallback(() => {
     const initial = parseFloat(initialInvestment) || 0;
     const final = parseFloat(finalValue) || 0;
     const period = parseFloat(investmentPeriod) || 1;
@@ -36,13 +36,13 @@ export function ROICalculator() {
       annualizedROI,
       totalReturn
     });
-  };
+  }, [initialInvestment, finalValue, investmentPeriod]);
 
   useEffect(() => {
     if (initialInvestment && finalValue) {
       calculateROI();
     }
-  }, [initialInvestment, finalValue, investmentPeriod]);
+  }, [initialInvestment, finalValue, investmentPeriod, calculateROI]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

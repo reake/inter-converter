@@ -1,12 +1,11 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
 import { Calculator, Home, DollarSign, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react';
 
@@ -51,7 +50,7 @@ export default function HomeAffordabilityCalculator({
   const [creditScore, setCreditScore] = useState<string>('good');
   const [result, setResult] = useState<AffordabilityResult | null>(null);
 
-  const calculateAffordability = () => {
+  const calculateAffordability = useCallback(() => {
     const income = parseFloat(annualIncome) || 0;
     const debts = parseFloat(monthlyDebts) || 0;
     const downPayment = parseFloat(downPaymentAmount) || 0;
@@ -159,11 +158,11 @@ export default function HomeAffordabilityCalculator({
       qualificationStatus,
       recommendations
     });
-  };
+  }, [annualIncome, monthlyDebts, downPaymentAmount, interestRate, loanTerm, propertyTaxAnnual, homeInsuranceAnnual, hoaFees, creditScore]);
 
   useEffect(() => {
     calculateAffordability();
-  }, [annualIncome, monthlyDebts, downPaymentAmount, interestRate, loanTerm, propertyTaxAnnual, homeInsuranceAnnual, hoaFees, creditScore]);
+  }, [calculateAffordability]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

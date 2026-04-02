@@ -14,26 +14,11 @@ export function StructuredData({ tools = [], category, locale = 'en' }: Structur
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://interconverter.com';
   const normalizedLocale = (locale || 'en').toLowerCase();
   const localePrefix = normalizedLocale === 'en' ? '' : `/${normalizedLocale}`;
-  
-  // Website structured data
-  const websiteData = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "InterConverter - Free Online Converter Tools",
-    "alternateName": "InterConverter",
-    "description": "Professional online converter tools and calculators. Free, secure, and accurate tools for unit converters, currency calculation, and specialized calculations.",
-    "url": `${baseUrl}${localePrefix}`,
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": `${baseUrl}${localePrefix}/tools?q={search_term_string}`
-      },
-      "query-input": "required name=search_term_string"
-    },
-    "keywords": "online converter, free calculator, unit converters, currency converter, measurement tools, professional calculators"
+  const withLocalePath = (toolPath: string) => {
+    const alreadyLocalized = /^\/[a-z]{2}(?=\/)/.test(toolPath);
+    return `${baseUrl}${alreadyLocalized ? toolPath : `${localePrefix}${toolPath}`}`;
   };
-
+  
   // Organization structured data
   const organizationData = {
     "@context": "https://schema.org",
@@ -51,11 +36,9 @@ export function StructuredData({ tools = [], category, locale = 'en' }: Structur
     },
     "knowsAbout": [
       "Unit Converters",
-      "Currency Converters",
-      "Mathematical Calculations",
-      "Engineering Tools",
-      "Automotive Calculators",
-      "Health & Fitness Tools"
+      "Time Conversion Tools",
+      "Color Conversion Tools",
+      "Image Conversion Tools"
     ]
   };
 
@@ -99,7 +82,7 @@ export function StructuredData({ tools = [], category, locale = 'en' }: Structur
       "position": index + 1,
       "name": tool.name,
       "description": tool.description,
-      "url": `${baseUrl}${localePrefix}${tool.path}`,
+      "url": withLocalePath(tool.path),
       "applicationCategory": "WebApplication",
       "operatingSystem": "Any",
       "offers": {
@@ -127,7 +110,7 @@ export function StructuredData({ tools = [], category, locale = 'en' }: Structur
       "itemListElement": tools.map((tool, index) => ({
         "@type": "ListItem",
         "position": index + 1,
-        "url": `${baseUrl}${localePrefix}${tool.path}`,
+        "url": withLocalePath(tool.path),
         "name": tool.name
       }))
     },
@@ -139,7 +122,6 @@ export function StructuredData({ tools = [], category, locale = 'en' }: Structur
   };
 
   const allStructuredData: Array<Record<string, unknown>> = [
-    websiteData,
     organizationData,
     breadcrumbData,
     toolsData,
@@ -170,6 +152,8 @@ export function generateToolStructuredData(tool: ToolConfig, locale: string = 'e
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://interconverter.com';
   const normalizedLocale = (locale || 'en').toLowerCase();
   const localePrefix = normalizedLocale === 'en' ? '' : `/${normalizedLocale}`;
+  const alreadyLocalized = /^\/[a-z]{2}(?=\/)/.test(tool.path);
+  const toolUrl = `${baseUrl}${alreadyLocalized ? tool.path : `${localePrefix}${tool.path}`}`;
   const toolCategories = getToolCategories(locale);
   const categoryInfo = toolCategories[tool.category as keyof typeof toolCategories];
   
@@ -178,7 +162,7 @@ export function generateToolStructuredData(tool: ToolConfig, locale: string = 'e
     "@type": "SoftwareApplication",
     "name": tool.name,
     "description": tool.description,
-    "url": `${baseUrl}${localePrefix}${tool.path}`,
+    "url": toolUrl,
     "applicationCategory": "WebApplication",
     "operatingSystem": "Any",
     "browserRequirements": "Requires JavaScript. Requires HTML5.",
@@ -229,7 +213,7 @@ export function generateToolStructuredData(tool: ToolConfig, locale: string = 'e
         "@type": "ListItem",
         "position": 4,
         "name": tool.name,
-        "item": `${baseUrl}${localePrefix}${tool.path}`
+        "item": toolUrl
       }
     ]
   };

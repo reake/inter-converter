@@ -1,10 +1,8 @@
 'use client';
 
-import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import { AlertTriangleIcon, CheckCircleIcon, InfoIcon } from 'lucide-react';
 import { CopyButton } from '@/components/ui/CopyButton';
 import { AutomotiveResult, Recommendation, Warning } from '@/types/automotive';

@@ -1,11 +1,10 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 interface Debt {
@@ -38,10 +37,9 @@ export default function DebtPayoffCalculator() {
     { id: '3', name: 'Personal Loan', balance: 8000, minPayment: 250, apr: 12.5 }
   ]);
   const [extraPayment, setExtraPayment] = useState<string>('100');
-  const [strategy, setStrategy] = useState<string>('both');
   const [results, setResults] = useState<PayoffResults | null>(null);
 
-  const calculatePayoff = () => {
+  const calculatePayoff = useCallback(() => {
     const extra = parseFloat(extraPayment) || 0;
     
     if (debts.length === 0) return;
@@ -63,14 +61,13 @@ export default function DebtPayoffCalculator() {
       savings,
       timeDifference
     });
-  };
+  }, [debts, extraPayment]);
 
   const simulatePayoff = (sortedDebts: Debt[], extraPayment: number) => {
     let debtsRemaining = sortedDebts.map(debt => ({ ...debt }));
     let totalInterest = 0;
     let month = 0;
     const payoffOrder: string[] = [];
-    const totalMinPayments = debts.reduce((sum, debt) => sum + debt.minPayment, 0);
     let availableExtra = extraPayment;
 
     while (debtsRemaining.length > 0 && month < 600) {
@@ -116,7 +113,7 @@ export default function DebtPayoffCalculator() {
 
   useEffect(() => {
     calculatePayoff();
-  }, [debts, extraPayment, strategy]);
+  }, [calculatePayoff]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

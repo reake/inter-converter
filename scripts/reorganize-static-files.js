@@ -53,32 +53,10 @@ function reorganizeStaticFiles() {
     console.log('✓ Created: index.html (from en.html)');
   }
 
-  // 清理不需要的目录和文件
-  const zhDir = path.join(outDir, 'zh');
-
-  // 删除中文目录
-  if (fs.existsSync(zhDir)) {
-    fs.rmSync(zhDir, { recursive: true, force: true });
-    console.log('✓ Removed: zh/ directory');
-  }
-
   // 删除 /en/ 备份目录
   if (fs.existsSync(enDir)) {
     fs.rmSync(enDir, { recursive: true, force: true });
     console.log('✓ Removed: en/ directory');
-  }
-
-  // 删除中文相关文件
-  const zhHtmlPath = path.join(outDir, 'zh.html');
-  if (fs.existsSync(zhHtmlPath)) {
-    fs.unlinkSync(zhHtmlPath);
-    console.log('✓ Removed: zh.html');
-  }
-
-  const zhTxtPath = path.join(outDir, 'zh.txt');
-  if (fs.existsSync(zhTxtPath)) {
-    fs.unlinkSync(zhTxtPath);
-    console.log('✓ Removed: zh.txt');
   }
 
   // 删除 en.html 和 en.txt 文件（避免 /en/ URL）
@@ -96,7 +74,8 @@ function reorganizeStaticFiles() {
 
   console.log('✅ Static files reorganized successfully!');
   console.log('📁 File structure:');
-  console.log('   / (root) - English version only');
+  console.log('   / (root) - English version');
+  console.log('   /zh/* - Chinese localized pages');
 }
 
 // 运行脚本

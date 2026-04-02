@@ -13,7 +13,6 @@ export function Header() {
   const navigation = [
     { href: '/', key: 'home' },
     { href: '/tools', key: 'tools' },
-    { href: '/auto', key: 'auto' },
     { href: '/about', key: 'about' },
   ];
 
@@ -21,8 +20,15 @@ export function Header() {
     <header className="border-b">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold">
-            {t('title')}
+          <Link href="/" className="flex items-center gap-2">
+            <img 
+              src="/logo.png" 
+              alt={t('title')} 
+              width={32} 
+              height={32}
+              className="h-8 w-auto"
+            />
+            <span className="text-xl font-bold">{t('title')}</span>
           </Link>
           
           <nav className="hidden md:flex items-center space-x-6">

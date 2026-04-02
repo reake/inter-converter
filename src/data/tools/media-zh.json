@@ -16,8 +16,8 @@
   {
     "id": "jpg-to-png-converter",
     "name": "JPG转PNG转换器",
-    "description": "将JPG图片转换为PNG格式，支持透明度和无损质量。专业图片转换器，用于网页图形和照片编辑应用。",
-    "titleSuffix": "图片格式和透明度",
+    "description": "将 JPG 图片转换为 PNG，适合需要更便于编辑的格式、网页图形处理或简单导出场景，也能帮助你判断透明背景和画质预期是否合理。",
+    "titleSuffix": "PNG 输出",
     "category": "media",
     "keywords": ["jpg", "jpeg", "png", "图片", "转换器", "照片"],
     "path": "/zh/media/jpg-to-png-converter",

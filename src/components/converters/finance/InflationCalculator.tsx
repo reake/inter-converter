@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -19,7 +19,7 @@ export function InflationCalculator() {
     yearlyBreakdown: Array<{year: number, value: number, realValue: number}>;
   } | null>(null);
 
-  const calculateInflation = () => {
+  const calculateInflation = useCallback(() => {
     const initial = parseFloat(initialAmount) || 0;
     const rate = parseFloat(inflationRate) || 0;
     const years = parseFloat(timePeriod) || 0;
@@ -50,13 +50,13 @@ export function InflationCalculator() {
       totalInflation,
       yearlyBreakdown
     });
-  };
+  }, [initialAmount, inflationRate, timePeriod]);
 
   useEffect(() => {
     if (initialAmount && inflationRate && timePeriod) {
       calculateInflation();
     }
-  }, [initialAmount, inflationRate, timePeriod]);
+  }, [initialAmount, inflationRate, timePeriod, calculateInflation]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

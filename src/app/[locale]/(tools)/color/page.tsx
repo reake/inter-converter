@@ -3,11 +3,9 @@ import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { getColorTools } from '@/config/tools';
+import { getReviewApprovedToolsByCategory } from '@/config/tools';
 import { ArrowRight, TrendingUp, Users, Star, Palette } from 'lucide-react';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo/metadata';
-import { HreflangLinks } from '@/components/seo/HreflangLinks';
-import { CanonicalLink } from '@/components/seo/CanonicalLink';
 import { JsonLd } from '@/components/seo/JsonLd';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -40,7 +38,7 @@ export default async function ColorToolsPage({ params }: { params: Promise<{ loc
     {
       name: t('categories.colorConversion.name'),
       description: t('categories.colorConversion.description'),
-      tools: getColorTools(undefined, locale).filter(tool => 
+      tools: getReviewApprovedToolsByCategory('color', locale).filter(tool => 
         tool.id.includes('hex') || tool.id.includes('rgb') || tool.id.includes('hsl')
       ),
       icon: t('categories.colorConversion.icon'),
@@ -49,7 +47,7 @@ export default async function ColorToolsPage({ params }: { params: Promise<{ loc
     {
       name: t('categories.colorSelection.name'),
       description: t('categories.colorSelection.description'),
-      tools: getColorTools(undefined, locale).filter(tool => 
+      tools: getReviewApprovedToolsByCategory('color', locale).filter(tool => 
         tool.id.includes('picker') || tool.id.includes('palette')
       ),
       icon: t('categories.colorSelection.icon'),
@@ -58,7 +56,7 @@ export default async function ColorToolsPage({ params }: { params: Promise<{ loc
     {
       name: t('categories.designGeneration.name'),
       description: t('categories.designGeneration.description'),
-      tools: getColorTools(undefined, locale).filter(tool => 
+      tools: getReviewApprovedToolsByCategory('color', locale).filter(tool => 
         tool.id.includes('gradient') || tool.id.includes('generator')
       ),
       icon: t('categories.designGeneration.icon'),
@@ -67,36 +65,20 @@ export default async function ColorToolsPage({ params }: { params: Promise<{ loc
     {
       name: t('categories.accessibility.name'),
       description: t('categories.accessibility.description'),
-      tools: getColorTools(undefined, locale).filter(tool => 
+      tools: getReviewApprovedToolsByCategory('color', locale).filter(tool => 
         tool.id.includes('contrast') || tool.id.includes('accessibility')
       ),
       icon: t('categories.accessibility.icon'),
       color: 'bg-green-50 border-green-200'
     }
-  ];
-  const colorTools = getColorTools(undefined, locale);
+  ].filter((category) => category.tools.length > 0);
+  const colorTools = getReviewApprovedToolsByCategory('color', locale);
   
   // Popular tools (high search volume)
   const popularTools = colorTools.filter(tool => (tool.searchVolume || 0) > 50000);
-  
-  // Essential tools (most commonly used)
-  const essentialTools = colorTools.filter(tool => (tool.difficulty || 1) === 1);
-  
-  // Advanced tools (for professionals)
-  const advancedTools = colorTools.filter(tool => (tool.difficulty || 1) >= 2);
-  
-  // New and trending tools
-  const trendingTools = colorTools.filter(tool => tool.isActive);
-
-  // All tools sorted by popularity
-  const allTools = colorTools
-    .sort((a, b) => (b.searchVolume || 0) - (a.searchVolume || 0))
-    .slice(0, 4);
 
   return (
     <>
-      <HreflangLinks pathname="/color" />
-      <CanonicalLink pathname="/color" locale={locale} />
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -147,14 +129,14 @@ export default async function ColorToolsPage({ params }: { params: Promise<{ loc
           <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('sections.essential.title')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {popularTools.map((tool) => (
-              <Link key={tool.id} href={tool.path as any} className="group">
+              <Link key={tool.id} href={tool.path} className="group">
                 <Card className="h-full hover:shadow-lg transition-all duration-200 border-2 hover:border-primary/20">
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between">
                       <div className="text-2xl">{tool.icon}</div>
-                      <Badge variant="secondary" className="text-xs">
+                      {/* <Badge variant="secondary" className="text-xs">
                         {(tool.searchVolume || 0).toLocaleString()}
-                      </Badge>
+                      </Badge> */}
                     </div>
                     <CardTitle className="text-lg group-hover:text-primary transition-colors">
                       {tool.name}
@@ -197,7 +179,7 @@ export default async function ColorToolsPage({ params }: { params: Promise<{ loc
                   {category.tools.map((tool) => (
                     <Link
                       key={tool.id}
-                      href={tool.path as any}
+                      href={tool.path}
                       className="flex items-center justify-between p-3 rounded-lg bg-white/60 hover:bg-white/80 transition-colors group"
                     >
                       <div className="flex items-center gap-3">
@@ -206,9 +188,9 @@ export default async function ColorToolsPage({ params }: { params: Promise<{ loc
                           <div className="font-medium text-gray-900 group-hover:text-primary transition-colors">
                             {tool.name}
                           </div>
-                          <div className="text-xs text-gray-500">
+                          {/* <div className="text-xs text-gray-500">
                             {(tool.searchVolume || 0).toLocaleString()} {t('common.monthlySearches')}
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                       <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-primary group-hover:translate-x-1 transition-all" />

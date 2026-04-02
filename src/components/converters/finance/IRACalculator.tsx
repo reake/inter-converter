@@ -1,12 +1,11 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Button } from '@/components/ui/button';
 
 interface IRAResults {
   totalContributions: number;
@@ -42,7 +41,7 @@ export default function IRACalculator() {
     'simple': { under50: 15500, over50: 19000 }
   };
 
-  const calculateIRA = () => {
+  const calculateIRA = useCallback(() => {
     const age = parseInt(currentAge);
     const retAge = parseInt(retirementAge);
     const balance = parseFloat(currentBalance);
@@ -94,11 +93,11 @@ export default function IRACalculator() {
     };
 
     setResults(calculatedResults);
-  };
+  }, [currentAge, retirementAge, currentBalance, annualContribution, expectedReturn, iraType, currentTaxRate, retirementTaxRate]);
 
   useEffect(() => {
     calculateIRA();
-  }, [currentAge, retirementAge, currentBalance, annualContribution, expectedReturn, iraType, currentTaxRate, retirementTaxRate]);
+  }, [calculateIRA]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -412,7 +411,7 @@ export default function IRACalculator() {
                   <div className="p-4 border rounded-lg">
                     <h4 className="font-semibold text-green-600">Catch-up Contributions</h4>
                     <p className="text-sm text-gray-600 mt-2">
-                      If you're 50 or older, make additional catch-up contributions to accelerate retirement savings.
+                      If you&apos;re 50 or older, make additional catch-up contributions to accelerate retirement savings.
                     </p>
                   </div>
                   <div className="p-4 border rounded-lg">

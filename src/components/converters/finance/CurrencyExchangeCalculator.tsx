@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -8,18 +8,22 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-interface ExchangeRate {
-  currency: string;
-  rate: number;
-  change24h: number;
-}
-
 interface CurrencyInfo {
   code: string;
   name: string;
   symbol: string;
   flag: string;
 }
+
+const MOCK_RATES: { [key: string]: { [key: string]: number } } = {
+  USD: {
+    EUR: 0.85, GBP: 0.73, JPY: 110.0, CHF: 0.88, CAD: 1.25,
+    AUD: 1.35, CNY: 6.45, INR: 74.5, KRW: 1180.0, SGD: 1.35,
+    HKD: 7.8, SEK: 8.5, NOK: 8.8, DKK: 6.3, PLN: 3.9,
+    CZK: 21.5, HUF: 295.0, RUB: 75.0, BRL: 5.2, MXN: 20.1,
+    ZAR: 14.8, TRY: 8.5, NZD: 1.42
+  }
+};
 
 export default function CurrencyExchangeCalculator() {
   const [amount, setAmount] = useState<string>('1000');
@@ -56,28 +60,17 @@ export default function CurrencyExchangeCalculator() {
     { code: 'NZD', name: 'New Zealand Dollar', symbol: 'NZ$', flag: '🇳🇿' }
   ];
 
-  // Mock exchange rates (in a real app, these would come from an API)
-  const mockRates: { [key: string]: { [key: string]: number } } = {
-    'USD': {
-      'EUR': 0.85, 'GBP': 0.73, 'JPY': 110.0, 'CHF': 0.88, 'CAD': 1.25,
-      'AUD': 1.35, 'CNY': 6.45, 'INR': 74.5, 'KRW': 1180.0, 'SGD': 1.35,
-      'HKD': 7.8, 'SEK': 8.5, 'NOK': 8.8, 'DKK': 6.3, 'PLN': 3.9,
-      'CZK': 21.5, 'HUF': 295.0, 'RUB': 75.0, 'BRL': 5.2, 'MXN': 20.1,
-      'ZAR': 14.8, 'TRY': 8.5, 'NZD': 1.42
-    }
-  };
-
-  const getExchangeRate = (from: string, to: string): number => {
+  const getExchangeRate = useCallback((from: string, to: string): number => {
     if (from === to) return 1;
     
     // Get rate from USD base
-    const fromRate = from === 'USD' ? 1 : (1 / (mockRates['USD'][from] || 1));
-    const toRate = to === 'USD' ? 1 : (mockRates['USD'][to] || 1);
+    const fromRate = from === 'USD' ? 1 : (1 / (MOCK_RATES.USD[from] || 1));
+    const toRate = to === 'USD' ? 1 : (MOCK_RATES.USD[to] || 1);
     
     return toRate / fromRate;
-  };
+  }, []);
 
-  const calculateConversion = () => {
+  const calculateConversion = useCallback(() => {
     const inputAmount = parseFloat(amount);
     if (inputAmount <= 0) return;
 
@@ -85,11 +78,11 @@ export default function CurrencyExchangeCalculator() {
     setExchangeRate(rate);
     setConvertedAmount(inputAmount * rate);
     setLastUpdated(new Date());
-  };
+  }, [amount, fromCurrency, toCurrency, getExchangeRate]);
 
   useEffect(() => {
     calculateConversion();
-  }, [amount, fromCurrency, toCurrency]);
+  }, [calculateConversion]);
 
   const swapCurrencies = () => {
     const temp = fromCurrency;
@@ -98,7 +91,6 @@ export default function CurrencyExchangeCalculator() {
   };
 
   const formatCurrency = (amount: number, currencyCode: string) => {
-    const currency = currencies.find(c => c.code === currencyCode);
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: currencyCode,

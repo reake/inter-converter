@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -57,10 +57,6 @@ export default function RgbToHexConverter() {
     }
   };
 
-  useEffect(() => {
-    handleRgbChange(red, green, blue);
-  }, [red, green, blue]);
-
   const commonColors = [
     { name: 'Red', rgb: '255, 0, 0', hex: '#FF0000' },
     { name: 'Green', rgb: '0, 128, 0', hex: '#008000' },
@@ -100,6 +96,7 @@ export default function RgbToHexConverter() {
 
   return (
     <div className="space-y-6">
+      <h2 className="sr-only">RGB and HEX color conversion tool</h2>
       <Tabs defaultValue="converter" className="space-y-6">
         <TabsList className="grid w-full grid-cols-3">
           <TabsTrigger value="converter">RGB ↔ HEX</TabsTrigger>
@@ -190,6 +187,7 @@ export default function RgbToHexConverter() {
                         className="text-center font-mono text-lg"
                       />
                       <input
+                        aria-label="HEX color picker"
                         type="color"
                         value={hex}
                         onChange={(e) => handleHexChange(e.target.value)}

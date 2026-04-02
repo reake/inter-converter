@@ -1,10 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Label } from '@/components/ui/label';
 import { Badge } from '@/components/ui/badge';
 import { Plus, Minus, DollarSign, TrendingUp, TrendingDown, AlertTriangle } from 'lucide-react';
 
@@ -38,11 +37,7 @@ export default function BudgetCalculator() {
     savingsRate: 0
   });
 
-  useEffect(() => {
-    calculateSummary();
-  }, [items]);
-
-  const calculateSummary = () => {
+  const calculateSummary = useCallback(() => {
     const totalIncome = items.filter(item => item.category === 'income').reduce((sum, item) => sum + item.amount, 0);
     const totalExpenses = items.filter(item => ['fixed', 'variable'].includes(item.category)).reduce((sum, item) => sum + item.amount, 0);
     const totalSavings = items.filter(item => item.category === 'savings').reduce((sum, item) => sum + item.amount, 0);
@@ -56,7 +51,11 @@ export default function BudgetCalculator() {
       remainingBudget,
       savingsRate
     });
-  };
+  }, [items]);
+
+  useEffect(() => {
+    calculateSummary();
+  }, [calculateSummary]);
 
   const addItem = (category: BudgetItem['category']) => {
     const newItem: BudgetItem = {

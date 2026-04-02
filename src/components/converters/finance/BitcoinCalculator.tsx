@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -32,7 +32,7 @@ export default function BitcoinCalculator() {
     'buy-dips': 'Buy the Dips Strategy'
   };
 
-  const calculateBitcoin = () => {
+  const calculateBitcoin = useCallback(() => {
     const initial = parseFloat(initialInvestment);
     const monthly = parseFloat(monthlyInvestment);
     const price = parseFloat(currentPrice);
@@ -94,11 +94,11 @@ export default function BitcoinCalculator() {
     };
 
     setResults(calculatedResults);
-  };
+  }, [initialInvestment, monthlyInvestment, currentPrice, expectedReturn, investmentPeriod, strategy]);
 
   useEffect(() => {
     calculateBitcoin();
-  }, [initialInvestment, monthlyInvestment, currentPrice, expectedReturn, investmentPeriod, strategy]);
+  }, [calculateBitcoin]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -128,7 +128,7 @@ export default function BitcoinCalculator() {
         <TabsList className="grid w-full grid-cols-4">
           <TabsTrigger value="calculator">Calculator</TabsTrigger>
           <TabsTrigger value="strategies">Strategies</TabsTrigger>
-          <TabsTrigger value="risks">Risks & Considerations</TabsTrigger>
+          <TabsTrigger value="risks">Risks &amp; Considerations</TabsTrigger>
           <TabsTrigger value="education">Bitcoin Basics</TabsTrigger>
         </TabsList>
 
@@ -303,7 +303,7 @@ export default function BitcoinCalculator() {
                   <div className="p-4 border rounded-lg">
                     <h4 className="font-semibold text-green-600">HODLing</h4>
                     <p className="text-sm text-gray-600 mt-2">
-                      "Hold On for Dear Life" - Buy and hold for long-term appreciation, ignoring short-term volatility.
+                      &quot;Hold On for Dear Life&quot; - Buy and hold for long-term appreciation, ignoring short-term volatility.
                     </p>
                     <ul className="text-sm text-gray-600 mt-2 space-y-1">
                       <li>• Long-term investment approach</li>
@@ -384,7 +384,7 @@ export default function BitcoinCalculator() {
                   </div>
                   <div className="p-4 border-l-4 border-purple-500 bg-purple-50">
                     <h4 className="font-semibold">Market Manipulation</h4>
-                    <p className="text-sm text-gray-600">Large holders ("whales") can influence prices significantly</p>
+                    <p className="text-sm text-gray-600">Large holders (&quot;whales&quot;) can influence prices significantly</p>
                   </div>
                   <div className="p-4 border-l-4 border-blue-500 bg-blue-50">
                     <h4 className="font-semibold">Environmental Concerns</h4>

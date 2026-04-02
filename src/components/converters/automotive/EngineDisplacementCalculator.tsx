@@ -13,7 +13,7 @@ import { PerformanceDisplay } from '@/components/converters/automotive/Performan
 import { EngineFormulas } from '@/lib/automotive/engine-formulas';
 import { AutomotiveValidator } from '@/lib/automotive/automotive-validators';
 import { AutomotiveResult, Recommendation } from '@/types/automotive';
-import { CalculatorIcon, CylinderIcon, SettingsIcon, RulerIcon } from 'lucide-react';
+import { CylinderIcon, SettingsIcon, RulerIcon } from 'lucide-react';
 
 interface BoreStrokeState {
   bore: string;
@@ -488,7 +488,7 @@ export function EngineDisplacementCalculator() {
                       <div className="flex justify-between items-center mb-1">
                         <span className="font-medium text-sm">{engine.name}</span>
                         <Badge variant="outline">
-                          {engine.bore}" × {engine.stroke}"
+                          {engine.bore}&quot; × {engine.stroke}&quot;
                         </Badge>
                       </div>
                       <p className="text-xs text-gray-600 mb-2">
@@ -669,7 +669,7 @@ export function EngineDisplacementCalculator() {
                 <li>• Higher RPM capability</li>
                 <li>• Better breathing at high RPM</li>
                 <li>• More valve area per displacement</li>
-                <li>• Example: Ford 302 (4.00" × 3.00")</li>
+                <li>• Example: Ford 302 (4.00&quot; × 3.00&quot;)</li>
               </ul>
             </div>
             <div className="p-4 border rounded-lg">
@@ -687,7 +687,7 @@ export function EngineDisplacementCalculator() {
                 <li>• Higher torque production</li>
                 <li>• Better low-end power</li>
                 <li>• Longer connecting rods possible</li>
-                <li>• Example: Pontiac 455 (4.15" × 4.21")</li>
+                <li>• Example: Pontiac 455 (4.15&quot; × 4.21&quot;)</li>
               </ul>
             </div>
           </div>

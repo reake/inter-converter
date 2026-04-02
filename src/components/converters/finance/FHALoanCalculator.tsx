@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -34,12 +34,11 @@ export default function FHALoanCalculator() {
     '700': '700+ (Excellent)'
   };
 
-  const calculateFHALoan = () => {
+  const calculateFHALoan = useCallback(() => {
     const price = parseFloat(homePrice);
     const down = parseFloat(downPayment);
     const rate = parseFloat(interestRate) / 100 / 12;
     const months = parseFloat(loanTerm) * 12;
-    const score = parseInt(creditScore);
 
     if (price <= 0 || down < 0 || rate < 0 || months <= 0) return;
 
@@ -96,11 +95,11 @@ export default function FHALoanCalculator() {
       totalCost,
       maxLoanAmount
     });
-  };
+  }, [homePrice, downPayment, interestRate, loanTerm, propertyTax, homeInsurance]);
 
   useEffect(() => {
     calculateFHALoan();
-  }, [homePrice, downPayment, interestRate, loanTerm, creditScore, propertyTax, homeInsurance]);
+  }, [calculateFHALoan]);
 
   // Auto-calculate 3.5% down payment when home price changes
   useEffect(() => {
@@ -111,7 +110,7 @@ export default function FHALoanCalculator() {
         setDownPayment(minDown.toString());
       }
     }
-  }, [homePrice]);
+  }, [homePrice, downPayment]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

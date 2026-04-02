@@ -1,11 +1,10 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { Calculator, Plus, Trash2, TrendingDown, DollarSign, Percent } from 'lucide-react';
 
 interface DebtConsolidationCalculatorProps {
@@ -73,23 +72,23 @@ export default function DebtConsolidationCalculator({
     ));
   };
 
-  const calculatePayoffTime = (balance: number, apr: number, payment: number): number => {
+  const calculatePayoffTime = useCallback((balance: number, apr: number, payment: number): number => {
     if (payment <= 0 || apr < 0 || balance <= 0) return 0;
     
     const monthlyRate = apr / 100 / 12;
     if (payment <= balance * monthlyRate) return 999; // Payment too low
     
     return Math.ceil(Math.log(1 + (balance * monthlyRate) / payment) / Math.log(1 + monthlyRate));
-  };
+  }, []);
 
-  const calculateTotalInterest = (balance: number, apr: number, payment: number): number => {
+  const calculateTotalInterest = useCallback((balance: number, apr: number, payment: number): number => {
     const months = calculatePayoffTime(balance, apr, payment);
     if (months >= 999) return balance * 10; // Estimate for very long payoff
     
     return (payment * months) - balance;
-  };
+  }, [calculatePayoffTime]);
 
-  const calculateConsolidation = () => {
+  const calculateConsolidation = useCallback(() => {
     const validDebts = debts.filter(debt => debt.balance > 0 && debt.apr > 0);
     if (validDebts.length === 0) return;
 
@@ -139,11 +138,11 @@ export default function DebtConsolidationCalculator({
       interestSavings,
       timeSavings
     });
-  };
+  }, [debts, consolidationAPR, consolidationTerm, calculatePayoffTime, calculateTotalInterest]);
 
   useEffect(() => {
     calculateConsolidation();
-  }, [debts, consolidationAPR, consolidationTerm]);
+  }, [calculateConsolidation]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -189,7 +188,7 @@ export default function DebtConsolidationCalculator({
             </div>
           </CardHeader>
           <CardContent className="space-y-4">
-            {debts.map((debt, index) => (
+            {debts.map((debt) => (
               <div key={debt.id} className="p-4 border rounded-lg space-y-3">
                 <div className="flex items-center justify-between">
                   <Input

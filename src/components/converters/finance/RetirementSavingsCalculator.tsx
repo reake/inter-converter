@@ -1,11 +1,9 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 interface RetirementResults {
@@ -30,13 +28,12 @@ export default function RetirementSavingsCalculator() {
   const [withdrawalRate, setWithdrawalRate] = useState<string>('4');
   const [results, setResults] = useState<RetirementResults | null>(null);
 
-  const calculateRetirement = () => {
+  const calculateRetirement = useCallback(() => {
     const currentAgeNum = parseInt(currentAge);
     const retirementAgeNum = parseInt(retirementAge);
     const savings = parseFloat(currentSavings);
     const monthly = parseFloat(monthlyContribution);
     const returnRate = parseFloat(annualReturn) / 100;
-    const inflation = parseFloat(inflationRate) / 100;
     const withdrawal = parseFloat(withdrawalRate) / 100;
     
     if (currentAgeNum >= retirementAgeNum || returnRate < 0 || savings < 0) return;
@@ -44,7 +41,6 @@ export default function RetirementSavingsCalculator() {
     const yearsToRetirement = retirementAgeNum - currentAgeNum;
     const monthlyRate = returnRate / 12;
     const totalMonths = yearsToRetirement * 12;
-    
     // Calculate future value of current savings
     const futureCurrentSavings = savings * Math.pow(1 + returnRate, yearsToRetirement);
     
@@ -85,11 +81,11 @@ export default function RetirementSavingsCalculator() {
       monthlyIncome,
       yearlyBreakdown
     });
-  };
+  }, [currentAge, retirementAge, currentSavings, monthlyContribution, annualReturn, withdrawalRate]);
 
   useEffect(() => {
     calculateRetirement();
-  }, [currentAge, retirementAge, currentSavings, monthlyContribution, annualReturn, inflationRate, withdrawalRate]);
+  }, [calculateRetirement]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -98,17 +94,6 @@ export default function RetirementSavingsCalculator() {
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
     }).format(amount);
-  };
-
-  const getRecommendedSavings = () => {
-    const age = parseInt(currentAge);
-    const income = parseFloat(monthlyContribution) * 12 / 0.15; // Assuming 15% savings rate
-    
-    if (age < 30) return income * 1;
-    if (age < 40) return income * 3;
-    if (age < 50) return income * 6;
-    if (age < 60) return income * 8;
-    return income * 10;
   };
 
   return (
@@ -322,7 +307,7 @@ export default function RetirementSavingsCalculator() {
                     <div className="space-y-2 text-sm">
                       <div>🛡️ Emergency fund first</div>
                       <div>📈 Age-appropriate allocation</div>
-                      <div>💰 Don't panic sell</div>
+                      <div>💰 Don&apos;t panic sell</div>
                       <div>🔄 Regular portfolio review</div>
                       <div>📋 Consider long-term care</div>
                     </div>

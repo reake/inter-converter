@@ -46,9 +46,6 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
 
-  // Enable SWC minification for better performance
-  swcMinify: true,
-
   // Logging configuration
   logging: {
     fetches: {

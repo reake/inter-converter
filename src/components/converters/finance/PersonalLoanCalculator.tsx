@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -48,7 +48,7 @@ export default function PersonalLoanCalculator() {
     { value: '72', label: '72 Months' }
   ];
 
-  const calculateLoan = () => {
+  const calculateLoan = useCallback(() => {
     const principal = parseFloat(loanAmount);
     const rate = parseFloat(interestRate) / 100 / 12;
     const months = parseInt(loanTerm);
@@ -74,7 +74,7 @@ export default function PersonalLoanCalculator() {
 
     // Generate amortization schedule
     generateAmortizationSchedule(principal, rate, months, monthlyPayment);
-  };
+  }, [loanAmount, interestRate, loanTerm]);
 
   const generateAmortizationSchedule = (
     principal: number,
@@ -106,7 +106,7 @@ export default function PersonalLoanCalculator() {
 
   useEffect(() => {
     calculateLoan();
-  }, [loanAmount, interestRate, loanTerm]);
+  }, [calculateLoan]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -326,7 +326,7 @@ export default function PersonalLoanCalculator() {
               <li>• Consider shorter terms to save on interest</li>
               <li>• Avoid prepayment penalties</li>
               <li>• Use for consolidating high-interest debt</li>
-              <li>• Don't borrow more than you need</li>
+              <li>• Don&apos;t borrow more than you need</li>
             </ul>
           </CardContent>
         </Card>

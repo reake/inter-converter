@@ -1,98 +1,97 @@
 {
   "about": {
     "title": "About Temperature Converter",
-    "description": "The Temperature Converter is a comprehensive tool for converting between Celsius, Fahrenheit, Kelvin, and Rankine temperature scales. Whether you're a scientist, engineer, cook, or student, this professional converter provides accurate temperature conversions for all your needs. Temperature conversion is essential in meteorology, cooking, scientific research, and international communication. Our converter handles all major temperature scales with precision and provides instant results for educational, professional, and everyday temperature calculations."
+    "description": [
+      "This temperature converter is designed for everyday and technical work where a value needs to move cleanly between Celsius, Fahrenheit, Kelvin, and Rankine.",
+      "It is useful for weather checks, cooking adjustments, lab notes, equipment documentation, and any workflow where the wrong scale can make a result look correct at first glance but still be interpreted incorrectly."
+    ]
   },
   "howTo": {
     "title": "How to Use the Temperature Converter",
     "steps": [
       {
-        "title": "Enter Temperature",
-        "description": "Input the temperature value you want to convert in the source field."
+        "title": "Enter the source temperature",
+        "description": "Start with the exact temperature value you have, including negative values if needed."
       },
       {
-        "title": "Select Source Scale",
-        "description": "Choose the source temperature scale: Celsius (°C), Fahrenheit (°F), Kelvin (K), or Rankine (°R)."
+        "title": "Choose the original scale",
+        "description": "Select the scale the number currently belongs to, such as Celsius for weather data or Fahrenheit for a recipe written for a US audience."
       },
       {
-        "title": "Choose Target Scale",
-        "description": "Select the target temperature scale for conversion."
+        "title": "Select the target scale",
+        "description": "Choose the format you actually need for the next step in your workflow, such as Kelvin for a science context or Fahrenheit for a kitchen display."
       },
       {
-        "title": "Get Results",
-        "description": "View the converted temperature instantly with high precision."
+        "title": "Check whether the result is physically reasonable",
+        "description": "Use quick intuition checks, such as water freezing around 0°C or 32°F, to catch obvious scale mix-ups."
       }
     ],
     "tips": [
-      "Use Celsius for most international applications",
-      "Fahrenheit is common in the United States",
-      "Kelvin is used for scientific calculations"
+      "Negative values are common in Celsius and Fahrenheit, but Kelvin cannot go below absolute zero.",
+      "Cooking, weather, and lab contexts often use different default scales.",
+      "If the converted result looks suspicious, check whether you selected the wrong input scale rather than assuming the formula is wrong."
     ]
   },
   "features": [
     {
-      "title": "Four Temperature Scales",
-      "description": "Convert between Celsius (°C), Fahrenheit (°F), Kelvin (K), and Rankine (°R) temperature scales."
+      "title": "Common scale coverage",
+      "description": "Supports Celsius, Fahrenheit, Kelvin, and Rankine so the page works for both everyday and technical use cases."
     },
     {
-      "title": "Real-Time Conversion",
-      "description": "Instant temperature conversion as you type with immediate results display."
+      "title": "Quick plausibility checks",
+      "description": "Useful for spotting whether a value belongs to the wrong scale before it gets copied into a report, recipe, or calculation."
     },
     {
-      "title": "High Precision Calculations",
-      "description": "Accurate temperature conversions with decimal support and scientific precision."
+      "title": "Negative and extreme value support",
+      "description": "Helps with sub-zero weather, industrial settings, and scientific workflows that use very low or high temperature ranges."
     },
     {
-      "title": "Bidirectional Conversion",
-      "description": "Convert from any temperature scale to any other scale with equal accuracy."
+      "title": "Cross-context usefulness",
+      "description": "Relevant for weather, cooking, education, engineering notes, and unit harmonization across international teams."
     },
     {
-      "title": "Scientific Notation",
-      "description": "Support for extreme temperatures using scientific notation for research applications."
+      "title": "Immediate format translation",
+      "description": "Useful when a source document and target document use different temperature scales and you need the conversion right away."
     },
     {
-      "title": "Educational Information",
-      "description": "Learn about different temperature scales and their applications in various fields."
+      "title": "Readable result handling",
+      "description": "The page is built to make the converted number easier to check before using it elsewhere."
     }
   ],
   "faq": [
     {
-      "q": "What temperature scales does the converter support?",
-      "a": "Our temperature converter supports four major temperature scales: Celsius (°C), Fahrenheit (°F), Kelvin (K), and Rankine (°R). You can convert between any of these scales with high precision and instant results."
+      "q": "When should I use Celsius, Fahrenheit, or Kelvin?",
+      "a": "Celsius is common for weather and international everyday use, Fahrenheit is common in the United States for daily life and cooking, and Kelvin is standard in scientific and engineering contexts where absolute temperature matters."
     },
     {
-      "q": "How accurate are the temperature conversions?",
-      "a": "The temperature conversions are mathematically precise using standard conversion formulas. Our converter provides high decimal precision suitable for scientific, educational, and professional applications with accurate results every time."
+      "q": "Can Kelvin values be negative?",
+      "a": "No. Kelvin starts at absolute zero. If you see a negative Kelvin result, the input scale or value has been handled incorrectly."
     },
     {
-      "q": "What's the difference between Celsius and Fahrenheit temperature scales?",
-      "a": "Celsius uses water's freezing point (0°C) and boiling point (100°C) as references, making it intuitive for scientific use. Fahrenheit uses 32°F for water's freezing point and 212°F for boiling point, commonly used in the United States."
+      "q": "What is the fastest way to catch a scale mistake?",
+      "a": "Compare against known anchors. Water freezes at 0°C and 32°F, and boils at 100°C and 212°F under standard conditions. If the result disagrees with those anchors in an obvious case, recheck the selected scale."
     },
     {
-      "q": "When should I use Kelvin for temperature conversion?",
-      "a": "Kelvin is the SI base unit for thermodynamic temperature, commonly used in scientific calculations, physics, and chemistry. It starts at absolute zero (0 K = -273.15°C) and is essential for scientific research and engineering applications."
+      "q": "Why does the same weather report look very different in another unit?",
+      "a": "Because the scales use different zero points and increments. A normal outdoor temperature can look small in Celsius and much larger in Fahrenheit without meaning anything has changed physically."
     },
     {
-      "q": "Can the temperature converter handle negative temperatures?",
-      "a": "Yes, our temperature converter accurately handles negative temperatures for all supported scales. This includes sub-zero Celsius and Fahrenheit temperatures, as well as very low Kelvin values for scientific applications."
+      "q": "Is this tool suitable for science and engineering work?",
+      "a": "It is useful for quick conversion and checking, but important technical work should still be validated against the source specification, instrument, or calculation workflow you are using."
     },
     {
-      "q": "How do I convert Fahrenheit to Celsius quickly?",
-      "a": "To convert Fahrenheit to Celsius: subtract 32, then multiply by 5/9. For example, 68°F = (68-32) × 5/9 = 20°C. Our converter automates this calculation instantly for any temperature value."
+      "q": "What is the most common temperature conversion mistake?",
+      "a": "Selecting the wrong input scale is more common than the formula itself being wrong. That mistake can produce a number that looks reasonable but belongs to the wrong context."
     }
   ],
   "relativeLinks": [
     {
-      "title": "Celsius to Fahrenheit Converter",
-      "url": "/unit/celsius-to-fahrenheit-converter"
+      "title": "Length Converter",
+      "url": "/unit/length-converter"
     },
     {
-      "title": "Fahrenheit to Celsius Converter",
-      "url": "/unit/fahrenheit-to-celsius-converter"
-    },
-    {
-      "title": "Unit Converter",
-      "url": "/unit/unit-converter"
+      "title": "Weight Converter",
+      "url": "/unit/weight-converter"
     },
     {
       "title": "Unit Tools Category",

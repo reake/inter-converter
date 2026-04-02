@@ -1,8 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -26,7 +25,7 @@ export default function RVLoanCalculator() {
   const [creditScore, setCreditScore] = useState<string>('750');
   const [results, setResults] = useState<LoanResults | null>(null);
 
-  const calculateLoan = () => {
+  const calculateLoan = useCallback(() => {
     const price = parseFloat(rvPrice);
     const down = parseFloat(downPayment);
     const rate = parseFloat(interestRate) / 100 / 12;
@@ -51,11 +50,11 @@ export default function RVLoanCalculator() {
       payoffDate: payoffDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long' }),
       loanToValue
     });
-  };
+  }, [rvPrice, downPayment, interestRate, loanTerm]);
 
   useEffect(() => {
     calculateLoan();
-  }, [rvPrice, downPayment, interestRate, loanTerm, rvType, rvAge, creditScore]);
+  }, [calculateLoan]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

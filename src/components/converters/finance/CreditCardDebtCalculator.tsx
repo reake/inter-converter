@@ -1,8 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -30,7 +29,7 @@ export default function CreditCardDebtCalculator() {
   const [additionalCharges, setAdditionalCharges] = useState<string>('0');
   const [results, setResults] = useState<DebtResults | null>(null);
 
-  const calculateDebt = () => {
+  const calculateDebt = useCallback(() => {
     const balance = parseFloat(currentBalance);
     const rate = parseFloat(interestRate) / 100 / 12;
     const payment = parseFloat(monthlyPayment);
@@ -99,11 +98,11 @@ export default function CreditCardDebtCalculator() {
       totalPayment,
       paymentBreakdown
     });
-  };
+  }, [currentBalance, interestRate, monthlyPayment, paymentStrategy, additionalCharges]);
 
   useEffect(() => {
     calculateDebt();
-  }, [currentBalance, interestRate, monthlyPayment, paymentStrategy, additionalCharges]);
+  }, [calculateDebt]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -27,7 +27,7 @@ export default function CapitalGainsTaxCalculator() {
   const [state, setState] = useState<string>('california');
   const [results, setResults] = useState<TaxResults | null>(null);
 
-  const calculateCapitalGainsTax = () => {
+  const calculateCapitalGainsTax = useCallback(() => {
     const purchase = parseFloat(purchasePrice);
     const sale = parseFloat(salePrice);
     const income = parseFloat(annualIncome);
@@ -129,11 +129,11 @@ export default function CapitalGainsTaxCalculator() {
       effectiveTaxRate,
       marginalTaxRate
     });
-  };
+  }, [purchasePrice, salePrice, holdingPeriod, annualIncome, filingStatus, state]);
 
   useEffect(() => {
     calculateCapitalGainsTax();
-  }, [purchasePrice, salePrice, holdingPeriod, annualIncome, filingStatus, state]);
+  }, [calculateCapitalGainsTax]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -467,7 +467,7 @@ export default function CapitalGainsTaxCalculator() {
                         <div className="p-3 bg-red-50 rounded-lg">
                           <div className="font-semibold text-red-800 mb-1">💰 High Earner Alert:</div>
                           <div className="text-red-700 text-sm">
-                            You're subject to the 3.8% Net Investment Income Tax. Consider tax-loss harvesting or charitable giving.
+                            You&apos;re subject to the 3.8% Net Investment Income Tax. Consider tax-loss harvesting or charitable giving.
                           </div>
                         </div>
                       )}

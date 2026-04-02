@@ -14,6 +14,7 @@ interface CopyButtonProps {
   successText?: string;
   disabled?: boolean;
   onCopy?: () => void;
+  ariaLabel?: string;
 }
 
 export function CopyButton({
@@ -24,7 +25,8 @@ export function CopyButton({
   showText = false,
   successText = 'Copied!',
   disabled = false,
-  onCopy
+  onCopy,
+  ariaLabel,
 }: CopyButtonProps) {
   const [copied, setCopied] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -83,6 +85,7 @@ export function CopyButton({
         copied && 'bg-green-50 border-green-200 text-green-700 hover:bg-green-100',
         className
       )}
+      aria-label={ariaLabel || (copied ? successText : 'Copy to clipboard')}
       title={copied ? successText : 'Copy to clipboard'}
     >
       {copied ? (
@@ -122,6 +125,8 @@ export function CopyResult({
   readOnly = true,
   onCopy
 }: CopyResultProps) {
+  const inputLabel = label || placeholder;
+
   return (
     <div className={cn('space-y-2', className)}>
       {label && (
@@ -135,6 +140,7 @@ export function CopyResult({
           value={value}
           placeholder={placeholder}
           readOnly={readOnly}
+          aria-label={inputLabel}
           className={cn(
             'flex-1 px-3 py-2 border border-gray-300 rounded-md',
             'focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent',

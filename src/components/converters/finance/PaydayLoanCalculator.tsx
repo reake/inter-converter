@@ -1,8 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -25,11 +24,10 @@ export default function PaydayLoanCalculator() {
   const [loanAmount, setLoanAmount] = useState<string>('300');
   const [feeAmount, setFeeAmount] = useState<string>('45');
   const [loanTerm, setLoanTerm] = useState<string>('14');
-  const [feeType, setFeeType] = useState<string>('flat');
   const [rolloverCount, setRolloverCount] = useState<string>('0');
   const [results, setResults] = useState<PaydayResults | null>(null);
 
-  const calculatePaydayLoan = () => {
+  const calculatePaydayLoan = useCallback(() => {
     const principal = parseFloat(loanAmount);
     const fee = parseFloat(feeAmount);
     const termDays = parseFloat(loanTerm);
@@ -74,11 +72,11 @@ export default function PaydayLoanCalculator() {
         personalLoan: personalLoanCost
       }
     });
-  };
+  }, [loanAmount, feeAmount, loanTerm, rolloverCount]);
 
   useEffect(() => {
     calculatePaydayLoan();
-  }, [loanAmount, feeAmount, loanTerm, feeType, rolloverCount]);
+  }, [calculatePaydayLoan]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -340,9 +338,9 @@ export default function PaydayLoanCalculator() {
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-2 text-sm">
-                      <div>🚫 <strong>No Credit Check:</strong> Doesn't verify ability to repay</div>
+                      <div>🚫 <strong>No Credit Check:</strong> Doesn&apos;t verify ability to repay</div>
                       <div>⚡ <strong>Instant Approval:</strong> Too good to be true</div>
-                      <div>🎯 <strong>Aggressive Marketing:</strong> "Fast cash" promises</div>
+                      <div>🎯 <strong>Aggressive Marketing:</strong> &quot;Fast cash&quot; promises</div>
                       <div>📍 <strong>Location Targeting:</strong> Near low-income areas</div>
                       <div>💻 <strong>Online Predators:</strong> Unlicensed online lenders</div>
                     </div>

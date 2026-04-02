@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { TOOLS_CONFIG } from '@/config/tools';
+import { getReviewApprovedCategories, getReviewApprovedTools } from '@/config/tools';
 import { routing } from '@/i18n/routing';
 
 // Static export configuration
@@ -50,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   // Category pages (these are in the (tools) route group)
-  const categories = ['unit', 'time', 'finance', 'auto', 'color', 'health', 'media'];
+  const categories = getReviewApprovedCategories();
   const categoryPages: MetadataRoute.Sitemap = categories.map(category => ({
     url: `${baseUrl}/${category}`,
     lastModified: currentDate,
@@ -59,8 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // Tool pages
-  const toolPages: MetadataRoute.Sitemap = TOOLS_CONFIG
-    .filter(tool => tool.isActive)
+  const toolPages: MetadataRoute.Sitemap = getReviewApprovedTools()
     .map(tool => ({
       url: `${baseUrl}${tool.path}`,
       lastModified: currentDate,

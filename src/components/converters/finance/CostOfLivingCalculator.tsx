@@ -28,7 +28,6 @@ interface CostResult {
 }
 
 export default function CostOfLivingCalculator() {
-  const [currentIncome, setCurrentIncome] = useState<string>('75000');
   const [currentCity, setCurrentCity] = useState<string>('national-average');
   const [newCity, setNewCity] = useState<string>('san-francisco');
   const [housingCost, setHousingCost] = useState<string>('2500');

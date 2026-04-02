@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -91,10 +91,6 @@ export default function HexToRgbConverter() {
     navigator.clipboard.writeText(text);
   };
 
-  useEffect(() => {
-    handleHexChange(hex);
-  }, []);
-
   const getCurrentColor = () => {
     const rgbValues = hexToRgb(hex);
     return rgbValues ? `rgb(${rgbValues.r}, ${rgbValues.g}, ${rgbValues.b})` : '#000000';
@@ -113,6 +109,7 @@ export default function HexToRgbConverter() {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
+      <h2 className="sr-only">HEX and RGB color conversion tool</h2>
       <div className="grid md:grid-cols-2 gap-6">
         <Card>
           <CardHeader>
@@ -123,7 +120,9 @@ export default function HexToRgbConverter() {
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
+              <label htmlFor="hex-to-rgb-hex" className="block text-sm font-medium">Hex Color</label>
               <Input
+                id="hex-to-rgb-hex"
                 type="text"
                 value={hex}
                 onChange={(e) => handleHexChange(e.target.value)}
@@ -151,7 +150,9 @@ export default function HexToRgbConverter() {
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
+              <label htmlFor="hex-to-rgb-rgb" className="block text-sm font-medium">RGB Color</label>
               <Input
+                id="hex-to-rgb-rgb"
                 type="text"
                 value={rgb}
                 onChange={(e) => handleRgbChange(e.target.value)}

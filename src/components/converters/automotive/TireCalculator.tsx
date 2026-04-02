@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Button } from '@/components/ui/button';
 
 export function TireCalculator() {
   const [originalWidth, setOriginalWidth] = useState<string>('225');
@@ -88,7 +87,7 @@ export function TireCalculator() {
                 {originalWidth}/{originalAspect}R{originalRim}
               </div>
               <div className="text-sm text-gray-600">
-                Diameter: {originalDiameter.toFixed(1)}"
+                Diameter: {originalDiameter.toFixed(1)}&quot;
               </div>
             </div>
           </CardContent>
@@ -138,7 +137,7 @@ export function TireCalculator() {
                 {newWidth}/{newAspect}R{newRim}
               </div>
               <div className="text-sm text-gray-600">
-                Diameter: {newDiameter.toFixed(1)}"
+                Diameter: {newDiameter.toFixed(1)}&quot;
               </div>
             </div>
           </CardContent>
@@ -154,7 +153,7 @@ export function TireCalculator() {
           <div className="grid md:grid-cols-3 gap-4 text-center">
             <div className="p-4 bg-gray-50 rounded">
               <div className="text-2xl font-bold text-blue-600">
-                {diameterDifference > 0 ? '+' : ''}{diameterDifference.toFixed(2)}"
+                {diameterDifference > 0 ? '+' : ''}{diameterDifference.toFixed(2)}&quot;
               </div>
               <div className="text-sm text-gray-600">Diameter Difference</div>
             </div>
@@ -166,7 +165,7 @@ export function TireCalculator() {
             </div>
             <div className="p-4 bg-gray-50 rounded">
               <div className="text-2xl font-bold text-purple-600">
-                {Math.abs(diameterDifference * 3.14159).toFixed(2)}"
+                {Math.abs(diameterDifference * 3.14159).toFixed(2)}&quot;
               </div>
               <div className="text-sm text-gray-600">Circumference Difference</div>
             </div>
@@ -232,15 +231,15 @@ export function TireCalculator() {
               <div className="text-sm space-y-1">
                 <div className="flex justify-between">
                   <span>185/65R15</span>
-                  <span>24.5"</span>
+                  <span>24.5&quot;</span>
                 </div>
                 <div className="flex justify-between">
                   <span>195/60R16</span>
-                  <span>24.2"</span>
+                  <span>24.2&quot;</span>
                 </div>
                 <div className="flex justify-between">
                   <span>205/55R16</span>
-                  <span>24.9"</span>
+                  <span>24.9&quot;</span>
                 </div>
               </div>
             </div>
@@ -250,15 +249,15 @@ export function TireCalculator() {
               <div className="text-sm space-y-1">
                 <div className="flex justify-between">
                   <span>215/60R16</span>
-                  <span>26.2"</span>
+                  <span>26.2&quot;</span>
                 </div>
                 <div className="flex justify-between">
                   <span>225/55R17</span>
-                  <span>26.7"</span>
+                  <span>26.7&quot;</span>
                 </div>
                 <div className="flex justify-between">
                   <span>235/50R18</span>
-                  <span>27.3"</span>
+                  <span>27.3&quot;</span>
                 </div>
               </div>
             </div>
@@ -268,15 +267,15 @@ export function TireCalculator() {
               <div className="text-sm space-y-1">
                 <div className="flex justify-between">
                   <span>245/40R18</span>
-                  <span>25.7"</span>
+                  <span>25.7&quot;</span>
                 </div>
                 <div className="flex justify-between">
                   <span>275/35R19</span>
-                  <span>26.6"</span>
+                  <span>26.6&quot;</span>
                 </div>
                 <div className="flex justify-between">
                   <span>295/30R20</span>
-                  <span>27.0"</span>
+                  <span>27.0&quot;</span>
                 </div>
               </div>
             </div>
@@ -286,15 +285,15 @@ export function TireCalculator() {
               <div className="text-sm space-y-1">
                 <div className="flex justify-between">
                   <span>235/75R15</span>
-                  <span>28.9"</span>
+                  <span>28.9&quot;</span>
                 </div>
                 <div className="flex justify-between">
                   <span>265/70R17</span>
-                  <span>31.6"</span>
+                  <span>31.6&quot;</span>
                 </div>
                 <div className="flex justify-between">
                   <span>285/75R16</span>
-                  <span>32.8"</span>
+                  <span>32.8&quot;</span>
                 </div>
               </div>
             </div>
@@ -304,15 +303,15 @@ export function TireCalculator() {
               <div className="text-sm space-y-1">
                 <div className="flex justify-between">
                   <span>31x10.50R15</span>
-                  <span>31.0"</span>
+                  <span>31.0&quot;</span>
                 </div>
                 <div className="flex justify-between">
                   <span>33x12.50R15</span>
-                  <span>33.0"</span>
+                  <span>33.0&quot;</span>
                 </div>
                 <div className="flex justify-between">
                   <span>35x12.50R17</span>
-                  <span>35.0"</span>
+                  <span>35.0&quot;</span>
                 </div>
               </div>
             </div>
@@ -322,15 +321,15 @@ export function TireCalculator() {
               <div className="text-sm space-y-1">
                 <div className="flex justify-between">
                   <span>225/60R16</span>
-                  <span>26.6" (Original)</span>
+                  <span>26.6&quot; (Original)</span>
                 </div>
                 <div className="flex justify-between">
                   <span>225/50R17</span>
-                  <span>26.9" (+1)</span>
+                  <span>26.9&quot; (+1)</span>
                 </div>
                 <div className="flex justify-between">
                   <span>225/45R18</span>
-                  <span>26.0" (+2)</span>
+                  <span>26.0&quot; (+2)</span>
                 </div>
               </div>
             </div>

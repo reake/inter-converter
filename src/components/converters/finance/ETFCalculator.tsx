@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -40,7 +40,7 @@ export default function ETFCalculator() {
     'commodity': 'Commodity'
   };
 
-  const calculateETF = () => {
+  const calculateETF = useCallback(() => {
     const initial = parseFloat(initialInvestment);
     const monthly = parseFloat(monthlyInvestment);
     const returnRate = parseFloat(expectedReturn) / 100;
@@ -96,11 +96,11 @@ export default function ETFCalculator() {
     };
 
     setResults(calculatedResults);
-  };
+  }, [initialInvestment, monthlyInvestment, expectedReturn, expenseRatio, dividendYield, investmentPeriod, sharePrice]);
 
   useEffect(() => {
     calculateETF();
-  }, [initialInvestment, monthlyInvestment, expectedReturn, expenseRatio, dividendYield, investmentPeriod, etfType, sharePrice]);
+  }, [calculateETF]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

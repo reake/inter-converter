@@ -1,14 +1,14 @@
 import { Metadata } from 'next';
 import { EnhancedToolLayout } from '@/components/tools/EnhancedToolLayout';
 import ColorPickerTool from '@/components/converters/color/ColorPickerTool';
-import { getFAQsByToolId } from '@/config/tool-faqs';
 import { generateOptimizedKeywords } from '@/config/seo-keywords';
 import enTool from '@/data/tools/color/color-picker-tool-en.json';
 import zhTool from '@/data/tools/color/color-picker-tool-zh.json';
 import colorEn from '@/data/tools/color.json';
 import colorZh from '@/data/tools/color-zh.json';
-import { ToolContent } from '@/types/tool-content';
 import { normalizeToolContent } from '@/utils/normalize-tool-content';
+import { buildToolPageMetadata } from '@/lib/seo/tool-page-metadata';
+import { getLocalizedToolEntry, type ToolCatalogEntry } from '@/lib/tool-page-catalog';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -21,15 +21,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const l = (locale || 'en').toLowerCase();
 
-  const catalogs: Record<string, any[]> = {
-    en: colorEn as any[],
-    zh: (colorZh as any[]) || (colorEn as any[])
-  };
-  const getEntry = (id: string) => {
-    const list = catalogs[l] || catalogs.en;
-    return list.find((it) => it.id === id) || catalogs.en.find((it) => it.id === id);
-  };
-  const entry = getEntry('color-picker-tool');
+  const entry = getLocalizedToolEntry(l, 'color-picker-tool', colorEn as ToolCatalogEntry[], colorZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name ?? 'Online Color Picker Tool';
   const description: string = entry?.description ?? 'Professional color picker with HSL controls, color palettes, and history. Generate RGB, HEX, and HSL color codes for web design, graphic design, and development projects.';
@@ -41,48 +33,16 @@ export async function generateMetadata({
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
 
-  const canonicalPath = `${l === "en" ? "" : "/" + l}/color/color-picker-tool`;
 
-  return {
+  return buildToolPageMetadata({
+    locale: l,
+    category: 'color',
+    toolId: 'color-picker-tool',
     title,
     description,
-    keywords: keywords.join(', '),
-    openGraph: {
-      title,
-      description,
-      type: 'website',
-      locale: l === 'zh' ? 'zh_CN' : 'en_US',
-      images: [
-        {
-          url: '/icons/icon-512x512.png',
-          width: 512,
-          height: 512,
-          alt: toolName
-        }
-      ]
-    },
-    alternates: {
-      canonical: canonicalPath,
-      languages: {
-        en: '/color/color-picker-tool',
-        zh: '/zh/color/color-picker-tool'
-      }
-    },
-    authors: [{ name: 'InterConverter Team' }],
-    creator: 'InterConverter',
-    publisher: 'InterConverter',
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1
-      }
-    }
-  };
+    keywords,
+    path: '/color/color-picker-tool'
+  });
 }
 
 export default async function ColorPickerToolPage({
@@ -97,11 +57,7 @@ export default async function ColorPickerToolPage({
   const rawContent = l === 'zh' ? zhTool : enTool;
   const toolContent = normalizeToolContent(rawContent);
 
-  const faqs = getFAQsByToolId('color-picker-tool', 'color');
-
-  const catalogs: Record<string, any[]> = { en: colorEn as any[], zh: (colorZh as any[]) || (colorEn as any[]) };
-  const catalog = catalogs[l] || catalogs.en;
-  const entry = catalog.find((it) => it.id === 'color-picker-tool') || (colorEn as any[]).find((it) => it.id === 'color-picker-tool');
+  const entry = getLocalizedToolEntry(l, 'color-picker-tool', colorEn as ToolCatalogEntry[], colorZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name || 'Online Color Picker Tool';
   const descriptionText: string = entry?.description || 'Professional color picker with HSL sliders, preset palettes, and color history with instant calculations.';

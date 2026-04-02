@@ -2,8 +2,8 @@
   {
     "id": "timestamp-converter",
     "name": "Unix Timestamp Converter",
-    "description": "Convert Unix timestamps to human-readable dates and vice versa with timezone support. Professional epoch time converter for developers and system administrators.",
-    "titleSuffix": "Epoch Date Time Tool",
+    "description": "Convert 10-digit and 13-digit Unix timestamps to readable dates, and switch dates back to epoch values with UTC and local output.",
+    "titleSuffix": "Unix & Epoch",
     "category": "time",
     "keywords": [
       "timestamp converter",
@@ -27,8 +27,8 @@
   {
     "id": "timezone-converter",
     "name": "Time Zone Converter",
-    "description": "Convert time between different time zones worldwide with daylight saving time support. Professional timezone converter for international scheduling and global coordination.",
-    "titleSuffix": "Global Time Zones",
+    "description": "Convert time between cities and time zones with DST-aware results for meeting planning, support handoffs, and international schedules.",
+    "titleSuffix": "World Time",
     "category": "time",
     "keywords": [
       "timezone converter",
@@ -52,8 +52,8 @@
   {
     "id": "date-difference-calculator",
     "name": "Date Difference Calculator",
-    "description": "Calculate the difference between two dates in days, months, and years. Comprehensive date difference calculator for project planning and age calculations.",
-    "titleSuffix": "Date Duration Analysis",
+    "description": "Calculate the difference between two dates in days, months, and years for project plans, age checks, billing periods, and deadlines.",
+    "titleSuffix": "Between Dates",
     "category": "time",
     "keywords": [
       "date calculator",

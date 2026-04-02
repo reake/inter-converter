@@ -10,7 +10,16 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="font-bold text-lg mb-4">InterConverter</h3>
+            <Link href="/" className="flex items-center gap-2 mb-4">
+              <img 
+                src="/logo.png" 
+                alt="InterConverter" 
+                width={28} 
+                height={28}
+                className="h-7 w-auto"
+              />
+              <h3 className="font-bold text-lg">InterConverter</h3>
+            </Link>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
               Free online conversion tools and calculators for everyone.
             </p>
@@ -18,35 +27,33 @@ export function Footer() {
 
           {/* Tools */}
           <div>
-            <h4 className="font-semibold mb-4">Popular Tools</h4>
+            <h4 className="font-semibold mb-4">Featured Tools</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/finance/currency-converter" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">Currency Converter</Link></li>
               <li><Link href="/time/timestamp-converter" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">Timestamp Converter</Link></li>
-              <li><Link href="/color/hex-to-rgb-converter" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">Color Converter</Link></li>
-              <li><Link href="/unit/unit-converter" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">Unit Converter</Link></li>
+              <li><Link href="/time/timezone-converter" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">Time Zone Converter</Link></li>
+              <li><Link href="/color/hex-to-rgb-converter" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">HEX to RGB Converter</Link></li>
+              <li><Link href="/unit/temperature-converter" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">Temperature Converter</Link></li>
             </ul>
           </div>
 
-          {/* Calculators */}
+          {/* Categories */}
           <div>
-            <h4 className="font-semibold mb-4">Calculators</h4>
+            <h4 className="font-semibold mb-4">Featured Categories</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/finance/loan-calculator" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">Loan Calculator</Link></li>
-              <li><Link href="/health/bmi-calculator" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">BMI Calculator</Link></li>
-              <li><Link href="/finance/tax-calculator" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">Tax Calculator</Link></li>
-              <li><Link href="/time/date-difference-calculator" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">Date Calculator</Link></li>
+              <li><Link href="/unit" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">Units</Link></li>
+              <li><Link href="/time" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">Time</Link></li>
+              <li><Link href="/color" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">Color</Link></li>
+              <li><Link href="/media" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">File Conversion</Link></li>
             </ul>
           </div>
 
-          {/* Automotive */}
+          {/* Public notes */}
           <div>
-            <h4 className="font-semibold mb-4">Automotive</h4>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="/auto/engine-displacement-calculator" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">Engine Displacement</Link></li>
-              <li><Link href="/auto/torque-horsepower-calculator" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">Torque & Horsepower</Link></li>
-              <li><Link href="/auto/ram-air-calculator" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">Ram Air Calculator</Link></li>
-              <li><Link href="/auto/gear-ratio-calculator" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">Gear Ratio</Link></li>
-            </ul>
+            <h4 className="font-semibold mb-4">Public Scope</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              The public site currently highlights a smaller curated tool set while additional pages
+              continue to be reviewed and expanded.
+            </p>
           </div>
 
           {/* Company */}
@@ -68,7 +75,7 @@ export function Footer() {
               © {currentYear} InterConverter. All rights reserved.
             </p>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              Made with ❤️ for developers
+              Focused on clearer public tool pages
             </p>
           </div>
         </div>

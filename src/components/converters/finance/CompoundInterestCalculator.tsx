@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -36,7 +36,7 @@ export default function CompoundInterestCalculator() {
     '365': 'Daily'
   };
 
-  const calculateCompoundInterest = () => {
+  const calculateCompoundInterest = useCallback(() => {
     const principal = parseFloat(initialAmount);
     const monthlyAdd = parseFloat(monthlyContribution);
     const rate = parseFloat(annualRate) / 100;
@@ -94,11 +94,11 @@ export default function CompoundInterestCalculator() {
       totalInterest,
       yearlyBreakdown
     });
-  };
+  }, [initialAmount, monthlyContribution, annualRate, years, compoundFrequency, contributionFrequency]);
 
   useEffect(() => {
     calculateCompoundInterest();
-  }, [initialAmount, monthlyContribution, annualRate, years, compoundFrequency, contributionFrequency]);
+  }, [calculateCompoundInterest]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

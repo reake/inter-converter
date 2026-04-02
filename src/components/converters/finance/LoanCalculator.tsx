@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -31,13 +31,7 @@ export default function LoanCalculator() {
   const [result, setResult] = useState<LoanCalculation | null>(null);
   const [showSchedule, setShowSchedule] = useState(false);
 
-  useEffect(() => {
-    if (loanAmount && interestRate && loanTerm) {
-      calculateLoan();
-    }
-  }, [loanAmount, interestRate, loanTerm, extraPayment]);
-
-  const calculateLoan = () => {
+  const calculateLoan = useCallback(() => {
     const principal = parseFloat(loanAmount);
     const rate = parseFloat(interestRate) / 100 / 12; // Monthly interest rate
     const months = parseFloat(loanTerm) * 12;
@@ -93,7 +87,13 @@ export default function LoanCalculator() {
       totalInterest: totalInterestPaid,
       amortizationSchedule: schedule
     });
-  };
+  }, [loanAmount, interestRate, loanTerm, extraPayment]);
+
+  useEffect(() => {
+    if (loanAmount && interestRate && loanTerm) {
+      calculateLoan();
+    }
+  }, [loanAmount, interestRate, loanTerm, extraPayment, calculateLoan]);
 
   const getResultText = () => {
     if (result) {

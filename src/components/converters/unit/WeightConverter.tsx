@@ -77,6 +77,7 @@ export function WeightConverter() {
 
   return (
     <div className="space-y-6">
+      <h2 className="sr-only">Weight conversion tool</h2>
       {/* Conversion Interface */}
       <Card>
         <CardHeader className="pb-3">
@@ -91,8 +92,9 @@ export function WeightConverter() {
         <CardContent className="space-y-6">
           {/* Value Input */}
           <div>
-            <label className="block text-sm font-medium mb-2">Value</label>
+            <label htmlFor="weight-value" className="block text-sm font-medium mb-2">Value</label>
             <Input
+              id="weight-value"
               type="number"
               value={value}
               onChange={(e) => setValue(e.target.value)}
@@ -105,8 +107,10 @@ export function WeightConverter() {
           {/* Unit Selection */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
             <div>
-              <label className="block text-sm font-medium mb-2">From</label>
+              <label htmlFor="weight-from-unit" className="block text-sm font-medium mb-2">From Unit</label>
               <select
+                id="weight-from-unit"
+                aria-label="From unit"
                 value={fromUnit}
                 onChange={(e) => setFromUnit(e.target.value)}
                 className="w-full p-3 border border-input rounded-md bg-background"
@@ -125,14 +129,17 @@ export function WeightConverter() {
                 variant="outline"
                 size="sm"
                 className="rounded-full w-10 h-10 p-0"
+                aria-label="Swap weight units"
               >
                 <ArrowRightLeft className="h-4 w-4" />
               </Button>
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-2">To</label>
+              <label htmlFor="weight-to-unit" className="block text-sm font-medium mb-2">To Unit</label>
               <select
+                id="weight-to-unit"
+                aria-label="To unit"
                 value={toUnit}
                 onChange={(e) => setToUnit(e.target.value)}
                 className="w-full p-3 border border-input rounded-md bg-background"

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
@@ -10,11 +10,10 @@ import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { PerformanceDisplay } from '@/components/converters/automotive/PerformanceDisplay';
-import { AutoTermTooltip } from '@/components/converters/automotive/EducationalTooltip';
 import { EngineFormulas } from '@/lib/automotive/engine-formulas';
 import { AutomotiveValidator } from '@/lib/automotive/automotive-validators';
 import { SuperchargerResult, AutomotiveResult, Recommendation, Warning } from '@/types/automotive';
-import { WindIcon, CalculatorIcon, GaugeIcon, ZapIcon } from 'lucide-react';
+import { WindIcon, GaugeIcon, ZapIcon } from 'lucide-react';
 
 interface SuperchargerState {
   baseHP: string;

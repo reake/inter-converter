@@ -1,98 +1,97 @@
 {
   "about": {
     "title": "About Length Converter",
-    "description": "The Length Converter is a versatile tool for converting between various units of length and distance. From millimeters to miles, this converter handles all common length measurements used in engineering, construction, science, and everyday life. Length conversion is fundamental in many industries including construction, manufacturing, textiles, and international trade. Whether you're working on architectural plans, measuring fabric, or calculating distances, this tool ensures precise length conversions with support for both metric and imperial systems."
+    "description": [
+      "This length converter helps move between common distance and measurement units without forcing you to remember individual conversion factors.",
+      "It is useful for product specs, construction notes, print measurements, shipping details, classroom work, and international communication where one side uses metric units and the other uses imperial units."
+    ]
   },
   "howTo": {
     "title": "How to Use the Length Converter",
     "steps": [
       {
-        "title": "Enter Length Value",
-        "description": "Input the length or distance value you want to convert."
+        "title": "Enter the original measurement",
+        "description": "Start with the exact number from the source drawing, product sheet, or physical measurement."
       },
       {
-        "title": "Select Source Unit",
-        "description": "Choose the source unit: meters, feet, inches, centimeters, kilometers, miles, etc."
+        "title": "Select the source unit carefully",
+        "description": "Check whether the value is in millimeters, centimeters, meters, inches, feet, yards, or miles before converting."
       },
       {
-        "title": "Choose Target Unit",
-        "description": "Select the target unit for conversion from metric or imperial systems."
+        "title": "Choose the output unit you actually need",
+        "description": "Pick the format that matches the document, device, or audience you are working with."
       },
       {
-        "title": "Get Results",
-        "description": "View the converted length instantly with high precision."
+        "title": "Review the scale of the result",
+        "description": "Use a quick sense check to make sure the converted value is realistic, especially when switching between very small and very large units."
       }
     ],
     "tips": [
-      "Use metric units for scientific calculations",
-      "Imperial units are common in US construction",
-      "1 meter = 3.28084 feet for quick reference"
+      "Millimeters and inches are easy to confuse in product specs if the unit label is missing.",
+      "Use smaller units for physical parts and larger units for travel or land measurements.",
+      "If the result looks off by a factor of 10 or 100, check whether centimeters and millimeters were mixed up."
     ]
   },
   "features": [
     {
-      "title": "Comprehensive Unit Support",
-      "description": "Convert between metric (mm, cm, m, km) and imperial (in, ft, yd, mi) length units."
+      "title": "Metric and imperial coverage",
+      "description": "Useful for everyday conversion between common measurement systems instead of forcing you to memorize factors."
     },
     {
-      "title": "Specialized Units",
-      "description": "Support for nautical miles, light years, and other specialized distance measurements."
+      "title": "Spec and documentation support",
+      "description": "Helpful when technical specs, vendor sheets, or packaging details use a different unit system from your own workflow."
     },
     {
-      "title": "Real-Time Conversion",
-      "description": "Instant length conversion as you type with immediate results display."
+      "title": "Small-to-large unit handling",
+      "description": "Relevant for everything from printed dimensions and fabrication tolerances to road distance and travel planning."
     },
     {
-      "title": "High Precision Calculations",
-      "description": "Accurate conversions with up to 15 decimal places for scientific applications."
+      "title": "Fast verification",
+      "description": "The result is useful as a check before you copy a measurement into a quote, drawing, or production note."
     },
     {
-      "title": "Scientific Notation",
-      "description": "Handle very large or very small distances with scientific notation support."
+      "title": "Cross-border communication",
+      "description": "Supports workflows where collaborators or customers use a different default unit system."
     },
     {
-      "title": "Mobile Optimized",
-      "description": "Responsive design works perfectly on all devices and screen sizes."
+      "title": "Reduced conversion errors",
+      "description": "Helps avoid the common problem of applying the wrong factor by memory when moving between units."
     }
   ],
   "faq": [
     {
-      "q": "What length units does the converter support?",
-      "a": "Our length converter supports metric units (millimeters, centimeters, meters, kilometers), imperial units (inches, feet, yards, miles), and specialized units like nautical miles, light years, and astronomical units for comprehensive distance conversion."
+      "q": "What is the most common length conversion mistake?",
+      "a": "Mixing up nearby units such as millimeters and centimeters, or inches and feet. Those errors can produce values that still look plausible, which is why the unit label matters as much as the number."
     },
     {
-      "q": "How accurate are the length conversions?",
-      "a": "All length conversions use precise mathematical formulas with up to 15 decimal places of accuracy. This high precision makes our converter suitable for professional engineering, scientific research, and construction applications."
+      "q": "When should I use metric instead of imperial units?",
+      "a": "Metric units are common in science, manufacturing, and international documentation. Imperial units are still common in some construction, retail, and US-based workflows. The right choice depends on the system your audience expects."
     },
     {
-      "q": "What's the difference between a mile and a nautical mile?",
-      "a": "A statute mile equals 5,280 feet (1.609 kilometers), while a nautical mile equals 6,076 feet (1.852 kilometers). Nautical miles are used in maritime and aviation navigation because they're based on Earth's circumference."
+      "q": "Why can a converted value look wrong even when the math is correct?",
+      "a": "Because the original measurement may already be mislabeled, rounded too aggressively, or copied from the wrong source unit. Converting a mislabeled value only carries the mistake forward."
     },
     {
-      "q": "Can I convert very small or very large distances?",
-      "a": "Yes, our length converter handles everything from microscopic measurements (micrometers, nanometers) to astronomical distances (light years, parsecs) with scientific notation support for extreme values."
+      "q": "Is this tool suitable for engineering tolerances?",
+      "a": "It is useful for quick checks and readable conversion, but tolerance-critical work should still be verified against the original specification and the precision required by the job."
     },
     {
-      "q": "How do I convert meters to feet quickly?",
-      "a": "To convert meters to feet, multiply by 3.28084. For example, 10 meters = 32.8084 feet. Our converter automates this calculation instantly with precise results for any length value."
+      "q": "How can I sense-check a result quickly?",
+      "a": "Ask whether the scale feels right. For example, a smartphone is not several feet wide, and a highway trip is not a few centimeters long. A rough physical intuition catches many copy mistakes."
     },
     {
-      "q": "What are common length conversion factors?",
-      "a": "Common conversions: 1 inch = 2.54 cm, 1 foot = 30.48 cm, 1 yard = 0.9144 m, 1 mile = 1.609 km, 1 meter = 3.28084 feet. Our converter handles all these automatically."
+      "q": "Does the converter help with both short and long distances?",
+      "a": "Yes. The page is meant to be useful for small product dimensions, room measurements, and longer travel or mapping distances."
     }
   ],
   "relativeLinks": [
     {
-      "title": "Meters to Feet Converter",
-      "url": "/unit/meters-to-feet-converter"
+      "title": "Temperature Converter",
+      "url": "/unit/temperature-converter"
     },
     {
-      "title": "Feet to Meters Converter",
-      "url": "/unit/feet-to-meters-converter"
-    },
-    {
-      "title": "Unit Converter",
-      "url": "/unit/unit-converter"
+      "title": "Weight Converter",
+      "url": "/unit/weight-converter"
     },
     {
       "title": "Unit Tools Category",

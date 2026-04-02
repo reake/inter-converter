@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -20,6 +20,34 @@ interface TaxResults {
   effectiveRate: number;
   marginalRate: number;
 }
+
+const FEDERAL_BRACKETS = {
+  single: [
+    { min: 0, max: 11600, rate: 0.10 },
+    { min: 11600, max: 47150, rate: 0.12 },
+    { min: 47150, max: 100525, rate: 0.22 },
+    { min: 100525, max: 191675, rate: 0.24 },
+    { min: 191675, max: 243725, rate: 0.32 },
+    { min: 243725, max: 609350, rate: 0.35 },
+    { min: 609350, max: Infinity, rate: 0.37 }
+  ],
+  'married-joint': [
+    { min: 0, max: 23200, rate: 0.10 },
+    { min: 23200, max: 94300, rate: 0.12 },
+    { min: 94300, max: 201050, rate: 0.22 },
+    { min: 201050, max: 383350, rate: 0.24 },
+    { min: 383350, max: 487450, rate: 0.32 },
+    { min: 487450, max: 731200, rate: 0.35 },
+    { min: 731200, max: Infinity, rate: 0.37 }
+  ]
+} as const;
+
+const STANDARD_DEDUCTIONS = {
+  single: 14600,
+  'married-joint': 29200,
+  'married-separate': 14600,
+  'head-of-household': 21900
+} as const;
 
 export default function IncomeTaxCalculator() {
   const [income, setIncome] = useState<string>('75000');
@@ -50,37 +78,7 @@ export default function IncomeTaxCalculator() {
     'WY': 'Wyoming (No State Tax)'
   };
 
-  // 2024 Federal Tax Brackets
-  const federalBrackets = {
-    'single': [
-      { min: 0, max: 11600, rate: 0.10 },
-      { min: 11600, max: 47150, rate: 0.12 },
-      { min: 47150, max: 100525, rate: 0.22 },
-      { min: 100525, max: 191675, rate: 0.24 },
-      { min: 191675, max: 243725, rate: 0.32 },
-      { min: 243725, max: 609350, rate: 0.35 },
-      { min: 609350, max: Infinity, rate: 0.37 }
-    ],
-    'married-joint': [
-      { min: 0, max: 23200, rate: 0.10 },
-      { min: 23200, max: 94300, rate: 0.12 },
-      { min: 94300, max: 201050, rate: 0.22 },
-      { min: 201050, max: 383350, rate: 0.24 },
-      { min: 383350, max: 487450, rate: 0.32 },
-      { min: 487450, max: 731200, rate: 0.35 },
-      { min: 731200, max: Infinity, rate: 0.37 }
-    ]
-  };
-
-  // Standard Deductions 2024
-  const standardDeductions = {
-    'single': 14600,
-    'married-joint': 29200,
-    'married-separate': 14600,
-    'head-of-household': 21900
-  };
-
-  const calculateTax = () => {
+  const calculateTax = useCallback(() => {
     const grossIncome = parseFloat(income);
     const retirement = parseFloat(retirement401k);
     const numDependents = parseInt(dependents);
@@ -91,7 +89,7 @@ export default function IncomeTaxCalculator() {
     const adjustedGrossIncome = grossIncome - retirement;
 
     // Calculate deductions
-    const standardDeduction = standardDeductions[filingStatus as keyof typeof standardDeductions];
+    const standardDeduction = STANDARD_DEDUCTIONS[filingStatus as keyof typeof STANDARD_DEDUCTIONS];
     const totalDeductions = deductions === 'standard' 
       ? standardDeduction 
       : Math.max(parseFloat(itemizedAmount), standardDeduction);
@@ -101,8 +99,8 @@ export default function IncomeTaxCalculator() {
 
     // Calculate federal tax
     const brackets = filingStatus === 'married-joint' 
-      ? federalBrackets['married-joint'] 
-      : federalBrackets['single'];
+      ? FEDERAL_BRACKETS['married-joint'] 
+      : FEDERAL_BRACKETS.single;
     
     let federalTax = 0;
     let marginalRate = 0;
@@ -150,11 +148,11 @@ export default function IncomeTaxCalculator() {
       effectiveRate,
       marginalRate: marginalRate * 100
     });
-  };
+  }, [income, filingStatus, state, deductions, itemizedAmount, dependents, retirement401k]);
 
   useEffect(() => {
     calculateTax();
-  }, [income, filingStatus, state, deductions, itemizedAmount, dependents, retirement401k]);
+  }, [calculateTax]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -278,7 +276,7 @@ export default function IncomeTaxCalculator() {
                     <div className="text-sm space-y-1">
                       <div>Filing Status: {filingStatuses[filingStatus as keyof typeof filingStatuses]}</div>
                       <div>State: {states[state as keyof typeof states]}</div>
-                      <div>Standard Deduction: {formatCurrency(standardDeductions[filingStatus as keyof typeof standardDeductions])}</div>
+                      <div>Standard Deduction: {formatCurrency(STANDARD_DEDUCTIONS[filingStatus as keyof typeof STANDARD_DEDUCTIONS])}</div>
                     </div>
                   </div>
                 </div>

@@ -194,8 +194,8 @@ export function EngineSizeConverter() {
             </div>
             <div className="text-sm text-gray-600">
               <p>
-                <strong>Note:</strong> Engine displacement is the total volume of all cylinders in an engine. 
-                It's measured in cubic inches (CI) in the US and cubic centimeters (CC) or liters (L) in most other countries.
+                <strong>Note:</strong> Engine displacement is the total volume of all cylinders in an engine.
+                It&apos;s measured in cubic inches (CI) in the US and cubic centimeters (CC) or liters (L) in most other countries.
               </p>
             </div>
           </div>

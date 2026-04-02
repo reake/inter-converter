@@ -1,7 +1,5 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { redirect } from "next/navigation";
-import { routing } from "@/i18n/routing";
 import { ThemeProvider } from '@/components/theme-provider';
 import { WebVitals, PerformanceMonitor, ResourceMonitor } from '@/components/performance/WebVitals';
 import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics';
@@ -28,9 +26,9 @@ export default async function RootLayout({
   const locale = resolvedParams?.locale || "en";
 
   // Load messages differently in static export to avoid using headers()
-  let messages: any;
+  let messages: Awaited<ReturnType<typeof getMessages>>;
   if (process.env.BUILD_TARGET === 'static') {
-    messages = (await import(`../messages/${locale}.json`)).default;
+    messages = (await import(`../messages/${locale}.json`)).default as Awaited<ReturnType<typeof getMessages>>;
   } else {
     // Providing all messages to the client side is the easiest way to get started
     messages = await getMessages();
@@ -42,20 +40,20 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#2563eb" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="InterConverter" />
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       </head>
       <body>
         <GoogleAnalytics />
         <GoogleAdsense />
         <ThemeProvider
           attribute="class"
-          defaultTheme={defaultThemeEnv as any}
+          defaultTheme={defaultThemeEnv}
           enableSystem={enableSystemTheme}
           disableTransitionOnChange
         >

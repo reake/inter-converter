@@ -5,8 +5,9 @@ import enTool from '@/data/tools/media/jpg-to-png-converter-en.json';
 import zhTool from '@/data/tools/media/jpg-to-png-converter-zh.json';
 import mediaEn from '@/data/tools/media.json';
 import mediaZh from '@/data/tools/media-zh.json';
-import { ToolContent } from '@/types/tool-content';
 import { normalizeToolContent } from '@/utils/normalize-tool-content';
+import { buildToolPageMetadata } from '@/lib/seo/tool-page-metadata';
+import { getLocalizedToolEntry, type ToolCatalogEntry } from '@/lib/tool-page-catalog';
 
 // Force static generation
 export const dynamic = 'force-static';
@@ -19,11 +20,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const l = (locale || 'en').toLowerCase();
 
-  const catalogs: Record<string, any[]> = {
-    en: mediaEn as any[],
-    zh: (mediaZh as any[]) || (mediaEn as any[])
-  };
-  const entry = catalogs[l]?.find((it) => it.id === 'jpg-to-png-converter') || catalogs.en.find((it) => it.id === 'jpg-to-png-converter');
+  const entry = getLocalizedToolEntry(l, 'jpg-to-png-converter', mediaEn as ToolCatalogEntry[], mediaZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name ?? 'JPG to PNG Converter';
   const description: string = entry?.description ?? 'Convert JPG images to PNG format with transparency support. Free online image converter with batch processing and quality optimization.';
@@ -34,48 +31,16 @@ export async function generateMetadata({
 
   const titleSuffix: string = entry?.titleSuffix ?? '';
   const title = `${toolName}${titleSuffix ? ` - ${titleSuffix}` : ''} | InterConverter`;
-  const canonicalPath = `${l === "en" ? "" : "/" + l}/media/jpg-to-png-converter`;
 
-  return {
+  return buildToolPageMetadata({
+    locale: l,
+    category: 'media',
+    toolId: 'jpg-to-png-converter',
     title,
     description,
-    keywords: keywords.join(', '),
-    openGraph: {
-      title,
-      description,
-      type: 'website',
-      locale: l === 'zh' ? 'zh_CN' : 'en_US',
-      images: [
-        {
-          url: '/icons/icon-512x512.png',
-          width: 512,
-          height: 512,
-          alt: toolName
-        }
-      ]
-    },
-    alternates: {
-      canonical: canonicalPath,
-      languages: {
-        en: '/media/jpg-to-png-converter',
-        zh: '/zh/media/jpg-to-png-converter'
-      }
-    },
-    authors: [{ name: 'InterConverter Team' }],
-    creator: 'InterConverter',
-    publisher: 'InterConverter',
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1
-      }
-    }
-  };
+    keywords,
+    path: '/media/jpg-to-png-converter'
+  });
 }
 
 export default async function JpgToPngConverterPage({
@@ -89,11 +54,7 @@ export default async function JpgToPngConverterPage({
   // Load JSON content based on locale
   const rawContent = l === 'zh' ? zhTool : enTool;
   const toolContent = normalizeToolContent(rawContent);
-  const catalogs: Record<string, any[]> = {
-    en: mediaEn as any[],
-    zh: (mediaZh as any[]) || (mediaEn as any[])
-  };
-  const entry = catalogs[l]?.find((it) => it.id === 'jpg-to-png-converter') || catalogs.en.find((it) => it.id === 'jpg-to-png-converter');
+  const entry = getLocalizedToolEntry(l, 'jpg-to-png-converter', mediaEn as ToolCatalogEntry[], mediaZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name ?? 'JPG to PNG Converter';
   const description: string = entry?.description ?? 'Convert JPG images to PNG format with transparency support and instant processing.';
@@ -120,7 +81,7 @@ export default async function JpgToPngConverterPage({
         <div className="text-6xl mb-4">🚧</div>
         <h2 className="text-2xl font-semibold mb-4">Coming Soon</h2>
         <p className="text-muted-foreground mb-6">
-          We're developing an advanced image converter with support for multiple formats, 
+          We&apos;re developing an advanced image converter with support for multiple formats, 
           batch processing, and quality optimization features.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto">

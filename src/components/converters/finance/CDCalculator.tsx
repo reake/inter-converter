@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -25,7 +25,7 @@ export default function CDCalculator() {
   const [compoundingFrequency, setCompoundingFrequency] = useState<string>('12');
   const [results, setResults] = useState<CDResults | null>(null);
 
-  const calculateCD = () => {
+  const calculateCD = useCallback(() => {
     const p = parseFloat(principal);
     const r = parseFloat(interestRate) / 100;
     const t = parseFloat(term) / 12; // Convert months to years
@@ -62,11 +62,11 @@ export default function CDCalculator() {
       effectiveAPY,
       monthlyBreakdown
     });
-  };
+  }, [principal, interestRate, term, compoundingFrequency]);
 
   useEffect(() => {
     calculateCD();
-  }, [principal, interestRate, term, compoundingFrequency]);
+  }, [calculateCD]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

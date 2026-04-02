@@ -206,8 +206,8 @@ export function RamAirCalculator() {
           <div>
             <h4 className="font-semibold mb-2">How Ram Air Works</h4>
             <p className="text-sm text-muted-foreground">
-              Ram air systems use vehicle speed to create positive pressure in the intake system. 
-              As air hits the front-facing intake, it's compressed and forced into the engine, 
+              Ram air systems use vehicle speed to create positive pressure in the intake system.
+              As air hits the front-facing intake, it&apos;s compressed and forced into the engine,
               increasing air density and allowing more fuel to be burned.
             </p>
           </div>

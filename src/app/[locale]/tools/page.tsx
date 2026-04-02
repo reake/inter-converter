@@ -4,11 +4,13 @@ import { Link } from '@/i18n/routing';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { getToolsByAllCategories, getToolCategories, getPopularTools } from '@/config/tools';
+import {
+  getReviewApprovedPopularTools,
+  getReviewApprovedToolsByAllCategories,
+  getToolCategories,
+} from '@/config/tools';
 import { ArrowRight, TrendingUp, Users, Star, Calculator } from 'lucide-react';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo/metadata';
-import { HreflangLinks } from '@/components/seo/HreflangLinks';
-import { CanonicalLink } from '@/components/seo/CanonicalLink';
 import { JsonLd, generateWebsiteSchema } from '@/components/seo/JsonLd';
 
 // Force static generation
@@ -23,14 +25,14 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'toolsPage' });
   
   const title = locale === 'zh' 
-    ? '免费在线转换器和计算器 - 250+ 工具 | InterConverter'
-    : 'Free Online Converters & Calculators - 250+ Tools | InterConverter';
+    ? '当前精选在线工具与公开维护范围 | InterConverter'
+    : 'Featured Online Tools | InterConverter';
   
   const description = t('hero.description');
   
   const keywords = locale === 'zh' 
-    ? ['在线转换器', '免费计算器', '单位转换器', '货币转换器', '颜色转换器', '健康计算器', '金融计算器', '汽车计算器', '时间转换器', '测量工具', '转换工具', '在线工具', '免费工具']
-    : ['online converter', 'free calculator', 'unit converter', 'currency converter', 'color converter', 'health calculator', 'financial calculator', 'automotive calculator', 'time converter', 'measurement tools', 'conversion tools', 'online tools', 'free tools'];
+    ? ['在线转换器', '精选工具', '单位转换器', '颜色转换器', '时间转换器', '文件转换工具', '测量工具', '转换工具']
+    : ['online converter', 'featured tools', 'unit converter', 'color converter', 'time converter', 'file conversion tools', 'measurement tools', 'conversion tools'];
   
   return generateSEOMetadata({
     title,
@@ -50,10 +52,10 @@ export default async function ToolsPage({
   const t = await getTranslations({ locale, namespace: 'toolsPage' });
   
   // Get all tools by categories with isActive filtering (limit 8 per category for overview)
-  const toolsByCategory = getToolsByAllCategories(8, locale);
+  const toolsByCategory = getReviewApprovedToolsByAllCategories(8, locale);
   
   // Get popular tools across all categories
-  const popularTools = getPopularTools(6, locale);
+  const popularTools = getReviewApprovedPopularTools(6, locale);
   const toolCategories = getToolCategories(locale);
   
   // Category icons mapping
@@ -82,8 +84,6 @@ export default async function ToolsPage({
 
   return (
     <>
-      <HreflangLinks pathname="/tools" />
-      <CanonicalLink locale={locale} pathname="/tools" />
       <JsonLd data={generateWebsiteSchema(locale)} />
       
       <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
@@ -142,14 +142,14 @@ export default async function ToolsPage({
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {popularTools.map((tool) => (
-              <Link key={tool.id} href={tool.path as any} className="group">
+              <Link key={tool.id} href={tool.path} className="group">
                 <Card className="h-full hover:shadow-xl transition-all duration-300 group-hover:scale-[1.02] border-0 shadow-md">
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between">
                       <div className="text-2xl">{tool.icon}</div>
-                      <Badge variant="secondary" className="text-xs">
+                      {/* <Badge variant="secondary" className="text-xs">
                         {(tool.searchVolume || 0).toLocaleString()}/mo
-                      </Badge>
+                      </Badge> */}
                     </div>
                     <CardTitle className="text-lg group-hover:text-primary transition-colors">
                       {tool.name}
@@ -184,7 +184,7 @@ export default async function ToolsPage({
           </div>
 
           <div className="space-y-16">
-            {Object.entries(toolsByCategory).map(([categoryKey, categoryTools]) => {
+              {Object.entries(toolsByCategory).map(([categoryKey, categoryTools]) => {
               const categoryInfo = toolCategories[categoryKey as keyof typeof toolCategories];
               const categoryIcon = categoryIcons[categoryKey] || '🔧';
               const categoryColor = categoryColors[categoryKey] || 'from-gray-500 to-gray-600';
@@ -211,7 +211,7 @@ export default async function ToolsPage({
                         {categoryTools.length} {t('actions.toolsCount')}
                       </Badge>
                       <Button asChild variant="outline" size="sm" className="hover:bg-primary hover:text-white transition-colors">
-                        <Link href={`/${categoryKey}` as any}>
+                        <Link href={`/${categoryKey}`}>
                           {t('actions.viewMore')}
                           <ArrowRight className="h-4 w-4 ml-1" />
                         </Link>
@@ -222,19 +222,19 @@ export default async function ToolsPage({
                   {/* Tools Grid */}
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {categoryTools.map((tool) => (
-                      <Link key={tool.id} href={tool.path as any} className="group">
+                      <Link key={tool.id} href={tool.path} className="group">
                         <Card className="h-full hover:shadow-lg transition-all duration-200 border-2 hover:border-primary/20 bg-white">
                           <CardHeader className="pb-3">
                             <div className="flex items-center justify-between">
                               <div className="text-2xl">{tool.icon}</div>
-                              {tool.searchVolume && tool.searchVolume > 10000 && (
+                              {/* {tool.searchVolume && tool.searchVolume > 10000 && (
                                 <Badge variant="secondary" className="text-xs">
                                   {tool.searchVolume > 1000000 
                                     ? `${Math.round(tool.searchVolume / 1000000)}M`
                                     : `${Math.round(tool.searchVolume / 1000)}K`
                                   }
                                 </Badge>
-                              )}
+                              )} */}
                             </div>
                             <CardTitle className="text-lg group-hover:text-primary transition-colors line-clamp-2">
                               {tool.name}
@@ -270,8 +270,8 @@ export default async function ToolsPage({
             {t('sections.callToActionDescription')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-blue-50">
-              {t('actions.requestNewTool')}
+            <Button asChild size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-blue-50">
+              <Link href="/contact">{t('actions.requestNewTool')}</Link>
             </Button>
             <Button asChild size="lg" className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold shadow-lg border-0">
               <Link href="/">

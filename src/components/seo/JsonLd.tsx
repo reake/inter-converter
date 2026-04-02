@@ -12,24 +12,29 @@ export function JsonLd({ data }: JsonLdProps) {
 }
 
 // Schema generators for different content types
-export const generateWebsiteSchema = (locale: string) => ({
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "InterConverter",
-  "url": process.env.NEXT_PUBLIC_SITE_URL || "https://interconverter.com",
-  "description": locale === 'zh' 
-    ? "专业级在线转换器和计算器工具集合" 
-    : "Professional online converters and calculators collection",
-  "inLanguage": locale,
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": `${process.env.NEXT_PUBLIC_SITE_URL || "https://interconverter.com"}/tools?q={search_term_string}`
+export const generateWebsiteSchema = (locale: string) => {
+  const normalizedLocale = locale === 'zh' ? 'zh' : 'en';
+  const localePrefix = normalizedLocale === 'en' ? '' : `/${normalizedLocale}`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "InterConverter",
+    "url": `${process.env.NEXT_PUBLIC_SITE_URL || "https://interconverter.com"}${localePrefix}`,
+    "description": normalizedLocale === 'zh'
+      ? "专业级在线转换器和计算器工具集合"
+      : "Professional online converters and calculators collection",
+    "inLanguage": normalizedLocale,
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": `${process.env.NEXT_PUBLIC_SITE_URL || "https://interconverter.com"}${localePrefix}/tools?q={search_term_string}`
+      },
+      "query-input": "required name=search_term_string"
     },
-    "query-input": "required name=search_term_string"
-  }
-});
+  };
+  };
 
 export const generateArticleSchema = (title: string, description: string, locale: string, pathname: string) => ({
   "@context": "https://schema.org",

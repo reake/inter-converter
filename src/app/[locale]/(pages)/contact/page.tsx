@@ -1,24 +1,12 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { 
-  Mail, 
-  MessageSquare, 
-  Github, 
-  Twitter, 
-  Bug, 
-  Lightbulb, 
-  HelpCircle,
-  Clock,
-  Globe,
-  Shield
-} from 'lucide-react';
 import { Metadata } from 'next';
+import { Mail, Bug, Lightbulb, Shield, Clock, HelpCircle } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo/metadata';
 
 export async function generateMetadata({
-  params
+  params,
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
@@ -26,245 +14,151 @@ export async function generateMetadata({
   const isZh = locale === 'zh';
 
   return generateSEOMetadata({
-    title: isZh ? '联系我们 | InterConverter' : 'Contact InterConverter',
+    title: isZh ? '联系 InterConverter' : 'Contact InterConverter',
     description: isZh
-      ? '获取支持、反馈建议或合作咨询。我们很乐意听到你的声音。'
-      : 'Get support, share feedback, or reach out about partnerships. We’d love to hear from you.',
+      ? '通过邮件联系 InterConverter，提交错误反馈、工具建议或隐私与条款相关问题。'
+      : 'Contact InterConverter by email for bug reports, tool feedback, support questions, or privacy and terms requests.',
     locale,
     pathname: '/contact',
     keywords: isZh
-      ? ['联系我们', '支持', '反馈', '合作', 'InterConverter']
-      : ['contact', 'support', 'feedback', 'partnerships', 'InterConverter']
+      ? ['联系 InterConverter', '错误反馈', '工具建议', '支持']
+      : ['contact InterConverter', 'bug report', 'tool feedback', 'support'],
   });
 }
 
-
-
-
-// Force static generation
 export const dynamic = 'force-static';
+
+const contactMethods = [
+  {
+    icon: Mail,
+    title: 'General support',
+    description: 'Questions about featured tools, unclear copy, or result interpretation.',
+    contact: 'support@interconverter.com',
+    responseTime: 'Usually within 2 business days',
+  },
+  {
+    icon: Bug,
+    title: 'Bug reports',
+    description: 'Use this for broken workflows, wrong outputs, or browser-specific issues.',
+    contact: 'bugs@interconverter.com',
+    responseTime: 'Usually within 1 business day for reproducible issues',
+  },
+  {
+    icon: Lightbulb,
+    title: 'Tool suggestions',
+    description: 'Suggest a new calculator, a missing example, or a better explanation.',
+    contact: 'features@interconverter.com',
+    responseTime: 'Reviewed in batches during content updates',
+  },
+  {
+    icon: Shield,
+    title: 'Privacy and terms',
+    description: 'Use this for policy questions, data handling concerns, or legal requests.',
+    contact: 'legal@interconverter.com',
+    responseTime: 'Usually within 5 business days',
+  },
+];
+
+const faqItems = [
+  {
+    question: 'What makes a bug report useful?',
+    answer:
+      'Include the tool URL, the exact values you entered, what result you expected, what you received instead, and your browser or device if the issue looks environment-specific.',
+  },
+  {
+    question: 'Can I ask for a tool to be added back to the public site?',
+    answer:
+      'Yes. If a tool is implemented but not currently featured, explain the use case and why it should become part of the maintained public set.',
+  },
+  {
+    question: 'Do you review wording and explanation issues too?',
+    answer:
+      'Yes. Feedback is not limited to math errors. Reports about ambiguous labels, weak examples, or confusing instructions are useful and reviewed.',
+  },
+  {
+    question: 'Should I rely on email for urgent business deadlines?',
+    answer:
+      'No. The site is maintained asynchronously. If a calculation is important for a deadline, verify it independently instead of waiting on support.',
+  },
+];
+
 export default function ContactPage() {
-  const contactMethods = [
-    {
-      icon: <Mail className="h-6 w-6" />,
-      title: 'Email Support',
-      description: 'Get help with technical issues or general questions',
-      contact: 'support@interconverter.com',
-      responseTime: '24-48 hours',
-      action: 'mailto:support@interconverter.com'
-    },
-    {
-      icon: <Bug className="h-6 w-6" />,
-      title: 'Bug Reports',
-      description: 'Report bugs or technical issues',
-      contact: 'bugs@interconverter.com',
-      responseTime: '12-24 hours',
-      action: 'mailto:bugs@interconverter.com'
-    },
-    {
-      icon: <Lightbulb className="h-6 w-6" />,
-      title: 'Feature Requests',
-      description: 'Suggest new tools or improvements',
-      contact: 'features@interconverter.com',
-      responseTime: '2-5 days',
-      action: 'mailto:features@interconverter.com'
-    },
-    {
-      icon: <Shield className="h-6 w-6" />,
-      title: 'Privacy & Legal',
-      description: 'Privacy concerns or legal matters',
-      contact: 'legal@interconverter.com',
-      responseTime: '5 business days',
-      action: 'mailto:legal@interconverter.com'
-    }
-  ];
-
-  const socialLinks = [
-    {
-      icon: <Github className="h-5 w-5" />,
-      name: 'GitHub',
-      description: 'View source code and contribute',
-      url: 'https://github.com/interconverter',
-      handle: '@interconverter'
-    },
-    {
-      icon: <Twitter className="h-5 w-5" />,
-      name: 'Twitter',
-      description: 'Follow for updates and announcements',
-      url: 'https://twitter.com/interconverter',
-      handle: '@interconverter'
-    }
-  ];
-
-  const faqItems = [
-    {
-      question: 'How do I report a calculation error?',
-      answer: 'Email us at bugs@interconverter.com with the specific tool, input values, expected result, and actual result.'
-    },
-    {
-      question: 'Can I request a new Converters tool?',
-      answer: 'Yes! Send your suggestions to features@interconverter.com. Include details about what you need and how it would be useful.'
-    },
-    {
-      question: 'Is my data safe when using the tools?',
-      answer: 'Absolutely. All calculations happen in your browser. We don\'t collect, store, or transmit any of your data.'
-    },
-    {
-      question: 'Can I use these tools for commercial purposes?',
-      answer: 'Yes, all tools are free for both personal and commercial use. Just verify critical calculations independently.'
-    }
-  ];
-
   return (
-    <div className="container mx-auto px-4 py-12 max-w-6xl">
-      {/* Header */}
-      <div className="text-center mb-16">
-        <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl mb-6">
-          <MessageSquare className="h-8 w-8 text-white" />
+    <div className="container mx-auto max-w-5xl px-4 py-12">
+      <div className="mb-16 text-center">
+        <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-500">
+          <Mail className="h-8 w-8 text-white" />
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent">
-          Contact Us
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          We're here to help! Whether you have questions, found a bug, or want to suggest improvements, 
-          we'd love to hear from you.
+        <h1 className="mb-6 text-4xl font-bold text-gray-900 md:text-5xl">Contact InterConverter</h1>
+        <p className="mx-auto max-w-3xl text-xl leading-relaxed text-gray-600">
+          The public site is maintained through a small number of support channels. Email is the
+          best route for reporting issues, suggesting improvements, or asking about how a featured
+          tool works.
         </p>
       </div>
 
-      {/* Contact Methods */}
-      <div className="mb-16">
-        <h2 className="text-2xl font-bold text-center mb-8">Get in Touch</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {contactMethods.map((method, index) => (
-            <Card key={index} className="text-center hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-50 dark:bg-blue-950 rounded-lg mb-4 text-blue-600">
-                  {method.icon}
-                </div>
-                <h3 className="font-semibold mb-2">{method.title}</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">{method.description}</p>
-                <div className="space-y-2">
-                  <Button asChild variant="outline" size="sm" className="w-full">
-                    <a href={method.action}>{method.contact}</a>
-                  </Button>
-                  <div className="flex items-center justify-center gap-1 text-xs text-gray-500">
-                    <Clock className="h-3 w-3" />
-                    {method.responseTime}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
+      <div className="mb-16 grid gap-6 md:grid-cols-2">
+        {contactMethods.map((method) => {
+          const Icon = method.icon;
 
-      {/* Social Links */}
-      <div className="mb-16">
-        <h2 className="text-2xl font-bold text-center mb-8">Follow Us</h2>
-        <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-          {socialLinks.map((social, index) => (
-            <Card key={index}>
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-4">
-                  <div className="text-blue-600">{social.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold">{social.name}</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">{social.description}</p>
-                    <Button asChild variant="outline" size="sm">
-                      <a href={social.url} target="_blank" rel="noopener noreferrer">
-                        {social.handle}
-                      </a>
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
-
-      {/* FAQ Section */}
-      <div className="mb-16">
-        <h2 className="text-2xl font-bold text-center mb-8">Frequently Asked Questions</h2>
-        <div className="space-y-4 max-w-4xl mx-auto">
-          {faqItems.map((item, index) => (
-            <Card key={index}>
+          return (
+            <Card key={method.title}>
               <CardHeader>
-                <CardTitle className="text-lg flex items-start gap-2">
-                  <HelpCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                  {item.question}
+                <CardTitle className="flex items-center gap-3">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  {method.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">{item.answer}</p>
+              <CardContent className="space-y-4">
+                <p className="text-sm leading-6 text-gray-600">{method.description}</p>
+                <Button asChild variant="outline" className="w-full justify-center">
+                  <a href={`mailto:${method.contact}`}>{method.contact}</a>
+                </Button>
+                <div className="flex items-center gap-2 text-xs text-gray-500">
+                  <Clock className="h-3.5 w-3.5" />
+                  {method.responseTime}
+                </div>
               </CardContent>
             </Card>
-          ))}
-        </div>
+          );
+        })}
       </div>
 
-      {/* Response Time Info */}
       <Card className="mb-16">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Clock className="h-5 w-5 text-blue-600" />
-            Response Times
-          </CardTitle>
+          <CardTitle>Before you email</CardTitle>
         </CardHeader>
-        <CardContent>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-green-600 mb-2">12-24h</div>
-              <div className="text-sm text-gray-600">Bug Reports</div>
-              <div className="text-xs text-gray-500">Critical issues prioritized</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-blue-600 mb-2">24-48h</div>
-              <div className="text-sm text-gray-600">General Support</div>
-              <div className="text-xs text-gray-500">Technical questions & help</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600 mb-2">2-5 days</div>
-              <div className="text-sm text-gray-600">Feature Requests</div>
-              <div className="text-xs text-gray-500">Suggestions & improvements</div>
-            </div>
-          </div>
+        <CardContent className="space-y-4 text-gray-600">
+          <p>
+            We can review calculation issues faster when the report is specific. The most helpful
+            emails include the exact tool page, the values used, the expected outcome, and whether
+            the issue appears on more than one browser or device.
+          </p>
+          <p>
+            Suggestions are also more useful when they explain the workflow behind the request. If
+            a tool page needs more examples, a stronger warning, or a different result format, say
+            what task you were trying to complete.
+          </p>
         </CardContent>
       </Card>
 
-      {/* Additional Info */}
-      <div className="grid md:grid-cols-2 gap-6">
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Globe className="h-5 w-5 text-blue-600" />
-              Global Support
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-gray-600 mb-4">
-              We provide support in multiple languages and time zones. While our primary 
-              support language is English, we can assist in other languages when possible.
-            </p>
-            <Badge variant="secondary">24/7 Email Support</Badge>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Shield className="h-5 w-5 text-blue-600" />
-              Privacy Commitment
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-gray-600 mb-4">
-              When you contact us, we only collect the information you provide. We don't 
-              track or store any additional data about your usage of our tools.
-            </p>
-            <Badge variant="secondary">Privacy Protected</Badge>
-          </CardContent>
-        </Card>
+      <div className="space-y-4">
+        <h2 className="text-center text-2xl font-bold text-gray-900">Common questions</h2>
+        {faqItems.map((item) => (
+          <Card key={item.question}>
+            <CardHeader>
+              <CardTitle className="flex items-start gap-2 text-lg">
+                <HelpCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-600" />
+                {item.question}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-600">{item.answer}</p>
+            </CardContent>
+          </Card>
+        ))}
       </div>
     </div>
   );

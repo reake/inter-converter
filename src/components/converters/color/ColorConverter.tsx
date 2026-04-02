@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { Palette, Eye } from 'lucide-react';
 import { CopyButton } from '@/components/ui/CopyButton';
 import { ConvertersEngine } from '@/lib/converters/conversion-engine';
@@ -45,26 +44,67 @@ export function ColorConverter() {
 
   useEffect(() => {
     if (activeInput === 'hex') {
-      convertFromHex(hexInput);
-    } else {
-      convertFromRgb(rgbInput);
-    }
-  }, [hexInput, rgbInput, activeInput]);
+      const result = ConvertersEngine.convertColor(hexInput, 'hex', 'rgb');
+      if (result.success && result.result) {
+        const rgbMatch = result.result.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
+        if (rgbMatch) {
+          const r = parseInt(rgbMatch[1]);
+          const g = parseInt(rgbMatch[2]);
+          const b = parseInt(rgbMatch[3]);
+          const hsl = rgbToHsl(r, g, b);
 
-  const convertFromHex = (hex: string) => {
-    const result = ConvertersEngine.convertColor(hex, 'hex', 'rgb');
-    if (result.success && result.result) {
-      const rgbMatch = result.result.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
-      if (rgbMatch) {
-        const r = parseInt(rgbMatch[1]);
-        const g = parseInt(rgbMatch[2]);
-        const b = parseInt(rgbMatch[3]);
-        
+          setColorValues({
+            hex: hexInput.toUpperCase(),
+            rgb: result.result,
+            hsl: `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`,
+            r, g, b,
+            h: hsl.h,
+            s: hsl.s,
+            l: hsl.l
+          });
+          setError('');
+          setRgbInput(`${r}, ${g}, ${b}`);
+          return;
+        }
+      }
+
+      setError(result.error || 'Invalid color format');
+      setColorValues(null);
+    } else {
+      let r: number;
+      let g: number;
+      let b: number;
+
+      if (rgbInput.includes('rgb(')) {
+        const match = rgbInput.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
+        if (!match) {
+          setError('Invalid RGB format');
+          return;
+        }
+        r = parseInt(match[1]);
+        g = parseInt(match[2]);
+        b = parseInt(match[3]);
+      } else {
+        const parts = rgbInput.split(',').map((part) => parseInt(part.trim()));
+        if (parts.length !== 3 || parts.some((part) => Number.isNaN(part))) {
+          setError('Invalid RGB format');
+          return;
+        }
+        [r, g, b] = parts;
+      }
+
+      if (r < 0 || r > 255 || g < 0 || g > 255 || b < 0 || b > 255) {
+        setError('RGB values must be between 0 and 255');
+        return;
+      }
+
+      const result = ConvertersEngine.convertColor(`rgb(${r}, ${g}, ${b})`, 'rgb', 'hex');
+      if (result.success && result.result) {
         const hsl = rgbToHsl(r, g, b);
-        
+
         setColorValues({
-          hex: hex.toUpperCase(),
-          rgb: result.result,
+          hex: result.result,
+          rgb: `rgb(${r}, ${g}, ${b})`,
           hsl: `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`,
           r, g, b,
           h: hsl.h,
@@ -72,71 +112,14 @@ export function ColorConverter() {
           l: hsl.l
         });
         setError('');
-        
-        // Update RGB input if converting from HEX
-        if (activeInput === 'hex') {
-          setRgbInput(`${r}, ${g}, ${b}`);
-        }
-      }
-    } else {
-      setError(result.error || 'Invalid color format');
-      setColorValues(null);
-    }
-  };
-
-  const convertFromRgb = (rgb: string) => {
-    // Parse RGB input (support various formats)
-    let r: number, g: number, b: number;
-    
-    if (rgb.includes('rgb(')) {
-      const match = rgb.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
-      if (match) {
-        r = parseInt(match[1]);
-        g = parseInt(match[2]);
-        b = parseInt(match[3]);
-      } else {
-        setError('Invalid RGB format');
-        return;
-      }
-    } else {
-      const parts = rgb.split(',').map(part => parseInt(part.trim()));
-      if (parts.length === 3 && parts.every(part => !isNaN(part))) {
-        [r, g, b] = parts;
-      } else {
-        setError('Invalid RGB format');
-        return;
-      }
-    }
-
-    if (r < 0 || r > 255 || g < 0 || g > 255 || b < 0 || b > 255) {
-      setError('RGB values must be between 0 and 255');
-      return;
-    }
-
-    const result = ConvertersEngine.convertColor(`rgb(${r}, ${g}, ${b})`, 'rgb', 'hex');
-    if (result.success && result.result) {
-      const hsl = rgbToHsl(r, g, b);
-      
-      setColorValues({
-        hex: result.result,
-        rgb: `rgb(${r}, ${g}, ${b})`,
-        hsl: `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`,
-        r, g, b,
-        h: hsl.h,
-        s: hsl.s,
-        l: hsl.l
-      });
-      setError('');
-      
-      // Update HEX input if converting from RGB
-      if (activeInput === 'rgb') {
         setHexInput(result.result);
+        return;
       }
-    } else {
+
       setError(result.error || 'Invalid RGB values');
       setColorValues(null);
     }
-  };
+  }, [hexInput, rgbInput, activeInput]);
 
   const rgbToHsl = (r: number, g: number, b: number) => {
     r /= 255;
@@ -145,9 +128,9 @@ export function ColorConverter() {
 
     const max = Math.max(r, g, b);
     const min = Math.min(r, g, b);
-    let h: number, s: number, l: number;
-
-    l = (max + min) / 2;
+    let h: number;
+    let s: number;
+    const l = (max + min) / 2;
 
     if (max === min) {
       h = s = 0; // achromatic
@@ -170,9 +153,6 @@ export function ColorConverter() {
       l: Math.round(l * 100)
     };
   };
-
-
-
   const setPresetColor = (hex: string) => {
     setHexInput(hex);
     setActiveInput('hex');

@@ -210,7 +210,7 @@ export default function PowerToWeightCalculator() {
               <h4 className="font-semibold text-gray-700">Classic Muscle Cars</h4>
               <div className="text-sm space-y-2">
                 <div className="flex justify-between items-center">
-                  <span>1970 Plymouth 'Cuda 440</span>
+                  <span>1970 Plymouth &apos;Cuda 440</span>
                   <Badge variant="outline">0.11 HP/lb</Badge>
                 </div>
                 <div className="flex justify-between items-center">

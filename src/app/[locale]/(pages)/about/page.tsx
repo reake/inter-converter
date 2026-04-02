@@ -1,28 +1,13 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { Target, Shield, Wrench, MessageSquare } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo/metadata';
-import {
-  Target,
-  Users,
-  Zap,
-  Shield,
-  Globe,
-  Heart,
-  Calculator,
-  Palette,
-  Clock,
-  DollarSign
-} from 'lucide-react';
-
-
-
 
 export async function generateMetadata({
-  params
+  params,
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
@@ -30,208 +15,140 @@ export async function generateMetadata({
   const isZh = locale === 'zh';
 
   return generateSEOMetadata({
-    title: isZh ? '关于我们 | InterConverter' : 'About InterConverter',
+    title: isZh ? '关于 InterConverter' : 'About InterConverter',
     description: isZh
-      ? '了解 InterConverter 的使命、产品理念以及为开发者和专业人士打造的免费转换工具。'
-      : 'Learn about InterConverter’s mission, values, and the free conversion tools built for developers and professionals.',
+      ? '了解 InterConverter 当前重点维护的工具范围、内容原则，以及我们如何持续改进工具页面。'
+      : 'Learn what InterConverter focuses on today, how featured tools are maintained, and what users should expect from the site.',
     locale,
     pathname: '/about',
     keywords: isZh
-      ? ['关于我们', 'InterConverter', '在线工具', '转换器', '计算器']
-      : ['about', 'InterConverter', 'online tools', 'converter', 'calculator']
+      ? ['关于 InterConverter', '工具维护', '转换工具', '站点说明']
+      : ['about InterConverter', 'tool maintenance', 'converter tools', 'site policies'],
   });
 }
 
-// Force static generation
 export const dynamic = 'force-static';
+
 export default function AboutPage() {
-  const features = [
-    {
-      icon: <Zap className="h-6 w-6" />,
-      title: 'Lightning Fast',
-      description: 'All calculations happen instantly in your browser without server delays.'
-    },
-    {
-      icon: <Shield className="h-6 w-6" />,
-      title: 'Privacy First',
-      description: 'Your data never leaves your device. No tracking, no data collection.'
-    },
-    {
-      icon: <Globe className="h-6 w-6" />,
-      title: 'Always Available',
-      description: 'Works offline and accessible 24/7 from any device with a browser.'
-    },
-    {
-      icon: <Heart className="h-6 w-6" />,
-      title: 'Completely Free',
-      description: 'No subscriptions, no ads, no hidden costs. Free forever.'
-    }
-  ];
-
-  const toolCategories = [
-    {
-      icon: <Calculator className="h-5 w-5" />,
-      name: 'Converters',
-      count: '12+',
-      description: 'Currency, units, timestamps, and more'
-    },
-    {
-      icon: <DollarSign className="h-5 w-5" />,
-      name: 'Calculators',
-      count: '8+',
-      description: 'Financial, health, and utility calculators'
-    },
-    {
-      icon: <Palette className="h-5 w-5" />,
-      name: 'Design Tools',
-      count: '4+',
-      description: 'Color converters and design utilities'
-    },
-    {
-      icon: <Clock className="h-5 w-5" />,
-      name: 'Time Tools',
-      count: '3+',
-      description: 'Date, time, and countdown utilities'
-    }
-  ];
-
   return (
-    <div className="container mx-auto px-4 py-12 max-w-6xl">
-      {/* Hero Section */}
-      <div className="text-center mb-16">
-        <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl mb-6">
-          <span className="text-3xl">🔧</span>
+    <div className="container mx-auto max-w-5xl px-4 py-12">
+      <div className="mb-14 text-center">
+        <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-500">
+          <Target className="h-8 w-8 text-white" />
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent">
-          About InterConverter
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          We're building the most comprehensive collection of free, fast, and privacy-focused
-          converter tools and calculators for developers, engineers, students, and professionals.
+        <h1 className="mb-6 text-4xl font-bold text-gray-900 md:text-5xl">About InterConverter</h1>
+        <p className="mx-auto max-w-3xl text-xl leading-relaxed text-gray-600">
+          InterConverter is a practical collection of online conversion and calculation tools.
+          The current public site focuses on a smaller set of frequently used tools so each page
+          can be clearer, easier to review, and more useful in real workflows.
         </p>
       </div>
 
-      {/* Mission Section */}
-      <Card className="mb-12">
-        <CardHeader>
-          <div className="flex items-center gap-3">
-            <Target className="h-6 w-6 text-blue-500" />
-            <CardTitle>Our Mission</CardTitle>
-          </div>
-        </CardHeader>
-        <CardContent>
-          <p className="text-gray-600 leading-relaxed mb-4">
-            InterConverter was created with a simple mission: to provide professional-grade Converters
-            tools and calculators that are completely free, respect your privacy, and work instantly
-            without any registration or downloads.
-          </p>
-          <p className="text-gray-600 leading-relaxed">
-            We believe that essential tools for calculation and Converters should be accessible to
-            everyone, everywhere, without barriers. Whether you're a developer converting timestamps,
-            an engineer calculating ratios, or a student working on assignments, our tools are designed
-            to save you time and provide accurate results.
-          </p>
-        </CardContent>
-      </Card>
-
-      {/* Features Grid */}
-      <div className="mb-16">
-        <h2 className="text-3xl font-bold text-center mb-12">Why Choose InterConverter?</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => (
-            <Card key={index} className="text-center">
-              <CardContent className="pt-6">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-50 dark:bg-blue-950 rounded-lg mb-4 text-blue-500">
-                  {feature.icon}
-                </div>
-                <h3 className="font-semibold mb-2">{feature.title}</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{feature.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+      <div className="mb-10 grid gap-6 md:grid-cols-3">
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Wrench className="h-5 w-5 text-blue-600" />
+              Curated Scope
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-sm leading-6 text-gray-600">
+            We currently highlight a focused set of tools in measurement, time, color, and file
+            conversion. That keeps the public site easier to maintain and easier for users to scan.
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Shield className="h-5 w-5 text-blue-600" />
+              Clear Boundaries
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-sm leading-6 text-gray-600">
+            Featured tools are written to explain what they do, when to use them, and where users
+            should verify results independently before relying on them in important decisions.
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <MessageSquare className="h-5 w-5 text-blue-600" />
+              Ongoing Review
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-sm leading-6 text-gray-600">
+            Tool pages, FAQs, and supporting copy are reviewed and updated over time. Feedback,
+            bug reports, and correction requests help determine what gets improved next.
+          </CardContent>
+        </Card>
       </div>
 
-      {/* Tool Categories */}
-      <div className="mb-16">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Tool Categories</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {toolCategories.map((category, index) => (
-            <Card key={index}>
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="text-blue-500">{category.icon}</div>
-                  <div>
-                    <h3 className="font-semibold">{category.name}</h3>
-                    <Badge variant="secondary" className="text-xs">{category.count} tools</Badge>
-                  </div>
-                </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{category.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+      <div className="mb-10 space-y-6">
+        <Card>
+          <CardHeader>
+            <CardTitle>What the site is built for</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4 text-gray-600">
+            <p>
+              The goal is not to publish the largest possible directory. The goal is to make common
+              conversion tasks easier to complete without forcing users through unnecessary friction,
+              extra account steps, or vague explanations.
+            </p>
+            <p>
+              The public site currently prioritizes tools that are broadly useful, low-friction to
+              understand, and straightforward to validate. That is why the featured set is narrower
+              than the full internal tool inventory.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>How featured pages are maintained</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4 text-gray-600">
+            <p>
+              Each featured tool should do more than output a number. Public pages are being expanded
+              with workflow guidance, formula context, common mistakes, and examples so the result is
+              easier to interpret.
+            </p>
+            <p>
+              When a tool is still experimental, too thin, or not yet explained well enough, it can
+              remain implemented in the codebase without being part of the public featured surface.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>What users should expect</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4 text-gray-600">
+            <p>
+              InterConverter aims to provide quick, readable tools with sensible defaults. It does
+              not replace professional advice in high-stakes contexts such as legal, medical, tax,
+              or engineering sign-off.
+            </p>
+            <p>
+              If you see an unclear explanation, an inaccurate example, or a tool that needs better
+              validation notes, contact us. Those reports are part of how the public site improves.
+            </p>
+          </CardContent>
+        </Card>
       </div>
 
-      {/* Stats Section */}
-      <Card className="mb-16">
-        <CardContent className="pt-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div>
-              <div className="text-3xl font-bold text-blue-600 mb-2">28+</div>
-              <div className="text-sm text-gray-600">Tools Available</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-green-600 mb-2">8</div>
-              <div className="text-sm text-gray-600">Categories</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-purple-600 mb-2">100%</div>
-              <div className="text-sm text-gray-600">Free Forever</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-orange-600 mb-2">0</div>
-              <div className="text-sm text-gray-600">Data Collected</div>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Team Section */}
-      <Card className="mb-16">
-        <CardHeader>
-          <div className="flex items-center gap-3">
-            <Users className="h-6 w-6 text-blue-500" />
-            <CardTitle>Built by Developers, for Everyone</CardTitle>
-          </div>
-        </CardHeader>
-        <CardContent>
-          <p className="text-gray-600 leading-relaxed mb-4">
-            InterConverter is developed by a team of passionate developers and engineers who understand
-            the daily need for reliable converter tools. We use these tools ourselves and are committed
-            to maintaining the highest standards of accuracy and performance.
-          </p>
-          <p className="text-gray-600 leading-relaxed">
-            Our open-source approach ensures transparency and allows the community to contribute to
-            making these tools even better. Every tool is thoroughly tested and optimized for both
-            accuracy and speed.
-          </p>
-        </CardContent>
-      </Card>
-
-      {/* CTA Section */}
-      <div className="text-center">
-        <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
-        <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-          Explore our comprehensive collection of converter tools and calculators.
-          No registration required, no downloads needed.
+      <div className="rounded-3xl bg-gradient-to-br from-gray-50 to-blue-50 px-8 py-10 text-center">
+        <h2 className="mb-4 text-2xl font-bold text-gray-900">Need help or want to report an issue?</h2>
+        <p className="mx-auto mb-6 max-w-2xl text-gray-600">
+          The fastest way to reach us is by email. Use the contact page for support questions, bug
+          reports, and requests for clarification on featured tools.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col justify-center gap-4 sm:flex-row">
           <Button asChild size="lg">
-            <Link href="/tools">Browse All Tools</Link>
+            <Link href="/contact">Contact us</Link>
           </Button>
-          <Button asChild variant="outline" size="lg">
-            <Link href="/contact">Contact Us</Link>
+          <Button asChild size="lg" variant="outline">
+            <Link href="/tools">View featured tools</Link>
           </Button>
         </div>
       </div>

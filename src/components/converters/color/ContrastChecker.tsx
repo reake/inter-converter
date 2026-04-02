@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
-import { Eye, CheckCircle, XCircle, AlertCircle } from 'lucide-react';
+import { Eye, CheckCircle, XCircle } from 'lucide-react';
 
 export function ContrastChecker() {
   const [foregroundColor, setForegroundColor] = useState('#000000');
@@ -16,7 +16,30 @@ export function ContrastChecker() {
   });
 
   useEffect(() => {
-    calculateContrast();
+    const fg = hexToRgb(foregroundColor);
+    const bg = hexToRgb(backgroundColor);
+
+    if (!fg || !bg) {
+      return;
+    }
+
+    const fgLuminance = getLuminance(fg.r, fg.g, fg.b);
+    const bgLuminance = getLuminance(bg.r, bg.g, bg.b);
+    const lighter = Math.max(fgLuminance, bgLuminance);
+    const darker = Math.min(fgLuminance, bgLuminance);
+    const ratio = (lighter + 0.05) / (darker + 0.05);
+
+    setContrastRatio(ratio);
+    setWcagResults({
+      aa: {
+        normal: ratio >= 4.5,
+        large: ratio >= 3
+      },
+      aaa: {
+        normal: ratio >= 7,
+        large: ratio >= 4.5
+      }
+    });
   }, [foregroundColor, backgroundColor]);
 
   const hexToRgb = (hex: string) => {
@@ -34,34 +57,6 @@ export function ContrastChecker() {
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
     });
     return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
-  };
-
-  const calculateContrast = () => {
-    const fg = hexToRgb(foregroundColor);
-    const bg = hexToRgb(backgroundColor);
-    
-    if (!fg || !bg) return;
-
-    const fgLuminance = getLuminance(fg.r, fg.g, fg.b);
-    const bgLuminance = getLuminance(bg.r, bg.g, bg.b);
-    
-    const lighter = Math.max(fgLuminance, bgLuminance);
-    const darker = Math.min(fgLuminance, bgLuminance);
-    
-    const ratio = (lighter + 0.05) / (darker + 0.05);
-    setContrastRatio(ratio);
-
-    // WCAG compliance check
-    setWcagResults({
-      aa: {
-        normal: ratio >= 4.5,
-        large: ratio >= 3
-      },
-      aaa: {
-        normal: ratio >= 7,
-        large: ratio >= 4.5
-      }
-    });
   };
 
   const getStatusIcon = (passed: boolean) => {
@@ -92,7 +87,7 @@ export function ContrastChecker() {
   return (
     <div className="space-y-6">
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Color Contrast Checker</h1>
+        <h2 className="text-3xl font-bold text-gray-900 mb-2">Color Contrast Checker</h2>
         <p className="text-gray-600">Check color contrast ratios for WCAG accessibility compliance</p>
       </div>
 
@@ -106,15 +101,18 @@ export function ContrastChecker() {
           </CardHeader>
           <CardContent className="space-y-4">
             <div>
-              <label className="block text-sm font-medium mb-2">Foreground Color (Text)</label>
+              <label htmlFor="contrast-foreground-color" className="block text-sm font-medium mb-2">Foreground Color (Text)</label>
               <div className="flex gap-2">
                 <Input
+                  id="contrast-foreground-picker"
                   type="color"
                   value={foregroundColor}
                   onChange={(e) => setForegroundColor(e.target.value)}
+                  aria-label="Foreground color picker"
                   className="w-16 h-10 p-1 border rounded"
                 />
                 <Input
+                  id="contrast-foreground-color"
                   type="text"
                   value={foregroundColor}
                   onChange={(e) => setForegroundColor(e.target.value)}
@@ -125,15 +123,18 @@ export function ContrastChecker() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-2">Background Color</label>
+              <label htmlFor="contrast-background-color" className="block text-sm font-medium mb-2">Background Color</label>
               <div className="flex gap-2">
                 <Input
+                  id="contrast-background-picker"
                   type="color"
                   value={backgroundColor}
                   onChange={(e) => setBackgroundColor(e.target.value)}
+                  aria-label="Background color picker"
                   className="w-16 h-10 p-1 border rounded"
                 />
                 <Input
+                  id="contrast-background-color"
                   type="text"
                   value={backgroundColor}
                   onChange={(e) => setBackgroundColor(e.target.value)}

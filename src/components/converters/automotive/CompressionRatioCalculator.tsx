@@ -247,7 +247,7 @@ export function CompressionRatioCalculator() {
                 onChange={(e) => handleInputChange('currentHP', e.target.value)}
                 className="h-12 text-lg border-2 focus:border-red-400 transition-colors"
               />
-              <p className="text-sm text-gray-500">Enter your engine's current power output</p>
+              <p className="text-sm text-gray-500">Enter your engine&apos;s current power output</p>
             </div>
 
             <div className="space-y-3">
@@ -263,7 +263,7 @@ export function CompressionRatioCalculator() {
                 onChange={(e) => handleInputChange('currentCR', e.target.value)}
                 className="h-12 text-lg border-2 focus:border-red-400 transition-colors"
               />
-              <p className="text-sm text-gray-500">Your engine's current compression ratio</p>
+              <p className="text-sm text-gray-500">Your engine&apos;s current compression ratio</p>
             </div>
 
             <div className="space-y-3">

@@ -3,11 +3,9 @@ import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { getUnitTools, getPopularTools } from '@/config/tools';
+import { getReviewApprovedPopularTools, getReviewApprovedToolsByCategory } from '@/config/tools';
 import { ArrowRight, TrendingUp, Users, Star } from 'lucide-react';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo/metadata';
-import { HreflangLinks } from '@/components/seo/HreflangLinks';
-import { CanonicalLink } from '@/components/seo/CanonicalLink';
 import { JsonLd } from '@/components/seo/JsonLd';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -35,10 +33,12 @@ export default async function UnitPage({ params }: { params: Promise<{ locale: s
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://interconverter.com';
   const localePrefix = locale === 'en' ? '' : `/${locale}`;
   // Get all active unit tools from JSON data (isActive filtering is already applied in getUnitTools)
-  const allUnitTools = getUnitTools(undefined, locale);
+  const allUnitTools = getReviewApprovedToolsByCategory('unit', locale);
   
   // Get popular tools (top 6 by search volume)
-  const popularTools = getPopularTools(10, locale).filter(tool => tool.category === 'unit').slice(0, 6);
+  const popularTools = getReviewApprovedPopularTools(10, locale)
+    .filter(tool => tool.category === 'unit')
+    .slice(0, 6);
 
   // Get tools by keywords/type - now using the JSON data with isActive filtering
   const lengthTools = allUnitTools.filter(tool => 
@@ -115,39 +115,10 @@ export default async function UnitPage({ params }: { params: Promise<{ locale: s
       icon: t('categories.engineeringUnits.icon'),
       color: 'bg-indigo-50 border-indigo-200'
     }
-  ];
-
-  const ToolCard = ({ tool }: { tool: any }) => (
-    <Link key={tool.id} href={tool.path as any} className="group">
-      <Card className="h-full hover:shadow-lg transition-all duration-200 border-2 hover:border-primary/20">
-        <CardHeader className="pb-3">
-          <div className="flex items-center justify-between">
-            <div className="text-2xl">{tool.icon}</div>
-            <Badge variant="secondary" className="text-xs">
-              {(tool.searchVolume || 0).toLocaleString()} {t('common.searchesPerMonth')}
-            </Badge>
-          </div>
-          <CardTitle className="text-lg group-hover:text-primary transition-colors">
-            {tool.name}
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <CardDescription className="text-sm mb-3">
-            {tool.description}
-          </CardDescription>
-          <div className="flex items-center text-primary text-sm font-medium">
-            {t('sections.popular.convertNow')}
-            <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
-          </div>
-        </CardContent>
-      </Card>
-    </Link>
-  );
+  ].filter((category) => category.tools.length > 0);
 
   return (
     <>
-      <HreflangLinks pathname="/unit" />
-      <CanonicalLink pathname="/unit" locale={locale} />
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -193,14 +164,14 @@ export default async function UnitPage({ params }: { params: Promise<{ locale: s
           <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('sections.popular.title')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {popularTools.map((tool) => (
-              <Link key={tool.id} href={tool.path as any} className="group">
+              <Link key={tool.id} href={tool.path} className="group">
                 <Card className="h-full hover:shadow-lg transition-all duration-200 border-2 hover:border-primary/20">
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between">
                       <div className="text-2xl">{tool.icon}</div>
-                      <Badge variant="secondary" className="text-xs">
+                      {/* <Badge variant="secondary" className="text-xs">
                         {(tool.searchVolume || 0).toLocaleString()} {t('common.searchesPerMonth')}
-                      </Badge>
+                      </Badge> */}
                     </div>
                     <CardTitle className="text-lg group-hover:text-primary transition-colors">
                       {tool.name}
@@ -243,7 +214,7 @@ export default async function UnitPage({ params }: { params: Promise<{ locale: s
                   {category.tools.map((tool) => (
                     <Link
                       key={tool.id}
-                      href={tool.path as any}
+                      href={tool.path}
                       className="flex items-center justify-between p-3 rounded-lg bg-white/60 hover:bg-white/80 transition-colors group"
                     >
                       <div className="flex items-center gap-3">
@@ -252,9 +223,9 @@ export default async function UnitPage({ params }: { params: Promise<{ locale: s
                           <div className="font-medium text-gray-900 group-hover:text-primary transition-colors">
                             {tool.name}
                           </div>
-                          <div className="text-xs text-gray-500">
+                          {/* <div className="text-xs text-gray-500">
                             {(tool.searchVolume || 0).toLocaleString()} {t('common.monthlySearches')}
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                       <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-primary group-hover:translate-x-1 transition-all" />

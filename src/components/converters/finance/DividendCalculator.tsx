@@ -1,12 +1,11 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Button } from '@/components/ui/button';
 
 interface DividendResults {
   annualDividends: number;
@@ -30,7 +29,7 @@ export default function DividendCalculator() {
   const [taxRate, setTaxRate] = useState<string>('15');
   const [results, setResults] = useState<DividendResults | null>(null);
 
-  const calculateDividends = () => {
+  const calculateDividends = useCallback(() => {
     const investment = parseFloat(initialInvestment);
     const price = parseFloat(sharePrice);
     const dividend = parseFloat(annualDividend);
@@ -85,11 +84,11 @@ export default function DividendCalculator() {
     };
 
     setResults(calculatedResults);
-  };
+  }, [initialInvestment, sharePrice, annualDividend, dividendGrowthRate, stockGrowthRate, timeHorizon, reinvestDividends, taxRate]);
 
   useEffect(() => {
     calculateDividends();
-  }, [initialInvestment, sharePrice, annualDividend, dividendGrowthRate, stockGrowthRate, timeHorizon, reinvestDividends, taxRate]);
+  }, [calculateDividends]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {

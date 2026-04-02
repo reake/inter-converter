@@ -16,8 +16,8 @@
   {
     "id": "jpg-to-png-converter",
     "name": "JPG to PNG Converter",
-    "description": "Convert JPG images to PNG format with transparency support and lossless quality. Professional image converter for web graphics and photo editing applications.",
-    "titleSuffix": "Image Format & Transparency",
+    "description": "Convert JPG images to PNG when you need a cleaner editing format, better graphics handling, or a simple export for web use.",
+    "titleSuffix": "PNG output",
     "category": "media",
     "keywords": ["jpg", "jpeg", "png", "image", "converter", "photo"],
     "path": "/media/jpg-to-png-converter",

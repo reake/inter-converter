@@ -34,12 +34,9 @@ export default function InvestmentCalculator() {
     const monthly = parseFloat(monthlyContribution) || 0;
     const rate = parseFloat(expectedReturn) / 100 || 0;
     const years = parseFloat(investmentPeriod) || 0;
-    const frequency = parseFloat(compoundingFrequency) || 12;
-
     if (years <= 0) return;
 
     const monthlyRate = rate / 12;
-    const totalMonths = years * 12;
     const yearlyBreakdown = [];
     
     let currentValue = initial;
@@ -264,7 +261,7 @@ export default function InvestmentCalculator() {
             <li>• Start investing early to maximize compound growth</li>
             <li>• Diversify across different asset classes and sectors</li>
             <li>• Consider low-cost index funds for broad market exposure</li>
-            <li>• Don't try to time the market - stay consistent</li>
+            <li>• Don&apos;t try to time the market - stay consistent</li>
             <li>• Rebalance your portfolio periodically</li>
             <li>• Keep fees low to maximize returns</li>
           </ul>

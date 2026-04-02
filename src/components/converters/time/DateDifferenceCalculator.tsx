@@ -154,6 +154,7 @@ export function DateDifferenceCalculator() {
 
   return (
     <div className="space-y-6">
+      <h2 className="sr-only">Date difference calculator</h2>
       {/* Date Input */}
       <Card>
         <CardHeader className="pb-3">
@@ -168,9 +169,10 @@ export function DateDifferenceCalculator() {
         <CardContent className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium mb-2">Start Date</label>
+              <label htmlFor="date-difference-start-date" className="block text-sm font-medium mb-2">Start Date</label>
               <div className="flex gap-2">
                 <Input
+                  id="date-difference-start-date"
                   type="date"
                   value={startDate}
                   onChange={(e) => setStartDate(e.target.value)}
@@ -185,9 +187,10 @@ export function DateDifferenceCalculator() {
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium mb-2">End Date</label>
+              <label htmlFor="date-difference-end-date" className="block text-sm font-medium mb-2">End Date</label>
               <div className="flex gap-2">
                 <Input
+                  id="date-difference-end-date"
                   type="date"
                   value={endDate}
                   onChange={(e) => setEndDate(e.target.value)}
@@ -207,6 +210,7 @@ export function DateDifferenceCalculator() {
           <div className="space-y-2">
             <label className="flex items-center space-x-2">
               <input
+                id="include-end-date"
                 type="checkbox"
                 checked={includeEndDate}
                 onChange={(e) => setIncludeEndDate(e.target.checked)}
@@ -216,6 +220,7 @@ export function DateDifferenceCalculator() {
             </label>
             <label className="flex items-center space-x-2">
               <input
+                id="business-days-only"
                 type="checkbox"
                 checked={businessDaysOnly}
                 onChange={(e) => setBusinessDaysOnly(e.target.checked)}
@@ -247,6 +252,7 @@ export function DateDifferenceCalculator() {
                     onClick={() => copyToClipboard(formatResult())}
                     variant="outline"
                     size="sm"
+                    aria-label="Copy date difference result"
                   >
                     <Copy className="h-4 w-4" />
                   </Button>

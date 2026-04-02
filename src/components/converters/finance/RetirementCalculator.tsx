@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -30,7 +30,7 @@ export default function RetirementCalculator() {
   const [incomeReplacement, setIncomeReplacement] = useState<string>('80');
   const [results, setResults] = useState<RetirementResults | null>(null);
 
-  const calculateRetirement = () => {
+  const calculateRetirement = useCallback(() => {
     const age = parseInt(currentAge);
     const retAge = parseInt(retirementAge);
     const savings = parseFloat(currentSavings);
@@ -84,11 +84,11 @@ export default function RetirementCalculator() {
       monthlyIncomeNeeded,
       shortfall
     });
-  };
+  }, [currentAge, retirementAge, currentSavings, monthlyContribution, employerMatch, expectedReturn, inflationRate, currentIncome, incomeReplacement]);
 
   useEffect(() => {
     calculateRetirement();
-  }, [currentAge, retirementAge, currentSavings, monthlyContribution, employerMatch, expectedReturn, inflationRate, currentIncome, incomeReplacement]);
+  }, [calculateRetirement]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -106,13 +106,13 @@ export default function RetirementCalculator() {
       return { 
         status: 'on-track', 
         color: 'green', 
-        message: 'You\'re on track for retirement!' 
+        message: 'You&apos;re on track for retirement!' 
       };
     } else if (results.shortfall < results.totalSavings * 0.2) {
       return { 
         status: 'close', 
         color: 'yellow', 
-        message: 'You\'re close to your retirement goal' 
+        message: 'You&apos;re close to your retirement goal' 
       };
     } else {
       return { 
@@ -394,11 +394,11 @@ export default function RetirementCalculator() {
                           <div className="text-2xl font-bold text-orange-600">
                             {formatCurrency(results.inflationAdjustedValue)}
                           </div>
-                          <div className="text-sm text-orange-600">Today's Purchasing Power</div>
+                          <div className="text-sm text-orange-600">Today&apos;s Purchasing Power</div>
                         </div>
                       </div>
                       <div className="mt-4 text-sm text-gray-600">
-                        <p>The inflation-adjusted value shows what your retirement savings will be worth in today's dollars, accounting for the expected {inflationRate}% annual inflation rate.</p>
+                        <p>The inflation-adjusted value shows what your retirement savings will be worth in today&apos;s dollars, accounting for the expected {inflationRate}% annual inflation rate.</p>
                       </div>
                     </CardContent>
                   </Card>

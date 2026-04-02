@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -27,7 +27,7 @@ export default function CreditCardInterestCalculator() {
   const [paymentType, setPaymentType] = useState<string>('fixed');
   const [results, setResults] = useState<InterestResults | null>(null);
 
-  const calculateInterest = () => {
+  const calculateInterest = useCallback(() => {
     const bal = parseFloat(balance);
     const annualRate = parseFloat(apr) / 100;
     const payment = parseFloat(paymentAmount);
@@ -71,11 +71,11 @@ export default function CreditCardInterestCalculator() {
         principalPortion
       }
     });
-  };
+  }, [balance, apr, paymentAmount, paymentType]);
 
   useEffect(() => {
     calculateInterest();
-  }, [balance, apr, paymentAmount, paymentType]);
+  }, [calculateInterest]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -206,7 +206,7 @@ export default function CreditCardInterestCalculator() {
                           </div>
                           <div className="text-sm text-blue-600">Interest charged per day</div>
                           <div className="text-xs text-gray-600 mt-1">
-                            That's {formatCurrency(results.dailyInterest * 7)} per week
+                            That&apos;s {formatCurrency(results.dailyInterest * 7)} per week
                           </div>
                         </div>
                       </CardContent>

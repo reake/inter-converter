@@ -70,6 +70,7 @@ export function TemperatureConverter() {
 
   return (
     <div className="space-y-6">
+      <h2 className="sr-only">Temperature conversion tool</h2>
       {/* Conversion Interface */}
       <Card>
         <CardHeader className="pb-3">
@@ -84,8 +85,9 @@ export function TemperatureConverter() {
         <CardContent className="space-y-6">
           {/* Value Input */}
           <div>
-            <label className="block text-sm font-medium mb-2">Temperature Value</label>
+            <label htmlFor="temperature-value" className="block text-sm font-medium mb-2">Temperature Value</label>
             <Input
+              id="temperature-value"
               type="number"
               value={value}
               onChange={(e) => setValue(e.target.value)}
@@ -98,8 +100,10 @@ export function TemperatureConverter() {
           {/* Unit Selection */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
             <div>
-              <label className="block text-sm font-medium mb-2">From</label>
+              <label htmlFor="temperature-from-unit" className="block text-sm font-medium mb-2">From Unit</label>
               <select
+                id="temperature-from-unit"
+                aria-label="From unit"
                 value={fromUnit}
                 onChange={(e) => setFromUnit(e.target.value)}
                 className="w-full p-3 border border-input rounded-md bg-background"
@@ -118,14 +122,17 @@ export function TemperatureConverter() {
                 variant="outline"
                 size="sm"
                 className="rounded-full w-10 h-10 p-0"
+                aria-label="Swap temperature units"
               >
                 <ArrowRightLeft className="h-4 w-4" />
               </Button>
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-2">To</label>
+              <label htmlFor="temperature-to-unit" className="block text-sm font-medium mb-2">To Unit</label>
               <select
+                id="temperature-to-unit"
+                aria-label="To unit"
                 value={toUnit}
                 onChange={(e) => setToUnit(e.target.value)}
                 className="w-full p-3 border border-input rounded-md bg-background"

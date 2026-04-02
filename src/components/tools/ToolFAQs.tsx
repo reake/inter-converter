@@ -1,6 +1,6 @@
 'use client';
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 
@@ -32,7 +32,7 @@ export function ToolFAQs({ faqs, toolName, title, subtitle }: ToolFAQsProps) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-xl">{title || 'Frequently Asked Questions'}</CardTitle>
+        <h2 className="text-xl font-semibold tracking-tight">{title || 'Frequently Asked Questions'}</h2>
         <p className="text-sm text-muted-foreground">
           {subtitle || `Common questions about ${toolName}`}
         </p>
@@ -44,7 +44,7 @@ export function ToolFAQs({ faqs, toolName, title, subtitle }: ToolFAQsProps) {
               className="flex w-full items-center justify-between rounded-lg border p-4 text-left hover:bg-muted/50"
               onClick={() => toggleItem(index)}
             >
-              <h3 className="font-medium">{faq.question}</h3>
+              <span className="font-medium">{faq.question}</span>
               <ChevronDown 
                 className={`h-4 w-4 transition-transform ${
                   openItems.includes(index) ? 'rotate-180' : ''

@@ -2,8 +2,8 @@
   {
     "id": "temperature-converter",
     "name": "Temperature Converter",
-    "description": "Convert temperatures between Celsius, Fahrenheit, and Kelvin with precise calculations. Professional temperature converter with formula explanations and instant conversion results.",
-    "titleSuffix": "Celsius, Fahrenheit & Kelvin",
+    "description": "Convert Celsius, Fahrenheit, Kelvin, and Rankine with formula-based results for weather checks, recipes, lab notes, and equipment settings.",
+    "titleSuffix": "Celsius & Kelvin",
     "category": "unit",
     "keywords": [
       "temperature converter",
@@ -27,8 +27,8 @@
   {
     "id": "length-converter",
     "name": "Length Converter",
-    "description": "Convert lengths between metric and imperial units including meters, feet, inches, and centimeters. Accurate length converter for construction, engineering, and everyday measurements.",
-    "titleSuffix": "Metric & Imperial Units",
+    "description": "Convert meters, feet, inches, centimeters, miles, and more with quick results for construction, specs, schoolwork, and daily measurements.",
+    "titleSuffix": "Metric & Imperial",
     "category": "unit",
     "keywords": [
       "length converter",
@@ -52,8 +52,8 @@
   {
     "id": "weight-converter",
     "name": "Weight Converter",
-    "description": "Convert weights between pounds, kilograms, and other mass units with precise calculations. Professional weight converter supporting multiple units for fitness, cooking, and shipping.",
-    "titleSuffix": "Pounds, Kilograms & More",
+    "description": "Convert kilograms, pounds, grams, ounces, and more for cooking, fitness logs, shipping estimates, and general unit checks.",
+    "titleSuffix": "Kg, lb & more",
     "category": "unit",
     "keywords": [
       "weight converter",
@@ -77,8 +77,8 @@
   {
     "id": "volume-converter",
     "name": "Volume Converter",
-    "description": "Convert volumes between liters, gallons, and other liquid measurements with accurate calculations. Essential volume converter for cooking, chemistry, and fluid measurements.",
-    "titleSuffix": "Liters, Gallons & More",
+    "description": "Convert liters, gallons, milliliters, cups, and other volume units for cooking, product labels, lab prep, and fluid measurements.",
+    "titleSuffix": "Liters & gallons",
     "category": "unit",
     "keywords": [
       "volume converter",

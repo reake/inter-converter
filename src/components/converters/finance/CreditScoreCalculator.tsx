@@ -1,8 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -39,7 +38,7 @@ export default function CreditScoreCalculator() {
   const [accountTypes, setAccountTypes] = useState<string>('mixed');
   const [results, setResults] = useState<CreditScoreResults | null>(null);
 
-  const calculateCreditScore = () => {
+  const calculateCreditScore = useCallback(() => {
     const paymentHistoryPercent = parseFloat(paymentHistory);
     const creditLimit = parseFloat(totalCreditLimit);
     const balance = parseFloat(currentBalance);
@@ -140,7 +139,6 @@ export default function CreditScoreCalculator() {
     const potentialImprovements = [];
     
     if (utilizationRatio > 10) {
-      const newUtilization = Math.min(10, utilizationRatio);
       const potentialGain = Math.round((30 - factors.creditUtilization) * 0.7);
       potentialImprovements.push({
         factor: 'Lower Credit Utilization to 10%',
@@ -177,13 +175,11 @@ export default function CreditScoreCalculator() {
       recommendations,
       potentialImprovements
     });
-  };
+  }, [paymentHistory, totalCreditLimit, currentBalance, creditHistoryMonths, numberOfAccounts, recentInquiries, accountTypes]);
 
   useEffect(() => {
     calculateCreditScore();
-  }, [paymentHistory, totalCreditLimit, currentBalance, creditHistoryMonths, numberOfAccounts, recentInquiries, accountTypes]);
-
-  const formatPercent = (value: number) => `${value.toFixed(1)}%`;
+  }, [calculateCreditScore]);
 
   return (
     <div className="w-full max-w-4xl mx-auto space-y-6">

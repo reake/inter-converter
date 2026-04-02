@@ -3,18 +3,13 @@
 import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Palette, Copy } from 'lucide-react';
+import { Palette } from 'lucide-react';
 import { CopyButton } from '@/components/ui/CopyButton';
 
 export default function HexToHslConverter() {
   const [hexValue, setHexValue] = useState('#3b82f6');
   const [hslValue, setHslValue] = useState({ h: 0, s: 0, l: 0 });
   const [error, setError] = useState('');
-
-  useEffect(() => {
-    convertHexToHsl();
-  }, [hexValue]);
 
   const hexToHsl = (hex: string) => {
     // Remove # if present
@@ -27,7 +22,9 @@ export default function HexToHslConverter() {
 
     const max = Math.max(r, g, b);
     const min = Math.min(r, g, b);
-    let h = 0, s = 0, l = (max + min) / 2;
+    let h = 0;
+    let s = 0;
+    const l = (max + min) / 2;
 
     if (max === min) {
       h = s = 0; // achromatic
@@ -50,7 +47,7 @@ export default function HexToHslConverter() {
     };
   };
 
-  const convertHexToHsl = () => {
+  useEffect(() => {
     try {
       setError('');
       
@@ -65,15 +62,15 @@ export default function HexToHslConverter() {
       
       // Convert 3-digit hex to 6-digit
       if (normalizedHex.length === 3) {
-        normalizedHex = normalizedHex.split('').map(char => char + char).join('');
+        normalizedHex = normalizedHex.split('').map((char) => char + char).join('');
       }
 
       const hsl = hexToHsl(normalizedHex);
       setHslValue(hsl);
-    } catch (err) {
+    } catch {
       setError('Invalid HEX color format');
     }
-  };
+  }, [hexValue]);
 
   const handleHexChange = (value: string) => {
     if (!value.startsWith('#')) {
