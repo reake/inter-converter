@@ -5,26 +5,22 @@ import { TOOL_CATEGORIES } from './tools';
 export const SEO_CONFIG = {
   siteName: 'InterConverter',
   siteUrl: 'https://interconverter.com',
-  // Optimized homepage title (≤60 chars) with brand + core keywords
-  defaultTitle: 'InterConverter - Free Online Converters & Calculators Tools',
-  defaultDescription: 'Convert and calculate anything online with InterConverter. Free tools for currency, units, colors, time, health, and more – fast and easy to use.',
-  // Alternative homepage title option
-  alternativeTitle: 'InterConverter - Convert Anything Online | Free Tools & Calculators',
+  defaultTitle: 'Free Online Converters and Calculators | InterConverter',
+  defaultDescription: 'Free online converters and calculators for unit, time, color, and automotive reference tasks, with browser-based workflows and no account required.',
+  alternativeTitle: 'InterConverter - Converters & Calculators Online',
   defaultKeywords: [
     'online converter',
-    'free calculator',
+    'online calculator',
     'unit converter',
     'currency converter',
     'measurement tools',
-    'professional calculators',
     'conversion tools',
     'online tools',
-    'free tools',
+    'calculator tools',
     'web calculator',
-    'instant converter',
-    'no registration converter',
-    'professional converters',
-    'accurate calculator online'
+    'reference calculator',
+    'formula-based calculator',
+    'unit conversion tool'
   ],
   author: 'InterConverter Team',
   twitterHandle: '@interconverter',
@@ -35,19 +31,19 @@ export const SEO_CONFIG = {
 // High-value long-tail keywords for each category
 export const CATEGORY_LONGTAIL_KEYWORDS = {
   'time': [
-    'unix timestamp converter online free',
+    'unix timestamp converter online',
     'epoch time to date converter tool',
     'countdown timer with notifications',
     'date difference calculator days hours',
     'time zone converter world clock',
-    'timestamp to date converter instant',
+    'timestamp to date converter online',
     'epoch converter milliseconds seconds',
     'date calculator business days'
   ],
   'finance': [
-    'real time currency converter live rates',
+    'currency converter exchange rates',
     'loan payment calculator monthly interest',
-    'income tax calculator 2024 free',
+    'income tax calculator 2024',
     'mortgage payment calculator with taxes',
     'exchange rate converter historical data',
     'currency converter 150 currencies',
@@ -55,78 +51,78 @@ export const CATEGORY_LONGTAIL_KEYWORDS = {
     'tax calculator federal state'
   ],
   'unit': [
-    'metric to imperial converter accurate',
-    'feet to meters calculator precise',
-    'celsius to fahrenheit converter instant',
+    'metric to imperial converter online',
+    'feet to meters calculator online',
+    'celsius to fahrenheit converter online',
     'weight converter pounds kilograms',
-    'length converter online free tool',
+    'length converter online tool',
     'temperature converter celsius fahrenheit',
     'volume converter liters gallons',
     'area converter square feet meters'
   ],
   'media': [
-    'pdf to word converter online free',
+    'pdf to word converter online',
     'jpg to png converter transparent',
     'image format converter online tool',
-    'document converter free no limit',
+    'document converter online tool',
     'file format converter batch',
     'image converter jpg png gif',
-    'pdf converter online free',
+    'pdf converter online',
     'file type converter online'
   ],
   'color': [
     'hex to rgb color converter css',
     'color code converter hex rgb hsl',
     'hex color picker converter tool',
-    'rgb to hex converter online free',
+    'rgb to hex converter online',
     'color palette converter generator',
     'css color converter hex rgb',
     'color picker hex rgb converter',
     'web color converter tool'
   ],
   'health': [
-    'bmi calculator body mass index accurate',
+    'bmi calculator body mass index online',
     'ideal weight calculator height age',
     'calorie calculator daily needs bmr',
     'body fat percentage calculator online',
-    'fitness calculator online free',
+    'fitness calculator online',
     'bmi calculator metric imperial',
     'weight calculator ideal healthy',
     'health calculator bmi body fat'
   ],
   'auto': [
     'carburetor cfm calculator engine size',
-    'compression ratio calculator horsepower',
-    'gear ratio calculator performance tuning',
+    'compression ratio calculator engine fuel',
+    'gear ratio calculator drivetrain reference',
     'engine displacement calculator bore stroke',
-    'automotive calculator tools free',
+    'automotive calculator tools',
     'horsepower calculator engine specs',
     'rpm calculator gear ratio speed',
     'automotive conversion tools'
   ]
 };
 
-// Generate optimized tool titles with scenario/benefit keywords
-function generateOptimizedToolTitle(toolName: string, category: string): string {
+// Generate tool titles with scenario keywords
+function generateToolTitle(toolName: string, category: string): string {
   // Define scenario/benefit keywords for each tool type
-  const titleOptimizations: Record<string, Record<string, string>> = {
+  const curatedTitles: Record<string, Record<string, string>> = {
     'color': {
-      'HEX to RGB Converter': 'HEX to RGB Converter – Instant Color Code Conversion | InterConverter',
-      'RGB to HEX Converter': 'RGB to HEX Converter – Fast Color Code Generator | InterConverter',
-      'Color Picker': 'Color Picker – Professional Color Selection Tool | InterConverter',
-      'Color Palette Generator': 'Color Palette Generator – Create Beautiful Color Schemes | InterConverter'
+      'HEX to RGB Converter': 'HEX to RGB Converter – Color Code Conversion Tool | InterConverter',
+      'RGB to HEX Converter': 'RGB to HEX Converter – Color Code Generator Tool | InterConverter',
+      'Color Picker': 'Color Picker – Color Selection Tool | InterConverter',
+      'Color Palette Generator': 'Color Palette Generator – Color Scheme Builder | InterConverter'
     },
     'finance': {
-      'Currency Converter': 'Currency Converter – Live Exchange Rates & Calculator | InterConverter',
+      'Currency Converter': 'Currency Converter – Exchange Rate Reference Tool | InterConverter',
       'Loan Calculator': 'Loan Calculator – Monthly Payment & Interest Calculator | InterConverter',
-      'Mortgage Calculator': 'Mortgage Calculator – Home Loan Payment Estimator | InterConverter',
+      'Mortgage Calculator': 'Mortgage Calculator – Home Loan Estimate Tool | InterConverter',
       'Tax Calculator': 'Tax Calculator – Income Tax Estimation Tool | InterConverter',
-      'Investment Calculator': 'Investment Calculator – ROI & Growth Projections | InterConverter'
+      'Investment Calculator': 'Investment Calculator – Return Estimate Tool | InterConverter'
     },
     'health': {
-      'BMI Calculator': 'BMI Calculator – Fast & Accurate Body Mass Index Tool | InterConverter',
-      'Calorie Calculator': 'Calorie Calculator – Daily Caloric Needs Estimator | InterConverter',
-      'Body Fat Calculator': 'Body Fat Calculator – Precise Body Composition Tool | InterConverter',
+      'BMI Calculator': 'BMI Calculator – Body Mass Index Reference Tool | InterConverter',
+      'Calorie Calculator': 'Calorie Calculator – Daily Calorie Estimate Tool | InterConverter',
+      'Body Fat Calculator': 'Body Fat Calculator – Body Composition Reference Tool | InterConverter',
       'Ideal Weight Calculator': 'Ideal Weight Calculator – Healthy Weight Range Tool | InterConverter'
     },
     'unit': {
@@ -140,13 +136,13 @@ function generateOptimizedToolTitle(toolName: string, category: string): string 
       'Unix Timestamp Converter': 'Unix Timestamp Converter – Epoch Time to Date Tool | InterConverter',
       'Date Calculator': 'Date Calculator – Days Between Dates & Age Calculator | InterConverter',
       'Time Zone Converter': 'Time Zone Converter – World Clock & Time Zones | InterConverter',
-      'Countdown Timer': 'Countdown Timer – Event Countdown & Alerts | InterConverter'
+      'Countdown Timer': 'Countdown Timer – Event Countdown Tool | InterConverter'
     },
     'auto': {
-      'Compression Ratio Calculator': 'Compression Ratio Calculator – Engine Performance Tool | InterConverter',
-      'Gear Ratio Calculator': 'Gear Ratio Calculator – Automotive Tuning Tool | InterConverter',
-      'Horsepower Calculator': 'Horsepower Calculator – Engine Power Estimation | InterConverter',
-      'Fuel Economy Calculator': 'Fuel Economy Calculator – MPG & Efficiency Tool | InterConverter'
+      'Compression Ratio Calculator': 'Compression Ratio Calculator – Engine Reference Tool | InterConverter',
+      'Gear Ratio Calculator': 'Gear Ratio Calculator – Automotive Ratio Tool | InterConverter',
+      'Horsepower Calculator': 'Horsepower Calculator – Engine Output Estimate | InterConverter',
+      'Fuel Economy Calculator': 'Fuel Economy Calculator – MPG Reference Tool | InterConverter'
     },
     'media': {
       'PDF Converter': 'PDF Converter – Document Format Conversion Tool | InterConverter',
@@ -155,24 +151,24 @@ function generateOptimizedToolTitle(toolName: string, category: string): string 
     }
   };
 
-  // Get optimized title if available, otherwise generate generic one
-  const categoryOptimizations = titleOptimizations[category];
-  if (categoryOptimizations && categoryOptimizations[toolName]) {
-    return categoryOptimizations[toolName];
+  // Use a predefined title when available, otherwise generate a generic one
+  const categoryTitles = curatedTitles[category];
+  if (categoryTitles && categoryTitles[toolName]) {
+    return categoryTitles[toolName];
   }
 
-  // Fallback: generate generic optimized title
+  // Fallback: generate a generic title
   const scenarioKeywords: Record<string, string> = {
-    'color': 'Professional Color Tool',
-    'finance': 'Financial Calculator & Tool',
-    'health': 'Health & Fitness Calculator',
+    'color': 'Color Tool',
+    'finance': 'Financial Calculator',
+    'health': 'Health Calculator',
     'unit': 'Unit Conversion Tool',
     'time': 'Time & Date Calculator',
-    'auto': 'Automotive Calculator Tool',
+    'auto': 'Automotive Calculator',
     'media': 'File Conversion Tool'
   };
 
-  const scenario = scenarioKeywords[category] || 'Professional Tool';
+  const scenario = scenarioKeywords[category] || 'Reference Tool';
   return `${toolName} – ${scenario} | InterConverter`;
 }
 
@@ -180,25 +176,19 @@ function generateOptimizedToolTitle(toolName: string, category: string): string 
 export function generateToolMetadata(tool: ToolConfig, locale: string = 'en'): Metadata {
   const longtailKeywords = CATEGORY_LONGTAIL_KEYWORDS[tool.category as keyof typeof CATEGORY_LONGTAIL_KEYWORDS] || [];
 
-  // Optimized title format: Tool Name + Scenario/Benefit + Brand
-  // Examples: "HEX to RGB Converter – Instant Color Code Conversion | InterConverter"
-  //          "Currency Converter – Live Exchange Rates & Calculator | InterConverter"
-  //          "BMI Calculator – Fast & Accurate Body Mass Index Tool | InterConverter"
-  const title = generateOptimizedToolTitle(tool.name, tool.category);
+  // Title format: Tool Name + Scenario + Brand
+  const title = generateToolTitle(tool.name, tool.category);
 
-  // Enhanced description with benefits and call-to-action
-  const description = `${tool.description} Free, accurate, and instant results. No registration required. Professional-grade ${tool.name.toLowerCase()} for developers, engineers, and professionals.`;
-  
-  // Comprehensive keywords combining tool-specific and long-tail
+  const description = `${tool.description} Useful for reference, comparison, and review-oriented workflows.`;
+
   const keywords = [
     ...tool.keywords,
     ...longtailKeywords.slice(0, 3),
     `${tool.name.toLowerCase()} online`,
-    `free ${tool.name.toLowerCase()}`,
     `${tool.name.toLowerCase()} calculator`,
-    `professional ${tool.name.toLowerCase()}`,
-    'no registration required',
-    'instant results'
+    `${tool.name.toLowerCase()} reference`,
+    'formula-based results',
+    'reference tool'
   ];
 
   return {
@@ -286,8 +276,8 @@ export function generateCategoryMetadata(category: string, locale: string = 'en'
   };
 
   const toolCount = toolCounts[category] || 10;
-  const title = `${toolCount}+ Free Online ${categoryInfo.name} Tools & Calculators | InterConverter`;
-  const description = `${categoryInfo.description} Professional ${categoryInfo.name.toLowerCase()} tools including ${longtailKeywords.slice(0, 3).join(', ')}. Free, accurate, and instant results.`;
+  const title = `${toolCount}+ ${categoryInfo.name} Tools & Calculators | InterConverter`;
+  const description = `${categoryInfo.description} Includes selected reference workflows and practical calculation pages for comparison and review.`;
 
   return {
     title,
@@ -295,10 +285,10 @@ export function generateCategoryMetadata(category: string, locale: string = 'en'
     keywords: [
       ...longtailKeywords,
       `${categoryInfo.name.toLowerCase()} tools`,
-      `free ${categoryInfo.name.toLowerCase()} calculator`,
+      `${categoryInfo.name.toLowerCase()} calculator`,
       `online ${categoryInfo.name.toLowerCase()} converter`,
-      'professional tools',
-      'no registration required'
+      'reference tools',
+      'formula-based calculator'
     ].join(', '),
     openGraph: {
       title,
@@ -345,7 +335,7 @@ export function generateHomeMetadata(locale: string = 'en'): Metadata {
           url: `${SEO_CONFIG.siteUrl}/og-image.png`,
           width: 1200,
           height: 630,
-          alt: 'InterConverter - Free Online Conversion Tools',
+          alt: 'InterConverter - Online Conversion Tools',
         },
       ],
     },

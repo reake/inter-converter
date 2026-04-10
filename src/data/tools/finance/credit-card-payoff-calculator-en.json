@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Credit Card Payoff Calculator - Debt Elimination Tool",
-    "description": "The Credit Card Payoff Calculator is a powerful debt management tool that helps you create a strategic plan to eliminate credit card debt. This calculator shows you exactly how long it will take to pay off your credit cards and how much interest you'll pay based on different payment strategies. Credit card debt can be overwhelming, but with the right payoff strategy, you can become debt-free faster and save thousands in interest charges."
+    "description": "The Credit Card Payoff Calculator helps you compare payoff timelines, payment plans, and interest totals for credit card balances. It shows estimated payoff duration and total interest under different payment strategies so you can review tradeoffs between minimum payments and faster repayment. Use it as a planning reference when organizing debt-repayment scenarios."
   },
   "howTo": {
     "title": "How to Use the Credit Card Payoff Calculator",
@@ -27,8 +27,8 @@
         "description": "Analyze payoff timeline and total interest calculations."
       },
       {
-        "title": "Optimize Strategy",
-        "description": "Adjust payment amounts to optimize your debt elimination strategy."
+        "title": "Adjust Payment Strategy",
+        "description": "Adjust payment amounts to compare debt repayment scenarios."
       }
     ],
     "tips": [
@@ -41,7 +41,7 @@
   "features": [
     {
       "title": "Payoff Timeline Calculation",
-      "description": "Precise payoff timeline calculation with exact month and year projections."
+      "description": "Estimated payoff timeline with month and year projections based on the entered payment plan."
     },
     {
       "title": "Interest Cost Comparison",
@@ -61,13 +61,13 @@
     },
     {
       "title": "Debt Consolidation Planning",
-      "description": "Multiple credit card debt consolidation planning and strategy optimization."
+      "description": "Multiple credit card debt consolidation planning and scenario comparison."
     }
   ],
   "faq": [
     {
       "q": "Should I pay more than the minimum on my credit cards?",
-      "a": "Yes, paying more than the minimum can save you thousands in interest and help you become debt-free years earlier. Even an extra $25-50 per month can make a significant difference in your payoff timeline."
+      "a": "Paying more than the minimum generally shortens the repayment timeline and reduces total interest, though the effect depends on your balance, APR, and payment amount. Use the calculator to compare scenarios before making a plan."
     },
     {
       "q": "Which credit card should I pay off first?",
@@ -75,11 +75,11 @@
     },
     {
       "q": "How much should I pay toward credit card debt each month?",
-      "a": "Aim to pay at least 2-3% of your balance monthly, but ideally pay as much as your budget allows. The faster you pay, the less interest you'll pay overall."
+      "a": "The amount depends on your balance, APR, minimum payment rules, and budget. Higher payments generally reduce total interest and shorten the payoff timeline, but use the calculator to compare scenarios based on your own inputs."
     },
     {
       "q": "Is it worth transferring balances to a 0% APR card?",
-      "a": "Balance transfers can be beneficial if you qualify for 0% APR promotions and can pay off the balance during the promotional period. Consider transfer fees (typically 3-5%) in your calculations."
+      "a": "Balance transfers may be useful in some cases, especially when the promotional APR, transfer fee, and repayment timeline fit your situation. Compare fees, timing, and the post-promotion APR before deciding."
     }
   ],
   "relativeLinks": [

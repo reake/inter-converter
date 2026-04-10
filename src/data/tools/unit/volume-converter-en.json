@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Volume Converter",
-    "description": "The Volume Converter is a comprehensive tool for converting between different units of volume and capacity. From liters to gallons, milliliters to fluid ounces, this converter handles all common volume measurements used in cooking, chemistry, engineering, and everyday life. Volume conversion is essential in cooking, scientific research, manufacturing, and international trade. Whether you're following recipes, measuring chemicals, calculating fuel consumption, or working with liquid specifications, this tool ensures precise volume conversions with support for both metric and imperial volume systems."
+    "description": "The Volume Converter converts between different units of volume and capacity. From liters to gallons, milliliters to fluid ounces, this converter handles common volume measurements used in cooking, chemistry, engineering, and everyday life. Volume conversion is useful in cooking, scientific reference work, manufacturing, and international trade. Whether you're following recipes, measuring chemicals, calculating fuel consumption, or reviewing liquid specifications, this tool helps compare metric and imperial volume systems."
   },
   "howTo": {
     "title": "How to Use the Volume Converter",
@@ -31,7 +31,7 @@
   },
   "features": [
     {
-      "title": "Comprehensive Volume Units",
+      "title": "Volume Unit Support",
       "description": "Convert between metric (L, mL, m³), imperial (gal, qt, pt, fl oz), and cooking (cups, tbsp, tsp) units."
     },
     {
@@ -58,7 +58,7 @@
   "faq": [
     {
       "q": "What volume units does the converter support?",
-      "a": "Our volume converter supports metric units (liters, milliliters, cubic meters), imperial units (gallons, quarts, pints, fluid ounces), and cooking units (cups, tablespoons, teaspoons) for comprehensive volume conversion."
+      "a": "Our volume converter supports metric units (liters, milliliters, cubic meters), imperial units (gallons, quarts, pints, fluid ounces), and cooking units (cups, tablespoons, teaspoons) across common volume-conversion needs."
     },
     {
       "q": "What's the difference between US and UK gallons?",
@@ -66,7 +66,7 @@
     },
     {
       "q": "How accurate are the volume conversions?",
-      "a": "All volume conversions use precise mathematical formulas with high decimal accuracy. Our converter is suitable for scientific research, cooking recipes, chemistry calculations, and professional applications."
+      "a": "All volume conversions use precise mathematical formulas with decimal accuracy. Our converter is suitable for scientific reference, cooking recipes, chemistry checks, and general comparison use."
     },
     {
       "q": "Can I convert cooking measurements accurately?",

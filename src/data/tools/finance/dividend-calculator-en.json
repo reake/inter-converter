@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Dividend Calculator - Stock Dividend Income Analysis Tool",
-    "description": "The Dividend Calculator is a comprehensive investment analysis tool designed to help investors calculate dividend income, yields, and growth projections from dividend-paying stocks. Whether you're evaluating individual stocks, building a dividend portfolio, or planning retirement income, this calculator provides accurate projections for dividend payments, reinvestment scenarios, and total returns. Understanding dividend calculations is essential for income-focused investing and long-term wealth building."
+    "description": "The Dividend Calculator is an investment analysis tool designed to help investors estimate dividend income, yields, and growth projections from dividend-paying stocks. Whether you're evaluating individual stocks, building a dividend portfolio, or planning retirement income, this calculator provides formula-based projections for dividend payments, reinvestment scenarios, and total returns. It can help you review income-focused investing scenarios and long-term growth assumptions."
   },
   "howTo": {
     "title": "How to Use the Dividend Calculator",
@@ -53,7 +53,7 @@
     },
     {
       "title": "Dividend Growth Modeling",
-      "description": "Model future dividend payments based on historical growth rates and company projections."
+      "description": "Model future dividend payments based on historical growth rates and user-entered assumptions."
     },
     {
       "title": "Payout Ratio Analysis",
@@ -71,7 +71,7 @@
     },
     {
       "q": "Should I reinvest dividends or take cash?",
-      "a": "Dividend reinvestment (DRIP) compounds your returns over time and is ideal for long-term growth. Taking cash is better if you need current income or want to rebalance your portfolio. Consider your investment timeline and income needs."
+      "a": "Dividend reinvestment (DRIP) compounds your returns over time and may suit long-term growth goals. Taking cash may fit better if you need current income or want to rebalance your portfolio. Consider your investment timeline and income needs."
     },
     {
       "q": "How are dividends taxed?",

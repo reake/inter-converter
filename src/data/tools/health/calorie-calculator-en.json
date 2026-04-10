@@ -1,14 +1,14 @@
 {
   "about": {
     "title": "About Calorie Calculator",
-    "description": "The Calorie Calculator estimates your daily caloric needs based on age, gender, weight, height, and activity level. It calculates your Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE) to help you maintain, lose, or gain weight effectively. Understanding your caloric needs is essential for achieving fitness goals, whether you're trying to lose weight, build muscle, or maintain your current weight. The calculator provides personalized recommendations based on scientifically proven formulas."
+    "description": "The Calorie Calculator estimates daily calorie needs based on age, gender, weight, height, and activity level. It calculates Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE) so you can review maintenance, weight-loss, or weight-gain scenarios. Use the results as formula-based estimates and adjust based on real-world response and guidance from qualified health professionals when needed."
   },
   "howTo": {
     "title": "How to Use the Calorie Calculator",
     "steps": [
       {
         "title": "Enter Personal Details",
-        "description": "Input your age, gender, current weight, and height for accurate calculations."
+        "description": "Input your age, gender, current weight, and height for formula-based calculations."
       },
       {
         "title": "Select Activity Level",
@@ -24,7 +24,7 @@
       }
     ],
     "tips": [
-      "Be honest about your activity level for accurate results",
+      "Choose the activity level that most closely matches your routine",
       "Recalculate after significant weight changes",
       "Use results as a starting point and adjust based on progress"
     ]
@@ -32,45 +32,45 @@
   "features": [
     {
       "title": "BMR Calculation",
-      "description": "Calculate Basal Metabolic Rate using the scientifically proven Mifflin-St Jeor equation."
+      "description": "Calculate Basal Metabolic Rate using the Mifflin-St Jeor equation."
     },
     {
       "title": "TDEE Calculation",
-      "description": "Determine Total Daily Energy Expenditure with accurate activity level multipliers."
+      "description": "Estimate Total Daily Energy Expenditure using activity-level multipliers."
     },
     {
-      "title": "Goal Customization",
-      "description": "Personalized calorie targets for weight loss, maintenance, or weight gain goals."
+      "title": "Goal Scenarios",
+      "description": "Review calorie targets for weight loss, maintenance, or weight gain scenarios."
     },
     {
       "title": "Activity Level Options",
-      "description": "Five detailed activity levels from sedentary to extremely active for precise calculations."
+      "description": "Five activity levels from sedentary to extremely active for formula-based estimates."
     },
     {
       "title": "Macronutrient Breakdown",
-      "description": "Recommended protein, carbohydrate, and fat distribution for optimal nutrition."
+      "description": "Show sample protein, carbohydrate, and fat distributions for planning reference."
     },
     {
-      "title": "Personalized Recommendations",
-      "description": "Customized daily calorie targets based on your specific goals and lifestyle."
+      "title": "Daily Calorie Estimates",
+      "description": "Display daily calorie estimates based on your selected inputs and goals."
     }
   ],
   "faq": [
     {
       "q": "What's the difference between BMR and TDEE in calorie calculation?",
-      "a": "BMR (Basal Metabolic Rate) is the calories your body burns at rest for basic functions like breathing and circulation. TDEE (Total Daily Energy Expenditure) includes BMR plus calories burned through daily activities and exercise. Our calorie calculator provides both values for comprehensive planning."
+      "a": "BMR (Basal Metabolic Rate) is the calories your body burns at rest for basic functions like breathing and circulation. TDEE (Total Daily Energy Expenditure) includes BMR plus calories burned through daily activities and exercise. The calculator shows both values as planning estimates."
     },
     {
-      "q": "How accurate are calorie calculator estimates?",
-      "a": "Calorie calculators provide estimates based on population averages using proven formulas like Mifflin-St Jeor. Individual metabolism can vary by 10-15%, so use our calculator results as a starting point and adjust based on your actual progress and energy levels."
+      "q": "How should I interpret calorie calculator estimates?",
+      "a": "Calorie calculators provide formula-based estimates using population averages. Individual metabolism can vary, so use the result as a starting point and adjust based on your actual progress, energy levels, and guidance from qualified professionals when needed."
     },
     {
-      "q": "Should I eat exactly the calculated daily calories?",
-      "a": "Use our calorie calculation as a baseline. Monitor your weight, energy levels, and progress, then adjust intake up or down by 100-200 calories as needed to reach your specific goals. The calculator provides a scientifically-based starting point."
+      "q": "How should I use the calculated daily calories?",
+      "a": "Use the calorie result as a baseline. Monitor your weight, energy levels, and progress, then adjust intake as needed based on your response and broader goals. The calculator provides a formula-based starting point."
     },
     {
       "q": "How often should I recalculate my daily calorie needs?",
-      "a": "Recalculate your calorie needs every 10-15 pounds of weight change, or every 2-3 months if your activity level changes significantly. Our calculator accounts for these changes to maintain accuracy."
+      "a": "Recalculate your calorie needs every 10-15 pounds of weight change, or every 2-3 months if your activity level changes significantly. Rechecking the inputs helps keep the estimate aligned with your current situation."
     },
     {
       "q": "What activity level should I choose in the calorie calculator?",
@@ -78,7 +78,7 @@
     },
     {
       "q": "Can I use this calorie calculator for weight loss?",
-      "a": "Yes, our calorie calculator is excellent for weight loss planning. It calculates your maintenance calories, then you can create a deficit of 500-1000 calories per day for safe weight loss of 1-2 pounds per week. Always consult healthcare providers for personalized advice."
+      "a": "It can be used as a starting point for weight-loss planning by estimating maintenance calories and showing lower-intake scenarios. Because individual response varies, review changes gradually and consult healthcare providers when you need individualized guidance."
     }
   ],
   "relativeLinks": [

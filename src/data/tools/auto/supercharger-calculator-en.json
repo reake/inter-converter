@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Supercharger Calculator",
-    "description": "The Supercharger Calculator determines boost pressure, power gains, and pulley ratios for supercharged engines. Essential for supercharger sizing, tuning, and performance optimization. Proper supercharger calculations ensure optimal boost levels, prevent engine damage from excessive pressure, and maximize power gains while maintaining reliability and drivability."
+    "description": "The Supercharger Calculator determines boost pressure, power gains, and pulley ratios for supercharged engines. It is useful for supercharger sizing, comparison, and reference checks. Proper supercharger calculations help review boost levels, reduce the chance of excessive pressure, and compare likely output changes alongside reliability considerations."
   },
   "howTo": {
     "title": "How to Use the Supercharger Calculator",
@@ -39,8 +39,8 @@
       "description": "Estimate horsepower gains from supercharger installation and tuning."
     },
     {
-      "title": "Pulley Ratio Optimization",
-      "description": "Optimize pulley combinations for target boost levels and RPM characteristics."
+      "title": "Pulley Ratio Comparison",
+      "description": "Compare pulley combinations for target boost levels and RPM characteristics."
     },
     {
       "title": "CFM Analysis",
@@ -51,18 +51,18 @@
       "description": "Support for roots, centrifugal, and screw-type supercharger calculations."
     },
     {
-      "title": "Professional Tuning Support",
-      "description": "Advanced calculations for professional tuners and engine builders."
+      "title": "Tuning Reference Support",
+      "description": "Additional calculations for engine builders and tuning reference workflows."
     }
   ],
   "faq": [
     {
       "q": "What's the difference between superchargers and turbochargers?",
-      "a": "Superchargers are belt-driven from the crankshaft and provide immediate boost with no lag, while turbochargers use exhaust gases and have some turbo lag. Superchargers consume engine power (parasitic loss) but offer linear, predictable power delivery. Our supercharger calculator helps optimize these systems."
+      "a": "Superchargers are belt-driven from the crankshaft and provide immediate boost with no lag, while turbochargers use exhaust gases and have some turbo lag. Superchargers consume engine power (parasitic loss) but offer linear, predictable power delivery. Our supercharger calculator helps compare these system characteristics."
     },
     {
       "q": "How much boost pressure is safe for my engine?",
-      "a": "Safe boost levels depend on engine internals, fuel quality, and tuning expertise. Stock engines typically handle 6-8 PSI safely, while built engines with forged internals can handle 15+ PSI with proper tuning, fuel system upgrades, and engine management."
+      "a": "Boost limits depend on engine internals, fuel quality, and calibration quality. Stock engines typically stay around 6-8 PSI, while built engines with forged internals may run 15+ PSI with suitable supporting parts and engine management."
     },
     {
       "q": "How do pulley ratios affect boost pressure?",
@@ -74,7 +74,7 @@
     },
     {
       "q": "What are the different types of superchargers?",
-      "a": "Main types include: Roots (immediate boost, lower efficiency), Centrifugal (higher efficiency, boost increases with RPM), and Screw/Twin-screw (best efficiency, consistent boost). Each type has different characteristics that our calculator accounts for."
+      "a": "Main types include: Roots (immediate boost, lower efficiency), Centrifugal (higher efficiency, boost increases with RPM), and Screw/Twin-screw (high efficiency, consistent boost). Each type has different characteristics that our calculator accounts for."
     },
     {
       "q": "Do I need an intercooler with my supercharger?",

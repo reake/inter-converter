@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Investment Calculator",
-    "description": "The Investment Calculator is a powerful financial planning tool that helps you project the future value of your investments based on various parameters including initial investment, regular contributions, time horizon, and expected returns. This calculator uses compound interest calculations to show how your money can grow over time. Whether you're planning for retirement, saving for a major purchase, or building wealth for the future, this calculator provides valuable insights into investment growth potential and helps you understand how different variables affect your investment outcomes."
+    "description": "The Investment Calculator helps you estimate how an initial investment, regular contributions, time horizon, and assumed returns may affect future value. It uses compound-growth calculations so you can review different scenarios and compare how changes in inputs affect long-term projections. Use it as a planning reference rather than a projection of actual investment outcomes."
   },
   "howTo": {
     "title": "How to Use the Investment Calculator",
@@ -41,7 +41,7 @@
   "features": [
     {
       "title": "Compound Interest Calculation",
-      "description": "Advanced compound interest calculations with flexible compounding periods for accurate projections."
+      "description": "Compound-growth calculations with flexible compounding periods for projection scenarios."
     },
     {
       "title": "Multiple Investment Types",
@@ -57,7 +57,7 @@
     },
     {
       "title": "Scenario Comparison",
-      "description": "Compare multiple investment scenarios to optimize your investment strategy."
+      "description": "Compare multiple investment scenarios and review tradeoffs between inputs."
     },
     {
       "title": "Inflation Adjustment",
@@ -75,7 +75,7 @@
     },
     {
       "q": "Should I consider inflation in my calculations?",
-      "a": "Yes, inflation typically runs 2-3% annually, which reduces your purchasing power. Consider using real (inflation-adjusted) returns for more accurate long-term planning. A 7% nominal return with 3% inflation equals a 4% real return."
+      "a": "Many people include inflation in long-term planning because it affects future purchasing power. Using inflation-adjusted assumptions can help you compare scenarios more conservatively, but actual inflation and returns can vary over time."
     },
     {
       "q": "What's better: lump sum or regular contributions?",

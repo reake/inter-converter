@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Annuity Calculator - Retirement Income Planning Tool",
-    "description": "The Annuity Calculator is a comprehensive financial planning tool designed to help you calculate annuity payments, future values, and retirement income streams. Whether you're planning for retirement, evaluating annuity products, or calculating periodic payments, this calculator provides accurate projections for both immediate and deferred annuities. Understanding annuity calculations is essential for retirement planning, as annuities provide guaranteed income streams and can be a crucial component of your retirement portfolio."
+    "description": "The Annuity Calculator is a financial planning tool designed to help you estimate annuity payments, future values, and retirement income streams. Whether you're planning for retirement, evaluating annuity products, or calculating periodic payments, this calculator provides formula-based projections for both immediate and deferred annuities. Understanding annuity calculations can support retirement planning, as some annuities provide contract-based income streams and may be one part of a broader retirement portfolio."
   },
   "howTo": {
     "title": "How to Use the Annuity Calculator",
@@ -16,7 +16,7 @@
       },
       {
         "title": "Set Interest Rate",
-        "description": "Enter the annual interest rate or guaranteed rate offered by the annuity provider."
+        "description": "Enter the annual interest rate or quoted contract rate offered by the annuity provider."
       },
       {
         "title": "Payment Period",
@@ -67,7 +67,7 @@
   "faq": [
     {
       "q": "What's the difference between immediate and deferred annuities?",
-      "a": "Immediate annuities start paying income within one year of purchase, while deferred annuities accumulate value for a period before payments begin. Immediate annuities are ideal for current income needs, while deferred annuities are better for future retirement planning."
+      "a": "Immediate annuities start paying income within one year of purchase, while deferred annuities accumulate value for a period before payments begin. Immediate annuities are commonly used for current income needs, while deferred annuities are more often used for future retirement planning."
     },
     {
       "q": "How are annuity payments calculated?",
@@ -75,7 +75,7 @@
     },
     {
       "q": "Are annuities a good investment for retirement?",
-      "a": "Annuities can provide guaranteed income and tax-deferred growth, making them valuable for retirement planning. However, they often have higher fees than other investments. Consider your risk tolerance, income needs, and other retirement assets when evaluating annuities."
+      "a": "Some annuities offer contract-based income features and tax-deferred growth, which may make them useful in retirement planning. However, they often have higher fees than other investments. Review your risk tolerance, income needs, contract terms, and other retirement assets when evaluating annuities."
     },
     {
       "q": "What happens to my annuity when I die?",

@@ -150,9 +150,9 @@ const translations: Record<string, TranslationStrings> = {
     
     // Tools page
     allToolsTitle: 'All Free Online Converters & Calculators',
-    allToolsDescription: 'Professional-grade conversion tools and calculators for developers, engineers, students, and professionals. Browse by category, search by name, or filter by features.',
+    allToolsDescription: 'Browse the current public set of converter tools and calculators by category, search term, or practical workflow.',
     browseByCategory: 'Browse Tools by Category',
-    browseCategoryDescription: 'Discover specialized calculators and converters organized by category to find exactly what you need',
+    browseCategoryDescription: 'Browse calculators and converters by category to find the tools you need',
     allTools: 'All Tools',
     advancedFilters: 'Advanced Filters',
     quickSort: 'Quick sort:',
@@ -181,28 +181,28 @@ const translations: Record<string, TranslationStrings> = {
     // Unit converter translations
     poundsToKg: {
       title: 'Pounds to Kilograms Converter',
-      description: 'Convert pounds to kilograms instantly with accurate conversion formula',
+      description: 'Convert pounds to kilograms with a standard conversion formula',
       enterPounds: 'Enter pounds',
       enterKilograms: 'Enter kilograms',
       conversionNote: '1 pound = 0.453592 kilograms'
     },
     celsiusToFahrenheit: {
       title: 'Celsius to Fahrenheit Converter',
-      description: 'Convert Celsius to Fahrenheit instantly with accurate temperature formula',
+      description: 'Convert Celsius to Fahrenheit with a standard temperature formula',
       enterCelsius: 'Enter Celsius',
       enterFahrenheit: 'Enter Fahrenheit',
       conversionNote: '°F = (°C × 9/5) + 32'
     },
     feetToMeters: {
       title: 'Feet to Meters Converter',
-      description: 'Convert feet to meters instantly with accurate length conversion',
+      description: 'Convert feet to meters with a standard length formula',
       enterFeet: 'Enter feet',
       enterMeters: 'Enter meters',
       conversionNote: '1 foot = 0.3048 meters'
     },
     inchesToCm: {
       title: 'Inches to Centimeters Converter',
-      description: 'Convert inches to centimeters instantly with accurate length formula',
+      description: 'Convert inches to centimeters with a standard length formula',
       enterInches: 'Enter inches',
       enterCentimeters: 'Enter centimeters',
       conversionNote: '1 inch = 2.54 centimeters'
@@ -211,7 +211,7 @@ const translations: Record<string, TranslationStrings> = {
     // Color tool translations
     rgbToHex: {
       title: 'RGB to HEX Color Converter',
-      description: 'Convert RGB color values to HEX color codes instantly',
+      description: 'Convert RGB color values to HEX color codes',
       enterRed: 'Enter red value (0-255)',
       enterGreen: 'Enter green value (0-255)',
       enterBlue: 'Enter blue value (0-255)',
@@ -221,7 +221,7 @@ const translations: Record<string, TranslationStrings> = {
     },
     colorPicker: {
       title: 'Online Color Picker Tool',
-      description: 'Professional color picker with HSL controls and color history',
+      description: 'Color picker with HSL controls and color history',
       hueLabel: 'Hue',
       saturationLabel: 'Saturation',
       lightnessLabel: 'Lightness',
@@ -265,7 +265,7 @@ const translations: Record<string, TranslationStrings> = {
     allToolsTitle: '所有免费在线转换器和计算器',
     allToolsDescription: '为开发者、工程师、学生和专业人士提供专业级转换工具和计算器。按类别浏览、按名称搜索或按功能筛选。',
     browseByCategory: '按类别浏览工具',
-    browseCategoryDescription: '发现按类别组织的专业计算器和转换器，找到您需要的确切工具',
+    browseCategoryDescription: '按类别浏览计算器和转换器，查找您需要的工具',
     allTools: '所有工具',
     advancedFilters: '高级筛选',
     quickSort: '快速排序：',

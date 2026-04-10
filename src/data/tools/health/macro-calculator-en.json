@@ -1,14 +1,14 @@
 {
   "about": {
     "title": "About Macro Calculator - Macronutrient Distribution",
-    "description": "The Macro Calculator determines your optimal macronutrient distribution (protein, carbohydrates, and fats) based on your goals, activity level, and body composition. Proper macro balance is essential for muscle building, fat loss, and overall health. Understanding macronutrient ratios helps optimize your nutrition for specific fitness goals, whether you're trying to lose weight, gain muscle, or maintain your current physique."
+    "description": "The Macro Calculator estimates macronutrient distribution for protein, carbohydrates, and fats based on your goals, activity level, and selected inputs. It can be used to review different nutrition scenarios for weight maintenance, weight change, or training plans. Use the result as a general planning reference rather than an individualized medical or diet recommendation."
   },
   "howTo": {
     "title": "How to Use the Macro Calculator",
     "steps": [
       {
         "title": "Enter Personal Information",
-        "description": "Input your age, gender, weight, and height for accurate metabolic calculations."
+        "description": "Input your age, gender, weight, and height for formula-based calculations."
       },
       {
         "title": "Select Activity Level",
@@ -24,7 +24,7 @@
       },
       {
         "title": "View Daily Targets",
-        "description": "See your personalized daily macro targets in grams and percentages."
+        "description": "See estimated daily macro targets in grams and percentages."
       },
       {
         "title": "Track Your Intake",
@@ -33,15 +33,15 @@
     ],
     "tips": [
       "Start by hitting protein targets first, then adjust carbs and fats",
-      "Distribute protein evenly throughout the day for optimal absorption",
+      "Distribute protein across the day if that fits your eating pattern",
       "Adjust carb intake based on training days vs rest days",
-      "Include healthy fats for hormone production and nutrient absorption"
+      "Include dietary fats according to your preferences and nutrition needs"
     ]
   },
   "features": [
     {
       "title": "Goal-specific Macro Ratios",
-      "description": "Customized macronutrient ratios for cutting, bulking, and maintenance phases."
+      "description": "Show macro ratio estimates for weight-loss, muscle-gain, and maintenance scenarios."
     },
     {
       "title": "Activity Level Adjustments",
@@ -61,7 +61,7 @@
     },
     {
       "title": "Meal Planning Guidance",
-      "description": "Daily and per-meal macro recommendations for effective meal planning."
+      "description": "General daily and per-meal macro guidance for meal planning."
     }
   ],
   "faq": [
@@ -75,11 +75,11 @@
     },
     {
       "q": "Should I track macros or just calories?",
-      "a": "Tracking macros provides better body composition results than calories alone, especially for muscle building and fat loss goals. Macros ensure you get adequate protein for muscle preservation and optimal nutrient distribution for your specific goals."
+      "a": "Some people prefer tracking macros in addition to calories when they want a more detailed view of protein, carbohydrate, and fat intake. Whether that approach is useful depends on your goals, preferences, and how closely you want to plan meals."
     },
     {
       "q": "Can I adjust the macro ratios based on my preferences?",
-      "a": "Yes, macro ratios can be adjusted based on personal preferences, dietary restrictions, and how your body responds to different approaches. The calculator provides starting points, but you can modify ratios while maintaining your calorie target for your goals."
+      "a": "Yes, macro ratios can be adjusted based on personal preferences, dietary restrictions, and how you want to structure meals. The calculator provides starting points you can review and modify as needed."
     }
   ],
   "relativeLinks": [

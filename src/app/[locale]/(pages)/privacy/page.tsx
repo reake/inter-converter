@@ -118,14 +118,36 @@ export default function PrivacyPage() {
           </CardHeader>
           <CardContent className="space-y-4 text-gray-600">
             <p>
-              InterConverter does not promise complete anonymity or a zero-script environment. The
-              site is not presented as a privacy utility. It is a public tool site that tries to
-              keep the featured conversion workflows straightforward and to avoid unnecessary form
-              submission for basic calculations.
+              InterConverter does not promise complete anonymity, a zero-cookie environment, or a
+              page with no third-party scripts. It is a public tool site, not a privacy utility or
+              a secure file-processing guarantee.
             </p>
             <p>
-              If you need guarantees beyond a typical public web application, do not rely on this
-              site for that purpose.
+              If you need stronger assurances than a normal public web application can provide, do
+              not rely on this site for that purpose.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Analytics, advertising, and cookies</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4 text-gray-600">
+            <p>
+              The site may load analytics and advertising services, including Google Analytics and
+              Google AdSense. Those services may set or read cookies, use browser storage, collect
+              device or browser information, and measure visits, page usage, referral information,
+              and ad interactions.
+            </p>
+            <p>
+              Advertising vendors, including Google, may use cookies to serve ads based on prior
+              visits to this site or other sites. If personalized advertising is active in your
+              region or browser context, ad delivery may reflect those prior visits.
+            </p>
+            <p>
+              You can learn more about how Google uses information in advertising and adjust ad
+              personalization controls through Google Ads Settings.
             </p>
           </CardContent>
         </Card>
@@ -137,8 +159,8 @@ export default function PrivacyPage() {
           <CardContent className="space-y-4 text-gray-600">
             <p>
               Where a featured tool is implemented entirely in client-side code, the calculation is
-              performed in the browser after the page has loaded. That design reduces friction and
-              often avoids sending raw calculator inputs to a custom backend service.
+              performed in the browser after the page has loaded. That design can reduce the need to
+              send raw calculator inputs to a custom backend service.
             </p>
             <p>
               That does not mean every page is offline-only or free of all network requests. Page

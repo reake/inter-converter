@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Universal Unit Converter",
-    "description": "The Universal Unit Converter is a comprehensive all-in-one measurement tool that handles conversions across all major unit categories including length, weight, temperature, volume, area, speed, energy, pressure, power, and data storage. This professional-grade converter supports metric, imperial, and specialized units with precision calculations for engineering, scientific, and everyday applications."
+    "description": "The Universal Unit Converter handles conversions across major unit categories including length, weight, temperature, volume, area, speed, energy, pressure, power, and data storage. It supports metric, imperial, and specialized units for engineering, scientific, and everyday applications."
   },
   "howTo": {
     "title": "How to Use the Universal Unit Converter",
@@ -35,8 +35,8 @@
   },
   "features": [
     {
-      "title": "All-in-One Converter",
-      "description": "Convert between all major unit categories in a single comprehensive tool."
+      "title": "Multi-Category Converter",
+      "description": "Convert between major unit categories in a single interface."
     },
     {
       "title": "High Precision Calculations",
@@ -62,7 +62,7 @@
   "faq": [
     {
       "q": "What unit categories does the universal converter support?",
-      "a": "Our universal unit converter supports length, weight/mass, temperature, volume, area, speed/velocity, energy, pressure, power, and data storage units. Each category includes metric, imperial, and specialized scientific units for comprehensive coverage."
+      "a": "Our universal unit converter supports length, weight/mass, temperature, volume, area, speed/velocity, energy, pressure, power, and data storage units. Each category includes metric, imperial, and specialized scientific units across commonly used measurement systems."
     },
     {
       "q": "How accurate are the conversion calculations?",
@@ -78,11 +78,11 @@
     },
     {
       "q": "Are imperial and metric units both supported?",
-      "a": "Absolutely! The converter includes comprehensive support for both metric (SI) and imperial (US/UK) measurement systems, plus specialized units used in various industries and scientific fields."
+      "a": "Absolutely. The converter supports both metric (SI) and imperial (US/UK) measurement systems, plus specialized units used in various industries and scientific fields."
     },
     {
-      "q": "Can I use this for professional engineering work?",
-      "a": "Yes, the universal unit converter meets professional standards with precise calculations, extensive unit coverage, and scientific notation support suitable for engineering, research, and technical applications."
+      "q": "Can I use this for engineering reference work?",
+      "a": "Yes, the universal unit converter provides precise calculations, broad unit coverage, and scientific notation support suitable for engineering, research, and technical reference work."
     }
   ],
   "relativeLinks": [

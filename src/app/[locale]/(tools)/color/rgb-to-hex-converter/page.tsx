@@ -24,7 +24,7 @@ export async function generateMetadata({
   const entry = getLocalizedToolEntry(l, 'rgb-to-hex-converter', colorEn as ToolCatalogEntry[], colorZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name ?? 'RGB to HEX Color Converter';
-  const description: string = entry?.description ?? 'Convert RGB to HEX color codes instantly. Free color converter with preview, common colors, web-safe palette, and CSS code generation for web design and development.';
+  const description: string = entry?.description ?? 'Convert RGB to HEX color codes with preview, common colors, a web-safe palette, and CSS code generation for web design and development.';
   const baseKeywords = generateOptimizedKeywords('rgb-to-hex-converter', 'color', 'RGB to HEX Color Converter');
   const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
     ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
@@ -60,7 +60,7 @@ export default async function RgbToHexConverterPage({
   const entry = getLocalizedToolEntry(l, 'rgb-to-hex-converter', colorEn as ToolCatalogEntry[], colorZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name || 'RGB to HEX Color Converter';
-  const descriptionText: string = entry?.description || 'Convert RGB color values to HEX codes with real-time preview and instant calculations.';
+  const descriptionText: string = entry?.description || 'Convert RGB color values to HEX codes with real-time preview.';
   const baseKeywords = generateOptimizedKeywords('rgb-to-hex-converter', 'color', 'RGB to HEX Color Converter');
   const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
     ? Array.from(new Set([...baseKeywords, ...entry.keywords]))

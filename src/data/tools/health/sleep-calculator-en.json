@@ -1,30 +1,30 @@
 {
   "about": {
-    "title": "About Sleep Calculator - Sleep Cycle Optimization",
-    "description": "The Sleep Calculator helps determine optimal bedtime and wake-up times based on sleep cycles. Quality sleep follows 90-minute cycles, and waking up at the end of a cycle helps you feel more refreshed and alert. Understanding sleep cycles and timing can significantly improve sleep quality and daytime energy levels. The calculator considers natural circadian rhythms to optimize your sleep schedule for better rest and recovery."
+    "title": "About Sleep Calculator - Sleep Cycle Reference",
+    "description": "The Sleep Calculator estimates bedtime and wake-up times based on sleep-cycle timing assumptions. It can be used to review different sleep schedules and compare bedtime or wake-time options. Use the result as a general sleep-planning reference rather than a medical recommendation or a prediction of sleep quality."
   },
   "howTo": {
     "title": "How to Use the Sleep Calculator",
     "steps": [
       {
         "title": "Enter Wake-up Time",
-        "description": "Input your desired wake-up time to calculate optimal bedtime options."
+        "description": "Input your desired wake-up time to estimate bedtime options."
       },
       {
         "title": "Or Enter Bedtime",
-        "description": "Alternatively, enter when you want to go to bed to see ideal wake-up times."
+        "description": "Alternatively, enter when you want to go to bed to estimate wake-up times."
       },
       {
         "title": "Select Age Group",
-        "description": "Choose your age group for personalized sleep duration recommendations."
+        "description": "Choose your age group for general sleep-duration reference ranges."
       },
       {
         "title": "View Sleep Schedule",
-        "description": "Review optimal sleep and wake times based on 90-minute sleep cycles."
+        "description": "Review estimated sleep and wake times based on sleep-cycle assumptions."
       },
       {
         "title": "Follow Schedule",
-        "description": "Implement the recommended schedule consistently for better sleep quality."
+        "description": "Try the suggested schedule consistently and adjust based on your routine and response."
       },
       {
         "title": "Track Results",
@@ -35,25 +35,25 @@
       "Maintain consistent sleep and wake times, even on weekends",
       "Avoid screens 1 hour before bedtime for better sleep quality",
       "Create a relaxing bedtime routine to signal sleep time",
-      "Keep your bedroom cool, dark, and quiet for optimal rest"
+      "Keep your bedroom cool, dark, and quiet if that helps your sleep routine"
     ]
   },
   "features": [
     {
       "title": "Sleep Cycle Calculations",
-      "description": "Calculate optimal sleep and wake times based on 90-minute sleep cycles."
+      "description": "Estimate sleep and wake times based on sleep-cycle timing assumptions."
     },
     {
       "title": "Age-appropriate Recommendations",
-      "description": "Personalized sleep duration recommendations based on age groups and life stages."
+      "description": "General sleep-duration reference ranges based on age groups and life stages."
     },
     {
-      "title": "Optimal Timing Suggestions",
-      "description": "Smart bedtime and wake-up suggestions for maximum sleep quality and energy."
+      "title": "Timing Suggestions",
+      "description": "Bedtime and wake-up suggestions for comparing schedule options."
     },
     {
       "title": "Sleep Quality Tips",
-      "description": "Expert advice and tips for improving overall sleep quality and habits."
+      "description": "General tips for reviewing sleep habits and routines."
     },
     {
       "title": "Circadian Rhythm Support",

@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Cost of Living Calculator - Location Comparison Tool",
-    "description": "The Cost of Living Calculator is a comprehensive relocation planning tool designed to help you compare living expenses between different cities, states, or countries. This calculator analyzes housing costs, transportation, food, healthcare, and other essential expenses to determine how much income you need to maintain your current lifestyle in a new location. Whether you're considering a job offer, planning retirement, or exploring relocation options, this tool provides accurate cost-of-living comparisons."
+    "description": "The Cost of Living Calculator is a relocation planning tool designed to help you compare living expenses between different cities, states, or countries. This calculator analyzes housing costs, transportation, food, healthcare, and other essential expenses to estimate how much income may be needed to maintain a similar lifestyle in a new location. Whether you're considering a job offer, planning retirement, or exploring relocation options, this tool provides cost-of-living comparison estimates."
   },
   "howTo": {
     "title": "How to Use the Cost of Living Calculator",
@@ -66,8 +66,8 @@
   ],
   "faq": [
     {
-      "q": "How accurate are cost of living comparisons?",
-      "a": "Cost of living data is based on comprehensive surveys and government statistics, but individual expenses vary. Use these comparisons as guidelines and research specific neighborhoods and lifestyle choices that affect your personal costs."
+      "q": "How should I interpret cost of living comparisons?",
+      "a": "Cost of living data is based on surveys and government statistics, but individual expenses vary. Use these comparisons as general reference points and research specific neighborhoods and lifestyle choices that affect your personal costs."
     },
     {
       "q": "What factors most impact cost of living differences?",

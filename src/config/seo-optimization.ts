@@ -210,7 +210,7 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
   // Unit Tools
   'unit-converter': {
     title: 'Unit Converter | Free Measurement Conversion Tool',
-    description: 'Convert units of measurement instantly. Free online unit converter for length, weight, temperature, volume, area, and more. Accurate conversions.',
+    description: 'Convert units of measurement for length, weight, temperature, volume, area, and more using standard conversion formulas.',
     keywords: [
       'unit converter',
       'measurement converter',
@@ -235,7 +235,7 @@ export const TOOL_SEO_CONFIG: Record<string, ToolSEOConfig> = {
   // Color Tools
   'hex-to-rgb-converter': {
     title: 'Hex to RGB Converter | Color Code Converter Free',
-    description: 'Convert hex color codes to RGB values instantly. Free color converter tool for web design, CSS, and digital art. Includes color preview.',
+    description: 'Convert hex color codes to RGB values for web design, CSS, and digital art with color preview.',
     keywords: [
       'hex to rgb converter',
       'color converter',

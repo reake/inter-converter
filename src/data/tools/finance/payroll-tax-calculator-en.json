@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Payroll Tax Calculator - Employee Tax Withholding Tool",
-    "description": "The Payroll Tax Calculator is a comprehensive payroll management tool designed to help employers and employees calculate accurate federal and state tax withholdings from paychecks. This calculator computes federal income tax, Social Security, Medicare, state taxes, and other deductions to determine net take-home pay. Whether you're processing payroll or planning your budget, this tool provides precise tax calculations for all pay frequencies."
+    "description": "The Payroll Tax Calculator is a payroll reference tool designed to help employers and employees estimate federal and state tax withholdings from paychecks. This calculator applies federal income tax, Social Security, Medicare, state taxes, and other deductions to estimate net take-home pay. Whether you're reviewing payroll scenarios or planning a budget, this tool provides formula-based withholding estimates for common pay frequencies."
   },
   "howTo": {
     "title": "How to Use the Payroll Tax Calculator",
@@ -20,7 +20,7 @@
       },
       {
         "title": "Choose State Location",
-        "description": "Select the state for accurate state income tax calculations."
+        "description": "Select the state to estimate state income tax calculations."
       },
       {
         "title": "Include Deductions",
@@ -45,7 +45,7 @@
     },
     {
       "title": "State Tax Support",
-      "description": "Compute state income taxes for all 50 states with accurate rates and brackets."
+      "description": "Compute state income taxes for all 50 states using rate and bracket assumptions."
     },
     {
       "title": "FICA Tax Calculator",
@@ -66,8 +66,8 @@
   ],
   "faq": [
     {
-      "q": "How accurate are payroll tax calculations?",
-      "a": "Our calculator uses current federal and state tax tables, but actual withholdings may vary based on employer payroll systems, rounding methods, and specific deduction timing. Results provide close estimates for planning purposes."
+      "q": "How should I interpret payroll tax calculations?",
+      "a": "Our calculator uses current federal and state tax tables, but actual withholdings may vary based on employer payroll systems, rounding methods, and deduction timing. Results provide general estimates for planning purposes."
     },
     {
       "q": "What's the difference between gross and net pay?",

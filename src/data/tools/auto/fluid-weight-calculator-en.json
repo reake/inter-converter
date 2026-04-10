@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Fluid Weight Calculator",
-    "description": "The Fluid Weight Calculator determines the weight of automotive fluids based on volume and fluid type. Essential for calculating total vehicle weight, fluid capacity planning, and performance modifications. Accurate fluid weight calculations help with weight distribution, performance tuning, and ensuring proper fluid levels for optimal vehicle operation and safety."
+    "description": "The Fluid Weight Calculator determines the weight of automotive fluids based on volume and fluid type. It is useful for total vehicle-weight checks, fluid capacity planning, and reference calculations. Accurate fluid weight calculations help with weight-distribution review, service planning, and comparing fluid loads across different setups."
   },
   "howTo": {
     "title": "How to Use the Fluid Weight Calculator",
@@ -16,11 +16,11 @@
       },
       {
         "title": "Calculate Weight",
-        "description": "View calculated weight in pounds and kilograms instantly."
+        "description": "View calculated weight in pounds and kilograms."
       },
       {
         "title": "Apply Results",
-        "description": "Use for weight distribution, capacity planning, and performance calculations."
+        "description": "Use for weight distribution, capacity planning, and reference calculations."
       }
     ],
     "tips": [
@@ -47,8 +47,8 @@
       "description": "Help calculate total vehicle weight and fluid distribution effects."
     },
     {
-      "title": "Performance Applications",
-      "description": "Essential for racing, towing capacity, and fuel economy calculations."
+      "title": "Reference Applications",
+      "description": "Useful for racing weight checks, towing-capacity review, and fuel-load calculations."
     },
     {
       "title": "Temperature Considerations",
@@ -74,7 +74,7 @@
     },
     {
       "q": "What's the difference between engine oil and transmission fluid weight?",
-      "a": "Engine oil typically weighs 7.0-7.5 lbs per gallon, while automatic transmission fluid weighs about 6.8-7.2 lbs per gallon. The difference comes from viscosity, additives, and base oil composition. Use our calculator for precise measurements."
+      "a": "Engine oil typically weighs 7.0-7.5 lbs per gallon, while automatic transmission fluid weighs about 6.8-7.2 lbs per gallon. The difference comes from viscosity, additives, and base oil composition. Use our calculator for reference estimates."
     },
     {
       "q": "How do I calculate total vehicle fluid weight?",

@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Ram Air Calculator",
-    "description": "The Ram Air Calculator determines the pressure increase and power gain from ram air intake systems based on vehicle speed. Essential for understanding cold air intake benefits and forced induction effects. Ram air effect occurs when vehicle motion forces air into the intake system, creating positive pressure that increases air density and potential power output, especially at higher speeds."
+    "description": "The Ram Air Calculator determines the pressure increase and estimated power change from ram air intake systems based on vehicle speed. It is useful for intake comparison, airflow reference checks, and understanding speed-related pressure effects. Ram air effect occurs when vehicle motion forces air into the intake system, creating positive pressure that can increase air density at higher speeds."
   },
   "howTo": {
     "title": "How to Use the Ram Air Calculator",
@@ -47,12 +47,12 @@
       "description": "Factor in intake system efficiency and design characteristics."
     },
     {
-      "title": "Performance Optimization",
-      "description": "Optimize intake design for maximum ram air effect at target speeds."
+      "title": "Intake Comparison",
+      "description": "Compare intake design assumptions at different target speeds."
     },
     {
-      "title": "Professional Accuracy",
-      "description": "Precise calculations using aerodynamic principles and fluid dynamics."
+      "title": "Formula-Based Calculation",
+      "description": "Calculations based on aerodynamic principles and fluid-dynamics formulas."
     }
   ],
   "faq": [
@@ -66,7 +66,7 @@
     },
     {
       "q": "Do aftermarket cold air intakes provide true ram air effect?",
-      "a": "Most aftermarket cold air intakes provide minimal ram air effect because they're not positioned to capture forward-moving air efficiently. True ram air requires specific ducting design, proper intake positioning, and sealed air boxes to maximize pressure recovery."
+      "a": "Most aftermarket cold air intakes provide minimal ram air effect because they're not positioned to capture forward-moving air efficiently. True ram air requires specific ducting design, proper intake positioning, and sealed air boxes to improve pressure recovery."
     },
     {
       "q": "How does altitude affect ram air calculations?",

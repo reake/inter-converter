@@ -24,7 +24,7 @@ export async function generateMetadata({
   const entry = getLocalizedToolEntry(l, 'color-picker-tool', colorEn as ToolCatalogEntry[], colorZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name ?? 'Online Color Picker Tool';
-  const description: string = entry?.description ?? 'Professional color picker with HSL controls, color palettes, and history. Generate RGB, HEX, and HSL color codes for web design, graphic design, and development projects.';
+  const description: string = entry?.description ?? 'Color picker with HSL controls, color palettes, and history. Generate RGB, HEX, and HSL color codes for design and development projects.';
   const baseKeywords = generateOptimizedKeywords('color-picker-tool', 'color', 'Online Color Picker Tool');
   const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
     ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
@@ -60,7 +60,7 @@ export default async function ColorPickerToolPage({
   const entry = getLocalizedToolEntry(l, 'color-picker-tool', colorEn as ToolCatalogEntry[], colorZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name || 'Online Color Picker Tool';
-  const descriptionText: string = entry?.description || 'Professional color picker with HSL sliders, preset palettes, and color history with instant calculations.';
+  const descriptionText: string = entry?.description || 'Color picker with HSL sliders, preset palettes, and color history.';
   const baseKeywords = generateOptimizedKeywords('color-picker-tool', 'color', 'Online Color Picker Tool');
   const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
     ? Array.from(new Set([...baseKeywords, ...entry.keywords]))

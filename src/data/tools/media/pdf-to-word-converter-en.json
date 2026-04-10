@@ -1,102 +1,86 @@
 {
   "about": {
-    "title": "About PDF to Word Converter",
-    "description": "The PDF to Word Converter is an advanced online tool that transforms PDF documents into editable Word formats (DOC/DOCX) with exceptional accuracy. This converter is essential for professionals, students, and businesses who need to edit, modify, or repurpose content from PDF files while maintaining original formatting and layout. Converting PDF to Word format enables you to edit text, modify layouts, add comments, and collaborate on documents that were previously locked in PDF format. Our converter uses advanced OCR technology to handle both text-based and scanned PDF documents with high precision."
+    "title": "About PDF to Word Notes",
+    "description": [
+      "This page currently explains common expectations and limitations in a PDF to Word workflow rather than presenting a fully launched conversion product.",
+      "PDF to Word output often requires manual review, especially when the source file contains complex layout, tables, scanned pages, or mixed fonts.",
+      "The interactive version is not part of the featured public surface until implementation details, scope limits, and policy wording are reviewed together."
+    ]
   },
   "howTo": {
-    "title": "How to Use the PDF to Word Converter",
+    "title": "How to Use This Review Note",
     "steps": [
       {
-        "title": "Upload PDF File",
-        "description": "Select or drag and drop your PDF file into the upload area."
+        "title": "Check the source document",
+        "description": "Decide whether the PDF is text-based, scanned, heavily formatted, or built from images before expecting a clean editable result."
       },
       {
-        "title": "Choose Output Format",
-        "description": "Select your preferred output format: DOC or DOCX."
+        "title": "Set realistic expectations",
+        "description": "Use this page to understand where layout drift, OCR errors, table issues, or font substitution are common."
       },
       {
-        "title": "Set Conversion Options",
-        "description": "Enable OCR for scanned documents and other conversion preferences."
+        "title": "Choose the right workflow",
+        "description": "If you only need to read, annotate, or extract a small section, a full Word conversion may not be the best path."
       },
       {
-        "title": "Convert and Download",
-        "description": "Click convert to process your PDF and download the editable Word file."
+        "title": "Verify the result independently",
+        "description": "Before sharing or acting on converted text, compare the output with the original PDF line by line where accuracy matters."
       }
     ],
     "tips": [
-      "Use DOCX format for better compatibility with modern Word versions",
-      "Enable OCR for scanned or image-based PDF documents",
-      "Preview results before downloading for quality assurance"
+      "Scanned PDFs often need extra review because OCR mistakes are common.",
+      "Tables, headers, footers, and multi-column layouts are frequent sources of formatting drift.",
+      "For legal, academic, or contractual material, always verify the converted document manually."
     ]
   },
   "features": [
     {
-      "title": "High-Accuracy Conversion",
-      "description": "Advanced algorithms ensure precise PDF to Word conversion with minimal formatting loss."
+      "title": "Workflow guidance",
+      "description": "Explains what PDF to Word conversion can and cannot reliably preserve."
     },
     {
-      "title": "OCR Technology",
-      "description": "Optical Character Recognition for converting scanned PDFs and image-based documents."
+      "title": "Expectation setting",
+      "description": "Highlights common issues around OCR, layout, tables, and font handling."
     },
     {
-      "title": "Format Preservation",
-      "description": "Maintains original formatting, fonts, styles, tables, and layout structure."
+      "title": "Public review status",
+      "description": "States that the interactive version is not currently in the featured public set."
     },
     {
-      "title": "Multiple Output Formats",
-      "description": "Support for both DOC and DOCX output formats for maximum compatibility."
-    },
-    {
-      "title": "Batch Processing",
-      "description": "Convert multiple PDF files simultaneously for increased productivity."
-    },
-    {
-      "title": "Secure Processing",
-      "description": "Client-side processing ensures document privacy and data security."
+      "title": "Verification reminder",
+      "description": "Encourages manual checking before relying on converted output."
     }
   ],
   "faq": [
     {
-      "q": "Can the PDF to Word converter handle scanned documents?",
-      "a": "Yes, our PDF to Word converter includes advanced OCR (Optical Character Recognition) technology that can extract text from scanned PDF documents and convert them into editable Word format with high accuracy. This works for both image-based PDFs and scanned documents."
+      "q": "Why can PDF to Word output still need manual cleanup?",
+      "a": "PDF files are built for fixed presentation, not for easy reconstruction into editable document structure. Layout, fonts, tables, and scanned text can all introduce errors."
     },
     {
-      "q": "Will the original formatting be preserved during PDF to Word conversion?",
-      "a": "Our converter is designed to maintain original formatting, including fonts, styles, tables, and layout structure. While complex layouts may require minor adjustments, most formatting is preserved accurately during the PDF to Word conversion process."
+      "q": "Are scanned PDFs harder to convert?",
+      "a": "Yes. Scanned pages often depend on OCR, which can misread characters, spacing, or structure, especially in low-quality scans."
     },
     {
-      "q": "What's the difference between DOC and DOCX output formats?",
-      "a": "DOCX is the newer XML-based format that offers better compatibility, smaller file sizes, and enhanced features with modern Microsoft Word versions. DOC is the legacy format compatible with older versions of Microsoft Word. We recommend DOCX for most users."
+      "q": "Why is this page not shown as a complete public tool?",
+      "a": "The public site only promotes file workflows after implementation details, limits, and policy wording are reviewed together."
     },
     {
-      "q": "Are there file size limits for PDF to Word conversion?",
-      "a": "Our PDF to Word converter efficiently handles various PDF sizes. For optimal performance, we recommend files under 100MB, though larger documents are supported with extended processing time. Complex documents may take longer to convert."
-    },
-    {
-      "q": "Is my document data secure during the conversion process?",
-      "a": "Yes, all PDF to Word conversions are processed securely with client-side processing where possible. Your documents are not stored on our servers, ensuring complete privacy and data security throughout the conversion process."
-    },
-    {
-      "q": "Can I convert password-protected PDF files to Word?",
-      "a": "Yes, our converter can handle password-protected PDF files. You'll need to provide the password during the upload process, and the conversion will proceed while maintaining the security of your document content."
+      "q": "When should I verify the converted document manually?",
+      "a": "Always verify manually when formatting, quoted text, figures, legal language, academic citations, or contractual terms matter."
     }
   ],
   "relativeLinks": [
     {
-      "title": "JPG to PNG Converter",
-      "url": "/media/jpg-to-png-converter"
-    },
-    {
-      "title": "Image Converter Tools",
-      "url": "/media/image-converter"
-    },
-    {
-      "title": "Document Converter Tools",
-      "url": "/media/document-converter"
-    },
-    {
-      "title": "Media Tools Category",
+      "title": "File Tools Category Notes",
       "url": "/media"
+    },
+    {
+      "title": "Featured Tools",
+      "url": "/tools"
+    },
+    {
+      "title": "Contact",
+      "url": "/contact"
     }
   ]
 }

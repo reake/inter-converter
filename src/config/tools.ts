@@ -16,6 +16,11 @@ export {
   getFeaturedToolsByCategory,
   getToolsByAllCategories,
   isReviewApprovedTool,
+  isReviewApprovedPath,
+  sanitizeToolCatalogEntry,
+  sanitizeToolDescription,
+  sanitizeSearchIndexEntry,
+  sanitizeSearchIndexEntries,
   // Category-specific exports
   getUnitTools,
   getTimeTools,

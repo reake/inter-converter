@@ -1,14 +1,14 @@
 {
   "about": {
     "title": "About Life Insurance Calculator - Coverage Needs Assessment Tool",
-    "description": "The Life Insurance Calculator is a comprehensive financial planning tool designed to help you determine the appropriate amount of life insurance coverage needed to protect your family's financial future. This calculator analyzes your income, debts, expenses, and financial goals to recommend optimal coverage amounts. Whether you're buying your first policy or reviewing existing coverage, this tool provides personalized life insurance needs analysis."
+    "description": "The Life Insurance Calculator is a financial planning tool designed to help you estimate how much life insurance coverage may be needed based on income, debts, expenses, and financial goals. This calculator uses user-entered assumptions to compare coverage scenarios. Whether you're buying your first policy or reviewing existing coverage, this tool provides a general life insurance needs estimate."
   },
   "howTo": {
     "title": "How to Use the Life Insurance Calculator",
     "steps": [
       {
         "title": "Enter Personal Information",
-        "description": "Input your age, gender, health status, and smoking status for accurate calculations."
+        "description": "Input your age, gender, health status, and smoking status for coverage estimates."
       },
       {
         "title": "Add Income Details",
@@ -67,7 +67,7 @@
   "faq": [
     {
       "q": "How much life insurance do I need?",
-      "a": "A common rule is 10-12 times your annual income, but actual needs depend on debts, dependents, income replacement years, and financial goals. Our calculator provides personalized recommendations based on your specific situation."
+      "a": "A common rule is 10-12 times your annual income, but actual needs depend on debts, dependents, income replacement years, and financial goals. Use the calculator as a general coverage reference rather than a policy recommendation."
     },
     {
       "q": "What's the difference between term and whole life insurance?",

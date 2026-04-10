@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Volumetric Efficiency Calculator",
-    "description": "The Volumetric Efficiency Calculator determines how effectively an engine fills its cylinders with air-fuel mixture. Essential for engine tuning, performance analysis, and understanding breathing efficiency. Volumetric efficiency is a key metric for engine performance, affecting power output, fuel economy, and tuning requirements. Higher efficiency indicates better engine breathing and potential for more power."
+    "description": "The Volumetric Efficiency Calculator determines how effectively an engine fills its cylinders with air-fuel mixture. It is useful for engine reference checks, airflow review, and understanding breathing efficiency. Volumetric efficiency affects power output, fuel economy, and setup comparisons, and this calculator helps estimate that relationship from the inputs provided."
   },
   "howTo": {
     "title": "How to Use the Volumetric Efficiency Calculator",
@@ -36,11 +36,11 @@
     },
     {
       "title": "Engine Breathing Analysis",
-      "description": "Analyze engine breathing characteristics and identify improvement opportunities."
+      "description": "Review engine breathing characteristics for comparison and reference use."
     },
     {
-      "title": "Performance Optimization",
-      "description": "Guidance for improving volumetric efficiency through modifications and tuning."
+      "title": "Setup Comparison",
+      "description": "Compare how different inputs and setup changes affect estimated volumetric efficiency."
     },
     {
       "title": "Tuning Assessment",
@@ -51,18 +51,18 @@
       "description": "Account for altitude, temperature, and barometric pressure effects."
     },
     {
-      "title": "Professional Accuracy",
-      "description": "Precise calculations suitable for engine builders and performance tuners."
+      "title": "Reference Calculation",
+      "description": "Formula-based calculations for engine-building and tuning reference workflows."
     }
   ],
   "faq": [
     {
       "q": "What is considered good volumetric efficiency?",
-      "a": "Stock engines typically achieve 80-85% volumetric efficiency, while well-tuned performance engines can reach 95-100%. Race engines with optimal porting, camshafts, and intake systems may exceed 100% at peak RPM ranges. Our calculator helps evaluate your engine's breathing efficiency."
+      "a": "Stock engines typically achieve 80-85% volumetric efficiency, while stronger naturally aspirated setups can reach 95-100%. Some race engines may exceed 100% at peak RPM ranges because of intake and exhaust tuning effects. Our calculator helps estimate your engine's breathing efficiency."
     },
     {
       "q": "How does volumetric efficiency affect engine power?",
-      "a": "Higher volumetric efficiency directly correlates with more power output. A 10% increase in VE typically results in approximately 10% more power, assuming fuel delivery and ignition timing are optimized accordingly. This makes VE a critical tuning parameter."
+      "a": "Higher volumetric efficiency generally correlates with higher power output because more air is entering the cylinders. The exact result depends on the rest of the setup, including fuel delivery, timing, and operating conditions, so VE is best used as one comparison metric rather than a standalone guarantee."
     },
     {
       "q": "What factors affect volumetric efficiency?",
@@ -70,15 +70,15 @@
     },
     {
       "q": "Can volumetric efficiency exceed 100%?",
-      "a": "Yes, through resonance tuning, ram air effects, or optimal intake tract design. Some naturally aspirated engines achieve over 100% VE at specific RPM ranges due to inertial supercharging and acoustic tuning effects in the intake system."
+      "a": "Yes, through resonance tuning, ram air effects, or well-matched intake tract design. Some naturally aspirated engines achieve over 100% VE at specific RPM ranges due to inertial supercharging and acoustic tuning effects in the intake system."
     },
     {
       "q": "How do I measure actual airflow for VE calculations?",
-      "a": "Airflow can be measured using mass airflow sensors, calculated from fuel flow and air-fuel ratios, or estimated from dyno testing. Professional engine builders often use flow benches and data logging to determine actual airflow rates."
+      "a": "Airflow can be measured using mass airflow sensors, calculated from fuel flow and air-fuel ratios, or estimated from dyno testing. Engine builders also use flow benches and data logging to estimate actual airflow rates."
     },
     {
       "q": "What's the relationship between VE and engine modifications?",
-      "a": "Modifications like porting, performance camshafts, intake manifolds, and exhaust systems all aim to improve volumetric efficiency. Our calculator helps quantify the effectiveness of these modifications by comparing before and after VE measurements."
+      "a": "Changes like porting, camshafts, intake manifolds, and exhaust systems often affect volumetric efficiency. Our calculator helps compare estimated VE values before and after setup changes."
     }
   ],
   "relativeLinks": [

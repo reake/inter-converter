@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Boat Loan Calculator - Marine Financing Planning Tool",
-    "description": "The Boat Loan Calculator is a specialized marine financing tool designed to help you calculate monthly payments, interest costs, and loan terms for boat purchases. Whether you're buying a new yacht, fishing boat, or recreational watercraft, this calculator provides accurate payment estimates and helps you evaluate different financing options. Understanding boat loan calculations is essential for making informed decisions about marine financing and ensuring you can comfortably afford your dream boat."
+    "description": "The Boat Loan Calculator is a marine financing tool designed to help you estimate monthly payments, interest costs, and loan terms for boat purchases. Whether you're buying a new yacht, fishing boat, or recreational watercraft, this calculator provides payment estimates and helps you compare financing options. Understanding boat loan calculations can support marine financing decisions and help you evaluate whether a purchase fits your budget."
   },
   "howTo": {
     "title": "How to Use the Boat Loan Calculator",
@@ -34,14 +34,14 @@
     "tips": [
       "Newer boats typically qualify for better rates and longer terms",
       "Consider marine insurance costs when budgeting for boat ownership",
-      "Shop around with banks, credit unions, and marine lenders for best rates",
+      "Shop around with banks, credit unions, and marine lenders for competitive rates",
       "Factor in maintenance, storage, and fuel costs beyond the loan payment"
     ]
   },
   "features": [
     {
       "title": "Marine Loan Calculator",
-      "description": "Calculate exact monthly payments for different boat loan amounts, rates, and terms."
+      "description": "Calculate estimated monthly payments for different boat loan amounts, rates, and terms."
     },
     {
       "title": "Boat Value Assessment",
@@ -61,7 +61,7 @@
     },
     {
       "title": "Loan Term Comparison",
-      "description": "Compare different loan terms to find the best balance of payment and total cost."
+      "description": "Compare different loan terms to review a balance between payment amount and total cost."
     }
   ],
   "faq": [

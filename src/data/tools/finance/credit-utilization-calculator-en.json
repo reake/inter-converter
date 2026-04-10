@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Credit Utilization Calculator - Credit Score Impact Tool",
-    "description": "The Credit Utilization Calculator is a comprehensive credit management tool designed to help you understand how your credit card balances affect your credit score and overall creditworthiness. This calculator analyzes your credit utilization ratio across individual cards and overall credit limits, providing recommendations to optimize your credit score. Whether you're planning purchases or managing existing debt, this tool helps maintain healthy credit utilization ratios."
+    "description": "The Credit Utilization Calculator is a credit management tool designed to help you understand how your credit card balances affect your credit score and overall credit profile. This calculator analyzes your credit utilization ratio across individual cards and overall credit limits, providing suggestions for lowering utilization levels. Whether you're planning purchases or managing existing debt, this tool helps you review your current utilization ratios."
   },
   "howTo": {
     "title": "How to Use the Credit Utilization Calculator",
@@ -23,12 +23,12 @@
         "description": "Understand how your current utilization affects your credit score."
       },
       {
-        "title": "Get Optimization Recommendations",
+        "title": "Review Utilization Suggestions",
         "description": "Receive suggestions for improving your credit utilization ratios."
       },
       {
         "title": "Plan Payment Strategies",
-        "description": "Determine optimal payment amounts to reach target utilization levels."
+        "description": "Estimate payment amounts needed to reach target utilization levels."
       }
     ],
     "tips": [
@@ -52,8 +52,8 @@
       "description": "Understand how utilization changes affect your credit score."
     },
     {
-      "title": "Optimization Recommendations",
-      "description": "Get specific suggestions for improving your credit utilization."
+      "title": "Utilization Suggestions",
+      "description": "Get suggestions for improving your credit utilization."
     },
     {
       "title": "Payment Strategy Planner",

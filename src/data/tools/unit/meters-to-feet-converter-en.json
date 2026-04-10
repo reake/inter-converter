@@ -36,7 +36,7 @@
     },
     {
       "title": "High Precision Calculations",
-      "description": "Accurate conversions using the exact international conversion factor (1 m = 3.28084 ft) suitable for professional applications."
+      "description": "Accurate conversions using the exact international conversion factor (1 m = 3.28084 ft) for reference and planning checks."
     },
     {
       "title": "Architectural and Construction Support",
@@ -47,7 +47,7 @@
       "description": "Handle precise length measurements with full decimal place support for engineering and architectural accuracy."
     },
     {
-      "title": "Professional Standards",
+      "title": "Reference Standards",
       "description": "Scientific precision suitable for construction, engineering, and architectural applications meeting international standards."
     },
     {
@@ -58,7 +58,7 @@
   "faq": [
     {
       "q": "What is the exact conversion factor from meters to feet?",
-      "a": "1 meter equals exactly 3.28084 feet. This is the internationally accepted conversion factor defined by international standards. Our meters to feet converter uses this precise value for all calculations, ensuring accuracy for professional applications."
+      "a": "1 meter equals exactly 3.28084 feet. This is the internationally accepted conversion factor defined by international standards. Our meters to feet converter uses this precise value for all calculations for reference and planning checks."
     },
     {
       "q": "How do I convert meters to feet quickly?",
@@ -74,7 +74,7 @@
     },
     {
       "q": "How accurate is this meters to feet converter for architectural work?",
-      "a": "Our converter uses the exact international conversion factor (3.28084), making it suitable for architectural drawings, construction specifications, engineering plans, and professional building projects. The precision meets all architectural industry standards."
+      "a": "Our converter uses the exact international conversion factor (3.28084), making it suitable for architectural drawings, construction specifications, engineering plans, and building-project reference checks."
     },
     {
       "q": "What are practical uses for meters to feet conversion?",

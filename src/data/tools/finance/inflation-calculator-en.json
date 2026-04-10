@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Inflation Calculator - Purchasing Power and Price Change Tool",
-    "description": "The Inflation Calculator is a comprehensive economic analysis tool designed to help you understand how inflation affects purchasing power and money value over time. This calculator shows how much goods and services that cost a certain amount in the past would cost today, or how much today's money will be worth in the future. Whether you're planning retirement, analyzing investments, or understanding economic trends, this tool provides accurate inflation-adjusted calculations."
+    "description": "The Inflation Calculator is an economic analysis tool designed to help you understand how inflation affects purchasing power and money value over time. This calculator shows how much goods and services that cost a certain amount in the past would cost today, or how much today's money may be worth in the future under selected assumptions. Whether you're planning retirement, analyzing investments, or understanding economic trends, this tool provides CPI-based inflation estimates."
   },
   "howTo": {
     "title": "How to Use the Inflation Calculator",
@@ -41,7 +41,7 @@
   "features": [
     {
       "title": "Historical Inflation Data",
-      "description": "Access comprehensive US inflation data from 1913 to present day."
+      "description": "Access broad US inflation data from 1913 to the present day."
     },
     {
       "title": "Future Value Projections",
@@ -70,8 +70,8 @@
       "a": "Inflation is the rate at which prices for goods and services rise over time, reducing purchasing power. It's measured using the Consumer Price Index (CPI), which tracks price changes in a basket of common goods and services."
     },
     {
-      "q": "How accurate are inflation calculations?",
-      "a": "Historical inflation calculations are very accurate using official CPI data. Future projections use average rates or Federal Reserve targets (typically 2%) but actual future inflation may vary significantly from projections."
+      "q": "How should I interpret inflation calculations?",
+      "a": "Historical inflation calculations are based on official CPI data. Future projections use average rates or Federal Reserve targets (typically 2%), but actual future inflation may vary significantly from those assumptions."
     },
     {
       "q": "Why is understanding inflation important for investing?",

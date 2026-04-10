@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About CD Calculator - Certificate of Deposit Investment Tool",
-    "description": "The CD Calculator is a comprehensive savings tool designed to help you calculate returns on Certificate of Deposit investments and compare CD rates from different banks. Whether you're evaluating short-term or long-term CDs, this calculator provides accurate projections for interest earnings, maturity values, and annual percentage yields. Understanding CD calculations helps you maximize your savings returns and choose the best deposit terms for your financial goals."
+    "description": "The CD Calculator is a savings planning tool designed to help you estimate returns on Certificate of Deposit investments and compare CD rates from different banks. Whether you're evaluating short-term or long-term CDs, this calculator provides formula-based estimates for interest earnings, maturity values, and annual percentage yields. It can help you compare deposit terms and review how different CD options fit your savings goals."
   },
   "howTo": {
     "title": "How to Use the CD Calculator",
@@ -45,11 +45,11 @@
     },
     {
       "title": "Interest Earnings Projection",
-      "description": "Project total interest earnings over the CD term with accurate compounding calculations."
+      "description": "Project total interest earnings over the CD term with formula-based compounding estimates."
     },
     {
       "title": "Multiple Term Comparison",
-      "description": "Compare returns across different CD terms to optimize your investment timeline."
+      "description": "Compare returns across different CD terms to review different savings timelines."
     },
     {
       "title": "APY vs Interest Rate Analysis",
@@ -57,7 +57,7 @@
     },
     {
       "title": "CD Laddering Strategy",
-      "description": "Plan CD laddering strategies for better liquidity and rate optimization."
+      "description": "Plan CD laddering strategies for liquidity planning and rate comparison."
     },
     {
       "title": "Early Withdrawal Impact",
@@ -78,8 +78,8 @@
       "a": "Early withdrawal typically results in penalties, often 3-12 months of interest depending on the CD term. Some banks may also charge principal if you haven't earned enough interest. Always understand penalty terms before investing."
     },
     {
-      "q": "Are CDs better than high-yield savings accounts?",
-      "a": "CDs typically offer higher rates but lock up your money for a fixed term. High-yield savings accounts offer more liquidity but usually lower rates. Choose based on your liquidity needs and rate preferences."
+      "q": "How do CDs compare with high-yield savings accounts?",
+      "a": "CDs often offer higher rates but lock up your money for a fixed term. High-yield savings accounts usually offer more liquidity but may have lower rates. Which option fits better depends on your access needs, timeline, and rate preferences."
     }
   ],
   "relativeLinks": [

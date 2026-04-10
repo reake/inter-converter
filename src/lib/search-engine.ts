@@ -1,7 +1,10 @@
 import { ToolConfig } from '@/types/tools';
-import { isReviewApprovedTool } from '@/config/tools';
-import searchIndexEn from '@/data/search-index-en.json';
-import searchIndexZh from '@/data/search-index-zh.json';
+import { isReviewApprovedTool, sanitizeSearchIndexEntries } from '@/config/tools';
+import searchIndexEnRaw from '@/data/search-index-en.json';
+import searchIndexZhRaw from '@/data/search-index-zh.json';
+
+const searchIndexEn = sanitizeSearchIndexEntries(searchIndexEnRaw);
+const searchIndexZh = sanitizeSearchIndexEntries(searchIndexZhRaw);
 
 export interface SearchResult {
   tool: ToolConfig;

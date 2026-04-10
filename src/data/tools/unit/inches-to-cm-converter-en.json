@@ -12,7 +12,7 @@
       },
       {
         "title": "View Instant Conversion",
-        "description": "The equivalent centimeter value will appear automatically with high precision calculations suitable for professional use."
+        "description": "The equivalent centimeter value will appear automatically using the standard conversion factor."
       },
       {
         "title": "Copy Results",
@@ -36,10 +36,10 @@
     },
     {
       "title": "High Precision Calculations",
-      "description": "Accurate conversions using the exact international conversion factor (1 inch = 2.54 cm) suitable for professional applications."
+      "description": "Accurate conversions using the exact international conversion factor (1 inch = 2.54 cm) for reference and planning checks."
     },
     {
-      "title": "Professional Accuracy",
+      "title": "Reference Accuracy",
       "description": "Precise measurements perfect for construction, engineering, fashion design, and other fields requiring exact conversions."
     },
     {

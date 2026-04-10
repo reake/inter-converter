@@ -19,10 +19,10 @@
     ]
   },
   "features": [
-    { "title": "Zero-Down Modeling", "description": "Accurately estimate payments with 0% down scenarios common to USDA loans." },
-    { "title": "Guarantee & Annual Fee Support", "description": "Model the upfront guarantee fee and ongoing annual fee with finance option." },
-    { "title": "Full Escrow Breakdown", "description": "Include taxes, insurance, and HOA for a realistic monthly payment." },
-    { "title": "DTI Awareness", "description": "Estimate front-end/back-end DTI impact for qualification insights." }
+    { "title": "Zero-Down Modeling", "description": "Estimate payments with 0% down scenarios commonly associated with USDA loans." },
+    { "title": "Guarantee & Annual Fee Support", "description": "Model the upfront guarantee fee and ongoing annual fee with financing options." },
+    { "title": "Full Escrow Breakdown", "description": "Include taxes, insurance, and HOA when reviewing monthly payment scenarios." },
+    { "title": "DTI Awareness", "description": "Estimate front-end and back-end DTI impact as a qualification reference." }
   ],
   "faq": [
     { "q": "What is a USDA loan?", "a": "A government-backed mortgage for eligible rural properties with income limits, often allowing zero down payment." },

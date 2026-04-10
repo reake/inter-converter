@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Mortgage Calculator",
-    "description": "The Mortgage Calculator provides comprehensive analysis of home loan payments including principal, interest, taxes, insurance, and PMI. This essential tool helps homebuyers understand the true cost of homeownership and plan their budget effectively. Calculate monthly payments, compare loan terms, and analyze the impact of down payments and interest rates to make informed decisions about one of the largest financial commitments of your lifetime."
+    "description": "The Mortgage Calculator helps you estimate home loan payments including principal, interest, taxes, insurance, and PMI. It can be used to review monthly payment scenarios, compare loan terms, and see how down payments and interest rates change total housing costs. Use it as a planning reference when comparing mortgage options."
   },
   "howTo": {
     "title": "How to Use the Mortgage Calculator",
@@ -24,9 +24,9 @@
       }
     ],
     "tips": [
-      "20% down payment avoids PMI costs",
+      "A 20% down payment often avoids PMI on conventional loans",
       "Compare 15-year vs 30-year loan terms",
-      "Include property taxes and insurance for accurate totals"
+      "Include property taxes and insurance when reviewing total monthly housing cost"
     ]
   },
   "features": [
@@ -48,7 +48,7 @@
     },
     {
       "title": "Tax and Insurance Estimates",
-      "description": "Include property taxes and homeowners insurance for accurate payment projections."
+      "description": "Include property taxes and homeowners insurance when reviewing payment scenarios."
     },
     {
       "title": "Amortization Schedule",
@@ -58,7 +58,7 @@
   "faq": [
     {
       "q": "What does PITI stand for in mortgage calculations?",
-      "a": "PITI stands for Principal, Interest, Taxes, and Insurance. This represents your total monthly housing payment including the mortgage loan payment plus property taxes and homeowners insurance. Our mortgage calculator includes all PITI components for accurate payment estimates."
+      "a": "PITI stands for Principal, Interest, Taxes, and Insurance. This represents your total monthly housing payment including the mortgage loan payment plus property taxes and homeowners insurance. The calculator includes these components to help you review overall payment estimates."
     },
     {
       "q": "How much should I put down when buying a house?",
@@ -78,7 +78,7 @@
     },
     {
       "q": "What interest rate should I use in the mortgage calculator?",
-      "a": "Use the current mortgage interest rate quoted by your lender or the current market rate for your loan type and credit score. Rates vary based on loan term, down payment, credit score, and market conditions. Check with multiple lenders for accurate rates."
+      "a": "Use the current mortgage interest rate quoted by your lender or a recent market rate for your loan type and credit profile. Rates vary based on loan term, down payment, credit profile, and market conditions. Check with multiple lenders when comparing offers."
     }
   ],
   "relativeLinks": [

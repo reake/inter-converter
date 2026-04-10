@@ -2,7 +2,7 @@
   {
     "id": "carburetor-cfm-calculator",
     "name": "Carburetor CFM Calculator",
-    "description": "Calculate carburetor CFM requirements for optimal engine performance. Professional carburetor sizing calculator with airflow analysis for automotive enthusiasts and mechanics.",
+    "description": "Calculate carburetor CFM requirements for engine airflow checks. Carburetor sizing calculator for workshop planning, comparison, and reference use.",
     "category": "auto",
     "keywords": [
       "carburetor cfm calculator",
@@ -43,7 +43,7 @@
   {
     "id": "engine-size-converter",
     "name": "Engine Size Converter",
-    "description": "Convert engine displacement between cubic inches and liters instantly. Accurate engine size converter for automotive specifications and engine building calculations.",
+    "description": "Convert engine displacement between cubic inches and liters. Useful for engine specifications, parts comparison, and reference calculations.",
     "category": "auto",
     "keywords": [
       "engine",
@@ -280,7 +280,7 @@
     "icon": "📐"
   },
   {
-    "id": "auto-fluid-calculator",
+    "id": "fluid-weight-calculator",
     "name": "Automotive Fluid Weight Calculator",
     "description": "Calculate weight of automotive fluids including gasoline, oil, and transmission fluid. Essential fluid weight calculator for vehicle weight distribution analysis.",
     "category": "auto",
@@ -375,7 +375,7 @@
   {
     "id": "rgb-to-hex-converter",
     "name": "RGB to HEX Converter",
-    "description": "Convert RGB color values to HEX codes instantly for web design and CSS development. Professional RGB to HEX converter with live color preview and copy-paste functionality.",
+    "description": "Convert RGB values to HEX color codes with live preview for CSS, design tokens, style guides, and front-end debugging.",
     "category": "color",
     "keywords": [
       "rgb",
@@ -396,7 +396,7 @@
   {
     "id": "color-picker-tool",
     "name": "Color Picker Tool",
-    "description": "Interactive color picker tool with HSL and RGB palette generation capabilities. Professional color picker featuring HSL controls, color history, and palette export for designers.",
+    "description": "Pick colors and inspect HEX, RGB, and HSL values while working on interfaces, graphics, palettes, and design reviews.",
     "category": "color",
     "keywords": [
       "color",
@@ -417,7 +417,7 @@
   {
     "id": "hex-to-rgb-converter",
     "name": "HEX to RGB Converter",
-    "description": "Convert HEX color codes to RGB values instantly for CSS and web development. Accurate HEX to RGB converter with color preview and validation for precise color matching.",
+    "description": "Convert HEX color codes to RGB values with quick validation and preview for CSS edits, design handoff, and front-end debugging.",
     "category": "color",
     "keywords": [
       "hex",
@@ -515,7 +515,7 @@
   {
     "id": "currency-converter",
     "name": "Currency Converter",
-    "description": "Convert currencies with real-time exchange rates and live forex data. Professional currency converter supporting 150+ currencies with accurate conversion rates and historical charts.",
+    "description": "Convert currencies using exchange-rate data for travel planning, budgeting, price checks, and general reference use.",
     "category": "finance",
     "keywords": [
       "currency converter",
@@ -538,7 +538,7 @@
   {
     "id": "loan-calculator",
     "name": "Loan Calculator",
-    "description": "Calculate loan payments, interest, and amortization schedules instantly. Comprehensive loan calculator with payment breakdown analysis for mortgages, auto loans, and personal financing.",
+    "description": "Estimate loan payments, interest costs, and amortization schedules for mortgages, auto loans, and personal loans.",
     "category": "finance",
     "keywords": [
       "loan",
@@ -557,7 +557,7 @@
   {
     "id": "tax-calculator",
     "name": "Tax Calculator",
-    "description": "Calculate income tax, deductions, and tax liability for accurate tax planning. Professional tax calculator supporting federal and state tax calculations with current tax brackets.",
+    "description": "Estimate income tax, deductions, and tax liability to compare federal and state tax scenarios using current bracket assumptions.",
     "category": "finance",
     "keywords": [
       "tax",
@@ -576,7 +576,7 @@
   {
     "id": "mortgage-calculator",
     "name": "Mortgage Calculator",
-    "description": "Calculate mortgage payments including PMI, property tax, and insurance costs. Complete mortgage calculator with amortization schedule and total cost analysis for home buyers.",
+    "description": "Estimate mortgage payments including PMI, property tax, and insurance, and review amortization and total cost scenarios.",
     "category": "finance",
     "keywords": [
       "mortgage",
@@ -2114,7 +2114,7 @@
   {
     "id": "pdf-to-word-converter",
     "name": "PDF to Word Converter",
-    "description": "Convert PDF files to editable Word documents with accurate formatting preservation. Professional PDF to Word converter supporting DOC and DOCX formats with layout integrity.",
+    "description": "Reference notes for PDF to Word workflows, including document limits, formatting drift, and when manual verification is necessary.",
     "category": "media",
     "keywords": [
       "pdf",
@@ -2133,7 +2133,7 @@
   {
     "id": "jpg-to-png-converter",
     "name": "JPG to PNG Converter",
-    "description": "Convert JPG images to PNG format with transparency support and lossless quality. Professional image converter for web graphics and photo editing applications.",
+    "description": "Workflow notes for JPG to PNG use cases, including format tradeoffs, editing scenarios, and output expectations to verify.",
     "category": "media",
     "keywords": [
       "jpg",

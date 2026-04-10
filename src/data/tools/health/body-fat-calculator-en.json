@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Body Fat Calculator",
-    "description": "The Body Fat Calculator estimates your body fat percentage using various measurement methods including waist circumference, hip measurements, and other body dimensions. Body fat percentage is a more accurate indicator of health than BMI alone. Understanding your body composition helps in setting realistic fitness goals and tracking progress more effectively than weight alone."
+    "description": "The Body Fat Calculator estimates body fat percentage using measurement methods including waist circumference, hip measurements, and other body dimensions. Body fat percentage can provide a broader body-composition reference than BMI alone. Understanding body composition can help with fitness goal setting and progress tracking alongside other health measures."
   },
   "howTo": {
     "title": "How to Use the Body Fat Calculator",
@@ -12,7 +12,7 @@
       },
       {
         "title": "Take Body Measurements",
-        "description": "Measure required body dimensions like waist, neck, and hips using a measuring tape."
+        "description": "Measure required body dimensions like waist, neck, and hips using a flexible measuring tape."
       },
       {
         "title": "Enter Personal Data",
@@ -20,31 +20,31 @@
       },
       {
         "title": "Review Results",
-        "description": "View your body fat percentage, health category, and personalized recommendations."
+        "description": "View your estimated body fat percentage, reference category, and general interpretation guidance."
       }
     ],
     "tips": [
       "Measure at the same time of day for consistency",
-      "Use a flexible measuring tape for accurate measurements",
+      "Use a flexible measuring tape and measure consistently each time",
       "Take measurements on bare skin when possible"
     ]
   },
   "features": [
     {
       "title": "Multiple Calculation Methods",
-      "description": "Choose from Navy, Army, and YMCA methods for accurate body fat percentage estimates."
+      "description": "Choose from Navy, Army, and YMCA methods for body fat percentage estimates."
     },
     {
       "title": "Gender-Specific Formulas",
-      "description": "Uses different calculation formulas optimized for male and female body composition."
+      "description": "Uses different calculation formulas for male and female body composition estimates."
     },
     {
       "title": "Body Fat Categories",
       "description": "Classifies results into essential fat, athletic, fitness, average, and obese categories."
     },
     {
-      "title": "Health Risk Assessment",
-      "description": "Provides health risk indicators based on your body fat percentage and category."
+      "title": "Category Reference",
+      "description": "Shows reference categories based on the estimated body fat percentage range."
     },
     {
       "title": "Progress Tracking",
@@ -58,27 +58,27 @@
   "faq": [
     {
       "q": "What's a healthy body fat percentage for men and women?",
-      "a": "For men: 10-20% is considered healthy, with essential fat at 2-5%. For women: 16-25% is healthy, with essential fat at 10-13%. Athletes may have lower percentages. Our body fat calculator provides detailed category classifications for accurate assessment."
+      "a": "Reference ranges vary by source, age, sex, and context. General adult categories are often presented differently across methods, so use the calculator as a reference tool rather than a medical assessment."
     },
     {
-      "q": "How accurate are body fat calculator estimates?",
-      "a": "Body fat calculators provide estimates with a 3-5% margin of error when measurements are taken correctly. For more precise measurements, consider DEXA scans or professional body composition analysis. Our calculator uses proven formulas for reliable home estimates."
+      "q": "How should I interpret body fat calculator estimates?",
+      "a": "Body fat calculators provide estimates, and results can vary based on the method used and how measurements are taken. If you need a more rigorous assessment, consider discussing measurement options with a qualified provider or specialist."
     },
     {
-      "q": "Which body fat measurement method is most accurate?",
-      "a": "The Navy method (waist and neck for men, waist, neck, and hips for women) is generally considered most accurate for home measurements. Our calculator offers multiple methods so you can compare results and choose your preferred approach."
+      "q": "How do body fat measurement methods differ?",
+      "a": "Different methods can produce different estimates. The calculator offers multiple methods so you can compare outputs and use them as general body-composition references."
     },
     {
       "q": "How often should I measure my body fat percentage?",
-      "a": "Monthly body fat measurements are sufficient for tracking progress and avoiding daily fluctuations due to hydration, food intake, and other factors. Consistent measurement timing and conditions improve accuracy."
+      "a": "People often track body fat periodically rather than daily because hydration, food intake, and measurement technique can affect the result. Consistent timing and method can make comparisons more useful."
     },
     {
       "q": "Is body fat percentage more important than BMI?",
-      "a": "Body fat percentage provides more detailed information about body composition than BMI alone. It distinguishes between muscle and fat mass, making it especially valuable for athletes and fitness enthusiasts. Use both metrics together for comprehensive health assessment."
+      "a": "Body fat percentage and BMI describe different things, so some people look at both as general reference measures. Neither metric should be treated as a complete assessment of health or body composition on its own."
     },
     {
-      "q": "How do I take accurate body measurements for the calculator?",
-      "a": "Use a flexible measuring tape on bare skin when possible. Measure waist at the narrowest point, hips at the widest point, and neck just below the Adam's apple. Take measurements at the same time of day for consistency."
+      "q": "How do I take body measurements for the calculator?",
+      "a": "Use a flexible measuring tape and follow the measurement instructions for the method you selected. Taking measurements the same way each time can make comparisons more consistent."
     }
   ],
   "relativeLinks": [

@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Credit Card Interest Calculator - APR and Interest Cost Tool",
-    "description": "The Credit Card Interest Calculator is a comprehensive credit card debt analysis tool designed to help you understand how much interest you'll pay on credit card balances and how different payment strategies affect total costs. This calculator shows daily, monthly, and annual interest charges, helping you make informed decisions about credit card payments and debt management. Whether you're planning payments or comparing credit card offers, this tool provides accurate interest calculations."
+    "description": "The Credit Card Interest Calculator is a credit card debt analysis tool designed to help you estimate how much interest you may pay on credit card balances and how different payment strategies affect total costs. This calculator shows daily, monthly, and annual interest charges to support payment planning and debt review. Whether you're planning payments or comparing credit card offers, this tool provides formula-based interest estimates."
   },
   "howTo": {
     "title": "How to Use the Credit Card Interest Calculator",
@@ -41,7 +41,7 @@
   "features": [
     {
       "title": "Daily Interest Calculator",
-      "description": "Calculate exact daily interest charges based on your balance and APR."
+      "description": "Estimate daily interest charges based on your balance and APR."
     },
     {
       "title": "Payment Impact Analysis",

@@ -14,85 +14,85 @@
     "exploreAllTools": "探索所有工具",
     "browseCategories": "浏览分类",
     "viewAllTools": "查看所有工具",
-    "startConverting": "免费开始转换",
+    "startConverting": "开始转换",
     "viewMore": "查看更多",
     "searchPlaceholder": "搜索转换工具..."
   },
   "homepage": {
     "hero": {
-      "title": "InterConverter",
-      "subtitle": "精选在线转换器和计算器",
-      "description": "当前公开的是一组精选的浏览器端工具，覆盖常见的单位、时间、颜色和文件转换任务，并逐页补充示例、解释和结果边界说明。"
+      "title": "免费在线转换器和计算器",
+      "subtitle": "覆盖单位、时间、颜色等常见在线工具",
+      "description": "使用免费的在线转换器和计算器，快速处理单位、时间、颜色和汽车等常见任务。浏览器内即可获得结果，无需注册账号。"
     },
     "sections": {
-      "popularTools": "精选工具",
-      "browseByCategory": "按精选分类浏览",
+      "popularTools": "热门工具",
+      "browseByCategory": "按工具分类浏览",
       "faq": "常见问题",
-      "faqSubtitle": "关于当前精选工具如何工作的常见问题",
+      "faqSubtitle": "关于使用 InterConverter 在线工具的常见问题",
       "aboutTitle": "关于 InterConverter.com",
-      "aboutDescription": "InterConverter 当前优先维护一组较小的公开工具集合，方便逐页补充说明、示例和校对。",
-      "whyChoose": "为什么选择 InterConverter？",
-      "trustedBy": "面向重复使用场景",
-      "trustedByDescription": "当前公开页优先覆盖高频、易验证的任务。我们更关注解释质量和使用指导，而不是堆砌目录数量。"
+      "aboutDescription": "InterConverter 提供免费的在线转换器和计算器，强调易用、易读，并支持跨设备访问。",
+      "whyChoose": "为什么使用 InterConverter？",
+      "trustedBy": "适合日常核对与重复使用",
+      "trustedByDescription": "适合处理常见换算和计算任务，提供更清晰的单位、结果展示与浏览器端工作流。"
     },
     "features": {
       "professionalQuality": {
-        "title": "专业品质",
-        "description": "精选工具使用明确公式、清晰单位和便于复核的结果展示方式。"
+        "title": "清晰公式",
+        "description": "工具采用清晰公式、明确单位和更易复核的结果展示。"
       },
       "lightningFast": {
-        "title": "闪电般快速",
-        "description": "多数精选转换任务在浏览器中即可立即完成，减少不必要的流程。"
+        "title": "上手更快",
+        "description": "多数转换和计算可在浏览器中即时完成，减少额外步骤。"
       },
       "privacyFirst": {
-        "title": "隐私优先",
-        "description": "许多精选工具的核心计算在浏览器内完成，但站点级分析与广告脚本仍可能作为页面基础设施加载。"
+        "title": "浏览器内计算",
+        "description": "许多工具的核心计算在浏览器内完成，但页面仍可能加载分析或广告脚本。"
       },
       "mobileOptimized": {
         "title": "移动端优化",
-        "description": "当前公开工具优先保证在移动端也具备清晰的输入和阅读体验。"
+        "description": "在手机、平板和桌面端都尽量保持清晰易用。"
       },
       "globalStandards": {
         "title": "全球标准",
-        "description": "公开页优先覆盖常见格式和常用单位，而不是一次性铺开所有边缘场景。"
+        "description": "覆盖常见单位、格式和日常工作流，方便快速查算。"
       },
       "alwaysUpdated": {
-        "title": "聚焦维护",
-        "description": "我们按批次更新页面，持续补充示例、限制说明和使用建议。"
+        "title": "持续维护",
+        "description": "页面会持续更新示例、说明和结果使用提示。"
       },
       "instantResults": {
-        "title": "即时结果",
-        "description": "多数精选工具会即时返回结果，并配有更清晰的解释区块。"
+        "title": "快速结果",
+        "description": "输入后即可看到结果，并在需要时提供补充说明。"
       },
       "completelyFree": {
-        "title": "完全免费",
-        "description": "当前公开工具页可直接使用，无需账户。"
+        "title": "无需账号",
+        "description": "免费使用，无需创建账户。"
       },
       "privacyProtected": {
         "title": "隐私保护",
-        "description": "除非你主动联系我们，计算输入不会被当作支持请求内容提交。"
+        "description": "除非你主动联系我们，输入内容不会被当作支持请求提交。"
       }
     },
     "faq": [
       {
-        "question": "为什么现在只公开部分工具？",
-        "answer": "公开层是有意收缩的。我们先优先维护高频且更容易解释清楚的工具，再逐步扩展公开范围。"
+        "question": "为什么有些分类下的工具比较少？",
+        "answer": "InterConverter 会按分类逐步扩展。我们优先维护那些常用、易用、也值得长期打磨的工具。"
       },
       {
-        "question": "精选工具是在浏览器里运行吗？",
-        "answer": "许多精选转换逻辑在页面加载后于浏览器中执行，但页面资源、分析脚本和广告脚本仍可能作为站点的一部分加载。"
+        "question": "这些工具是在浏览器里运行吗？",
+        "answer": "许多转换和计算逻辑会在页面加载后于浏览器中运行，但页面资源、分析脚本和广告脚本仍可能随页面一起加载。"
       },
       {
         "question": "结果可以不复核直接使用吗？",
-        "answer": "不建议。高风险场景下请务必独立复核结果。公开页目标是提高可读性和可用性，而不是替代专业审核。"
+        "answer": "不建议。高风险场景下请务必独立复核重要结果。这些工具强调实用和清晰，但不能替代专业审核。"
       },
       {
         "question": "需要注册账号吗？",
-        "answer": "不需要。当前精选公开工具可以直接访问。"
+        "answer": "不需要。当前在线工具无需创建账户即可使用。"
       },
       {
         "question": "可以反馈页面问题或建议吗？",
-        "answer": "可以。你可以通过联系页面反馈说明不清、示例不足、计算问题或希望重新公开的工具。"
+        "answer": "可以。你可以通过联系页面反馈说明不清、计算问题、示例不足，或希望我们优先补充的工具。"
       }
     ],
     "professionals": [
@@ -147,21 +147,21 @@
   },
   "toolsPage": {
     "hero": {
-      "title": "精选在线工具",
-      "description": "浏览当前重点维护的公开工具集合，覆盖常见的单位、时间、颜色、对比度和文件转换任务，并附带更清晰的使用说明。",
+      "title": "免费在线工具大全",
+      "description": "浏览免费的在线转换器和计算器，覆盖单位、时间、颜色、对比度和汽车等常见任务。直接在浏览器中使用，无需注册账号。",
       "stats": {
-        "professionalTools": "精选公开工具集合",
-        "freeToUse": "可直接使用",
-        "accurateResults": "更清晰的浏览器端流程"
+        "professionalTools": "免费在线工具",
+        "freeToUse": "无需账号",
+        "accurateResults": "浏览器端流程"
       }
     },
     "sections": {
-      "popularTools": "精选工具",
-      "popularToolsDescription": "当前维护和审校优先级最高的公开工具",
-      "browseByCategory": "按精选分类浏览",
-      "browseByCategoryDescription": "按类别查看当前较小的公开工具范围",
+      "popularTools": "热门工具",
+      "popularToolsDescription": "优先查看最常用的在线工具，快速完成换算和日常计算",
+      "browseByCategory": "按工具分类浏览",
+      "browseByCategoryDescription": "按分类查找免费的在线转换器和计算器",
       "callToAction": "发现解释不清或示例缺失？",
-      "callToActionDescription": "如果精选页需要更好的说明、示例或结果解释，可以通过联系页面反馈。"
+      "callToActionDescription": "如果工具页需要更清晰的说明、更好的示例或结果解释，可以通过联系页面反馈。"
     },
     "actions": {
       "useTool": "使用工具",
@@ -174,39 +174,49 @@
   "categoryPages": {
     "auto": {
       "title": "汽车计算器",
-      "description": "汽车类工具仍保留在代码库中，但当前不属于公开精选维护范围。",
+      "description": "查看汽车计算工具，涵盖发动机排量、齿比、速度、温度、气流和车辆重量等常见参考场景。",
       "stats": {
-        "autoTools": "19+ 汽车工具",
-        "realTimeCalculations": "实时计算",
-        "professionalFormulas": "专业公式",
+        "autoTools": "20 个汽车工具",
+        "realTimeCalculations": "页面内计算",
+        "formulaBasedReferences": "基于公式的参考",
         "mobileOptimized": "移动端优化"
       },
       "sections": {
+        "popular": {
+          "title": "常用汽车工具",
+          "useTool": "打开工具"
+        },
+        "categories": {
+          "title": "按场景浏览"
+        },
         "enginePerformance": {
-          "title": "发动机性能",
-          "description": "计算排量、压缩比和化油器尺寸，优化发动机性能"
+          "title": "发动机与气流",
+          "description": "用于排量、压缩比、气流、增压和温度等发动机相关参考计算"
         },
         "drivetrainGearing": {
-          "title": "传动系统和齿轮",
-          "description": "优化齿轮比，分析传动系统性能，提升加速和最高速度"
+          "title": "传动与齿比",
+          "description": "查看齿比、RPM、轮胎尺寸和车速之间的关系，便于传动方案参考"
         },
         "performanceAnalysis": {
-          "title": "性能分析",
-          "description": "分析马力、扭矩和整体车辆性能指标"
+          "title": "性能对比",
+          "description": "对比马力、扭矩、车速和功重比等常见车辆性能指标"
         },
         "fluidsWeight": {
-          "title": "液体和重量",
-          "description": "计算液体容量和重量分布，优化车辆设置"
+          "title": "液体与重量",
+          "description": "估算液体重量、单位换算和车辆重量相关的参考值"
+        },
+        "notes": {
+          "title": "使用说明"
         }
       },
       "infoCards": {
         "aboutCalculators": {
           "title": "关于这些计算器",
-          "content": "这些汽车参考工具基于常见公式和车间场景计算，更适合作为辅助估算，而不是替代专业检修或安全确认。"
+          "content": "这些汽车工具基于常见公式和车间式参考计算，更适合用于估算、对比和规划，并建议结合你自己的测量结果一起使用。"
         },
         "safetyNotice": {
           "title": "安全提示",
-          "content": "这些计算仅供教育和估算目的。发动机改装、调校和安全考虑请务必咨询合格的汽车专业人士。实际结果可能因具体条件而异。"
+          "content": "这些计算不能替代实车检查、调校验证或安全确认。如果结果可能影响可靠性或安全性，请复核测量数据，并咨询合格技师。"
         }
       },
       "difficulty": {
@@ -215,18 +225,18 @@
         "advanced": "高级"
       },
       "seo": {
-        "title": "汽车工具参考页 | InterConverter",
+        "title": "汽车计算器 | InterConverter",
         "keywords": [
-          "汽车工具参考",
+          "汽车计算器",
           "发动机计算器",
           "化油器CFM计算器",
           "压缩比计算器",
           "齿轮比计算器",
           "马力计算器",
           "RPM计算器",
-          "发动机调校工具",
-          "汽车性能工具",
-          "发动机参考工具"
+          "车辆速度计算器",
+          "汽车参考工具",
+          "发动机尺寸工具"
         ]
       }
     },
@@ -371,7 +381,7 @@
           "个人理财",
           "财务规划",
           "货币计算器",
-          "免费金融工具"
+          "金融工具"
         ]
       }
     },
@@ -379,7 +389,7 @@
       "title": "健康和健身计算器",
       "description": "健康类工具仍保留在代码库中，但当前不作为公开精选分类展示。",
       "seo": {
-        "title": "免费健康和健身计算器 - BMI、体脂、卡路里工具 | InterConverter",
+        "title": "健康和健身计算器 - BMI、体脂、卡路里工具 | InterConverter",
         "keywords": [
           "BMI计算器",
           "身体质量指数计算器",
@@ -399,7 +409,7 @@
         ]
       },
       "stats": {
-        "accurateCalculations": "精确计算",
+        "accurateCalculations": "基于公式的计算",
         "goalTracking": "目标跟踪",
         "healthFocused": "专注健康"
       },
@@ -479,7 +489,7 @@
           "文档转换器",
           "格式转换器",
           "在线文件转换器",
-          "免费媒体工具",
+          "媒体工具",
           "文件格式转换",
           "多媒体转换器",
           "数字文件工具",
@@ -538,7 +548,7 @@
         },
         "fast": {
           "title": "处理说明",
-          "description": "精选文件工具应说明透明度、压缩等格式差异，而不是直接承诺完美输出。"
+          "description": "精选文件工具应说明透明度、压缩等格式差异，而不是直接承诺统一结果。"
         },
         "quality": {
           "title": "复核边界",
@@ -595,10 +605,10 @@
           "title": "按类别浏览"
         },
         "developer": {
-          "title": "开发者和企业必备"
+          "title": "开发者与团队工作流"
         },
         "professional": {
-          "title": "专业时间管理工具"
+          "title": "规划与排期工作流"
         }
       },
       "categories": {
@@ -625,16 +635,16 @@
         },
         "globalTimezones": {
           "title": "全球时区",
-          "description": "通过精确的时区转换和夏令时支持处理国际业务。"
+          "description": "通过时区转换和夏令时支持处理国际排期。"
         },
         "businessPlanning": {
           "title": "业务规划",
-          "description": "精确计算工作日、项目时间线和业务截止日期。"
+          "description": "用于计算工作日、项目时间线和业务截止日期。"
         }
       },
       "content": {
-        "intro": "我们全面的时间和日期工具集合为需要精确时间计算和转换的开发者、企业和个人服务。从Unix时间戳转换到国际时区管理，我们的工具精确处理复杂的时间相关任务。",
-        "developerTools": "将Unix时间戳（纪元时间）转换为可读日期，处理API时间戳，调试时间相关问题，并使用我们的专业时间戳转换器管理数据库日期字段。",
+        "intro": "当前时间与日期工具集聚焦在时间戳、时区和日期计算这些更容易理解与复核的常见工作流上。",
+        "developerTools": "将Unix时间戳（纪元时间）转换为可读日期，处理API时间戳，调试时间相关问题，并通过更清晰的时间戳工作流管理数据库日期字段。",
         "businessApplications": "计算项目里程碑之间的工作日，规划跨时区的国际会议，并使用我们专注于业务的日期计算工具跟踪截止日期。",
         "globalOperations": "我们的时区转换器支持所有世界时区，具有自动夏令时调整功能。非常适合国际团队、全球企业和远程工作协调。",
         "personalProductivity": "使用我们的倒计时器进行活动，计算您的确切年龄，使用我们的秒表跟踪时间，并通过多个城市的世界时钟显示保持组织性。",
@@ -669,14 +679,14 @@
           "米到英尺",
           "摄氏度到华氏度",
           "磅到千克",
-          "免费单位转换器",
+          "单位转换器",
           "在线测量工具"
         ]
       },
       "stats": {
         "conversions": "精选核心转换",
         "freeAccurate": "基于公式的结果",
-        "realTimeResults": "即时输出"
+        "realTimeResults": "快速输出"
       },
       "sections": {
         "popular": {
@@ -727,25 +737,25 @@
       },
       "features": {
         "precisionAccuracy": {
-          "title": "精确准确",
-          "description": "我们的转换器使用精确的数学公式确保每次都有准确的结果。"
+          "title": "清晰公式",
+          "description": "这些转换器使用清晰公式和易读输出，适合常见测量核对场景。"
         },
         "realTimeResults": {
-          "title": "实时结果",
-          "description": "在您输入时获得即时转换，无延迟或等待时间。"
+          "title": "快速结果",
+          "description": "输入后可在页面中快速看到结果，便于继续核对和比较。"
         },
         "userFriendly": {
-          "title": "用户友好",
-          "description": "为初学者和专业人士设计的清洁、直观界面。"
+          "title": "界面直观",
+          "description": "页面清晰易读，适合常见核对场景和重复使用。"
         }
       },
       "content": {
-        "intro": "我们全面的单位转换器集合涵盖了全球使用的所有主要测量系统。无论您需要在公制和英制单位之间转换，还是使用专业工程测量，我们的工具都能提供准确可靠的结果。",
+        "intro": "当前精选单位转换器聚焦在常见测量体系和日常核对场景，并提供更清晰的公式、单位与结果展示。",
         "lengthConversions": "在米、英尺、英寸、厘米、毫米、千米、英里、码等之间转换。非常适合建筑、工程和日常测量。",
         "weightMass": "轻松在千克、磅、克、盎司、英石和其他重量单位之间转换。非常适合烹饪、健身、运输和科学应用。",
-        "temperatureScales": "在摄氏度、华氏度和开尔文温标之间转换。对天气、烹饪、科学研究和国际交流至关重要。",
-        "engineeringUnits": "专业级转换器，用于压力（PSI、Bar、Pascal）、能量（焦耳、卡路里、BTU）、功率（瓦特、马力）和数据存储（KB、MB、GB、TB）。",
-        "conclusion": "我们所有的转换器都免费使用，无需注册，在所有设备上都能工作。非常适合学生、专业人士和任何需要快速准确单位转换的人。"
+        "temperatureScales": "在摄氏度、华氏度和开尔文温标之间转换，适合天气、烹饪、科研和日常参考。",
+        "engineeringUnits": "用于压力（PSI、Bar、Pascal）、能量（焦耳、卡路里、BTU）、功率（瓦特、马力）和数据存储（KB、MB、GB、TB）的转换工具。",
+        "conclusion": "这些精选转换器围绕常见测量工作流持续维护，并且无需创建账号即可使用。"
       },
       "common": {
         "searchesPerMonth": "搜索/月",
@@ -773,7 +783,7 @@
           "wcag对比度检查器",
           "色彩理论工具",
           "hsl转换器",
-          "免费颜色工具",
+          "颜色工具",
           "在线颜色选择器"
         ]
       },
@@ -784,14 +794,14 @@
       },
       "sections": {
         "essential": {
-          "title": "基本颜色工具",
+          "title": "颜色工具",
           "useTool": "使用工具"
         },
         "categories": {
           "title": "按类别浏览"
         },
         "workflows": {
-          "title": "专业颜色工作流程"
+          "title": "颜色工作流"
         },
         "complete": {
           "title": "为设计师提供完整的颜色工具套件"
@@ -834,10 +844,10 @@
         }
       },
       "content": {
-        "intro": "我们全面的颜色工具集合为设计师和开发者提供专业颜色工作流程所需的一切。从基本颜色转换到高级调色板生成，我们的工具支持现代设计和开发实践。",
+        "intro": "当前精选颜色工具聚焦在格式转换、对比度检查，以及设计和前端场景中更常见的日常颜色工作流。",
         "colorConversion": "在HEX、RGB和HSL颜色格式之间无缝转换。非常适合网页开发、CSS样式和跨平台设计一致性。",
         "designGeneration": "创建美丽的渐变，从图像中提取调色板，并基于色彩理论原理生成和谐的配色方案。",
-        "professionalColorPicker": "具有HSL控制、颜色历史和实时预览的高级颜色选择。支持所有主要颜色格式并提供即时CSS代码生成。",
+        "professionalColorPicker": "提供 HSL 控制、颜色历史和预览功能，支持常见颜色格式，并给出可直接使用的 CSS 输出。",
         "accessibilityCompliance": "使用我们的对比度检查器确保您的设计符合WCAG AA和AAA标准。测试文本可读性和颜色组合以获得最佳可访问性。",
         "conclusion": "当前精选颜色工具聚焦在实际常用的格式转换、对比度检查与结果解释，面向设计和前端工作流。"
       },
@@ -848,24 +858,24 @@
   },
   "home": {
     "hero": {
-      "title": "强大的在线工具",
-      "subtitle": "实用工具集合，提升你的工作效率",
+      "title": "在线工具",
+      "subtitle": "面向常见工作流的实用工具集合",
       "cta": "探索工具"
     },
     "features": {
       "title": "为什么选择我们的工具？",
       "items": [
         {
-          "title": "快速可靠",
-          "description": "所有工具在浏览器本地运行，确保最高速度和隐私保护"
+          "title": "上手更快",
+          "description": "精选工具会在页面内展示结果，并补充更清晰的范围与限制说明"
         },
         {
-          "title": "无需注册",
-          "description": "无需创建账户即可立即使用所有工具"
+          "title": "无需账号",
+          "description": "公开工具无需创建账户即可使用"
         },
         {
           "title": "移动友好",
-          "description": "在所有设备和屏幕尺寸上完美运行"
+          "description": "适配常见设备和屏幕尺寸"
         }
       ]
     }

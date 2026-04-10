@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Cash Out Refinance Calculator - Home Equity Access Tool",
-    "description": "The Cash Out Refinance Calculator is a comprehensive refinancing tool designed to help homeowners calculate the benefits and costs of cash-out refinancing. This calculator helps you determine how much cash you can access from your home equity, new monthly payments, and whether cash-out refinancing makes financial sense. Whether you're consolidating debt, funding home improvements, or accessing cash for investments, this tool provides accurate projections for cash-out refinance scenarios."
+    "description": "The Cash Out Refinance Calculator is a refinancing planning tool designed to help homeowners estimate the costs and tradeoffs of cash-out refinancing. This calculator helps you review how much cash you may be able to access from your home equity, new monthly payments, and how a cash-out refinance compares with other borrowing options. Whether you're consolidating debt, funding home improvements, or covering other expenses, this tool provides scenario-based estimates for cash-out refinance planning."
   },
   "howTo": {
     "title": "How to Use the Cash Out Refinance Calculator",
@@ -61,7 +61,7 @@
     },
     {
       "title": "ROI Calculator",
-      "description": "Calculate potential return on investment if cash is used for improvements or investments."
+      "description": "Compare hypothetical return scenarios if cash is used for improvements or other planned uses."
     }
   ],
   "faq": [
@@ -70,8 +70,8 @@
       "a": "Most lenders allow cash-out refinancing up to 80% of your home's value. For example, if your home is worth $400,000 and you owe $200,000, you could potentially access up to $120,000 cash ($400,000 × 80% - $200,000 = $120,000)."
     },
     {
-      "q": "When does cash-out refinancing make sense?",
-      "a": "Cash-out refinancing makes sense when you can get a lower interest rate than your current mortgage, need funds for high-return investments, or want to consolidate higher-interest debt. Consider closing costs and ensure the benefits outweigh the costs."
+      "q": "When might cash-out refinancing be worth considering?",
+      "a": "Cash-out refinancing may be worth considering when you can lower your rate, need funds for a specific purpose, or want to compare it against higher-rate debt. Review closing costs, your new loan balance, and the long-term payment impact before deciding."
     },
     {
       "q": "What are the risks of cash-out refinancing?",
@@ -79,7 +79,7 @@
     },
     {
       "q": "How do cash-out refinance rates compare to regular refinance rates?",
-      "a": "Cash-out refinance rates are typically 0.125% to 0.25% higher than rate-and-term refinance rates. However, they're usually much lower than credit card rates, personal loans, or HELOCs, making them attractive for debt consolidation."
+      "a": "Cash-out refinance rates are typically 0.125% to 0.25% higher than rate-and-term refinance rates. They are often lower than credit card rates, personal loans, or some HELOC offers, so they can be useful to compare when reviewing borrowing options."
     }
   ],
   "relativeLinks": [

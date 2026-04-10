@@ -23,7 +23,7 @@ export async function generateMetadata({
   const entry = getLocalizedToolEntry(l, 'pdf-to-word-converter', mediaEn as ToolCatalogEntry[], mediaZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name ?? 'PDF to Word Converter';
-  const description: string = entry?.description ?? 'Convert PDF files to editable Word documents. Free online PDF to Word converter with high-quality conversion, OCR support, and layout preservation.';
+  const description: string = entry?.description ?? 'Review notes for a PDF to Word workflow, including document-handling limits and current public availability status.';
   const baseKeywords = generateOptimizedKeywords('pdf-to-word-converter', 'media', 'PDF to Word Converter');
   const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
     ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
@@ -57,7 +57,7 @@ export default async function PdfToWordConverterPage({
   const entry = getLocalizedToolEntry(l, 'pdf-to-word-converter', mediaEn as ToolCatalogEntry[], mediaZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name ?? 'PDF to Word Converter';
-  const description: string = entry?.description ?? 'Convert PDF files to editable Word documents with instant processing and layout preservation.';
+  const description: string = entry?.description ?? 'This page explains PDF to Word workflow considerations and why the interactive version is not currently part of the featured public surface.';
   const baseKeywords = generateOptimizedKeywords('pdf-to-word-converter', 'media', 'PDF to Word Converter');
   const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
     ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
@@ -78,27 +78,28 @@ export default async function PdfToWordConverterPage({
       faqs={toolContent.faqs}
     >
       <div className="text-center py-12 bg-muted rounded-lg">
-        <div className="text-6xl mb-4">🚧</div>
-        <h2 className="text-2xl font-semibold mb-4">Coming Soon</h2>
+        <div className="text-6xl mb-4">📝</div>
+        <h2 className="text-2xl font-semibold mb-4">Under review</h2>
         <p className="text-muted-foreground mb-6">
-          We&apos;re working on bringing you the best PDF to Word conversion experience. 
-          This tool will feature advanced OCR, layout preservation, and batch processing.
+          This page is currently limited to workflow notes and document-handling guidance. The
+          interactive PDF to Word tool is not part of the featured public surface until its
+          implementation, scope limits, and policy wording are reviewed together.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto">
           <div className="p-4 bg-background rounded-lg">
-            <div className="text-2xl mb-2">🎯</div>
-            <div className="font-medium">High Accuracy</div>
-            <div className="text-sm text-muted-foreground">Preserve formatting and layout</div>
+            <div className="text-2xl mb-2">📄</div>
+            <div className="font-medium">Document limits</div>
+            <div className="text-sm text-muted-foreground">Complex layouts and scanned pages need extra scrutiny</div>
           </div>
           <div className="p-4 bg-background rounded-lg">
-            <div className="text-2xl mb-2">🔒</div>
-            <div className="font-medium">Secure</div>
-            <div className="text-sm text-muted-foreground">Files processed locally</div>
+            <div className="text-2xl mb-2">🔍</div>
+            <div className="font-medium">Expectation setting</div>
+            <div className="text-sm text-muted-foreground">This page explains where conversion results usually need manual review</div>
           </div>
           <div className="p-4 bg-background rounded-lg">
-            <div className="text-2xl mb-2">⚡</div>
-            <div className="font-medium">Fast</div>
-            <div className="text-sm text-muted-foreground">Quick conversion process</div>
+            <div className="text-2xl mb-2">✅</div>
+            <div className="font-medium">Verification first</div>
+            <div className="text-sm text-muted-foreground">Confirm formatting and extracted text independently before use</div>
           </div>
         </div>
       </div>

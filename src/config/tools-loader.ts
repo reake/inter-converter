@@ -28,13 +28,104 @@ const REVIEW_APPROVED_TOOL_PATHS = [
   '/color/hex-to-rgb-converter',
   '/color/color-picker-tool',
   '/color/contrast-checker',
-  '/media/jpg-to-png-converter',
+  '/auto/carburetor-cfm-calculator',
+  '/auto/compression-ratio-calculator',
+  '/auto/engine-size-converter',
+  '/auto/gear-ratio-calculator',
+  '/auto/power-to-weight-ratio',
+  '/auto/ram-air-calculator',
+  '/auto/rpm-calculator',
+  '/auto/speed-converter',
+  '/auto/supercharger-calculator',
+  '/auto/temperature-converter',
+  '/auto/temperature-converter-enhanced',
+  '/auto/tire-calculator',
+  '/auto/torque-horsepower-calculator',
+  '/auto/volumetric-efficiency-calculator',
+  '/auto/engine-volume-calculator',
+  '/auto/fluid-weight-calculator',
+  '/auto/auto-weight-converter',
+  '/auto/engine-displacement-calculator',
+  '/auto/power-to-weight-calculator',
+  '/auto/tire-speed-calculator',
 ] as const;
 
 const REVIEW_APPROVED_TOOL_PATH_SET = new Set<string>(REVIEW_APPROVED_TOOL_PATHS);
-const REVIEW_APPROVED_CATEGORIES: ToolCategory[] = ['unit', 'time', 'color', 'media'];
+const REVIEW_APPROVED_CATEGORIES: ToolCategory[] = ['unit', 'time', 'color', 'auto'];
 
 const normalizeReviewPath = (path: string): string => path.replace(/^\/[a-z]{2}(?=\/)/, '');
+
+const NON_FEATURED_TOOL_DESCRIPTION_BY_CATEGORY: Record<ToolCategory, { en: string; zh: string }> = {
+  auto: {
+    en: 'Automotive reference tool with formula-based calculations and result review guidance. This page is not part of the current featured public surface.',
+    zh: '汽车参考工具页，提供基于公式的计算与复核提示。该页面当前不属于公开精选范围。',
+  },
+  color: {
+    en: 'Color reference tool with format-aware output and result review guidance. This page is not part of the current featured public surface.',
+    zh: '颜色参考工具页，提供格式相关结果与复核提示。该页面当前不属于公开精选范围。',
+  },
+  finance: {
+    en: 'Financial reference tool with formula-based estimates and result review guidance. This page is not part of the current featured public surface.',
+    zh: '金融参考工具页，提供基于公式的估算与复核提示。该页面当前不属于公开精选范围。',
+  },
+  health: {
+    en: 'Health reference tool with estimate-based outputs and clear verification boundaries. This page is not part of the current featured public surface.',
+    zh: '健康参考工具页，提供估算结果与清晰的复核边界。该页面当前不属于公开精选范围。',
+  },
+  media: {
+    en: 'File-workflow reference page with scope limits and verification guidance. This page is not part of the current featured public surface.',
+    zh: '文件工作流参考页，说明范围限制与复核建议。该页面当前不属于公开精选范围。',
+  },
+  science: {
+    en: 'Scientific reference tool with formula-based outputs and result review guidance. This page is not part of the current featured public surface.',
+    zh: '科学参考工具页，提供基于公式的结果与复核提示。该页面当前不属于公开精选范围。',
+  },
+  time: {
+    en: 'Time and date reference tool with practical workflow guidance. This page is not part of the current featured public surface.',
+    zh: '时间日期参考工具页，提供实用流程说明。该页面当前不属于公开精选范围。',
+  },
+  unit: {
+    en: 'Unit conversion reference tool with formula-based outputs and clear result guidance. This page is not part of the current featured public surface.',
+    zh: '单位换算参考工具页，提供基于公式的结果与清晰说明。该页面当前不属于公开精选范围。',
+  },
+};
+
+export const sanitizeToolDescription = (
+  description: string,
+  category: ToolCategory,
+  path: string,
+): string => {
+  if (REVIEW_APPROVED_TOOL_PATH_SET.has(normalizeReviewPath(path))) {
+    return description;
+  }
+
+  const locale = /^\/zh\//.test(path) ? 'zh' : 'en';
+  return NON_FEATURED_TOOL_DESCRIPTION_BY_CATEGORY[category][locale];
+};
+
+export const sanitizeToolCatalogEntry = <T extends { description?: string; category?: string; path?: string }>(
+  entry: T,
+): T => {
+  if (!entry.description || !entry.category || !entry.path) {
+    return entry;
+  }
+
+  return {
+    ...entry,
+    description: sanitizeToolDescription(entry.description, entry.category as ToolCategory, entry.path),
+  };
+};
+
+export const sanitizeSearchIndexEntry = <T extends { description?: string; category?: string; path?: string }>(
+  entry: T,
+): T => sanitizeToolCatalogEntry(entry);
+
+export const sanitizeSearchIndexEntries = <T extends { description?: string; category?: string; path?: string }>(
+  entries: T[],
+): T[] => entries.map((entry) => sanitizeSearchIndexEntry(entry));
+
+export const isReviewApprovedPath = (path: string): boolean =>
+  REVIEW_APPROVED_TOOL_PATH_SET.has(normalizeReviewPath(path));
 
 type ToolConfigInput = Partial<ToolConfig> & {
   id: string;
@@ -50,7 +141,7 @@ const validateToolConfig = (tools: ToolConfigInput[]): ToolConfig[] => {
   return tools.map((tool) => ({
     id: tool.id,
     name: tool.name,
-    description: tool.description,
+    description: sanitizeToolDescription(tool.description, tool.category as ToolCategory, tool.path),
     category: tool.category as ToolCategory,
     keywords: tool.keywords || [],
     path: tool.path,
@@ -185,7 +276,7 @@ export const getToolById = (id: string, locale: string = 'en'): ToolConfig | und
 export const getReviewApprovedToolPaths = (): readonly string[] => REVIEW_APPROVED_TOOL_PATHS;
 
 export const isReviewApprovedTool = (tool: Pick<ToolConfig, 'path'>): boolean => {
-  return REVIEW_APPROVED_TOOL_PATH_SET.has(normalizeReviewPath(tool.path));
+  return isReviewApprovedPath(tool.path);
 };
 
 export const getToolsByCategory = (category: ToolCategory, limit?: number, locale: string = 'en'): ToolConfig[] => {

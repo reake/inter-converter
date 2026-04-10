@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Emergency Fund Calculator",
-    "description": "The Emergency Fund Calculator helps you determine how much money you should save for unexpected expenses and financial emergencies. This essential financial planning tool calculates your ideal emergency fund size based on your monthly expenses, income stability, and personal risk factors. Having an adequate emergency fund provides financial security and peace of mind, protecting you from debt when facing job loss, medical expenses, or other unexpected costs."
+    "description": "The Emergency Fund Calculator helps you estimate how much money to set aside for unexpected expenses and financial disruptions. It calculates a suggested emergency fund range based on monthly expenses, income stability, and personal risk factors. Use it as a planning reference when reviewing savings targets for job loss, medical expenses, or other unplanned costs."
   },
   "howTo": {
     "title": "How to Use the Emergency Fund Calculator",
@@ -40,8 +40,8 @@
   },
   "features": [
     {
-      "title": "Personalized Fund Size",
-      "description": "Calculate your ideal emergency fund based on expenses, income stability, and personal risk factors."
+      "title": "Suggested Fund Size",
+      "description": "Calculate an emergency fund range based on expenses, income stability, and personal risk factors."
     },
     {
       "title": "Savings Timeline",
@@ -61,7 +61,7 @@
     },
     {
       "title": "Savings Strategy",
-      "description": "Get recommendations on where to keep your emergency fund for optimal accessibility and growth."
+      "description": "Review common options for keeping emergency funds accessible while limiting unnecessary risk."
     }
   ],
   "faq": [

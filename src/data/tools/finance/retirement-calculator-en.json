@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Retirement Calculator",
-    "description": "The Retirement Calculator is a comprehensive financial planning tool designed to help you determine how much you need to save for retirement and whether you're on track to meet your retirement goals. This calculator takes into account your current age, desired retirement age, current savings, expected contributions, and investment returns to project your retirement readiness. Planning for retirement is one of the most important financial decisions you'll make, and this tool helps you understand the power of compound interest, the impact of consistent contributions, and the importance of starting early."
+    "description": "The Retirement Calculator helps you estimate how current savings, contributions, time horizon, and assumed returns may affect retirement planning. It can be used to review different contribution levels, retirement ages, and income goals so you can compare scenarios and identify possible gaps. Use it as a planning reference rather than a guarantee of future retirement outcomes."
   },
   "howTo": {
     "title": "How to Use the Retirement Calculator",
@@ -28,46 +28,46 @@
       },
       {
         "title": "Review Results",
-        "description": "Analyze the projection and adjust parameters to optimize your retirement plan."
+        "description": "Review the projection and adjust parameters to compare retirement planning scenarios."
       }
     ],
     "tips": [
-      "Start saving as early as possible to maximize compound growth",
+      "Starting earlier can increase the effect of compounding over time",
       "Consider increasing contributions with salary raises",
-      "Review and adjust your plan annually",
-      "Factor in Social Security benefits for comprehensive planning"
+      "Review and adjust your plan periodically",
+      "Factor in Social Security and other income sources when comparing scenarios"
     ]
   },
   "features": [
     {
-      "title": "Comprehensive Projection",
-      "description": "Complete retirement savings projection with compound growth calculations and timeline analysis."
+      "title": "Retirement Projection",
+      "description": "Project retirement savings growth with compounding and timeline assumptions."
     },
     {
-      "title": "Readiness Assessment",
-      "description": "Retirement readiness assessment and gap analysis to identify shortfalls."
+      "title": "Gap Review",
+      "description": "Compare projected savings with retirement income goals to review possible gaps."
     },
     {
       "title": "Scenario Planning",
-      "description": "Multiple scenario planning for different contribution levels and retirement ages."
+      "description": "Compare different contribution levels, retirement ages, and income goals."
     },
     {
       "title": "Social Security Integration",
-      "description": "Social Security benefit estimation and integration for complete income planning."
+      "description": "Include Social Security estimates when reviewing retirement income scenarios."
     },
     {
       "title": "Inflation Adjustment",
-      "description": "Inflation adjustment calculations for realistic purchasing power planning."
+      "description": "Adjust projections for inflation when reviewing future purchasing power."
     },
     {
       "title": "Required Savings Rate",
-      "description": "Calculate the required savings rate to meet your specific retirement goals."
+      "description": "Estimate the savings rate associated with your selected retirement assumptions."
     }
   ],
   "faq": [
     {
       "q": "How much should I save for retirement?",
-      "a": "Financial experts generally recommend saving 10-15% of your income for retirement. However, the exact amount depends on your retirement goals, current age, and expected retirement lifestyle. Starting early allows compound interest to work in your favor."
+      "a": "Some planning frameworks use savings targets such as 10-15% of income, but the amount depends on your retirement goals, current age, expected lifestyle, and other income sources. Use the calculator to compare scenarios rather than relying on one rule of thumb."
     },
     {
       "q": "What's a realistic rate of return for retirement investments?",
@@ -75,7 +75,7 @@
     },
     {
       "q": "When should I start saving for retirement?",
-      "a": "The best time to start saving for retirement is as early as possible. Due to compound interest, someone who starts saving at 25 will need to save much less per month than someone who starts at 35 to reach the same retirement goal."
+      "a": "Starting earlier generally gives savings more time to compound. The calculator can help compare how different starting ages and contribution levels change long-term projections."
     },
     {
       "q": "How much income will I need in retirement?",

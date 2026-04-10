@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Auto Loan Calculator",
-    "description": "The Auto Loan Calculator is a comprehensive tool designed to help you calculate monthly payments, total interest costs, and loan terms for vehicle financing. Whether you're buying a new or used car, this calculator provides accurate payment estimates and helps you compare different loan scenarios to find the best financing option. Understanding your auto loan payments is crucial for budgeting and making informed purchasing decisions, taking into account vehicle price, down payment, trade-in value, loan term, and interest rate for detailed payment analysis."
+    "description": "The Auto Loan Calculator is a vehicle financing tool designed to help you estimate monthly payments, total interest costs, and loan terms. Whether you're buying a new or used car, this calculator provides payment estimates and helps you compare different loan scenarios. Understanding your auto loan payments can support budgeting and purchase planning by taking into account vehicle price, down payment, trade-in value, loan term, and interest rate."
   },
   "howTo": {
     "title": "How to Use the Auto Loan Calculator",
@@ -41,7 +41,7 @@
   "features": [
     {
       "title": "Monthly Payment Calculation",
-      "description": "Calculate exact monthly payments including principal, interest, taxes, and additional fees."
+      "description": "Calculate estimated monthly payments including principal, interest, taxes, and additional fees."
     },
     {
       "title": "Total Cost Analysis",
@@ -53,15 +53,15 @@
     },
     {
       "title": "Trade-in Integration",
-      "description": "Factor in current vehicle trade-in value for accurate net financing calculations."
+      "description": "Factor in current vehicle trade-in value for estimated net financing calculations."
     },
     {
       "title": "Multiple Term Comparison",
-      "description": "Compare different loan terms (24-84 months) to find the optimal payment structure."
+      "description": "Compare different loan terms (24-84 months) to review a payment structure that fits your budget."
     },
     {
       "title": "Tax and Fee Calculator",
-      "description": "Include sales tax, title fees, and dealer charges for comprehensive cost analysis."
+      "description": "Include sales tax, title fees, and dealer charges for detailed cost analysis."
     }
   ],
   "faq": [

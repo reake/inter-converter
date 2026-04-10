@@ -1,102 +1,86 @@
 {
   "about": {
-    "title": "About JPG to PNG Converter",
-    "description": "The JPG to PNG Converter is a powerful online tool that transforms JPEG images into PNG format with transparency support. This converter is essential for web designers, graphic artists, and content creators who need to maintain image quality while adding transparency capabilities to their images. Converting JPG to PNG format allows you to preserve image quality while gaining the ability to use transparent backgrounds, making it perfect for logos, icons, and web graphics that need to blend seamlessly with different backgrounds."
+    "title": "About JPG to PNG Notes",
+    "description": [
+      "This page currently explains when JPG to PNG is a reasonable workflow and what it cannot do by itself.",
+      "Converting a JPG to PNG does not restore detail lost to earlier JPG compression, and it does not automatically create transparent backgrounds.",
+      "The interactive version is not part of the featured public surface until its implementation details, limitations, and policy wording are reviewed together."
+    ]
   },
   "howTo": {
-    "title": "How to Use the JPG to PNG Converter",
+    "title": "How to Use This Review Note",
     "steps": [
       {
-        "title": "Upload JPG Files",
-        "description": "Select or drag and drop your JPG/JPEG image files into the upload area."
+        "title": "Check the source image",
+        "description": "Decide whether the JPG already contains visible compression artifacts or text edges that may make a different workflow more appropriate."
       },
       {
-        "title": "Choose Settings",
-        "description": "Select PNG conversion settings and quality optimization options."
+        "title": "Define the goal",
+        "description": "Confirm whether you actually need PNG for editing stability, graphics handling, or export requirements rather than assuming it will improve quality."
       },
       {
-        "title": "Convert Images",
-        "description": "Click convert to process your images instantly with transparency support."
+        "title": "Review the limitations",
+        "description": "Use the notes on this page to understand transparency limits, expected file-size tradeoffs, and when another destination format may be better."
       },
       {
-        "title": "Download Results",
-        "description": "Preview and download individual files or use batch download for multiple conversions."
+        "title": "Verify the final output independently",
+        "description": "Before publishing or relying on a converted asset, confirm the output visually in the destination workflow."
       }
     ],
     "tips": [
-      "Use PNG format for images requiring transparency",
-      "Batch convert multiple JPG files simultaneously",
-      "Preview results before downloading for quality assurance"
+      "PNG is often useful as a later editing format, not as a magic quality upgrade.",
+      "If you need a transparent background, you still need a workflow that explicitly removes or masks the background.",
+      "For photo-heavy content where size matters most, JPG or WebP may remain the better target."
     ]
   },
   "features": [
     {
-      "title": "High-Quality Conversion",
-      "description": "Lossless JPG to PNG conversion maintaining original image quality and detail."
+      "title": "Workflow guidance",
+      "description": "Explains when JPG to PNG is helpful and when it is not."
     },
     {
-      "title": "Transparency Support",
-      "description": "Convert to PNG format with full transparency and background removal capabilities."
+      "title": "Format boundaries",
+      "description": "Clarifies transparency expectations, compression tradeoffs, and later editing considerations."
     },
     {
-      "title": "Batch Processing",
-      "description": "Convert multiple JPG files to PNG format simultaneously for efficiency."
+      "title": "Public review status",
+      "description": "States that the interactive version is not currently in the featured public set."
     },
     {
-      "title": "Quality Optimization",
-      "description": "Advanced compression settings to balance file size and image quality."
-    },
-    {
-      "title": "Easy Upload Interface",
-      "description": "Drag and drop file upload with instant preview and download capabilities."
-    },
-    {
-      "title": "Secure Processing",
-      "description": "Client-side processing ensures image privacy and data security."
+      "title": "Verification reminder",
+      "description": "Encourages checking the output independently before use."
     }
   ],
   "faq": [
     {
-      "q": "What's the difference between JPG and PNG image formats?",
-      "a": "JPG uses lossy compression and doesn't support transparency, making it ideal for photographs. PNG uses lossless compression and supports transparent backgrounds, making it perfect for graphics, logos, and images requiring transparency. Our JPG to PNG converter helps you switch between these formats."
+      "q": "Does JPG to PNG automatically improve image quality?",
+      "a": "No. It can prevent additional loss in later edits, but it does not recover detail already lost to JPG compression."
     },
     {
-      "q": "Will converting JPG to PNG improve my image quality?",
-      "a": "Converting JPG to PNG won't improve the original quality since JPG compression has already been applied, but it prevents further quality loss and adds transparency support. PNG preserves the current quality without additional compression during our conversion process."
+      "q": "Will converting to PNG create transparency?",
+      "a": "No. PNG supports transparency, but converting a JPG alone does not create transparent areas without an additional editing step."
     },
     {
-      "q": "Can I convert multiple JPG files to PNG simultaneously?",
-      "a": "Yes, our JPG to PNG converter supports batch processing. You can upload multiple JPG files simultaneously and convert them all to PNG format in one operation, saving time and effort for bulk conversions."
+      "q": "Why is this page not presented as a fully launched tool?",
+      "a": "The public site only promotes file workflows after implementation details, usage limits, and policy wording are reviewed together."
     },
     {
-      "q": "Does the converted PNG file support transparency?",
-      "a": "Yes, all converted PNG files support full transparency capabilities. While the original JPG won't have transparent areas, you can use additional editing tools to remove backgrounds or add transparent areas to your converted PNG images."
-    },
-    {
-      "q": "Are there file size limits for JPG to PNG conversion?",
-      "a": "Our JPG to PNG converter handles various file sizes efficiently. For optimal performance, we recommend files under 50MB per image, though larger files are supported with extended processing time."
-    },
-    {
-      "q": "When should I use PNG instead of JPG format?",
-      "a": "Use PNG when you need transparency, lossless quality, or are working with graphics, logos, screenshots, or images with text. Use JPG for photographs where file size is more important than perfect quality. Our converter helps you switch formats as needed."
+      "q": "When is PNG the better target?",
+      "a": "PNG is often better when you plan further editing, need sharper graphic edges, or want a more stable intermediate export for screenshots, diagrams, or text-heavy assets."
     }
   ],
   "relativeLinks": [
     {
-      "title": "PDF to Word Converter",
-      "url": "/media/pdf-to-word-converter"
-    },
-    {
-      "title": "PNG to JPG Converter",
-      "url": "/media/png-to-jpg-converter"
-    },
-    {
-      "title": "Image Converter Tools",
-      "url": "/media/image-converter"
-    },
-    {
-      "title": "Media Tools Category",
+      "title": "File Tools Category Notes",
       "url": "/media"
+    },
+    {
+      "title": "Featured Tools",
+      "url": "/tools"
+    },
+    {
+      "title": "Contact",
+      "url": "/contact"
     }
   ]
 }

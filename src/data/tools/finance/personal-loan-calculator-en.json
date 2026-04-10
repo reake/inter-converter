@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Personal Loan Calculator - Unsecured Loan Planning Tool",
-    "description": "The Personal Loan Calculator is a comprehensive borrowing tool designed to help you calculate monthly payments, total costs, and affordability for personal loans. This calculator helps you compare loan offers, determine optimal loan terms, and understand the total cost of borrowing for debt consolidation, home improvements, or major purchases. Whether you're considering fixed-rate personal loans or comparing lenders, this tool provides accurate loan projections."
+    "description": "The Personal Loan Calculator helps you estimate monthly payments, total borrowing costs, and repayment scenarios for personal loans. It can be used to compare loan offers, review loan terms, and understand how rates and fees affect total cost for debt consolidation, home improvements, or major purchases. Use it as a planning reference when comparing lenders or loan structures."
   },
   "howTo": {
     "title": "How to Use the Personal Loan Calculator",
@@ -28,40 +28,40 @@
       },
       {
         "title": "Compare Loan Options",
-        "description": "Compare different loan amounts, terms, and rates to find the best option."
+        "description": "Compare different loan amounts, terms, and rates to review the tradeoffs between options."
       }
     ],
     "tips": [
-      "Personal loan rates typically range from 6-36% APR depending on credit score",
+      "Personal loan APRs vary widely based on credit profile, income, lender, and market conditions",
       "Shorter loan terms mean higher monthly payments but lower total interest",
-      "Shop around with multiple lenders to find the best rates and terms",
+      "Compare rates, fees, and repayment terms across lenders",
       "Consider origination fees when comparing total loan costs"
     ]
   },
   "features": [
     {
       "title": "Monthly Payment Calculator",
-      "description": "Calculate exact monthly payments with principal and interest breakdown for any loan amount and term."
+      "description": "Estimate monthly payments with principal and interest breakdown for different loan amounts and terms."
     },
     {
       "title": "Total Cost Analysis",
-      "description": "Analyze total loan cost including all interest charges over the complete loan term."
+      "description": "Review total loan cost including interest charges over the full loan term."
     },
     {
       "title": "Amortization Schedule",
-      "description": "View detailed payment progression showing how much goes to principal vs interest each month."
+      "description": "View payment progression showing how much goes to principal and interest each month."
     },
     {
       "title": "Loan Term Comparison",
-      "description": "Compare multiple loan terms (12-84 months) to find the best balance of payment and cost."
+      "description": "Compare multiple loan terms across monthly payment and total cost tradeoffs."
     },
     {
       "title": "Interest Rate Impact",
-      "description": "Analyze how different interest rates affect monthly payments and total loan costs."
+      "description": "Review how different interest rates affect monthly payments and total borrowing costs."
     },
     {
-      "title": "Affordability Assessment",
-      "description": "Evaluate loan affordability based on income ratios and debt-to-income guidelines."
+      "title": "Affordability Review",
+      "description": "Review loan affordability using your budget assumptions and debt-to-income context."
     }
   ],
   "faq": [

@@ -24,15 +24,15 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'toolsPage' });
   
-  const title = locale === 'zh' 
-    ? '当前精选在线工具与公开维护范围 | InterConverter'
-    : 'Featured Online Tools | InterConverter';
+  const title = locale === 'zh'
+    ? '免费在线工具大全 | InterConverter'
+    : 'Free Online Converter and Calculator Tools | InterConverter';
   
   const description = t('hero.description');
   
-  const keywords = locale === 'zh' 
-    ? ['在线转换器', '精选工具', '单位转换器', '颜色转换器', '时间转换器', '文件转换工具', '测量工具', '转换工具']
-    : ['online converter', 'featured tools', 'unit converter', 'color converter', 'time converter', 'file conversion tools', 'measurement tools', 'conversion tools'];
+  const keywords = locale === 'zh'
+    ? ['在线转换器', '在线计算器', '免费在线工具', '单位转换器', '颜色转换器', '时间转换器', '汽车计算器', '转换工具']
+    : ['online converter', 'online calculator', 'free online tools', 'unit converter', 'color converter', 'time converter', 'automotive calculator', 'conversion tools'];
   
   return generateSEOMetadata({
     title,

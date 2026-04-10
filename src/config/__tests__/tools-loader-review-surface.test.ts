@@ -9,7 +9,7 @@ describe('review-approved tool surface', () => {
   test('returns only the approved public tools', () => {
     const tools = getReviewApprovedTools('en');
 
-    expect(tools).toHaveLength(12);
+    expect(tools).toHaveLength(31);
     expect(tools.map((tool) => tool.path).sort()).toEqual(
       [...getReviewApprovedToolPaths()].sort(),
     );
@@ -36,17 +36,36 @@ describe('review-approved tool surface', () => {
       'contrast-checker',
     ]);
 
-    expect(getReviewApprovedToolsByCategory('media', 'en').map((tool) => tool.id)).toEqual([
-      'jpg-to-png-converter',
+    expect(getReviewApprovedToolsByCategory('auto', 'en').map((tool) => tool.id)).toEqual([
+      'carburetor-cfm-calculator',
+      'compression-ratio-calculator',
+      'engine-size-converter',
+      'gear-ratio-calculator',
+      'power-to-weight-ratio',
+      'ram-air-calculator',
+      'rpm-calculator',
+      'speed-converter',
+      'supercharger-calculator',
+      'temperature-converter',
+      'temperature-converter-enhanced',
+      'tire-calculator',
+      'torque-horsepower-calculator',
+      'volumetric-efficiency-calculator',
+      'engine-volume-calculator',
+      'fluid-weight-calculator',
+      'auto-weight-converter',
+      'engine-displacement-calculator',
+      'power-to-weight-calculator',
+      'tire-speed-calculator',
     ]);
 
+    expect(getReviewApprovedToolsByCategory('media', 'en')).toEqual([]);
     expect(getReviewApprovedToolsByCategory('finance', 'en')).toEqual([]);
     expect(getReviewApprovedToolsByCategory('health', 'en')).toEqual([]);
-    expect(getReviewApprovedToolsByCategory('auto', 'en')).toEqual([]);
   });
 
   test('reports only categories with review-approved public tools', () => {
-    expect(getReviewApprovedCategories()).toEqual(['unit', 'time', 'color', 'media']);
+    expect(getReviewApprovedCategories()).toEqual(['unit', 'time', 'color', 'auto']);
   });
 
   test('matches the review-approved surface across localized paths', () => {
@@ -54,6 +73,7 @@ describe('review-approved tool surface', () => {
 
     expect(zhTools.map((tool) => tool.path)).toContain('/zh/unit/temperature-converter');
     expect(zhTools.map((tool) => tool.path)).toContain('/zh/color/contrast-checker');
-    expect(zhTools).toHaveLength(12);
+    expect(zhTools.map((tool) => tool.path)).toContain('/zh/auto/rpm-calculator');
+    expect(zhTools).toHaveLength(31);
   });
 });

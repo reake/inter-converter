@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Fahrenheit to Celsius Converter",
-    "description": "The Fahrenheit to Celsius Converter is a specialized tool for converting temperatures from the Fahrenheit scale to the Celsius scale. This converter is essential for international communication, scientific work, and everyday temperature understanding. Fahrenheit is primarily used in the United States, while Celsius is the standard in most other countries and scientific applications. Whether you're traveling internationally, following international recipes, or working with scientific data, this tool provides instant and accurate Fahrenheit to Celsius conversions with professional precision."
+    "description": "The Fahrenheit to Celsius Converter is a specialized tool for converting temperatures from the Fahrenheit scale to the Celsius scale. This converter is useful for international communication, scientific reference, and everyday temperature understanding. Fahrenheit is primarily used in the United States, while Celsius is the standard in most other countries and scientific applications. Whether you're traveling internationally, following international recipes, or working with scientific data, this tool provides instant Fahrenheit to Celsius conversions using the standard formula."
   },
   "howTo": {
     "title": "How to Convert Fahrenheit to Celsius",
@@ -74,7 +74,7 @@
     },
     {
       "q": "How accurate is this Fahrenheit to Celsius converter?",
-      "a": "Our converter uses the exact mathematical formula with high decimal precision, making it suitable for scientific research, cooking, weather analysis, and professional applications. The accuracy meets all international standards."
+      "a": "Our converter uses the exact mathematical formula with decimal precision, making it suitable for scientific reference, cooking, and weather analysis."
     },
     {
       "q": "How do I convert 100 degrees Fahrenheit to Celsius?",

@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About CSS Gradient Generator - Linear & Radial CSS",
-    "description": "The CSS Gradient Generator creates smooth color transitions and gradients for web design and digital art. Generate linear, radial, and conic gradients with multiple color stops and customizable directions. Perfect for creating background effects, button styles, and visual elements that require smooth color transitions. Supports CSS-ready output for immediate use in web projects with cross-browser compatibility."
+    "description": "The CSS Gradient Generator creates color transitions and gradients for web design and digital art. Generate linear, radial, and conic gradients with multiple color stops and customizable directions. It is useful for creating backgrounds, button styles, and other visual elements, with CSS output that can be copied into web projects."
   },
   "howTo": {
     "title": "How to Use the CSS Gradient Generator",
@@ -20,7 +20,7 @@
       },
       {
         "title": "Set Direction and Angle",
-        "description": "Configure gradient direction, angle, and positioning for optimal visual effect."
+        "description": "Configure gradient direction, angle, and positioning for the intended visual effect."
       },
       {
         "title": "Preview Gradient",
@@ -57,7 +57,7 @@
     },
     {
       "title": "Direction and Angle Controls",
-      "description": "Precise control over gradient direction, angle, and positioning parameters."
+      "description": "Direct control over gradient direction, angle, and positioning parameters."
     },
     {
       "title": "Gradient Presets",

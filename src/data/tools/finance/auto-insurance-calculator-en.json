@@ -1,14 +1,14 @@
 {
   "about": {
     "title": "About Auto Insurance Calculator - Vehicle Insurance Cost Estimator",
-    "description": "The Auto Insurance Calculator is a comprehensive vehicle insurance tool designed to help drivers estimate auto insurance costs and find the best coverage options. Whether you're shopping for new car insurance, comparing quotes, or evaluating coverage changes, this calculator provides accurate premium estimates based on your vehicle, driving history, and coverage preferences. Understanding auto insurance calculations helps you make informed decisions about coverage levels and find the most cost-effective insurance protection."
+    "description": "The Auto Insurance Calculator is a vehicle insurance planning tool designed to help drivers estimate auto insurance costs and compare coverage options. Whether you're shopping for new car insurance, reviewing quotes, or evaluating coverage changes, this calculator provides premium estimates based on your vehicle, driving history, and coverage preferences. Understanding auto insurance cost factors can help you compare coverage levels and costs more clearly."
   },
   "howTo": {
     "title": "How to Use the Auto Insurance Calculator",
     "steps": [
       {
         "title": "Vehicle Information",
-        "description": "Enter your vehicle's make, model, year, and VIN to get accurate insurance rate estimates."
+        "description": "Enter your vehicle's make, model, year, and VIN to get insurance rate estimates."
       },
       {
         "title": "Driver Details",
@@ -20,11 +20,11 @@
       },
       {
         "title": "Coverage Options",
-        "description": "Select desired coverage types including liability, collision, comprehensive, and optional coverages."
+        "description": "Select desired coverage types including liability, collision, and other optional coverages."
       },
       {
         "title": "Deductibles",
-        "description": "Choose deductible amounts for collision and comprehensive coverage to balance premiums and out-of-pocket costs."
+        "description": "Choose deductible amounts for collision and vehicle damage coverage to balance premiums and out-of-pocket costs."
       },
       {
         "title": "Compare Quotes",
@@ -41,7 +41,7 @@
   "features": [
     {
       "title": "Premium Estimation",
-      "description": "Calculate accurate auto insurance premiums based on vehicle, driver, and coverage factors."
+      "description": "Estimate auto insurance premiums based on vehicle, driver, and coverage factors."
     },
     {
       "title": "Coverage Comparison",
@@ -71,7 +71,7 @@
     },
     {
       "q": "How much auto insurance coverage do I need?",
-      "a": "At minimum, carry your state's required liability coverage. Consider higher limits (100/300/100) for better protection. Add collision and comprehensive if you have a loan or valuable vehicle. Uninsured motorist coverage is also recommended."
+      "a": "At minimum, meet your state's required liability coverage. Many drivers also compare higher limits, as well as collision and other vehicle damage coverage, based on lender requirements, vehicle value, and comfort with out-of-pocket costs. Uninsured motorist coverage may also be worth reviewing where available."
     },
     {
       "q": "How can I lower my auto insurance premiums?",

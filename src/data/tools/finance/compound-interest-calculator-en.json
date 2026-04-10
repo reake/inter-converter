@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Compound Interest Calculator",
-    "description": "The Compound Interest Calculator demonstrates the power of compound interest over time. This essential financial tool helps you understand how your investments and savings can grow exponentially when interest is reinvested and earns additional returns. Whether you're planning for retirement, education savings, or long-term wealth building, this calculator shows the dramatic difference compound interest makes compared to simple interest calculations."
+    "description": "The Compound Interest Calculator helps you estimate how savings and investments may grow over time when interest is reinvested and earns additional returns. Whether you're planning for retirement, education savings, or other long-term goals, this calculator shows how compound interest compares with simple interest using formula-based projections."
   },
   "howTo": {
     "title": "How to Use the Compound Interest Calculator",
@@ -32,7 +32,7 @@
       }
     ],
     "tips": [
-      "Start investing early to maximize compound interest benefits",
+      "Starting earlier can increase the effect of compound interest",
       "Choose higher compounding frequencies when possible",
       "Make regular contributions to accelerate wealth building",
       "Compare compound vs simple interest to see the difference"
@@ -57,7 +57,7 @@
     },
     {
       "title": "Future Value Projections",
-      "description": "Accurate calculations of future investment value based on compound growth."
+      "description": "Formula-based projections of future investment value based on compound growth."
     },
     {
       "title": "Interest Breakdown",
@@ -70,8 +70,8 @@
       "a": "Compound interest is interest calculated on both the initial principal and previously earned interest. It creates exponential growth as your earnings generate their own earnings over time, often called 'interest on interest'."
     },
     {
-      "q": "How often should interest be compounded for maximum growth?",
-      "a": "More frequent compounding (daily vs annually) results in slightly higher returns. However, the difference becomes less significant with higher interest rates and longer time periods. Daily compounding typically provides the best growth."
+      "q": "How does compounding frequency affect growth?",
+      "a": "More frequent compounding (daily vs annually) results in slightly higher returns. However, the difference often becomes less significant across longer time periods. Daily compounding generally produces the highest result within the same nominal rate assumptions."
     },
     {
       "q": "What's the difference between compound and simple interest?",

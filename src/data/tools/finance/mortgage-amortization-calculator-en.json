@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Mortgage Amortization Calculator - Payment Schedule Analysis Tool",
-    "description": "The Mortgage Amortization Calculator is a comprehensive mortgage analysis tool designed to help you understand how mortgage payments are applied to principal and interest over the life of your loan. This calculator generates detailed amortization schedules showing monthly payment breakdowns, remaining balances, and total interest costs. Whether you're comparing mortgage options or planning extra payments, this tool provides complete mortgage payment analysis."
+    "description": "The Mortgage Amortization Calculator helps you review how mortgage payments are applied to principal and interest over the life of a loan. It generates amortization schedules showing monthly payment breakdowns, remaining balances, and total interest costs. Use it to compare mortgage options or review the effect of extra payments."
   },
   "howTo": {
     "title": "How to Use the Mortgage Amortization Calculator",
@@ -20,7 +20,7 @@
       },
       {
         "title": "Add Start Date",
-        "description": "Enter the loan start date to generate accurate payment schedule."
+        "description": "Enter the loan start date to generate the payment schedule."
       },
       {
         "title": "Include Extra Payments",
@@ -33,8 +33,8 @@
     ],
     "tips": [
       "Early payments go mostly to interest, later payments to principal",
-      "Extra principal payments can save thousands in interest costs",
-      "Bi-weekly payments can cut 4-6 years off a 30-year mortgage",
+      "Extra principal payments may reduce total interest over the loan term",
+      "Bi-weekly payments can change payoff timing compared with standard monthly payments",
       "Review amortization schedules when considering refinancing"
     ]
   },
@@ -49,7 +49,7 @@
     },
     {
       "title": "Extra Payment Calculator",
-      "description": "Calculate interest savings and payoff acceleration from additional payments."
+      "description": "Review how additional payments may change payoff timing and total interest."
     },
     {
       "title": "Remaining Balance Tracker",
@@ -74,8 +74,8 @@
       "a": "Interest is calculated on the outstanding balance. With a large initial balance, interest charges are high. As you pay down principal, the balance decreases, so interest charges become smaller and more payment goes to principal."
     },
     {
-      "q": "How much can extra payments save?",
-      "a": "Extra payments can save substantial interest. For example, adding $100/month to a $300,000 30-year mortgage at 6% saves about $67,000 in interest and pays off the loan 5+ years early."
+      "q": "How do extra payments affect the amortization schedule?",
+      "a": "Extra payments generally reduce principal faster, which can shorten the loan term and lower total interest. The effect depends on the balance, rate, remaining term, and payment pattern entered into the calculator."
     },
     {
       "q": "What's the difference between bi-weekly and monthly payments?",

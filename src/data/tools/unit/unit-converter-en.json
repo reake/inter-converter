@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Universal Unit Converter",
-    "description": "The Universal Unit Converter provides comprehensive conversion between multiple unit categories including length, weight, temperature, area, volume, speed, pressure, energy, and more specialized measurements. This all-in-one conversion tool is perfect for students, professionals, engineers, and anyone needing quick and accurate unit conversions across different measurement systems. Supporting dozens of unit types from metric to imperial systems, this converter eliminates the need for multiple specialized tools by providing precise conversions in one convenient interface. Whether you're working on scientific calculations, engineering projects, cooking recipes, or educational assignments, our universal converter ensures accurate results across all major unit categories with professional-grade precision."
+    "description": "The Universal Unit Converter provides conversions across multiple unit categories including length, weight, temperature, area, volume, speed, pressure, energy, and other measurements. It is useful for students, engineers, and anyone comparing units across different measurement systems. Supporting many unit types from metric to imperial systems, this converter brings common conversions into one interface. Whether you're working on scientific reference tasks, engineering planning, cooking recipes, or educational assignments, it helps compare major unit categories using standard conversion factors."
   },
   "howTo": {
     "title": "How to Use the Universal Unit Converter",
@@ -16,7 +16,7 @@
       },
       {
         "title": "Enter Value",
-        "description": "Input the numerical value you want to convert. You can enter whole numbers or decimals for precise measurements."
+        "description": "Input the numerical value you want to convert. You can enter whole numbers or decimals for routine measurement checks."
       },
       {
         "title": "Select Target Unit",
@@ -24,7 +24,7 @@
       },
       {
         "title": "View Results",
-        "description": "The converted value will appear instantly with high precision calculations suitable for professional use."
+        "description": "The converted value will appear on the page using the selected conversion factors."
       }
     ],
     "tips": [
@@ -39,7 +39,7 @@
       "description": "Convert across length, weight, temperature, area, volume, speed, pressure, energy, power, and other measurement categories in one tool."
     },
     {
-      "title": "Comprehensive Unit Support",
+      "title": "Broad Unit Support",
       "description": "Extensive support for metric, imperial, and specialized units covering scientific, engineering, and everyday measurement needs."
     },
     {
@@ -51,18 +51,18 @@
       "description": "Seamless conversions between metric, imperial, and other international measurement systems with precise accuracy."
     },
     {
-      "title": "Professional Accuracy",
+      "title": "Clear Conversion Factors",
       "description": "High-precision calculations using internationally accepted conversion factors suitable for scientific and engineering applications."
     },
     {
       "title": "Educational Resource",
-      "description": "Perfect learning tool for students and professionals to understand unit relationships and measurement systems."
+      "description": "Helpful learning resource for students and anyone exploring unit relationships and measurement systems."
     }
   ],
   "faq": [
     {
       "q": "What unit categories does the universal unit converter support?",
-      "a": "Our universal unit converter supports comprehensive categories including length (meters, feet, inches), weight (kilograms, pounds), temperature (Celsius, Fahrenheit), area, volume, speed, pressure, energy, power, and many other specialized measurement categories across metric and imperial systems."
+      "a": "Our universal unit converter supports categories including length (meters, feet, inches), weight (kilograms, pounds), temperature (Celsius, Fahrenheit), area, volume, speed, pressure, energy, power, and other measurement categories across metric and imperial systems."
     },
     {
       "q": "Can I convert between different measurement systems?",
@@ -70,15 +70,15 @@
     },
     {
       "q": "How accurate are the universal converter calculations?",
-      "a": "All conversions use internationally accepted conversion factors and provide professional-grade accuracy suitable for scientific research, engineering applications, and technical calculations. The precision meets international standards."
+      "a": "All conversions use internationally accepted conversion factors and are suitable for reference checks across technical, educational, and everyday workflows."
     },
     {
       "q": "Is the universal converter better than using separate specialized converters?",
-      "a": "The universal converter is perfect for quick conversions across different categories and general-purpose use. For specialized applications requiring detailed features or extensive units within one category, dedicated converters may offer more comprehensive options."
+      "a": "The universal converter is useful for quick conversions across different categories and general-purpose use. For specialized workflows requiring detailed features or more units within one category, dedicated converters may offer broader options."
     },
     {
       "q": "What are the most common unit conversions supported?",
-      "a": "Popular conversions include meters to feet, kilograms to pounds, Celsius to Fahrenheit, liters to gallons, kilometers to miles, and many other frequently used measurement conversions for everyday and professional applications."
+      "a": "Popular conversions include meters to feet, kilograms to pounds, Celsius to Fahrenheit, liters to gallons, kilometers to miles, and many other frequently used measurement conversions for everyday and reference use."
     },
     {
       "q": "Can students use this converter for educational purposes?",

@@ -25,7 +25,7 @@ export function StructuredData({ tools = [], category, locale = 'en' }: Structur
     "@type": "Organization",
     "name": "InterConverter",
     "legalName": "InterConverter",
-    "description": "Leading provider of free online converter tools and professional calculators for developers, engineers, students, and professionals worldwide",
+    "description": "Public collection of online converter tools and calculators with a smaller featured set currently maintained on the site",
     "url": baseUrl,
     "foundingDate": "2024",
     "contactPoint": {
@@ -38,7 +38,7 @@ export function StructuredData({ tools = [], category, locale = 'en' }: Structur
       "Unit Converters",
       "Time Conversion Tools",
       "Color Conversion Tools",
-      "Image Conversion Tools"
+      "Automotive Calculators"
     ]
   };
 
@@ -75,7 +75,7 @@ export function StructuredData({ tools = [], category, locale = 'en' }: Structur
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": category ? `${categoryInfo?.name} Tools` : "Online Converter Tools",
-    "description": category ? categoryInfo?.description : "Comprehensive collection of free online converter tools and calculators",
+    "description": category ? categoryInfo?.description : "Current public collection of featured online converter tools and calculators",
     "numberOfItems": tools.length,
     "itemListElement": tools.slice(0, 20).map((tool, index) => ({
       "@type": "SoftwareApplication",
@@ -100,9 +100,9 @@ export function StructuredData({ tools = [], category, locale = 'en' }: Structur
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": category ? `${categoryInfo?.name} Tools` : "Online Converter Tools",
-    "description": category ? 
+    "description": category ?
       `Free ${categoryInfo?.name.toLowerCase()} tools including ${tools.slice(0, 3).map(t => t.name).join(', ')} and more.` :
-      `Free online converter tools and calculators. Convert units, currencies, files, and more.`,
+      `Featured online converter tools and calculators for units, time, colors, and selected workflows.`,
     "url": category ? `${baseUrl}${localePrefix}/${category}` : `${baseUrl}${localePrefix}/tools`,
     "mainEntity": {
       "@type": "ItemList",
@@ -117,7 +117,7 @@ export function StructuredData({ tools = [], category, locale = 'en' }: Structur
     "about": {
       "@type": "Thing",
       "name": category ? categoryInfo?.name : "Online Tools",
-      "description": category ? categoryInfo?.description : "Free online converter and calculation tools"
+      "description": category ? categoryInfo?.description : "Featured online converter and calculation tools maintained on the public site"
     }
   };
 

@@ -14,85 +14,85 @@
     "exploreAllTools": "Explore All Tools",
     "browseCategories": "Browse Categories",
     "viewAllTools": "View All Tools",
-    "startConverting": "Start Converting Free",
+    "startConverting": "Start Converting",
     "viewMore": "View More",
     "searchPlaceholder": "Search converter tools..."
   },
   "homepage": {
     "hero": {
-      "title": "InterConverter",
-      "subtitle": "Selected Online Converters and Calculators",
-      "description": "A curated set of browser-based tools for measurement, time, color, and file conversion tasks, with clearer explanations and verification notes."
+      "title": "Free Online Converters and Calculators",
+      "subtitle": "Unit, time, color, and everyday calculation tools",
+      "description": "Use free online converters and calculators for unit, time, color, and automotive tasks. Get browser-based results fast with no account required."
     },
     "sections": {
-      "popularTools": "Featured Tools",
-      "browseByCategory": "Browse Featured Categories",
+      "popularTools": "Popular Tools",
+      "browseByCategory": "Browse Tool Categories",
       "faq": "Frequently Asked Questions",
-      "faqSubtitle": "Practical questions about how the current featured tools work",
+      "faqSubtitle": "Common questions about using InterConverter online tools",
       "aboutTitle": "About InterConverter.com",
-      "aboutDescription": "InterConverter currently focuses on a smaller public tool set so each featured page can be easier to review, explain, and maintain.",
-      "whyChoose": "Why Choose InterConverter?",
-      "trustedBy": "Built for repeat use",
-      "trustedByDescription": "The public site prioritizes tools that solve common tasks clearly. Featured pages are being expanded with examples, caveats, and workflow guidance instead of directory-style filler."
+      "aboutDescription": "InterConverter offers free online converters and calculators designed to be easy to use, easy to review, and available across devices.",
+      "whyChoose": "Why Use InterConverter?",
+      "trustedBy": "Built for everyday checks and repeat use",
+      "trustedByDescription": "Use InterConverter for common tasks that need quick answers, clearer units, and straightforward browser-based workflows."
     },
     "features": {
       "professionalQuality": {
-        "title": "Professional Quality",
-        "description": "Featured tools use explicit formulas, clearer units, and result formatting designed for quick verification."
+        "title": "Clear Formulas",
+        "description": "Tools use clear formulas, readable units, and result formatting that is easier to verify at a glance."
       },
       "lightningFast": {
-        "title": "Lightning Fast",
-        "description": "Most featured conversions happen immediately in the browser with minimal workflow friction."
+        "title": "Quick to Use",
+        "description": "Most conversions and calculations run instantly in your browser, so you can get answers without extra steps."
       },
       "privacyFirst": {
-        "title": "Privacy First",
-        "description": "Many featured tools process their core calculation in the browser. Site-level analytics and advertising scripts may still load as part of normal page delivery."
+        "title": "Browser-Based Calculations",
+        "description": "Many tools process their core calculation in the browser. Analytics and advertising scripts may still load with the page."
       },
       "mobileOptimized": {
         "title": "Mobile Optimized",
-        "description": "The public featured set is being maintained with mobile readability and straightforward form inputs in mind."
+        "description": "Designed to stay readable and easy to use on phones, tablets, and desktop screens."
       },
       "globalStandards": {
         "title": "Global Standards",
-        "description": "Featured pages focus on common, widely used formats and units rather than trying to cover every niche case at once."
+        "description": "Covers common units, formats, and practical workflows used across everyday personal and work tasks."
       },
       "alwaysUpdated": {
         "title": "Focused maintenance",
-        "description": "Pages are revised in batches as workflows, examples, and explanation quality are improved."
+        "description": "Pages are updated to improve examples, explanations, and result guidance where they matter most."
       },
       "instantResults": {
         "title": "Quick Results",
-        "description": "Most featured tools return results immediately and are presented with simpler explanation blocks."
+        "description": "See results right away as you convert or calculate, with supporting notes where useful."
       },
       "completelyFree": {
-        "title": "Completely Free",
-        "description": "The public tool pages are free to access without an account."
+        "title": "No Account Required",
+        "description": "Use the tools for free without creating an account."
       },
       "privacyProtected": {
         "title": "Privacy Protected",
-        "description": "Calculation inputs are not treated as support submissions unless you explicitly contact us."
+        "description": "Your calculation inputs are not sent as support requests unless you choose to contact us."
       }
     },
     "faq": [
       {
-        "question": "Why are only certain tools featured right now?",
-        "answer": "The public site is intentionally curated. We are prioritizing tools that are broadly useful and easier to explain clearly before expanding the featured surface again."
+        "question": "Why do some categories have fewer tools than others?",
+        "answer": "InterConverter is growing category by category. We focus on useful tools that are easy to use, easy to review, and worth maintaining well."
       },
       {
-        "question": "Do featured tools run in the browser?",
-        "answer": "Many featured conversion workflows run in the browser after the page loads. Site assets, analytics scripts, and advertising scripts may still load as part of the page."
+        "question": "Do the tools run in the browser?",
+        "answer": "Many conversion and calculation workflows run in the browser after the page loads. Site assets, analytics scripts, and advertising scripts may still load as part of the page."
       },
       {
         "question": "Can I rely on the result without checking it?",
-        "answer": "No. For high-stakes work, always verify important results independently. Featured pages are meant to be useful and clear, but not a substitute for professional review."
+        "answer": "No. For high-stakes work, always verify important results independently. These tools are built to be practical and clear, but they are not a substitute for professional review."
       },
       {
         "question": "Do I need an account?",
-        "answer": "No. The current featured tools are available without account creation."
+        "answer": "No. You can use the current online tools without creating an account."
       },
       {
         "question": "Can I request improvements to a page?",
-        "answer": "Yes. Use the contact page to report unclear copy, calculation issues, missing examples, or requests for additional featured tools."
+        "answer": "Yes. Use the contact page to report unclear copy, calculation issues, missing examples, or tools you want us to prioritize."
       }
     ],
     "professionals": [
@@ -147,21 +147,21 @@
   },
   "toolsPage": {
     "hero": {
-      "title": "Featured Online Tools",
-      "description": "Browse the curated public tool set for measurement, time, color, contrast, and file conversion tasks, with clearer guidance and practical notes.",
+      "title": "Free Online Converter and Calculator Tools",
+      "description": "Browse free online converter and calculator tools for unit, time, color, contrast, and automotive tasks. Use them in your browser with no account required.",
       "stats": {
-        "professionalTools": "Curated public tool set",
-        "freeToUse": "Free to access",
-        "accurateResults": "Clear browser-based workflows"
+        "professionalTools": "Free online tools",
+        "freeToUse": "No account required",
+        "accurateResults": "Browser-based workflows"
       }
     },
     "sections": {
-      "popularTools": "Featured tools",
-      "popularToolsDescription": "The public tools currently being maintained and reviewed most actively",
-      "browseByCategory": "Browse featured categories",
-      "browseByCategoryDescription": "Explore the smaller public tool surface by category",
+      "popularTools": "Popular tools",
+      "popularToolsDescription": "Start with the online tools people use most for quick conversions and everyday checks",
+      "browseByCategory": "Browse tool categories",
+      "browseByCategoryDescription": "Explore free online converter and calculator tools by category",
       "callToAction": "Need a correction or a missing example?",
-      "callToActionDescription": "Contact us if a featured page needs clearer guidance, stronger examples, or better explanation."
+      "callToActionDescription": "Contact us if a tool page needs clearer guidance, stronger examples, or a better explanation."
     },
     "actions": {
       "useTool": "Use Tool",
@@ -174,39 +174,49 @@
   "categoryPages": {
     "auto": {
       "title": "Automotive Calculators",
-      "description": "Automotive tools remain implemented, but this category is not currently part of the featured public tool set.",
+      "description": "Browse automotive calculators for engine sizing, gearing, speed, temperature, airflow, and vehicle weight checks.",
       "stats": {
-        "autoTools": "19+ Auto Tools",
+        "autoTools": "20 Auto Tools",
         "realTimeCalculations": "Real-time calculations",
-        "professionalFormulas": "Professional formulas",
+        "formulaBasedReferences": "Formula-based references",
         "mobileOptimized": "Mobile optimized"
       },
       "sections": {
+        "popular": {
+          "title": "Popular automotive tools",
+          "useTool": "Open tool"
+        },
+        "categories": {
+          "title": "Browse by workflow"
+        },
         "enginePerformance": {
-          "title": "Engine Performance",
-          "description": "Calculate displacement, compression ratios, and carburetor sizing for optimal engine performance"
+          "title": "Engine & airflow",
+          "description": "Check displacement, compression, airflow, boost, and temperature calculations for engine-related workflows"
         },
         "drivetrainGearing": {
-          "title": "Drivetrain & Gearing",
-          "description": "Optimize gear ratios and analyze drivetrain performance for better acceleration and top speed"
+          "title": "Drivetrain & gearing",
+          "description": "Review gear ratio, RPM, tire size, and road-speed relationships for drivetrain planning"
         },
         "performanceAnalysis": {
-          "title": "Performance Analysis",
-          "description": "Analyze horsepower, torque, and overall vehicle performance metrics"
+          "title": "Performance comparisons",
+          "description": "Compare horsepower, torque, vehicle speed, and power-to-weight relationships across common scenarios"
         },
         "fluidsWeight": {
-          "title": "Fluids & Weight",
-          "description": "Calculate fluid capacities and weight distributions for optimal vehicle setup"
+          "title": "Fluids & weight",
+          "description": "Estimate fluid weight, unit conversions, and vehicle-weight values used in automotive references"
+        },
+        "notes": {
+          "title": "Important usage notes"
         }
       },
       "infoCards": {
         "aboutCalculators": {
-          "title": "About These Calculators",
-          "content": "These automotive reference tools are based on established formulas and workshop-style calculations. They should be treated as supporting estimates, not as a substitute for professional inspection or safety review."
+          "title": "About these calculators",
+          "content": "These automotive tools are based on common formulas and workshop-style reference calculations. Use them for estimates, comparisons, and planning checks alongside your own measurements."
         },
         "safetyNotice": {
-          "title": "Safety Notice",
-          "content": "These calculations are for educational and estimation purposes only. Always consult with qualified automotive professionals for engine modifications, tuning, and safety considerations. Actual results may vary based on specific conditions."
+          "title": "Safety notice",
+          "content": "These calculations do not replace inspection, tuning validation, or safety review on an actual vehicle. Verify measurements and consult a qualified technician when a result could affect reliability or safety."
         }
       },
       "difficulty": {
@@ -215,18 +225,18 @@
         "advanced": "Advanced"
       },
       "seo": {
-        "title": "Automotive Tools Reference | InterConverter",
+        "title": "Automotive Calculators | InterConverter",
         "keywords": [
-          "automotive tools reference",
+          "automotive calculators",
           "engine calculators",
           "carburetor cfm calculator",
           "compression ratio calculator",
           "gear ratio calculator",
           "horsepower calculator",
           "rpm calculator",
-          "engine tuning tools",
-          "automotive performance tools",
-          "engine reference tools"
+          "vehicle speed calculator",
+          "automotive reference tools",
+          "engine sizing tools"
         ]
       }
     },
@@ -371,7 +381,7 @@
           "personal finance",
           "financial planning",
           "money calculator",
-          "free financial tools"
+          "finance tools"
         ]
       }
     },
@@ -379,7 +389,7 @@
       "title": "Health & Fitness Calculators",
       "description": "Health tools remain implemented, but this category is not currently promoted as part of the featured public surface.",
       "seo": {
-        "title": "Free Health & Fitness Calculators - BMI, Body Fat, Calorie Tools | InterConverter",
+        "title": "Health & Fitness Calculators - BMI, Body Fat, Calorie Tools | InterConverter",
         "keywords": [
           "bmi calculator",
           "body mass index calculator",
@@ -399,7 +409,7 @@
         ]
       },
       "stats": {
-        "accurateCalculations": "Accurate calculations",
+        "accurateCalculations": "Formula-based calculations",
         "goalTracking": "Goal tracking",
         "healthFocused": "Health focused"
       },
@@ -479,7 +489,7 @@
           "document converter",
           "format converter",
           "online file converter",
-          "free media tools",
+          "media tools",
           "file format conversion",
           "multimedia converter",
           "digital file tools",
@@ -595,10 +605,10 @@
           "title": "Browse by Category"
         },
         "developer": {
-          "title": "Essential for Developers & Businesses"
+          "title": "Developer & Team Workflows"
         },
         "professional": {
-          "title": "Professional Time Management Tools"
+          "title": "Planning & Scheduling Workflows"
         }
       },
       "categories": {
@@ -625,20 +635,20 @@
         },
         "globalTimezones": {
           "title": "Global Timezones",
-          "description": "Handle international business with accurate timezone conversions and daylight saving time support."
+          "description": "Handle international scheduling with timezone conversions and daylight saving time support."
         },
         "businessPlanning": {
           "title": "Business Planning",
-          "description": "Calculate working days, project timelines, and business deadlines with precision and accuracy."
+          "description": "Calculate working days, project timelines, and business deadlines for planning workflows."
         }
       },
       "content": {
-        "intro": "Our comprehensive time and date tool collection serves developers, businesses, and individuals who need accurate time calculations and conversions. From Unix timestamp conversion to international timezone management, our tools handle complex time-related tasks with precision.",
-        "developerTools": "Convert Unix timestamps (epoch time) to readable dates, handle API timestamps, debug time-related issues, and manage database date fields with our professional timestamp converter.",
+        "intro": "The current time and date tool set focuses on practical workflows for timestamps, timezones, and date calculations that users can review more easily.",
+        "developerTools": "Convert Unix timestamps (epoch time) to readable dates, handle API timestamps, debug time-related issues, and manage database date fields with a clearer timestamp workflow.",
         "businessApplications": "Calculate working days between project milestones, plan international meetings across timezones, and track deadlines with our business-focused date calculation tools.",
         "globalOperations": "Our timezone converter supports all world timezones with automatic daylight saving time adjustments. Perfect for international teams, global businesses, and remote work coordination.",
         "personalProductivity": "Use our countdown timers for events, calculate your exact age, track time with our stopwatch, and stay organized with world clock displays for multiple cities.",
-        "conclusion": "All tools provide real-time accuracy, work offline after loading, and support multiple date formats. Essential for software development, project management, and international business.",
+        "conclusion": "The current featured time tools focus on timestamp, timezone, and date-difference workflows that are easier to explain, verify, and review.",
         "personalProductivityLabel": "Personal Productivity"
       },
       "common": {
@@ -669,14 +679,14 @@
           "meters to feet",
           "celsius to fahrenheit",
           "pounds to kg",
-          "free unit converter",
+          "unit converter",
           "online measurement tools"
         ]
       },
       "stats": {
         "conversions": "Featured core conversions",
         "freeAccurate": "Formula-based outputs",
-        "realTimeResults": "Immediate results"
+        "realTimeResults": "Quick results"
       },
       "sections": {
         "popular": {
@@ -727,25 +737,25 @@
       },
       "features": {
         "precisionAccuracy": {
-          "title": "Precision Accuracy",
-          "description": "Our converters use precise mathematical formulas to ensure accurate results every time."
+          "title": "Clear Formulas",
+          "description": "Our converters use clear formulas and readable outputs for common measurement checks."
         },
         "realTimeResults": {
-          "title": "Real-time Results",
-          "description": "Get instant conversions as you type, with no delays or waiting times."
+          "title": "Quick Results",
+          "description": "View conversions as you type for easier checking and comparison."
         },
         "userFriendly": {
-          "title": "User-Friendly",
-          "description": "Clean, intuitive interface designed for both beginners and professionals."
+          "title": "Straightforward Layout",
+          "description": "Clean, readable pages designed for routine checks and repeat use."
         }
       },
       "content": {
-        "intro": "Our comprehensive unit converter collection covers all major measurement systems used worldwide. Whether you need to convert between metric and imperial units, or work with specialized engineering measurements, our tools provide accurate and reliable results.",
+        "intro": "The featured unit converters focus on common measurement systems and routine checks, with clearer formulas, units, and result formatting.",
         "lengthConversions": "Convert between meters, feet, inches, centimeters, millimeters, kilometers, miles, yards, and more. Perfect for construction, engineering, and everyday measurements.",
         "weightMass": "Easily convert between kilograms, pounds, grams, ounces, stones, and other weight units. Ideal for cooking, fitness, shipping, and scientific applications.",
-        "temperatureScales": "Convert between Celsius, Fahrenheit, and Kelvin temperature scales. Essential for weather, cooking, scientific research, and international communication.",
-        "engineeringUnits": "Professional-grade converters for pressure (PSI, Bar, Pascal), energy (Joules, calories, BTU), power (Watts, horsepower), and data storage (KB, MB, GB, TB).",
-        "conclusion": "All our converters are free to use, require no registration, and work on all devices. Perfect for students, professionals, and anyone who needs quick and accurate unit conversions."
+        "temperatureScales": "Convert between Celsius, Fahrenheit, and Kelvin temperature scales for weather, cooking, scientific work, and everyday reference.",
+        "engineeringUnits": "Converters for pressure (PSI, Bar, Pascal), energy (Joules, calories, BTU), power (Watts, horsepower), and data storage (KB, MB, GB, TB).",
+        "conclusion": "These featured converters are maintained for common measurement workflows across devices and are available without account creation."
       },
       "common": {
         "searchesPerMonth": "searches/mo",
@@ -773,7 +783,7 @@
           "wcag contrast checker",
           "color theory tools",
           "hsl converter",
-          "free color tools",
+          "color tools",
           "online color picker"
         ]
       },
@@ -784,14 +794,14 @@
       },
       "sections": {
         "essential": {
-          "title": "Essential Color Tools",
+          "title": "Color Tools",
           "useTool": "Use Tool"
         },
         "categories": {
           "title": "Browse by Category"
         },
         "workflows": {
-          "title": "Professional Color Workflows"
+          "title": "Color Workflows"
         },
         "complete": {
           "title": "Complete Color Tool Suite for Designers"
@@ -834,10 +844,10 @@
         }
       },
       "content": {
-        "intro": "Our comprehensive color tool collection provides everything designers and developers need for professional color workflows. From basic color conversions to advanced palette generation, our tools support modern design and development practices.",
+        "intro": "The current featured color tools focus on practical workflows for format conversion, contrast checks, and day-to-day design or front-end use.",
         "colorConversion": "Seamlessly convert between HEX, RGB, and HSL color formats. Perfect for web development, CSS styling, and cross-platform design consistency.",
         "designGeneration": "Create beautiful gradients, extract color palettes from images, and generate harmonious color schemes based on color theory principles.",
-        "professionalColorPicker": "Advanced color selection with HSL controls, color history, and real-time preview. Supports all major color formats and provides instant CSS code generation.",
+        "professionalColorPicker": "Color selection with HSL controls, color history, and preview support. Supports common color formats and provides CSS-ready output.",
         "accessibilityCompliance": "Ensure your designs meet WCAG AA and AAA standards with our contrast checker. Test text readability and color combinations for optimal accessibility.",
         "conclusion": "The featured color tools focus on practical format conversion, contrast checks, and clearer result interpretation for design and front-end workflows."
       },
@@ -848,24 +858,24 @@
   },
   "home": {
     "hero": {
-      "title": "Powerful Online Tools",
-      "subtitle": "A collection of useful tools to boost your productivity",
+      "title": "Online Tools",
+      "subtitle": "A collection of useful tools for common workflows",
       "cta": "Explore Tools"
     },
     "features": {
       "title": "Why Choose Our Tools?",
       "items": [
         {
-          "title": "Fast & Reliable",
-          "description": "All tools run locally in your browser for maximum speed and privacy"
+          "title": "Quick to Use",
+          "description": "Featured tools aim to show on-page results with clearer notes about scope and limitations"
         },
         {
-          "title": "No Sign-in",
-          "description": "Use all tools instantly without creating an account"
+          "title": "No Account Required",
+          "description": "Public tools are available without account creation"
         },
         {
           "title": "Mobile Friendly",
-          "description": "Works perfectly on all devices and screen sizes"
+          "description": "Designed to work across common devices and screen sizes"
         }
       ]
     }

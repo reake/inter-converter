@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Student Loan Calculator - Education Debt Planning Tool",
-    "description": "The Student Loan Calculator is a comprehensive education financing tool designed to help students and graduates calculate monthly payments, total costs, and repayment strategies for student loans. This calculator supports federal and private student loans, various repayment plans, and loan forgiveness scenarios. Whether you're planning for college costs or managing existing student debt, this tool provides accurate projections for education loan scenarios."
+    "description": "The Student Loan Calculator helps students and graduates estimate monthly payments, total costs, and repayment scenarios for student loans. It supports federal and private student loans, multiple repayment plans, and forgiveness-related comparisons. Whether you're planning for college costs or reviewing existing student debt, this tool provides formula-based projections for education loan scenarios."
   },
   "howTo": {
     "title": "How to Use the Student Loan Calculator",
@@ -41,7 +41,7 @@
   "features": [
     {
       "title": "Monthly Payment Calculator",
-      "description": "Calculate exact monthly payments for different loan amounts, rates, and repayment terms."
+      "description": "Estimate monthly payments for different loan amounts, rates, and repayment terms."
     },
     {
       "title": "Repayment Plan Comparison",
@@ -56,8 +56,8 @@
       "description": "Compare federal student loan benefits with private loan terms and rates."
     },
     {
-      "title": "Loan Forgiveness Calculator",
-      "description": "Calculate potential savings from Public Service Loan Forgiveness and other programs."
+      "title": "Loan Forgiveness Comparison",
+      "description": "Compare potential outcomes for Public Service Loan Forgiveness and other repayment programs."
     },
     {
       "title": "Debt-to-Income Analysis",

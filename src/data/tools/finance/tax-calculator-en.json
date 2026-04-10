@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Tax Calculator",
-    "description": "The Tax Calculator helps you estimate your federal and state income tax liability, plan for tax payments, and optimize your tax strategy. Calculate your expected tax refund or amount owed based on your income, deductions, and filing status. Stay ahead of tax season by understanding your tax obligations throughout the year. This tool helps with tax planning, withholding adjustments, and estimated quarterly payments for self-employed individuals."
+    "description": "The Tax Calculator helps you estimate federal and state income tax liability and compare withholding or payment scenarios. Calculate an estimated refund or amount owed based on income, deductions, credits, and filing status. This tool can help you review tax obligations during the year and model withholding adjustments or estimated quarterly payments for self-employment scenarios."
   },
   "howTo": {
     "title": "How to Use the Tax Calculator",
@@ -25,7 +25,7 @@
     ],
     "tips": [
       "Use current year tax brackets and rates",
-      "Include all income sources for accuracy",
+      "Include all taxable income sources you want to model",
       "Compare standard vs itemized deductions"
     ]
   },
@@ -39,8 +39,8 @@
       "description": "Support for Single, Married Filing Jointly, Married Filing Separately, and Head of Household."
     },
     {
-      "title": "Deduction Optimization",
-      "description": "Compare standard deduction vs itemized deductions to maximize tax savings."
+      "title": "Deduction Comparison",
+      "description": "Compare standard deduction vs itemized deductions to review potential tax differences."
     },
     {
       "title": "Tax Credit Integration",
@@ -62,11 +62,11 @@
     },
     {
       "q": "What's the difference between marginal and effective tax rates?",
-      "a": "Your marginal tax rate is the tax rate on your last dollar of income - your highest tax bracket. Your effective tax rate is your total tax divided by total income, representing your average tax rate. Our tax calculator shows both rates for comprehensive tax planning."
+      "a": "Your marginal tax rate is the tax rate on your last dollar of income - your highest tax bracket. Your effective tax rate is your total tax divided by total income, representing your average tax rate. Our tax calculator shows both rates for comparison and general planning reference."
     },
     {
-      "q": "How accurate are these tax calculator estimates?",
-      "a": "Our tax calculator provides reliable estimates for planning purposes using current IRS tax brackets and standard deductions. However, your actual tax liability may vary based on specific circumstances, complex deductions, or tax law changes. Consult a tax professional for complex situations."
+      "q": "How should I interpret these tax calculator estimates?",
+      "a": "Our tax calculator provides general estimates for planning purposes using current IRS tax brackets and standard deductions. Your actual tax liability may vary based on specific circumstances, complex deductions, or tax law changes."
     },
     {
       "q": "When should I make quarterly estimated tax payments?",

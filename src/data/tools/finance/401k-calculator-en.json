@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About 401k Calculator - Retirement Savings Planner",
-    "description": "The 401k Calculator is a comprehensive retirement planning tool designed to help you estimate your 401k savings growth over time. This calculator takes into account your current age, retirement age, current 401k balance, annual contributions, employer matching, and expected rate of return to provide accurate projections of your retirement savings. Understanding your 401k potential is crucial for retirement planning, helping you visualize how consistent contributions, employer matching, and compound interest work together to build substantial retirement wealth."
+    "description": "The 401k Calculator is a retirement planning tool designed to help you estimate how your 401k savings may grow over time. This calculator takes into account your current age, retirement age, current 401k balance, annual contributions, employer matching, and expected rate of return to provide formula-based projections for planning. Understanding your 401k potential can support retirement planning by helping you visualize how consistent contributions, employer matching, and compound interest work together over time."
   },
   "howTo": {
     "title": "How to Use the 401k Calculator",
@@ -32,7 +32,7 @@
       }
     ],
     "tips": [
-      "Maximize employer matching - it's free money for your retirement",
+      "Try to capture available employer matching, since it can add to your retirement contributions",
       "Consider increasing contributions by 1% annually",
       "Start early to take advantage of compound interest",
       "Review and adjust your strategy annually"
@@ -41,11 +41,11 @@
   "features": [
     {
       "title": "401k Growth Projection",
-      "description": "Comprehensive 401k growth projection with compound interest calculations and timeline analysis."
+      "description": "Detailed 401k growth projection with compound interest calculations and timeline analysis."
     },
     {
-      "title": "Employer Matching Optimization",
-      "description": "Employer matching calculation and optimization recommendations to maximize benefits."
+      "title": "Employer Matching Review",
+      "description": "Employer matching calculations to help you review match impact and plan contributions."
     },
     {
       "title": "Contribution Limit Tracking",
@@ -60,8 +60,8 @@
       "description": "Retirement readiness assessment with goal comparison and savings adequacy analysis."
     },
     {
-      "title": "Contribution Optimization",
-      "description": "Contribution optimization suggestions for maximum growth and strategic planning."
+      "title": "Contribution Planning",
+      "description": "Contribution planning scenarios for long-term growth estimates and strategy review."
     }
   ],
   "faq": [
@@ -79,7 +79,7 @@
     },
     {
       "q": "Should I contribute enough to get the full employer match?",
-      "a": "Yes, absolutely. Contributing enough to receive the full employer match should be a priority as it provides an immediate 100% return on your investment. It's essentially free money that significantly accelerates your retirement savings growth."
+      "a": "Many savers aim to contribute enough to receive the full employer match because employer contributions can meaningfully increase retirement savings, subject to plan rules and vesting. Review your budget and plan details to decide what contribution level fits your situation."
     }
   ],
   "relativeLinks": [

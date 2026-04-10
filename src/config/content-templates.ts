@@ -25,7 +25,7 @@ export const CONTENT_TEMPLATES: Record<string, ContentTemplate> = {
       'Support for multiple timezones worldwide',
       'Handles both seconds and milliseconds timestamps',
       'No registration or account required',
-      'Works offline once loaded',
+      'Designed for quick checks in a browser tab',
       'Mobile-friendly responsive design',
       'Copy results with one click',
       'Accurate to the millisecond'

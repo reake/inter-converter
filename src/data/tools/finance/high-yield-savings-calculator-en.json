@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About High Yield Savings Calculator - Savings Account Interest Tool",
-    "description": "The High Yield Savings Calculator is a comprehensive savings tool designed to help you calculate interest earnings from high-yield savings accounts and compare rates across different banks. Whether you're building an emergency fund, saving for goals, or maximizing interest on cash reserves, this calculator provides accurate projections for compound interest growth and helps you find the best savings rates available."
+    "description": "The High Yield Savings Calculator is a savings tool designed to help you estimate interest earnings from high-yield savings accounts and compare rates across different banks. Whether you're building an emergency fund, saving for goals, or comparing returns on cash reserves, this calculator provides formula-based projections for compound interest growth and helps you review current savings rate options."
   },
   "howTo": {
     "title": "How to Use the High Yield Savings Calculator",
@@ -41,7 +41,7 @@
   "features": [
     {
       "title": "Interest Earnings Projection",
-      "description": "Calculate total interest earnings over time with accurate compound interest calculations."
+      "description": "Calculate total interest earnings over time with formula-based compound interest estimates."
     },
     {
       "title": "APY Comparison Tool",

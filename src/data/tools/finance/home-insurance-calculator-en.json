@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Home Insurance Calculator - Property Insurance Cost Estimator",
-    "description": "The Home Insurance Calculator is a comprehensive property insurance tool designed to help homeowners estimate home insurance costs and determine appropriate coverage levels. Whether you're a first-time homebuyer or existing homeowner, this calculator provides accurate insurance cost estimates based on home value, location, construction materials, and personal risk factors. Understanding home insurance calculations is essential for protecting your property investment and ensuring adequate insurance coverage."
+    "description": "The Home Insurance Calculator is a property insurance planning tool designed to help homeowners estimate home insurance costs and review coverage levels. Whether you're a first-time homebuyer or an existing homeowner, this calculator provides formula-based insurance cost estimates based on home value, location, construction materials, and user-entered risk factors. It can help you compare coverage scenarios when reviewing property insurance options."
   },
   "howTo": {
     "title": "How to Use the Home Insurance Calculator",
@@ -41,15 +41,15 @@
   "features": [
     {
       "title": "Replacement Cost Calculator",
-      "description": "Calculate accurate replacement cost estimates based on current construction costs and home features."
+      "description": "Estimate replacement cost based on current construction costs and home features."
     },
     {
       "title": "Regional Risk Assessment",
       "description": "Analyze natural disaster risks, crime rates, and other regional factors affecting insurance rates."
     },
     {
-      "title": "Coverage Optimization",
-      "description": "Help determine appropriate insurance coverage amounts to avoid underinsurance or overinsurance."
+      "title": "Coverage Review",
+      "description": "Help review insurance coverage amounts across different property insurance scenarios."
     },
     {
       "title": "Discount Calculator",

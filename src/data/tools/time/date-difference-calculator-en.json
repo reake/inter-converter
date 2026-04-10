@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Date Difference Calculator",
-    "description": "The Date Difference Calculator computes the exact time span between two dates, showing results in years, months, weeks, days, hours, minutes, and seconds. Perfect for calculating age differences, project durations, relationship anniversaries, or any time period analysis. This tool provides comprehensive date difference analysis with multiple output formats, making it invaluable for legal documentation, project management, and personal milestone tracking."
+    "description": "The Date Difference Calculator computes the time span between two dates, showing results in years, months, weeks, days, hours, minutes, and seconds. It is useful for age checks, project durations, anniversaries, and general time-period analysis. This tool provides multiple output formats for planning and reference workflows."
   },
   "howTo": {
     "title": "How to Use the Date Difference Calculator",
@@ -31,8 +31,8 @@
   },
   "features": [
     {
-      "title": "Precise Calculations",
-      "description": "Accurate date difference calculations down to seconds with leap year consideration."
+      "title": "Detailed Calculations",
+      "description": "Date difference calculations down to seconds with leap-year consideration."
     },
     {
       "title": "Multiple Time Units",
@@ -61,8 +61,8 @@
       "a": "Yes, our date difference calculator works with any date combination - past, present, or future dates for comprehensive time span analysis. Perfect for calculating historical periods, ages, or project durations."
     },
     {
-      "q": "How accurate are the date difference calculations?",
-      "a": "The date difference calculator is extremely precise, accounting for leap years, varying month lengths, and exact time differences down to the second. It handles all calendar complexities automatically for accurate results."
+      "q": "How does the date difference calculation work?",
+      "a": "The calculator applies standard calendar rules, including leap years and varying month lengths, to show the time span between two dates. Review the output if you need results for formal, legal, or contractual use."
     },
     {
       "q": "Does the calculator show business days only?",

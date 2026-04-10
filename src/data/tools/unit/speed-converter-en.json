@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Speed Converter",
-    "description": "The Speed Converter is a versatile tool for converting between different units of speed and velocity including kilometers per hour, miles per hour, meters per second, knots, and specialized speed measurements. This professional speed conversion tool handles all common speed measurements used in transportation, sports, aviation, maritime navigation, and scientific research. Speed conversion is essential in automotive engineering, flight planning, marine navigation, and physics calculations. Whether you're comparing vehicle speeds, calculating travel times, converting wind speeds, or working with scientific velocity data, our converter ensures precise speed conversions with support for both everyday and specialized units across metric and imperial systems."
+    "description": "The Speed Converter is a versatile tool for converting between different units of speed and velocity including kilometers per hour, miles per hour, meters per second, knots, and specialized speed measurements. It handles common speed measurements used in transportation, sports, aviation, maritime navigation, and scientific reference work. Speed conversion is useful in automotive comparisons, flight planning, marine navigation, and physics calculations. Whether you're comparing vehicle speeds, calculating travel times, converting wind speeds, or working with scientific velocity data, our converter helps compare everyday and specialized units across metric and imperial systems."
   },
   "howTo": {
     "title": "How to Use the Speed Converter",
@@ -31,7 +31,7 @@
   },
   "features": [
     {
-      "title": "Comprehensive Speed Units",
+      "title": "Speed Unit Support",
       "description": "Convert between km/h, mph, m/s, knots, and other speed units covering automotive, aviation, maritime, and scientific applications."
     },
     {
@@ -58,7 +58,7 @@
   "faq": [
     {
       "q": "What speed units does the speed converter support?",
-      "a": "Our speed converter supports comprehensive metric units (km/h, m/s, meters per minute), imperial units (mph, feet per second, feet per minute), and specialized units like knots for maritime navigation and Mach numbers for aviation applications."
+      "a": "Our speed converter supports metric units (km/h, m/s, meters per minute), imperial units (mph, feet per second, feet per minute), and specialized units like knots for maritime navigation and Mach numbers for aviation applications."
     },
     {
       "q": "What is a knot and how does it relate to other speed units?",
@@ -73,8 +73,8 @@
       "a": "Mach speed is the ratio of an object's speed to the speed of sound in the surrounding medium. Mach 1 equals approximately 343 m/s (1,235 km/h or 767 mph) at sea level and 20°C. Mach numbers are crucial in aerospace engineering and supersonic flight calculations."
     },
     {
-      "q": "How accurate are the speed conversions for professional use?",
-      "a": "Our speed converter uses exact international conversion factors and maintains high decimal precision, making it suitable for automotive engineering, aviation calculations, maritime navigation, and scientific research applications."
+      "q": "How accurate are the speed conversions for reference use?",
+      "a": "Our speed converter uses exact international conversion factors and maintains high decimal precision, making it suitable for automotive comparisons, aviation calculations, maritime navigation, and scientific reference work."
     },
     {
       "q": "Can I convert wind speeds and weather-related velocities?",

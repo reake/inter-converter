@@ -96,7 +96,7 @@ export const COLOR_TOOLS_SEO: SEOToolConfig[] = [
   {
     id: 'hex-to-rgb-converter',
     title: 'HEX to RGB Converter - Color Code Converter | InterConverter',
-    description: 'Convert HEX color codes to RGB values instantly. Free online color converter with live preview and CSS code generation for web design.',
+    description: 'Convert HEX color codes to RGB values with live preview and CSS code generation for web design.',
     keywords: [
       'hex to rgb converter', 'color converter', 'hex color converter',
       'rgb converter', 'color code converter', 'css color converter',

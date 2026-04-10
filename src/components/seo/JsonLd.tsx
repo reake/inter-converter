@@ -22,8 +22,8 @@ export const generateWebsiteSchema = (locale: string) => {
     "name": "InterConverter",
     "url": `${process.env.NEXT_PUBLIC_SITE_URL || "https://interconverter.com"}${localePrefix}`,
     "description": normalizedLocale === 'zh'
-      ? "专业级在线转换器和计算器工具集合"
-      : "Professional online converters and calculators collection",
+      ? "免费在线转换器和计算器，支持单位、时间、颜色等常见浏览器端任务"
+      : "Free online converters and calculators for common browser-based tasks across units, time, color, and more.",
     "inLanguage": normalizedLocale,
     "potentialAction": {
       "@type": "SearchAction",
@@ -101,8 +101,8 @@ export const generateSoftwareApplicationSchema = (toolName: string, description:
   },
   "featureList": [
     locale === 'zh' ? "免费使用" : "Free to use",
-    locale === 'zh' ? "无需注册" : "No registration required", 
-    locale === 'zh' ? "即时结果" : "Instant results",
-    locale === 'zh' ? "隐私保护" : "Privacy protected"
+    locale === 'zh' ? "无需注册" : "No registration required",
+    locale === 'zh' ? "浏览器端工作流" : "Browser-based workflow",
+    locale === 'zh' ? "页面内即时显示结果" : "Immediate on-page results"
   ]
 });

@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Engine Size Converter",
-    "description": "The Engine Size Converter provides accurate conversions between cubic inches (CI) and liters for engine displacement measurements. Essential for engine identification, comparison, and automotive applications worldwide. Understanding engine displacement in both metric and imperial units helps with parts compatibility, performance comparisons, and international automotive specifications."
+    "description": "The Engine Size Converter provides conversions between cubic inches (CI) and liters for engine displacement measurements. It is useful for engine identification, comparison checks, and working with international automotive specifications. Understanding engine displacement in both metric and imperial units helps with parts compatibility and cross-region specification review."
   },
   "howTo": {
     "title": "How to Use the Engine Size Converter",
@@ -11,7 +11,7 @@
         "description": "Input engine size in cubic inches (CI) or liters (L) that you want to convert."
       },
       {
-        "title": "Get Instant Conversion",
+        "title": "Get Conversion",
         "description": "View the accurate conversion to the other unit immediately."
       },
       {
@@ -24,7 +24,7 @@
       }
     ],
     "tips": [
-      "1 cubic inch = 0.016387 liters (precise conversion factor)",
+      "1 cubic inch = 0.016387 liters (standard conversion factor)",
       "Popular muscle car engines: 350 CI = 5.7L, 454 CI = 7.4L",
       "Use for international parts compatibility and specifications"
     ]
@@ -32,7 +32,7 @@
   "features": [
     {
       "title": "Cubic Inch to Liter Conversion",
-      "description": "Accurate conversion between CI and liters using precise automotive standards."
+      "description": "Conversion between CI and liters using standard automotive conversion factors."
     },
     {
       "title": "Bidirectional Conversion",
@@ -47,8 +47,8 @@
       "description": "Ensure proper parts compatibility when working with international specifications."
     },
     {
-      "title": "Professional Accuracy",
-      "description": "Uses the precise conversion factor (1 CI = 0.016387064 L) for professional applications."
+      "title": "Exact Conversion Factor",
+      "description": "Uses the standard conversion factor (1 CI = 0.016387064 L) for reference and comparison checks."
     },
     {
       "title": "International Standards",
@@ -62,7 +62,7 @@
     },
     {
       "q": "How accurate is the conversion between CI and liters?",
-      "a": "Our engine size converter uses the precise conversion factor: 1 cubic inch = 0.016387064 liters. This provides professional-grade accuracy suitable for all automotive applications, engine identification, and parts compatibility verification."
+      "a": "Our engine size converter uses the standard conversion factor: 1 cubic inch = 0.016387064 liters. This makes it suitable for engine identification, comparison, and parts compatibility checks."
     },
     {
       "q": "What are some common engine size conversions?",

@@ -24,7 +24,7 @@ export async function generateMetadata({
   const entry = getLocalizedToolEntry(l, 'hex-to-hsl-converter', colorEn as ToolCatalogEntry[], colorZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name ?? 'HEX to HSL Converter';
-  const description: string = entry?.description ?? 'Convert HEX color codes to HSL values instantly. Free online color converter with live preview and HSL breakdown for web designers and developers.';
+  const description: string = entry?.description ?? 'Convert HEX color codes to HSL values with live preview and HSL breakdown for designers and developers.';
   const baseKeywords = generateOptimizedKeywords('hex-to-hsl-converter', 'color', 'HEX to HSL Converter');
   const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
     ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
@@ -60,7 +60,7 @@ export default async function HexToHslPage({
   const entry = getLocalizedToolEntry(l, 'hex-to-hsl-converter', colorEn as ToolCatalogEntry[], colorZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name || 'HEX to HSL Converter';
-  const descriptionText: string = entry?.description || 'Convert HEX color codes to HSL values instantly with live preview and instant calculations.';
+  const descriptionText: string = entry?.description || 'Convert HEX color codes to HSL values with live preview.';
   const baseKeywords = generateOptimizedKeywords('hex-to-hsl-converter', 'color', 'HEX to HSL Converter');
   const pageKeywords = Array.isArray(entry?.keywords) && entry.keywords.length > 0
     ? Array.from(new Set([...baseKeywords, ...entry.keywords]))

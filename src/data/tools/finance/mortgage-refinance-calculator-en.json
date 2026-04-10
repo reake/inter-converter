@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Mortgage Refinance Calculator - Rate and Term Refinancing Tool",
-    "description": "The Mortgage Refinance Calculator is a comprehensive refinancing analysis tool designed to help homeowners determine if refinancing their mortgage makes financial sense. This calculator compares your current mortgage with potential new loan terms, calculating monthly payment changes, total interest savings, and break-even points. Whether you're looking to lower your rate, change loan terms, or access equity, this tool provides accurate refinancing projections."
+    "description": "The Mortgage Refinance Calculator helps homeowners compare a current mortgage with potential refinance terms. It shows estimated monthly payment changes, total interest differences, and break-even timing so you can review how a refinance may affect overall loan costs. Use it as a planning reference when comparing refinance scenarios."
   },
   "howTo": {
     "title": "How to Use the Mortgage Refinance Calculator",
@@ -32,10 +32,10 @@
       }
     ],
     "tips": [
-      "Generally, refinancing makes sense if you can reduce your rate by 0.5-1%",
+      "Refinancing outcomes depend on rate changes, fees, loan term, and how long you expect to keep the loan",
       "Consider how long you plan to stay in the home when evaluating break-even",
       "Factor in all closing costs, not just the interest rate difference",
-      "Consider changing loan terms to accelerate payoff or reduce payments"
+      "Consider changing loan terms to compare faster payoff against lower monthly payments"
     ]
   },
   "features": [
@@ -48,20 +48,20 @@
       "description": "Calculate how long it takes to recoup refinancing costs through monthly savings."
     },
     {
-      "title": "Total Interest Savings",
-      "description": "Calculate lifetime interest savings from refinancing to a lower rate."
+      "title": "Total Interest Comparison",
+      "description": "Compare total interest costs across current-loan and refinance scenarios."
     },
     {
       "title": "Closing Cost Calculator",
-      "description": "Factor in all refinancing costs including origination fees, appraisal, and title costs."
+      "description": "Factor in refinancing costs including origination fees, appraisal, and title charges."
     },
     {
       "title": "Term Change Analysis",
-      "description": "Analyze the impact of changing loan terms (15-year vs 30-year) during refinancing."
+      "description": "Review how changing loan terms, such as 15-year vs 30-year, affects payments and total cost."
     },
     {
-      "title": "Net Benefit Calculator",
-      "description": "Calculate net financial benefit after considering all costs and savings."
+      "title": "Net Cost Comparison",
+      "description": "Compare overall refinance costs and payment changes after including closing costs."
     }
   ],
   "faq": [

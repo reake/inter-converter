@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About ROI Calculator",
-    "description": "The ROI (Return on Investment) Calculator is a powerful financial analysis tool that helps you measure the efficiency and profitability of your investments. This calculator determines the percentage return on your investment by comparing the gain or loss relative to the initial investment cost. Whether you're evaluating business investments, real estate purchases, stock portfolios, or marketing campaigns, this tool provides clear insights into investment performance and helps you make data-driven financial decisions."
+    "description": "The ROI (Return on Investment) Calculator is a financial analysis tool that helps you measure the percentage return on an investment relative to its cost. Whether you're evaluating business investments, real estate purchases, stock portfolios, or marketing campaigns, this tool provides a simple way to compare gain or loss scenarios and review investment performance."
   },
   "howTo": {
     "title": "How to Use the ROI Calculator",
@@ -32,7 +32,7 @@
       }
     ],
     "tips": [
-      "Include all costs (fees, taxes, maintenance) for accurate ROI calculation",
+      "Include all costs (fees, taxes, maintenance) for a more complete ROI estimate",
       "Compare annualized ROI for investments with different time periods",
       "Consider risk factors alongside ROI when evaluating investments",
       "Track ROI regularly to monitor investment performance"
@@ -40,7 +40,7 @@
   },
   "features": [
     {
-      "title": "Comprehensive ROI Analysis",
+      "title": "ROI Analysis",
       "description": "Calculate total return, percentage gain/loss, and annualized ROI for complete investment analysis."
     },
     {
@@ -49,7 +49,7 @@
     },
     {
       "title": "Cost Inclusion",
-      "description": "Factor in all associated costs including fees, taxes, and maintenance for accurate calculations."
+      "description": "Factor in all associated costs including fees, taxes, and maintenance for a more complete estimate."
     },
     {
       "title": "Annualized Returns",
@@ -75,7 +75,7 @@
     },
     {
       "q": "Should I include taxes in ROI calculation?",
-      "a": "Yes, include all costs including taxes, fees, and maintenance expenses for accurate ROI calculation. This gives you the true net return on your investment after all expenses."
+      "a": "Yes, include all costs including taxes, fees, and maintenance expenses for a more complete ROI estimate. This helps you review net return after all expenses."
     },
     {
       "q": "What's the difference between ROI and annualized ROI?",

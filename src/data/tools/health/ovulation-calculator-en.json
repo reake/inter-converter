@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Ovulation Calculator - Fertility Tracking Tool",
-    "description": "The Ovulation Calculator predicts your most fertile days based on your menstrual cycle length and last period date. Understanding your ovulation window is crucial for family planning, whether trying to conceive or avoid pregnancy. Ovulation typically occurs 12-16 days before your next period. This calculator helps identify your fertile window, peak fertility days, and provides insights for reproductive health planning."
+    "description": "The Ovulation Calculator estimates fertile days based on menstrual cycle length and last period date. Understanding the ovulation window can support family planning and cycle-awareness workflows. Ovulation often occurs 12-16 days before the next period, but timing can vary. This calculator helps outline a possible fertile window and provides reference information for reproductive health planning."
   },
   "howTo": {
     "title": "How to Use the Ovulation Calculator",
@@ -16,15 +16,15 @@
       },
       {
         "title": "View Ovulation Date",
-        "description": "See your predicted ovulation date based on your cycle pattern."
+        "description": "See an estimated ovulation date based on your cycle pattern."
       },
       {
         "title": "Check Fertile Window",
-        "description": "Review your 6-day fertile window for optimal conception timing."
+        "description": "Review the estimated 6-day fertile window for planning and awareness."
       },
       {
         "title": "Track Multiple Cycles",
-        "description": "Monitor patterns over several cycles for better accuracy and planning."
+        "description": "Monitor patterns over several cycles for more useful comparison and planning."
       },
       {
         "title": "Plan Accordingly",
@@ -35,17 +35,17 @@
       "Track your cycles for 3-6 months to identify patterns",
       "Consider using additional fertility signs like basal body temperature",
       "Note that stress and illness can affect ovulation timing",
-      "Consult healthcare providers for personalized fertility guidance"
+      "Consult healthcare providers for individualized fertility guidance"
     ]
   },
   "features": [
     {
-      "title": "Ovulation Date Prediction",
-      "description": "Accurate prediction of ovulation timing based on menstrual cycle patterns."
+      "title": "Ovulation Date Estimate",
+      "description": "Cycle-based estimate of ovulation timing using menstrual pattern inputs."
     },
     {
       "title": "Fertile Window Calculation",
-      "description": "Identification of the 6-day fertile period for optimal conception timing."
+      "description": "Identification of the estimated 6-day fertile period for cycle tracking and planning."
     },
     {
       "title": "Cycle Length Customization",
@@ -56,8 +56,8 @@
       "description": "Ability to track and analyze patterns across multiple menstrual cycles."
     },
     {
-      "title": "Conception Probability",
-      "description": "Visual indicators showing peak fertility days and conception likelihood."
+      "title": "Cycle Indicators",
+      "description": "Visual indicators showing estimated higher-fertility days within the cycle window."
     },
     {
       "title": "Calendar View",
@@ -66,8 +66,8 @@
   ],
   "faq": [
     {
-      "q": "How accurate is ovulation prediction?",
-      "a": "Predictions are estimates based on average cycles and can be accurate within 1-2 days for regular cycles. Actual ovulation timing can vary due to stress, illness, or hormonal changes. Use additional methods like basal body temperature tracking for more precision."
+      "q": "How should I interpret ovulation predictions?",
+      "a": "Predictions are cycle-based estimates and actual ovulation timing can vary due to stress, illness, or hormonal changes. Use the results as a planning reference rather than a certainty, and consult a healthcare provider for medical guidance."
     },
     {
       "q": "What is the fertile window and why is it 6 days?",
@@ -79,7 +79,7 @@
     },
     {
       "q": "What if my cycles are irregular?",
-      "a": "Irregular cycles make prediction less accurate since ovulation timing varies significantly. Track multiple cycles, note any patterns, and consider consulting a healthcare provider for personalized guidance on fertility timing and potential underlying causes."
+      "a": "Irregular cycles can make cycle-based estimates less consistent because ovulation timing may vary. Track multiple cycles, note any patterns, and consider consulting a healthcare provider for individualized guidance on fertility timing and possible underlying causes."
     }
   ],
   "relativeLinks": [

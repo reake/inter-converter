@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Debt Payoff Calculator",
-    "description": "The Debt Payoff Calculator helps you create an effective strategy to eliminate your debts faster and save money on interest payments. This comprehensive tool analyzes your current debts, calculates payoff timelines, and compares different repayment strategies including debt snowball and debt avalanche methods. Whether you're dealing with credit card debt, student loans, or multiple debts, this calculator provides personalized recommendations to accelerate your path to financial freedom."
+    "description": "The Debt Payoff Calculator helps you compare debt repayment strategies, payoff timelines, and total interest across multiple balances. It analyzes current debts and lets you review approaches such as debt snowball and debt avalanche using your entered payment assumptions. Use it as a planning reference when organizing repayment scenarios."
   },
   "howTo": {
     "title": "How to Use the Debt Payoff Calculator",
@@ -20,7 +20,7 @@
       },
       {
         "title": "Review Timeline",
-        "description": "Analyze your debt-free date and total interest savings with different strategies."
+        "description": "Analyze estimated payoff dates and total interest differences across strategies."
       },
       {
         "title": "Track Progress",
@@ -32,7 +32,7 @@
       }
     ],
     "tips": [
-      "Pay more than minimum payments to save significantly on interest",
+      "Paying more than minimum payments may reduce total interest over time",
       "Consider debt consolidation for multiple high-interest debts",
       "Stop using credit cards while paying off existing debt",
       "Celebrate milestones to stay motivated throughout the process"
@@ -45,11 +45,11 @@
     },
     {
       "title": "Strategy Comparison",
-      "description": "Compare debt snowball vs. debt avalanche methods to find the best approach."
+      "description": "Compare debt snowball and debt avalanche methods across timeline and interest tradeoffs."
     },
     {
       "title": "Interest Savings Calculator",
-      "description": "Calculate total interest savings from extra payments and accelerated payoff strategies."
+      "description": "Estimate total interest differences from extra payments and faster payoff scenarios."
     },
     {
       "title": "Payment Schedule",
@@ -57,29 +57,29 @@
     },
     {
       "title": "Progress Tracking",
-      "description": "Visual progress indicators to track your journey to becoming debt-free."
+      "description": "Visual progress indicators to track repayment progress over time."
     },
     {
       "title": "Scenario Analysis",
-      "description": "Test different extra payment amounts to optimize your debt elimination strategy."
+      "description": "Test different extra payment amounts and compare repayment scenarios."
     }
   ],
   "faq": [
     {
       "q": "What's the difference between debt snowball and debt avalanche?",
-      "a": "Debt snowball focuses on paying off the smallest balance first for psychological motivation, while debt avalanche targets the highest interest rate first to save more money. Avalanche saves more on interest, but snowball provides quicker wins."
+      "a": "Debt snowball focuses on paying off the smallest balance first, while debt avalanche targets the highest interest rate first. Avalanche often reduces interest more quickly, while snowball may feel easier to follow for some people."
     },
     {
       "q": "How much extra should I pay toward my debts?",
-      "a": "Pay as much extra as your budget allows after covering essential expenses and emergency savings. Even an extra $25-50 per month can significantly reduce payoff time and interest costs."
+      "a": "The amount depends on your budget, other obligations, and emergency savings needs. Even modest extra payments may change the payoff timeline and total interest, so use the calculator to compare scenarios."
     },
     {
       "q": "Should I pay off debt or save money first?",
-      "a": "Build a small emergency fund ($500-1000) first, then focus on high-interest debt. Once debt is paid off, build a full 3-6 month emergency fund while continuing to save and invest."
+      "a": "This depends on your cash flow stability, emergency savings, debt costs, and financial priorities. Many people balance a basic cash reserve with debt repayment, but the right approach varies by situation."
     },
     {
       "q": "Is debt consolidation a good option?",
-      "a": "Debt consolidation can be beneficial if you qualify for a lower interest rate than your current debts. However, it requires discipline to avoid accumulating new debt on the paid-off accounts."
+      "a": "Debt consolidation may be useful if it changes your rate, fees, repayment term, or payment structure in a way that fits your plan. Compare total costs and account terms carefully before deciding."
     }
   ],
   "relativeLinks": [

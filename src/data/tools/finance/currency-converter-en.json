@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Currency Converter",
-    "description": "The Currency Converter provides real-time exchange rates for over 150 currencies worldwide with professional accuracy. Whether you're traveling, conducting international business, or trading forex, this tool delivers accurate and up-to-date conversion rates. Our converter supports major currencies like USD, EUR, GBP, JPY, CNY, and many others, plus popular cryptocurrencies. Get instant conversions with professional-grade accuracy for all your financial and trading needs."
+    "description": "The Currency Converter provides real-time exchange rates for over 150 currencies worldwide. Whether you're traveling, conducting international business, or comparing rates, this tool provides current conversion references. It supports major currencies like USD, EUR, GBP, JPY, CNY, and many others, plus popular cryptocurrencies."
   },
   "howTo": {
     "title": "How to Use the Currency Converter",
@@ -47,8 +47,8 @@
       "description": "Access historical exchange rate charts and trends for informed currency exchange decisions."
     },
     {
-      "title": "Professional Accuracy",
-      "description": "Bank-grade conversion accuracy suitable for personal, business, and trading applications."
+      "title": "Reference Accuracy",
+      "description": "Current conversion references suitable for personal, business, and comparison use."
     },
     {
       "title": "No Registration Required",
@@ -78,7 +78,7 @@
     },
     {
       "q": "Is the currency converter free to use?",
-      "a": "Yes, our currency converter is completely free to use with no registration required. You get instant access to real-time exchange rates, historical data, and professional-grade currency conversion tools without any fees or limitations."
+      "a": "Yes, our currency converter is completely free to use with no registration required. You get instant access to real-time exchange rates and historical data without any fees or signup."
     }
   ],
   "relativeLinks": [

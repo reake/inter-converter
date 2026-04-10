@@ -17,15 +17,17 @@ export async function generateMetadata({
   const isZh = locale === 'zh';
 
   return generateSEOMetadata({
-    title: isZh ? '精选文件转换工具与说明 | InterConverter' : 'Featured File Conversion Tools | InterConverter',
+    title: isZh ? '文件工具分类说明 | InterConverter' : 'File Tools Category Notes | InterConverter',
     description: isZh
-      ? '当前公开维护的文件转换分类以 JPG 转 PNG 为主，并补充格式差异、处理边界、适用场景和后续工作流说明。'
-      : 'The public file conversion category now centers on JPG to PNG, with clearer notes about format differences, usage limits, and workflow choices.',
+      ? '该分类当前不在公开精选范围内，此页仅说明文件工具的审核状态、适用边界和后续申请方式。'
+      : 'This category is not part of the current featured public surface. This page explains the review status, usage boundaries, and how to request a file workflow.',
     locale,
     pathname: '/media',
+    index: false,
+    follow: true,
     keywords: isZh
-      ? ['JPG 转 PNG', '图片格式转换', '文件转换工具', 'InterConverter']
-      : ['jpg to png', 'image format conversion', 'file conversion tools', 'InterConverter'],
+      ? ['文件工具', '格式转换说明', '审核状态', 'InterConverter']
+      : ['file tools', 'format conversion notes', 'review status', 'InterConverter'],
   });
 }
 
@@ -49,12 +51,12 @@ export default async function MediaPage({
               🖼️
             </div>
             <h1 className="mb-6 text-5xl font-bold">
-              {isZh ? '精选文件转换工具' : 'Featured file conversion tools'}
+              {isZh ? '文件工具分类说明' : 'File tools category notes'}
             </h1>
             <p className="mx-auto max-w-3xl text-xl text-indigo-100">
               {isZh
-                ? '当前公开维护的文件转换分类聚焦在一个更容易解释和验证的图像格式场景上。'
-                : 'The current public file conversion category is intentionally focused on one image-format workflow that is easier to explain and verify clearly.'}
+                ? '该分类当前不在公开精选范围内。这里仅说明文件工具的审核状态、处理边界，以及何时适合重新提交公开展示。'
+                : 'This category is not part of the current featured public surface. This page explains review status, processing boundaries, and when a file workflow may return to public promotion.'}
             </p>
           </div>
         </div>
@@ -71,8 +73,8 @@ export default async function MediaPage({
                 <CardContent className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                   <p className="max-w-2xl text-sm leading-6 text-gray-600">
                     {isZh
-                      ? '这个页面当前重点补充 JPG 与 PNG 的常见使用场景、透明背景限制、压缩差异，以及什么时候应该改用其他图像工作流。'
-                      : 'This page is currently where we are adding clearer guidance about JPG vs PNG use cases, transparency limits, compression tradeoffs, and when another image workflow would be more appropriate.'}
+                      ? '如果未来有文件工具重新进入公开精选范围，会先补全能力说明、限制条件、隐私表述和验证建议。'
+                      : 'If a file tool returns to the featured public surface later, it should first include clearer capability notes, scope limits, privacy wording, and verification guidance.'}
                   </p>
                   <Button asChild>
                     <Link href={tool.path}>{isZh ? '打开工具' : 'Open tool'}</Link>
@@ -82,15 +84,32 @@ export default async function MediaPage({
             </section>
           ) : null}
 
+          {!tool ? (
+            <section className="mb-12">
+              <Card className="border-0 shadow-xl">
+                <CardHeader>
+                  <CardTitle className="text-2xl">
+                    {isZh ? '当前没有公开精选的文件工具' : 'No featured file tools are currently public'}
+                  </CardTitle>
+                  <CardDescription className="text-base leading-7">
+                    {isZh
+                      ? '文件工具仍在逐页审核中。未完成说明、边界或实现验证的页面不会继续在公共精选列表中展示。'
+                      : 'File workflows are still being reviewed page by page. Pages that do not yet have complete scope notes, implementation checks, or limitation guidance are kept out of the featured public list.'}
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </section>
+          ) : null}
+
           <section className="mb-12 grid gap-6 md:grid-cols-3">
             <Card>
               <CardHeader>
-                <CardTitle>{isZh ? '当前维护重点' : 'Current maintenance focus'}</CardTitle>
+                <CardTitle>{isZh ? '当前审核重点' : 'Current review focus'}</CardTitle>
               </CardHeader>
               <CardContent className="text-sm leading-6 text-gray-600">
                 {isZh
-                  ? '公开分类页目前不再展示大量格式列表，而是只围绕当前精选并已补充说明的工具。'
-                  : 'The public category page no longer lists a wide spread of formats. It focuses only on the tools that are currently featured and receiving deeper guidance.'}
+                  ? '文件工具不会因为搜索量或常见需求就自动公开展示，只有说明、限制和实际页面状态一致时才会重新进入精选范围。'
+                  : 'File tools are not promoted publicly just because demand is high. They return to the featured surface only when page copy, limits, and actual implementation state are aligned.'}
               </CardContent>
             </Card>
             <Card>
@@ -144,8 +163,8 @@ export default async function MediaPage({
             </h2>
             <p className="mx-auto mb-6 max-w-2xl text-gray-600">
               {isZh
-                ? '如果你的任务不止是图片格式转换，也可以回到精选工具页，查看当前公开维护的单位、时间、颜色和文件工具。'
-                : 'If your workflow goes beyond image conversion, return to the featured tools page to browse the unit, time, color, and file tools currently maintained on the public site.'}
+                ? '如果你的任务不止是图片格式判断，也可以回到精选工具页，查看当前公开维护的单位、时间、颜色和汽车参考工具。'
+                : 'If your workflow goes beyond image-format decisions, return to the featured tools page to browse the unit, time, color, and automotive reference tools currently maintained on the public site.'}
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Button asChild>

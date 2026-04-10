@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About IRA Calculator - Individual Retirement Account Planning Tool",
-    "description": "The IRA Calculator is a comprehensive retirement planning tool designed to help you calculate the growth potential of your Individual Retirement Account investments. Whether you're planning for Traditional IRA or Roth IRA contributions, this calculator provides accurate projections of your retirement savings growth over time. Understanding IRA calculations is essential for maximizing your retirement savings and making informed decisions about contribution limits, tax benefits, and withdrawal strategies."
+    "description": "The IRA Calculator is a retirement planning tool designed to help you estimate the growth potential of your Individual Retirement Account investments. Whether you're planning for Traditional IRA or Roth IRA contributions, this calculator provides formula-based projections of your retirement savings growth over time. It can help you review contribution limits, tax treatment, and withdrawal scenarios."
   },
   "howTo": {
     "title": "How to Use the IRA Calculator",
@@ -32,9 +32,9 @@
       }
     ],
     "tips": [
-      "Maximize annual contributions to reach IRS limits ($6,500 for 2023, $7,500 if 50+)",
+      "Review annual contributions alongside current IRS limits",
       "Consider Roth IRA for tax-free withdrawals in retirement",
-      "Start early to maximize compound growth over time",
+      "Starting earlier can increase the effect of compound growth over time",
       "Review and adjust investment allocation based on age and risk tolerance"
     ]
   },
@@ -79,7 +79,7 @@
     },
     {
       "q": "Do I have to take required minimum distributions from my IRA?",
-      "a": "Traditional IRAs require minimum distributions starting at age 73. Roth IRAs have no required distributions during the owner's lifetime, making them excellent for estate planning."
+      "a": "Traditional IRAs require minimum distributions starting at age 73. Roth IRAs have no required distributions during the owner's lifetime, which can make them useful in some estate planning situations."
     }
   ],
   "relativeLinks": [

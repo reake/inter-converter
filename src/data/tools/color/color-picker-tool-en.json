@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Color Picker Tool",
-    "description": "The Color Picker Tool provides an intuitive interface for selecting, analyzing, and converting colors across multiple formats. This comprehensive tool supports HEX, RGB, HSL, and other color models for professional design work. Perfect for web designers, graphic artists, and developers who need precise color selection and format conversion capabilities in a single, user-friendly interface."
+    "description": "The Color Picker Tool provides an interface for selecting, reviewing, and converting colors across multiple formats. It supports HEX, RGB, HSL, and other color models for design and front-end workflows. It is useful for designers, artists, and developers who need color selection and format conversion in a single interface."
   },
   "howTo": {
     "title": "How to Use the Color Picker Tool",
@@ -12,11 +12,11 @@
       },
       {
         "title": "Adjust Hue",
-        "description": "Use the hue slider to adjust the color spectrum and find the perfect base color."
+        "description": "Use the hue slider to adjust the color spectrum and find a suitable base color."
       },
       {
         "title": "Fine-tune Properties",
-        "description": "Adjust saturation and lightness with precision controls for exact color matching."
+        "description": "Adjust saturation and lightness with direct controls for closer color matching."
       },
       {
         "title": "View Formats",
@@ -61,8 +61,8 @@
       "a": "Our color picker tool supports HEX codes, RGB values, HSL color model, and CSS color names. All formats are displayed simultaneously for easy comparison and copying, making it perfect for web design and graphic design workflows."
     },
     {
-      "q": "How accurate is the color selection in this tool?",
-      "a": "The color picker provides pixel-perfect accuracy with precise numerical controls for fine-tuning colors to exact specifications. You can input specific values or use the visual interface for professional-grade color selection."
+      "q": "How does color selection work in this tool?",
+      "a": "The color picker provides numerical controls for fine-tuning colors. You can enter specific values or use the visual interface to review and compare color selections."
     },
     {
       "q": "Can I save my favorite colors for later use?",
@@ -70,7 +70,7 @@
     },
     {
       "q": "Is this color picker suitable for professional design work?",
-      "a": "Absolutely! Our color picker meets professional design standards with accurate color representation, support for all major color formats, and precision controls suitable for web design, graphic design, and digital art projects."
+      "a": "Yes. The color picker supports major color formats, accurate color representation, and precision controls for web design, graphic design, and digital art projects."
     },
     {
       "q": "What's the difference between RGB and HSL color models?",

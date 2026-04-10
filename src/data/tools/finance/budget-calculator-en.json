@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Budget Calculator - Personal Finance Management",
-    "description": "The Budget Calculator is a comprehensive personal finance management tool designed to help you create, track, and optimize your monthly budget. This calculator allows you to input all sources of income and categorize your expenses to get a clear picture of your financial health and spending patterns. Effective budgeting is the foundation of financial success, helping you understand where your money goes each month, identify areas for improvement, and set realistic savings goals."
+    "description": "The Budget Calculator is a personal finance planning tool designed to help you create, track, and review your monthly budget. This calculator allows you to input all sources of income and categorize your expenses to get a clear picture of your spending patterns. Effective budgeting can support financial planning by helping you understand where your money goes each month, identify areas for adjustment, and set realistic savings goals."
   },
   "howTo": {
     "title": "How to Use the Budget Calculator",
@@ -24,7 +24,7 @@
       },
       {
         "title": "Review Budget Breakdown",
-        "description": "Analyze the budget breakdown and identify areas for optimization."
+        "description": "Analyze the budget breakdown and identify areas to review."
       },
       {
         "title": "Adjust Categories",
@@ -33,14 +33,14 @@
     ],
     "tips": [
       "Use the 50/30/20 rule: 50% needs, 30% wants, 20% savings",
-      "Track expenses for a month to get accurate baseline data",
+      "Track expenses for a month to get a more reliable baseline",
       "Set realistic goals and adjust gradually over time",
-      "Review and update your budget monthly for best results"
+      "Review and update your budget monthly for more consistent results"
     ]
   },
   "features": [
     {
-      "title": "Comprehensive Income Tracking",
+      "title": "Detailed Income Tracking",
       "description": "Track income and expenses across multiple categories with detailed breakdown analysis."
     },
     {
@@ -56,8 +56,8 @@
       "description": "Detailed expense category breakdown with percentage analysis and spending patterns."
     },
     {
-      "title": "Budget Optimization",
-      "description": "Budget optimization recommendations based on financial best practices and expert advice."
+      "title": "Budget Review",
+      "description": "Budget review suggestions based on general budgeting guidelines."
     },
     {
       "title": "Emergency Fund Planning",
@@ -71,7 +71,7 @@
     },
     {
       "q": "How much should I save for an emergency fund?",
-      "a": "Financial experts recommend saving 3-6 months of living expenses for an emergency fund. Start with $1,000 as an initial goal, then gradually build up to cover several months of essential expenses like housing, food, and utilities."
+      "a": "A common emergency fund target is 3-6 months of living expenses. Some people start with $1,000 as an initial goal, then gradually build up to cover several months of essential expenses like housing, food, and utilities."
     },
     {
       "q": "How often should I review my budget?",

@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Automotive Weight Converter",
-    "description": "The Automotive Weight Converter provides precise weight conversions between pounds, kilograms, ounces, and grams specifically designed for automotive applications. This professional tool is essential for weight reduction projects, performance calculations, parts comparison, and racing modifications. Accurate weight measurements are crucial for automotive performance tuning, understanding power-to-weight ratios, and calculating how component changes affect overall vehicle dynamics and performance optimization."
+    "description": "The Automotive Weight Converter provides weight conversions between pounds, kilograms, ounces, and grams for automotive applications. It is useful for parts comparison, vehicle-weight checks, and reference calculations. Accurate weight measurements help when reviewing power-to-weight ratios, comparing component changes, and converting manufacturer specifications between units."
   },
   "howTo": {
     "title": "How to Use the Automotive Weight Converter",
@@ -16,11 +16,11 @@
       },
       {
         "title": "Get Results",
-        "description": "View instant, precise conversion results with high accuracy for automotive applications."
+        "description": "View conversion results for automotive applications."
       },
       {
         "title": "Apply to Projects",
-        "description": "Use the converted weights for automotive weight reduction, performance tuning, and parts comparison."
+        "description": "Use the converted weights for vehicle-weight checks and parts comparison."
       }
     ],
     "tips": [
@@ -32,33 +32,33 @@
   "features": [
     {
       "title": "Multiple Weight Units",
-      "description": "Support for pounds (lbs), kilograms (kg), ounces (oz), and grams (g) with instant conversion between any units."
+      "description": "Support for pounds (lbs), kilograms (kg), ounces (oz), and grams (g) with conversion between supported units."
     },
     {
       "title": "Automotive-Specific Accuracy",
-      "description": "High-precision conversions optimized for automotive weight calculations and performance modifications."
+      "description": "Weight conversions suited to automotive calculations and reference checks."
     },
     {
-      "title": "Performance Optimization",
-      "description": "Calculate weight savings for power-to-weight ratio improvements and racing applications."
+      "title": "Weight Change Review",
+      "description": "Calculate weight differences for power-to-weight comparisons and modification planning."
     },
     {
       "title": "Parts Comparison",
       "description": "Compare weights of stock vs aftermarket parts to determine weight reduction benefits."
     },
     {
-      "title": "Professional Accuracy",
-      "description": "Uses standard international conversion factors for precise automotive engineering calculations."
+      "title": "Standard Conversion Factors",
+      "description": "Uses standard international conversion factors for automotive engineering reference calculations."
     },
     {
-      "title": "Instant Results",
-      "description": "Real-time conversion with no delays, perfect for quick automotive weight calculations."
+      "title": "Calculated Results",
+      "description": "Provides automotive weight conversions for quick comparison and reference use."
     }
   ],
   "faq": [
     {
       "q": "Why is automotive weight conversion important for performance?",
-      "a": "Automotive weight conversion is crucial for performance tuning because weight directly affects acceleration, braking, fuel economy, and handling. Converting between pounds and kilograms helps calculate power-to-weight ratios and determine the impact of weight reduction modifications on overall vehicle performance."
+      "a": "Automotive weight conversion is useful because weight directly affects acceleration, braking, fuel economy, and handling. Converting between pounds and kilograms helps calculate power-to-weight ratios and compare the effect of weight changes on overall vehicle behavior."
     },
     {
       "q": "How much weight reduction makes a noticeable difference in automotive performance?",
@@ -69,8 +69,8 @@
       "a": "Wheels, exhaust systems, body panels, engine components, and suspension parts benefit most from weight conversion. Converting weights helps compare stock vs aftermarket parts, calculate rotational weight savings, and determine overall vehicle weight reduction for performance modifications."
     },
     {
-      "q": "How accurate is the automotive weight converter for professional use?",
-      "a": "Our automotive weight converter provides professional-grade accuracy using standard international conversion factors (1 kg = 2.20462 lbs, 1 lb = 16 oz, 1 kg = 1000 g). This ensures precision for automotive engineering calculations, racing applications, and performance tuning projects."
+      "q": "How accurate is the automotive weight converter for workshop use?",
+      "a": "Our automotive weight converter uses standard international conversion factors (1 kg = 2.20462 lbs, 1 lb = 16 oz, 1 kg = 1000 g). This makes it suitable for automotive calculations, parts comparisons, and workshop reference use."
     },
     {
       "q": "Can I use this converter for racing weight calculations?",
@@ -78,7 +78,7 @@
     },
     {
       "q": "What's the difference between pounds and kilograms in automotive applications?",
-      "a": "Pounds (lbs) are commonly used in the US automotive market, while kilograms (kg) are used internationally and in racing. 1 kilogram equals 2.20462 pounds. Many performance specifications and racing regulations use metric units, making conversion essential for global automotive applications."
+      "a": "Pounds (lbs) are commonly used in the US automotive market, while kilograms (kg) are used internationally and in racing. 1 kilogram equals 2.20462 pounds. Many specifications and racing regulations use metric units, so conversion is useful when comparing information across regions."
     }
   ],
   "relativeLinks": [

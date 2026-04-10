@@ -1,7 +1,7 @@
 {
   "name": "InterConverter - Free Online Conversion Tools",
   "short_name": "InterConverter",
-  "description": "Professional-grade conversion tools and calculators. Convert currencies, units, colors, files, automotive calculations, and more.",
+  "description": "Online converter tools and calculators with a smaller featured public set for units, time, colors, and selected workflows.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -69,30 +69,6 @@
       "icons": [
         {
           "src": "/icons/timestamp-96x96.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "Currency Converter",
-      "short_name": "Currency",
-      "description": "Convert between currencies",
-      "url": "/finance/currency-converter",
-      "icons": [
-        {
-          "src": "/icons/currency-96x96.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "BMI Calculator",
-      "short_name": "BMI",
-      "description": "Calculate Body Mass Index",
-      "url": "/health/bmi-calculator",
-      "icons": [
-        {
-          "src": "/icons/bmi-96x96.png",
           "sizes": "96x96"
         }
       ]

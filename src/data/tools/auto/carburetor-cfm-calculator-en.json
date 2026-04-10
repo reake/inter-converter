@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Carburetor CFM Calculator",
-    "description": "The Carburetor CFM Calculator determines the correct carburetor airflow capacity (CFM) for your engine based on displacement, RPM, and modification level. This professional engine airflow sizing tool is essential for proper carburetor sizing and optimal engine performance. Proper carburetor sizing ensures optimal air-fuel mixture delivery, preventing lean or rich conditions that can damage engines or reduce performance. This calculator helps match carburetor capacity to engine requirements for stock and modified engines."
+    "description": "The Carburetor CFM Calculator determines the carburetor airflow capacity (CFM) for your engine based on displacement, RPM, and modification level. It is useful for carburetor sizing and airflow planning. Proper carburetor sizing helps match carburetor capacity to engine requirements for stock and modified engines."
   },
   "howTo": {
     "title": "How to Use the Carburetor CFM Calculator",
@@ -25,7 +25,7 @@
     ],
     "tips": [
       "Modified engines typically need 15-20% more CFM than stock",
-      "Consider your driving style - street vs racing applications",
+      "Consider your driving style - street, strip, or general track use",
       "Factor in altitude - higher elevations need less CFM"
     ]
   },
@@ -44,25 +44,25 @@
     },
     {
       "title": "RPM-Based Calculations",
-      "description": "Factors in maximum RPM to determine peak airflow requirements for optimal performance."
+      "description": "Factors in maximum RPM to determine peak airflow requirements for reference sizing checks."
     },
     {
-      "title": "Professional Accuracy",
-      "description": "Uses proven formulas from engine builders and carburetor manufacturers for precise sizing."
+      "title": "Sizing Formula",
+      "description": "Uses standard formulas from engine builders and carburetor manufacturers for sizing reference."
     },
     {
-      "title": "Performance Optimization",
-      "description": "Helps prevent over-carbing or under-carbing for optimal power delivery and drivability."
+      "title": "Sizing Comparison",
+      "description": "Helps compare sizing choices to avoid over-carbing or under-carbing."
     }
   ],
   "faq": [
     {
       "q": "What happens if my carburetor CFM is too small for my engine?",
-      "a": "A carburetor with insufficient CFM restricts airflow, causing lean air-fuel ratios, power loss, and potential engine damage. The engine won't reach its full performance potential, especially at higher RPMs. Use our carburetor CFM calculator to determine the correct sizing for optimal performance."
+      "a": "A carburetor with insufficient CFM restricts airflow, causing lean air-fuel ratios, power loss, and potential engine damage. The engine may struggle at higher RPMs. Use our carburetor CFM calculator to compare sizing ranges for your setup."
     },
     {
       "q": "Can a carburetor be too big for my engine displacement?",
-      "a": "Yes, an oversized carburetor can cause poor idle quality, reduced low-end torque, and difficulty tuning. It's generally better to be slightly undersized than oversized for street applications. Our calculator helps find the optimal CFM range for your specific engine."
+      "a": "Yes, an oversized carburetor can cause poor idle quality, reduced low-end torque, and difficulty tuning. It's generally better to be slightly undersized than oversized for street applications. Our calculator helps estimate a suitable CFM range for your engine."
     },
     {
       "q": "How does engine modification level affect carburetor CFM requirements?",
@@ -77,7 +77,7 @@
       "a": "Use the formula: (Displacement × RPM × Volumetric Efficiency) ÷ 3456 = CFM. For stock engines, use 1.5 CFM per cubic inch. For modified engines, use 1.8-2.0 CFM per cubic inch. Our calculator automates this process for accuracy."
     },
     {
-      "q": "Which carburetor brands work best with calculated CFM requirements?",
+      "q": "How do carburetor brands compare with calculated CFM requirements?",
       "a": "Popular brands like Holley, Edelbrock, Demon, and Quick Fuel all offer carburetors in various CFM ratings. Choose based on your calculated CFM needs, budget, and intended use (street, strip, or racing applications)."
     }
   ],

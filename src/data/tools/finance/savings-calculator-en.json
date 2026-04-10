@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Savings Calculator",
-    "description": "The Savings Calculator helps you plan and track your savings goals with compound interest calculations. Whether you're saving for a house, vacation, emergency fund, or retirement, this tool shows how regular deposits and interest can help you reach your financial targets. Plan your savings strategy by adjusting deposit amounts, frequency, and interest rates to see how different approaches affect your timeline and final savings amount."
+    "description": "The Savings Calculator helps you estimate how regular deposits, interest, and time may affect progress toward a savings goal. It can be used to review different deposit amounts, frequencies, and rates so you can compare scenarios and see how they change your projected balance over time. Use it as a planning reference when reviewing savings goals."
   },
   "howTo": {
     "title": "How to Use the Savings Calculator",
@@ -41,11 +41,11 @@
   "features": [
     {
       "title": "Goal Timeline Calculation",
-      "description": "Calculate exactly when you'll reach your savings goal based on deposits and interest."
+      "description": "Estimate when you may reach a savings goal based on deposits and interest assumptions."
     },
     {
       "title": "Regular Deposit Planning",
-      "description": "Plan optimal deposit amounts and frequencies to meet your timeline."
+      "description": "Compare deposit amounts and frequencies for different savings timelines."
     },
     {
       "title": "Compound Interest Tracking",
@@ -71,7 +71,7 @@
     },
     {
       "q": "What's a good interest rate for savings?",
-      "a": "High-yield savings accounts typically offer 0.5% to 5% APY, depending on market conditions. Online banks often offer higher rates than traditional banks. Shop around for the best rates while ensuring FDIC insurance."
+      "a": "Savings account rates vary widely based on market conditions, institution type, and account terms. Compare APY, fees, access restrictions, and deposit insurance coverage when reviewing account options."
     },
     {
       "q": "Should I save daily, weekly, or monthly?",
@@ -79,7 +79,7 @@
     },
     {
       "q": "How long will it take to reach my savings goal?",
-      "a": "This depends on your goal amount, current savings, deposit frequency, and interest rate. Our calculator shows exactly how long based on your specific inputs, helping you adjust your strategy as needed."
+      "a": "This depends on your goal amount, current savings, deposit frequency, and interest rate. The calculator estimates a timeline based on your inputs so you can review how changes in deposits or rates may affect the projection."
     }
   ],
   "relativeLinks": [

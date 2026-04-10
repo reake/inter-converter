@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Compression Ratio Calculator",
-    "description": "The Compression Ratio Calculator determines your engine's compression ratio for horsepower and performance analysis. This professional tool calculates compression ratios from cylinder volume, combustion chamber volume, and piston displacement. Essential for engine building, performance tuning, and determining fuel octane requirements. Understanding compression ratio helps optimize engine performance, determine fuel requirements, and ensure proper engine operation across different applications from street driving to racing."
+    "description": "The Compression Ratio Calculator determines your engine's compression ratio from cylinder volume, combustion chamber volume, and piston displacement. It is useful for engine building, fuel-matching checks, and reference calculations. Understanding compression ratio helps compare engine combinations, review fuel requirements, and support workshop planning across different applications."
   },
   "howTo": {
     "title": "How to Use the Compression Ratio Calculator",
@@ -20,7 +20,7 @@
       },
       {
         "title": "Get Compression Ratio",
-        "description": "View calculated compression ratio with performance and fuel octane recommendations."
+        "description": "View calculated compression ratio with fuel-octane reference guidance."
       }
     ],
     "tips": [
@@ -31,7 +31,7 @@
   },
   "features": [
     {
-      "title": "Precise Compression Calculation",
+      "title": "Compression Calculation",
       "description": "Calculate exact compression ratios using bore, stroke, and combustion chamber volume measurements."
     },
     {
@@ -39,8 +39,8 @@
       "description": "Compute total cylinder volume including swept volume and combustion chamber space."
     },
     {
-      "title": "Performance Optimization",
-      "description": "Get recommendations for optimal compression ratios based on intended use and fuel type."
+      "title": "Compression Ratio Guidance",
+      "description": "Review typical compression-ratio ranges based on intended use and fuel type."
     },
     {
       "title": "Fuel Octane Guidance",
@@ -48,7 +48,7 @@
     },
     {
       "title": "Engine Building Support",
-      "description": "Essential tool for engine builders to achieve target compression ratios."
+      "description": "Useful for engine builders comparing target compression ratios."
     },
     {
       "title": "Multiple Unit Support",
@@ -58,7 +58,7 @@
   "faq": [
     {
       "q": "What's the ideal compression ratio for pump gas engines?",
-      "a": "For 91-93 octane pump gas, compression ratios of 9.5:1 to 10.5:1 are typically safe for most engines. Higher compression ratios may require race fuel or careful tuning to avoid detonation. Our compression ratio calculator helps determine the optimal ratio for your fuel type."
+      "a": "For 91-93 octane pump gas, compression ratios of 9.5:1 to 10.5:1 are typically safe for many engines. Higher compression ratios may require race fuel or careful tuning to avoid detonation. Our compression ratio calculator helps compare ratios against common fuel ranges."
     },
     {
       "q": "How does compression ratio affect horsepower and performance?",
@@ -77,8 +77,8 @@
       "a": "Compression ratio = (Swept Volume + Combustion Chamber Volume) ÷ Combustion Chamber Volume. Swept volume = π × (bore/2)² × stroke. Our calculator automates this process using bore, stroke, and chamber volume inputs."
     },
     {
-      "q": "What compression ratio is best for racing applications?",
-      "a": "Racing engines often run 12:1 to 15:1 compression ratios with race fuel (100+ octane). The optimal ratio depends on fuel octane, engine design, and intended use. Always match compression ratio to available fuel octane rating."
+      "q": "What compression ratio ranges are common in racing applications?",
+      "a": "Racing engines often run 12:1 to 15:1 compression ratios with race fuel (100+ octane). The suitable ratio depends on fuel octane, engine design, and intended use. Always match compression ratio to available fuel octane rating."
     }
   ],
   "relativeLinks": [

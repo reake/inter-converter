@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Age Calculator",
-    "description": "The Age Calculator determines your exact age in years, months, days, hours, minutes, and seconds based on your birth date. It provides comprehensive age information including next birthday countdown, zodiac sign, and interesting age statistics. This tool is perfect for calculating precise age for official documents, birthday planning, or simply satisfying curiosity about your exact time on Earth. It handles leap years and different calendar systems accurately."
+    "description": "The Age Calculator determines age in years, months, days, hours, minutes, and seconds based on a birth date. It includes birthday countdown, zodiac reference, and age-related statistics for planning and general reference use. This tool is useful for document checks, birthday planning, or reviewing age on a selected date. It accounts for leap years and standard calendar differences."
   },
   "howTo": {
     "title": "How to Use the Age Calculator",
@@ -36,8 +36,8 @@
   },
   "features": [
     {
-      "title": "Precise Age Calculation",
-      "description": "Calculate exact age in years, months, days, hours, minutes, and seconds with leap year accuracy."
+      "title": "Detailed Age Breakdown",
+      "description": "Calculate age in years, months, days, hours, minutes, and seconds with leap-year handling."
     },
     {
       "title": "Birthday Countdown",
@@ -62,8 +62,8 @@
   ],
   "faq": [
     {
-      "q": "How accurate is the age calculation?",
-      "a": "The age calculator is extremely accurate, accounting for leap years, different month lengths, and precise time calculations down to the second. It handles all calendar complexities automatically."
+      "q": "How does the age calculation work?",
+      "a": "The calculator applies standard calendar rules, including leap years and varying month lengths, to show age across different time units. Results should still be reviewed if you need them for formal or legal use."
     },
     {
       "q": "Can I calculate age for future dates?",

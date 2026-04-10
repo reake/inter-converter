@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Data Size Converter",
-    "description": "The Data Size Converter provides comprehensive conversion between different digital storage units including bytes, kilobytes, megabytes, gigabytes, and terabytes. This professional data conversion tool is essential for IT professionals, developers, system administrators, and anyone working with digital storage calculations. Understanding data unit conversions helps in storage planning, bandwidth calculations, file size management, and system specifications across different platforms and applications. Whether you're calculating server storage, managing file sizes, or working with network data transfer rates, our converter ensures accurate conversions between binary and decimal data units."
+    "description": "The Data Size Converter provides conversion between different digital storage units including bytes, kilobytes, megabytes, gigabytes, and terabytes. It is useful for IT teams, developers, system administrators, and anyone working with digital storage calculations. Understanding data unit conversions helps in storage planning, bandwidth calculations, file-size management, and system specifications across different platforms and applications. Whether you're calculating server storage, managing file sizes, or reviewing network data transfer rates, our converter helps compare binary and decimal data units."
   },
   "howTo": {
     "title": "How to Use the Data Size Converter",
@@ -31,7 +31,7 @@
   },
   "features": [
     {
-      "title": "Comprehensive Unit Support",
+      "title": "Data Unit Support",
       "description": "Convert between all common data storage units including bytes, KB, MB, GB, TB, and PB with support for both binary and decimal calculations."
     },
     {
@@ -43,8 +43,8 @@
       "description": "Instant data size conversion as you type with immediate results display for efficient workflow and calculations."
     },
     {
-      "title": "Professional Precision",
-      "description": "High-precision calculations suitable for IT professionals, system administrators, and technical applications requiring accurate data measurements."
+      "title": "Reference Precision",
+      "description": "High-precision calculations for IT, system administration, and technical reference workflows requiring accurate data measurements."
     },
     {
       "title": "Large Data Handling",
@@ -77,8 +77,8 @@
       "a": "500 GB equals 0.5 TB in both binary and decimal systems. In binary: 500 GB = 512,000 MB. In decimal: 500 GB = 500,000 MB. Our data size converter handles these calculations automatically with precise results."
     },
     {
-      "q": "Is the data size converter accurate for professional IT use?",
-      "a": "Yes, our converter uses precise mathematical calculations for both binary and decimal systems, making it suitable for IT professionals, system administrators, developers, and technical applications requiring accurate data storage measurements."
+      "q": "Is the data size converter accurate for IT reference use?",
+      "a": "Yes, our converter uses precise mathematical calculations for both binary and decimal systems, making it suitable for IT teams, system administrators, developers, and technical reference workflows requiring accurate data storage measurements."
     }
   ],
   "relativeLinks": [

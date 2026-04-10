@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Tip Calculator - Restaurant Gratuity Calculation Tool",
-    "description": "The Tip Calculator is a comprehensive dining expense tool designed to help you calculate appropriate tips, split bills among multiple people, and determine total costs for restaurant meals and services. This calculator analyzes bill amounts, service quality, and group sizes to provide accurate tip calculations and bill splitting. Whether you're dining alone or with a group, this tool ensures fair and appropriate tipping."
+    "description": "The Tip Calculator is a dining expense tool designed to help you estimate tips, split bills among multiple people, and review total costs for restaurant meals and services. This calculator uses bill amounts, service level selections, and group sizes to provide tip and bill-splitting estimates. Whether you're dining alone or with a group, this tool helps you review common tipping scenarios."
   },
   "howTo": {
     "title": "How to Use the Tip Calculator",
@@ -33,7 +33,7 @@
     ],
     "tips": [
       "Standard tip ranges: 15% (adequate), 18% (good), 20%+ (excellent service)",
-      "Consider tipping on pre-tax amount for more accurate calculations",
+      "Consider tipping on the pre-tax amount for a consistent reference point",
       "Round up to convenient amounts when paying with cash",
       "Factor in service quality, not just bill amount, when determining tips"
     ]

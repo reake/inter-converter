@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Property Tax Calculator - Real Estate Tax Assessment Tool",
-    "description": "The Property Tax Calculator is a comprehensive real estate planning tool designed to help homeowners and buyers estimate annual property tax obligations based on assessed home values and local tax rates. This calculator analyzes property values, assessment ratios, tax rates, and exemptions to determine accurate property tax estimates. Whether you're buying a home, budgeting for ownership costs, or comparing properties, this tool provides precise property tax calculations."
+    "description": "The Property Tax Calculator is a real estate tax planning tool designed to help homeowners and buyers estimate annual property tax obligations based on assessed home values and local tax rates. This calculator uses property values, assessment ratios, tax rates, and exemptions to estimate property taxes. Whether you're buying a home, budgeting for ownership costs, or comparing properties, this tool provides formula-based property tax estimates."
   },
   "howTo": {
     "title": "How to Use the Property Tax Calculator",
@@ -75,7 +75,7 @@
     },
     {
       "q": "Can I appeal my property tax assessment?",
-      "a": "Yes, most jurisdictions allow appeals if you believe your property is overassessed. You'll need comparable sales data, property condition evidence, or professional appraisals to support your case."
+      "a": "Yes, most jurisdictions allow appeals if you believe your property is overassessed. You'll need comparable sales data, property condition evidence, or independent appraisals to support your case."
     },
     {
       "q": "How often do property taxes change?",

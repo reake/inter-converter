@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Consolidation Loan Calculator - Multi-Debt Consolidation Tool",
-    "description": "The Consolidation Loan Calculator is a comprehensive debt management tool designed to help you evaluate the benefits of consolidating multiple debts into a single loan with potentially better terms. This calculator compares your current debt payments with consolidation loan scenarios, calculating monthly payment changes, interest savings, and total cost differences. Whether you're considering personal loans, balance transfers, or other consolidation options, this tool provides accurate projections for debt consolidation strategies."
+    "description": "The Consolidation Loan Calculator helps you evaluate whether combining multiple debts into a single loan changes monthly payments, total cost, and repayment timeline. It compares current debt payments with consolidation-loan scenarios so you can review tradeoffs across rates, fees, and terms. Use it as a planning reference when comparing consolidation options."
   },
   "howTo": {
     "title": "How to Use the Consolidation Loan Calculator",
@@ -23,8 +23,8 @@
         "description": "Review how consolidation affects your total monthly debt payments."
       },
       {
-        "title": "Calculate Interest Savings",
-        "description": "Analyze total interest savings or additional costs over the loan term."
+        "title": "Compare Total Cost",
+        "description": "Analyze total interest differences and additional costs over the loan term."
       },
       {
         "title": "Evaluate Overall Benefits",

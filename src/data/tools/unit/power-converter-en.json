@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Power Converter",
-    "description": "The Power Converter provides comprehensive conversion between different power units including watts, kilowatts, horsepower, BTU/hour, and more specialized power measurements. This professional power conversion tool is essential for engineers, electricians, HVAC professionals, and anyone working with electrical, mechanical, and thermal power calculations. Understanding power unit conversions helps in electrical system design, motor specifications, generator sizing, and energy efficiency analysis across industrial, automotive, and residential applications. Whether you're sizing electrical equipment, comparing motor ratings, or calculating heating system capacity, our converter ensures accurate conversions between all major power units."
+    "description": "The Power Converter provides conversion between different power units including watts, kilowatts, horsepower, BTU/hour, and other power measurements. It is useful for engineers, electricians, HVAC work, and anyone comparing electrical, mechanical, and thermal power calculations. Understanding power unit conversions helps in electrical-system planning, motor specifications, generator sizing, and energy-efficiency checks across industrial, automotive, and residential applications. Whether you're sizing electrical equipment, comparing motor ratings, or calculating heating-system capacity, our converter helps compare major power units using standard conversion factors."
   },
   "howTo": {
     "title": "How to Use the Power Converter",
@@ -31,7 +31,7 @@
   },
   "features": [
     {
-      "title": "Comprehensive Power Units",
+      "title": "Power Unit Support",
       "description": "Convert between watts, kilowatts, horsepower, BTU/hr, and other power units covering electrical, mechanical, and thermal power applications."
     },
     {
@@ -51,7 +51,7 @@
       "description": "Specialized support for BTU/hr conversions commonly used in heating, cooling, and thermal system capacity calculations."
     },
     {
-      "title": "Professional Standards",
+      "title": "Reference Standards",
       "description": "Compliant with international power measurement standards for industrial, automotive, and electrical engineering applications."
     }
   ],
@@ -74,7 +74,7 @@
     },
     {
       "q": "How accurate is the power converter for engineering use?",
-      "a": "Our power converter uses exact international conversion factors and maintains high decimal precision, making it suitable for electrical system design, motor sizing, generator specifications, and professional engineering calculations."
+      "a": "Our power converter uses exact international conversion factors and maintains high decimal precision, making it suitable for electrical-system planning, motor sizing, generator specifications, and engineering reference calculations."
     },
     {
       "q": "Can I convert between electrical and mechanical power units?",

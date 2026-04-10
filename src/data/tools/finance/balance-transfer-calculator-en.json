@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Balance Transfer Calculator - Credit Card Debt Management Tool",
-    "description": "The Balance Transfer Calculator is a comprehensive debt management tool designed to help you evaluate the benefits of transferring credit card balances to lower-interest cards. Whether you're looking to consolidate multiple credit card debts or take advantage of promotional 0% APR offers, this calculator shows potential savings in interest costs and helps you create an effective debt payoff strategy. Understanding balance transfer calculations is essential for optimizing your debt management and potentially saving thousands in interest charges."
+    "description": "The Balance Transfer Calculator is a debt planning tool designed to help you evaluate the potential impact of transferring credit card balances to lower-interest cards. Whether you're looking to consolidate multiple credit card debts or review promotional 0% APR offers, this calculator shows possible interest savings and helps you compare payoff scenarios. Understanding balance transfer calculations can support debt planning and help you estimate whether transfer fees may be offset by lower interest charges."
   },
   "howTo": {
     "title": "How to Use the Balance Transfer Calculator",
@@ -32,7 +32,7 @@
       }
     ],
     "tips": [
-      "Look for 0% promotional APR periods of 12-21 months for maximum savings",
+      "Look for 0% promotional APR periods of 12-21 months when comparing potential savings",
       "Factor in balance transfer fees (typically 3-5% of transferred amount)",
       "Pay off the balance before promotional rate expires",
       "Avoid using the new card for purchases during promotional period"

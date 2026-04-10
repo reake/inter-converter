@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Mortgage Payoff Calculator - Early Payment Planning Tool",
-    "description": "The Mortgage Payoff Calculator is a comprehensive mortgage acceleration tool designed to help homeowners calculate the benefits of making extra principal payments to pay off their mortgage early. This calculator shows how additional payments can save thousands in interest costs and reduce loan terms by years. Whether you're considering bi-weekly payments, annual lump sums, or monthly extra payments, this tool provides accurate projections for mortgage payoff strategies."
+    "description": "The Mortgage Payoff Calculator helps homeowners estimate how extra principal payments may change loan duration and total interest. It compares scenarios such as bi-weekly payments, annual lump sums, and monthly extra payments so you can review tradeoffs before making a repayment plan."
   },
   "howTo": {
     "title": "How to Use the Mortgage Payoff Calculator",
@@ -20,11 +20,11 @@
       },
       {
         "title": "Review Savings Analysis",
-        "description": "Analyze total interest savings and time reduction from extra payments."
+        "description": "Review estimated interest differences and timeline changes from extra payments."
       },
       {
         "title": "Compare Scenarios",
-        "description": "Compare different extra payment strategies to find the most effective approach."
+        "description": "Compare different extra payment strategies across payoff timeline and interest tradeoffs."
       },
       {
         "title": "Plan Payment Strategy",
@@ -32,7 +32,7 @@
       }
     ],
     "tips": [
-      "Even small extra payments can save thousands in interest over time",
+      "Even small extra payments may reduce total interest over time",
       "Bi-weekly payments result in 26 payments per year (equivalent to 13 monthly payments)",
       "Consider opportunity cost - compare mortgage savings to investment returns",
       "Ensure you have emergency savings before accelerating mortgage payments"
@@ -41,7 +41,7 @@
   "features": [
     {
       "title": "Extra Payment Calculator",
-      "description": "Calculate interest savings and time reduction from various extra payment strategies."
+      "description": "Estimate interest differences and timeline changes from various extra payment strategies."
     },
     {
       "title": "Bi-Weekly Payment Analysis",
@@ -66,16 +66,16 @@
   ],
   "faq": [
     {
-      "q": "How much can I save by paying extra on my mortgage?",
-      "a": "Extra payments can save substantial interest. For example, paying an extra $100/month on a $300,000, 30-year mortgage at 6% can save over $60,000 in interest and reduce the loan term by 6 years."
+      "q": "How do extra mortgage payments affect the loan?",
+      "a": "Extra payments generally reduce principal faster, which can shorten the loan term and lower total interest. The effect depends on the balance, rate, remaining term, and payment schedule entered into the calculator."
     },
     {
       "q": "Should I pay extra on my mortgage or invest the money?",
-      "a": "This depends on your mortgage rate vs potential investment returns. If you can earn more investing than your mortgage rate (after taxes), investing may be better. However, mortgage payoff provides guaranteed savings and peace of mind."
+      "a": "This depends on your mortgage rate, expected investment returns, taxes, liquidity needs, and risk tolerance. Use the calculator to compare scenarios rather than treating one approach as universally better."
     },
     {
-      "q": "What's the best extra payment strategy?",
-      "a": "Bi-weekly payments are effective and automatic, while extra monthly principal payments offer flexibility. The best strategy depends on your cash flow, discipline, and financial goals."
+      "q": "How can I compare extra payment strategies?",
+      "a": "Bi-weekly payments and extra monthly principal payments can affect payoff timing in different ways. The right approach depends on your cash flow, preferences, and broader financial priorities."
     },
     {
       "q": "When should I avoid paying extra on my mortgage?",

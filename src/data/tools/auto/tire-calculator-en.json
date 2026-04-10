@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Tire Calculator",
-    "description": "The Tire Calculator analyzes how tire diameter changes affect vehicle speed, RPM, and overall performance. This tool is essential for tire upgrades, performance tuning, and ensuring accurate speedometer readings. Understanding tire size impact helps optimize vehicle performance, fuel economy, and ensures proper clearance and handling characteristics when upgrading to different tire sizes."
+    "description": "The Tire Calculator analyzes how tire diameter changes affect vehicle speed, RPM, and overall driving characteristics. It is useful for tire upgrades, comparison checks, and reviewing speedometer differences. Understanding tire size impact helps compare clearance, handling, and fuel-economy tradeoffs when changing tire sizes."
   },
   "howTo": {
     "title": "How to Use the Tire Calculator",
@@ -20,7 +20,7 @@
       },
       {
         "title": "Analyze Impact",
-        "description": "Evaluate performance impact and make informed tire upgrade decisions."
+        "description": "Evaluate likely effects and compare tire size options."
       }
     ],
     "tips": [
@@ -44,21 +44,21 @@
     },
     {
       "title": "Performance Impact Assessment",
-      "description": "Evaluate effects on acceleration, fuel economy, and handling characteristics."
+      "description": "Review effects on acceleration, fuel economy, and handling characteristics."
     },
     {
       "title": "Speedometer Accuracy",
       "description": "Determine speedometer error percentage with different tire sizes."
     },
     {
-      "title": "Professional Guidance",
-      "description": "Expert recommendations for safe and effective tire upgrades."
+      "title": "Upgrade Guidance",
+      "description": "General guidance for comparing common tire upgrade changes."
     }
   ],
   "faq": [
     {
       "q": "How does tire diameter affect speedometer accuracy?",
-      "a": "Larger tires make the speedometer read slower than actual speed, while smaller tires make it read faster. A 3% tire diameter increase typically causes 3% speedometer error. Our tire calculator helps determine exact speedometer error for any tire size change."
+      "a": "Larger tires make the speedometer read slower than actual speed, while smaller tires make it read faster. A 3% tire diameter increase typically causes 3% speedometer error. Our tire calculator helps estimate speedometer error for any tire size change."
     },
     {
       "q": "What's the maximum safe tire size increase?",
@@ -66,7 +66,7 @@
     },
     {
       "q": "How do larger tires affect fuel economy?",
-      "a": "Larger, heavier tires typically reduce fuel economy due to increased rolling resistance and rotational mass. The effect varies by tire weight, tread pattern, and vehicle type. Use our tire calculator to understand performance trade-offs."
+      "a": "Larger, heavier tires typically reduce fuel economy due to increased rolling resistance and rotational mass. The effect varies by tire weight, tread pattern, and vehicle type. Use our tire calculator to compare likely trade-offs before changing sizes."
     },
     {
       "q": "Will changing tire size affect my vehicle's performance?",

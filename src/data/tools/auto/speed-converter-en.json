@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Speed Converter",
-    "description": "The Speed Converter provides accurate conversions between MPH, KPH, knots, and other speed units for automotive applications. Essential for international travel, racing, and performance comparisons. Understanding speed in different units helps with speedometer calibration, international driving, racing regulations, and comparing vehicle performance across different measurement systems."
+    "description": "The Speed Converter provides conversions between MPH, KPH, knots, and other speed units for automotive applications. It is useful for international driving, speedometer checks, and unit comparisons. Understanding speed in different units helps with speedometer calibration, international travel, and reading specifications across different measurement systems."
   },
   "howTo": {
     "title": "How to Use the Speed Converter",
@@ -16,11 +16,11 @@
       },
       {
         "title": "Get Results",
-        "description": "View instant conversion results with high precision."
+        "description": "View conversion results using standard conversion factors."
       },
       {
         "title": "Apply Results",
-        "description": "Use for international travel, racing, and automotive applications."
+        "description": "Use for international travel, speed checks, and automotive reference use."
       }
     ],
     "tips": [
@@ -47,8 +47,8 @@
       "description": "Meet racing regulation requirements with accurate speed unit conversions."
     },
     {
-      "title": "Professional Accuracy",
-      "description": "High precision calculations suitable for automotive and professional use."
+      "title": "Exact Conversion Factors",
+      "description": "High-precision calculations suitable for automotive reference use."
     },
     {
       "title": "International Compatibility",
@@ -74,7 +74,7 @@
     },
     {
       "q": "How do I convert 60 MPH to KPH?",
-      "a": "60 MPH equals 96.56 KPH (60 × 1.609344 = 96.56). This is a common highway speed conversion. Our speed converter provides instant results for any speed value with professional accuracy."
+      "a": "60 MPH equals 96.56 KPH (60 × 1.609344 = 96.56). This is a common highway speed conversion. Our speed converter uses standard conversion factors."
     },
     {
       "q": "What is the conversion factor for knots to MPH?",

@@ -26,7 +26,7 @@
     "tips": [
       "Formula: Displacement = π × (bore/2)² × stroke × cylinders",
       "Larger bore favors high RPM power, longer stroke provides more torque",
-      "Use precise measurements for accurate displacement calculations"
+      "Use bore and stroke measurements from your engine specifications or workshop measurements"
     ]
   },
   "features": [
@@ -44,7 +44,7 @@
     },
     {
       "title": "Unit Conversion",
-      "description": "Instant conversion between metric and imperial measurement systems."
+      "description": "Conversion between metric and imperial measurement systems for reference use."
     },
     {
       "title": "Performance Analysis",
@@ -74,7 +74,7 @@
     },
     {
       "q": "What's a good bore-to-stroke ratio for performance?",
-      "a": "Oversquare engines (bore > stroke) favor high RPM power and breathing, while undersquare engines (stroke > bore) produce more torque. Square engines (bore = stroke) offer balanced characteristics. The optimal ratio depends on your performance goals and application."
+      "a": "Oversquare engines (bore > stroke) favor high RPM power and breathing, while undersquare engines (stroke > bore) produce more torque. Square engines (bore = stroke) offer balanced characteristics. The right ratio depends on your goals and application."
     },
     {
       "q": "How does displacement relate to fuel consumption?",

@@ -2,7 +2,7 @@
   {
     "id": "currency-converter",
     "name": "Currency Converter",
-    "description": "Convert currencies with real-time exchange rates and live forex data. Professional currency converter supporting 150+ currencies with accurate conversion rates and historical charts.",
+    "description": "Convert currencies using exchange-rate data for travel planning, budgeting, price checks, and general reference use.",
     "titleSuffix": "Real-Time Exchange Rates",
     "category": "finance",
     "keywords": [
@@ -27,7 +27,7 @@
   {
     "id": "loan-calculator",
     "name": "Loan Calculator",
-    "description": "Calculate loan payments, interest, and amortization schedules instantly. Comprehensive loan calculator with payment breakdown analysis for mortgages, auto loans, and personal financing.",
+    "description": "Estimate loan payments, interest costs, and amortization schedules for mortgages, auto loans, and personal loans.",
     "titleSuffix": "Payment Schedule Analysis",
     "category": "finance",
     "keywords": ["loan", "mortgage", "payment", "interest", "calculator", "finance"],
@@ -41,7 +41,7 @@
   {
     "id": "tax-calculator",
     "name": "Tax Calculator",
-    "description": "Calculate income tax, deductions, and tax liability for accurate tax planning. Professional tax calculator supporting federal and state tax calculations with current tax brackets.",
+    "description": "Estimate income tax, deductions, and tax liability to compare federal and state tax scenarios using current bracket assumptions.",
     "titleSuffix": "Income Tax Planning",
     "category": "finance",
     "keywords": ["tax", "income", "calculator", "irs", "refund", "liability"],
@@ -55,7 +55,7 @@
   {
     "id": "mortgage-calculator",
     "name": "Mortgage Calculator",
-    "description": "Calculate mortgage payments including PMI, property tax, and insurance costs. Complete mortgage calculator with amortization schedule and total cost analysis for home buyers.",
+    "description": "Estimate mortgage payments including PMI, property tax, and insurance, and review amortization and total cost scenarios.",
     "titleSuffix": "PMI & Property Tax Analysis",
     "category": "finance",
     "keywords": ["mortgage", "home loan", "payment", "interest", "calculator", "real estate"],

@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "Sales Tax Calculator - Tax Amount, Total Price & Reverse Sales Tax",
-    "description": "The Sales Tax Calculator helps you compute the tax amount and final total from a pre-tax price, or work backward from a total price to find the pre-tax amount. Perfect for shoppers, small business owners, and online sellers needing quick, accurate tax calculations."
+    "description": "The Sales Tax Calculator helps you estimate the tax amount and final total from a pre-tax price, or work backward from a total price to find the pre-tax amount. It can be used by shoppers, small business owners, and online sellers to review common sales tax scenarios."
   },
   "howTo": {
     "title": "How to Use the Sales Tax Calculator",
@@ -21,7 +21,7 @@
   
 "features": [
     { "title": "Add or Remove Tax", "description": "Compute total from pre-tax price or reverse-calculate pre-tax from total." },
-    { "title": "Flexible Rate Entry", "description": "Enter exact tax percentages for accurate results across locations." },
+    { "title": "Flexible Rate Entry", "description": "Enter local tax percentages to compare results across locations." },
     { "title": "Clear Breakdown", "description": "See item subtotal, tax amount, and final total in one view." },
     { "title": "Discount & Shipping Options", "description": "Model common checkout scenarios and their taxability." }
   ],
@@ -30,7 +30,7 @@
     { "q": "Do all states tax shipping?", "a": "No. Tax rules vary widely; some states tax shipping, others don't. Check your local regulations." },
     { "q": "Can I use this for online sales?", "a": "Yes. Enter the correct rate for the buyer's location to estimate checkout totals and tax amounts." },
     { "q": "Is this the same as income tax?", "a": "No. Sales tax applies to purchases; income tax applies to earnings." },
-    { "q": "Why don't my results match the store receipt exactly?", "a": "Rounding rules, taxable item differences, and local surtaxes can cause small discrepancies. Use your local jurisdiction's rules for the most precise outcome." }
+    { "q": "Why don't my results match the store receipt exactly?", "a": "Rounding rules, taxable item differences, and local surtaxes can cause small discrepancies. Use your local jurisdiction's rules as the final reference." }
   ],
   "relativeLinks": [
     { "title": "Tax Calculator", "url": "/finance/tax-calculator" },

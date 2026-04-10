@@ -16,7 +16,7 @@
       },
       {
         "title": "Calculate Ratio",
-        "description": "View the calculated power-to-weight ratio instantly."
+        "description": "View the calculated power-to-weight ratio."
       },
       {
         "title": "Compare Performance",
@@ -51,8 +51,8 @@
       "description": "Determine vehicle performance class and competitive potential."
     },
     {
-      "title": "Professional Accuracy",
-      "description": "Precise calculations suitable for automotive engineering and racing applications."
+      "title": "Reference Calculation",
+      "description": "Formula-based calculations for automotive comparison and reference workflows."
     }
   ],
   "faq": [
@@ -62,7 +62,7 @@
     },
     {
       "q": "How does power-to-weight ratio affect acceleration performance?",
-      "a": "Lower power-to-weight ratios generally mean faster acceleration. A 10% improvement in ratio can reduce 0-60 mph times by roughly 8-10%. This makes power-to-weight ratio one of the most important performance metrics for acceleration."
+      "a": "Lower power-to-weight ratios generally correspond to stronger acceleration potential. The exact result varies with traction, gearing, aerodynamics, and drivetrain type, so power-to-weight ratio is best used as a comparison metric rather than a direct prediction."
     },
     {
       "q": "Should I focus on adding power or reducing weight for better performance?",

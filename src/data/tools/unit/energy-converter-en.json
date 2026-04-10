@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Energy Converter",
-    "description": "The Energy Converter provides comprehensive conversion between different energy units including joules, calories, BTUs, kilowatt-hours, and more specialized energy measurements. This professional energy conversion tool is essential for engineers, scientists, HVAC professionals, and anyone working with energy calculations across thermal, electrical, and mechanical systems. Understanding energy unit conversions helps in power system design, thermal calculations, energy efficiency analysis, and scientific research applications. Whether you're calculating heating requirements, electrical consumption, or scientific energy measurements, our converter ensures accurate conversions between all major energy units with professional precision."
+    "description": "The Energy Converter provides conversion between different energy units including joules, calories, BTUs, kilowatt-hours, and other energy measurements. It is useful for engineers, scientists, HVAC work, and anyone comparing energy calculations across thermal, electrical, and mechanical systems. Understanding energy unit conversions helps in power-system planning, thermal calculations, energy-efficiency checks, and scientific reference work. Whether you're calculating heating requirements, electrical consumption, or scientific energy measurements, our converter helps compare major energy units using standard conversion factors."
   },
   "howTo": {
     "title": "How to Use the Energy Converter",
@@ -31,12 +31,12 @@
   },
   "features": [
     {
-      "title": "Comprehensive Energy Units",
+      "title": "Energy Unit Support",
       "description": "Convert between joules, calories, BTU, kWh, and other energy units covering thermal, electrical, and mechanical energy measurements."
     },
     {
       "title": "Scientific Precision",
-      "description": "High-precision calculations using exact conversion factors suitable for engineering, scientific research, and professional applications."
+      "description": "High-precision calculations using exact conversion factors for engineering, scientific reference, and planning workflows."
     },
     {
       "title": "Real-time Conversion",
@@ -73,8 +73,8 @@
       "a": "Use joules for scientific calculations and SI unit systems, kWh for electrical energy consumption and utility billing, calories for food energy and nutrition, BTUs for HVAC and thermal systems, and foot-pounds for mechanical energy in imperial systems."
     },
     {
-      "q": "How accurate is the energy converter for professional use?",
-      "a": "Our energy converter uses exact international conversion factors and maintains high decimal precision, making it suitable for engineering calculations, scientific research, HVAC system design, and professional energy analysis applications."
+      "q": "How accurate is the energy converter for reference use?",
+      "a": "Our energy converter uses exact international conversion factors and maintains high decimal precision, making it suitable for engineering calculations, scientific reference work, HVAC planning, and energy-analysis checks."
     },
     {
       "q": "Can I convert between different types of energy units?",

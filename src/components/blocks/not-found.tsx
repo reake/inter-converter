@@ -6,10 +6,10 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { SearchInput } from '@/components/ui/SearchInput';
-import { getPopularTools } from '@/config/tools';
+import { getReviewApprovedPopularTools } from '@/config/tools';
 
 export default function NotFound() {
-  const popularTools = getPopularTools(6);
+  const popularTools = getReviewApprovedPopularTools(6);
   const [seconds, setSeconds] = useState(5);
   const t = useTranslations();
 

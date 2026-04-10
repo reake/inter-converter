@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About HELOC Calculator - Home Equity Line of Credit Tool",
-    "description": "The HELOC Calculator is a comprehensive home equity financing tool designed to help homeowners calculate credit limits, monthly payments, and costs for Home Equity Lines of Credit. This calculator helps you determine available credit, interest-only payments during the draw period, and principal plus interest payments during repayment. Whether you need flexible access to home equity for ongoing expenses or major projects, this tool provides accurate HELOC projections."
+    "description": "The HELOC Calculator is a home equity financing tool designed to help homeowners estimate credit limits, monthly payments, and costs for Home Equity Lines of Credit. This calculator helps you review available credit, interest-only payments during the draw period, and principal plus interest payments during repayment. Whether you need flexible access to home equity for ongoing expenses or major projects, this tool provides scenario-based HELOC estimates."
   },
   "howTo": {
     "title": "How to Use the HELOC Calculator",
@@ -79,7 +79,7 @@
     },
     {
       "q": "Are HELOC interest payments tax deductible?",
-      "a": "HELOC interest may be tax deductible if you use the funds to buy, build, or substantially improve your home. The deduction is limited to interest on up to $750,000 of qualified residence loans. Consult a tax professional for specific guidance."
+      "a": "HELOC interest may be tax deductible if you use the funds to buy, build, or substantially improve your home. The deduction is limited to interest on up to $750,000 of qualified residence loans. Review current tax rules for your situation before relying on this treatment."
     }
   ],
   "relativeLinks": [

@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About 30 Year Fixed Mortgage Calculator - Traditional Home Loan Tool",
-    "description": "The 30 Year Fixed Mortgage Calculator is the most comprehensive tool for calculating monthly payments, total interest costs, and affordability for traditional 30-year fixed-rate mortgages. This popular mortgage term offers the lowest monthly payments, making homeownership accessible to more buyers while providing payment stability over three decades. Whether you're a first-time homebuyer or refinancing, this calculator provides accurate projections for 30-year mortgage scenarios and helps you understand the long-term financial commitment."
+    "description": "The 30 Year Fixed Mortgage Calculator is a mortgage planning tool for estimating monthly payments, total interest costs, and affordability for traditional 30-year fixed-rate mortgages. This popular mortgage term often offers lower monthly payments than shorter loan terms while providing payment stability over three decades. Whether you're a first-time homebuyer or refinancing, this calculator provides formula-based estimates for 30-year mortgage scenarios and helps you review the long-term financial commitment."
   },
   "howTo": {
     "title": "How to Use the 30 Year Fixed Mortgage Calculator",
@@ -41,7 +41,7 @@
   "features": [
     {
       "title": "Monthly Payment Calculator",
-      "description": "Calculate exact monthly principal and interest payments for 30-year fixed mortgage terms."
+      "description": "Estimate monthly principal and interest payments for 30-year fixed mortgage terms."
     },
     {
       "title": "PITI Payment Breakdown",

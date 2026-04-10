@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "Unsecured Loan Calculator - Personal Loan Payment, APR & Total Cost Estimator",
-    "description": "The Unsecured Loan Calculator estimates monthly payments, total interest, and overall borrowing cost for personal loans that do not require collateral. Compare APRs, terms, and fees, and evaluate how credit score and debt-to-income (DTI) influence affordability and approval odds."
+    "description": "The Unsecured Loan Calculator estimates monthly payments, total interest, and overall borrowing cost for personal loans that do not require collateral. Compare APRs, terms, and fees, and review how credit profile and debt-to-income (DTI) may affect affordability and lender evaluation."
   },
   "howTo": {
     "title": "How to Use the Unsecured Loan Calculator",
@@ -19,14 +19,14 @@
     ]
   },
   "features": [
-    { "title": "Payment & Interest Breakdown", "description": "Amortization schedule shows principal vs. interest over time." },
-    { "title": "Fee-Adjusted APR", "description": "Model origination fees to better reflect true borrowing cost." },
+    { "title": "Payment & Interest Breakdown", "description": "Amortization schedule shows principal and interest over time." },
+    { "title": "Fee-Adjusted APR", "description": "Model origination fees to reflect overall borrowing cost more clearly." },
     { "title": "DTI Awareness", "description": "Estimate how the new payment affects your debt-to-income ratio." },
-    { "title": "Offer Comparison", "description": "Test multiple APR and term combinations to choose the best fit." }
+    { "title": "Offer Comparison", "description": "Test multiple APR and term combinations to compare payment and cost tradeoffs." }
   ],
   "faq": [
     { "q": "What is an unsecured loan?", "a": "A personal loan that does not require collateral; approval is based on creditworthiness, income, and DTI." },
-    { "q": "How can I lower my APR?", "a": "Improve your credit score, reduce existing debt, add a co-borrower, or shop multiple lenders for better terms." },
+    { "q": "How can I compare unsecured loan offers?", "a": "Compare APR, fees, repayment term, monthly payment, and lender requirements together rather than focusing on one number alone." },
     { "q": "Is there a prepayment penalty?", "a": "Many personal loans have no prepayment penalty; review your contract before making extra payments." },
     { "q": "Unsecured vs. secured loans?", "a": "Unsecured loans avoid collateral risk but may have higher APRs; secured loans can be cheaper but put assets at risk." },
     { "q": "Will applying hurt my credit score?", "a": "Rate checks with prequalification are usually soft pulls; a formal application often triggers a hard inquiry that may temporarily lower your score." }

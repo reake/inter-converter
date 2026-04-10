@@ -280,7 +280,7 @@
     "icon": "📐"
   },
   {
-    "id": "auto-fluid-calculator",
+    "id": "fluid-weight-calculator",
     "name": "汽车液体重量计算器",
     "description": "计算包括汽油、机油和变速器油在内的汽车液体重量。车辆重量分布分析必备的液体重量计算器。",
     "category": "auto",
@@ -2180,7 +2180,7 @@
   {
     "id": "pdf-to-word-converter",
     "name": "PDF转Word转换器",
-    "description": "将PDF文件转换为可编辑的Word文档，准确保持格式。专业PDF转Word转换器，支持DOC和DOCX格式，保持布局完整性。",
+    "description": "说明 PDF 转 Word 工作流中的文档限制、格式漂移风险，以及什么时候必须手动复核。",
     "category": "media",
     "keywords": [
       "pdf",
@@ -2199,7 +2199,7 @@
   {
     "id": "jpg-to-png-converter",
     "name": "JPG转PNG转换器",
-    "description": "将JPG图片转换为PNG格式，支持透明度和无损质量。专业图片转换器，用于网页图形和照片编辑应用。",
+    "description": "说明 JPG 转 PNG 的适用场景、格式取舍，以及输出结果需要自行复核的地方。",
     "category": "media",
     "keywords": [
       "jpg",

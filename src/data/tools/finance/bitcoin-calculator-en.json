@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Bitcoin Calculator",
-    "description": "The Bitcoin Calculator is a comprehensive cryptocurrency investment analysis tool that helps you calculate Bitcoin investment returns, track portfolio performance, and analyze crypto investment scenarios. This calculator provides real-time Bitcoin price data, historical performance analysis, and investment projections to help you make informed decisions about Bitcoin investments. Whether you're a beginner exploring cryptocurrency or an experienced investor optimizing your portfolio, this tool offers valuable insights into Bitcoin investment potential."
+    "description": "The Bitcoin Calculator is a cryptocurrency planning tool that helps you estimate Bitcoin investment returns, track portfolio performance, and compare crypto scenarios. This calculator uses current Bitcoin price data, historical performance references, and projection inputs to help you review possible outcomes. Whether you're exploring cryptocurrency or tracking existing holdings, this tool offers planning reference points for Bitcoin scenarios."
   },
   "howTo": {
     "title": "How to Use the Bitcoin Calculator",
@@ -34,14 +34,14 @@
     "tips": [
       "Consider dollar-cost averaging to reduce volatility impact",
       "Only invest what you can afford to lose in cryptocurrency",
-      "Track your cost basis for accurate tax reporting",
+      "Track your cost basis to support tax recordkeeping",
       "Stay informed about Bitcoin market trends and regulations"
     ]
   },
   "features": [
     {
       "title": "Real-Time Bitcoin Prices",
-      "description": "Access current Bitcoin prices and market data for accurate investment calculations."
+      "description": "Access current Bitcoin prices and market data for Bitcoin return estimates."
     },
     {
       "title": "Historical Performance",
@@ -49,7 +49,7 @@
     },
     {
       "title": "Investment Scenarios",
-      "description": "Model different investment amounts and timeframes to optimize your Bitcoin strategy."
+      "description": "Model different investment amounts and timeframes to compare Bitcoin scenarios."
     },
     {
       "title": "Dollar-Cost Averaging",
@@ -67,7 +67,7 @@
   "faq": [
     {
       "q": "How is Bitcoin investment return calculated?",
-      "a": "Bitcoin returns are calculated based on the difference between your purchase price and current/target price, divided by your initial investment. The calculator uses real-time Bitcoin prices and historical data for accurate return calculations."
+      "a": "Bitcoin returns are calculated based on the difference between your purchase price and current/target price, divided by your initial investment. The calculator uses current Bitcoin prices and historical data for estimated return calculations."
     },
     {
       "q": "What is dollar-cost averaging for Bitcoin?",
@@ -75,7 +75,7 @@
     },
     {
       "q": "Should I invest in Bitcoin?",
-      "a": "Bitcoin is a highly volatile and speculative investment. Only invest money you can afford to lose, do thorough research, and consider it as part of a diversified portfolio. Consult with financial advisors for personalized advice."
+      "a": "Bitcoin is highly volatile and speculative. This calculator is for general planning reference rather than individualized guidance. Review your risk tolerance, time horizon, and overall portfolio mix before making decisions."
     },
     {
       "q": "How do I track Bitcoin for taxes?",

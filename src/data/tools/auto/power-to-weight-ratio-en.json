@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Power-to-Weight Ratio Calculator",
-    "description": "The Power-to-Weight Ratio Calculator determines the relationship between engine power and vehicle weight, a critical metric for automotive performance evaluation. Essential for comparing vehicle performance and acceleration potential. Power-to-weight ratio is one of the most important performance metrics, directly correlating with acceleration, hill climbing ability, and overall dynamic performance across all vehicle types."
+    "description": "The Power-to-Weight Ratio Calculator determines the relationship between engine power and vehicle weight for comparison and reference use. It is useful for comparing acceleration potential across different vehicles or setups. Power-to-weight ratio is commonly used to review how changes in weight or power may affect vehicle behavior."
   },
   "howTo": {
     "title": "How to Use the Power-to-Weight Ratio Calculator",
@@ -16,7 +16,7 @@
       },
       {
         "title": "Calculate Ratio",
-        "description": "View the calculated power-to-weight ratio instantly (lbs/hp or kg/kW)."
+        "description": "View the calculated power-to-weight ratio (lbs/hp or kg/kW)."
       },
       {
         "title": "Compare Performance",
@@ -40,19 +40,19 @@
     },
     {
       "title": "Performance Benchmarks",
-      "description": "Compare results against sports cars, supercars, and racing vehicle standards."
+      "description": "Compare results against common vehicle categories and reference ranges."
     },
     {
       "title": "Acceleration Correlation",
-      "description": "Understand how power-to-weight ratio affects 0-60 mph and quarter-mile times."
+      "description": "Review how power-to-weight ratio relates to acceleration estimates."
     },
     {
       "title": "Racing Classifications",
       "description": "Determine vehicle class and competitive potential based on power-to-weight ratio."
     },
     {
-      "title": "Professional Accuracy",
-      "description": "Precise calculations suitable for automotive engineering and racing applications."
+      "title": "Reference Calculation",
+      "description": "Formula-based calculations for automotive comparison and reference workflows."
     }
   ],
   "faq": [
@@ -62,7 +62,7 @@
     },
     {
       "q": "How does power-to-weight ratio affect acceleration?",
-      "a": "Lower power-to-weight ratios (more power per pound) result in significantly faster acceleration. A 10% improvement in power-to-weight ratio typically reduces 0-60 mph times by about 0.3-0.5 seconds, making it a critical performance metric."
+      "a": "Lower power-to-weight ratios (more power per pound) generally correspond to stronger acceleration potential. The exact result varies with traction, gearing, aerodynamics, and drivetrain type, so power-to-weight ratio is best used as a comparison metric rather than a direct prediction."
     },
     {
       "q": "Is it better to add power or reduce weight for performance?",
@@ -78,7 +78,7 @@
     },
     {
       "q": "What power-to-weight ratio do I need for racing?",
-      "a": "Racing requirements vary by class: drag racing often requires under 8 lbs/hp, road racing typically needs 6-10 lbs/hp for competitiveness, and autocross benefits from ratios under 12 lbs/hp. Check specific racing series regulations for exact requirements."
+      "a": "Racing requirements vary by class: drag racing often uses under 8 lbs/hp, road racing commonly falls in the 6-10 lbs/hp range, and autocross setups are often below 12 lbs/hp. Check the specific rules for the series you care about."
     }
   ],
   "relativeLinks": [

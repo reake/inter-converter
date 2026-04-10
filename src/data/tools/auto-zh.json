@@ -221,7 +221,7 @@
     "icon": "📐"
   },
   {
-    "id": "auto-fluid-calculator",
+    "id": "fluid-weight-calculator",
     "name": "汽车液体重量计算器",
     "description": "计算包括汽油、机油和变速器油在内的汽车液体重量。车辆重量分布分析必备的液体重量计算器。",
     "titleSuffix": "液体容积与重量分析",

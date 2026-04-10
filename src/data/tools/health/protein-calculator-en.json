@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Protein Calculator - Daily Protein Intake",
-    "description": "The Protein Calculator determines your daily protein needs based on your weight, activity level, and fitness goals. Adequate protein intake is crucial for muscle maintenance, recovery, and overall health. Protein requirements vary significantly based on age, gender, activity level, and specific goals like muscle building or weight loss. This calculator provides personalized recommendations using established nutritional guidelines and sports science research."
+    "description": "The Protein Calculator estimates daily protein intake based on weight, activity level, and fitness goals. Protein needs vary based on age, body size, activity level, and goal. Use the result as a general nutrition reference rather than an individualized medical or diet recommendation."
   },
   "howTo": {
     "title": "How to Use the Protein Calculator",
@@ -20,7 +20,7 @@
       },
       {
         "title": "View Protein Requirement",
-        "description": "See your personalized daily protein requirement in grams and per body weight."
+        "description": "See an estimated daily protein target in grams and relative to body weight."
       },
       {
         "title": "Plan Your Meals",
@@ -32,28 +32,28 @@
       }
     ],
     "tips": [
-      "Distribute protein evenly across meals for optimal absorption",
+      "Distribute protein across meals if that fits your eating pattern",
       "Include both complete and incomplete protein sources in your diet",
-      "Consider post-workout protein timing for muscle recovery",
+      "Consider meal timing around training based on your routine and preferences",
       "Adjust intake based on training intensity and recovery needs"
     ]
   },
   "features": [
     {
       "title": "Activity-based Calculations",
-      "description": "Protein recommendations adjusted for your specific activity level and exercise routine."
+      "description": "Estimate protein intake using your selected activity level and exercise routine."
     },
     {
       "title": "Goal-specific Recommendations",
-      "description": "Tailored protein targets for muscle building, weight loss, or maintenance goals."
+      "description": "Show protein estimates for maintenance, muscle-building, or weight-loss scenarios."
     },
     {
       "title": "Multiple Calculation Methods",
-      "description": "Uses various established formulas and guidelines for accurate protein estimation."
+      "description": "Uses established formulas and guideline ranges for protein estimation."
     },
     {
       "title": "Protein Timing Guidance",
-      "description": "Suggestions for optimal protein distribution and timing throughout the day."
+      "description": "General guidance for protein distribution across the day."
     },
     {
       "title": "Food Source Recommendations",
@@ -67,19 +67,19 @@
   "faq": [
     {
       "q": "How much protein do I need per day?",
-      "a": "Generally 0.8-2.2g per kg of body weight, depending on activity level and goals. Sedentary adults need around 0.8g/kg, while athletes and those building muscle need 1.6-2.2g/kg. The calculator provides personalized recommendations based on your specific profile."
+      "a": "General guideline ranges often fall between 0.8 and 2.2 grams per kilogram of body weight depending on activity level and goals. The calculator uses your inputs to estimate a reference range, but individual needs can vary."
     },
     {
       "q": "Can I get enough protein from plant sources?",
       "a": "Yes, plant-based proteins like legumes, quinoa, nuts, seeds, and protein-rich grains can meet protein needs when consumed in adequate amounts and variety. Combining different plant proteins ensures complete amino acid profiles."
     },
     {
-      "q": "When should I consume protein for best results?",
-      "a": "Distribute protein throughout the day, with 20-30g per meal for optimal absorption. Post-workout protein within 2 hours helps with muscle recovery and growth. Morning protein intake can also help with satiety and metabolism."
+      "q": "When should I consume protein?",
+      "a": "Many people spread protein intake across meals and snacks to make daily targets easier to reach. Exact timing and meal size preferences vary, so use the calculator as a planning reference rather than a strict rule."
     },
     {
       "q": "What happens if I eat too much protein?",
-      "a": "Excess protein is typically converted to energy or stored as fat. Very high intake may strain kidneys in some individuals, but moderate excess is generally safe for healthy people. Focus on meeting your calculated needs rather than excessive intake."
+      "a": "Very high protein intake may not be appropriate for everyone, especially for people with certain medical conditions. If you have kidney concerns or need individualized nutrition guidance, consult a qualified healthcare provider or dietitian."
     }
   ],
   "relativeLinks": [

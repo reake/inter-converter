@@ -2,8 +2,8 @@
   {
     "id": "pdf-to-word-converter",
     "name": "PDF to Word Converter",
-    "description": "Convert PDF files to editable Word documents with accurate formatting preservation. Professional PDF to Word converter supporting DOC and DOCX formats with layout integrity.",
-    "titleSuffix": "Editable Document Conversion",
+    "description": "Review notes for PDF to Word workflows, including document limits, formatting drift, and when manual verification is necessary.",
+    "titleSuffix": "workflow notes",
     "category": "media",
     "keywords": ["pdf", "word", "doc", "docx", "converter", "document"],
     "path": "/media/pdf-to-word-converter",

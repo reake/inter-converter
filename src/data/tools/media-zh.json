@@ -2,8 +2,8 @@
   {
     "id": "pdf-to-word-converter",
     "name": "PDF转Word转换器",
-    "description": "将PDF文件转换为可编辑的Word文档，准确保持格式。专业PDF转Word转换器，支持DOC和DOCX格式，保持布局完整性。",
-    "titleSuffix": "可编辑文档转换",
+    "description": "说明 PDF 转 Word 工作流中的文档限制、格式漂移风险，以及什么时候必须手动复核。",
+    "titleSuffix": "流程说明",
     "category": "media",
     "keywords": ["pdf", "word", "doc", "docx", "转换器", "文档"],
     "path": "/zh/media/pdf-to-word-converter",

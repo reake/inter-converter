@@ -48,8 +48,8 @@ export function CategoryMaintenanceNotice({
           </CardHeader>
           <CardContent className="text-sm leading-6 text-gray-600">
             {isZh
-              ? '当前公开维护的是单位、时间、颜色与文件转换页面，这些页面会持续补充说明、示例与 FAQ。'
-              : 'The public site currently focuses on unit, time, color, and file conversion pages. Those pages are the ones being actively tightened and reviewed.'}
+              ? '当前公开维护重点放在单位、时间、颜色与汽车参考页面，这些页面会持续补充说明、示例与 FAQ。'
+              : 'The public site currently focuses on unit, time, color, and automotive reference pages. Those pages are the ones being actively tightened and reviewed.'}
           </CardContent>
         </Card>
       </div>

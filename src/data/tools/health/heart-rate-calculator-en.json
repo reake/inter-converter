@@ -1,7 +1,7 @@
 {
   "about": {
-    "title": "About Heart Rate Calculator - Training Zone Optimizer",
-    "description": "The Heart Rate Calculator determines your target heart rate zones for different exercise intensities based on your age and fitness level. Understanding your heart rate zones helps optimize workout effectiveness and ensures safe exercise intensity. Target heart rate zones are essential for cardiovascular training, fat burning, and improving overall fitness. The calculator uses established formulas to provide personalized heart rate ranges for various training goals."
+    "title": "About Heart Rate Calculator - Training Zone Reference",
+    "description": "The Heart Rate Calculator estimates target heart rate zones for different exercise intensities based on age, resting heart rate, and selected training inputs. It can help you review training zones for cardio, endurance, and general fitness planning, but the output is still formula-based and may not reflect individual medical conditions or performance testing. Use it as a workout-planning reference, and seek qualified guidance for health-specific decisions."
   },
   "howTo": {
     "title": "How to Use the Heart Rate Calculator",
@@ -12,15 +12,15 @@
       },
       {
         "title": "Select Fitness Level",
-        "description": "Choose your current fitness level from beginner to athlete for accurate calculations."
+        "description": "Choose your current fitness level from beginner to athlete for formula-based estimates."
       },
       {
         "title": "Choose Training Goal",
-        "description": "Select your primary goal: fat burning, cardio fitness, or peak performance training."
+        "description": "Select your primary goal, such as general cardio, endurance, or higher-intensity training."
       },
       {
         "title": "View Heart Rate Zones",
-        "description": "See your personalized heart rate zones with specific BPM ranges for each intensity."
+        "description": "See estimated heart rate zones with BPM ranges for each intensity."
       },
       {
         "title": "Apply During Workouts",
@@ -32,7 +32,7 @@
       }
     ],
     "tips": [
-      "Measure resting heart rate consistently for several days for accuracy",
+      "Measure resting heart rate consistently for several days for a steadier baseline",
       "Start with lower intensity zones if you're new to exercise",
       "Use a heart rate monitor for real-time feedback during workouts",
       "Allow adequate recovery time between high-intensity sessions"
@@ -40,24 +40,24 @@
   },
   "features": [
     {
-      "title": "Multiple Heart Rate Zone Calculations",
-      "description": "Comprehensive calculation of all five heart rate training zones for different intensities."
+      "title": "Heart Rate Zone Calculations",
+      "description": "Calculate five common heart rate training zones across different intensity levels."
     },
     {
       "title": "Age-based Maximum Heart Rate",
-      "description": "Accurate maximum heart rate estimation using age-based formulas and adjustments."
+      "description": "Estimate maximum heart rate using age-based formulas and adjustments."
     },
     {
       "title": "Fitness Level Adjustments",
-      "description": "Personalized calculations based on your current fitness and training experience."
+      "description": "Adjust displayed zone estimates based on your selected fitness and training inputs."
     },
     {
       "title": "Training Goal-specific Zones",
-      "description": "Targeted heart rate zones optimized for fat burning, cardio, and performance goals."
+      "description": "Show reference heart rate zones for cardio, endurance, and higher-intensity training goals."
     },
     {
       "title": "Karvonen and Percentage Methods",
-      "description": "Uses both Karvonen formula and percentage methods for accurate zone calculations."
+      "description": "Use both Karvonen and percentage-based methods for zone estimates."
     },
     {
       "title": "Real-time Monitoring Guidance",
@@ -67,11 +67,11 @@
   "faq": [
     {
       "q": "What is target heart rate and why is it important?",
-      "a": "Target heart rate is the ideal heart rate range during exercise to achieve specific fitness goals. It's typically expressed as a percentage of your maximum heart rate and helps ensure you're training at the right intensity for optimal results and safety."
+      "a": "Target heart rate is a reference range used during exercise to help gauge training intensity for different fitness goals. It is typically expressed as a percentage of your estimated maximum heart rate and can be used as a planning guide rather than an individualized medical threshold."
     },
     {
-      "q": "How do I accurately measure my resting heart rate?",
-      "a": "Measure your pulse for 60 seconds immediately after waking up, before getting out of bed or consuming caffeine. Take measurements for several consecutive days and use the average. Normal resting heart rate ranges from 60-100 BPM for adults."
+      "q": "How do I measure my resting heart rate?",
+      "a": "Measure your pulse for 60 seconds immediately after waking up, before getting out of bed or consuming caffeine. Take measurements for several consecutive days and use the average. Resting heart rate ranges can vary across individuals and situations."
     },
     {
       "q": "What's the fat burning zone and how effective is it?",

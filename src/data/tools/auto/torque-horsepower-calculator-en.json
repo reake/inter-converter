@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Torque Horsepower Calculator",
-    "description": "The Torque Horsepower Calculator converts between torque and horsepower measurements, essential for understanding engine performance characteristics. This tool helps analyze power delivery across different RPM ranges. Understanding the relationship between torque and horsepower helps optimize engine tuning, transmission selection, and performance modifications for specific applications."
+    "description": "The Torque Horsepower Calculator converts between torque and horsepower measurements for engine reference checks. It helps compare power delivery across different RPM ranges. Understanding the relationship between torque and horsepower helps with drivetrain planning, dyno result review, and general engine comparisons."
   },
   "howTo": {
     "title": "How to Use the Torque Horsepower Calculator",
@@ -16,11 +16,11 @@
       },
       {
         "title": "Calculate Horsepower",
-        "description": "View the calculated horsepower instantly using the standard conversion formula."
+        "description": "View the calculated horsepower using the standard conversion formula."
       },
       {
         "title": "Analyze Results",
-        "description": "Compare power curves and analyze performance characteristics at different RPM ranges."
+        "description": "Compare power curves and review engine characteristics at different RPM ranges."
       }
     ],
     "tips": [
@@ -48,7 +48,7 @@
     },
     {
       "title": "Performance Comparison",
-      "description": "Compare different engines or modifications using standardized power measurements."
+      "description": "Compare different engines or setups using standardized power measurements."
     },
     {
       "title": "Dyno Result Interpretation",
@@ -62,7 +62,7 @@
     },
     {
       "q": "Which is more important for performance - torque or horsepower?",
-      "a": "Both torque and horsepower matter for different aspects of performance. High torque provides strong acceleration and pulling power, especially at lower RPMs. High horsepower enables higher top speeds. The shape of the torque curve significantly affects drivability and performance feel."
+      "a": "Both torque and horsepower matter for different aspects of vehicle behavior. High torque provides strong acceleration and pulling power, especially at lower RPMs. High horsepower supports higher-speed operation. The shape of the torque curve also affects drivability."
     },
     {
       "q": "Why do torque and horsepower curves cross at 5,252 RPM?",
@@ -78,7 +78,7 @@
     },
     {
       "q": "What makes a good torque curve for street driving?",
-      "a": "For street driving, a broad, flat torque curve is ideal. This provides consistent power delivery across a wide RPM range, making the engine more responsive and easier to drive. Peak torque at lower RPMs also improves acceleration from typical driving speeds."
+      "a": "For street driving, many people prefer a broad, flat torque curve. This provides more consistent power delivery across a wide RPM range and can make the engine easier to drive in typical conditions. Peak torque at lower RPMs can also improve response at everyday speeds."
     }
   ],
   "relativeLinks": [

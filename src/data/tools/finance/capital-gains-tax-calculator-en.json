@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Capital Gains Tax Calculator - Investment Tax Planning Tool",
-    "description": "The Capital Gains Tax Calculator is a comprehensive investment tax planning tool designed to help investors calculate capital gains taxes on stock sales, real estate transactions, and other investment disposals. Whether you're planning to sell stocks, bonds, mutual funds, or property, this calculator provides accurate tax estimates based on holding periods, purchase prices, and current tax rates. Understanding capital gains tax calculations is essential for optimizing investment timing and minimizing tax liabilities."
+    "description": "The Capital Gains Tax Calculator is an investment tax planning tool designed to help investors estimate capital gains taxes on stock sales, real estate transactions, and other investment disposals. Whether you're planning to sell stocks, bonds, mutual funds, or property, this calculator provides tax estimates based on holding periods, purchase prices, and current tax rates. It can help you review timing scenarios and compare potential tax impact."
   },
   "howTo": {
     "title": "How to Use the Capital Gains Tax Calculator",
@@ -20,7 +20,7 @@
       },
       {
         "title": "Tax Filing Status",
-        "description": "Select your filing status (single, married filing jointly, etc.) for accurate tax calculations."
+        "description": "Select your filing status (single, married filing jointly, etc.) to estimate applicable tax treatment."
       },
       {
         "title": "Income Level",
@@ -34,8 +34,8 @@
     "tips": [
       "Hold investments for more than one year to qualify for lower long-term capital gains rates",
       "Consider tax-loss harvesting to offset capital gains with losses",
-      "Time sales strategically to manage your tax bracket",
-      "Keep detailed records of all investment transactions for accurate cost basis"
+      "Consider how sale timing may affect your tax bracket",
+      "Keep detailed records of all investment transactions for reliable cost basis tracking"
     ]
   },
   "features": [
@@ -61,7 +61,7 @@
     },
     {
       "title": "State Tax Integration",
-      "description": "Include state capital gains taxes for comprehensive tax planning analysis."
+      "description": "Include state capital gains taxes for broader tax planning review."
     }
   ],
   "faq": [

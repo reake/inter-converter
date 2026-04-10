@@ -24,7 +24,7 @@
       },
       {
         "title": "Scenario Analysis",
-        "description": "Test different pricing and cost scenarios to optimize your business model."
+        "description": "Test different pricing and cost scenarios to compare your business model assumptions."
       },
       {
         "title": "Set Sales Targets",
@@ -32,7 +32,7 @@
       }
     ],
     "tips": [
-      "Accurately categorize costs as fixed or variable for precise calculations",
+      "Carefully categorize costs as fixed or variable for more reliable calculations",
       "Consider seasonal variations in fixed and variable costs",
       "Use break-even analysis to evaluate new product launches",
       "Regularly update calculations as costs and prices change"
@@ -41,7 +41,7 @@
   "features": [
     {
       "title": "Break Even Point Calculation",
-      "description": "Calculate the exact number of units and revenue needed to break even on your investment."
+      "description": "Calculate the estimated number of units and revenue needed to break even on your investment."
     },
     {
       "title": "Contribution Margin Analysis",
@@ -49,14 +49,14 @@
     },
     {
       "title": "Scenario Planning",
-      "description": "Test different pricing strategies and cost structures to optimize business performance."
+      "description": "Test different pricing strategies and cost structures to compare business performance."
     },
     {
       "title": "Profit Target Analysis",
       "description": "Calculate units needed to achieve specific profit targets beyond break-even point."
     },
     {
-      "title": "Cost Structure Optimization",
+      "title": "Cost Structure Review",
       "description": "Analyze the impact of fixed vs. variable cost changes on break-even requirements."
     },
     {
@@ -71,7 +71,7 @@
     },
     {
       "q": "What's the difference between fixed and variable costs?",
-      "a": "Fixed costs remain constant regardless of sales volume (rent, salaries, insurance), while variable costs change with production volume (materials, shipping, commissions). Proper categorization is crucial for accurate break-even analysis."
+      "a": "Fixed costs remain constant regardless of sales volume (rent, salaries, insurance), while variable costs change with production volume (materials, shipping, commissions). Proper categorization is important for reliable break-even analysis."
     },
     {
       "q": "How can I use break-even analysis for pricing?",

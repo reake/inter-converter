@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Engine Volume Calculator",
-    "description": "The Engine Volume Calculator computes engine displacement from bore and stroke measurements. Essential for engine building, performance planning, and calculating exact displacement for racing classifications. Accurate displacement calculations are crucial for engine builders, racers, and enthusiasts who need precise measurements for competition rules, performance tuning, and engine specifications."
+    "description": "The Engine Volume Calculator computes engine displacement from bore and stroke measurements. It is useful for engine building, specification checks, and calculating displacement for class or comparison workflows. Accurate displacement calculations help with engine identification, workshop planning, and rules-based reference checks."
   },
   "howTo": {
     "title": "How to Use the Engine Volume Calculator",
@@ -20,19 +20,19 @@
       },
       {
         "title": "Calculate Volume",
-        "description": "View calculated engine volume in cubic inches and liters instantly."
+        "description": "View calculated engine volume in cubic inches and liters."
       }
     ],
     "tips": [
       "Formula: Volume = π × (bore/2)² × stroke × cylinders",
-      "Use precise bore and stroke measurements for accuracy",
-      "Essential for racing class compliance and engine identification"
+      "Use bore and stroke measurements from your engine specifications or workshop measurements",
+      "Useful for class compliance and engine identification checks"
     ]
   },
   "features": [
     {
-      "title": "Precise Volume Calculations",
-      "description": "Accurate engine displacement calculations using professional automotive formulas."
+      "title": "Volume Calculations",
+      "description": "Formula-based engine displacement calculations for workshop and reference use."
     },
     {
       "title": "Dual Unit Support",
@@ -40,25 +40,25 @@
     },
     {
       "title": "Engine Building Tool",
-      "description": "Essential calculator for engine builders, machinists, and performance enthusiasts."
+      "description": "Useful calculator for engine builders, machinists, and workshop reference use."
     },
     {
-      "title": "Racing Applications",
-      "description": "Verify displacement for racing class eligibility and competition compliance."
+      "title": "Classification Checks",
+      "description": "Verify displacement for class-based comparisons and rule checks."
     },
     {
       "title": "Real-Time Updates",
-      "description": "Instant calculation updates as you modify bore, stroke, or cylinder count."
+      "description": "Calculation updates as you modify bore, stroke, or cylinder count."
     },
     {
-      "title": "Professional Accuracy",
-      "description": "Suitable for professional engine building and automotive engineering applications."
+      "title": "Formula-Based Calculation",
+      "description": "Suitable for engine building, comparison, and workshop calculations."
     }
   ],
   "faq": [
     {
       "q": "How accurate are the engine volume calculations?",
-      "a": "Our engine volume calculator uses precise mathematical formulas accounting for cylinder volume (π × bore² × stroke ÷ 4) multiplied by cylinder count, providing professional-grade accuracy suitable for engine building and racing applications."
+      "a": "Our engine volume calculator uses the standard cylinder-volume formula (π × bore² × stroke ÷ 4) multiplied by cylinder count, making it suitable for engine building, comparison, and classification checks."
     },
     {
       "q": "What's the difference between bore and stroke in engine calculations?",
@@ -66,7 +66,7 @@
     },
     {
       "q": "Why is exact engine volume important for racing classifications?",
-      "a": "Racing classes often have strict displacement limits to ensure fair competition. Knowing exact engine volume ensures compliance with rules and helps optimize performance within specific class restrictions and regulations."
+      "a": "Racing classes often have strict displacement limits to ensure fair competition. Knowing exact engine volume helps confirm compliance with rules and compare engine combinations within class restrictions and regulations."
     },
     {
       "q": "How does bore-to-stroke ratio affect engine characteristics?",

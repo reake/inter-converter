@@ -33,14 +33,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'homepage' });
-  
+
   const title = locale === 'zh'
-    ? 'InterConverter - 精选在线转换工具与计算器'
-    : 'InterConverter - Selected Online Converters and Calculators';
-  
-  const description = locale === 'zh'
-    ? '免费在线转换工具与计算器平台。提供单位转换、时间计算、颜色转换、货币换算、BMI计算等实用工具。无需注册，即刻使用。'
-    : 'Free online converter and calculator tools. Unit conversion, timestamp tools, color converters, currency calculators, BMI calculators, and more. No registration required.';
+    ? '免费在线转换器和计算器 | InterConverter'
+    : 'Free Online Converters and Calculators | InterConverter';
+
+  const description = t('hero.description');
 
   return generateSEOMetadata({
     title,
@@ -49,15 +47,15 @@ export async function generateMetadata({
     pathname: '/',
     keywords: [
       locale === 'zh' ? '在线转换器' : 'online converter',
-      locale === 'zh' ? '计算器工具' : 'calculator tools',
+      locale === 'zh' ? '在线计算器' : 'online calculator',
       locale === 'zh' ? '单位转换' : 'unit conversion',
-      locale === 'zh' ? '时间转换工具' : 'timestamp converter',
+      locale === 'zh' ? '时间转换' : 'time converter',
+      locale === 'zh' ? '时间戳转换器' : 'timestamp converter',
       locale === 'zh' ? '颜色转换' : 'color converter',
-      locale === 'zh' ? '货币换算' : 'currency converter',
-      locale === 'zh' ? 'BMI计算器' : 'BMI calculator',
+      locale === 'zh' ? '对比度检查' : 'contrast checker',
       locale === 'zh' ? '免费在线工具' : 'free online tools',
-      locale === 'zh' ? '数字转换' : 'number converter',
-      locale === 'zh' ? '文本工具' : 'text tools'
+      locale === 'zh' ? '浏览器工具' : 'browser-based tools',
+      locale === 'zh' ? '转换工具' : 'conversion tools'
     ]
   });
 }
@@ -78,8 +76,8 @@ export default async function HomePage({
   const faqItems = t.raw('faq') as Array<{question: string, answer: string}>;
   const professionals = t.raw('professionals') as string[];
   const heroHighlights = locale === 'zh'
-    ? ['精选公开工具集', '说明持续修订', '无需注册']
-    : ['Curated public tool set', 'Reviewed explanations', 'No account required'];
+    ? ['免费使用', '浏览器在线工具', '无需注册']
+    : ['Free to use', 'Browser-based tools', 'No account required'];
 
   return (
     <>

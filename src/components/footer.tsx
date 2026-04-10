@@ -43,7 +43,7 @@ export function Footer() {
               <li><Link href="/unit" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">Units</Link></li>
               <li><Link href="/time" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">Time</Link></li>
               <li><Link href="/color" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">Color</Link></li>
-              <li><Link href="/media" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">File Conversion</Link></li>
+              <li><Link href="/auto" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">Automotive</Link></li>
             </ul>
           </div>
 

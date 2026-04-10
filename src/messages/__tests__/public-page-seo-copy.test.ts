@@ -3,25 +3,25 @@ import zhMessages from '@/messages/zh.json';
 
 function getPublicSeoCopy(messages: typeof enMessages, locale: 'en' | 'zh') {
   const mediaTitle = locale === 'zh'
-    ? '精选文件转换工具与说明 | InterConverter'
-    : 'Featured File Conversion Tools | InterConverter';
+    ? '文件工具分类说明 | InterConverter'
+    : 'File Tools Category Notes | InterConverter';
   const mediaDescription = locale === 'zh'
-    ? '当前公开维护的文件转换分类以 JPG 转 PNG 为主，并补充格式差异、处理边界、适用场景和后续工作流说明。'
-    : 'The public file conversion category now centers on JPG to PNG, with clearer notes about format differences, usage limits, and workflow choices.';
+    ? '该分类当前不在公开精选范围内，此页仅说明文件工具的审核状态、适用边界和后续申请方式。'
+    : 'This category is not part of the current featured public surface. This page explains the review status, usage boundaries, and how to request a file workflow.';
 
   return [
     {
       id: `${locale}-home`,
       title: locale === 'zh'
-        ? 'InterConverter - 精选在线转换工具与详细说明'
-        : `${messages.homepage.hero.title} - ${messages.homepage.hero.subtitle}`,
+        ? '免费在线转换器和计算器 | InterConverter'
+        : 'Free Online Converters and Calculators | InterConverter',
       description: messages.homepage.hero.description,
     },
     {
       id: `${locale}-tools`,
       title: locale === 'zh'
-        ? '当前精选在线工具与公开维护范围 | InterConverter'
-        : 'Featured Online Tools | InterConverter',
+        ? '免费在线工具大全 | InterConverter'
+        : 'Free Online Converter and Calculator Tools | InterConverter',
       description: messages.toolsPage.hero.description,
     },
     {

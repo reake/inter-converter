@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About HEX to HSL Converter - HSL Color Space",
-    "description": "The HEX to HSL Converter transforms hexadecimal color codes into HSL (Hue, Saturation, Lightness) values and vice versa. HSL provides an intuitive way to work with colors by separating hue from saturation and lightness. The HSL color model is particularly useful for creating color variations, adjusting brightness, and building harmonious color schemes in design and web development projects."
+    "description": "The HEX to HSL Converter transforms hexadecimal color codes into HSL (Hue, Saturation, Lightness) values and vice versa. HSL separates hue from saturation and lightness, which can make color adjustments easier to review. The HSL color model is useful for creating color variations, adjusting brightness, and building color schemes in design and web development projects."
   },
   "howTo": {
     "title": "How to Use the HEX to HSL Converter",
@@ -16,7 +16,7 @@
       },
       {
         "title": "Use Color Picker",
-        "description": "Select colors visually using the integrated color picker for intuitive selection."
+        "description": "Select colors visually using the integrated color picker."
       },
       {
         "title": "Adjust HSL Sliders",
@@ -41,7 +41,7 @@
   "features": [
     {
       "title": "Bidirectional Conversion",
-      "description": "Convert HEX to HSL and HSL to HEX with accurate color space transformation."
+      "description": "Convert HEX to HSL and HSL to HEX with standard color-space transformation."
     },
     {
       "title": "Interactive HSL Sliders",
@@ -56,8 +56,8 @@
       "description": "Visual color selection tool integrated with automatic HSL and HEX value updates."
     },
     {
-      "title": "Precise Value Display",
-      "description": "Accurate display of color values in both HEX and HSL formats with decimal precision."
+      "title": "Value Display",
+      "description": "Display color values in both HEX and HSL formats with decimal detail where applicable."
     },
     {
       "title": "Copy-to-Clipboard",

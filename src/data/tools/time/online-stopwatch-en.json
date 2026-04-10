@@ -1,14 +1,14 @@
 {
   "about": {
-    "title": "About Online Stopwatch - Precision Timing & Lap Timer",
-    "description": "The Online Stopwatch is a precise digital timer that measures elapsed time from start to stop with millisecond accuracy. Perfect for sports timing, productivity tracking, cooking, workouts, or any activity requiring accurate time measurement. Features lap timing, split times, and can run continuously in the background. The stopwatch maintains accuracy even when switching between browser tabs or applications, making it ideal for professional timing needs."
+    "title": "About Online Stopwatch - Timing & Lap Timer",
+    "description": "The Online Stopwatch is a digital timer for measuring elapsed time from start to stop. It is useful for sports timing, productivity tracking, cooking, workouts, and general timing tasks. It includes lap timing, split times, and background operation support within normal browser use."
   },
   "howTo": {
     "title": "How to Use the Online Stopwatch",
     "steps": [
       {
         "title": "Start Timing",
-        "description": "Click the start button to begin precise time measurement with millisecond accuracy."
+        "description": "Click the start button to begin timing with millisecond display."
       },
       {
         "title": "Record Lap Times",
@@ -40,8 +40,8 @@
   },
   "features": [
     {
-      "title": "Millisecond Precision",
-      "description": "High-precision timing accurate to milliseconds using advanced browser timing APIs."
+      "title": "Millisecond Display",
+      "description": "Shows elapsed time in millisecond increments using standard browser timing behavior."
     },
     {
       "title": "Lap Time Recording",
@@ -66,8 +66,8 @@
   ],
   "faq": [
     {
-      "q": "How accurate is the online stopwatch?",
-      "a": "The stopwatch is accurate to milliseconds and uses high-precision browser timing APIs for reliable measurements. It maintains accuracy comparable to professional timing equipment for most applications."
+      "q": "How should I use the online stopwatch results?",
+      "a": "The stopwatch is suitable for general browser-based timing and lap tracking. If you need certified or instrument-grade timing, verify results with dedicated hardware or specialized software."
     },
     {
       "q": "Can I record multiple lap times during timing?",

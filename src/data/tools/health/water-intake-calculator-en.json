@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Water Intake Calculator - Daily Hydration Needs",
-    "description": "The Water Intake Calculator determines your daily hydration needs based on weight, activity level, and environmental factors. Proper hydration is essential for optimal body function, energy levels, and overall health. Water requirements vary based on individual factors like body size, physical activity, climate, and health conditions. This calculator provides personalized recommendations to help maintain optimal hydration throughout the day."
+    "description": "The Water Intake Calculator estimates daily water intake based on weight, activity level, and environmental factors. Water needs vary based on body size, physical activity, climate, and health conditions. Use the result as a general hydration reference rather than an individualized medical recommendation."
   },
   "howTo": {
     "title": "How to Use the Water Intake Calculator",
@@ -20,7 +20,7 @@
       },
       {
         "title": "View Water Intake Goal",
-        "description": "See your personalized daily water intake recommendation in liters and ounces."
+        "description": "See an estimated daily water intake range in liters and ounces."
       },
       {
         "title": "Track Daily Consumption",
@@ -28,7 +28,7 @@
       },
       {
         "title": "Adjust as Needed",
-        "description": "Modify intake based on illness, pregnancy, or other health conditions."
+        "description": "Review intake changes during illness, pregnancy, or other health conditions with qualified guidance when needed."
       }
     ],
     "tips": [
@@ -41,7 +41,7 @@
   "features": [
     {
       "title": "Weight-based Calculations",
-      "description": "Personalized water recommendations based on your body weight and size."
+      "description": "Estimate daily water intake using your body weight and selected inputs."
     },
     {
       "title": "Activity Level Adjustments",
@@ -49,15 +49,15 @@
     },
     {
       "title": "Climate Considerations",
-      "description": "Factors in environmental conditions like temperature and humidity for accurate needs."
+      "description": "Factors in environmental conditions like temperature and humidity when estimating daily intake."
     },
     {
       "title": "Hourly Intake Guidance",
-      "description": "Recommendations for distributing water intake throughout the day for optimal hydration."
+      "description": "General guidance for distributing water intake throughout the day."
     },
     {
       "title": "Hydration Tracking Tips",
-      "description": "Practical guidance for monitoring and maintaining proper hydration levels."
+      "description": "General tips for monitoring hydration habits and daily intake."
     },
     {
       "title": "Multiple Unit Support",
@@ -67,19 +67,19 @@
   "faq": [
     {
       "q": "How much water should I drink daily?",
-      "a": "Generally 8-10 glasses (2-2.5 liters) for adults, but this varies significantly based on weight, activity level, and climate. The calculator provides personalized recommendations ranging from 1.5-4+ liters depending on your individual factors."
+      "a": "A common general reference is around 2-2.5 liters per day for many adults, but water needs vary based on weight, activity level, climate, diet, and health conditions. The calculator provides formula-based estimates to help you review different scenarios."
     },
     {
       "q": "Does coffee and tea count toward water intake?",
-      "a": "Yes, caffeinated beverages contribute to hydration, though pure water is most effective for optimal hydration. Limit high-caffeine drinks as they can have mild diuretic effects, especially in large quantities."
+      "a": "Yes, caffeinated beverages can contribute to total fluid intake, though many people still use plain water as their main hydration source. Review caffeine intake separately if you are sensitive to it or have health-specific guidance to follow."
     },
     {
       "q": "How do I know if I'm properly hydrated?",
-      "a": "Check urine color - pale yellow indicates good hydration, while dark yellow suggests dehydration. Also monitor thirst levels, energy, skin elasticity, and overall well-being as hydration indicators."
+      "a": "People often use thirst, urine color, activity level, and overall comfort as general hydration signals, but these indicators are not a substitute for medical advice. If hydration is a health concern for you, consult a qualified healthcare provider."
     },
     {
       "q": "Should I drink more water when exercising?",
-      "a": "Yes, significantly increase intake before, during, and after exercise. Add 12-16 oz for every hour of activity, more in hot conditions or intense workouts. Pre-hydrate 2-3 hours before exercise and continue hydrating post-workout."
+      "a": "Many people increase fluid intake before, during, and after exercise, especially in hot conditions or during longer sessions. The right amount varies by sweat rate, duration, intensity, and environment, so use the calculator as a starting reference rather than a strict rule."
     }
   ],
   "relativeLinks": [

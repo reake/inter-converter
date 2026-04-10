@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Equipment Loan Calculator - Business Equipment Financing Tool",
-    "description": "The Equipment Loan Calculator is a specialized business financing tool designed to help you calculate monthly payments, interest costs, and loan terms for equipment purchases. Whether you're financing machinery, vehicles, technology, or other business equipment, this calculator provides accurate payment estimates and helps you evaluate different financing options. Understanding equipment loan calculations is essential for business cash flow planning and making informed equipment purchase decisions."
+    "description": "The Equipment Loan Calculator is a business financing tool designed to help you estimate monthly payments, interest costs, and loan terms for equipment purchases. Whether you're financing machinery, vehicles, technology, or other business equipment, this calculator provides payment estimates and helps you compare different financing options. It can support business cash flow planning and equipment purchase review."
   },
   "howTo": {
     "title": "How to Use the Equipment Loan Calculator",
@@ -41,7 +41,7 @@
   "features": [
     {
       "title": "Monthly Payment Calculation",
-      "description": "Calculate exact monthly payments for equipment loans with various terms and rates."
+      "description": "Estimate monthly payments for equipment loans with various terms and rates."
     },
     {
       "title": "Total Cost Analysis",
@@ -57,7 +57,7 @@
     },
     {
       "title": "Lease vs Buy Comparison",
-      "description": "Compare equipment loan financing with leasing options to find the best solution."
+      "description": "Compare equipment loan financing with leasing options to review different business financing choices."
     },
     {
       "title": "Tax Benefit Calculator",

@@ -31,7 +31,7 @@
   },
   "features": [
     {
-      "title": "Comprehensive Weight Units",
+      "title": "Weight Unit Support",
       "description": "Convert between metric (g, kg, tonnes) and imperial (oz, lb, stone, ton) weight units."
     },
     {
@@ -58,7 +58,7 @@
   "faq": [
     {
       "q": "What weight units does the converter support?",
-      "a": "Our weight converter supports metric units (milligrams, grams, kilograms, tonnes), imperial units (ounces, pounds, stones, tons), and specialized units like carats, grains, and troy ounces for comprehensive weight conversion."
+      "a": "Our weight converter supports metric units (milligrams, grams, kilograms, tonnes), imperial units (ounces, pounds, stones, tons), and specialized units like carats, grains, and troy ounces across common weight-conversion needs."
     },
     {
       "q": "What's the difference between mass and weight?",
@@ -66,7 +66,7 @@
     },
     {
       "q": "How accurate are the weight conversions?",
-      "a": "All weight conversions use precise mathematical formulas with high decimal accuracy. Our converter is suitable for commercial shipping, cooking recipes, scientific research, and professional applications."
+      "a": "All weight conversions use precise mathematical formulas with decimal accuracy. Our converter is suitable for shipping, cooking recipes, scientific reference, and general comparison use."
     },
     {
       "q": "What is a troy ounce and how is it different?",

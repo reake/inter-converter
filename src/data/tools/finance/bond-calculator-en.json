@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Bond Calculator - Fixed Income Investment Analysis Tool",
-    "description": "The Bond Calculator is a comprehensive fixed income analysis tool designed to help investors evaluate bond investments, calculate yields, and assess bond pricing. Whether you're analyzing government bonds, corporate bonds, or municipal bonds, this calculator provides accurate calculations for current yield, yield to maturity, duration, and bond valuation. Understanding bond calculations is essential for fixed income investing and portfolio management."
+    "description": "The Bond Calculator is a fixed income analysis tool designed to help investors evaluate bond investments, calculate yields, and review bond pricing. Whether you're analyzing government bonds, corporate bonds, or municipal bonds, this calculator provides formula-based estimates for current yield, yield to maturity, duration, and bond valuation. Understanding bond calculations can support fixed income research and portfolio planning."
   },
   "howTo": {
     "title": "How to Use the Bond Calculator",
@@ -28,7 +28,7 @@
       },
       {
         "title": "Investment Decision",
-        "description": "Compare calculated yields with market rates to make informed investment decisions."
+        "description": "Compare calculated yields with market rates to support your investment research."
       }
     ],
     "tips": [
@@ -41,7 +41,7 @@
   "features": [
     {
       "title": "Yield to Maturity Calculation",
-      "description": "Calculate yield to maturity (YTM) for accurate bond return analysis and comparison."
+      "description": "Calculate yield to maturity (YTM) for bond return analysis and comparison."
     },
     {
       "title": "Current Yield Analysis",
@@ -67,7 +67,7 @@
   "faq": [
     {
       "q": "What's the difference between current yield and yield to maturity?",
-      "a": "Current yield is the annual coupon payment divided by current market price. Yield to maturity (YTM) considers all cash flows including capital gains/losses if held to maturity. YTM provides a more comprehensive return measure for bond investments."
+      "a": "Current yield is the annual coupon payment divided by current market price. Yield to maturity (YTM) considers all cash flows including capital gains/losses if held to maturity. YTM provides a broader return measure for bond investments."
     },
     {
       "q": "How do interest rates affect bond prices?",
@@ -79,7 +79,7 @@
     },
     {
       "q": "What is bond duration and why does it matter?",
-      "a": "Duration measures a bond's price sensitivity to interest rate changes. Higher duration means greater price volatility. It helps investors understand interest rate risk and is crucial for bond portfolio management and hedging strategies."
+      "a": "Duration measures a bond's price sensitivity to interest rate changes. Higher duration means greater price volatility. It helps investors understand interest rate risk and is important for bond portfolio management and hedging strategies."
     }
   ],
   "relativeLinks": [

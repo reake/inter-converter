@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Business Loan Calculator - Commercial Financing Tool",
-    "description": "The Business Loan Calculator is a professional financial tool designed to help entrepreneurs and business owners calculate monthly payments, total interest costs, and loan terms for commercial financing. Whether you're seeking working capital, equipment financing, or expansion funding, this calculator provides accurate payment estimates and helps you compare different loan scenarios to find the best financing option for your business needs."
+    "description": "The Business Loan Calculator helps entrepreneurs and business owners estimate monthly payments, total interest costs, and loan terms for commercial financing. Whether you're reviewing working capital, equipment financing, or expansion funding, this calculator provides payment estimates and supports side-by-side comparison of different loan scenarios."
   },
   "howTo": {
     "title": "How to Use the Business Loan Calculator",
@@ -24,7 +24,7 @@
       },
       {
         "title": "Compare Options",
-        "description": "Compare different loan amounts, rates, and terms to find optimal financing."
+        "description": "Compare different loan amounts, rates, and terms across financing scenarios."
       },
       {
         "title": "Plan Cash Flow",
@@ -32,16 +32,16 @@
       }
     ],
     "tips": [
-      "Shop around with multiple lenders for the best rates and terms",
+      "Compare rates, fees, repayment terms, and lender requirements across multiple offers",
       "Consider shorter terms to save on total interest costs",
       "Factor loan payments into your business cash flow projections",
-      "Maintain good business credit to qualify for better rates"
+      "Review business credit, cash flow, and documentation before comparing loan offers"
     ]
   },
   "features": [
     {
       "title": "Monthly Payment Calculation",
-      "description": "Accurate monthly payment calculations for various business loan scenarios."
+      "description": "Monthly payment estimates for various business loan scenarios."
     },
     {
       "title": "Total Interest Analysis",
@@ -53,7 +53,7 @@
     },
     {
       "title": "Loan Comparison Tool",
-      "description": "Compare multiple loan options side-by-side to find the best terms."
+      "description": "Compare multiple loan options side-by-side across rates, terms, and payment amounts."
     },
     {
       "title": "Cash Flow Planning",
@@ -67,15 +67,15 @@
     },
     {
       "q": "How do I qualify for better business loan rates?",
-      "a": "Improve your business credit score, maintain strong cash flow, provide detailed financial statements, and consider offering collateral. Established businesses with 2+ years of operation typically qualify for better rates."
+      "a": "Lenders often review business credit, cash flow, time in business, financial statements, collateral, and industry risk when pricing loans. Qualification standards vary by lender and loan type."
     },
     {
       "q": "Should I choose a shorter or longer loan term?",
-      "a": "Shorter terms mean higher monthly payments but less total interest paid. Longer terms reduce monthly payments but increase total cost. Choose based on your cash flow needs and growth projections."
+      "a": "Shorter terms usually mean higher monthly payments and lower total interest, while longer terms usually reduce monthly payments and increase total cost. Use the calculator to compare those tradeoffs against your cash flow assumptions."
     },
     {
       "q": "What's the difference between SBA and conventional business loans?",
-      "a": "SBA loans typically offer lower rates and longer terms but have stricter qualification requirements and longer approval processes. Conventional loans offer faster approval but may have higher rates and shorter terms."
+      "a": "SBA and conventional business loans can differ in rate, term length, collateral requirements, fee structure, and approval process. Review current lender terms directly because these differences vary across programs and market conditions."
     }
   ],
   "relativeLinks": [

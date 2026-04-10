@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Stock Calculator - Investment Return Analysis Tool",
-    "description": "The Stock Calculator is a comprehensive stock investment analysis tool designed to help you calculate returns, gains, losses, and performance metrics for individual stock investments. This calculator analyzes purchase prices, selling prices, dividends, and time periods to determine total returns and annualized performance. Whether you're tracking existing investments or planning stock purchases, this tool provides accurate stock investment calculations."
+    "description": "The Stock Calculator is a stock investment analysis tool designed to help you calculate returns, gains, losses, and performance metrics for individual stock investments. This calculator uses purchase prices, selling prices, dividends, and time periods to estimate total returns and annualized performance. Whether you're tracking existing investments or planning stock purchases, this tool provides formula-based stock return calculations."
   },
   "howTo": {
     "title": "How to Use the Stock Calculator",
@@ -32,7 +32,7 @@
       }
     ],
     "tips": [
-      "Include all dividends for accurate total return calculations",
+      "Include all dividends for more complete total return calculations",
       "Factor in transaction costs to get net returns",
       "Consider tax implications of short-term vs. long-term gains",
       "Use annualized returns to compare investments with different time periods"
@@ -66,8 +66,8 @@
   ],
   "faq": [
     {
-      "q": "How do I calculate stock returns accurately?",
-      "a": "Total return = (Ending Value + Dividends - Beginning Value) / Beginning Value. Include all dividends received and subtract transaction costs for accurate net returns. Use annualized returns for comparing different time periods."
+      "q": "How do I calculate stock returns?",
+      "a": "Total return = (Ending Value + Dividends - Beginning Value) / Beginning Value. Include all dividends received and subtract transaction costs for a more complete net return estimate. Use annualized returns for comparing different time periods."
     },
     {
       "q": "What's the difference between realized and unrealized gains?",

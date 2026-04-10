@@ -23,7 +23,7 @@ export async function generateMetadata({
   const entry = getLocalizedToolEntry(l, 'jpg-to-png-converter', mediaEn as ToolCatalogEntry[], mediaZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name ?? 'JPG to PNG Converter';
-  const description: string = entry?.description ?? 'Convert JPG images to PNG format with transparency support. Free online image converter with batch processing and quality optimization.';
+  const description: string = entry?.description ?? 'Review notes for a JPG to PNG workflow, including format tradeoffs, transparency limits, and public availability status.';
   const baseKeywords = generateOptimizedKeywords('jpg-to-png-converter', 'media', 'JPG to PNG Converter');
   const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
     ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
@@ -57,7 +57,7 @@ export default async function JpgToPngConverterPage({
   const entry = getLocalizedToolEntry(l, 'jpg-to-png-converter', mediaEn as ToolCatalogEntry[], mediaZh as ToolCatalogEntry[]);
 
   const toolName: string = entry?.name ?? 'JPG to PNG Converter';
-  const description: string = entry?.description ?? 'Convert JPG images to PNG format with transparency support and instant processing.';
+  const description: string = entry?.description ?? 'This page explains JPG to PNG workflow considerations and why the interactive version is not currently part of the featured public surface.';
   const baseKeywords = generateOptimizedKeywords('jpg-to-png-converter', 'media', 'JPG to PNG Converter');
   const keywords = Array.isArray(entry?.keywords) && entry.keywords.length
     ? Array.from(new Set([...baseKeywords, ...entry.keywords]))
@@ -78,27 +78,28 @@ export default async function JpgToPngConverterPage({
       faqs={toolContent.faqs}
     >
       <div className="text-center py-12 bg-muted rounded-lg">
-        <div className="text-6xl mb-4">🚧</div>
-        <h2 className="text-2xl font-semibold mb-4">Coming Soon</h2>
+        <div className="text-6xl mb-4">📝</div>
+        <h2 className="text-2xl font-semibold mb-4">Under review</h2>
         <p className="text-muted-foreground mb-6">
-          We&apos;re developing an advanced image converter with support for multiple formats, 
-          batch processing, and quality optimization features.
+          This page is currently limited to format notes and workflow guidance. The interactive JPG
+          to PNG tool is not part of the featured public surface until its implementation,
+          limitations, and policy wording are reviewed together.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto">
           <div className="p-4 bg-background rounded-lg">
-            <div className="text-2xl mb-2">🎨</div>
-            <div className="font-medium">Quality Preserved</div>
-            <div className="text-sm text-muted-foreground">Maintain image quality</div>
+            <div className="text-2xl mb-2">🖼️</div>
+            <div className="font-medium">Format tradeoffs</div>
+            <div className="text-sm text-muted-foreground">JPG compression and PNG export have different strengths</div>
           </div>
           <div className="p-4 bg-background rounded-lg">
-            <div className="text-2xl mb-2">📦</div>
-            <div className="font-medium">Batch Processing</div>
-            <div className="text-sm text-muted-foreground">Convert multiple files</div>
+            <div className="text-2xl mb-2">🧭</div>
+            <div className="font-medium">Scope notes</div>
+            <div className="text-sm text-muted-foreground">Use this page to judge whether PNG is actually the right target</div>
           </div>
           <div className="p-4 bg-background rounded-lg">
-            <div className="text-2xl mb-2">🔧</div>
-            <div className="font-medium">Advanced Options</div>
-            <div className="text-sm text-muted-foreground">Compression and settings</div>
+            <div className="text-2xl mb-2">✅</div>
+            <div className="font-medium">Verification first</div>
+            <div className="text-sm text-muted-foreground">Check transparency and output expectations independently</div>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Loan Calculator",
-    "description": "The Loan Calculator helps you determine monthly payments, total interest costs, and amortization schedules for any type of loan. Whether it's a mortgage, auto loan, personal loan, or business loan, this tool provides comprehensive loan analysis. Understanding your loan terms before signing helps you make informed financial decisions and compare different loan offers effectively. Calculate the true cost of borrowing and plan your budget accordingly."
+    "description": "The Loan Calculator helps you estimate monthly payments, total interest costs, and amortization schedules for many fixed-rate loans. Whether it's a mortgage, auto loan, personal loan, or business loan, this tool supports side-by-side review of loan terms and repayment scenarios. Use it to compare borrowing costs and budget impact before choosing a loan offer."
   },
   "howTo": {
     "title": "How to Use the Loan Calculator",
@@ -24,15 +24,15 @@
       }
     ],
     "tips": [
-      "Compare different loan terms to find optimal payments",
+      "Compare different loan terms across payment tradeoffs",
       "Consider the impact of extra payments on total interest",
-      "Use APR instead of interest rate for accurate comparisons"
+      "Use APR instead of interest rate for more complete comparisons"
     ]
   },
   "features": [
     {
       "title": "Monthly Payment Calculation",
-      "description": "Calculate exact monthly loan payments based on principal, interest rate, and term."
+      "description": "Estimate monthly loan payments based on principal, interest rate, and term."
     },
     {
       "title": "Total Interest Analysis",
@@ -48,7 +48,7 @@
     },
     {
       "title": "Loan Comparison Tool",
-      "description": "Compare multiple loan offers side-by-side to find the best terms."
+      "description": "Compare multiple loan offers side-by-side across rate, term, and payment differences."
     },
     {
       "title": "Extra Payment Calculator",
@@ -66,19 +66,19 @@
     },
     {
       "q": "Can I calculate the impact of making extra loan payments?",
-      "a": "Yes, our loan calculator shows how additional principal payments reduce the loan term and total interest paid. Even small extra payments can save thousands in interest over time and help you pay off loans years earlier."
+      "a": "Yes, the calculator shows how additional principal payments may change the loan term and total interest. The effect depends on the balance, interest rate, term, and payment amount you enter."
     },
     {
       "q": "What's the difference between interest rate and APR?",
-      "a": "Interest rate is the basic cost of borrowing the principal amount. APR (Annual Percentage Rate) includes the interest rate plus additional fees and costs like origination fees, giving you the true annual cost of the loan. Use APR for accurate loan comparisons."
+      "a": "Interest rate is the basic cost of borrowing the principal amount. APR (Annual Percentage Rate) includes the interest rate plus additional fees and costs like origination fees, giving you a more complete annual borrowing-cost reference. Use APR when comparing loan offers."
     },
     {
       "q": "What types of loans can I calculate with this tool?",
-      "a": "Our loan calculator works for any fixed-rate loan including auto loans, personal loans, student loans, business loans, and mortgages. Simply enter the loan amount, interest rate, and term to get accurate payment calculations."
+      "a": "Our loan calculator works for many fixed-rate loans including auto loans, personal loans, student loans, business loans, and mortgages. Enter the loan amount, interest rate, and term to review estimated payment calculations."
     },
     {
-      "q": "How accurate are the loan payment calculations?",
-      "a": "Our loan calculator uses standard amortization formulas used by banks and lenders, providing highly accurate payment estimates. However, actual payments may vary slightly due to rounding, fees, or specific lender calculation methods."
+      "q": "How should I interpret the loan payment calculations?",
+      "a": "The calculator uses standard amortization formulas to provide payment estimates. Actual loan costs can vary due to rounding, fees, escrow items, insurance, taxes, or lender-specific calculation methods."
     }
   ],
   "relativeLinks": [

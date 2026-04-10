@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Debt Consolidation Calculator - Debt Management Tool",
-    "description": "The Debt Consolidation Calculator is a comprehensive debt management tool designed to help you evaluate the benefits of consolidating multiple debts into a single loan. This calculator helps you compare your current debt payments with potential consolidation options, calculate interest savings, and determine if debt consolidation makes financial sense. Whether you're dealing with credit card debt, personal loans, or other high-interest obligations, this tool provides clear analysis of consolidation scenarios."
+    "description": "The Debt Consolidation Calculator is a debt management tool designed to help you evaluate the tradeoffs of consolidating multiple debts into a single loan. This calculator helps you compare your current debt payments with potential consolidation options, estimate interest savings, and review how consolidation may affect payoff timing and monthly payments. Whether you're dealing with credit card debt, personal loans, or other high-interest obligations, this tool provides scenario-based consolidation analysis."
   },
   "howTo": {
     "title": "How to Use the Debt Consolidation Calculator",
@@ -27,7 +27,7 @@
         "description": "Compare how long it takes to pay off debts with and without consolidation."
       },
       {
-        "title": "Evaluate Overall Benefits",
+        "title": "Review Overall Tradeoffs",
         "description": "Assess whether consolidation improves your financial situation and cash flow."
       }
     ],
@@ -66,8 +66,8 @@
   ],
   "faq": [
     {
-      "q": "When does debt consolidation make sense?",
-      "a": "Debt consolidation makes sense when you can secure a lower interest rate than your current average, simplify payments, or reduce monthly obligations. It's most beneficial for high-interest credit card debt when you can get a personal loan or balance transfer at a lower rate."
+      "q": "When might debt consolidation be worth considering?",
+      "a": "Debt consolidation may be worth considering when you can secure a lower interest rate than your current average, simplify payments, or reduce monthly obligations. Compare total cost, fees, and payoff timing before deciding whether a consolidation loan or balance transfer fits your situation."
     },
     {
       "q": "What types of debt can be consolidated?",

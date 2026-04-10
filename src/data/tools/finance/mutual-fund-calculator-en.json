@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Mutual Fund Calculator - Investment Growth Analysis Tool",
-    "description": "The Mutual Fund Calculator is a comprehensive investment analysis tool designed to help you calculate potential returns, growth projections, and costs associated with mutual fund investments. This calculator analyzes initial investments, monthly contributions, expected returns, and fees to project long-term wealth building through mutual funds. Whether you're planning retirement savings or building investment portfolios, this tool provides accurate mutual fund growth calculations."
+    "description": "The Mutual Fund Calculator is an investment analysis tool designed to help you calculate potential returns, growth projections, and costs associated with mutual fund investments. This calculator uses initial investments, monthly contributions, expected returns, and fees to project long-term growth through mutual funds. Whether you're planning retirement savings or building investment portfolios, this tool provides formula-based mutual fund growth estimates."
   },
   "howTo": {
     "title": "How to Use the Mutual Fund Calculator",
@@ -56,8 +56,8 @@
       "description": "Model different return scenarios from conservative to aggressive growth."
     },
     {
-      "title": "Investment Timeline Optimizer",
-      "description": "Determine optimal investment periods for different financial goals."
+      "title": "Investment Timeline Comparison",
+      "description": "Compare different investment periods for different financial goals."
     },
     {
       "title": "Tax-Adjusted Returns",
@@ -67,7 +67,7 @@
   "faq": [
     {
       "q": "What's a reasonable expected return for mutual funds?",
-      "a": "Historically, diversified stock mutual funds have averaged 7-10% annually over long periods. Bond funds typically return 3-6%. Conservative balanced funds might return 5-8%. Use historical averages but remember past performance doesn't guarantee future results."
+      "a": "Historically, diversified stock mutual funds have averaged 7-10% annually over long periods. Bond funds typically return 3-6%. Conservative balanced funds might return 5-8%. Use historical averages as reference points, but remember past performance does not ensure future results."
     },
     {
       "q": "How do mutual fund fees affect my returns?",

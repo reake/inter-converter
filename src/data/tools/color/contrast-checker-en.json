@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Color Contrast Checker - WCAG AA/AAA Standards",
-    "description": "The Color Contrast Checker evaluates color combinations for accessibility compliance and readability according to WCAG AA/AAA standards. This essential tool ensures your color choices meet web accessibility guidelines for inclusive design, helping designers and developers create accessible interfaces that work for users with visual impairments while ensuring compliance with accessibility standards and legal regulations."
+    "description": "The Color Contrast Checker evaluates color combinations for readability against WCAG AA/AAA contrast targets. It helps designers and developers review foreground and background choices when building more accessible interfaces. Use it as a reference tool when checking color combinations against published accessibility guidance."
   },
   "howTo": {
     "title": "How to Use the Color Contrast Checker",
@@ -16,7 +16,7 @@
       },
       {
         "title": "View Contrast Ratio",
-        "description": "See the calculated contrast ratio and immediate WCAG compliance status."
+        "description": "See the calculated contrast ratio and current WCAG pass/fail status."
       },
       {
         "title": "Check WCAG Levels",
@@ -28,7 +28,7 @@
       },
       {
         "title": "Test Different Scenarios",
-        "description": "Test various color combinations to ensure optimal accessibility across your design."
+        "description": "Test various color combinations across different interface scenarios."
       }
     ],
     "tips": [

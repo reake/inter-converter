@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About BMI Calculator",
-    "description": "The BMI Calculator determines your Body Mass Index for health assessment and weight management. This professional tool calculates BMI based on height and weight measurements to categorize weight status and assess potential health risks. BMI is a widely used screening tool for underweight, normal weight, overweight, and obesity classifications. Understanding your BMI helps make informed decisions about diet, exercise, and lifestyle changes for optimal health and wellness."
+    "description": "The BMI Calculator calculates Body Mass Index from height and weight measurements. BMI is a widely used screening reference for underweight, normal weight, overweight, and obesity categories, but it does not capture all aspects of health or body composition. Use the result as a general reference alongside other health information rather than a standalone medical assessment."
   },
   "howTo": {
     "title": "How to Use the BMI Calculator",
@@ -20,12 +20,12 @@
       },
       {
         "title": "Review Results",
-        "description": "View your BMI score, weight category, and personalized health recommendations."
+        "description": "View your BMI score, weight category, and general interpretation guidance."
       }
     ],
     "tips": [
       "Measure weight at the same time of day for consistency",
-      "Use accurate height and weight measurements",
+      "Use current height and weight measurements",
       "Consider BMI alongside other health indicators"
     ]
   },
@@ -35,20 +35,20 @@
       "description": "Calculate BMI using metric (kg/cm) or imperial (lbs/ft-in) measurement systems."
     },
     {
-      "title": "Instant BMI Calculation",
-      "description": "Get immediate BMI results with automatic weight category classification."
+      "title": "BMI Calculation",
+      "description": "Calculate BMI and display the corresponding reference category."
     },
     {
-      "title": "Health Risk Assessment",
-      "description": "Receive health risk indicators based on your BMI score and weight category."
+      "title": "Category Reference",
+      "description": "Show BMI-related category references based on the calculated score."
     },
     {
       "title": "Weight Categories",
-      "description": "Clear classification into underweight, normal weight, overweight, or obese categories."
+      "description": "Display standard adult BMI categories for general interpretation."
     },
     {
-      "title": "Health Recommendations",
-      "description": "Get personalized health and lifestyle recommendations based on your BMI results."
+      "title": "Result Guidance",
+      "description": "Provide general guidance on how BMI results are commonly interpreted."
     },
     {
       "title": "BMI Reference Chart",
@@ -61,12 +61,12 @@
       "a": "A healthy BMI typically ranges from 18.5 to 24.9 according to WHO standards. BMI below 18.5 is considered underweight, 25-29.9 is overweight, and 30+ is classified as obese. Our BMI calculator provides these classifications automatically with your results."
     },
     {
-      "q": "Is BMI calculation accurate for everyone?",
-      "a": "BMI has limitations and may not be accurate for athletes with high muscle mass, elderly individuals, pregnant women, or certain ethnic groups. It's best used as a general health screening tool alongside other assessments like body fat percentage and waist circumference."
+      "q": "How should I interpret BMI results?",
+      "a": "BMI has limitations and may not reflect athletes with high muscle mass, elderly individuals, pregnant women, or some population groups in the same way. It works better as a general screening reference alongside other measures such as body fat percentage and waist circumference."
     },
     {
       "q": "How do I calculate my BMI manually?",
-      "a": "BMI is calculated using the formula: weight (kg) ÷ height (m)². For imperial units: (weight in pounds ÷ height in inches²) × 703. Our BMI calculator automates this process and provides instant results with health recommendations."
+      "a": "BMI is calculated using the formula: weight (kg) ÷ height (m)². For imperial units: (weight in pounds ÷ height in inches²) × 703. The calculator automates this process and shows the resulting BMI value with standard reference categories."
     },
     {
       "q": "How often should I check my BMI for health monitoring?",
@@ -74,7 +74,7 @@
     },
     {
       "q": "What should I do if my BMI is outside the healthy range?",
-      "a": "If your BMI is outside the healthy range (18.5-24.9), consult with a healthcare professional for personalized advice. They can assess your overall health, body composition, and recommend appropriate diet, exercise, and lifestyle modifications."
+      "a": "If your BMI is outside the standard reference range (18.5-24.9), consider discussing the result with a healthcare provider. They can review your broader health context, body composition, and possible next steps."
     },
     {
       "q": "Can BMI be used for children and teenagers?",
