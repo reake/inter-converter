@@ -69,9 +69,14 @@ export function LanguageToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" className="gap-1 sm:gap-2 relative px-2 sm:px-3">
-          <span className="text-lg">{currentLanguage.flag}</span>
-          <span className="font-medium text-xs sm:text-sm">{currentLanguage.nativeName}</span>
+        <Button
+          variant="outline"
+          size="sm"
+          aria-label={t('language')}
+          className="gap-1 sm:gap-2 relative px-2 sm:px-3 text-foreground border-input bg-background hover:bg-accent"
+        >
+          <span className="text-lg leading-none">{currentLanguage.flag}</span>
+          <span className="font-medium text-xs sm:text-sm text-foreground">{currentLanguage.nativeName}</span>
           {isAutoDetected && (
             <div
               className="absolute -top-1 -right-1 w-2 h-2 bg-blue-500 rounded-full"
@@ -104,7 +109,7 @@ export function LanguageToggle() {
                     <span className="text-blue-500 text-sm">✓</span>
                   )}
                 </div>
-                <div className="text-xs text-gray-500">{language.name}</div>
+                <div className="text-xs text-muted-foreground">{language.name}</div>
               </div>
               <div className="flex items-center">
                 {isCurrentLanguage && (

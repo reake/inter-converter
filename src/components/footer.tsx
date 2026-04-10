@@ -1,9 +1,11 @@
-import { getLocale } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 
-export async function Footer() {
+interface FooterProps {
+  locale?: string;
+}
+
+export function Footer({ locale = 'en' }: FooterProps) {
   const currentYear = new Date().getFullYear();
-  const locale = await getLocale();
   const isZh = locale === 'zh';
 
   return (
