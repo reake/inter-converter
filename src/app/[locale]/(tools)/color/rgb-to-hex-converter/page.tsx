@@ -80,7 +80,7 @@ export default async function RgbToHexConverterPage({
       customFeatures={toolContent.features}
       faqs={toolContent.faqs}
     >
-      <RgbToHexConverter />
+      <RgbToHexConverter lang={l} />
     </EnhancedToolLayout>
   );
 }

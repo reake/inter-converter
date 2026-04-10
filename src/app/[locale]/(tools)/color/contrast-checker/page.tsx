@@ -80,7 +80,7 @@ export default async function ContrastCheckerPage({
       customFeatures={toolContent.features}
       faqs={toolContent.faqs}
     >
-      <ContrastChecker />
+      <ContrastChecker lang={l} />
     </EnhancedToolLayout>
   );
 }

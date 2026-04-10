@@ -6,7 +6,12 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Eye, CheckCircle, XCircle } from 'lucide-react';
 
-export function ContrastChecker() {
+interface ContrastCheckerProps {
+  lang?: string;
+}
+
+export function ContrastChecker({ lang = 'en' }: ContrastCheckerProps) {
+  const isZh = lang === 'zh';
   const [foregroundColor, setForegroundColor] = useState('#000000');
   const [backgroundColor, setBackgroundColor] = useState('#ffffff');
   const [contrastRatio, setContrastRatio] = useState(0);
@@ -70,7 +75,7 @@ export function ContrastChecker() {
   const getStatusBadge = (passed: boolean) => {
     return (
       <Badge variant={passed ? "default" : "destructive"}>
-        {passed ? "Pass" : "Fail"}
+        {passed ? (isZh ? '通过' : 'Pass') : (isZh ? '未通过' : 'Fail')}
       </Badge>
     );
   };
@@ -87,8 +92,8 @@ export function ContrastChecker() {
   return (
     <div className="space-y-6">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-2">Color Contrast Checker</h2>
-        <p className="text-gray-600">Check color contrast ratios for WCAG accessibility compliance</p>
+        <h2 className="text-3xl font-bold text-gray-900 mb-2">{isZh ? '颜色对比度检查器' : 'Color Contrast Checker'}</h2>
+        <p className="text-gray-600">{isZh ? '检查颜色对比度是否符合 WCAG 无障碍标准' : 'Check color contrast ratios for WCAG accessibility compliance'}</p>
       </div>
 
       <div className="grid lg:grid-cols-2 gap-6">
@@ -96,19 +101,19 @@ export function ContrastChecker() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Eye className="h-5 w-5" />
-              Color Selection
+              {isZh ? '颜色选择' : 'Color Selection'}
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div>
-              <label htmlFor="contrast-foreground-color" className="block text-sm font-medium mb-2">Foreground Color (Text)</label>
+              <label htmlFor="contrast-foreground-color" className="block text-sm font-medium mb-2">{isZh ? '前景色（文字）' : 'Foreground Color (Text)'}</label>
               <div className="flex gap-2">
                 <Input
                   id="contrast-foreground-picker"
                   type="color"
                   value={foregroundColor}
                   onChange={(e) => setForegroundColor(e.target.value)}
-                  aria-label="Foreground color picker"
+                  aria-label={isZh ? '前景色选择器' : 'Foreground color picker'}
                   className="w-16 h-10 p-1 border rounded"
                 />
                 <Input
@@ -123,14 +128,14 @@ export function ContrastChecker() {
             </div>
 
             <div>
-              <label htmlFor="contrast-background-color" className="block text-sm font-medium mb-2">Background Color</label>
+              <label htmlFor="contrast-background-color" className="block text-sm font-medium mb-2">{isZh ? '背景色' : 'Background Color'}</label>
               <div className="flex gap-2">
                 <Input
                   id="contrast-background-picker"
                   type="color"
                   value={backgroundColor}
                   onChange={(e) => setBackgroundColor(e.target.value)}
-                  aria-label="Background color picker"
+                  aria-label={isZh ? '背景色选择器' : 'Background color picker'}
                   className="w-16 h-10 p-1 border rounded"
                 />
                 <Input
@@ -145,7 +150,7 @@ export function ContrastChecker() {
             </div>
 
             <div className="pt-4">
-              <h4 className="font-semibold mb-3">Preset Combinations</h4>
+              <h4 className="font-semibold mb-3">{isZh ? '预设组合' : 'Preset Combinations'}</h4>
               <div className="space-y-2">
                 {presetCombinations.map((combo, index) => (
                   <button
@@ -178,7 +183,7 @@ export function ContrastChecker() {
 
         <Card>
           <CardHeader>
-            <CardTitle>Contrast Results</CardTitle>
+            <CardTitle>{isZh ? '对比结果' : 'Contrast Results'}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div 
@@ -188,10 +193,11 @@ export function ContrastChecker() {
                 backgroundColor: backgroundColor 
               }}
             >
-              <div className="text-lg font-semibold mb-2">Sample Text</div>
+              <div className="text-lg font-semibold mb-2">{isZh ? '示例文本' : 'Sample Text'}</div>
               <div className="text-sm">
-                This is how your text will look with the selected colors. 
-                The contrast ratio determines readability and accessibility.
+                {isZh
+                  ? '这就是所选颜色下文本的大致显示效果。对比度比值会影响可读性和无障碍表现。'
+                  : 'This is how your text will look with the selected colors. The contrast ratio determines readability and accessibility.'}
               </div>
             </div>
 
@@ -199,11 +205,11 @@ export function ContrastChecker() {
               <div className="text-2xl font-bold mb-1">
                 {contrastRatio.toFixed(2)}:1
               </div>
-              <div className="text-sm text-muted-foreground">Contrast Ratio</div>
+              <div className="text-sm text-muted-foreground">{isZh ? '对比度比值' : 'Contrast Ratio'}</div>
             </div>
 
             <div className="space-y-3">
-              <h4 className="font-semibold">WCAG Compliance</h4>
+              <h4 className="font-semibold">{isZh ? 'WCAG 合规性' : 'WCAG Compliance'}</h4>
               
               <div className="space-y-2">
                 <div className="flex items-center justify-between p-3 border rounded">
@@ -246,7 +252,7 @@ export function ContrastChecker() {
       {/* Guidelines */}
       <Card>
         <CardHeader>
-          <CardTitle>WCAG Guidelines</CardTitle>
+          <CardTitle>{isZh ? 'WCAG 指南' : 'WCAG Guidelines'}</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-2 gap-6">

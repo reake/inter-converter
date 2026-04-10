@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
 import { ThemeToggle } from '@/components/theme-toggle';
+import { LanguageToggle } from '@/components/language-toggle';
 import { cn } from '@/lib/utils';
 
 export function Header() {
@@ -50,6 +51,7 @@ export function Header() {
             })}
           </nav>
           <div className="flex items-center space-x-2">
+            <LanguageToggle />
             <ThemeToggle />
           </div>
         </div>

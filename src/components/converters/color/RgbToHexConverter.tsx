@@ -9,7 +9,12 @@ import { Button } from '@/components/ui/button';
 import { CopyButton } from '@/components/ui/CopyButton';
 import { Palette, Eye, Shuffle } from 'lucide-react';
 
-export default function RgbToHexConverter() {
+interface RgbToHexConverterProps {
+  lang?: string;
+}
+
+export default function RgbToHexConverter({ lang = 'en' }: RgbToHexConverterProps) {
+  const isZh = lang === 'zh';
   const [red, setRed] = useState<string>('255');
   const [green, setGreen] = useState<string>('0');
   const [blue, setBlue] = useState<string>('0');
@@ -96,12 +101,12 @@ export default function RgbToHexConverter() {
 
   return (
     <div className="space-y-6">
-      <h2 className="sr-only">RGB and HEX color conversion tool</h2>
+      <h2 className="sr-only">{isZh ? 'RGB 与 HEX 颜色转换工具' : 'RGB and HEX color conversion tool'}</h2>
       <Tabs defaultValue="converter" className="space-y-6">
         <TabsList className="grid w-full grid-cols-3">
           <TabsTrigger value="converter">RGB ↔ HEX</TabsTrigger>
-          <TabsTrigger value="colors">Common Colors</TabsTrigger>
-          <TabsTrigger value="websafe">Web Safe Colors</TabsTrigger>
+          <TabsTrigger value="colors">{isZh ? '常用颜色' : 'Common Colors'}</TabsTrigger>
+          <TabsTrigger value="websafe">{isZh ? '网页安全色' : 'Web Safe Colors'}</TabsTrigger>
         </TabsList>
 
         <TabsContent value="converter">
@@ -110,14 +115,14 @@ export default function RgbToHexConverter() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Palette className="h-5 w-5" />
-                  RGB Color
+                  {isZh ? 'RGB 颜色' : 'RGB Color'}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   <div className="grid grid-cols-3 gap-3">
                     <div>
-                      <Label htmlFor="red">Red</Label>
+                      <Label htmlFor="red">{isZh ? '红' : 'Red'}</Label>
                       <Input
                         id="red"
                         type="number"
@@ -130,7 +135,7 @@ export default function RgbToHexConverter() {
                       />
                     </div>
                     <div>
-                      <Label htmlFor="green">Green</Label>
+                      <Label htmlFor="green">{isZh ? '绿' : 'Green'}</Label>
                       <Input
                         id="green"
                         type="number"
@@ -143,7 +148,7 @@ export default function RgbToHexConverter() {
                       />
                     </div>
                     <div>
-                      <Label htmlFor="blue">Blue</Label>
+                      <Label htmlFor="blue">{isZh ? '蓝' : 'Blue'}</Label>
                       <Input
                         id="blue"
                         type="number"
@@ -170,13 +175,13 @@ export default function RgbToHexConverter() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  # HEX Color
+                  # {isZh ? 'HEX 颜色' : 'HEX Color'}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   <div>
-                    <Label htmlFor="hex">HEX Color Code</Label>
+                    <Label htmlFor="hex">{isZh ? 'HEX 颜色代码' : 'HEX Color Code'}</Label>
                     <div className="flex gap-2">
                       <Input
                         id="hex"

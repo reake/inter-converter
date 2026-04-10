@@ -77,7 +77,7 @@ export default async function OnlineStopwatchPage({
       customFeatures={toolContent.features}
       faqs={toolContent.faqs}
     >
-      <OnlineStopwatch />
+      <OnlineStopwatch lang={l} />
     </EnhancedToolLayout>
   );
 }

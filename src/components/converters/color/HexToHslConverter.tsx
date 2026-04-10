@@ -6,7 +6,12 @@ import { Input } from '@/components/ui/input';
 import { Palette } from 'lucide-react';
 import { CopyButton } from '@/components/ui/CopyButton';
 
-export default function HexToHslConverter() {
+interface HexToHslConverterProps {
+  lang?: string;
+}
+
+export default function HexToHslConverter({ lang = 'en' }: HexToHslConverterProps) {
+  const isZh = lang === 'zh';
   const [hexValue, setHexValue] = useState('#3b82f6');
   const [hslValue, setHslValue] = useState({ h: 0, s: 0, l: 0 });
   const [error, setError] = useState('');
@@ -54,7 +59,7 @@ export default function HexToHslConverter() {
       // Validate hex format
       const hexRegex = /^#?([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
       if (!hexRegex.test(hexValue)) {
-        setError('Please enter a valid HEX color code');
+        setError(isZh ? '请输入有效的 HEX 颜色代码' : 'Please enter a valid HEX color code');
         return;
       }
 
@@ -68,7 +73,7 @@ export default function HexToHslConverter() {
       const hsl = hexToHsl(normalizedHex);
       setHslValue(hsl);
     } catch {
-      setError('Invalid HEX color format');
+      setError(isZh ? '无效的 HEX 颜色格式' : 'Invalid HEX color format');
     }
   }, [hexValue]);
 
@@ -84,8 +89,8 @@ export default function HexToHslConverter() {
   return (
     <div className="space-y-6">
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">HEX to HSL Converter</h1>
-        <p className="text-gray-600">Convert HEX color codes to HSL (Hue, Saturation, Lightness) values</p>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">{isZh ? 'HEX 转 HSL 转换器' : 'HEX to HSL Converter'}</h1>
+        <p className="text-gray-600">{isZh ? '将 HEX 颜色代码转换为 HSL（色相、饱和度、亮度）值' : 'Convert HEX color codes to HSL (Hue, Saturation, Lightness) values'}</p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
@@ -93,7 +98,7 @@ export default function HexToHslConverter() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Palette className="h-5 w-5" />
-              HEX Color
+              {isZh ? 'HEX 颜色' : 'HEX Color'}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -122,28 +127,28 @@ export default function HexToHslConverter() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Palette className="h-5 w-5" />
-              HSL Values
+              {isZh ? 'HSL 数值' : 'HSL Values'}
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               <div className="grid grid-cols-3 gap-4">
                 <div className="text-center p-3 bg-muted rounded">
-                  <div className="text-sm text-muted-foreground">Hue</div>
+                  <div className="text-sm text-muted-foreground">{isZh ? '色相' : 'Hue'}</div>
                   <div className="text-xl font-bold">{hslValue.h}°</div>
                 </div>
                 <div className="text-center p-3 bg-muted rounded">
-                  <div className="text-sm text-muted-foreground">Saturation</div>
+                  <div className="text-sm text-muted-foreground">{isZh ? '饱和度' : 'Saturation'}</div>
                   <div className="text-xl font-bold">{hslValue.s}%</div>
                 </div>
                 <div className="text-center p-3 bg-muted rounded">
-                  <div className="text-sm text-muted-foreground">Lightness</div>
+                  <div className="text-sm text-muted-foreground">{isZh ? '亮度' : 'Lightness'}</div>
                   <div className="text-xl font-bold">{hslValue.l}%</div>
                 </div>
               </div>
 
               <div className="p-4 bg-muted rounded-lg">
-                <div className="text-sm text-muted-foreground mb-2">HSL String</div>
+                <div className="text-sm text-muted-foreground mb-2">{isZh ? 'HSL 字符串' : 'HSL String'}</div>
                 <div className="font-mono text-lg mb-2">{hslString}</div>
                 <CopyButton text={hslString} />
               </div>
@@ -160,21 +165,21 @@ export default function HexToHslConverter() {
       {/* Color Information */}
       <Card>
         <CardHeader>
-          <CardTitle>About HSL Color Model</CardTitle>
+          <CardTitle>{isZh ? '关于 HSL 颜色模型' : 'About HSL Color Model'}</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-3 gap-4 text-sm">
             <div>
-              <h4 className="font-semibold mb-2">Hue (0-360°)</h4>
-              <p className="text-muted-foreground">The color type on the color wheel. 0° is red, 120° is green, 240° is blue.</p>
+              <h4 className="font-semibold mb-2">{isZh ? '色相 (0-360°)' : 'Hue (0-360°)'}</h4>
+              <p className="text-muted-foreground">{isZh ? '表示色轮上的颜色类型。0° 是红色，120° 是绿色，240° 是蓝色。' : 'The color type on the color wheel. 0° is red, 120° is green, 240° is blue.'}</p>
             </div>
             <div>
-              <h4 className="font-semibold mb-2">Saturation (0-100%)</h4>
-              <p className="text-muted-foreground">The intensity of the color. 0% is gray, 100% is full color.</p>
+              <h4 className="font-semibold mb-2">{isZh ? '饱和度 (0-100%)' : 'Saturation (0-100%)'}</h4>
+              <p className="text-muted-foreground">{isZh ? '表示颜色强度。0% 为灰色，100% 为纯色。' : 'The intensity of the color. 0% is gray, 100% is full color.'}</p>
             </div>
             <div>
-              <h4 className="font-semibold mb-2">Lightness (0-100%)</h4>
-              <p className="text-muted-foreground">The brightness of the color. 0% is black, 50% is normal, 100% is white.</p>
+              <h4 className="font-semibold mb-2">{isZh ? '亮度 (0-100%)' : 'Lightness (0-100%)'}</h4>
+              <p className="text-muted-foreground">{isZh ? '表示颜色明暗。0% 为黑色，50% 为正常亮度，100% 为白色。' : 'The brightness of the color. 0% is black, 50% is normal, 100% is white.'}</p>
             </div>
           </div>
         </CardContent>

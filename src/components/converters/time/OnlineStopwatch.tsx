@@ -5,7 +5,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Play, Pause, Square, RotateCcw, Clock } from 'lucide-react';
 
-export default function OnlineStopwatch() {
+interface OnlineStopwatchProps {
+  lang?: string;
+}
+
+export default function OnlineStopwatch({ lang = 'en' }: OnlineStopwatchProps) {
+  const isZh = lang === 'zh';
   const [time, setTime] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const [laps, setLaps] = useState<number[]>([]);
@@ -75,8 +80,8 @@ export default function OnlineStopwatch() {
   return (
     <div className="space-y-6">
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Stopwatch</h1>
-        <p className="text-gray-600">Precise timing tool with lap functionality for sports and activities</p>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">{isZh ? '秒表' : 'Stopwatch'}</h1>
+        <p className="text-gray-600">{isZh ? '适用于运动与活动计时的高精度秒表，支持圈速记录' : 'Precise timing tool with lap functionality for sports and activities'}</p>
       </div>
 
       <div className="grid lg:grid-cols-2 gap-6">
@@ -84,7 +89,7 @@ export default function OnlineStopwatch() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Clock className="h-5 w-5" />
-              Timer Display
+              {isZh ? '计时显示' : 'Timer Display'}
             </CardTitle>
           </CardHeader>
           <CardContent className="text-center space-y-6">
@@ -95,15 +100,15 @@ export default function OnlineStopwatch() {
             <div className="grid grid-cols-3 gap-4 text-sm">
               <div className="text-center p-3 bg-muted rounded">
                 <div className="font-semibold">{timeFormatted.minutes}</div>
-                <div className="text-muted-foreground">Minutes</div>
+                <div className="text-muted-foreground">{isZh ? '分' : 'Minutes'}</div>
               </div>
               <div className="text-center p-3 bg-muted rounded">
                 <div className="font-semibold">{timeFormatted.seconds}</div>
-                <div className="text-muted-foreground">Seconds</div>
+                <div className="text-muted-foreground">{isZh ? '秒' : 'Seconds'}</div>
               </div>
               <div className="text-center p-3 bg-muted rounded">
                 <div className="font-semibold">{timeFormatted.milliseconds}</div>
-                <div className="text-muted-foreground">Centiseconds</div>
+                <div className="text-muted-foreground">{isZh ? '百分秒' : 'Centiseconds'}</div>
               </div>
             </div>
 
@@ -111,18 +116,18 @@ export default function OnlineStopwatch() {
               {!isRunning ? (
                 <Button onClick={handleStart} size="lg" className="px-8">
                   <Play className="h-5 w-5 mr-2" />
-                  Start
+                  {isZh ? '开始' : 'Start'}
                 </Button>
               ) : (
                 <Button onClick={handlePause} size="lg" className="px-8" variant="secondary">
                   <Pause className="h-5 w-5 mr-2" />
-                  Pause
+                  {isZh ? '暂停' : 'Pause'}
                 </Button>
               )}
               
               <Button onClick={handleStop} size="lg" className="px-8" variant="destructive">
                 <Square className="h-5 w-5 mr-2" />
-                Stop
+                {isZh ? '停止' : 'Stop'}
               </Button>
             </div>
 
@@ -133,7 +138,7 @@ export default function OnlineStopwatch() {
                 variant="outline"
                 className="px-6"
               >
-                Lap
+                {isZh ? '计圈' : 'Lap'}
               </Button>
               
               <Button 
@@ -143,7 +148,7 @@ export default function OnlineStopwatch() {
                 className="px-6"
               >
                 <RotateCcw className="h-4 w-4 mr-2" />
-                Reset
+                {isZh ? '重置' : 'Reset'}
               </Button>
             </div>
           </CardContent>
@@ -151,10 +156,10 @@ export default function OnlineStopwatch() {
 
         <Card>
           <CardHeader>
-            <CardTitle>Lap Times</CardTitle>
+            <CardTitle>{isZh ? '圈速记录' : 'Lap Times'}</CardTitle>
             {laps.length > 0 && (
               <div className="text-sm text-muted-foreground">
-                {laps.length} lap{laps.length !== 1 ? 's' : ''} recorded
+                {isZh ? `已记录 ${laps.length} 圈` : `${laps.length} lap${laps.length !== 1 ? 's' : ''} recorded`}
               </div>
             )}
           </CardHeader>
@@ -164,13 +169,13 @@ export default function OnlineStopwatch() {
                 {/* Lap Statistics */}
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center p-3 bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded">
-                    <div className="font-semibold text-green-800 dark:text-green-200">Best Lap</div>
+                    <div className="font-semibold text-green-800 dark:text-green-200">{isZh ? '最佳圈速' : 'Best Lap'}</div>
                     <div className="font-mono text-green-700 dark:text-green-300">
                       {bestLap ? formatTime(bestLap).display : '--'}
                     </div>
                   </div>
                   <div className="text-center p-3 bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-800 rounded">
-                    <div className="font-semibold text-red-800 dark:text-red-200">Worst Lap</div>
+                    <div className="font-semibold text-red-800 dark:text-red-200">{isZh ? '最慢圈速' : 'Worst Lap'}</div>
                     <div className="font-mono text-red-700 dark:text-red-300">
                       {worstLap ? formatTime(worstLap).display : '--'}
                     </div>
@@ -195,9 +200,9 @@ export default function OnlineStopwatch() {
                         }`}
                       >
                         <span className="font-medium">
-                          Lap {index + 1}
-                          {isBest && <span className="ml-2 text-xs text-green-600">BEST</span>}
-                          {isWorst && <span className="ml-2 text-xs text-red-600">WORST</span>}
+                          {isZh ? `第 ${index + 1} 圈` : `Lap ${index + 1}`}
+                          {isBest && <span className="ml-2 text-xs text-green-600">{isZh ? '最佳' : 'BEST'}</span>}
+                          {isWorst && <span className="ml-2 text-xs text-red-600">{isZh ? '最慢' : 'WORST'}</span>}
                         </span>
                         <span className="font-mono">
                           {formatTime(lapTime).display}
@@ -213,14 +218,14 @@ export default function OnlineStopwatch() {
                   className="w-full"
                   disabled={isRunning}
                 >
-                  Clear Laps
+                  {isZh ? '清除圈速' : 'Clear Laps'}
                 </Button>
               </div>
             ) : (
               <div className="text-center py-8 text-muted-foreground">
                 <Clock className="h-12 w-12 mx-auto mb-3 opacity-50" />
-                <p>No lap times recorded</p>
-                <p className="text-sm mt-2">Start the timer and press &quot;Lap&quot; to record times</p>
+                <p>{isZh ? '暂无圈速记录' : 'No lap times recorded'}</p>
+                <p className="text-sm mt-2">{isZh ? '启动秒表后点击“计圈”即可记录时间' : 'Start the timer and press "Lap" to record times'}</p>
               </div>
             )}
           </CardContent>
@@ -230,32 +235,62 @@ export default function OnlineStopwatch() {
       {/* Usage Tips */}
       <Card>
         <CardHeader>
-          <CardTitle>How to Use</CardTitle>
+          <CardTitle>{isZh ? '如何使用' : 'How to Use'}</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-3 gap-4 text-sm">
             <div className="p-4 border rounded-lg">
-              <h4 className="font-semibold text-blue-600 mb-2">Basic Timing</h4>
+              <h4 className="font-semibold text-blue-600 mb-2">{isZh ? '基础计时' : 'Basic Timing'}</h4>
               <div className="space-y-1 text-muted-foreground">
-                <div>• Press Start to begin timing</div>
-                <div>• Press Pause to temporarily stop</div>
-                <div>• Press Stop to end and reset</div>
+                {isZh ? (
+                  <>
+                    <div>• 点击“开始”启动计时</div>
+                    <div>• 点击“暂停”可临时停止</div>
+                    <div>• 点击“停止”结束并清零</div>
+                  </>
+                ) : (
+                  <>
+                    <div>• Press Start to begin timing</div>
+                    <div>• Press Pause to temporarily stop</div>
+                    <div>• Press Stop to end and reset</div>
+                  </>
+                )}
               </div>
             </div>
             <div className="p-4 border rounded-lg">
-              <h4 className="font-semibold text-green-600 mb-2">Lap Recording</h4>
+              <h4 className="font-semibold text-green-600 mb-2">{isZh ? '圈速记录' : 'Lap Recording'}</h4>
               <div className="space-y-1 text-muted-foreground">
-                <div>• Press Lap while running to record</div>
-                <div>• Best and worst laps are highlighted</div>
-                <div>• Clear laps when stopped</div>
+                {isZh ? (
+                  <>
+                    <div>• 运行时点击“计圈”即可记录</div>
+                    <div>• 最佳与最慢圈速会高亮显示</div>
+                    <div>• 停止后可清除圈速</div>
+                  </>
+                ) : (
+                  <>
+                    <div>• Press Lap while running to record</div>
+                    <div>• Best and worst laps are highlighted</div>
+                    <div>• Clear laps when stopped</div>
+                  </>
+                )}
               </div>
             </div>
             <div className="p-4 border rounded-lg">
-              <h4 className="font-semibold text-purple-600 mb-2">Precision</h4>
+              <h4 className="font-semibold text-purple-600 mb-2">{isZh ? '精度说明' : 'Precision'}</h4>
               <div className="space-y-1 text-muted-foreground">
-                <div>• Accurate to centiseconds (0.01s)</div>
-                <div>• Perfect for sports timing</div>
-                <div>• Reliable performance tracking</div>
+                {isZh ? (
+                  <>
+                    <div>• 精确到百分秒（0.01 秒）</div>
+                    <div>• 适合运动计时</div>
+                    <div>• 适合稳定记录表现</div>
+                  </>
+                ) : (
+                  <>
+                    <div>• Accurate to centiseconds (0.01s)</div>
+                    <div>• Perfect for sports timing</div>
+                    <div>• Reliable performance tracking</div>
+                  </>
+                )}
               </div>
             </div>
           </div>

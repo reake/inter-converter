@@ -69,12 +69,14 @@ export function LanguageToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" className="gap-2 relative">
+        <Button variant="ghost" size="sm" className="gap-1 sm:gap-2 relative px-2 sm:px-3">
           <span className="text-lg">{currentLanguage.flag}</span>
-          <span className="hidden sm:inline font-medium">{currentLanguage.nativeName}</span>
+          <span className="font-medium text-xs sm:text-sm">{currentLanguage.nativeName}</span>
           {isAutoDetected && (
-            <div className="absolute -top-1 -right-1 w-2 h-2 bg-blue-500 rounded-full"
-                 title="Auto-detected language" />
+            <div
+              className="absolute -top-1 -right-1 w-2 h-2 bg-blue-500 rounded-full"
+              title={locale === 'zh' ? '自动检测到的语言' : 'Auto-detected language'}
+            />
           )}
         </Button>
       </DropdownMenuTrigger>
@@ -104,20 +106,12 @@ export function LanguageToggle() {
                 </div>
                 <div className="text-xs text-gray-500">{language.name}</div>
               </div>
-              <div className="flex flex-col items-end gap-1">
-                <Badge variant="outline" className={`text-xs px-2 py-0 ${
-                  language.completeness >= 95 ? 'bg-green-100 text-green-700' :
-                  language.completeness >= 80 ? 'bg-blue-100 text-blue-700' :
-                  language.completeness >= 50 ? 'bg-yellow-100 text-yellow-700' :
-                  'bg-red-100 text-red-700'
-                }`}>
-                  {language.completeness >= 95 ? 'Complete' :
-                   language.completeness >= 80 ? 'Good' :
-                   language.completeness >= 50 ? 'Partial' : 'Limited'}
-                </Badge>
-                <div className="text-xs text-gray-400">
-                  {Math.round(language.completeness)}%
-                </div>
+              <div className="flex items-center">
+                {isCurrentLanguage && (
+                  <Badge variant="outline" className="text-xs px-2 py-0 bg-blue-50 text-blue-700 border-blue-200">
+                    {locale === 'zh' ? '当前' : 'Current'}
+                  </Badge>
+                )}
               </div>
             </DropdownMenuItem>
           );
@@ -128,12 +122,12 @@ export function LanguageToggle() {
         {/* Language preferences info */}
         <div className="px-2 py-2 text-xs text-gray-500">
           <div className="flex items-center justify-between mb-1">
-            <span>Browser:</span>
+            <span>{locale === 'zh' ? '浏览器：' : 'Browser:'}</span>
             <span className="font-mono">{getBrowserLanguage()}</span>
           </div>
           {isAutoDetected && (
             <div className="text-blue-600 text-xs">
-              Language auto-detected from browser
+              {locale === 'zh' ? '语言已根据浏览器自动识别' : 'Language auto-detected from browser'}
             </div>
           )}
         </div>

@@ -80,7 +80,7 @@ export default async function HexToHslPage({
       customFeatures={toolContent.features}
       faqs={toolContent.faqs}
     >
-      <HexToHslConverter />
+      <HexToHslConverter lang={l} />
     </EnhancedToolLayout>
   );
 }

@@ -47,7 +47,7 @@ export function EnhancedToolCard({ tool, featured = false, showStats = true, loc
                 <span className="text-2xl">{tool.icon}</span>
                 {featured && (
                   <Badge className="bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0 text-xs">
-                    Popular
+                    {isZh ? '热门' : 'Popular'}
                   </Badge>
                 )}
               </div>
@@ -82,7 +82,7 @@ export function EnhancedToolCard({ tool, featured = false, showStats = true, loc
             
             {showStats && tool.searchVolume && (
               <div className="flex items-center justify-between text-xs text-gray-500">
-                <span>Monthly searches</span>
+                <span>{isZh ? '月搜索量' : 'Monthly searches'}</span>
                 <span className="font-medium">{tool.searchVolume.toLocaleString()}</span>
               </div>
             )}

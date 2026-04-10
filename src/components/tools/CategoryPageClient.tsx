@@ -18,6 +18,7 @@ interface CategoryPageClientProps {
 export function CategoryPageClient({ category, locale }: CategoryPageClientProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<'popularity' | 'name'>('popularity');
+  const isZh = locale === 'zh';
   const toolCategories = useMemo(() => getToolCategories(locale), [locale]);
 
   // Get all tools for this category
@@ -75,7 +76,7 @@ export function CategoryPageClient({ category, locale }: CategoryPageClientProps
               <Button asChild variant="ghost" className="text-white hover:bg-white/10">
                 <Link href="/tools" className="flex items-center gap-2">
                   <ArrowLeft className="w-4 h-4" />
-                  Back to All Tools
+                  {isZh ? '返回所有工具' : 'Back to All Tools'}
                 </Link>
               </Button>
             </div>
@@ -89,7 +90,7 @@ export function CategoryPageClient({ category, locale }: CategoryPageClientProps
               </p>
               <div className="flex justify-center">
                 <Badge variant="secondary" className="text-lg px-4 py-2">
-                  {categoryTools.length} Tools Available
+                  {isZh ? `${categoryTools.length} 个可用工具` : `${categoryTools.length} Tools Available`}
                 </Badge>
               </div>
             </div>
@@ -107,7 +108,7 @@ export function CategoryPageClient({ category, locale }: CategoryPageClientProps
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                 <Input
                   type="text"
-                  placeholder={`Search ${categoryInfo.name.toLowerCase()} tools...`}
+                  placeholder={isZh ? `搜索${categoryInfo.name}工具...` : `Search ${categoryInfo.name.toLowerCase()} tools...`}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10"
@@ -116,20 +117,20 @@ export function CategoryPageClient({ category, locale }: CategoryPageClientProps
 
               {/* Sort Options */}
               <div className="flex items-center gap-2">
-                <span className="text-sm text-gray-600">Sort by:</span>
+                <span className="text-sm text-gray-600">{isZh ? '排序方式：' : 'Sort by:'}</span>
                 <Button
                   variant={sortBy === 'popularity' ? 'default' : 'ghost'}
                   size="sm"
                   onClick={() => setSortBy('popularity')}
                 >
-                  Popularity
+                  {isZh ? '热门度' : 'Popularity'}
                 </Button>
                 <Button
                   variant={sortBy === 'name' ? 'default' : 'ghost'}
                   size="sm"
                   onClick={() => setSortBy('name')}
                 >
-                  Name
+                  {isZh ? '名称' : 'Name'}
                 </Button>
               </div>
             </div>
@@ -137,8 +138,9 @@ export function CategoryPageClient({ category, locale }: CategoryPageClientProps
             {/* Results Summary */}
             <div className="mt-4 text-center">
               <p className="text-sm text-gray-600">
-                Showing {displayTools.length} of {categoryTools.length} {categoryInfo.name.toLowerCase()} tools
-                {searchQuery && ` matching "${searchQuery}"`}
+                {isZh
+                  ? `显示 ${displayTools.length} / ${categoryTools.length} 个${categoryInfo.name}工具${searchQuery ? `，匹配“${searchQuery}”` : ''}`
+                  : `Showing ${displayTools.length} of ${categoryTools.length} ${categoryInfo.name.toLowerCase()} tools${searchQuery ? ` matching "${searchQuery}"` : ''}`}
               </p>
             </div>
           </div>
@@ -163,11 +165,11 @@ export function CategoryPageClient({ category, locale }: CategoryPageClientProps
           ) : (
             <div className="text-center py-12">
               <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">No tools found</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">{isZh ? '未找到工具' : 'No tools found'}</h3>
               <p className="text-gray-600">
-                {searchQuery 
-                  ? `No ${categoryInfo.name.toLowerCase()} tools match "${searchQuery}". Try a different search term.`
-                  : `No ${categoryInfo.name.toLowerCase()} tools are currently available.`
+                {searchQuery
+                  ? (isZh ? `没有找到与“${searchQuery}”匹配的${categoryInfo.name}工具，请尝试其他关键词。` : `No ${categoryInfo.name.toLowerCase()} tools match "${searchQuery}". Try a different search term.`)
+                  : (isZh ? `当前暂无可用的${categoryInfo.name}工具。` : `No ${categoryInfo.name.toLowerCase()} tools are currently available.`)
                 }
               </p>
               {searchQuery && (
@@ -176,7 +178,7 @@ export function CategoryPageClient({ category, locale }: CategoryPageClientProps
                   onClick={() => setSearchQuery('')}
                   className="mt-4"
                 >
-                  Clear Search
+                  {isZh ? '清除搜索' : 'Clear Search'}
                 </Button>
               )}
             </div>
@@ -189,10 +191,10 @@ export function CategoryPageClient({ category, locale }: CategoryPageClientProps
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Explore Other Categories
+              {isZh ? '探索其他分类' : 'Explore Other Categories'}
             </h2>
             <p className="text-gray-600">
-              Discover more tools in our other categories
+              {isZh ? '继续查看其他分类中的更多工具' : 'Discover more tools in our other categories'}
             </p>
           </div>
           
@@ -210,7 +212,7 @@ export function CategoryPageClient({ category, locale }: CategoryPageClientProps
                     <h3 className="font-semibold text-lg mb-2">{info.name}</h3>
                     <p className="text-gray-600 text-sm mb-3">{info.description}</p>
                     <Badge variant="secondary" className="text-xs">
-                      {toolCount} tools
+                      {isZh ? `${toolCount} 个工具` : `${toolCount} tools`}
                     </Badge>
                   </Link>
                 );

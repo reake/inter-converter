@@ -608,114 +608,193 @@ export default function FeetToMetersConverter({ lang }: FeetToMetersConverterPro
           ) : (
             <Card>
               <CardHeader>
-                <CardTitle>Usage Guide</CardTitle>
+                <CardTitle>{isZh ? '使用指南' : 'Usage Guide'}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div>
-                  <h3 className="text-lg font-semibold mb-3">How to Use</h3>
+                  <h3 className="text-lg font-semibold mb-3">{isZh ? '如何使用' : 'How to Use'}</h3>
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <div className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
                       <div>
-                        <div className="font-medium">Enter a value</div>
-                        <div className="text-sm text-gray-600">Type a value in either the feet or meters field.</div>
+                        <div className="font-medium">{isZh ? '输入数值' : 'Enter a value'}</div>
+                        <div className="text-sm text-gray-600">{isZh ? '在英尺或米的输入框中填写一个数值。' : 'Type a value in either the feet or meters field.'}</div>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
                       <div>
-                        <div className="font-medium">Instant conversion</div>
-                        <div className="text-sm text-gray-600">The other field updates automatically with the converted value.</div>
+                        <div className="font-medium">{isZh ? '即时换算' : 'Instant conversion'}</div>
+                        <div className="text-sm text-gray-600">{isZh ? '另一个输入框会自动更新为转换后的结果。' : 'The other field updates automatically with the converted value.'}</div>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
                       <div>
-                        <div className="font-medium">Review the result</div>
-                        <div className="text-sm text-gray-600">Results are shown to four decimal places.</div>
+                        <div className="font-medium">{isZh ? '查看结果' : 'Review the result'}</div>
+                        <div className="text-sm text-gray-600">{isZh ? '结果会显示到小数点后四位。' : 'Results are shown to four decimal places.'}</div>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-semibold mb-3">Unit Overview</h3>
+                  <h3 className="text-lg font-semibold mb-3">{isZh ? '单位概览' : 'Unit Overview'}</h3>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="p-4 border rounded-lg">
-                      <h4 className="font-semibold text-blue-600 mb-2">Foot (ft)</h4>
+                      <h4 className="font-semibold text-blue-600 mb-2">{isZh ? '英尺 (ft)' : 'Foot (ft)'}</h4>
                       <div className="text-sm text-gray-600 space-y-1">
-                        <div>• Imperial unit of length</div>
-                        <div>• Common in the US and UK</div>
-                        <div>• Symbol: ft or &apos;</div>
-                        <div>• 1 foot = 12 inches</div>
-                        <div>• Used for height and room dimensions</div>
+                        {isZh ? (
+                          <>
+                            <div>• 英制长度单位</div>
+                            <div>• 常见于美国和英国</div>
+                            <div>• 符号：ft 或 &apos;</div>
+                            <div>• 1 英尺 = 12 英寸</div>
+                            <div>• 常用于身高和房间尺寸</div>
+                          </>
+                        ) : (
+                          <>
+                            <div>• Imperial unit of length</div>
+                            <div>• Common in the US and UK</div>
+                            <div>• Symbol: ft or &apos;</div>
+                            <div>• 1 foot = 12 inches</div>
+                            <div>• Used for height and room dimensions</div>
+                          </>
+                        )}
                       </div>
                     </div>
                     <div className="p-4 border rounded-lg">
-                      <h4 className="font-semibold text-green-600 mb-2">Meter (m)</h4>
+                      <h4 className="font-semibold text-green-600 mb-2">{isZh ? '米 (m)' : 'Meter (m)'}</h4>
                       <div className="text-sm text-gray-600 space-y-1">
-                        <div>• SI base unit</div>
-                        <div>• Used worldwide</div>
-                        <div>• Symbol: m</div>
-                        <div>• 1 meter = 100 centimeters</div>
-                        <div>• Standard unit in science and engineering</div>
+                        {isZh ? (
+                          <>
+                            <div>• 国际单位制基本单位</div>
+                            <div>• 全球广泛使用</div>
+                            <div>• 符号：m</div>
+                            <div>• 1 米 = 100 厘米</div>
+                            <div>• 科学与工程中的标准单位</div>
+                          </>
+                        ) : (
+                          <>
+                            <div>• SI base unit</div>
+                            <div>• Used worldwide</div>
+                            <div>• Symbol: m</div>
+                            <div>• 1 meter = 100 centimeters</div>
+                            <div>• Standard unit in science and engineering</div>
+                          </>
+                        )}
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-semibold mb-3">Use Cases</h3>
+                  <h3 className="text-lg font-semibold mb-3">{isZh ? '使用场景' : 'Use Cases'}</h3>
                   <div className="grid md:grid-cols-3 gap-4">
                     <div className="space-y-2">
-                      <h4 className="font-medium">Everyday life</h4>
+                      <h4 className="font-medium">{isZh ? '日常生活' : 'Everyday life'}</h4>
                       <div className="text-sm text-gray-600 space-y-1">
-                        <div>• Height measurements</div>
-                        <div>• Room sizes</div>
-                        <div>• Furniture specs</div>
-                        <div>• Sports fields</div>
+                        {isZh ? (
+                          <>
+                            <div>• 身高测量</div>
+                            <div>• 房间尺寸</div>
+                            <div>• 家具规格</div>
+                            <div>• 运动场地</div>
+                          </>
+                        ) : (
+                          <>
+                            <div>• Height measurements</div>
+                            <div>• Room sizes</div>
+                            <div>• Furniture specs</div>
+                            <div>• Sports fields</div>
+                          </>
+                        )}
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <h4 className="font-medium">Construction</h4>
+                      <h4 className="font-medium">{isZh ? '建筑施工' : 'Construction'}</h4>
                       <div className="text-sm text-gray-600 space-y-1">
-                        <div>• Blueprints</div>
-                        <div>• Site measurements</div>
-                        <div>• Material sizing</div>
-                        <div>• Safety clearances</div>
+                        {isZh ? (
+                          <>
+                            <div>• 图纸标注</div>
+                            <div>• 现场测量</div>
+                            <div>• 材料尺寸</div>
+                            <div>• 安全间距</div>
+                          </>
+                        ) : (
+                          <>
+                            <div>• Blueprints</div>
+                            <div>• Site measurements</div>
+                            <div>• Material sizing</div>
+                            <div>• Safety clearances</div>
+                          </>
+                        )}
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <h4 className="font-medium">International trade</h4>
+                      <h4 className="font-medium">{isZh ? '国际贸易' : 'International trade'}</h4>
                       <div className="text-sm text-gray-600 space-y-1">
-                        <div>• Product specs</div>
-                        <div>• Shipping dimensions</div>
-                        <div>• Standards conversion</div>
-                        <div>• Technical docs</div>
+                        {isZh ? (
+                          <>
+                            <div>• 产品规格</div>
+                            <div>• 运输尺寸</div>
+                            <div>• 标准换算</div>
+                            <div>• 技术文档</div>
+                          </>
+                        ) : (
+                          <>
+                            <div>• Product specs</div>
+                            <div>• Shipping dimensions</div>
+                            <div>• Standards conversion</div>
+                            <div>• Technical docs</div>
+                          </>
+                        )}
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-semibold mb-3">Background</h3>
+                  <h3 className="text-lg font-semibold mb-3">{isZh ? '背景知识' : 'Background'}</h3>
                   <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
                     <div className="text-sm text-blue-700 space-y-2">
-                      <div><strong>Origin of the foot:</strong> historically based on human foot length, varying by region.</div>
-                      <div><strong>Modern definition:</strong> in 1959, the foot was defined as exactly 0.3048 meters.</div>
-                      <div><strong>Origin of the meter:</strong> originally tied to Earth’s meridian; now defined by the speed of light.</div>
-                      <div><strong>Usage today:</strong> the US mainly uses imperial units, while most countries use metric.</div>
+                      {isZh ? (
+                        <>
+                          <div><strong>英尺的来源：</strong> 历史上与人的脚长相关，不同地区曾有不同标准。</div>
+                          <div><strong>现代定义：</strong> 1959 年起，1 英尺被定义为精确的 0.3048 米。</div>
+                          <div><strong>米的来源：</strong> 最初与地球子午线相关，现在由光速定义。</div>
+                          <div><strong>今天的使用：</strong> 美国仍主要使用英制，大多数国家则使用公制。</div>
+                        </>
+                      ) : (
+                        <>
+                          <div><strong>Origin of the foot:</strong> historically based on human foot length, varying by region.</div>
+                          <div><strong>Modern definition:</strong> in 1959, the foot was defined as exactly 0.3048 meters.</div>
+                          <div><strong>Origin of the meter:</strong> originally tied to Earth’s meridian; now defined by the speed of light.</div>
+                          <div><strong>Usage today:</strong> the US mainly uses imperial units, while most countries use metric.</div>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
 
                 <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
-                  <h4 className="font-semibold text-green-800 mb-2">Memory Tips</h4>
+                  <h4 className="font-semibold text-green-800 mb-2">{isZh ? '记忆技巧' : 'Memory Tips'}</h4>
                   <div className="text-sm text-green-700 space-y-1">
-                    <div>• Remember: 1 meter ≈ 3.3 feet</div>
-                    <div>• Height reference: 6 feet ≈ 1.8 meters</div>
-                    <div>• Quick estimate: feet ÷ 3 ≈ meters</div>
-                    <div>• Precise calculation: use 0.3048</div>
+                    {isZh ? (
+                      <>
+                        <div>• 记住：1 米 ≈ 3.3 英尺</div>
+                        <div>• 身高参考：6 英尺 ≈ 1.8 米</div>
+                        <div>• 快速估算：英尺 ÷ 3 ≈ 米</div>
+                        <div>• 精确计算：使用 0.3048</div>
+                      </>
+                    ) : (
+                      <>
+                        <div>• Remember: 1 meter ≈ 3.3 feet</div>
+                        <div>• Height reference: 6 feet ≈ 1.8 meters</div>
+                        <div>• Quick estimate: feet ÷ 3 ≈ meters</div>
+                        <div>• Precise calculation: use 0.3048</div>
+                      </>
+                    )}
                   </div>
                 </div>
               </CardContent>

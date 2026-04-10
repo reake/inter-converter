@@ -4,7 +4,7 @@ import React, { useState, useMemo } from 'react';
 import { Input } from '@/components/ui/input';
 import { Search, X } from 'lucide-react';
 import { TOOLS_CONFIG } from '@/config/tools';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 
 interface ToolSearchProps {
   onSearch?: (query: string) => void;
@@ -17,6 +17,7 @@ export function ToolSearch({
   placeholder = "Search tools...",
   className = ""
 }: ToolSearchProps) {
+  const isZh = placeholder.includes('搜索');
   const [searchQuery, setSearchQuery] = useState('');
   const [showResults, setShowResults] = useState(false);
 
@@ -75,7 +76,7 @@ export function ToolSearch({
         <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-lg shadow-xl border max-h-80 overflow-y-auto z-50">
           <div className="p-2">
             <div className="text-xs text-gray-500 px-3 py-2 border-b">
-              Found {searchResults.length} result{searchResults.length !== 1 ? 's' : ''}
+              {isZh ? `找到 ${searchResults.length} 个结果` : `Found ${searchResults.length} result${searchResults.length !== 1 ? 's' : ''}`}
             </div>
             {searchResults.map((tool) => (
               <Link
@@ -115,8 +116,12 @@ export function ToolSearch({
         <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-lg shadow-lg border z-50">
           <div className="p-4 text-center text-gray-600">
             <Search className="h-8 w-8 mx-auto mb-2 text-gray-400" />
-            <div className="text-sm">No tools found for &quot;{searchQuery}&quot;</div>
-            <div className="text-xs text-gray-500 mt-1">Try different keywords or browse by category</div>
+            <div className="text-sm">
+              {isZh ? `未找到与“${searchQuery}”相关的工具` : `No tools found for "${searchQuery}"`}
+            </div>
+            <div className="text-xs text-gray-500 mt-1">
+              {isZh ? '请尝试其他关键词，或按分类浏览工具' : 'Try different keywords or browse by category'}
+            </div>
           </div>
         </div>
       )}

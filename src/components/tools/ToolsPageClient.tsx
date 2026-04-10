@@ -157,33 +157,33 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
               onClick={() => setShowAdvancedFilters(!showAdvancedFilters)}
               className="flex items-center gap-2"
             >
-              🔧 Advanced Filters
+              🔧 {locale === 'zh' ? '高级筛选' : 'Advanced Filters'}
               {showAdvancedFilters ? '▲' : '▼'}
             </Button>
             
             {!showAdvancedFilters && (
               <div className="flex items-center gap-2">
-                <span className="text-sm text-gray-600">Quick sort:</span>
+                <span className="text-sm text-gray-600">{locale === 'zh' ? '快速排序：' : 'Quick sort:'}</span>
                 <Button
                   variant={sortBy === 'popularity' ? 'default' : 'ghost'}
                   size="sm"
                   onClick={() => setSortBy('popularity')}
                 >
-                  Popularity
+                  {locale === 'zh' ? '热门度' : 'Popularity'}
                 </Button>
                 <Button
                   variant={sortBy === 'name' ? 'default' : 'ghost'}
                   size="sm"
                   onClick={() => setSortBy('name')}
                 >
-                  Name
+                  {locale === 'zh' ? '名称' : 'Name'}
                 </Button>
                 <Button
                   variant={sortBy === 'category' ? 'default' : 'ghost'}
                   size="sm"
                   onClick={() => setSortBy('category')}
                 >
-                  Category
+                  {locale === 'zh' ? '分类' : 'Category'}
                 </Button>
               </div>
             )}
@@ -209,15 +209,15 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
           {/* Results Summary */}
           <div className="mb-8 text-center">
             <div className="flex flex-wrap justify-center items-center gap-4 text-sm text-gray-600">
-              <span>Showing {displayTools.length} of {allTools.length} tools</span>
+              <span>{locale === 'zh' ? `显示 ${displayTools.length} / ${allTools.length} 个工具` : `Showing ${displayTools.length} of ${allTools.length} tools`}</span>
               {currentFilters && (currentFilters.categories.length > 0 || currentFilters.difficulties.length > 0 || currentFilters.searchVolume !== 'all') && (
                 <Badge variant="outline" className="bg-blue-50 text-blue-700">
-                  Filtered results
+                  {locale === 'zh' ? '筛选结果' : 'Filtered results'}
                 </Badge>
               )}
               {selectedCategory !== 'all' && !showAdvancedFilters && (
                 <Badge variant="outline" className="bg-green-50 text-green-700">
-                  Category: {toolCategories[selectedCategory as keyof typeof toolCategories]?.name}
+                  {locale === 'zh' ? '分类：' : 'Category: '} {toolCategories[selectedCategory as keyof typeof toolCategories]?.name}
                 </Badge>
               )}
             </div>
@@ -303,9 +303,9 @@ export function ToolsPageClient({ locale }: ToolsPageClientProps) {
               {displayTools.length === 0 && (
                 <div className="text-center py-12">
                   <div className="text-6xl mb-4">🔍</div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">No tools found</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{locale === 'zh' ? '未找到工具' : 'No tools found'}</h3>
                   <p className="text-gray-600">
-                    Try adjusting your filters or search criteria.
+                    {locale === 'zh' ? '请尝试调整筛选条件或搜索关键词。' : 'Try adjusting your filters or search criteria.'}
                   </p>
                 </div>
               )}

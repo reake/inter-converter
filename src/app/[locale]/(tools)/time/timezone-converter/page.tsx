@@ -77,7 +77,7 @@ export default async function TimezoneConverterPage({
       customFeatures={toolContent.features}
       faqs={toolContent.faqs}
     >
-      <TimezoneConverter />
+      <TimezoneConverter lang={l} />
     </EnhancedToolLayout>
   );
 }

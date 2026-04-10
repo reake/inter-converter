@@ -116,12 +116,12 @@ export function ModernToolCard({
                   <div className="flex flex-col gap-1">
                     {variant === 'featured' && (
                       <Badge className="bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0 text-xs px-2 py-1 shadow-md">
-                        ⭐ Popular
+                        ⭐ {isZh ? '热门' : 'Popular'}
                       </Badge>
                     )}
                     {tool.searchVolume && tool.searchVolume > 100000 && (
                       <Badge className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 text-xs px-2 py-1 shadow-md">
-                        🔥 Trending
+                        🔥 {isZh ? '趋势' : 'Trending'}
                       </Badge>
                     )}
                   </div>
@@ -166,7 +166,7 @@ export function ModernToolCard({
               {showStats && tool.searchVolume && variant !== 'compact' && (
                 <div className="flex items-center justify-between text-xs">
                   <span className="text-gray-500 flex items-center gap-1">
-                    📊 Monthly searches
+                    📊 {isZh ? '月搜索量' : 'Monthly searches'}
                   </span>
                   <span className="font-bold text-gray-700 bg-gray-100 px-2 py-1 rounded-full">
                     {formatSearchVolume(tool.searchVolume)}
@@ -187,7 +187,7 @@ export function ModernToolCard({
                   ))}
                   {tool.keywords.length > (variant === 'featured' ? 4 : 3) && (
                     <span className="text-xs text-gray-400 px-2 py-1 font-medium">
-                      +{tool.keywords.length - (variant === 'featured' ? 4 : 3)} more
+                      +{tool.keywords.length - (variant === 'featured' ? 4 : 3)} {isZh ? '更多' : 'more'}
                     </span>
                   )}
                 </div>
@@ -196,7 +196,7 @@ export function ModernToolCard({
               {/* Hover indicator */}
               <div className="flex items-center justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <span className="text-xs text-blue-600 font-medium flex items-center gap-1">
-                  Try it now 
+                  {isZh ? '立即使用' : 'Try it now'}
                   <svg className="w-3 h-3 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>

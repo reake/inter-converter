@@ -13,7 +13,12 @@ interface TimezoneInfo {
   offset: string;
 }
 
-export default function TimezoneConverter() {
+interface TimezoneConverterProps {
+  lang?: string;
+}
+
+export default function TimezoneConverter({ lang = 'en' }: TimezoneConverterProps) {
+  const isZh = lang === 'zh';
   const [sourceTime, setSourceTime] = useState<string>('');
   const [sourceTimezone, setSourceTimezone] = useState<string>('UTC');
   const [targetTimezones, setTargetTimezones] = useState<string[]>(['America/New_York', 'Europe/London', 'Asia/Tokyo']);
@@ -46,7 +51,7 @@ export default function TimezoneConverter() {
     return () => clearInterval(timer);
   }, []);
 
-  const convertTime = (time: string, fromTz: string, toTz: string): string => {
+  const convertTime = (time: string, _fromTz: string, toTz: string): string => {
     if (!time) return '';
     
     try {
@@ -111,18 +116,18 @@ export default function TimezoneConverter() {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h2 className="sr-only">Timezone conversion tool</h2>
+      <h2 className="sr-only">{isZh ? '时区转换工具' : 'Timezone conversion tool'}</h2>
       <Card className="mb-6">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Clock className="h-5 w-5" />
-            Source Time
+            {isZh ? '源时间' : 'Source Time'}
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-2 gap-4">
             <div>
-              <Label htmlFor="source-time">Time</Label>
+              <Label htmlFor="source-time">{isZh ? '时间' : 'Time'}</Label>
               <Input
                 id="source-time"
                 type="time"
@@ -133,7 +138,7 @@ export default function TimezoneConverter() {
               />
             </div>
             <div>
-              <Label htmlFor="source-timezone-select">Timezone</Label>
+              <Label htmlFor="source-timezone-select">{isZh ? '时区' : 'Timezone'}</Label>
               <select
                 id="source-timezone-select"
                 value={sourceTimezone}
@@ -155,7 +160,7 @@ export default function TimezoneConverter() {
                 {getCurrentTimeInTimezone(sourceTimezone)}
               </div>
               <div className="text-sm text-blue-700">
-                Current time in {getTimezoneInfo(sourceTimezone).name}
+                {isZh ? `${getTimezoneInfo(sourceTimezone).name} 当前时间` : `Current time in ${getTimezoneInfo(sourceTimezone).name}`}
               </div>
               <div className="text-xs text-blue-600 mt-1">
                 {getDateInTimezone(sourceTimezone)}
@@ -170,11 +175,11 @@ export default function TimezoneConverter() {
           <CardTitle className="flex items-center gap-2 justify-between">
             <div className="flex items-center gap-2">
               <Globe className="h-5 w-5" />
-              Target Timezones
+              {isZh ? '目标时区' : 'Target Timezones'}
             </div>
             <Button onClick={addTimezone} size="sm" variant="outline">
               <Plus className="h-4 w-4 mr-1" />
-              Add Timezone
+              {isZh ? '添加时区' : 'Add Timezone'}
             </Button>
           </CardTitle>
         </CardHeader>
@@ -191,7 +196,7 @@ export default function TimezoneConverter() {
                   <div className="flex items-center justify-between mb-3">
                     <div>
                       <div className="font-semibold">{timezoneInfo.name}</div>
-                      <div className="text-sm text-gray-600">Offset: {timezoneInfo.offset}</div>
+                      <div className="text-sm text-gray-600">{isZh ? '偏移：' : 'Offset: '} {timezoneInfo.offset}</div>
                     </div>
                     {targetTimezones.length > 1 && (
                       <Button 
@@ -199,7 +204,7 @@ export default function TimezoneConverter() {
                         size="sm" 
                         variant="outline"
                         className="text-red-600 hover:text-red-700"
-                        aria-label={`Remove ${timezoneInfo.name}`}
+                        aria-label={isZh ? `移除 ${timezoneInfo.name}` : `Remove ${timezoneInfo.name}`}
                       >
                         <Trash2 className="h-4 w-4" />
                       </Button>
@@ -209,15 +214,15 @@ export default function TimezoneConverter() {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="text-center p-3 bg-green-50 rounded">
                       <div className="text-xl font-bold text-green-600">
-                        {convertedTime || 'Enter time above'}
+                        {convertedTime || (isZh ? '请先输入时间' : 'Enter time above')}
                       </div>
-                      <div className="text-sm text-green-700">Converted Time</div>
+                      <div className="text-sm text-green-700">{isZh ? '转换后时间' : 'Converted Time'}</div>
                     </div>
                     <div className="text-center p-3 bg-gray-50 rounded">
                       <div className="text-xl font-bold text-gray-600">
                         {currentTimeInTz}
                       </div>
-                      <div className="text-sm text-gray-700">Current Time</div>
+                      <div className="text-sm text-gray-700">{isZh ? '当前时间' : 'Current Time'}</div>
                       <div className="text-xs text-gray-600 mt-1">{dateInTz}</div>
                     </div>
                   </div>
@@ -231,7 +236,7 @@ export default function TimezoneConverter() {
       <div className="grid md:grid-cols-2 gap-6">
         <Card>
           <CardHeader>
-            <CardTitle>Popular Timezones</CardTitle>
+            <CardTitle>{isZh ? '常用时区' : 'Popular Timezones'}</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-2">
@@ -252,16 +257,29 @@ export default function TimezoneConverter() {
 
         <Card>
           <CardHeader>
-            <CardTitle>Conversion Tips</CardTitle>
+            <CardTitle>{isZh ? '转换提示' : 'Conversion Tips'}</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-sm text-gray-700 space-y-2">
-              <div>• Times are displayed in 24-hour format</div>
-              <div>• Daylight saving time is automatically handled</div>
-              <div>• Current time updates every second</div>
-              <div>• Add multiple timezones for easy comparison</div>
-              <div>• Converted times account for date changes</div>
-              <div>• All calculations are done in real-time</div>
+              {isZh ? (
+                <>
+                  <div>• 时间以 24 小时制显示</div>
+                  <div>• 夏令时会自动处理</div>
+                  <div>• 当前时间每秒更新</div>
+                  <div>• 可添加多个时区进行对比</div>
+                  <div>• 转换结果会考虑日期变化</div>
+                  <div>• 所有计算都会实时完成</div>
+                </>
+              ) : (
+                <>
+                  <div>• Times are displayed in 24-hour format</div>
+                  <div>• Daylight saving time is automatically handled</div>
+                  <div>• Current time updates every second</div>
+                  <div>• Add multiple timezones for easy comparison</div>
+                  <div>• Converted times account for date changes</div>
+                  <div>• All calculations are done in real-time</div>
+                </>
+              )}
             </div>
           </CardContent>
         </Card>

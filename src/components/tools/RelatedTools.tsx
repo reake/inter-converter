@@ -1,15 +1,17 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import { ToolConfig } from '@/types/tools';
 
 interface RelatedToolsProps {
   tools: ToolConfig[];
   currentToolId: string;
   category: string;
+  locale?: string;
 }
 
-export function RelatedTools({ tools, currentToolId, category }: RelatedToolsProps) {
+export function RelatedTools({ tools, currentToolId, category, locale = 'en' }: RelatedToolsProps) {
+  const isZh = locale === 'zh';
   // Filter out current tool and limit to 6 related tools
   const relatedTools = tools
     .filter(tool => tool.id !== currentToolId && tool.isActive)
@@ -20,9 +22,9 @@ export function RelatedTools({ tools, currentToolId, category }: RelatedToolsPro
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-xl">Related Tools</CardTitle>
+        <CardTitle className="text-xl">{isZh ? '相关工具' : 'Related Tools'}</CardTitle>
         <p className="text-sm text-muted-foreground">
-          Other useful tools in the {category} category
+          {isZh ? `${category} 分类中的其他实用工具` : `Other useful tools in the ${category} category`}
         </p>
       </CardHeader>
       <CardContent>

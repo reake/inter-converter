@@ -1,15 +1,17 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import { useLocale, useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { SearchInput } from '@/components/ui/SearchInput';
 import { getReviewApprovedPopularTools } from '@/config/tools';
 
 export default function NotFound() {
-  const popularTools = getReviewApprovedPopularTools(6);
+  const locale = useLocale();
+  const isZh = locale === 'zh';
+  const popularTools = getReviewApprovedPopularTools(6, locale);
   const [seconds, setSeconds] = useState(5);
   const t = useTranslations();
 
@@ -18,9 +20,8 @@ export default function NotFound() {
     const timer = setInterval(() => {
       setSeconds((s) => {
         if (s <= 1) {
-          // 在归零时跳转首页
           if (mounted && typeof window !== 'undefined') {
-            window.location.assign('/');
+            window.location.assign(locale === 'zh' ? '/zh' : '/');
           }
           clearInterval(timer);
           return 0;
@@ -32,40 +33,36 @@ export default function NotFound() {
       mounted = false;
       clearInterval(timer);
     };
-  }, []);
+  }, [locale]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 via-purple-600/90 to-indigo-700/90"></div>
-        
-        {/* Animated Background Elements */}
+
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
         <div className="relative container mx-auto px-4 py-20 text-center text-white max-w-4xl">
-          {/* 404 Icon */}
           <div className="mb-8">
             <div className="inline-flex items-center justify-center w-32 h-32 bg-white/20 rounded-full backdrop-blur-sm border border-white/30 mb-6">
               <span className="text-6xl">🔍</span>
             </div>
           </div>
 
-          {/* Error Message */}
           <h1 className="text-6xl md:text-8xl font-bold mb-4 text-white">
             404
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-blue-100">
-            Converter Not Found
+            {isZh ? '未找到对应页面' : 'Page Not Found'}
           </h2>
           <p className="text-lg md:text-xl text-blue-100 mb-4 max-w-3xl mx-auto leading-relaxed">
-            Oops! The conversion tool you&apos;re looking for seems to have converted itself into thin air.
-            But don&apos;t worry - we have plenty of other useful tools to help you convert what you need.
+            {isZh
+              ? '你访问的页面可能已移动、已删除，或当前链接有误。你可以搜索工具，或从下方入口继续浏览。'
+              : 'The page you are looking for may have moved, been removed, or the link may be incorrect. Search for a tool or continue with the links below.'}
           </p>
-          {/* Countdown hint */}
           <p className="text-base md:text-lg text-white/95 font-medium drop-shadow mb-8">
             {t.rich('notFound.countdown', {
               b: (chunks) => (
@@ -75,37 +72,36 @@ export default function NotFound() {
             })}
           </p>
 
-          {/* Search */}
           <div className="max-w-2xl mx-auto mb-8">
             <SearchInput
-              placeholder="Search for conversion tools..."
+              placeholder={isZh ? '搜索转换器和计算器...' : 'Search converters and calculators...'}
               redirectTo="/tools"
-              locale="en"
+              locale={locale}
               showSuggestions={true}
             />
           </div>
 
-          {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold shadow-lg">
-              <Link href="/">Return to InterConverter</Link>
+              <Link href="/">{isZh ? '返回首页' : 'Return to Home'}</Link>
             </Button>
             <Button asChild size="lg" className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold shadow-lg border-0">
-              <Link href="/tools">Browse All Tools</Link>
+              <Link href="/tools">{isZh ? '浏览所有工具' : 'Browse All Tools'}</Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Popular Tools Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Try These Popular Tools Instead
+              {isZh ? '你也可以试试这些热门工具' : 'You can also try these popular tools'}
             </h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              While you&apos;re here, check out some of our most popular conversion tools
+              {isZh
+                ? '这里列出了一些常用转换器和计算器，方便你继续查找需要的功能。'
+                : 'Here are some commonly used converters and calculators to help you continue quickly.'}
             </p>
           </div>
 
@@ -130,7 +126,7 @@ export default function NotFound() {
                         {tool.category}
                       </span>
                       <span className="text-blue-600 text-sm font-medium group-hover:text-blue-700">
-                        Try it →
+                        {isZh ? '立即使用 →' : 'Try it →'}
                       </span>
                     </div>
                   </CardContent>
@@ -141,23 +137,22 @@ export default function NotFound() {
         </div>
       </section>
 
-      {/* Help Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 text-center max-w-4xl">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">
-            Need Help Finding Something?
+            {isZh ? '还在找其他内容？' : 'Still looking for something else?'}
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🏠</span>
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Go Home</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">{isZh ? '返回首页' : 'Go Home'}</h4>
               <p className="text-gray-600 text-sm mb-4">
-                Start fresh from our homepage with all available tools
+                {isZh ? '从首页重新开始，查看站点入口和常用内容。' : 'Start again from the homepage and browse the main site entry points.'}
               </p>
               <Button asChild variant="outline" size="sm">
-                <Link href="/">Home Page</Link>
+                <Link href="/">{isZh ? '首页' : 'Home Page'}</Link>
               </Button>
             </div>
 
@@ -165,12 +160,12 @@ export default function NotFound() {
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🔧</span>
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Browse Tools</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">{isZh ? '浏览工具' : 'Browse Tools'}</h4>
               <p className="text-gray-600 text-sm mb-4">
-                Explore all our conversion tools by category
+                {isZh ? '按分类查看所有公开工具。' : 'Explore all public tools by category.'}
               </p>
               <Button asChild variant="outline" size="sm">
-                <Link href="/tools">All Tools</Link>
+                <Link href="/tools">{isZh ? '所有工具' : 'All Tools'}</Link>
               </Button>
             </div>
 
@@ -178,12 +173,12 @@ export default function NotFound() {
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">💬</span>
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Contact Us</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">{isZh ? '联系支持' : 'Contact Us'}</h4>
               <p className="text-gray-600 text-sm mb-4">
-                Can&apos;t find what you need? Let us know!
+                {isZh ? '如果你没找到需要的内容，可以告诉我们。' : 'If you cannot find what you need, let us know.'}
               </p>
               <Button asChild variant="outline" size="sm">
-                <Link href="/contact">Get Help</Link>
+                <Link href="/contact">{isZh ? '获取帮助' : 'Get Help'}</Link>
               </Button>
             </div>
           </div>

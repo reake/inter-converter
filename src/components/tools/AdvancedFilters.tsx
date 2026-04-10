@@ -31,6 +31,7 @@ export function AdvancedFilters({ tools, onFiltersChange, className = '', locale
   const router = useRouter();
   const searchParams = useSearchParams();
   const toolCategories = getToolCategories(locale);
+  const localePrefix = locale === 'zh';
   
   const [filters, setFilters] = useState<FilterState>({
     categories: [],
@@ -198,33 +199,61 @@ export function AdvancedFilters({ tools, onFiltersChange, className = '', locale
 
   const getDifficultyLabel = (difficulty: number) => {
     switch (difficulty) {
-      case 1: return { label: 'Easy', color: 'bg-green-100 text-green-700', icon: '🟢' };
-      case 2: return { label: 'Medium', color: 'bg-yellow-100 text-yellow-700', icon: '🟡' };
-      case 3: return { label: 'Hard', color: 'bg-orange-100 text-orange-700', icon: '🟠' };
-      case 4: return { label: 'Expert', color: 'bg-red-100 text-red-700', icon: '🔴' };
-      default: return { label: 'Easy', color: 'bg-green-100 text-green-700', icon: '🟢' };
+      case 1: return { label: getDifficultyText(1), color: 'bg-green-100 text-green-700', icon: '🟢' };
+      case 2: return { label: getDifficultyText(2), color: 'bg-yellow-100 text-yellow-700', icon: '🟡' };
+      case 3: return { label: getDifficultyText(3), color: 'bg-orange-100 text-orange-700', icon: '🟠' };
+      case 4: return { label: getDifficultyText(4), color: 'bg-red-100 text-red-700', icon: '🔴' };
+      default: return { label: getDifficultyText(1), color: 'bg-green-100 text-green-700', icon: '🟢' };
     }
   };
 
-  const activeFiltersCount = filters.categories.length + filters.difficulties.length + 
+  const activeFiltersCount = filters.categories.length + filters.difficulties.length +
     (filters.searchVolume !== 'all' ? 1 : 0) + (filters.searchQuery.trim() ? 1 : 0);
+  const filterTitle = localePrefix ? '筛选与排序' : 'Filters & Sort';
+  const activeLabel = localePrefix ? '已启用' : 'active';
+  const clearAllLabel = localePrefix ? '清除全部' : 'Clear All';
+  const searchToolsLabel = localePrefix ? '搜索工具' : 'Search Tools';
+  const searchPlaceholder = localePrefix ? '按名称、描述或关键词搜索...' : 'Search by name, description, or keywords...';
+  const sortByLabel = localePrefix ? '排序方式' : 'Sort By';
+  const categoriesLabel = localePrefix ? '分类' : 'Categories';
+  const difficultyLabel = localePrefix ? '难度' : 'Difficulty';
+  const popularityLabel = localePrefix ? '热门度' : 'Popularity';
+  const allToolsLabel = localePrefix ? '所有工具' : 'All Tools';
+  const highTrafficLabel = localePrefix ? '高流量（10万+ 搜索）' : 'High Traffic (100K+ searches)';
+  const mediumTrafficLabel = localePrefix ? '中流量（2万-10万）' : 'Medium Traffic (20K-100K)';
+  const lowTrafficLabel = localePrefix ? '低流量（少于2万）' : 'Low Traffic (<20K)';
+  const highToLowLabel = localePrefix ? '从高到低' : 'High to Low';
+  const lowToHighLabel = localePrefix ? '从低到高' : 'Low to High';
+  const popularityOptionLabel = localePrefix ? '热门度' : 'Popularity';
+  const nameOptionLabel = localePrefix ? '名称' : 'Name';
+  const categoryOptionLabel = localePrefix ? '分类' : 'Category';
+  const difficultyOptionLabel = localePrefix ? '难度' : 'Difficulty';
+  const getDifficultyText = (difficulty: number) => {
+    switch (difficulty) {
+      case 1: return localePrefix ? '简单' : 'Easy';
+      case 2: return localePrefix ? '中等' : 'Medium';
+      case 3: return localePrefix ? '较难' : 'Hard';
+      case 4: return localePrefix ? '专家' : 'Expert';
+      default: return localePrefix ? '简单' : 'Easy';
+    }
+  };
 
   return (
     <Card className={`${className} transition-all duration-300`}>
       <CardHeader className="pb-3">
         <div className="flex items-center justify-between">
           <CardTitle className="text-lg flex items-center gap-2">
-            🔍 Filters & Sort
+            🔍 {filterTitle}
             {activeFiltersCount > 0 && (
               <Badge variant="secondary" className="ml-2">
-                {activeFiltersCount} active
+                {activeFiltersCount} {activeLabel}
               </Badge>
             )}
           </CardTitle>
           <div className="flex gap-2">
             {activeFiltersCount > 0 && (
               <Button variant="ghost" size="sm" onClick={clearFilters}>
-                Clear All
+                {clearAllLabel}
               </Button>
             )}
             <Button
@@ -242,12 +271,12 @@ export function AdvancedFilters({ tools, onFiltersChange, className = '', locale
         <CardContent className="space-y-6">
           {/* Search Input */}
           <div className="space-y-3">
-            <h4 className="font-medium text-sm text-gray-700">Search Tools</h4>
+            <h4 className="font-medium text-sm text-gray-700">{searchToolsLabel}</h4>
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
               <Input
                 type="text"
-                placeholder="Search by name, description, or keywords..."
+                placeholder={searchPlaceholder}
                 value={filters.searchQuery}
                 onChange={(e) => handleFilterChange({ searchQuery: e.target.value })}
                 className="pl-10 pr-10"
@@ -267,7 +296,7 @@ export function AdvancedFilters({ tools, onFiltersChange, className = '', locale
 
           {/* Sort Options */}
           <div className="space-y-3">
-            <h4 className="font-medium text-sm text-gray-700">Sort By</h4>
+            <h4 className="font-medium text-sm text-gray-700">{sortByLabel}</h4>
             <div className="flex flex-wrap gap-2">
               <Select
                 value={filters.sortBy}
@@ -277,10 +306,10 @@ export function AdvancedFilters({ tools, onFiltersChange, className = '', locale
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="popularity">Popularity</SelectItem>
-                  <SelectItem value="name">Name</SelectItem>
-                  <SelectItem value="category">Category</SelectItem>
-                  <SelectItem value="difficulty">Difficulty</SelectItem>
+                  <SelectItem value="popularity">{popularityOptionLabel}</SelectItem>
+                  <SelectItem value="name">{nameOptionLabel}</SelectItem>
+                  <SelectItem value="category">{categoryOptionLabel}</SelectItem>
+                  <SelectItem value="difficulty">{difficultyOptionLabel}</SelectItem>
                 </SelectContent>
               </Select>
               
@@ -292,8 +321,8 @@ export function AdvancedFilters({ tools, onFiltersChange, className = '', locale
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="desc">High to Low</SelectItem>
-                  <SelectItem value="asc">Low to High</SelectItem>
+                  <SelectItem value="desc">{highToLowLabel}</SelectItem>
+                  <SelectItem value="asc">{lowToHighLabel}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -301,7 +330,7 @@ export function AdvancedFilters({ tools, onFiltersChange, className = '', locale
 
           {/* Category Filters */}
           <div className="space-y-3">
-            <h4 className="font-medium text-sm text-gray-700">Categories</h4>
+            <h4 className="font-medium text-sm text-gray-700">{categoriesLabel}</h4>
             <div className="flex flex-wrap gap-2">
               {Object.entries(toolCategories).map(([key, category]) => (
                 <Button
@@ -319,7 +348,7 @@ export function AdvancedFilters({ tools, onFiltersChange, className = '', locale
 
           {/* Difficulty Filters */}
           <div className="space-y-3">
-            <h4 className="font-medium text-sm text-gray-700">Difficulty</h4>
+            <h4 className="font-medium text-sm text-gray-700">{difficultyLabel}</h4>
             <div className="flex flex-wrap gap-2">
               {[1, 2, 3, 4].map((difficulty) => {
                 const diffInfo = getDifficultyLabel(difficulty);
@@ -340,7 +369,7 @@ export function AdvancedFilters({ tools, onFiltersChange, className = '', locale
 
           {/* Search Volume Filter */}
           <div className="space-y-3">
-            <h4 className="font-medium text-sm text-gray-700">Popularity</h4>
+            <h4 className="font-medium text-sm text-gray-700">{popularityLabel}</h4>
             <Select
               value={filters.searchVolume}
               onValueChange={(value) => handleFilterChange({ searchVolume: value as FilterState['searchVolume'] })}
@@ -349,10 +378,10 @@ export function AdvancedFilters({ tools, onFiltersChange, className = '', locale
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">All Tools</SelectItem>
-                <SelectItem value="high">High Traffic (100K+ searches)</SelectItem>
-                <SelectItem value="medium">Medium Traffic (20K-100K)</SelectItem>
-                <SelectItem value="low">Low Traffic (&lt;20K)</SelectItem>
+                <SelectItem value="all">{allToolsLabel}</SelectItem>
+                <SelectItem value="high">{highTrafficLabel}</SelectItem>
+                <SelectItem value="medium">{mediumTrafficLabel}</SelectItem>
+                <SelectItem value="low">{lowTrafficLabel}</SelectItem>
               </SelectContent>
             </Select>
           </div>
