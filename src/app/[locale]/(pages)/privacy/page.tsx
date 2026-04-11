@@ -206,8 +206,8 @@ export default async function PrivacyPage({
           </CardHeader>
           <CardContent className="text-gray-600">
             {isZh
-              ? <>如有隐私或政策相关问题，请发送邮件至 <strong>legal@interconverter.com</strong>。</>
-              : <>For privacy questions or policy-related requests, email <strong>legal@interconverter.com</strong>.</>}
+              ? <>如有隐私或政策相关问题，请发送邮件至 <strong>support@interconverter.com</strong>。</>
+              : <>For privacy questions or policy-related requests, email <strong>support@interconverter.com</strong>.</>}
           </CardContent>
         </Card>
       </div>

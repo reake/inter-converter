@@ -52,7 +52,7 @@ export default async function ContactPage({
       description: isZh
         ? '适用于流程异常、结果错误，或浏览器相关问题。'
         : 'Use this for broken workflows, wrong outputs, or browser-specific issues.',
-      contact: 'bugs@interconverter.com',
+      contact: 'support@interconverter.com',
       responseTime: isZh ? '可复现问题通常在 1 个工作日内回复' : 'Usually within 1 business day for reproducible issues',
     },
     {
@@ -61,7 +61,7 @@ export default async function ContactPage({
       description: isZh
         ? '建议新增计算器、补充示例，或优化工具说明。'
         : 'Suggest a new calculator, a missing example, or a better explanation.',
-      contact: 'features@interconverter.com',
+      contact: 'support@interconverter.com',
       responseTime: isZh ? '会在内容更新批次中统一评估' : 'Reviewed in batches during content updates',
     },
     {
@@ -70,7 +70,7 @@ export default async function ContactPage({
       description: isZh
         ? '用于政策问题、数据处理疑问或法律相关请求。'
         : 'Use this for policy questions, data handling concerns, or legal requests.',
-      contact: 'legal@interconverter.com',
+      contact: 'support@interconverter.com',
       responseTime: isZh ? '通常在 5 个工作日内回复' : 'Usually within 5 business days',
     },
   ];

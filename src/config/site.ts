@@ -3,7 +3,7 @@ export const siteConfig = {
   description: "Free online converter tools and calculators. Convert currencies, units, timestamps, colors, and more - fast, accurate, and completely free.",
   url: "https://interconverter.com",
   author: "InterConverter Team",
-  email: "contact@interconverter.com",
+  email: "support@interconverter.com",
   template: "InterConverter",
   features: [
     "Timestamp Converter",

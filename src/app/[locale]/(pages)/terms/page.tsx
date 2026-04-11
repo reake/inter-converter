@@ -152,8 +152,8 @@ export default async function TermsPage({
           </CardHeader>
           <CardContent className="text-gray-600">
             {isZh
-              ? <>如对本条款有疑问，请发送邮件至 <strong>legal@interconverter.com</strong>。</>
-              : <>Questions about these terms can be sent to <strong>legal@interconverter.com</strong>.</>}
+              ? <>如对本条款有疑问，请发送邮件至 <strong>support@interconverter.com</strong>。</>
+              : <>Questions about these terms can be sent to <strong>support@interconverter.com</strong>.</>}
           </CardContent>
         </Card>
       </div>
